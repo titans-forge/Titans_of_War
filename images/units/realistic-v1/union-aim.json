@@ -1,0 +1,66 @@
+{
+  "frames": {
+    "3-2": {
+      "frame": {
+        "x": 209,
+        "y": 11,
+        "w": 240,
+        "h": 611
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 611
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 611
+      },
+      "pivot": {
+        "x": 0.829167,
+        "y": 0.99509
+      }
+    },
+    "3-6": {
+      "frame": {
+        "x": 808,
+        "y": 13,
+        "w": 237,
+        "h": 605
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 237,
+        "h": 605
+      },
+      "sourceSize": {
+        "w": 237,
+        "h": 605
+      },
+      "pivot": {
+        "x": 0.64135,
+        "y": 0.995041
+      }
+    }
+  },
+  "meta": {
+    "app": "Titans Forge native-image atlas indexing",
+    "image": "axial-aim.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "scale": "1",
+    "pixelSource": "OpenAI built-in imagegen; original RGBA copied without alteration",
+    "sha256": "9f31ea9adeb6eabb147a99e1f3348d37f3bdee9445d7ceeb90fb4853eeab047d",
+    "originalFileSha256": "6a9a1b1ff4116bce9b04bfd7232be93e3b43e10a4905fd7b3b0be36647ea02cb",
+    "pixelSha256": "bab36cdc9be983f3582bb964480c0b8c328326f75c550b1b67f3e7f8c2bd7151",
+    "encoding": "Lossless PNG repack; original decoded pixels and non-IDAT chunks preserved"
+  }
+}

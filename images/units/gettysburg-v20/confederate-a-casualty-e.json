@@ -1,0 +1,166 @@
+{
+  "frames": {
+    "a-fall-0-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.511962,
+        "y": 0.920255
+      },
+      "bodyHeight": 396
+    },
+    "a-fall-0-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.376396,
+        "y": 0.913876
+      },
+      "bodyHeight": 396
+    },
+    "a-fall-0-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.452951,
+        "y": 0.688995
+      },
+      "bodyHeight": 396
+    },
+    "a-fall-0-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.393939,
+        "y": 0.700159
+      },
+      "bodyHeight": 396
+    }
+  },
+  "meta": {
+    "image": "confederate-a-casualty-e.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "2e06139713abaf66811a26bace098d19fdc4ced40be11f8ca2e5aa3aefdd4134",
+    "source": "docs/art-pass/candidates/gettysburg-v20/confederate-a-casualty-e-candidate.png",
+    "artPass": "gettysburg-v20",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 0,
+        "action": "fall",
+        "key": "confederate-gettysburg-v20-a-casualty-e",
+        "frames": [
+          "a-fall-0-0",
+          "a-fall-0-1",
+          "a-fall-0-2",
+          "a-fall-0-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.511962,
+            "y": 0.920255
+          },
+          {
+            "x": 0.376396,
+            "y": 0.913876
+          },
+          {
+            "x": 0.452951,
+            "y": 0.688995
+          },
+          {
+            "x": 0.393939,
+            "y": 0.700159
+          }
+        ],
+        "referenceHeight": 396,
+        "sourceHash": "2e06139713abaf66811a26bace098d19fdc4ced40be11f8ca2e5aa3aefdd4134",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeCasualtySequence": "gettysburg-v20-confederate-a-e-casualty",
+        "scope": "Exact source-reviewed Confederate A E local opt-in only; incomplete family"
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v20-independent-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "6b319e2c5583b486d1e406c8bfd47f0b5318c1c44afe785695d35e9a81c69465",
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

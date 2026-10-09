@@ -1,0 +1,22 @@
+{
+  "frames": {
+    "0": { "frame": { "x": 768, "y": 0, "w": 384, "h": 512 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 384, "h": 512 }, "sourceSize": { "w": 384, "h": 512 }, "pivot": { "x": 0.4375, "y": 0.947266 }, "bodyHeight": 477 },
+    "1": { "frame": { "x": 384, "y": 0, "w": 384, "h": 512 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 384, "h": 512 }, "sourceSize": { "w": 384, "h": 512 }, "pivot": { "x": 0.641927, "y": 1.0 }, "bodyHeight": 503 },
+    "2": { "frame": { "x": 0, "y": 0, "w": 384, "h": 512 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 384, "h": 512 }, "sourceSize": { "w": 384, "h": 512 }, "pivot": { "x": 0.730469, "y": 1.0 }, "bodyHeight": 503 },
+    "3": { "frame": { "x": 1152, "y": 512, "w": 384, "h": 512 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 384, "h": 512 }, "sourceSize": { "w": 384, "h": 512 }, "pivot": { "x": 0.442708, "y": 0.935547 }, "bodyHeight": 479 },
+    "4": { "frame": { "x": 768, "y": 512, "w": 384, "h": 512 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 384, "h": 512 }, "sourceSize": { "w": 384, "h": 512 }, "pivot": { "x": 0.424479, "y": 0.939453 }, "bodyHeight": 478 },
+    "5": { "frame": { "x": 384, "y": 512, "w": 384, "h": 512 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 384, "h": 512 }, "sourceSize": { "w": 384, "h": 512 }, "pivot": { "x": 0.445312, "y": 0.9375 }, "bodyHeight": 480 },
+    "6": { "frame": { "x": 0, "y": 512, "w": 384, "h": 512 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 384, "h": 512 }, "sourceSize": { "w": 384, "h": 512 }, "pivot": { "x": 0.578125, "y": 0.935547 }, "bodyHeight": 479 },
+    "7": { "frame": { "x": 1152, "y": 0, "w": 384, "h": 512 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 384, "h": 512 }, "sourceSize": { "w": 384, "h": 512 }, "pivot": { "x": 0.226562, "y": 1.0 }, "bodyHeight": 503 }
+  },
+  "meta": {
+    "image": "union-ready.png",
+    "size": { "w": 1536, "h": 1024 },
+    "sha256": "8b983d1f0b5a70a6db247589d3718371e5446b45efb4d260eca00fa17d327384",
+    "generation": "OpenAI built-in imagegen; model identifier not reported",
+    "candidate": true,
+    "artPass": "gettysburg-v1",
+    "layout": "4x2 source cells remapped to game directions E, SE, S, SW, W, NW, N, NE",
+    "background": "native alpha"
+  }
+}

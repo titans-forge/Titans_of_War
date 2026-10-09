@@ -1,0 +1,218 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 94,
+        "y": 17,
+        "w": 174,
+        "h": 480
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 174,
+        "h": 480
+      },
+      "sourceSize": {
+        "w": 174,
+        "h": 480
+      },
+      "pivot": {
+        "x": 0.551724,
+        "y": 0.99375
+      },
+      "bodyHeight": 472
+    },
+    "1": {
+      "frame": {
+        "x": 457,
+        "y": 18,
+        "w": 221,
+        "h": 479
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 221,
+        "h": 479
+      },
+      "sourceSize": {
+        "w": 221,
+        "h": 479
+      },
+      "pivot": {
+        "x": 0.597285,
+        "y": 0.993737
+      },
+      "bodyHeight": 472
+    },
+    "2": {
+      "frame": {
+        "x": 835,
+        "y": 16,
+        "w": 202,
+        "h": 480
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 202,
+        "h": 480
+      },
+      "sourceSize": {
+        "w": 202,
+        "h": 480
+      },
+      "pivot": {
+        "x": 0.60396,
+        "y": 0.99375
+      },
+      "bodyHeight": 471
+    },
+    "3": {
+      "frame": {
+        "x": 1220,
+        "y": 14,
+        "w": 201,
+        "h": 483
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 201,
+        "h": 483
+      },
+      "sourceSize": {
+        "w": 201,
+        "h": 483
+      },
+      "pivot": {
+        "x": 0.604478,
+        "y": 0.993789
+      },
+      "bodyHeight": 472
+    },
+    "4": {
+      "frame": {
+        "x": 99,
+        "y": 518,
+        "w": 176,
+        "h": 477
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 176,
+        "h": 477
+      },
+      "sourceSize": {
+        "w": 176,
+        "h": 477
+      },
+      "pivot": {
+        "x": 0.488636,
+        "y": 0.993711
+      },
+      "bodyHeight": 470
+    },
+    "5": {
+      "frame": {
+        "x": 454,
+        "y": 517,
+        "w": 213,
+        "h": 473
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 213,
+        "h": 473
+      },
+      "sourceSize": {
+        "w": 213,
+        "h": 473
+      },
+      "pivot": {
+        "x": 0.41784,
+        "y": 0.993658
+      },
+      "bodyHeight": 465
+    },
+    "6": {
+      "frame": {
+        "x": 837,
+        "y": 518,
+        "w": 199,
+        "h": 475
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 199,
+        "h": 475
+      },
+      "sourceSize": {
+        "w": 199,
+        "h": 475
+      },
+      "pivot": {
+        "x": 0.414573,
+        "y": 0.993684
+      },
+      "bodyHeight": 468
+    },
+    "7": {
+      "frame": {
+        "x": 1231,
+        "y": 516,
+        "w": 188,
+        "h": 482
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 188,
+        "h": 482
+      },
+      "sourceSize": {
+        "w": 188,
+        "h": 482
+      },
+      "pivot": {
+        "x": 0.428191,
+        "y": 0.993776
+      },
+      "bodyHeight": 473
+    }
+  },
+  "meta": {
+    "image": "confederate-ready.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "sha256": "a245bac6766655de6142fe75250642e488ac7ae33d1df327c442be67160773fe",
+    "chromaKey": "#00ff00",
+    "generation": "OpenAI built-in imagegen; model identifier not reported",
+    "originalPixelsPreserved": true,
+    "originalFileSha256": "6980e0bd8a8bd49eb7ae64839a90056e2ed6ce68773b5b099747621a42918b5f",
+    "pixelSha256": "efce2bbeccd44671b0b697adb18ee574459dd8c5a54c83cd868a108c6d44a89d",
+    "encoding": "Lossless PNG repack; original decoded pixels and non-IDAT chunks preserved"
+  }
+}

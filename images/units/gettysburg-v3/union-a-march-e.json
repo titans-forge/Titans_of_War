@@ -1,0 +1,160 @@
+{
+  "frames": {
+    "a-march-0-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 543,
+        "h": 724
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 543,
+        "h": 724
+      },
+      "sourceSize": {
+        "w": 543,
+        "h": 724
+      },
+      "pivot": {
+        "x": 0.500921,
+        "y": 0.872928
+      },
+      "bodyHeight": 548
+    },
+    "a-march-0-1": {
+      "frame": {
+        "x": 543,
+        "y": 0,
+        "w": 543,
+        "h": 724
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 543,
+        "h": 724
+      },
+      "sourceSize": {
+        "w": 543,
+        "h": 724
+      },
+      "pivot": {
+        "x": 0.489871,
+        "y": 0.872928
+      },
+      "bodyHeight": 548
+    },
+    "a-march-0-2": {
+      "frame": {
+        "x": 1086,
+        "y": 0,
+        "w": 543,
+        "h": 724
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 543,
+        "h": 724
+      },
+      "sourceSize": {
+        "w": 543,
+        "h": 724
+      },
+      "pivot": {
+        "x": 0.535912,
+        "y": 0.872928
+      },
+      "bodyHeight": 548
+    },
+    "a-march-0-3": {
+      "frame": {
+        "x": 1629,
+        "y": 0,
+        "w": 543,
+        "h": 724
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 543,
+        "h": 724
+      },
+      "sourceSize": {
+        "w": 543,
+        "h": 724
+      },
+      "pivot": {
+        "x": 0.576427,
+        "y": 0.872928
+      },
+      "bodyHeight": 548
+    }
+  },
+  "meta": {
+    "image": "union-a-march-e.png",
+    "size": {
+      "w": 2172,
+      "h": 724
+    },
+    "sha256": "fe564b8374e48e3d1732e2d6e40d3809c950003c063762a123944759bcef8bca",
+    "source": "docs/art-pass/candidates/gettysburg-v3/union-e-rig-guided-candidate.png",
+    "sourceHash": "fe564b8374e48e3d1732e2d6e40d3809c950003c063762a123944759bcef8bca",
+    "artPass": "gettysburg-v3",
+    "candidate": true,
+    "productionApproved": false,
+    "layout": "four equal 543x724 native cells, full source rectangles, no trimming or repacking",
+    "pixelTreatment": "none; full equal native cells; public PNG copied byte-for-byte",
+    "commonGroundReferenceY": 632,
+    "fixedCapToGroundReferenceHeight": 548,
+    "clip": {
+      "side": "union",
+      "identity": "a",
+      "direction": 0,
+      "action": "march",
+      "key": "union-gettysburg-v3-march-e",
+      "frames": [
+        "a-march-0-0",
+        "a-march-0-1",
+        "a-march-0-2",
+        "a-march-0-3"
+      ],
+      "sourceHash": "fe564b8374e48e3d1732e2d6e40d3809c950003c063762a123944759bcef8bca",
+      "referenceHeight": 548,
+      "pivots": [
+        {
+          "x": 0.500921,
+          "y": 0.872928
+        },
+        {
+          "x": 0.489871,
+          "y": 0.872928
+        },
+        {
+          "x": 0.535912,
+          "y": 0.872928
+        },
+        {
+          "x": 0.576427,
+          "y": 0.872928
+        }
+      ],
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "scope": "opt-in E marching pilot only"
+    },
+    "measurementReview": "docs/art-pass/reviews/gettysburg-v3-clip-measurement.json"
+  }
+}

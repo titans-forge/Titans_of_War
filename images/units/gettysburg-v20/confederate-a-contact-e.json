@@ -1,0 +1,166 @@
+{
+  "frames": {
+    "a-melee-0-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.414673,
+        "y": 0.874003
+      },
+      "bodyHeight": 396
+    },
+    "a-melee-0-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.293461,
+        "y": 0.866029
+      },
+      "bodyHeight": 396
+    },
+    "a-melee-0-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.446571,
+        "y": 0.851675
+      },
+      "bodyHeight": 396
+    },
+    "a-melee-0-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.403509,
+        "y": 0.85008
+      },
+      "bodyHeight": 396
+    }
+  },
+  "meta": {
+    "image": "confederate-a-contact-e.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "0621f135a0428937e9010bf949ac1f063f7c0f305c1e284f9cacafa6c0075682",
+    "source": "docs/art-pass/candidates/gettysburg-v20/confederate-a-contact-e-candidate.png",
+    "artPass": "gettysburg-v20",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 0,
+        "action": "melee",
+        "key": "confederate-gettysburg-v20-a-contact-e",
+        "frames": [
+          "a-melee-0-0",
+          "a-melee-0-1",
+          "a-melee-0-2",
+          "a-melee-0-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.414673,
+            "y": 0.874003
+          },
+          {
+            "x": 0.293461,
+            "y": 0.866029
+          },
+          {
+            "x": 0.446571,
+            "y": 0.851675
+          },
+          {
+            "x": 0.403509,
+            "y": 0.85008
+          }
+        ],
+        "referenceHeight": 396,
+        "sourceHash": "0621f135a0428937e9010bf949ac1f063f7c0f305c1e284f9cacafa6c0075682",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeContactSequence": "gettysburg-v20-confederate-a-e-contact",
+        "scope": "Exact source-reviewed Confederate A E local opt-in only; incomplete family"
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v20-independent-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "6b319e2c5583b486d1e406c8bfd47f0b5318c1c44afe785695d35e9a81c69465",
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

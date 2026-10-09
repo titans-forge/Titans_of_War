@@ -1,0 +1,218 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 56,
+        "y": 17,
+        "w": 266,
+        "h": 472
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 266,
+        "h": 472
+      },
+      "sourceSize": {
+        "w": 266,
+        "h": 472
+      },
+      "pivot": {
+        "x": 0.49812,
+        "y": 0.993644
+      },
+      "bodyHeight": 462
+    },
+    "1": {
+      "frame": {
+        "x": 460,
+        "y": 20,
+        "w": 202,
+        "h": 472
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 202,
+        "h": 472
+      },
+      "sourceSize": {
+        "w": 202,
+        "h": 472
+      },
+      "pivot": {
+        "x": 0.482673,
+        "y": 0.993644
+      },
+      "bodyHeight": 465
+    },
+    "2": {
+      "frame": {
+        "x": 832,
+        "y": 15,
+        "w": 196,
+        "h": 479
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 196,
+        "h": 479
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 479
+      },
+      "pivot": {
+        "x": 0.507653,
+        "y": 0.993737
+      },
+      "bodyHeight": 467
+    },
+    "3": {
+      "frame": {
+        "x": 1220,
+        "y": 17,
+        "w": 192,
+        "h": 478
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 478
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 478
+      },
+      "pivot": {
+        "x": 0.507812,
+        "y": 0.993724
+      },
+      "bodyHeight": 468
+    },
+    "4": {
+      "frame": {
+        "x": 55,
+        "y": 517,
+        "w": 279,
+        "h": 461
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 279,
+        "h": 461
+      },
+      "sourceSize": {
+        "w": 279,
+        "h": 461
+      },
+      "pivot": {
+        "x": 0.498208,
+        "y": 0.993492
+      },
+      "bodyHeight": 452
+    },
+    "5": {
+      "frame": {
+        "x": 476,
+        "y": 514,
+        "w": 193,
+        "h": 473
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 193,
+        "h": 473
+      },
+      "sourceSize": {
+        "w": 193,
+        "h": 473
+      },
+      "pivot": {
+        "x": 0.489637,
+        "y": 0.993658
+      },
+      "bodyHeight": 461
+    },
+    "6": {
+      "frame": {
+        "x": 841,
+        "y": 515,
+        "w": 200,
+        "h": 475
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 200,
+        "h": 475
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 475
+      },
+      "pivot": {
+        "x": 0.455,
+        "y": 0.993684
+      },
+      "bodyHeight": 464
+    },
+    "7": {
+      "frame": {
+        "x": 1227,
+        "y": 516,
+        "w": 193,
+        "h": 475
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 193,
+        "h": 475
+      },
+      "sourceSize": {
+        "w": 193,
+        "h": 475
+      },
+      "pivot": {
+        "x": 0.458549,
+        "y": 0.993684
+      },
+      "bodyHeight": 465
+    }
+  },
+  "meta": {
+    "image": "confederate-walk.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "sha256": "72bcd09a3e5de364c83e545caf64e421516de2dc8fc52b63997daad096308c47",
+    "chromaKey": "#00ff00",
+    "generation": "OpenAI built-in imagegen; model identifier not reported",
+    "originalPixelsPreserved": true,
+    "originalFileSha256": "60ecc35c857bee968e7af851505b0b35dcbb4f2ee2e91f3dccddec2b1900de34",
+    "pixelSha256": "fe2785e6d75534d0ad167fb60152bc9dc8989c3b8e6d9af43aa5ade5e4fa930f",
+    "encoding": "Lossless PNG repack; original decoded pixels and non-IDAT chunks preserved"
+  }
+}

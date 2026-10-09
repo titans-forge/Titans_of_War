@@ -1,0 +1,230 @@
+{
+  "frames": {
+    "b-ready-5-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.558214,
+        "y": 0.776715
+      },
+      "bodyHeight": 255
+    },
+    "b-fire-5-0": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.582137,
+        "y": 0.776715
+      },
+      "bodyHeight": 255
+    },
+    "b-reload-5-0": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.553429,
+        "y": 0.795853
+      },
+      "bodyHeight": 255
+    },
+    "b-reload-5-1": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.599681,
+        "y": 0.794258
+      },
+      "bodyHeight": 255
+    }
+  },
+  "meta": {
+    "image": "union-b-actions-nw.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "258268c64969c4c68318ca64147f8cecfa309e950a53440fe0730bb786a1fc67",
+    "source": "docs/art-pass/candidates/gettysburg-v28/union-b-actions-nw-candidate.png",
+    "artPass": "gettysburg-v28",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "union",
+        "identity": "b",
+        "direction": 5,
+        "action": "ready",
+        "key": "union-gettysburg-v28-b-actions-nw",
+        "frames": [
+          "b-ready-5-0"
+        ],
+        "pivots": [
+          {
+            "x": 0.558214,
+            "y": 0.776715
+          }
+        ],
+        "referenceHeight": 255,
+        "sourceHash": "258268c64969c4c68318ca64147f8cecfa309e950a53440fe0730bb786a1fc67",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeUnionNorthernSequence": "gettysburg-v28-union-b-nw",
+        "scope": "Exact source-reviewed Union B NW opt-in only; incomplete family",
+        "familyComplete": false,
+        "productionApproved": false,
+        "defaultApproved": false,
+        "humanCertified": false,
+        "physicalAnatomyCertified": false,
+        "historicalDrillCertified": false
+      },
+      {
+        "side": "union",
+        "identity": "b",
+        "direction": 5,
+        "action": "fire",
+        "key": "union-gettysburg-v28-b-actions-nw",
+        "frames": [
+          "b-fire-5-0"
+        ],
+        "pivots": [
+          {
+            "x": 0.582137,
+            "y": 0.776715
+          }
+        ],
+        "referenceHeight": 255,
+        "sourceHash": "258268c64969c4c68318ca64147f8cecfa309e950a53440fe0730bb786a1fc67",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeUnionNorthernSequence": "gettysburg-v28-union-b-nw",
+        "scope": "Exact source-reviewed Union B NW opt-in only; incomplete family",
+        "familyComplete": false,
+        "productionApproved": false,
+        "defaultApproved": false,
+        "humanCertified": false,
+        "physicalAnatomyCertified": false,
+        "historicalDrillCertified": false,
+        "muzzles": [
+          {
+            "x": 0.370016,
+            "y": 0.360447
+          }
+        ]
+      },
+      {
+        "side": "union",
+        "identity": "b",
+        "direction": 5,
+        "action": "reload",
+        "key": "union-gettysburg-v28-b-actions-nw",
+        "frames": [
+          "b-reload-5-0",
+          "b-reload-5-1"
+        ],
+        "pivots": [
+          {
+            "x": 0.553429,
+            "y": 0.795853
+          },
+          {
+            "x": 0.599681,
+            "y": 0.794258
+          }
+        ],
+        "referenceHeight": 255,
+        "sourceHash": "258268c64969c4c68318ca64147f8cecfa309e950a53440fe0730bb786a1fc67",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeUnionNorthernSequence": "gettysburg-v28-union-b-nw",
+        "scope": "Exact source-reviewed Union B NW opt-in only; incomplete family",
+        "familyComplete": false,
+        "productionApproved": false,
+        "defaultApproved": false,
+        "humanCertified": false,
+        "physicalAnatomyCertified": false,
+        "historicalDrillCertified": false
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v28-independent-union-northern-source-review.json",
+    "sourceReviewSHA256": "d02158dc16c249ed9fd6d0c6361c7a6b178d8d4c9e361d8f14aa986b1ce05686",
+    "referenceHeight": 255,
+    "familyComplete": false,
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

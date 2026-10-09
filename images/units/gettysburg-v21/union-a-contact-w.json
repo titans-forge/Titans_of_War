@@ -1,0 +1,166 @@
+{
+  "frames": {
+    "a-melee-4-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.644338,
+        "y": 0.880383
+      },
+      "bodyHeight": 365
+    },
+    "a-melee-4-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.623604,
+        "y": 0.866029
+      },
+      "bodyHeight": 365
+    },
+    "a-melee-4-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.665072,
+        "y": 0.816587
+      },
+      "bodyHeight": 365
+    },
+    "a-melee-4-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.620415,
+        "y": 0.821372
+      },
+      "bodyHeight": 365
+    }
+  },
+  "meta": {
+    "image": "union-a-contact-w.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "3c5bc6bace3aa4ea9abb3b4275a416aaa4e3067fe1c63e0a48d0ec9e059151be",
+    "source": "docs/art-pass/candidates/gettysburg-v21/union-a-contact-w-candidate.png",
+    "artPass": "gettysburg-v21",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "union",
+        "identity": "a",
+        "direction": 4,
+        "action": "melee",
+        "key": "union-gettysburg-v21-a-contact-w",
+        "frames": [
+          "a-melee-4-0",
+          "a-melee-4-1",
+          "a-melee-4-2",
+          "a-melee-4-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.644338,
+            "y": 0.880383
+          },
+          {
+            "x": 0.623604,
+            "y": 0.866029
+          },
+          {
+            "x": 0.665072,
+            "y": 0.816587
+          },
+          {
+            "x": 0.620415,
+            "y": 0.821372
+          }
+        ],
+        "referenceHeight": 365,
+        "sourceHash": "3c5bc6bace3aa4ea9abb3b4275a416aaa4e3067fe1c63e0a48d0ec9e059151be",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeContactSequence": "gettysburg-v21-union-a-w-contact",
+        "scope": "Exact source-reviewed Union A W local opt-in only; incomplete family"
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v21-independent-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "5b607f200d6545cb8e8cb8d422ff86a477c3349669ee9ee91653c7db65257494",
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "frames": {
+    "a-melee-2-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.580542,
+        "y": 0.891547
+      },
+      "bodyHeight": 371
+    },
+    "a-melee-2-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.491228,
+        "y": 0.901116
+      },
+      "bodyHeight": 371
+    },
+    "a-melee-2-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.582137,
+        "y": 0.781499
+      },
+      "bodyHeight": 371
+    },
+    "a-melee-2-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.53748,
+        "y": 0.797448
+      },
+      "bodyHeight": 371
+    }
+  },
+  "meta": {
+    "image": "union-a-contact-s.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "5f2d97fcf8957daa12c3c8d12efd0bd44a06983bfd1d2b2106a8e03f432b4cfa",
+    "source": "docs/art-pass/candidates/gettysburg-v22/union-a-contact-s-candidate.png",
+    "artPass": "gettysburg-v22",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "union",
+        "identity": "a",
+        "direction": 2,
+        "action": "melee",
+        "key": "union-gettysburg-v22-a-contact-s",
+        "frames": [
+          "a-melee-2-0",
+          "a-melee-2-1",
+          "a-melee-2-2",
+          "a-melee-2-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.580542,
+            "y": 0.891547
+          },
+          {
+            "x": 0.491228,
+            "y": 0.901116
+          },
+          {
+            "x": 0.582137,
+            "y": 0.781499
+          },
+          {
+            "x": 0.53748,
+            "y": 0.797448
+          }
+        ],
+        "referenceHeight": 371,
+        "sourceHash": "5f2d97fcf8957daa12c3c8d12efd0bd44a06983bfd1d2b2106a8e03f432b4cfa",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeContactSequence": "gettysburg-v22-union-a-s-contact",
+        "scope": "Exact source-reviewed union A S local opt-in only; incomplete family",
+        "familyComplete": false,
+        "productionApproved": false,
+        "defaultApproved": false,
+        "humanCertified": false,
+        "physicalAnatomyCertified": false,
+        "historicalDrillCertified": false
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v22-independent-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "66ef816943a6b21cf9aa2954124145a8b7182a7ad35d9bb229afbc250397ed7f",
+    "referenceHeight": 371,
+    "familyComplete": false,
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

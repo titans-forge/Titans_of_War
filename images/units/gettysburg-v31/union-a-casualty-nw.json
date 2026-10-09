@@ -1,0 +1,174 @@
+{
+  "frames": {
+    "a-fall-5-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.61882,
+        "y": 0.947368
+      },
+      "bodyHeight": 370
+    },
+    "a-fall-5-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.591707,
+        "y": 0.8437
+      },
+      "bodyHeight": 370
+    },
+    "a-fall-5-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.564593,
+        "y": 0.629984
+      },
+      "bodyHeight": 370
+    },
+    "a-fall-5-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.607656,
+        "y": 0.653907
+      },
+      "bodyHeight": 370
+    }
+  },
+  "meta": {
+    "image": "union-a-casualty-nw.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "9c03405991c9171c70411336641ea82b92db7f9bb1c9f70138d7e113029c9e85",
+    "source": "docs/art-pass/candidates/gettysburg-v31/union-a-casualty-nw-candidate.png",
+    "artPass": "gettysburg-v31",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "union",
+        "identity": "a",
+        "direction": 5,
+        "action": "fall",
+        "key": "union-gettysburg-v31-a-casualty-nw",
+        "frames": [
+          "a-fall-5-0",
+          "a-fall-5-1",
+          "a-fall-5-2",
+          "a-fall-5-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.61882,
+            "y": 0.947368
+          },
+          {
+            "x": 0.591707,
+            "y": 0.8437
+          },
+          {
+            "x": 0.564593,
+            "y": 0.629984
+          },
+          {
+            "x": 0.607656,
+            "y": 0.653907
+          }
+        ],
+        "referenceHeight": 370,
+        "sourceHash": "9c03405991c9171c70411336641ea82b92db7f9bb1c9f70138d7e113029c9e85",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeCasualtySequence": "gettysburg-v31-union-a-nw-casualty",
+        "scope": "Exact source-reviewed union A NW local opt-in only; incomplete family",
+        "familyComplete": false,
+        "productionApproved": false,
+        "defaultApproved": false,
+        "humanCertified": false,
+        "physicalAnatomyCertified": false,
+        "historicalDrillCertified": false
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v31-independent-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "a0b324df31af6be2523f8a5796476225a3f39d9862688e75a5dae8be01beac32",
+    "referenceHeight": 370,
+    "familyComplete": false,
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

@@ -1,0 +1,723 @@
+{
+  "frames": {
+    "a-ready-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 260
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 260
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 260
+      },
+      "pivot": {
+        "x": 0.697917,
+        "y": 0.988462
+      },
+      "bodyHeight": 239
+    },
+    "a-ready-1": {
+      "frame": {
+        "x": 384,
+        "y": 0,
+        "w": 384,
+        "h": 268
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 268
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 268
+      },
+      "pivot": {
+        "x": 0.52788,
+        "y": 0.996269
+      },
+      "bodyHeight": 239
+    },
+    "a-ready-2": {
+      "frame": {
+        "x": 768,
+        "y": 0,
+        "w": 384,
+        "h": 264
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 264
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 264
+      },
+      "pivot": {
+        "x": 0.428818,
+        "y": 0.988636
+      },
+      "bodyHeight": 239
+    },
+    "a-ready-3": {
+      "frame": {
+        "x": 1152,
+        "y": 0,
+        "w": 384,
+        "h": 269
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 269
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 269
+      },
+      "pivot": {
+        "x": 0.455945,
+        "y": 0.98513
+      },
+      "bodyHeight": 239
+    },
+    "a-ready-4": {
+      "frame": {
+        "x": 0,
+        "y": 260,
+        "w": 384,
+        "h": 252
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 252
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 252
+      },
+      "pivot": {
+        "x": 0.621651,
+        "y": 0.968254
+      },
+      "bodyHeight": 239
+    },
+    "a-ready-5": {
+      "frame": {
+        "x": 384,
+        "y": 268,
+        "w": 384,
+        "h": 239
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 239
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 239
+      },
+      "pivot": {
+        "x": 0.579521,
+        "y": 0.995816
+      },
+      "bodyHeight": 239
+    },
+    "a-ready-6": {
+      "frame": {
+        "x": 768,
+        "y": 264,
+        "w": 384,
+        "h": 248
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 248
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 248
+      },
+      "pivot": {
+        "x": 0.415792,
+        "y": 0.979839
+      },
+      "bodyHeight": 239
+    },
+    "a-ready-7": {
+      "frame": {
+        "x": 1152,
+        "y": 269,
+        "w": 384,
+        "h": 243
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 243
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 243
+      },
+      "pivot": {
+        "x": 0.397901,
+        "y": 0.979424
+      },
+      "bodyHeight": 239
+    },
+    "b-ready-0": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 384,
+        "h": 260
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 260
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 260
+      },
+      "pivot": {
+        "x": 0.677083,
+        "y": 0.988462
+      },
+      "bodyHeight": 242
+    },
+    "b-ready-1": {
+      "frame": {
+        "x": 384,
+        "y": 507,
+        "w": 384,
+        "h": 264
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 264
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 264
+      },
+      "pivot": {
+        "x": 0.510727,
+        "y": 0.996212
+      },
+      "bodyHeight": 242
+    },
+    "b-ready-2": {
+      "frame": {
+        "x": 768,
+        "y": 512,
+        "w": 384,
+        "h": 258
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 258
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 258
+      },
+      "pivot": {
+        "x": 0.393091,
+        "y": 0.984496
+      },
+      "bodyHeight": 242
+    },
+    "b-ready-3": {
+      "frame": {
+        "x": 1152,
+        "y": 512,
+        "w": 384,
+        "h": 265
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 265
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 265
+      },
+      "pivot": {
+        "x": 0.458763,
+        "y": 0.996226
+      },
+      "bodyHeight": 242
+    },
+    "b-ready-4": {
+      "frame": {
+        "x": 0,
+        "y": 772,
+        "w": 384,
+        "h": 252
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 252
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 252
+      },
+      "pivot": {
+        "x": 0.6075,
+        "y": 0.952381
+      },
+      "bodyHeight": 242
+    },
+    "b-ready-5": {
+      "frame": {
+        "x": 384,
+        "y": 771,
+        "w": 384,
+        "h": 253
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 253
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 253
+      },
+      "pivot": {
+        "x": 0.595896,
+        "y": 0.952569
+      },
+      "bodyHeight": 242
+    },
+    "b-ready-6": {
+      "frame": {
+        "x": 768,
+        "y": 770,
+        "w": 384,
+        "h": 254
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 254
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 254
+      },
+      "pivot": {
+        "x": 0.431958,
+        "y": 0.952756
+      },
+      "bodyHeight": 242
+    },
+    "b-ready-7": {
+      "frame": {
+        "x": 1152,
+        "y": 777,
+        "w": 384,
+        "h": 247
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 247
+      },
+      "sourceSize": {
+        "w": 384,
+        "h": 247
+      },
+      "pivot": {
+        "x": 0.413143,
+        "y": 0.951417
+      },
+      "bodyHeight": 242
+    }
+  },
+  "meta": {
+    "image": "union-ready.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "sha256": "205ce94b6968d3f8a6cb56631f9a7ac0934131c28f19ff859e1435e2b4bae065",
+    "generation": "OpenAI built-in imagegen; model identifier not reported",
+    "candidate": true,
+    "artPass": "gettysburg-v2",
+    "side": "union",
+    "page": "ready",
+    "background": "native alpha",
+    "identityReferenceHeights": {
+      "a": 239,
+      "b": 242
+    },
+    "directions": [
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW",
+      "N",
+      "NE"
+    ],
+    "layout": "4x4: rows 0-1 identity a, rows 2-3 identity b; eight directions row-major",
+    "sourceColumnEdges": [
+      0,
+      384,
+      768,
+      1152,
+      1536
+    ],
+    "sourceRowEdgesByColumn": [
+      [
+        0,
+        260,
+        512,
+        772,
+        1024
+      ],
+      [
+        0,
+        268,
+        507,
+        771,
+        1024
+      ],
+      [
+        0,
+        264,
+        512,
+        770,
+        1024
+      ],
+      [
+        0,
+        269,
+        512,
+        777,
+        1024
+      ]
+    ],
+    "separatorAnalysis": {
+      "solidAlphaThreshold": 64,
+      "solidRowSeparationVerified": true,
+      "rowCuts": [
+        {
+          "column": 0,
+          "y": 260,
+          "maxAlpha": 0,
+          "solidPixels": 0
+        },
+        {
+          "column": 0,
+          "y": 512,
+          "maxAlpha": 3,
+          "solidPixels": 0
+        },
+        {
+          "column": 0,
+          "y": 772,
+          "maxAlpha": 3,
+          "solidPixels": 0
+        },
+        {
+          "column": 1,
+          "y": 268,
+          "maxAlpha": 5,
+          "solidPixels": 0
+        },
+        {
+          "column": 1,
+          "y": 507,
+          "maxAlpha": 7,
+          "solidPixels": 0
+        },
+        {
+          "column": 1,
+          "y": 771,
+          "maxAlpha": 8,
+          "solidPixels": 0
+        },
+        {
+          "column": 2,
+          "y": 264,
+          "maxAlpha": 0,
+          "solidPixels": 0
+        },
+        {
+          "column": 2,
+          "y": 512,
+          "maxAlpha": 2,
+          "solidPixels": 0
+        },
+        {
+          "column": 2,
+          "y": 770,
+          "maxAlpha": 2,
+          "solidPixels": 0
+        },
+        {
+          "column": 3,
+          "y": 269,
+          "maxAlpha": 1,
+          "solidPixels": 0
+        },
+        {
+          "column": 3,
+          "y": 512,
+          "maxAlpha": 2,
+          "solidPixels": 0
+        },
+        {
+          "column": 3,
+          "y": 777,
+          "maxAlpha": 49,
+          "solidPixels": 0
+        }
+      ],
+      "solidRowCutFailures": []
+    },
+    "measurements": {
+      "a-ready-0": {
+        "capTop": 13,
+        "groundY": 257,
+        "bootCenterX": 268.0,
+        "measuredHumanHeight": 244,
+        "bootBand": {
+          "top": 249,
+          "bottom": 256
+        },
+        "alphaSoleCenterX": 259.734,
+        "pivotAnnotation": "Visible grounded boot sole; exclude adjacent rifle butt"
+      },
+      "a-ready-1": {
+        "capTop": 15,
+        "groundY": 267,
+        "bootCenterX": 202.706,
+        "measuredHumanHeight": 252,
+        "bootBand": {
+          "top": 259,
+          "bottom": 266
+        }
+      },
+      "a-ready-2": {
+        "capTop": 16,
+        "groundY": 261,
+        "bootCenterX": 164.666,
+        "measuredHumanHeight": 245,
+        "bootBand": {
+          "top": 253,
+          "bottom": 260
+        }
+      },
+      "a-ready-3": {
+        "capTop": 15,
+        "groundY": 265,
+        "bootCenterX": 175.083,
+        "measuredHumanHeight": 250,
+        "bootBand": {
+          "top": 257,
+          "bottom": 264
+        }
+      },
+      "a-ready-4": {
+        "capTop": 12,
+        "groundY": 244,
+        "bootCenterX": 238.714,
+        "measuredHumanHeight": 232,
+        "bootBand": {
+          "top": 236,
+          "bottom": 243
+        }
+      },
+      "a-ready-5": {
+        "capTop": 8,
+        "groundY": 238,
+        "bootCenterX": 222.536,
+        "measuredHumanHeight": 230,
+        "bootBand": {
+          "top": 230,
+          "bottom": 237
+        }
+      },
+      "a-ready-6": {
+        "capTop": 9,
+        "groundY": 243,
+        "bootCenterX": 159.664,
+        "measuredHumanHeight": 234,
+        "bootBand": {
+          "top": 235,
+          "bottom": 242
+        }
+      },
+      "a-ready-7": {
+        "capTop": 7,
+        "groundY": 238,
+        "bootCenterX": 152.794,
+        "measuredHumanHeight": 231,
+        "bootBand": {
+          "top": 230,
+          "bottom": 237
+        }
+      },
+      "b-ready-0": {
+        "capTop": 5,
+        "groundY": 257,
+        "bootCenterX": 260.0,
+        "measuredHumanHeight": 252,
+        "bootBand": {
+          "top": 249,
+          "bottom": 256
+        },
+        "alphaSoleCenterX": 251.653,
+        "pivotAnnotation": "Visible grounded boot sole; exclude adjacent rifle butt"
+      },
+      "b-ready-1": {
+        "capTop": 10,
+        "groundY": 263,
+        "bootCenterX": 196.119,
+        "measuredHumanHeight": 253,
+        "bootBand": {
+          "top": 255,
+          "bottom": 262
+        }
+      },
+      "b-ready-2": {
+        "capTop": 6,
+        "groundY": 254,
+        "bootCenterX": 150.947,
+        "measuredHumanHeight": 248,
+        "bootBand": {
+          "top": 246,
+          "bottom": 253
+        }
+      },
+      "b-ready-3": {
+        "capTop": 6,
+        "groundY": 264,
+        "bootCenterX": 176.165,
+        "measuredHumanHeight": 258,
+        "bootBand": {
+          "top": 256,
+          "bottom": 263
+        }
+      },
+      "b-ready-4": {
+        "capTop": 4,
+        "groundY": 240,
+        "bootCenterX": 233.28,
+        "measuredHumanHeight": 236,
+        "bootBand": {
+          "top": 232,
+          "bottom": 239
+        }
+      },
+      "b-ready-5": {
+        "capTop": 6,
+        "groundY": 241,
+        "bootCenterX": 228.824,
+        "measuredHumanHeight": 235,
+        "bootBand": {
+          "top": 233,
+          "bottom": 240
+        }
+      },
+      "b-ready-6": {
+        "capTop": 7,
+        "groundY": 242,
+        "bootCenterX": 165.872,
+        "measuredHumanHeight": 235,
+        "bootBand": {
+          "top": 234,
+          "bottom": 241
+        }
+      },
+      "b-ready-7": {
+        "capTop": 4,
+        "groundY": 235,
+        "bootCenterX": 158.647,
+        "measuredHumanHeight": 231,
+        "bootBand": {
+          "top": 227,
+          "bottom": 234
+        }
+      }
+    },
+    "measurementNotes": [
+      "Original PNG pixels are preserved. Rectangles are full assigned cells and are not trimmed.",
+      "Cuts use least alpha mass in bands with no alpha >=64 pixels, measured separately by source column.",
+      "Cap top uses a sustained broad silhouette to exclude narrow bayonet tips; ground uses the lowest solid sole band.",
+      "Boot-center pivots use alpha-weighted pixels in the last eight source rows above ground, with explicit annotations where a rifle butt touches a sole; inspect animation for anatomical registration.",
+      "One median human height per identity and page prevents per-contact or per-direction scale breathing.",
+      "Faint alpha residue can exist at generated separators. Distinct contact crops do not prove anatomically opposing leg contacts."
+    ]
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "frames": {
+    "a-fall-4-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.673046,
+        "y": 0.881978
+      },
+      "bodyHeight": 365
+    },
+    "a-fall-4-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.564593,
+        "y": 0.867624
+      },
+      "bodyHeight": 365
+    },
+    "a-fall-4-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.652313,
+        "y": 0.639553
+      },
+      "bodyHeight": 365
+    },
+    "a-fall-4-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.518341,
+        "y": 0.681021
+      },
+      "bodyHeight": 365
+    }
+  },
+  "meta": {
+    "image": "union-a-casualty-w.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "a950d5ccbd5e6672125e07bc863170f235cb9c07d3a2fbc63653b0ff2df01b7a",
+    "source": "docs/art-pass/candidates/gettysburg-v21/union-a-casualty-w-candidate.png",
+    "artPass": "gettysburg-v21",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "union",
+        "identity": "a",
+        "direction": 4,
+        "action": "fall",
+        "key": "union-gettysburg-v21-a-casualty-w",
+        "frames": [
+          "a-fall-4-0",
+          "a-fall-4-1",
+          "a-fall-4-2",
+          "a-fall-4-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.673046,
+            "y": 0.881978
+          },
+          {
+            "x": 0.564593,
+            "y": 0.867624
+          },
+          {
+            "x": 0.652313,
+            "y": 0.639553
+          },
+          {
+            "x": 0.518341,
+            "y": 0.681021
+          }
+        ],
+        "referenceHeight": 365,
+        "sourceHash": "a950d5ccbd5e6672125e07bc863170f235cb9c07d3a2fbc63653b0ff2df01b7a",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeCasualtySequence": "gettysburg-v21-union-a-w-casualty",
+        "scope": "Exact source-reviewed Union A W local opt-in only; incomplete family"
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v21-independent-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "5b607f200d6545cb8e8cb8d422ff86a477c3349669ee9ee91653c7db65257494",
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

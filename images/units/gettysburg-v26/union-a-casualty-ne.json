@@ -1,0 +1,174 @@
+{
+  "frames": {
+    "a-fall-7-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.519936,
+        "y": 0.926635
+      },
+      "bodyHeight": 435
+    },
+    "a-fall-7-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.454545,
+        "y": 0.901116
+      },
+      "bodyHeight": 435
+    },
+    "a-fall-7-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.486443,
+        "y": 0.695375
+      },
+      "bodyHeight": 435
+    },
+    "a-fall-7-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.507177,
+        "y": 0.634769
+      },
+      "bodyHeight": 435
+    }
+  },
+  "meta": {
+    "image": "union-a-casualty-ne.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "22ef7b1ecbfd71538a638d2721d74ad0de7d2f2393d68702ac4812fc9cccb875",
+    "source": "docs/art-pass/candidates/gettysburg-v26/union-a-casualty-ne-candidate.png",
+    "artPass": "gettysburg-v26",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "union",
+        "identity": "a",
+        "direction": 7,
+        "action": "fall",
+        "key": "union-gettysburg-v26-a-casualty-ne",
+        "frames": [
+          "a-fall-7-0",
+          "a-fall-7-1",
+          "a-fall-7-2",
+          "a-fall-7-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.519936,
+            "y": 0.926635
+          },
+          {
+            "x": 0.454545,
+            "y": 0.901116
+          },
+          {
+            "x": 0.486443,
+            "y": 0.695375
+          },
+          {
+            "x": 0.507177,
+            "y": 0.634769
+          }
+        ],
+        "referenceHeight": 435,
+        "sourceHash": "22ef7b1ecbfd71538a638d2721d74ad0de7d2f2393d68702ac4812fc9cccb875",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeCasualtySequence": "gettysburg-v26-union-a-ne-casualty",
+        "scope": "Exact source-reviewed union A NE local opt-in only; incomplete family",
+        "familyComplete": false,
+        "productionApproved": false,
+        "defaultApproved": false,
+        "humanCertified": false,
+        "physicalAnatomyCertified": false,
+        "historicalDrillCertified": false
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v26-independent-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "8f6cc672b119b13f7659b58c72bafce3d8396abe0798499874070c27b88b8171",
+    "referenceHeight": 435,
+    "familyComplete": false,
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

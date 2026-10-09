@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Procedural Civil War Theater</title>
+  <desc id="desc">A simple generated tactical-map backdrop for scenarios without verified public-release media.</desc>
+  <rect width="1200" height="675" fill="#090c10"/>
+  <g opacity="0.28" stroke="#d4af37" stroke-width="1">
+    <path d="M0 140 C180 95 315 190 480 145 S815 80 1200 150" fill="none"/>
+    <path d="M0 300 C210 250 340 370 555 310 S865 235 1200 330" fill="none"/>
+    <path d="M0 505 C190 445 380 565 600 505 S960 420 1200 510" fill="none"/>
+  </g>
+  <g opacity="0.18" stroke="#9ca3af" stroke-width="1">
+    <path d="M180 0 V675"/>
+    <path d="M360 0 V675"/>
+    <path d="M540 0 V675"/>
+    <path d="M720 0 V675"/>
+    <path d="M900 0 V675"/>
+    <path d="M1080 0 V675"/>
+    <path d="M0 135 H1200"/>
+    <path d="M0 270 H1200"/>
+    <path d="M0 405 H1200"/>
+    <path d="M0 540 H1200"/>
+  </g>
+  <g font-family="Georgia, serif" text-anchor="middle">
+    <text x="600" y="302" fill="#d4af37" font-size="52">Titans of War</text>
+    <text x="600" y="352" fill="#cbd5e1" font-size="24">Historical Educational Strategy Simulation</text>
+    <text x="600" y="396" fill="#7f8a9b" font-size="18">Verified media pending for this scenario</text>
+  </g>
+</svg>

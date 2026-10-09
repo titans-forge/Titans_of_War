@@ -1,0 +1,169 @@
+# Titans of War Media Rights
+
+This document separates the MIT-licensed application code from the images and
+audio distributed with Titans of War. It is a release record, not legal advice.
+
+## Project Media
+
+Project-authored battlefield photographs and project-created images are
+offered under the [Creative Commons Attribution 4.0 International
+license](https://creativecommons.org/licenses/by/4.0/) to the extent Titans
+Forge holds transferable rights in them.
+
+Suggested attribution:
+
+> Titans of War media by Titans Forge, CC BY 4.0.
+
+Some project-created images were produced with generative tools. Provider-
+specific attribution is recorded in `src/game/mediaCatalog.js` where known.
+The project also acknowledges OpenAI, xAI/Grok Imagine, and Google image
+generation tools globally. Provider names do not imply sponsorship or
+endorsement.
+
+### Tactical Battlefield Plates
+
+The directional infantry atlases in `public/images/units/directional/` are
+original project-created Blender renders, covered by the Project Media terms
+above. Their editable source is `scripts/render-civil-war-infantry.py` (MIT).
+They use no third-party meshes or texture images. See
+`docs/civil-war-directional-infantry.md` for the camera, source, frame contract,
+and inspected artifact hashes. The blue/gray uniforms are representative visual
+identifiers, not authenticated regimental reconstructions. Generic CS/US markers
+identify game factions; they are not reproductions of historical unit flags.
+
+The optional field-command encounters use project-created visual plates
+produced for Titans Forge with OpenAI image generation in August 2026:
+
+- `public/images/battles/first-manassas-henry-hill-v1.webp`
+- `public/images/battles/shiloh-terrain-v1.webp`
+- `public/images/battles/chancellorsville-terrain-v1.webp`
+- `public/images/battles/wilderness-terrain-v1.webp`
+- `public/images/battles/cedar-creek-terrain-v1.webp`
+- `public/images/battles/gettysburg-terrain-v1.webp`
+- `public/images/battles/chickamauga-terrain-v1.webp`
+- `public/images/battles/cold-harbor-terrain-v1.webp`
+- `public/images/battles/petersburg-crater-terrain-v1.webp`
+- `public/images/battles/third-winchester-terrain-v1.webp`
+- `public/images/units/union-infantry-v1.webp`
+- `public/images/units/confederate-infantry-v1.webp`
+- `public/images/units/union-artillery-v1.webp`
+- `public/images/units/union-artillery-v2.png`
+
+These plates are representative game art rather than documentary depictions or
+literal orders of battle. Their selection, formation layout, interface,
+animation, and scenario design are project-authored. They are offered under the
+same Project Media terms above to the extent Titans Forge holds transferable
+rights in them.
+
+AI-generated output may not qualify for copyright protection in every
+jurisdiction. The CC BY 4.0 offer therefore applies only to rights the project
+author can license, and no exclusivity is claimed.
+
+## Provider Terms Reviewed
+
+The release review used the provider terms available on June 9, 2026:
+
+- [OpenAI Terms of Use](https://openai.com/policies/terms-of-use/): as between
+  the user and OpenAI, the user owns output and OpenAI assigns any rights it
+  may have in that output.
+- [xAI Consumer Terms](https://x.ai/legal/terms-of-service) and
+  [xAI Legal FAQ](https://x.ai/legal/faq): users retain rights in their
+  content and may use generated images commercially; xAI asks users to follow
+  its attribution guidance.
+- [Google Terms of Service](https://policies.google.com/terms): Google does
+  not claim ownership over original content generated in its services.
+- [Black Forest Labs FLUX output terms](https://bfl.ai/legal/terms-of-service)
+  state that BFL does not claim ownership of outputs. However, local
+  FLUX.2 Klein 9B use is governed by the
+  [FLUX Non-Commercial License](https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/blob/main/LICENSE.md)
+  unless a separate commercial license applies.
+
+Because Titans of War also promotes a commercial company, the two experimental
+local FLUX.2 Klein 9B outputs are not used by the application and are removed
+from the playable release archive by `scripts/prune-release-assets.mjs`:
+
+- `shiloh_pittsburg_landing_theater_flux2.jpg`
+- `richmond_evacuation_theater_flux2.jpg`
+
+The game uses other cleared images for those scenarios.
+
+## Historical Media And Audio
+
+Historical paintings, prints, maps, photographs, and recordings retain the
+rights status shown in:
+
+- `src/game/mediaCatalog.js`
+- `src/game/audioCatalog.js`
+- `src/game/historicalAssetManifest.js`
+
+Public-domain works are not placed under CC BY 4.0. Third-party works retain
+their stated licenses and required credits.
+
+Each shipped audio recording is tied to its audited source download by a
+SHA-256 hash in `src/game/historicalAssetManifest.js`. Run
+`npm run validate-assets` to verify the local release files.
+
+The `dixie_instrumental.mp3` recording is included as separately licensed
+CC BY-SA 4.0 Wikimedia Commons media; it is not relicensed under the project's
+MIT code license. `lorena_instrumental.mp3` is included again using a trimmed
+Library of Congress Citizen DJ source file whose item page states that the
+recording is free to use and reuse, including commercial use. Optional recordings
+and maps marked
+`recording-needed` or `needs-review` are also excluded until their exact source
+and redistribution status are verified.
+
+## Copyrightability Note
+
+The U.S. Copyright Office states that copyright protects human-authored
+expression, while purely AI-generated material or material controlled only by
+prompts may not be protected. See its
+[Copyright and Artificial Intelligence initiative](https://www.copyright.gov/ai/)
+and Part 2 report on copyrightability. Human-authored selection, arrangement,
+editing, captions, software, and game design remain separate works.
+
+## No Warranty
+
+Media is provided without warranty. Downstream users are responsible for
+checking the law and provider terms that apply to their jurisdiction and use.
+
+
+## Detailed battlefield units, September 9, 2026
+
+The eight sprite sheets in `public/images/units/detailed-v2/` were generated with OpenAI built-in imagegen for Titans Forge. No exact model identifier was reported. Native generated PNG bytes are retained; chroma backgrounds are composited by the game renderer at load time. These are representative historical interpretations, not archival photographs or exact regimental uniform documentation. Asset hashes, provenance, limitations and retained directional exceptions are recorded in `docs/detailed-unit-art-v2.json`; generation prompts are recorded in `docs/detailed-unit-art-v2-prompts.json`.
+
+
+### Realistic flags and scenery pass — 2026-09-09
+
+Four native PNGs in `public/images/battles/realistic-v2/` were generated with the built-in OpenAI image tool for Titans Forge. These are generated game interpretations, not archival photographs. The renderer keys the scenery background once and shades the existing counted flag designs with the generated wool material. Exact prompts, source paths, hashes, limitations and rejected-background history are recorded in `docs/realistic-scenery-prompts.json` and `docs/realistic-scenery-v2.json`.
+
+
+### Historical landmark sprites — 2026-09-13
+
+Henry House, Hackwood and Belle Grove PNGs in `public/images/battles/landmarks-v1/` were generated with the built-in OpenAI image tool for this game and retain their original RGBA pixels. These are illustrative reconstructions, not archival photographs. Henry House uses an NPS 1861 drawing as reference; Hackwood uses the house illustration in the user-provided interpretive-sign photograph; Belle Grove uses published architectural descriptions. Reference photographs are not included in the game bundle. Exact prompts, sources, limitations and hashes are in `docs/historical-landmark-prompts-v1.json` and `docs/historical-landmark-art-v1.json`.
+
+### Historical landmark sprites, second batch — 2026-09-13
+
+Shiloh Church, Chancellor House and Brotherton Cabin PNGs in `public/images/battles/landmarks-v2/` were generated with the built-in OpenAI image tool and retain their original RGBA pixels. No exact model identifier was reported. Shiloh uses the park's circa-1901 historical painting as interpretive reference; Chancellor House uses Forbes's May 1, 1863 drawing and NPS history; Brotherton uses NPS historical and architectural descriptions. The surviving Brotherton cabin is postwar, so the sprite is explicitly an illustrative reconstruction. These are generated game illustrations, not archival images or measured reconstructions. Reference images are not bundled in the game. Exact prompts, sources, limitations and hashes are recorded in `docs/historical-landmark-prompts-v2.json` and `docs/historical-landmark-art-v2.json`.
+
+### Gettysburg landmark sprites and terrain cleanup — 2026-09-13
+
+Leister House and Evergreen Gatehouse in `public/images/battles/landmarks-v3/`, and `public/images/battles/gettysburg-terrain-v3.png`, were generated or edited with the built-in OpenAI image tool. No exact model identifier was reported. Selected PNGs retain their original pixels; the two building sprites retain native alpha. The NPS historical accounts and then-and-now photographs informed the illustrations. These are representative game reconstructions, not archival photographs or exact architectural surveys. The terrain revision removes two generic painted buildings from the earlier generated plate. Reference photographs are retained in task evidence only. Prompts, provenance, rejected attempts, historical limitations and exact hashes are recorded in `docs/historical-landmark-prompts-v3.json` and `docs/historical-landmark-art-v3.json`.
+
+
+## September 13, 2026 — Wilderness and Cold Harbor landmarks (0.7.0)
+
+`public/images/battles/landmarks-v4/widow-tapp-house.png` and `garthright-house.png` are original AI-generated illustrative reconstructions made with the built-in image generation tool. The tool did not report its exact model identifier. Original full-resolution RGBA output is retained without pixel editing. Prompts are in `docs/historical-landmark-prompts-v4.json`; source URLs, original paths, dimensions, transparency checks and SHA-256 hashes are in `docs/historical-landmark-art-v4.json`.
+
+The houses and their historical roles are documented; exact architectural details, palette, scale and placement are interpretive. The Tapp log-house form follows the NPS wayside transcription. Garthright’s mixed brick and timber construction follows the NPS historic structures report and historical photograph. Historical photographs and the PDF are research evidence outside the release, not shipped textures. No claim is made that the generated images are archival photographs or surveyed reconstructions. Garthright hospital care adds historical context only, not a healing mechanic.
+
+
+## September 13, 2026 — Siege terrain (0.8.0)
+
+Three original generated RGBA textures (`ravine.png`, `earthwork.png`, `crater.png`) are in `public/images/battles/siege-v1/`. Built-in image generation produced these interpretive Civil War terrain assets; no exact model identifier was returned. Full-resolution originals are copied unchanged. Runtime placement, scaling and clipping fit existing game terrain zones. These are not archival photographs or surveyed reconstructions. No historical source images are shipped in this batch.
+
+Prompts: `docs/siege-terrain-prompts-v1.json`. Original paths, hashes, dimensions and NPS source references: `docs/siege-terrain-art-v1.json`.
+
+
+## September 13, 2026 — Second landmarks at Manassas and Chickamauga (0.10.0)
+
+Stone House and Snodgrass House in `public/images/battles/landmarks-v5/` were generated with the built-in image tool. The exact model was not reported. Original RGBA files are retained without pixel edits. Their native alpha was checked; a proposed Snodgrass cleanup with a baked checkerboard was rejected. The Stone House follows the NPS-hosted 1862 photograph; Snodgrass follows an Alfred Waud drawing in the Library of Congress, whose exact date is uncertain. These are illustrative reconstructions, with representative placement and invented farm-track/yard detail. The existing Snodgrass cabin is a smaller 1867 rebuild. Historical reference images remain outside the game bundle. Prompts and source/hash records are in `docs/historical-landmark-prompts-v5.json` and `docs/historical-landmark-art-v5.json`.

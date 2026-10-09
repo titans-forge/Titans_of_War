@@ -1,0 +1,174 @@
+{
+  "frames": {
+    "a-melee-6-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.558214,
+        "y": 0.950558
+      },
+      "bodyHeight": 330
+    },
+    "a-melee-6-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.503987,
+        "y": 0.968102
+      },
+      "bodyHeight": 330
+    },
+    "a-melee-6-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.566188,
+        "y": 0.837321
+      },
+      "bodyHeight": 330
+    },
+    "a-melee-6-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.511962,
+        "y": 0.851675
+      },
+      "bodyHeight": 330
+    }
+  },
+  "meta": {
+    "image": "union-a-contact-n.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "db3cf93fc162470857028cb0164284ba7ea2e9e504a977d7de21f0e6b52a365d",
+    "source": "docs/art-pass/candidates/gettysburg-v23/union-a-contact-n-candidate.png",
+    "artPass": "gettysburg-v23",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "union",
+        "identity": "a",
+        "direction": 6,
+        "action": "melee",
+        "key": "union-gettysburg-v23-a-contact-n",
+        "frames": [
+          "a-melee-6-0",
+          "a-melee-6-1",
+          "a-melee-6-2",
+          "a-melee-6-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.558214,
+            "y": 0.950558
+          },
+          {
+            "x": 0.503987,
+            "y": 0.968102
+          },
+          {
+            "x": 0.566188,
+            "y": 0.837321
+          },
+          {
+            "x": 0.511962,
+            "y": 0.851675
+          }
+        ],
+        "referenceHeight": 330,
+        "sourceHash": "db3cf93fc162470857028cb0164284ba7ea2e9e504a977d7de21f0e6b52a365d",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeContactSequence": "gettysburg-v23-union-a-n-contact",
+        "scope": "Exact source-reviewed union A N local opt-in only; incomplete family",
+        "familyComplete": false,
+        "productionApproved": false,
+        "defaultApproved": false,
+        "humanCertified": false,
+        "physicalAnatomyCertified": false,
+        "historicalDrillCertified": false
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v23-independent-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "27c41c71d82f9fbef3ae7831e585ac714fe0e15ac81948636c5299ee3aa8c877",
+    "referenceHeight": 330,
+    "familyComplete": false,
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

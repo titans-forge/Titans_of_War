@@ -1,0 +1,158 @@
+{
+  "frames": {
+    "a-march-2-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.550239,
+        "y": 0.969697
+      },
+      "bodyHeight": 440
+    },
+    "a-march-2-1": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.433812,
+        "y": 0.952153
+      },
+      "bodyHeight": 440
+    },
+    "a-march-2-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.548644,
+        "y": 0.952153
+      },
+      "bodyHeight": 440
+    },
+    "a-march-2-3": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.433812,
+        "y": 0.969697
+      },
+      "bodyHeight": 440
+    }
+  },
+  "meta": {
+    "image": "union-a-march-s.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000",
+    "source": "docs/art-pass/candidates/gettysburg-v7/union-a-s-march-candidate.png",
+    "artPass": "gettysburg-v7",
+    "candidate": true,
+    "productionApproved": false,
+    "pixelTreatment": "none; byte-for-byte native PNG copy, full equal cells",
+    "clips": [
+      {
+        "side": "union",
+        "identity": "a",
+        "direction": 2,
+        "action": "march",
+        "key": "union-gettysburg-v7-a-march-s",
+        "frames": [
+          "a-march-2-0",
+          "a-march-2-1",
+          "a-march-2-2",
+          "a-march-2-3"
+        ],
+        "sourceHash": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000",
+        "referenceHeight": 440,
+        "pivots": [
+          {
+            "x": 0.550239,
+            "y": 0.969697
+          },
+          {
+            "x": 0.433812,
+            "y": 0.952153
+          },
+          {
+            "x": 0.548644,
+            "y": 0.952153
+          },
+          {
+            "x": 0.433812,
+            "y": 0.969697
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "opt-in Union A S marching; exact historical Gettysburg v7 only"
+      }
+    ],
+    "measurementReview": "docs/art-pass/reviews/gettysburg-v7-union-a-march-s-measurement.json"
+  }
+}

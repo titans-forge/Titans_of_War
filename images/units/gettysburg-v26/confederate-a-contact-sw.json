@@ -1,0 +1,174 @@
+{
+  "frames": {
+    "a-melee-3-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.591707,
+        "y": 0.889952
+      },
+      "bodyHeight": 415
+    },
+    "a-melee-3-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.585327,
+        "y": 0.896332
+      },
+      "bodyHeight": 415
+    },
+    "a-melee-3-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.620415,
+        "y": 0.827751
+      },
+      "bodyHeight": 415
+    },
+    "a-melee-3-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.620415,
+        "y": 0.810207
+      },
+      "bodyHeight": 415
+    }
+  },
+  "meta": {
+    "image": "confederate-a-contact-sw.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "1eb2930b3c90c9db5dedf5f0278c80947173d4b5f568d16282d5c1c5b8caffeb",
+    "source": "docs/art-pass/candidates/gettysburg-v26/confederate-a-contact-sw-candidate.png",
+    "artPass": "gettysburg-v26",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 3,
+        "action": "melee",
+        "key": "confederate-gettysburg-v26-a-contact-sw",
+        "frames": [
+          "a-melee-3-0",
+          "a-melee-3-1",
+          "a-melee-3-2",
+          "a-melee-3-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.591707,
+            "y": 0.889952
+          },
+          {
+            "x": 0.585327,
+            "y": 0.896332
+          },
+          {
+            "x": 0.620415,
+            "y": 0.827751
+          },
+          {
+            "x": 0.620415,
+            "y": 0.810207
+          }
+        ],
+        "referenceHeight": 415,
+        "sourceHash": "1eb2930b3c90c9db5dedf5f0278c80947173d4b5f568d16282d5c1c5b8caffeb",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeContactSequence": "gettysburg-v26-confederate-a-sw-contact",
+        "scope": "Exact source-reviewed confederate A SW local opt-in only; incomplete family",
+        "familyComplete": false,
+        "productionApproved": false,
+        "defaultApproved": false,
+        "humanCertified": false,
+        "physicalAnatomyCertified": false,
+        "historicalDrillCertified": false
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v26-independent-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "8f6cc672b119b13f7659b58c72bafce3d8396abe0798499874070c27b88b8171",
+    "referenceHeight": 415,
+    "familyComplete": false,
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

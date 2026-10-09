@@ -1,0 +1,200 @@
+{
+  "frames": {
+    "a-ready-0-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.349282,
+        "y": 0.971292
+      },
+      "bodyHeight": 485
+    },
+    "a-fire-0-0": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.23126,
+        "y": 0.971292
+      },
+      "bodyHeight": 485
+    },
+    "a-reload-0-0": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.393939,
+        "y": 0.940989
+      },
+      "bodyHeight": 485
+    },
+    "a-reload-0-1": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.371611,
+        "y": 0.940989
+      },
+      "bodyHeight": 485
+    }
+  },
+  "meta": {
+    "image": "union-a-actions-e.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f",
+    "source": "docs/art-pass/candidates/gettysburg-v5/union-e-actions-candidate.png",
+    "artPass": "gettysburg-v5",
+    "candidate": true,
+    "productionApproved": false,
+    "pixelTreatment": "none; byte-for-byte native PNG copy, full equal cells",
+    "clips": [
+      {
+        "side": "union",
+        "identity": "a",
+        "direction": 0,
+        "action": "ready",
+        "key": "union-gettysburg-v5-actions-e",
+        "frames": [
+          "a-ready-0-0"
+        ],
+        "sourceHash": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f",
+        "referenceHeight": 485,
+        "pivots": [
+          {
+            "x": 0.349282,
+            "y": 0.971292
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "opt-in Union A E actions / reviewed SE march only"
+      },
+      {
+        "side": "union",
+        "identity": "a",
+        "direction": 0,
+        "action": "fire",
+        "key": "union-gettysburg-v5-actions-e",
+        "frames": [
+          "a-fire-0-0"
+        ],
+        "sourceHash": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f",
+        "referenceHeight": 485,
+        "pivots": [
+          {
+            "x": 0.23126,
+            "y": 0.971292
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "opt-in Union A E actions / reviewed SE march only",
+        "muzzles": [
+          {
+            "x": 0.778309,
+            "y": 0.334928
+          }
+        ]
+      },
+      {
+        "side": "union",
+        "identity": "a",
+        "direction": 0,
+        "action": "reload",
+        "key": "union-gettysburg-v5-actions-e",
+        "frames": [
+          "a-reload-0-0",
+          "a-reload-0-1"
+        ],
+        "sourceHash": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f",
+        "referenceHeight": 485,
+        "pivots": [
+          {
+            "x": 0.393939,
+            "y": 0.940989
+          },
+          {
+            "x": 0.371611,
+            "y": 0.940989
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "opt-in Union A E actions / reviewed SE march only"
+      }
+    ],
+    "measurementReview": "docs/art-pass/reviews/gettysburg-v5-actions-e-measurement.json"
+  }
+}

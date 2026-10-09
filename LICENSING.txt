@@ -1,0 +1,25 @@
+Titans of War: Civil War — browser release 0.31.0 / v44
+Released October 8, 2026. Checkpoint: civil-war-v44-20261008.
+
+This browser distribution retains the existing Forge Game Hosting License 1.0
+policy. Playing and private internal/classroom use remain free. Companies with
+more than US$1,000,000 in company-wide annual gross revenue need a separate
+written license to publicly host their own playable copy of covered material.
+Official links and authorized platform-served embeds are excluded as defined
+in the complete LICENSE. Earlier MIT and other grants remain unchanged.
+Identical previously MIT-licensed material remains usable under MIT.
+Third-party code, fonts and media retain their own terms and attribution.
+See LICENSE, LICENSE-LEGACY-MIT.txt, NOTICE, MEDIA_RIGHTS.txt and the machine-
+readable LICENSING_CHECKPOINT.json. Generated artwork is representative game
+art, not a documentary reconstruction or an exclusivity claim.
+
+This release fixes campaign outcome consequences, selected-formation/camera
+recovery, withdrawal explanation and automated-test cleanup. Its 386 qualified
+game files are byte-identical to the tested local build; notices are additional.
+The main GitHub source branch remains the earlier source edition. The gh-pages
+branch is the prebuilt current browser distribution, not a claim that the older
+source branch rebuilds this release.
+
+Play: https://titans-forge.itch.io/titans-of-war-civil-war
+GitHub player: https://titans-forge.github.io/Titans_of_War/
+Licensing inquiries: https://titans-forge.itch.io/

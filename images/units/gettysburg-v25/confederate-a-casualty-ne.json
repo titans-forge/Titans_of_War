@@ -1,0 +1,174 @@
+{
+  "frames": {
+    "a-fall-7-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.496013,
+        "y": 0.937799
+      },
+      "bodyHeight": 364
+    },
+    "a-fall-7-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.444976,
+        "y": 0.902711
+      },
+      "bodyHeight": 364
+    },
+    "a-fall-7-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.53748,
+        "y": 0.61563
+      },
+      "bodyHeight": 364
+    },
+    "a-fall-7-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.497608,
+        "y": 0.684211
+      },
+      "bodyHeight": 364
+    }
+  },
+  "meta": {
+    "image": "confederate-a-casualty-ne.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "4f67e2dfc24fb206c1271885e47a86e8ce176d4f774b5351efcf18ad2d6075ea",
+    "source": "docs/art-pass/candidates/gettysburg-v25/confederate-a-casualty-ne-candidate.png",
+    "artPass": "gettysburg-v25",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 7,
+        "action": "fall",
+        "key": "confederate-gettysburg-v25-a-casualty-ne",
+        "frames": [
+          "a-fall-7-0",
+          "a-fall-7-1",
+          "a-fall-7-2",
+          "a-fall-7-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.496013,
+            "y": 0.937799
+          },
+          {
+            "x": 0.444976,
+            "y": 0.902711
+          },
+          {
+            "x": 0.53748,
+            "y": 0.61563
+          },
+          {
+            "x": 0.497608,
+            "y": 0.684211
+          }
+        ],
+        "referenceHeight": 364,
+        "sourceHash": "4f67e2dfc24fb206c1271885e47a86e8ce176d4f774b5351efcf18ad2d6075ea",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeCasualtySequence": "gettysburg-v25-confederate-a-ne-casualty",
+        "scope": "Exact source-reviewed confederate A NE local opt-in only; incomplete family",
+        "familyComplete": false,
+        "productionApproved": false,
+        "defaultApproved": false,
+        "humanCertified": false,
+        "physicalAnatomyCertified": false,
+        "historicalDrillCertified": false
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v25-independent-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "2560f481e547caadea34fe7da54229b6508540ac735a5895ea2489aa9354f558",
+    "referenceHeight": 364,
+    "familyComplete": false,
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

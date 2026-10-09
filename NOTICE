@@ -1,0 +1,63 @@
+Titans of War Notice
+====================
+
+Titans of War is a historical educational strategy game.
+
+Code License
+------------
+
+The application source code is licensed under the MIT License. See LICENSE.
+
+Media and Historical Source Material
+------------------------------------
+
+Bundled or downloadable historical media is not relicensed under MIT unless
+explicitly stated. Media entries keep their own provenance, source URL,
+institution, and license metadata in:
+
+- MEDIA_RIGHTS.md
+- src/game/mediaCatalog.js
+- src/game/audioCatalog.js
+- src/game/historicalAssetManifest.js
+- docs/media-sourcing.md
+- docs/historical_assets_curation.md
+
+Public-domain and permissively licensed assets may be used in the public app
+when their catalog entry is marked verified. Assets marked needs-review or
+recording-needed are placeholders or local development targets and should not
+be treated as public release assets.
+
+Bundled Fonts
+-------------
+
+Outfit and Share Tech Mono are self-hosted under the SIL Open Font License
+1.1. Their license texts are included in public/fonts/.
+
+Project Media
+-------------
+
+Project-authored photographs and project-created images are offered under the
+Creative Commons Attribution 4.0 International license to the extent the
+project author holds transferable rights in them. AI-generated material may
+not qualify for copyright protection in every jurisdiction. See
+MEDIA_RIGHTS.md for attribution, provider terms, excluded assets, and the
+applicable limitation of warranty.
+
+Generated Media Tool Acknowledgments
+------------------------------------
+
+The project author used image-generation tools from OpenAI, xAI (including
+Grok Imagine), and Google while producing selected public-release media.
+These names identify tools used during production; they do not imply
+sponsorship, endorsement, or ownership of Titans of War by those providers.
+Experimental images generated locally with FLUX.2 Klein 9B are excluded from
+the public repository and release build because that model's local license is
+noncommercial without a separate commercial license.
+
+Historical/Educational Scope
+----------------------------
+
+Titans of War is intended as an educational strategy simulation. It presents
+historical command pressures, logistics, morale, political factions, and
+alternate-history branches for study and gameplay. It is not an endorsement of
+any historical faction or ideology.

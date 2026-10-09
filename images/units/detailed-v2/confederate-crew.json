@@ -1,0 +1,168 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 186,
+        "y": 7,
+        "w": 143,
+        "h": 530
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 143,
+        "h": 530
+      },
+      "sourceSize": {
+        "w": 143,
+        "h": 530
+      },
+      "pivot": {
+        "x": 0.496503,
+        "y": 0.99434
+      },
+      "bodyHeight": 481
+    },
+    "1": {
+      "frame": {
+        "x": 677,
+        "y": 7,
+        "w": 189,
+        "h": 522
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 189,
+        "h": 522
+      },
+      "sourceSize": {
+        "w": 189,
+        "h": 522
+      },
+      "pivot": {
+        "x": 0.537037,
+        "y": 0.994253
+      },
+      "bodyHeight": 473
+    },
+    "2": {
+      "frame": {
+        "x": 1159,
+        "y": 6,
+        "w": 203,
+        "h": 529
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 203,
+        "h": 529
+      },
+      "sourceSize": {
+        "w": 203,
+        "h": 529
+      },
+      "pivot": {
+        "x": 0.482759,
+        "y": 0.994329
+      },
+      "bodyHeight": 479
+    },
+    "3": {
+      "frame": {
+        "x": 38,
+        "y": 550,
+        "w": 519,
+        "h": 434
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 519,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 519,
+        "h": 434
+      },
+      "pivot": {
+        "x": 0.297688,
+        "y": 0.993088
+      },
+      "bodyHeight": 433
+    },
+    "4": {
+      "frame": {
+        "x": 648,
+        "y": 542,
+        "w": 220,
+        "h": 460
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 220,
+        "h": 460
+      },
+      "sourceSize": {
+        "w": 220,
+        "h": 460
+      },
+      "pivot": {
+        "x": 0.527273,
+        "y": 0.993478
+      },
+      "bodyHeight": 451
+    },
+    "5": {
+      "frame": {
+        "x": 1094,
+        "y": 546,
+        "w": 417,
+        "h": 452
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 417,
+        "h": 452
+      },
+      "sourceSize": {
+        "w": 417,
+        "h": 452
+      },
+      "pivot": {
+        "x": 0.43765,
+        "y": 0.993363
+      },
+      "bodyHeight": 447
+    }
+  },
+  "meta": {
+    "image": "confederate-crew.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "sha256": "0fac66f929307da0497e8672ff1599ca2e7ef03bb3563c93cea566258841b4a1",
+    "chromaKey": "#00ff00",
+    "generation": "OpenAI built-in imagegen; model identifier not reported",
+    "originalPixelsPreserved": true,
+    "originalFileSha256": "6bdebe535b7c384b09852c1492ecec052b410c473b4ed1e2b57a62d35d28828a",
+    "pixelSha256": "87b923502f6311cbd2702ec5513a401b673606c2859b2f382595d2104744cb0f",
+    "encoding": "Lossless PNG repack; original decoded pixels and non-IDAT chunks preserved"
+  }
+}

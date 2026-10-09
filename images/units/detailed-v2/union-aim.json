@@ -1,0 +1,168 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 72,
+        "y": 39,
+        "w": 426,
+        "h": 440
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 426,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 426,
+        "h": 440
+      },
+      "pivot": {
+        "x": 0.296948,
+        "y": 0.993182
+      },
+      "bodyHeight": 436
+    },
+    "1": {
+      "frame": {
+        "x": 634,
+        "y": 37,
+        "w": 240,
+        "h": 452
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 452
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 452
+      },
+      "pivot": {
+        "x": 0.508333,
+        "y": 0.993363
+      },
+      "bodyHeight": 446
+    },
+    "2": {
+      "frame": {
+        "x": 1176,
+        "y": 33,
+        "w": 221,
+        "h": 462
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 221,
+        "h": 462
+      },
+      "sourceSize": {
+        "w": 221,
+        "h": 462
+      },
+      "pivot": {
+        "x": 0.497738,
+        "y": 0.993506
+      },
+      "bodyHeight": 452
+    },
+    "3": {
+      "frame": {
+        "x": 55,
+        "y": 521,
+        "w": 353,
+        "h": 437
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 353,
+        "h": 437
+      },
+      "sourceSize": {
+        "w": 353,
+        "h": 437
+      },
+      "pivot": {
+        "x": 0.600567,
+        "y": 0.993135
+      },
+      "bodyHeight": 432
+    },
+    "4": {
+      "frame": {
+        "x": 651,
+        "y": 520,
+        "w": 247,
+        "h": 457
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 247,
+        "h": 457
+      },
+      "sourceSize": {
+        "w": 247,
+        "h": 457
+      },
+      "pivot": {
+        "x": 0.497976,
+        "y": 0.993435
+      },
+      "bodyHeight": 451
+    },
+    "5": {
+      "frame": {
+        "x": 1135,
+        "y": 512,
+        "w": 343,
+        "h": 462
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 343,
+        "h": 462
+      },
+      "sourceSize": {
+        "w": 343,
+        "h": 462
+      },
+      "pivot": {
+        "x": 0.387755,
+        "y": 0.993506
+      },
+      "bodyHeight": 448
+    }
+  },
+  "meta": {
+    "image": "union-aim.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "sha256": "093cd17c3ef757c86c98b1c2e8aec5d9d74341ef9a475d30cc1445a35e400288",
+    "chromaKey": "#00ff00",
+    "generation": "OpenAI built-in imagegen; model identifier not reported",
+    "originalPixelsPreserved": true,
+    "originalFileSha256": "d06e058977c36583330304d80e583a1f54f6a2ccf0e792c0b880fa4d5222a3b4",
+    "pixelSha256": "5eb50f9feb6bbf9d5e0b476c37bd4ef5e7010edafca098c396e3687ee6e869a8",
+    "encoding": "Lossless PNG repack; original decoded pixels and non-IDAT chunks preserved"
+  }
+}

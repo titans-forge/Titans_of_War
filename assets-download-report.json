@@ -1,0 +1,150 @@
+{
+  "generatedAt": "2026-05-31T23:01:41.214Z",
+  "options": {
+    "dryRun": false,
+    "force": false,
+    "type": "all",
+    "includePending": false
+  },
+  "totalAssets": 12,
+  "results": [
+    {
+      "id": "audio_lorena_house_divided",
+      "filename": "lorena_instrumental.mp3",
+      "type": "audio",
+      "status": "skipped",
+      "message": "file already exists",
+      "sourceUrl": "https://natunelist.net/lorena/",
+      "downloadUrl": "https://natunelist.net/wp-content/uploads/2017/03/Lorena.mp3",
+      "sourceInstitution": "North Atlantic Tune List",
+      "license": "Site states content is not copyrighted; attribution preferred"
+    },
+    {
+      "id": "audio_battle_cry_loc",
+      "filename": "battle_cry_brass.mp3",
+      "type": "audio",
+      "status": "skipped",
+      "message": "file already exists",
+      "sourceUrl": "https://www.loc.gov/item/jukebox-25440/",
+      "downloadUrl": "https://tile.loc.gov/storage-services/service/mbrsrs/mbrsjukebox/ucsb_victor_35657_01_c20607_01/ucsb_victor_35657_01_c20607_01.mp3",
+      "sourceInstitution": "Library of Congress National Jukebox / Victor Military Band",
+      "license": "Public Domain in the United States (pre-1923 sound recording)"
+    },
+    {
+      "id": "audio_johnny_fife_drum",
+      "filename": "fife_drum_march.mp3",
+      "type": "audio",
+      "status": "skipped",
+      "message": "file already exists",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:When_Johnny_Comes_Marching_Home_-_USMA_Band.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/40/When_Johnny_Comes_Marching_Home_-_USMA_Band.ogg/When_Johnny_Comes_Marching_Home_-_USMA_Band.ogg.mp3",
+      "sourceInstitution": "Wikimedia Commons / West Point Band",
+      "license": "Public Domain in the United States (U.S. Army performance)"
+    },
+    {
+      "id": "audio_appomattox_elegy",
+      "filename": "elegy_final.mp3",
+      "type": "audio",
+      "status": "skipped",
+      "message": "file already exists",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taps_on_bugle.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/25/Taps_on_bugle.ogg/Taps_on_bugle.ogg.mp3",
+      "sourceInstitution": "Wikimedia Commons / U.S. Army Band",
+      "license": "Public Domain in the United States (U.S. Army performance)"
+    },
+    {
+      "id": "audio_campfire_cc0",
+      "filename": "ambient_campfire.mp3",
+      "type": "audio",
+      "status": "skipped",
+      "message": "file already exists",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barbecue.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/9b/Barbecue.ogg/Barbecue.ogg.mp3",
+      "sourceInstitution": "Wikimedia Commons / PDSounds",
+      "license": "Public Domain dedication"
+    },
+    {
+      "id": "map_fort_sumter_charleston_harbor_loc",
+      "filename": "map_fort_sumter_charleston_harbor_loc.jpg",
+      "type": "image",
+      "status": "skipped",
+      "message": "file already exists",
+      "sourceUrl": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd391:g3912:g3912c:cw0362000/full/pct:25/0/default.jpg",
+      "downloadUrl": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd391:g3912:g3912c:cw0362000/full/pct:25/0/default.jpg",
+      "sourceInstitution": "Library of Congress Geography and Map Division",
+      "license": "Public Domain"
+    },
+    {
+      "id": "map_antietam_sharpsburg_loc",
+      "filename": "map_antietam_sharpsburg_loc.jpg",
+      "type": "image",
+      "status": "skipped",
+      "message": "file already exists",
+      "sourceUrl": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd384:g3844:g3844s:cw0252000/full/pct:25/0/default.jpg",
+      "downloadUrl": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd384:g3844:g3844s:cw0252000/full/pct:25/0/default.jpg",
+      "sourceInstitution": "Library of Congress Geography and Map Division",
+      "license": "Public Domain"
+    },
+    {
+      "id": "map_gettysburg_cemetery_ridge_loc",
+      "filename": "map_gettysburg_cemetery_ridge_loc.jpg",
+      "type": "image",
+      "status": "skipped",
+      "message": "file already exists",
+      "sourceUrl": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd382:g3824:g3824g:cw0328000/full/pct:25/0/default.jpg",
+      "downloadUrl": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd382:g3824:g3824g:cw0328000/full/pct:25/0/default.jpg",
+      "sourceInstitution": "Library of Congress Geography and Map Division",
+      "license": "Public Domain"
+    },
+    {
+      "id": "map_petersburg_crater_loc",
+      "filename": "map_petersburg_crater_loc.jpg",
+      "type": "image",
+      "status": "skipped",
+      "message": "file already exists",
+      "sourceUrl": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd388:g3884:g3884r:cw0648000/full/pct:25/0/default.jpg",
+      "downloadUrl": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd388:g3884:g3884r:cw0648000/full/pct:25/0/default.jpg",
+      "sourceInstitution": "Library of Congress / National Archives",
+      "license": "Public Domain"
+    },
+    {
+      "id": "map_appomattox_retreat_lines_loc",
+      "filename": "map_appomattox_retreat_lines_loc.jpg",
+      "type": "image",
+      "status": "skipped",
+      "message": "file already exists",
+      "sourceUrl": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd388:g3884:g3884a:cw0524000/full/pct:25/0/default.jpg",
+      "downloadUrl": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd388:g3884:g3884a:cw0524000/full/pct:25/0/default.jpg",
+      "sourceInstitution": "Library of Congress Geography and Map Division",
+      "license": "Public Domain"
+    },
+    {
+      "id": "map_wilderness_loc",
+      "filename": "map_wilderness_loc.jpg",
+      "type": "image",
+      "status": "downloaded",
+      "message": "saved public/images/cw_pictures/map_wilderness_loc.jpg",
+      "bytes": 109733,
+      "contentType": "image/jpeg",
+      "sourceUrl": "https://www.loc.gov/item/99439321/",
+      "downloadUrl": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd388:g3883:g3883s:cw0658000/full/pct:25/0/default.jpg",
+      "sourceInstitution": "Library of Congress Geography and Map Division",
+      "license": "Public Domain"
+    },
+    {
+      "id": "audio_dixie_commons",
+      "filename": "dixie_instrumental.mp3",
+      "type": "audio",
+      "status": "skipped",
+      "message": "file already exists",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dixie_Land_(Instrumental_version).ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7f/Dixie_Land_%28Instrumental_version%29.ogg/Dixie_Land_%28Instrumental_version%29.ogg.mp3",
+      "sourceInstitution": "Wikimedia Commons",
+      "license": "Creative Commons Attribution-ShareAlike 4.0 International"
+    }
+  ],
+  "summary": {
+    "skipped": 11,
+    "downloaded": 1
+  }
+}

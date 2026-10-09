@@ -1,0 +1,158 @@
+{
+  "frames": {
+    "a-march-7-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.438596,
+        "y": 0.947368
+      },
+      "bodyHeight": 430
+    },
+    "a-march-7-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.454545,
+        "y": 0.947368
+      },
+      "bodyHeight": 430
+    },
+    "a-march-7-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.435407,
+        "y": 0.936204
+      },
+      "bodyHeight": 430
+    },
+    "a-march-7-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.454545,
+        "y": 0.936204
+      },
+      "bodyHeight": 430
+    }
+  },
+  "meta": {
+    "image": "confederate-a-march-ne.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "48f4c9537b8326d7d1451da727aae73161661ae408fd32ecb467d5d412d26b3d",
+    "source": "docs/art-pass/candidates/gettysburg-v10/confederate-a-ne-march-candidate.png",
+    "artPass": "gettysburg-v10",
+    "candidate": true,
+    "productionApproved": false,
+    "pixelTreatment": "none; byte-for-byte native PNG copy, full equal cells",
+    "clips": [
+      {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 7,
+        "action": "march",
+        "key": "confederate-gettysburg-v10-a-march-ne",
+        "frames": [
+          "a-march-7-0",
+          "a-march-7-1",
+          "a-march-7-2",
+          "a-march-7-3"
+        ],
+        "sourceHash": "48f4c9537b8326d7d1451da727aae73161661ae408fd32ecb467d5d412d26b3d",
+        "referenceHeight": 430,
+        "pivots": [
+          {
+            "x": 0.438596,
+            "y": 0.947368
+          },
+          {
+            "x": 0.454545,
+            "y": 0.947368
+          },
+          {
+            "x": 0.435407,
+            "y": 0.936204
+          },
+          {
+            "x": 0.454545,
+            "y": 0.936204
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "Opt-in Confederate A NE four-sample contact/passing visual preview; exact historical Gettysburg v10 only."
+      }
+    ],
+    "measurementReview": "docs/art-pass/reviews/gettysburg-v10-confederate-a-march-ne-measurement.json"
+  }
+}
