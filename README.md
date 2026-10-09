@@ -1,5 +1,12 @@
 # Titans of War
 
+## Play the current browser release
+
+**Civil War 0.31.0 / v44 — October 8, 2026:** [Play on GitHub](https://titans-forge.github.io/Titans_of_War/) · [Play on itch.io](https://titans-forge.itch.io/titans-of-war-civil-war) · [Release and download](https://github.com/titans-forge/Titans_of_War/releases/tag/civil-war-v44-20261008)
+
+The current prebuilt browser release fixes field-result campaign consequences, selected-formation/camera recovery and withdrawal explanations. Its `gh-pages` branch and release ZIP contain the same verified distribution. The `main` branch below remains the earlier 0.3.1 source edition; it is not presented as a source rebuild of the newer browser package. Existing Forge licensing, earlier MIT grants and separate media terms remain intact; the new distribution includes its own versioned checkpoint.
+
+
 [Play on itch.io](https://titans-forge.itch.io/titans-of-war-civil-war) ·
 [Forge source](https://github.com/titans-forge/Titans_of_War) ·
 [Report an issue](https://github.com/titans-forge/Titans_of_War/issues) ·
