@@ -1,5 +1,8 @@
 # Titans of War
 
+> **Current licensing policy — Forge Game License 2.0 (FG2-TITANS-OF-WAR-CIVIL-WAR-20261015).** This licensing-only edition requires separate permission for either public hosting or AI training by above-threshold entities on qualifying new Forge-controlled material. Previously supplied gameplay/media retain MIT, earlier Forge and other applicable grants. No retroactive restriction is claimed. See [release scope](LICENSING.md), [complete current terms](LICENSE), [preserved prior terms](LICENSE-LEGACY-PRE-FORGE-2.0.txt), [offline licensing page](FORGE-LICENSING.html) and [new download](https://github.com/titans-forge/Titans_of_War/releases/tag/forge-license-2.0-20261015). Earlier statements below describe the earlier game and preserved grants.
+
+
 ## Play the current browser release
 
 **Civil War 0.31.0 / v44 — October 8, 2026:** [Play on GitHub](https://titans-forge.github.io/Titans_of_War/) · [Play on itch.io](https://titans-forge.itch.io/titans-of-war-civil-war) · [Release and download](https://github.com/titans-forge/Titans_of_War/releases/tag/civil-war-v44-20261008)

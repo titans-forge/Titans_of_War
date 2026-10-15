@@ -1,0 +1,26 @@
+{
+  "schema": "forge_game_github_license_checkpoint_v1",
+  "release_id": "FG-LIC-20260930-13-GH1",
+  "game": "Titans of War: Civil War",
+  "repository": "JCapone83/Titans_of_War",
+  "recorded_date": "2026-09-30",
+  "license": "Forge Game Hosting License 1.0",
+  "license_sha256": "28638be413f7815704fe68aed52a4ea4cb7bd4d28b35f2dca9b78d438a4a90bf",
+  "previous_mit_commit": "fb0a122c884db410b86f0bfb7e1ea1b209ddc4de",
+  "previous_mit_tree": "a36657695468ef6702dcf34db3fda3953f0f7751",
+  "previous_mit_license_blob": "348a58a4137c12b4621bdbfb45207cab05688525",
+  "previous_mit_license_sha256": "da6f0430ff6467dc0c9cab9f0b086032f0e70f6efa2f690de7a63e9be482bcf6",
+  "package_version_unchanged": "0.3.1",
+  "adoption_commit": "First commit containing this checkpoint; see repository history.",
+  "change_scope": "License policy, rights documentation, root package metadata, and release-notice staging only. No gameplay or media files changed.",
+  "newly_authored_forge_paths": [
+    "LICENSE",
+    "LICENSING.md",
+    "LICENSING_CHECKPOINT.json",
+    "scripts/stage-release-licenses.mjs"
+  ],
+  "prior_grants_preserved": true,
+  "third_party_and_media_terms_preserved": true,
+  "itch_source_equivalence": "Not certified; this checkpoint identifies the GitHub source policy, not a newly uploaded playable build.",
+  "approval": "Owner approved license wording and requested all existing game repositories except Titans of Mars adopt it on September 30, 2026."
+}

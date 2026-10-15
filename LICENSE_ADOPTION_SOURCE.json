@@ -1,0 +1,18 @@
+{
+  "changed_file_sha256": {
+    "FORGE-LICENSING.html": "a9946cc4d87695ae18e9138c9abcd82c9fc84a652af44fd66ef770640a8b5ef1",
+    "LICENSE": "01c53180ca78bee80411c2d07e436014b62f7e48dd37de70c2fed72238ee57dc",
+    "LICENSE-LEGACY-PRE-FORGE-2.0.txt": "28638be413f7815704fe68aed52a4ea4cb7bd4d28b35f2dca9b78d438a4a90bf",
+    "LICENSING.md": "47554696904304d0bfbcc5861d4f884b2bce093eb255a6b47c7d891eadb7620b",
+    "README.md": "25e9d48dd018369a79af06cb6fe47a7ae5f4a112b6df0abb66181918e4d5b73e",
+    "docs/licensing-history/2026-10-15-before-forge-2.0/LICENSE": "28638be413f7815704fe68aed52a4ea4cb7bd4d28b35f2dca9b78d438a4a90bf",
+    "docs/licensing-history/2026-10-15-before-forge-2.0/LICENSING.md": "3ab2008a6300c753f140fdb9c945047f3af3a71aec4d544232bb35617d0075d1",
+    "docs/licensing-history/2026-10-15-before-forge-2.0/LICENSING_CHECKPOINT.json": "4c4808006e50f90c08cc764573283e0157d05b63f1866fbc8bd8eb83caa44bb6",
+    "scripts/stage-release-licenses.mjs": "6e6d83b39f52311370d18265a41eed213d037c6d4d3a1a03a1c9e16cf9f3a751"
+  },
+  "coverage": "Only qualifying new expression in revised/added policy documentation, offline rights page and packaging checks. Existing portions and all unchanged game material keep prior grants.",
+  "edition": "FG2-TITANS-OF-WAR-CIVIL-WAR-20261015",
+  "previous_source_commit": "e5b68374f971b93bc12e24d22756c07ec2798d16",
+  "previous_source_tree": "1e3f3ecae36bde3d820465746dd4795ca82d304a",
+  "schema": "forge_license_adoption_source_v1"
+}
