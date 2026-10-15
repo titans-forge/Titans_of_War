@@ -1,0 +1,16 @@
+{
+  "schema": "forge_game_browser_license_checkpoint_v1",
+  "release_id": "civil-war-v44-20261008",
+  "game": "Titans of War: Civil War",
+  "recorded_date": "2026-10-08",
+  "package_version": "0.31.0",
+  "license": "Forge Game Hosting License 1.0",
+  "license_sha256": "28638be413f7815704fe68aed52a4ea4cb7bd4d28b35f2dca9b78d438a4a90bf",
+  "previous_mit_license_sha256": "da6f0430ff6467dc0c9cab9f0b086032f0e70f6efa2f690de7a63e9be482bcf6",
+  "prior_grants_preserved": true,
+  "third_party_and_media_terms_preserved": true,
+  "source_manifest_sha256": "8ae41821bfc3d06c58870159280bb8c9d5b8698e30f5cbafa1a70cd92fc6d093",
+  "browser_manifest": "release-manifest.json",
+  "scope": "Identifies this new browser distribution. Existing grants over earlier published code and media remain unchanged; Forge terms apply only to covered Licensor-controlled material. No new exclusivity over generative output or third-party media is asserted.",
+  "earlier_github_policy_checkpoint": "FG-LIC-20260930-13-GH1"
+}
