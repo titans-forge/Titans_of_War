@@ -1,0 +1,323 @@
+{
+  "reviewType": "Independent native-source visual review",
+  "reviewedAtUTC": "2026-10-03T23:37:46.241216+00:00",
+  "reviewer": "v13_source_review model agent",
+  "scope": "Confederate A W marching exact v13 native source, local opt-in preview only",
+  "source": {
+    "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v13-20261003/attempts/confederate-a-w-march-attempt-5.png",
+    "sha256": "ab28e7c28ee6be3b17a833cbc3b627f3961dfbb8d9efef93c4ecc07482ed9981",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "cell": [
+      627,
+      627
+    ]
+  },
+  "imagePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v13-20261003/attempts/confederate-a-w-march-attempt-5.png",
+  "sha256": "ab28e7c28ee6be3b17a833cbc3b627f3961dfbb8d9efef93c4ecc07482ed9981",
+  "acceptedForOptIn": true,
+  "modelAssisted": true,
+  "identityKit": "confederate-a",
+  "kitAccepted": true,
+  "allFourCellsReviewed": true,
+  "completeNativeSheetInspected": true,
+  "humanReviewed": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "completeFamilyApproved": false,
+  "verdict": "PASS for exact-source local opt-in preview with body-span variation and expressive knee limits recorded",
+  "appearance": {
+    "kit": "All four retain gray kepi-like cap/jacket, tan trousers, brown boots, compact beige roll across upper back, brown straps, dark hip pouches and round tan canteen.",
+    "continuity": "Broad ConfA identity kit matches retained NE/NW and accepted E/W action sources; exact face/skeletal identity is uncertified.",
+    "material": "Stylized cloth/canvas, leather/wood and metal remain distinct; period manufacture/drill accuracy is not certified."
+  },
+  "bearingAndGrip": {
+    "direction": "W",
+    "directionIndex": 4,
+    "actualFacingAccepted": true,
+    "bearing": "Native head, torso and toes face image left in all four cells.",
+    "grip": "Two plausible hands contact upright diagonal rifle stock/fore-end throughout.",
+    "limits": "Finger mechanics, hidden wrist/shoulder contacts and exact anatomical left/right skeleton not certified."
+  },
+  "cells": [
+    {
+      "cell": 0,
+      "name": "TL near-leading contact",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "observation": "Near visible hip-knee-boot chain leads left; far chain trails right. Leading near boot lower in source Y."
+    },
+    {
+      "cell": 1,
+      "name": "TR passing",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "observation": "Near leg supports with far boot lifted rear/right."
+    },
+    {
+      "cell": 2,
+      "name": "BL far-leading contact",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "observation": "Near hip-knee-boot chain trails right; far chain leads left. Leading far boot higher in source Y, opposite depth to TL."
+    },
+    {
+      "cell": 3,
+      "name": "BR opposite passing",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "observation": "Near knee lifts forward/left, far leg supports; clearly distinct from TR. High knee is expressive."
+    }
+  ],
+  "measurementContract": {
+    "coordinateSpace": "Native per-cell pixels from top-left; TL/TR/BL/BR.",
+    "rootMeaning": "Fresh manual hidden pelvis-center X projected to independently visible supporting boot sole in each cell. A 2D registration pivot, not anatomical pelvis or physical ground certification.",
+    "roots": [
+      [
+        344,
+        596
+      ],
+      [
+        361,
+        609
+      ],
+      [
+        343,
+        561
+      ],
+      [
+        368,
+        577
+      ]
+    ],
+    "pelvisX": [
+      344,
+      361,
+      343,
+      368
+    ],
+    "perCellSupportingSoleGroundY": [
+      596,
+      609,
+      561,
+      577
+    ],
+    "supportingSoleROIs": [
+      [
+        175,
+        530,
+        295,
+        615
+      ],
+      [
+        270,
+        550,
+        380,
+        625
+      ],
+      [
+        385,
+        480,
+        500,
+        580
+      ],
+      [
+        315,
+        515,
+        445,
+        595
+      ]
+    ],
+    "groundMethod": "Fresh alpha>=64 bottom-exclusive Y in independently chosen supporting-sole-only regions; no shared row assumption.",
+    "rootXUncertaintyPixels": 8,
+    "rootYUncertaintyPixels": 3,
+    "capTopY": [
+      118,
+      119,
+      110,
+      113
+    ],
+    "capTop": [
+      118,
+      119,
+      110,
+      113
+    ],
+    "capROIs": [
+      [
+        270,
+        85,
+        365,
+        190
+      ],
+      [
+        280,
+        85,
+        385,
+        190
+      ],
+      [
+        275,
+        85,
+        370,
+        190
+      ],
+      [
+        280,
+        85,
+        385,
+        195
+      ]
+    ],
+    "capMethod": "Fresh alpha>=64 minimum Y in independently chosen cap regions excluding rifles.",
+    "capTopUncertaintyPixels": 2,
+    "bodySpans": [
+      478,
+      490,
+      451,
+      464
+    ],
+    "capToRegisteredGroundSpans": [
+      478,
+      490,
+      451,
+      464
+    ],
+    "referenceHeight": 471,
+    "commonBodyReferenceHeight": 471,
+    "referenceMethod": "Median of four cap-to-individual-supporting-sole spans; one source-wide scale, no per-phase normalization.",
+    "bodySpanRangePixels": 39,
+    "rangeAsPercentOfCommonReference": 8.28,
+    "sizeLimit": "Measured body-span variation of 39px is preserved. Per-cell sole registration improves boot contact without per-phase rescaling.",
+    "contactBootDepthEvidence": {
+      "TL": {
+        "leadingNearSoleY": 596,
+        "trailingFarSoleY": 575,
+        "nearIsLowerByPixels": 21
+      },
+      "BL": {
+        "leadingFarSoleY": 537,
+        "trailingNearSoleY": 561,
+        "farIsHigherByPixels": 24
+      },
+      "method": "Fresh alpha64 supporting/other-boot regions measured from final tan/brown source; diagnostic values were not reused."
+    },
+    "firingBarrelMouth": null,
+    "firingAnchorIsBayonetTip": false,
+    "muzzleApplicable": false
+  },
+  "nativePixelEvidence": {
+    "alphaThreshold": 64,
+    "boundsExclusive": [
+      [
+        135,
+        21,
+        488,
+        596
+      ],
+      [
+        139,
+        23,
+        467,
+        609
+      ],
+      [
+        140,
+        20,
+        487,
+        561
+      ],
+      [
+        149,
+        22,
+        438,
+        577
+      ]
+    ],
+    "paddingLTRB": [
+      [
+        135,
+        21,
+        139,
+        31
+      ],
+      [
+        139,
+        23,
+        160,
+        18
+      ],
+      [
+        140,
+        20,
+        140,
+        66
+      ],
+      [
+        149,
+        22,
+        189,
+        50
+      ]
+    ],
+    "minimumPaddingByCell": [
+      21,
+      18,
+      20,
+      22
+    ],
+    "minimumRequiredPadding": 16,
+    "strictPaddingPassed": true,
+    "nativeSquareRGBA2x2": true,
+    "requestedGenerationPaddingGoal": 32,
+    "paddingAssessment": "All four pass strict floor16; top margins21/23/20/22 and TRbottom18 fall below32 generation goal. No clipping or cell crossing found.",
+    "redYellowCriterion": "R>180,B<80,and(G<90 or G>170)",
+    "redYellowAlphaDistribution": {
+      "1": 4611,
+      "2": 40,
+      "4": 39,
+      "253": 1,
+      "5": 1
+    },
+    "redYellowAtAlpha64": 1,
+    "coloredRGBAssessment": "One saturated colored alpha253 pixel; remaining saturated RGB at alpha<=5 under criterion. No conspicuous broad opaque fringe. Native tool display exaggerates neartransparent RGB.",
+    "rasterCleanupPerformed": false,
+    "sourceChangedDuringReview": false
+  },
+  "nativeReview": {
+    "exactSHAInspected": "ab28e7c28ee6be3b17a833cbc3b627f3961dfbb8d9efef93c4ecc07482ed9981",
+    "completeNativeSheetInspected": true,
+    "allFourCellsReviewed": true,
+    "kitAccepted": true,
+    "acceptedForOptIn": true,
+    "modelAssisted": true,
+    "humanReviewed": false,
+    "anatomyCertified": false,
+    "historyCertified": false,
+    "actualFacingAccepted": true,
+    "poseAccepted": true,
+    "manualRootsMeasured": true,
+    "manualMuzzleMeasured": false,
+    "oneSourceReferenceHeight": 471
+  },
+  "blockers": [],
+  "limits": [
+    "Exact-SHA four-cell local opt-in acceptance only.",
+    "BR high knee is expressive and does not establish historical drill.",
+    "Measured 8.28-percent span range remains; hidden anatomy and supporting sole measurement uncertainty recorded.",
+    "Model-assisted review, not human/anatomy/history certification.",
+    "No default/production/full-family approval or runtime temporal/turn/cold-resume/residency/performance proof."
+  ],
+  "selectedSource": "docs/art-pass/candidates/gettysburg-v13/confederate-a-w-march-candidate.png",
+  "selectedSourceSha256": "ab28e7c28ee6be3b17a833cbc3b627f3961dfbb8d9efef93c4ecc07482ed9981"
+}

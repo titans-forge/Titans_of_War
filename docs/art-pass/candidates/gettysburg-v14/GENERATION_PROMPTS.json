@@ -1,0 +1,59 @@
+{
+  "artPass": "gettysburg-v14",
+  "mode": "Built-in transparent imagegen",
+  "modelIdentifier": "Not exposed by tool response",
+  "rasterTransformsPerformed": false,
+  "selectedSources": [
+    {
+      "kind": "march",
+      "attempt": 3,
+      "prompt": "Generate a NEW photoreal native transparent RGBA SOUTH-facing Confederate march sprite sheet. Exactly 2x2 equal cells. FIRST IMAGE IS THE AUTHORITATIVE FOUR POSES AND EMPTY MARGINS. Its BLUE limb means anatomical LEFT / image RIGHT, RED limb means anatomical RIGHT / image LEFT. These are ONLY joint-identification colors in the mannequin guide: final BOTH trouser legs MUST be natural TAN cloth, no red/blue costume.\n\nUse second and third images for single same Confederate soldier identity and KIT ONLY, not pose or camera: worn gray wool cap and jacket, tan trousers, brown boots, brown straps, dark cartridge pouches, compact tan backroll, tan roundcanteen, dark beard. Excellent realistic cloth weave/leather/dull metal/anatomy, no cartoon/anime look. Elevated 35degree orthographic FRONT camera, all chests/faces/toes toward viewer/screen bottom/SOUTH. Same body size and entire infantryman with wood rifle/steel bayonet inside EACH cell. Upright rifle imageLEFT, two steady natural hand grips.\n\nFollow FIRST guide's ALL FOUR FULL LEG CHAINS, retaining the identity of its blue and red limbs when replacing them with TAN trousers:\nTOP LEFT: guide BLUE=imageRIGHT=LEFT limb extends forward to supporting sole, RED=imageLEFT=RIGHT limb trails.\nTOP RIGHT: guide BLUE=imageRIGHT=LEFT leg PLANTED under hip, RED=imageLEFT=RIGHT knee bent and foot LIFTED above ground at passing position. The IMAGE RIGHT foot is LOWER and carries weight. Do NOT plant imageLEFT in this cell.\nBOTTOM LEFT: guide RED=imageLEFT=RIGHT leg extends forward to supporting sole, BLUE=imageRIGHT=LEFT limb trails.\nBOTTOM RIGHT: guide RED=imageLEFT=RIGHT leg PLANTED under hip, BLUE=imageRIGHT=LEFT knee bent and foot LIFTED above ground at passing position. IMAGE LEFT foot LOWER and carries weight.\nDistinguish extended contact from upright planted support. Show naturally restrained bent knees, no high-knee marching. Opposite supports in TOP RIGHT and BOTTOM RIGHT are mandatory. Draw new anatomy and pixels, no mirroring/recoloring source sprite pixels.\n\nKeep figures SMALL IN EACH CELL, matching first guide's abundant empty space: cap-to-sole body height about HALF each cell's height; entire rifle including bayonet and boots no more than70% of cell height. Entire top and bottom ONE-EIGHTH of EVERY cell completely empty transparent. Minimum60pixels clear transparent padding at 1024 sheet scale from EACH cell boundary including weapon tip and supporting sole. This is mandatory, not optional: do NOT fill cell height with soldier or touch middle sheet seams. No floor/shadows/scenery/text/labels/grid/outline. Natural gray/tan Confederate kit with the precisely opposite limb roles of the guide.",
+      "originalOutput": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-947f7906-f307-4d38-a228-28b842da2911.png",
+      "status": "selected exact-source independent model-assisted review",
+      "referencedImages": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/attempts/guidescoloredlegs/confederate-a-s-march-colored-leg-native-guide.png",
+          "sha256": "d19d1aa42bccac716ca6126d70c6994003ca22583715f1c2e516005e3836b31e"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v13/confederate-a-actions-e.png",
+          "sha256": "6aa46680436709a13d502c2bbbb3b1202377ef10575ed7155e77d7208124d861"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v13/confederate-a-actions-w.png",
+          "sha256": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b"
+        }
+      ],
+      "sourceSHA256": "a41a75bfa5874661e9c8f333f5bc9d2aecce9cf7cedc8e7add940dcc3678f26c",
+      "selectedSource": "docs/art-pass/candidates/gettysburg-v14/confederate-a-s-march-candidate.png"
+    },
+    {
+      "kind": "actions",
+      "attempt": 1,
+      "prompt": "Create a NEW photorealistic native transparent RGBA game sprite sheet, exactly 2 by 2 equal square cells. The FIRST image is ONLY an elevated orthographic SOUTH front-facing weapon-pose/composition guide; the other two show the Confederate infantryman's kit and realistic materials. Maintain this same single soldier and outfit in all four cells: worn gray wool kepi and short gray wool jacket, TAN trousers, brown worn leather boots, brown shoulder straps, black cartridge pouches, round tan canteen, compact tan blanket roll on back, dark beard. Realistically worn cloth, natural folds, dull steel, human joints and fingers; no toy/anime style. Chest, face and toes point SOUTH toward the viewer and screen bottom, with crown of cap visible from an orthographic camera 35 degrees above the ground. Do not turn into an E/W side profile. Every full soldier, rifle and bayonet entirely inside his own cell, with at least 45 native pixels clear transparent margin at 1024 sheet scale from EACH cell edge. No cropping, no text/grid, no background/floor/shadows, no colored outline or halo. Same scale in all four.\n\nFour row-major phases:\nTOP LEFT READY: relaxed stable standing, upright wood-stock rifle at anatomical right/image left, both hands controlling it naturally.\nTOP RIGHT FIRE: musket SHOULDERED, stock seated at anatomical right shoulder and cheek near stock, trigger hand at trigger and other hand under fore-stock. Level in the actual world, NOT pointing at the ground. Since the soldier faces toward this elevated camera, the barrel is foreshortened and projects obliquely downward toward screen bottom/image left; follow the first guide's front-facing fire direction. Show a clearly distinguishable steel barrel mouth and thin bayonet extending further along the same direction, not a sideways rifle. No baked muzzle flash/smoke, no recoil lean.\nBOTTOM LEFT LOAD: musket upright grounded by the anatomical right/image left boot, physically controlled by hands, one hand near barrel mouth loading the cartridge.\nBOTTOM RIGHT RAM: same grounded upright musket, soldier visibly holding the thin ramrod and working it at the barrel mouth, a DISTINCT changed hand/rod pose from the LOAD cell. Ramrod is a thin separate tool, not a second rifle or thick duplicate barrel. Anatomically credible grounded standing weight and hands in both loading poses.\n\nImprove the primitive guide into realistic anatomy and texture while retaining its exact SOUTH bearing and projected-down shouldered-fire weapon concept. Match uniform kit references, not their E/W orientation. Draw a new complete source natively, not a mirror/recolor/edit of their pixels. Padding, natural two-hand grips, visible actual muzzle and all four clearly different actions matter.",
+      "originalOutput": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-270a7cce-7685-41ef-a48e-6d61ec4b9ec2.png",
+      "status": "selected exact-source independent model-assisted review",
+      "referencedImages": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/candidate/docs/art-pass/candidates/gettysburg-v14/confederate-a-s-actions-guide.png",
+          "sha256": "dfb6ae116af02c73b6d91e236bb802a15b72540070afc18f6ff8fbcce5a6730b"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v13/confederate-a-actions-e.png",
+          "sha256": "6aa46680436709a13d502c2bbbb3b1202377ef10575ed7155e77d7208124d861"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v13/confederate-a-actions-w.png",
+          "sha256": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b"
+        }
+      ],
+      "sourceSHA256": "cbc0c38d83a73b934ea3e69cbf4ed7a0b4da23a3c5d27d5af002ac2610faf2b1",
+      "selectedSource": "docs/art-pass/candidates/gettysburg-v14/confederate-a-s-actions-candidate.png"
+    }
+  ],
+  "rejectedAttemptsEvidence": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/source-reviews",
+  "limits": [
+    "Native structural guide is pose/composition input, not full anatomy or historical kit/drill certification.",
+    "Exact underlying image model identifier is not exposed."
+  ]
+}

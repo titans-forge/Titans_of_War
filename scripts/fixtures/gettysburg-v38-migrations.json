@@ -1,0 +1,60 @@
+{
+  "schema": "gettysburg-v38-historical-byte-migration-v1",
+  "status": "frozen-approved-runtime-pins",
+  "baselineSHA256": "fad3c5e4d7f92dda84bd4789a583ed966a486dbd3672b85c45d5c708bede90e0",
+  "baselineFiles": 1605,
+  "baselineBytes": 557654585,
+  "fixture": {
+    "path": "scripts/fixtures/gettysburg-v38-preservation.json",
+    "sha256": "f2515d9eb418fb38c705542f970757f4df356a07b06accb621f5be8fa19dcb27"
+  },
+  "capture": {
+    "path": "scripts/capture-gettysburg-v38-preservation.mjs",
+    "sha256": "88397ca5630fff83b7e34760f13de5caff8fa7766af0fd167e1d5f049fd3046f"
+  },
+  "oldFixturesRefreshed": false,
+  "oldMigrationLedgersEdited": false,
+  "behavioralAssertionsChanged": false,
+  "mandatoryRegistration": "package.json",
+  "mandatorySuite": "scripts/test-gettysburg-v38-command-access.mjs",
+  "migrations": [
+    {
+      "path": "package.json",
+      "archive": "scripts/test-support/gettysburg-v38-before/package.json",
+      "beforeSHA256": "96fa03c5ae8c1165c56cdd664ba2ddee4f4727a2198c4522600448068119d458",
+      "currentSHA256": "6bf787c05a5d5d394ed8d5eec65278389c713ad1d6b8db216e12d4d98a8ff174",
+      "reason": "Only four mandatory v38 command-access script registrations; version, dependencies and lockfile unchanged."
+    },
+    {
+      "path": "src/components/CivilWarBattleEncounter.jsx",
+      "archive": "scripts/test-support/gettysburg-v38-before/src/components/CivilWarBattleEncounter.jsx",
+      "beforeSHA256": "0eb74307c7e1d697c1c2523e3921f53d6bb318bd296a35d94d34a96527140273",
+      "currentSHA256": "ebacdb09a6845f648a7a9f8713bd64e365c7d6c5817b764ea9c87b8225e4f018",
+      "reason": "Relocate the existing Line/Column/Skirmish controls to the start of formation details; selection, dispatch, disabled and ARIA behavior remain exact."
+    },
+    {
+      "path": "src/battle/battleUsability.css",
+      "archive": "scripts/test-support/gettysburg-v38-before/src/battle/battleUsability.css",
+      "beforeSHA256": "ccfee5e4b0140aec186ab9f06338f2ba3bce6b1ff259582ae5548df00cec8dc9",
+      "currentSHA256": "0b1a788f76430bcd8b398fa271acc43fa7074b4c8e8e85388142a24a923e3da7",
+      "reason": "Sticky command presentation and 44-pixel targets make existing formation controls reachable on desktop and phone; no battle or artwork change."
+    },
+    {
+      "path": "scripts/test-support/gettysburgV37Preservation.mjs",
+      "archive": "scripts/test-support/gettysburg-v38-before/scripts/test-support/gettysburgV37Preservation.mjs",
+      "beforeSHA256": "86a401079186d4e015c4cf11c048d80fca9347ddea58338eeecb550295e71394",
+      "currentSHA256": "9d572de4c8f5bae778619c052b08e271a26afda290f8c5ee0091de6f0317c742",
+      "reason": "Only metadata directRead import and V38 historical reader call; original V37 ledger, fixtures and every behavioral assertion remain byte exact."
+    }
+  ],
+  "newSourcePins": [
+    {
+      "path": "scripts/test-gettysburg-v38-command-access.mjs",
+      "sha256": "5d5c145d7646dac4ed1745167535b50b51aa8dfc331a9223f038045bb99d7763"
+    },
+    {
+      "path": "docs/CIVIL_WAR_V38_COMMAND_ACCESS.md",
+      "sha256": "6f1d140ae2da114f591cfa86aad65108380e7a39bc7a65253bc60d91a631474b"
+    }
+  ]
+}

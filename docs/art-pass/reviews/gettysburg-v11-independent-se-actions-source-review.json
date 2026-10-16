@@ -1,0 +1,687 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "independent model-assisted native-source review",
+  "reviewer": "civilwar_survivor_review",
+  "reviewedAtUTC": "2026-10-03T17:04:55.589039+00:00",
+  "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-actions-candidate.png",
+  "sourceSha256": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6",
+  "nativeMode": "RGBA",
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "cellSize": 627,
+  "bytes": 652733,
+  "freshSourceReview": true,
+  "editIsolationEstablished": false,
+  "nativePixelsModifiedByReviewer": false,
+  "approvedPreview": true,
+  "productionApproved": false,
+  "humanAnatomicalCertification": false,
+  "historicalCertification": false,
+  "fullFamilyApproval": false,
+  "verdict": "Usable for limited opt-in Union B SE stationary-action visual preview; final atlas/runtime/browser integration remains pending.",
+  "referenceHeightRecommendation": 475,
+  "referenceHeightMethod": "One ready-based source-wide reference of475 applies to all four cells. Row-shared sole planes588 and547 preserve body-span471/472/498/469 variation; BL boot and musket-butt extents are not independently leveled. This is manual display registration, not recovered skeletal height or ground-contact physics.",
+  "muzzleCellLocal": [
+    489,
+    324
+  ],
+  "muzzleUncertaintyPx": 6,
+  "bayonetTipCellLocal": [
+    593,
+    382
+  ],
+  "bayonetTipUncertaintyPx": 3,
+  "muzzleMethod": "Fresh visual identification of the front tube/socket region at the end of the cylindrical barrel. The extended down-right blade ends around593,382 and is not the discharge origin. Barrel mouth/socket interior and forward perspective remain partly occluded; estimate is approximate, not a certified bore reconstruction.",
+  "firingBearing": {
+    "directionIndex": 1,
+    "bearing": "SE",
+    "observedScreenProjection": "right and down",
+    "manualProjectedAxisAngleFromScreenRightDegreesApproximate": [
+      21,
+      27
+    ],
+    "absoluteWorldAxisRecovered": false,
+    "note": "Stock-to-barrel and tube-to-blade cues agree on down-right SE. A visual angle does not establish exact 3D yaw or independently certified guide-axis conformity."
+  },
+  "cells": [
+    {
+      "nativeIndex": 0,
+      "action": "ready",
+      "root": [
+        280,
+        588
+      ],
+      "pelvisXUncertaintyPx": 8,
+      "groundYUncertaintyPx": 4,
+      "capTop": 117,
+      "capTopUncertaintyPx": 3,
+      "bodySpanAtSharedGround": 471,
+      "alphaBounds": {
+        "1": {
+          "bboxExclusive": [
+            35,
+            23,
+            613,
+            603
+          ],
+          "padding": [
+            35,
+            23,
+            14,
+            24
+          ],
+          "minimumMargin": 14
+        },
+        "8": {
+          "bboxExclusive": [
+            187,
+            63,
+            432,
+            588
+          ],
+          "padding": [
+            187,
+            63,
+            195,
+            39
+          ],
+          "minimumMargin": 39
+        },
+        "64": {
+          "bboxExclusive": [
+            187,
+            64,
+            431,
+            588
+          ],
+          "padding": [
+            187,
+            64,
+            196,
+            39
+          ],
+          "minimumMargin": 39
+        },
+        "128": {
+          "bboxExclusive": [
+            188,
+            65,
+            430,
+            587
+          ],
+          "padding": [
+            188,
+            65,
+            197,
+            40
+          ],
+          "minimumMargin": 40
+        },
+        "240": {
+          "bboxExclusive": [
+            189,
+            74,
+            426,
+            586
+          ],
+          "padding": [
+            189,
+            74,
+            201,
+            41
+          ],
+          "minimumMargin": 41
+        }
+      },
+      "registeredPreviewBody300": {
+        "1": {
+          "bounds": [
+            146.063,
+            69.558,
+            511.116,
+            435.874
+          ],
+          "fits": true
+        },
+        "8": {
+          "bounds": [
+            242.063,
+            94.821,
+            396.8,
+            426.4
+          ],
+          "fits": true
+        },
+        "64": {
+          "bounds": [
+            242.063,
+            95.453,
+            396.168,
+            426.4
+          ],
+          "fits": true
+        },
+        "128": {
+          "bounds": [
+            242.695,
+            96.084,
+            395.537,
+            425.768
+          ],
+          "fits": true
+        },
+        "240": {
+          "bounds": [
+            243.326,
+            101.768,
+            393.011,
+            425.137
+          ],
+          "fits": true
+        }
+      }
+    },
+    {
+      "nativeIndex": 1,
+      "action": "fire",
+      "root": [
+        211,
+        588
+      ],
+      "pelvisXUncertaintyPx": 8,
+      "groundYUncertaintyPx": 4,
+      "capTop": 116,
+      "capTopUncertaintyPx": 3,
+      "bodySpanAtSharedGround": 472,
+      "alphaBounds": {
+        "1": {
+          "bboxExclusive": [
+            41,
+            20,
+            598,
+            625
+          ],
+          "padding": [
+            41,
+            20,
+            29,
+            2
+          ],
+          "minimumMargin": 2
+        },
+        "8": {
+          "bboxExclusive": [
+            110,
+            116,
+            596,
+            581
+          ],
+          "padding": [
+            110,
+            116,
+            31,
+            46
+          ],
+          "minimumMargin": 31
+        },
+        "64": {
+          "bboxExclusive": [
+            111,
+            116,
+            594,
+            581
+          ],
+          "padding": [
+            111,
+            116,
+            33,
+            46
+          ],
+          "minimumMargin": 33
+        },
+        "128": {
+          "bboxExclusive": [
+            111,
+            117,
+            594,
+            580
+          ],
+          "padding": [
+            111,
+            117,
+            33,
+            47
+          ],
+          "minimumMargin": 33
+        },
+        "240": {
+          "bboxExclusive": [
+            112,
+            118,
+            586,
+            579
+          ],
+          "padding": [
+            112,
+            118,
+            41,
+            48
+          ],
+          "minimumMargin": 41
+        }
+      },
+      "registeredPreviewBody300": {
+        "1": {
+          "bounds": [
+            193.432,
+            67.663,
+            545.221,
+            449.768
+          ],
+          "fits": true
+        },
+        "8": {
+          "bounds": [
+            237.011,
+            128.295,
+            543.958,
+            421.979
+          ],
+          "fits": true
+        },
+        "64": {
+          "bounds": [
+            237.642,
+            128.295,
+            542.695,
+            421.979
+          ],
+          "fits": true
+        },
+        "128": {
+          "bounds": [
+            237.642,
+            128.926,
+            542.695,
+            421.347
+          ],
+          "fits": true
+        },
+        "240": {
+          "bounds": [
+            238.274,
+            129.558,
+            537.642,
+            420.716
+          ],
+          "fits": true
+        }
+      }
+    },
+    {
+      "nativeIndex": 2,
+      "action": "load",
+      "root": [
+        317,
+        547
+      ],
+      "pelvisXUncertaintyPx": 8,
+      "groundYUncertaintyPx": 4,
+      "capTop": 49,
+      "capTopUncertaintyPx": 3,
+      "bodySpanAtSharedGround": 498,
+      "alphaBounds": {
+        "1": {
+          "bboxExclusive": [
+            51,
+            3,
+            627,
+            561
+          ],
+          "padding": [
+            51,
+            3,
+            0,
+            66
+          ],
+          "minimumMargin": 0
+        },
+        "8": {
+          "bboxExclusive": [
+            219,
+            48,
+            418,
+            545
+          ],
+          "padding": [
+            219,
+            48,
+            209,
+            82
+          ],
+          "minimumMargin": 48
+        },
+        "64": {
+          "bboxExclusive": [
+            220,
+            49,
+            418,
+            544
+          ],
+          "padding": [
+            220,
+            49,
+            209,
+            83
+          ],
+          "minimumMargin": 49
+        },
+        "128": {
+          "bboxExclusive": [
+            220,
+            49,
+            417,
+            544
+          ],
+          "padding": [
+            220,
+            49,
+            210,
+            83
+          ],
+          "minimumMargin": 49
+        },
+        "240": {
+          "bboxExclusive": [
+            221,
+            50,
+            416,
+            543
+          ],
+          "padding": [
+            221,
+            50,
+            211,
+            84
+          ],
+          "minimumMargin": 50
+        }
+      },
+      "registeredPreviewBody300": {
+        "1": {
+          "bounds": [
+            132.8,
+            82.821,
+            496.589,
+            435.242
+          ],
+          "fits": true
+        },
+        "8": {
+          "bounds": [
+            238.905,
+            111.242,
+            364.589,
+            425.137
+          ],
+          "fits": true
+        },
+        "64": {
+          "bounds": [
+            239.537,
+            111.874,
+            364.589,
+            424.505
+          ],
+          "fits": true
+        },
+        "128": {
+          "bounds": [
+            239.537,
+            111.874,
+            363.958,
+            424.505
+          ],
+          "fits": true
+        },
+        "240": {
+          "bounds": [
+            240.168,
+            112.505,
+            363.326,
+            423.874
+          ],
+          "fits": true
+        }
+      }
+    },
+    {
+      "nativeIndex": 3,
+      "action": "ram",
+      "root": [
+        300,
+        547
+      ],
+      "pelvisXUncertaintyPx": 8,
+      "groundYUncertaintyPx": 4,
+      "capTop": 78,
+      "capTopUncertaintyPx": 3,
+      "bodySpanAtSharedGround": 469,
+      "alphaBounds": {
+        "1": {
+          "bboxExclusive": [
+            1,
+            5,
+            579,
+            561
+          ],
+          "padding": [
+            1,
+            5,
+            48,
+            66
+          ],
+          "minimumMargin": 1
+        },
+        "8": {
+          "bboxExclusive": [
+            209,
+            16,
+            404,
+            547
+          ],
+          "padding": [
+            209,
+            16,
+            223,
+            80
+          ],
+          "minimumMargin": 16
+        },
+        "64": {
+          "bboxExclusive": [
+            209,
+            16,
+            404,
+            547
+          ],
+          "padding": [
+            209,
+            16,
+            223,
+            80
+          ],
+          "minimumMargin": 16
+        },
+        "128": {
+          "bboxExclusive": [
+            210,
+            17,
+            403,
+            546
+          ],
+          "padding": [
+            210,
+            17,
+            224,
+            81
+          ],
+          "minimumMargin": 17
+        },
+        "240": {
+          "bboxExclusive": [
+            210,
+            18,
+            403,
+            545
+          ],
+          "padding": [
+            210,
+            18,
+            224,
+            82
+          ],
+          "minimumMargin": 18
+        }
+      },
+      "registeredPreviewBody300": {
+        "1": {
+          "bounds": [
+            111.958,
+            84.084,
+            477.011,
+            435.242
+          ],
+          "fits": true
+        },
+        "8": {
+          "bounds": [
+            243.326,
+            91.032,
+            366.484,
+            426.4
+          ],
+          "fits": true
+        },
+        "64": {
+          "bounds": [
+            243.326,
+            91.032,
+            366.484,
+            426.4
+          ],
+          "fits": true
+        },
+        "128": {
+          "bounds": [
+            243.958,
+            91.663,
+            365.853,
+            425.768
+          ],
+          "fits": true
+        },
+        "240": {
+          "bounds": [
+            243.958,
+            92.295,
+            365.853,
+            425.137
+          ],
+          "fits": true
+        }
+      }
+    }
+  ],
+  "conspicuousBlueDiagnostic": {
+    "predicate": "r<80,g<100,b>=140,b>=r+90,b>=1.8*g+30",
+    "countsByNativeCellAndAlphaThreshold": [
+      {
+        "1": 263,
+        "8": 0,
+        "64": 0,
+        "128": 0,
+        "240": 0
+      },
+      {
+        "1": 468,
+        "8": 0,
+        "64": 0,
+        "128": 0,
+        "240": 0
+      },
+      {
+        "1": 172,
+        "8": 0,
+        "64": 0,
+        "128": 0,
+        "240": 0
+      },
+      {
+        "1": 311,
+        "8": 0,
+        "64": 0,
+        "128": 0,
+        "240": 0
+      }
+    ],
+    "meaning": "Zero matching pixels at alpha8,64,128,240; colored low-alpha residue remains. This narrow RGB check does not certify all edge colors or perfectly clean transparency."
+  },
+  "appearanceAndKit": {
+    "identity": "Consistent with accepted B front/side references for a limited visual preview: short dark brown hair, prominent moustache and modest chin/cheek hair, navy cap/coat, sky-blue trousers, worn brown ankle boots. A/B distinction remains subtle and exact likeness/age is not certified.",
+    "headAndUniformAllFourCells": "No material cap, coat, trouser, boot or skin/facial-family change across ready/fire/load/ram.",
+    "bodyRelativeKit": "Dark rectangular knapsack and gray/taupe horizontal rolled blanket stay at the back; tan/gray straps cross the torso. Dull silver canteen remains at anatomical left hip, partly hidden as viewpoint/arms change; brown right-side pouch and belt/brass buckle remain coherent. No obvious screen-side kit swap or duplicate canteen.",
+    "weaponAndGrips": "Ready has stable upright carry and plausible two-hand stock/fore-end contacts. Fire has shouldered stock, trigger-region hand and support hand under fore-end with a down-right SE weapon. Trigger finger, exact shoulder/cheek/sight fit and some lock/bore details are occluded and uncertified.",
+    "loadingAndRam": "Loading and raised-rod cells show distinct hand/arm jobs and a vertical wooden-stock musket. The working rod and fixed blade are visually distinguishable as representative states, though thin metal/hand overlap limits exact bore insertion and socket continuity. Two source states are not a complete period loading drill."
+  },
+  "nativePadding": {
+    "acceptedMinimumSolidGatePx": 16,
+    "allFourPass": true,
+    "minimumByNativeCell": [
+      39,
+      33,
+      49,
+      16
+    ],
+    "requestedTargetPx": 32,
+    "cellsBelowRequestedTarget": [
+      3
+    ],
+    "note": "BR raised rod reaches16px top padding at alpha64. This passes the unchanged accepted16px gate but does not meet the32px generation target. No crop/resample/alpha cleanup should be used to alter this evidence."
+  },
+  "previewBounds": {
+    "stage": [
+      640,
+      520
+    ],
+    "bodyHeight": 300,
+    "commonRootXFraction": 0.47,
+    "commonGroundYFraction": 0.82,
+    "allAlpha8And64BoundsFit": true,
+    "basis": "Read-only native alpha bounds and the proposed fresh roots/reference; final registered atlas and actual reviewer/battlefield still need checking."
+  },
+  "referenceSources": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v9/union-b-w-actions-candidate.png",
+      "sha256": "81b66db974e4f026083fe60abe6670461afd7853ea33a845dd7f39aac0d7d35f"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v7/union-b-s-actions-candidate.png",
+      "sha256": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v8/union-b-sw-actions-candidate.png",
+      "sha256": "e98918507e6eadc38fe828814782c95a51f132ab918fdacfa185d8660e15d8af"
+    }
+  ],
+  "limitations": [
+    "Whole final native source freshly reviewed; no untouched-cell or surgical identity-edit preservation claim.",
+    "Manual pelvis/ground/cap/muzzle positions carry stated uncertainties; one source-wide reference retains body-span differences without per-phase correction.",
+    "Low-alpha remnants reach cell edges, including zero padding in one alpha1 cell. No exhaustive transparency/fringe-clean certification.",
+    "A one-frame fire silhouette and two loading poses do not establish recoil/settling, complete drill, anatomical joints or historical equipment certification.",
+    "Final v11 native-source/public byte provenance, atlas/action identity bindings, retained v10 equivalence, runtime pause/transition/checkpoint/performance and actual browser evidence remain later acceptance gates.",
+    "Local opt-in preview only. No default promotion, publication, production, human art or complete-family certification."
+  ]
+}

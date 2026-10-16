@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-01",
+  "scope": "Candidate atlases selected by gettysburgInfantryClipAssets for exact gettysburg with artPass=gettysburg-v5",
+  "atlases": [
+    {
+      "name": "retained-e-march",
+      "source": "docs/art-pass/candidates/gettysburg-v4/union-e-march-candidate.png",
+      "publicPNG": "public/images/units/gettysburg-v4/union-a-march-e.png",
+      "publicJSON": "public/images/units/gettysburg-v4/union-a-march-e.json",
+      "sha256": "43b8f4394b6071958b693d83c14eb7f324e277706bd5513d23b536467e9f6a42",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "cellDimensions": [
+        627,
+        627
+      ],
+      "pngBytes": 520759,
+      "jsonBytes": 3214,
+      "publicCopyIdentical": true,
+      "productionBuildCopyIdentical": true,
+      "clips": [
+        {
+          "action": "march",
+          "direction": 0,
+          "frames": 4,
+          "referenceHeight": 412,
+          "key": "union-gettysburg-v4-march-e"
+        }
+      ],
+      "approval": {
+        "optInPreview": true,
+        "production": false,
+        "fullFamily": false
+      }
+    },
+    {
+      "name": "e-actions",
+      "source": "docs/art-pass/candidates/gettysburg-v5/union-e-actions-candidate.png",
+      "publicPNG": "public/images/units/gettysburg-v5/union-a-actions-e.png",
+      "publicJSON": "public/images/units/gettysburg-v5/union-a-actions-e.json",
+      "sha256": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "cellDimensions": [
+        627,
+        627
+      ],
+      "pngBytes": 592405,
+      "jsonBytes": 4359,
+      "publicCopyIdentical": true,
+      "productionBuildCopyIdentical": true,
+      "clips": [
+        {
+          "action": "ready",
+          "direction": 0,
+          "frames": 1,
+          "referenceHeight": 485,
+          "key": "union-gettysburg-v5-actions-e"
+        },
+        {
+          "action": "fire",
+          "direction": 0,
+          "frames": 1,
+          "referenceHeight": 485,
+          "key": "union-gettysburg-v5-actions-e"
+        },
+        {
+          "action": "reload",
+          "direction": 0,
+          "frames": 2,
+          "referenceHeight": 485,
+          "key": "union-gettysburg-v5-actions-e"
+        }
+      ],
+      "approval": {
+        "optInPreview": true,
+        "production": false,
+        "fullFamily": false
+      }
+    },
+    {
+      "name": "se-march",
+      "source": "docs/art-pass/candidates/gettysburg-v5/union-se-march-padded-candidate.png",
+      "publicPNG": "public/images/units/gettysburg-v5/union-a-march-se.png",
+      "publicJSON": "public/images/units/gettysburg-v5/union-a-march-se.json",
+      "sha256": "90a124967a778789bcdbaf5b83fc0cba689f145486450ba775798ec106bfc103",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "cellDimensions": [
+        627,
+        627
+      ],
+      "pngBytes": 609955,
+      "jsonBytes": 3237,
+      "publicCopyIdentical": true,
+      "productionBuildCopyIdentical": true,
+      "clips": [
+        {
+          "action": "march",
+          "direction": 1,
+          "frames": 4,
+          "referenceHeight": 490,
+          "key": "union-gettysburg-v5-march-se"
+        }
+      ],
+      "approval": {
+        "optInPreview": true,
+        "production": false,
+        "fullFamily": false
+      }
+    }
+  ],
+  "atlasCount": 3,
+  "clipCount": 5,
+  "pngBytes": 1723119,
+  "jsonBytes": 10810,
+  "candidateFileBytes": 1733929,
+  "nominalDecodedRGBABytes": 18870192,
+  "normalGameCandidateAtlasCount": 0,
+  "otherBattleCandidateAtlasCount": 0,
+  "productionReviewerMarkerLeaks": [],
+  "limitations": "Registry, file and pixel counts only; no network/startup/FPS/peak-memory or ordinary-PC benchmark."
+}

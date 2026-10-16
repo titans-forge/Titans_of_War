@@ -1,0 +1,267 @@
+{
+  "artPass": "gettysburg-v25",
+  "side": "union",
+  "identity": "a",
+  "direction": 3,
+  "role": "contact",
+  "source": "docs/art-pass/candidates/gettysburg-v25/union-a-contact-sw-candidate.png",
+  "sourceSHA256": "351d98d1c87cc0c405a3e0eeca3b3193b2937395e38db837597228817c5ba463",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v25-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "2560f481e547caadea34fe7da54229b6508540ac735a5895ea2489aa9354f558",
+  "referenceHeight": 403,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh union contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "755e673b3355da4ee73a663ec41e159df00c2b7ebba20c72b6844bc1695d133a",
+      "ground": [
+        361,
+        581
+      ],
+      "groundROI": [
+        310,
+        536,
+        396,
+        590
+      ],
+      "groundMethod": "Projected pelvis X selected independently. Ground Y is the alpha>=64 exclusive bottom of the nearer viewer-left/front boot sole, isolated below the trouser cuff; no rifle pixels.",
+      "solidBounds": [
+        148,
+        163,
+        443,
+        581
+      ],
+      "solidPadding": [
+        148,
+        163,
+        184,
+        46
+      ],
+      "nonzeroBounds": [
+        39,
+        69,
+        627,
+        585
+      ],
+      "capROI": [
+        298,
+        153,
+        369,
+        194
+      ],
+      "capTop": 163,
+      "referenceSoleROI": [
+        310,
+        536,
+        396,
+        590
+      ],
+      "referenceSoleGroundY": 581,
+      "bodySpan": 418
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "8c103e7cb141a02a245479c441d238672222e26e5e2c4afe214ba3c091d6cf01",
+      "ground": [
+        366,
+        586
+      ],
+      "groundROI": [
+        299,
+        541,
+        375,
+        596
+      ],
+      "groundMethod": "Projected pelvis X follows the hips behind the forward lean. Ground Y comes from the nearer forward boot sole during the short SW extension, independently of the other boot and weapon.",
+      "solidBounds": [
+        52,
+        179,
+        448,
+        586
+      ],
+      "solidPadding": [
+        52,
+        179,
+        179,
+        41
+      ],
+      "nonzeroBounds": [
+        1,
+        23,
+        468,
+        595
+      ],
+      "capROI": [
+        298,
+        171,
+        367,
+        212
+      ],
+      "capTop": 179,
+      "referenceSoleROI": [
+        299,
+        541,
+        375,
+        596
+      ],
+      "referenceSoleGroundY": 586,
+      "bodySpan": 407
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "9d900e7893a82bc2b5603b612b2a468a573a9833be61b7f71b614cca7abc5083",
+      "ground": [
+        369,
+        552
+      ],
+      "groundROI": [
+        312,
+        505,
+        395,
+        560
+      ],
+      "groundMethod": "Projected pelvis X follows the withdrawn torso/hips. Ground Y comes from the nearer viewer-left boot sole under the recovering leg.",
+      "solidBounds": [
+        125,
+        153,
+        451,
+        552
+      ],
+      "solidPadding": [
+        125,
+        153,
+        176,
+        75
+      ],
+      "nonzeroBounds": [
+        73,
+        39,
+        627,
+        593
+      ],
+      "capROI": [
+        301,
+        145,
+        369,
+        180
+      ],
+      "capTop": 153,
+      "referenceSoleROI": [
+        312,
+        505,
+        395,
+        560
+      ],
+      "referenceSoleGroundY": 552,
+      "bodySpan": 399
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "fc4c827fc936974686ef1d6b54186c57b4af434014e88ca5d39f8905487fada8",
+      "ground": [
+        356,
+        534
+      ],
+      "groundROI": [
+        248,
+        493,
+        345,
+        543
+      ],
+      "groundMethod": "Projected pelvis X follows the wide guard hips. Ground Y comes from the nearer viewer-left planted boot sole; the wider stance lowers projected body height naturally.",
+      "solidBounds": [
+        111,
+        167,
+        468,
+        534
+      ],
+      "solidPadding": [
+        111,
+        167,
+        159,
+        93
+      ],
+      "nonzeroBounds": [
+        1,
+        146,
+        581,
+        601
+      ],
+      "capROI": [
+        280,
+        156,
+        343,
+        193
+      ],
+      "capTop": 167,
+      "referenceSoleROI": [
+        248,
+        493,
+        345,
+        543
+      ],
+      "referenceSoleGroundY": 534,
+      "bodySpan": 367
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 3,
+      "action": "melee",
+      "key": "union-gettysburg-v25-a-contact-sw",
+      "frames": [
+        "a-melee-3-0",
+        "a-melee-3-1",
+        "a-melee-3-2",
+        "a-melee-3-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.575758,
+          "y": 0.926635
+        },
+        {
+          "x": 0.583732,
+          "y": 0.934609
+        },
+        {
+          "x": 0.588517,
+          "y": 0.880383
+        },
+        {
+          "x": 0.567783,
+          "y": 0.851675
+        }
+      ],
+      "referenceHeight": 403,
+      "sourceHash": "351d98d1c87cc0c405a3e0eeca3b3193b2937395e38db837597228817c5ba463",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeContactSequence": "gettysburg-v25-union-a-sw-contact",
+      "scope": "Exact source-reviewed union A SW local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

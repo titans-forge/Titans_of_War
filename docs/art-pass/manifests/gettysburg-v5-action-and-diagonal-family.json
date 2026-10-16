@@ -1,0 +1,239 @@
+{
+  "date": "2026-10-01",
+  "tool": "built-in image_gen; direct Blender structural guide",
+  "toolModelIdentifier": "not reported",
+  "promptRecord": "docs/art-pass/prompts/gettysburg-v5-native-corrections.md",
+  "review": "docs/art-pass/reviews/gettysburg-v5-actions-and-diagonal-review.md",
+  "independentSourceReview": "docs/art-pass/reviews/gettysburg-v5-independent-source-review.md",
+  "sourceAnnotations": "docs/art-pass/manifests/gettysburg-v5-source-annotations.json",
+  "nativeSourceTreatment": "none; public PNGs are byte-for-byte copies, full equal cells, metadata registration only",
+  "scope": {
+    "scenario": "gettysburg",
+    "query": "artPass=gettysburg-v5",
+    "army": "union",
+    "identity": "a",
+    "direction0": [
+      "march",
+      "ready",
+      "fire",
+      "reload"
+    ],
+    "direction1": [
+      "march"
+    ],
+    "otherActionsDirectionsIdentitiesScenarios": "accepted-art fallback",
+    "liveIdentityAssignment": "The current battlefield pilot explicitly selects A for supported Union figures; no A/B alternation is implemented. An explicit B registry request falls back to accepted art."
+  },
+  "sources": [
+    {
+      "name": "retained-e-march",
+      "source": "docs/art-pass/candidates/gettysburg-v4/union-e-march-candidate.png",
+      "publicPNG": "public/images/units/gettysburg-v4/union-a-march-e.png",
+      "publicJSON": "public/images/units/gettysburg-v4/union-a-march-e.json",
+      "sha256": "43b8f4394b6071958b693d83c14eb7f324e277706bd5513d23b536467e9f6a42",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "cellDimensions": [
+        627,
+        627
+      ],
+      "pngBytes": 520759,
+      "jsonBytes": 3214,
+      "publicCopyIdentical": true,
+      "productionBuildCopyIdentical": true,
+      "clips": [
+        {
+          "action": "march",
+          "direction": 0,
+          "frames": 4,
+          "referenceHeight": 412,
+          "key": "union-gettysburg-v4-march-e"
+        }
+      ],
+      "approval": {
+        "optInPreview": true,
+        "production": false,
+        "fullFamily": false
+      }
+    },
+    {
+      "name": "e-actions",
+      "source": "docs/art-pass/candidates/gettysburg-v5/union-e-actions-candidate.png",
+      "publicPNG": "public/images/units/gettysburg-v5/union-a-actions-e.png",
+      "publicJSON": "public/images/units/gettysburg-v5/union-a-actions-e.json",
+      "sha256": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "cellDimensions": [
+        627,
+        627
+      ],
+      "pngBytes": 592405,
+      "jsonBytes": 4359,
+      "publicCopyIdentical": true,
+      "productionBuildCopyIdentical": true,
+      "clips": [
+        {
+          "action": "ready",
+          "direction": 0,
+          "frames": 1,
+          "referenceHeight": 485,
+          "key": "union-gettysburg-v5-actions-e"
+        },
+        {
+          "action": "fire",
+          "direction": 0,
+          "frames": 1,
+          "referenceHeight": 485,
+          "key": "union-gettysburg-v5-actions-e"
+        },
+        {
+          "action": "reload",
+          "direction": 0,
+          "frames": 2,
+          "referenceHeight": 485,
+          "key": "union-gettysburg-v5-actions-e"
+        }
+      ],
+      "approval": {
+        "optInPreview": true,
+        "production": false,
+        "fullFamily": false
+      }
+    },
+    {
+      "name": "se-march",
+      "source": "docs/art-pass/candidates/gettysburg-v5/union-se-march-padded-candidate.png",
+      "publicPNG": "public/images/units/gettysburg-v5/union-a-march-se.png",
+      "publicJSON": "public/images/units/gettysburg-v5/union-a-march-se.json",
+      "sha256": "90a124967a778789bcdbaf5b83fc0cba689f145486450ba775798ec106bfc103",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "cellDimensions": [
+        627,
+        627
+      ],
+      "pngBytes": 609955,
+      "jsonBytes": 3237,
+      "publicCopyIdentical": true,
+      "productionBuildCopyIdentical": true,
+      "clips": [
+        {
+          "action": "march",
+          "direction": 1,
+          "frames": 4,
+          "referenceHeight": 490,
+          "key": "union-gettysburg-v5-march-se"
+        }
+      ],
+      "approval": {
+        "optInPreview": true,
+        "production": false,
+        "fullFamily": false
+      }
+    }
+  ],
+  "rejectedStudies": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v5/union-e-actions-rejected-edit.png",
+      "sha256": "a1a5f22bcf727f0f404a6bd23356f3ef48f09b6b0926ca22ff5923d12d1c90ae",
+      "bytes": 605651,
+      "publicAsset": false,
+      "approved": false
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v5/union-e-march-rejected-fresh.png",
+      "sha256": "d4348cf8570faa556251428374be268215601bac46ced07169697be780133eee",
+      "bytes": 608464,
+      "publicAsset": false,
+      "approved": false
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v5/union-se-march-candidate.png",
+      "sha256": "6196626331c6c2476d32fd7506ae427563f7744fd87fabe3ee11f91e7cc6b7f9",
+      "bytes": 618392,
+      "publicAsset": false,
+      "approved": false
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v5/union-se-march-repaired-candidate.png",
+      "sha256": "2e03848f869bc393e5fa165b51f3450e2f9d0765cea81dbfafa0efc62fb12f5e",
+      "bytes": 628077,
+      "publicAsset": false,
+      "approved": false
+    }
+  ],
+  "structuralGuide": {
+    "source": "docs/art-pass/candidates/gettysburg-v5/union-se-march-guide.png",
+    "sha256": "bde01708b912e4ac793fe268d93e7cbbacb53490a25f0acca877dc0e46c53f3c",
+    "receipt": "docs/art-pass/candidates/gettysburg-v5/union-se-march-guide.json",
+    "runtimeAsset": false
+  },
+  "rightsProvenance": "Generated locally through user-authorized built-in imagegen with project-owned prior sprite/Blender guides; NPS page is historical reference only. Model identity was not provided; no licensed third-party image was copied into runtime assets. Exact historical/anatomical fidelity is unverified.",
+  "validation": {
+    "nativeAuthorCheck": {
+      "command": "python3 scripts/author-gettysburg-v5-clips.py --check",
+      "exitCode": 0
+    },
+    "fullAssets": {
+      "command": "npm run validate-assets",
+      "exitCode": 0,
+      "nodeTests": 143,
+      "failed": 0,
+      "scopeNote": "Before final two added real-SE tests."
+    },
+    "finalRealAtlasTests": {
+      "command": "node --test scripts/test-gettysburg-v5-pilot.mjs scripts/test-gettysburg-motion-playback.mjs",
+      "passed": 20,
+      "failed": 0,
+      "skipped": 0
+    },
+    "gettysburgSuite": {
+      "command": "npm run test:gettysburg",
+      "exitCode": 0
+    },
+    "build": {
+      "command": "npm run build",
+      "exitCode": 0,
+      "reviewerExcluded": true,
+      "rejectedStudiesExcluded": true,
+      "docsExcluded": true,
+      "existingLargeChunkWarning": true
+    },
+    "browser": {
+      "desktopReviewer": true,
+      "mobileReviewerViewport": [
+        390,
+        844
+      ],
+      "mobileClientWidth": 375,
+      "mobileScrollWidth": 375,
+      "turnSamplesInspected": "E phases 0-3, matched-phase switch to SE phase3, SE phases0-3, matched-phase return to E phase3",
+      "manualPanelIndependence": true,
+      "gettysburgPracticeControls": [
+        "start",
+        "2x speed",
+        "pause",
+        "zoom in"
+      ],
+      "consoleWarningErrorCount": 0,
+      "encounterCompleted": false,
+      "allCandidateActionsIsolatedInLiveEncounter": false,
+      "playPauseRetainedSourceSample": true
+    },
+    "humanIndependentValidation": false,
+    "balanceValidation": false,
+    "ordinaryPCPerformanceBenchmark": false
+  },
+  "preloadAudit": "docs/art-pass/manifests/gettysburg-v5-preload-audit.json",
+  "familyApproved": false,
+  "productionApproved": false,
+  "defaultArtChanged": false,
+  "published": false
+}

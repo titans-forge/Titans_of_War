@@ -1,0 +1,1128 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent Codex gpt-6-astra Max model-assisted source reviewer",
+  "reviewerModel": "gpt-6-astra",
+  "reasoningEffort": "max",
+  "reviewedAtUTC": "2026-10-04T18:00:21.739573+00:00",
+  "modelAssisted": true,
+  "independentReview": true,
+  "acceptedForOptIn": true,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false,
+  "completeFamilyApproved": false,
+  "sourceOnlyAcceptance": true,
+  "rendererPlaybackAccepted": false,
+  "finalCandidateInstallationAccepted": false,
+  "identityKit": "union-a",
+  "direction": "W",
+  "directionIndex": 4,
+  "allEightCellsReviewed": true,
+  "completeNativeSheetsInspected": true,
+  "sourceReference": {
+    "source": "docs/art-pass/candidates/gettysburg-v9/union-a-w-actions-candidate.png",
+    "sha256": "3676bb60c6c4373cd1176e30b4079ad68cebb94de26fe7bea582dd675b936d96",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "role": "Union A west kit and relative proportion reference only; prior approval and approximate v9 pivots are not reused."
+  },
+  "styleReferences": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v20/confederate-a-contact-e-candidate.png",
+      "sha256": "0621f135a0428937e9010bf949ac1f063f7c0f305c1e284f9cacafa6c0075682",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "use": "Read-only opposing-side illustration style and proportional comparison."
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v20/confederate-a-casualty-e-candidate.png",
+      "sha256": "2e06139713abaf66811a26bace098d19fdc4ced40be11f8ca2e5aa3aefdd4134",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "use": "Read-only opposing-side illustration style and proportional comparison."
+    }
+  ],
+  "decision": "Accept this exact unmodified Union A west contact/casualty pair for the bounded opt-in v21 source pilot, using the independently registered support pivots and a shared 365-pixel reference. No source-blocking defect was found. Aim-like lunge/rear-grip occlusion, cross-family animation scale and low-alpha edge appearance remain explicit renderer-review limits.",
+  "scope": "Two complete 1254-square RGBA native 2x2 sources, four contact endpoints and four non-graphic casualty endpoints; no source pixels, historical source or runtime files changed.",
+  "bearingAndKit": "All visible profiles and weapons face image left; the lying body retains its head and rifle muzzle to the left. The navy cap/coat, pale blue trousers, brown boots, buff straps, dark pack, tan blanket roll and round canteen match Union A. The illustrative material finish is compatible with the Confederate v20 pair, with side-specific colors and naturally different fall poses.",
+  "scaleAssessment": "The contact poses retain coherent head/limb/boot and kit proportions despite braced posture changes. A 365-pixel common reference gives calculated contact cap-to-sole extents of approximately 33.84,30.51,31.30,32.70 pixels at a 32-pixel target reference. These are image arithmetic, not measured renderer output. The naturally shortened casualty silhouettes are not enlarged to standing height; ordinary/close gameplay comparison remains required.",
+  "sources": [
+    {
+      "role": "contact",
+      "source": "docs/art-pass/candidates/gettysburg-v21/union-a-contact-w-candidate.png",
+      "sha256": "3c5bc6bace3aa4ea9abb3b4275a416aaa4e3067fe1c63e0a48d0ec9e059151be",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "nativeGrid": [
+        2,
+        2
+      ],
+      "generatedOriginal": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-5fda42fe-a300-45a2-8df3-0248b0f4ca4c.png",
+      "generatedOriginalByteIdentical": true,
+      "completeNativeSheetInspected": true,
+      "allFourNativeCellsInspected": true,
+      "nativePixelsChanged": false,
+      "cells": [
+        {
+          "cell": 0,
+          "phaseRole": "guard",
+          "poseAcceptedForOptIn": true,
+          "bearing": "W; image left",
+          "bearingAccepted": true,
+          "kitAccepted": true,
+          "visibleLimbChainAssessment": "Visible portions are coherent; concealed joints are not certified.",
+          "gripAssessment": "Visible hands and weapon-support roles are plausible; concealed finger/contact detail is not certified.",
+          "observation": "The profile and bayonet face image left. Navy cap and coat, pale blue trousers, brown boots, buff cross straps, dark pack, tan roll and round canteen match the viewed Union A kit. Two visible hands support the diagonal rifle at the fore-end and stock/lock area; both bent leg-to-boot chains are complete. The near right boot sits lower than the far left boot in the oblique projection. All solid parts remain inside the cell.",
+          "root": [
+            404,
+            552
+          ],
+          "supportMeaning": "X=404 is the manually interpreted projected pelvis center beneath the belt/coat and between the two trouser-leg origins, excluding pack, canteen and rifle. Y is the exclusive alpha>=64 lower edge of the nearer rear/right planted boot sole inside the bounded sole-only ROI; the farther front boot is higher in the oblique projection.",
+          "groundMeasurement": {
+            "roi": [
+              436,
+              537,
+              517,
+              558
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 663,
+            "minY": 537,
+            "maxYExclusive": 552
+          },
+          "alpha": {
+            "1": {
+              "bounds": [
+                119,
+                23,
+                627,
+                625
+              ],
+              "padding": [
+                119,
+                23,
+                0,
+                2
+              ]
+            },
+            "16": {
+              "bounds": [
+                128,
+                162,
+                512,
+                552
+              ],
+              "padding": [
+                128,
+                162,
+                115,
+                75
+              ]
+            },
+            "64": {
+              "bounds": [
+                130,
+                163,
+                512,
+                552
+              ],
+              "padding": [
+                130,
+                163,
+                115,
+                75
+              ]
+            },
+            "128": {
+              "bounds": [
+                131,
+                164,
+                511,
+                551
+              ],
+              "padding": [
+                131,
+                164,
+                116,
+                76
+              ]
+            }
+          },
+          "cellRGBA_SHA256": "46da0ca37bf4d39d26e7cae3798478471f2a504791b6ad07ec4162ca2fe9cc65",
+          "capMeasurement": {
+            "roi": [
+              332,
+              151,
+              409,
+              190
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 1086,
+            "minY": 166,
+            "maxYExclusive": 190
+          },
+          "referenceSoleMeasurement": {
+            "roi": [
+              436,
+              537,
+              517,
+              558
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 663,
+            "minY": 537,
+            "maxYExclusive": 552
+          },
+          "bodySpan": 386
+        },
+        {
+          "cell": 1,
+          "phaseRole": "short-level-lunge",
+          "poseAcceptedForOptIn": true,
+          "bearing": "W; image left",
+          "bearingAccepted": true,
+          "kitAccepted": true,
+          "visibleLimbChainAssessment": "Visible portions are coherent; concealed joints are not certified.",
+          "gripAssessment": "Forward support is visible; rear grip partly occluded and aim-like.",
+          "observation": "The figure braces in a wider leftward lunge with the musket level. The forward hand and supporting sleeve are clear; the rear grip is partly obscured by the weapon and nearer arm rather than independently readable in full. The cheek/stock silhouette still resembles shouldered aim in isolation. The stance is a plausible contact endpoint for this opt-in sequence, but two-hand thrust mechanics and contact readability are not certified by this still.",
+          "root": [
+            391,
+            543
+          ],
+          "supportMeaning": "X=391 is the manually interpreted projected pelvis center of the wide leftward level lunge, excluding the backward pack and forward arms. Y is the exclusive alpha>=64 lower edge of the nearer rear/right boot sole; the forward boot and horizontal musket are excluded.",
+          "groundMeasurement": {
+            "roi": [
+              465,
+              529,
+              537,
+              550
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 535,
+            "minY": 529,
+            "maxYExclusive": 543
+          },
+          "alpha": {
+            "1": {
+              "bounds": [
+                33,
+                51,
+                597,
+                624
+              ],
+              "padding": [
+                33,
+                51,
+                30,
+                3
+              ]
+            },
+            "16": {
+              "bounds": [
+                35,
+                195,
+                532,
+                543
+              ],
+              "padding": [
+                35,
+                195,
+                95,
+                84
+              ]
+            },
+            "64": {
+              "bounds": [
+                36,
+                195,
+                532,
+                543
+              ],
+              "padding": [
+                36,
+                195,
+                95,
+                84
+              ]
+            },
+            "128": {
+              "bounds": [
+                41,
+                196,
+                531,
+                542
+              ],
+              "padding": [
+                41,
+                196,
+                96,
+                85
+              ]
+            }
+          },
+          "cellRGBA_SHA256": "128b146c8232487d0f800d5986f0760a138b44159943e1c8fd6f3d19de9a62a2",
+          "capMeasurement": {
+            "roi": [
+              304,
+              184,
+              375,
+              219
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 1041,
+            "minY": 195,
+            "maxYExclusive": 219
+          },
+          "referenceSoleMeasurement": {
+            "roi": [
+              465,
+              529,
+              537,
+              550
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 535,
+            "minY": 529,
+            "maxYExclusive": 543
+          },
+          "bodySpan": 348
+        },
+        {
+          "cell": 2,
+          "phaseRole": "low-recovery",
+          "poseAcceptedForOptIn": true,
+          "bearing": "W; image left",
+          "bearingAccepted": true,
+          "kitAccepted": true,
+          "visibleLimbChainAssessment": "Visible portions are coherent; concealed joints are not certified.",
+          "gripAssessment": "Visible hands and weapon-support roles are plausible; concealed finger/contact detail is not certified.",
+          "observation": "The soldier bends farther forward and lowers the rifle toward image left. The low fore-end hand and stock hand remain distinct; the elbow and shoulder positions differ clearly from both guard and high block. The blue kit, canteen and equipment remain coherent, and both supporting boots are complete. The lower projected cap-to-sole span follows the bent posture.",
+          "root": [
+            417,
+            512
+          ],
+          "supportMeaning": "X=417 is the manually interpreted projected pelvis center below the coat in the low recovery, between the two leg origins. Y is the exclusive alpha>=64 lower edge of the nearer rear/right boot sole. The low projecting bayonet does not define the ground or the reference height.",
+          "groundMeasurement": {
+            "roi": [
+              474,
+              496,
+              550,
+              521
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 647,
+            "minY": 496,
+            "maxYExclusive": 512
+          },
+          "alpha": {
+            "1": {
+              "bounds": [
+                19,
+                15,
+                621,
+                611
+              ],
+              "padding": [
+                19,
+                15,
+                6,
+                16
+              ]
+            },
+            "16": {
+              "bounds": [
+                106,
+                154,
+                544,
+                513
+              ],
+              "padding": [
+                106,
+                154,
+                83,
+                114
+              ]
+            },
+            "64": {
+              "bounds": [
+                108,
+                155,
+                544,
+                512
+              ],
+              "padding": [
+                108,
+                155,
+                83,
+                115
+              ]
+            },
+            "128": {
+              "bounds": [
+                109,
+                155,
+                544,
+                512
+              ],
+              "padding": [
+                109,
+                155,
+                83,
+                115
+              ]
+            }
+          },
+          "cellRGBA_SHA256": "68cefd3db774203ba77d8d47ba372a9144f6fe6eae475f60a13cd7869284acee",
+          "capMeasurement": {
+            "roi": [
+              317,
+              144,
+              393,
+              181
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 1202,
+            "minY": 155,
+            "maxYExclusive": 181
+          },
+          "referenceSoleMeasurement": {
+            "roi": [
+              474,
+              496,
+              550,
+              521
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 647,
+            "minY": 496,
+            "maxYExclusive": 512
+          },
+          "bodySpan": 357
+        },
+        {
+          "cell": 3,
+          "phaseRole": "high-block",
+          "poseAcceptedForOptIn": true,
+          "bearing": "W; image left",
+          "bearingAccepted": true,
+          "kitAccepted": true,
+          "visibleLimbChainAssessment": "Visible portions are coherent; concealed joints are not certified.",
+          "gripAssessment": "Visible hands and weapon-support roles are plausible; concealed finger/contact detail is not certified.",
+          "observation": "The weapon rises into a compact high diagonal block toward image left with separated upper fore-end and lower stock grips. Both elbows are flexed and both full leg-to-boot chains remain visible. The rifle angle and hand positions make this endpoint clearly distinct from the low recovery. The elevated bayonet is excluded from human reference height.",
+          "root": [
+            389,
+            515
+          ],
+          "supportMeaning": "X=389 is the manually interpreted projected pelvis center in the high block. Y is the exclusive alpha>=64 lower edge of the nearer rear/right supporting boot sole; the farther boot and elevated bayonet are excluded.",
+          "groundMeasurement": {
+            "roi": [
+              446,
+              498,
+              526,
+              523
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 753,
+            "minY": 498,
+            "maxYExclusive": 515
+          },
+          "alpha": {
+            "1": {
+              "bounds": [
+                1,
+                17,
+                611,
+                561
+              ],
+              "padding": [
+                1,
+                17,
+                16,
+                66
+              ]
+            },
+            "16": {
+              "bounds": [
+                183,
+                66,
+                520,
+                516
+              ],
+              "padding": [
+                183,
+                66,
+                107,
+                111
+              ]
+            },
+            "64": {
+              "bounds": [
+                184,
+                67,
+                520,
+                515
+              ],
+              "padding": [
+                184,
+                67,
+                107,
+                112
+              ]
+            },
+            "128": {
+              "bounds": [
+                185,
+                68,
+                519,
+                515
+              ],
+              "padding": [
+                185,
+                68,
+                108,
+                112
+              ]
+            }
+          },
+          "cellRGBA_SHA256": "f49fa82a347d360157af1ed48c7ad920a741bc51b776cd3dbfbbada54672e8fd",
+          "capMeasurement": {
+            "roi": [
+              304,
+              130,
+              384,
+              170
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 1373,
+            "minY": 142,
+            "maxYExclusive": 170
+          },
+          "referenceSoleMeasurement": {
+            "roi": [
+              446,
+              498,
+              526,
+              523
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 753,
+            "minY": 498,
+            "maxYExclusive": 515
+          },
+          "bodySpan": 373
+        }
+      ],
+      "measurements": {
+        "cell": 627,
+        "roots": [
+          [
+            404,
+            552
+          ],
+          [
+            391,
+            543
+          ],
+          [
+            417,
+            512
+          ],
+          [
+            389,
+            515
+          ]
+        ],
+        "groundROIs": [
+          [
+            436,
+            537,
+            517,
+            558
+          ],
+          [
+            465,
+            529,
+            537,
+            550
+          ],
+          [
+            474,
+            496,
+            550,
+            521
+          ],
+          [
+            446,
+            498,
+            526,
+            523
+          ]
+        ],
+        "groundMethods": [
+          "X=404 is the manually interpreted projected pelvis center beneath the belt/coat and between the two trouser-leg origins, excluding pack, canteen and rifle. Y is the exclusive alpha>=64 lower edge of the nearer rear/right planted boot sole inside the bounded sole-only ROI; the farther front boot is higher in the oblique projection.",
+          "X=391 is the manually interpreted projected pelvis center of the wide leftward level lunge, excluding the backward pack and forward arms. Y is the exclusive alpha>=64 lower edge of the nearer rear/right boot sole; the forward boot and horizontal musket are excluded.",
+          "X=417 is the manually interpreted projected pelvis center below the coat in the low recovery, between the two leg origins. Y is the exclusive alpha>=64 lower edge of the nearer rear/right boot sole. The low projecting bayonet does not define the ground or the reference height.",
+          "X=389 is the manually interpreted projected pelvis center in the high block. Y is the exclusive alpha>=64 lower edge of the nearer rear/right supporting boot sole; the farther boot and elevated bayonet are excluded."
+        ],
+        "referenceHeight": 365,
+        "capROIs": [
+          [
+            332,
+            151,
+            409,
+            190
+          ],
+          [
+            304,
+            184,
+            375,
+            219
+          ],
+          [
+            317,
+            144,
+            393,
+            181
+          ],
+          [
+            304,
+            130,
+            384,
+            170
+          ]
+        ],
+        "capTop": [
+          166,
+          195,
+          155,
+          142
+        ],
+        "bodySpans": [
+          386,
+          348,
+          357,
+          373
+        ],
+        "referenceSoleROIs": [
+          [
+            436,
+            537,
+            517,
+            558
+          ],
+          [
+            465,
+            529,
+            537,
+            550
+          ],
+          [
+            474,
+            496,
+            550,
+            521
+          ],
+          [
+            446,
+            498,
+            526,
+            523
+          ]
+        ],
+        "referenceSoleGroundY": [
+          552,
+          543,
+          512,
+          515
+        ]
+      }
+    },
+    {
+      "role": "casualty",
+      "source": "docs/art-pass/candidates/gettysburg-v21/union-a-casualty-w-candidate.png",
+      "sha256": "a950d5ccbd5e6672125e07bc863170f235cb9c07d3a2fbc63653b0ff2df01b7a",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "nativeGrid": [
+        2,
+        2
+      ],
+      "generatedOriginal": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-0a92f7bf-c2a5-4030-b84b-4792fd9add03.png",
+      "generatedOriginalByteIdentical": true,
+      "completeNativeSheetInspected": true,
+      "allFourNativeCellsInspected": true,
+      "nativePixelsChanged": false,
+      "cells": [
+        {
+          "cell": 0,
+          "phaseRole": "hit-stumble",
+          "poseAcceptedForOptIn": true,
+          "bearing": "W; image left",
+          "bearingAccepted": true,
+          "kitAccepted": true,
+          "visibleLimbChainAssessment": "Visible portions are coherent; concealed joints are not certified.",
+          "gripAssessment": "Visible hands and weapon-support roles are plausible; concealed finger/contact detail is not certified.",
+          "observation": "The figure leans back with bending knees and a lowered leftward rifle. The same head, navy coat, blue trousers, pack/roll, canteen and straps remain readable. Both hands stay near the lowered weapon and both feet are complete. This reads as a restrained, non-graphic stumble endpoint; no wound detail or detached body part is present.",
+          "root": [
+            422,
+            553
+          ],
+          "supportMeaning": "X=422 is the manually interpreted projected pelvis center of the reeling, bent-knee figure. Y is the exclusive alpha>=64 lower edge of the nearer rear/right boot sole in a sole-only ROI; the lowered rifle and farther boot are excluded.",
+          "groundMeasurement": {
+            "roi": [
+              428,
+              537,
+              502,
+              561
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 624,
+            "minY": 537,
+            "maxYExclusive": 553
+          },
+          "alpha": {
+            "1": {
+              "bounds": [
+                39,
+                103,
+                621,
+                585
+              ],
+              "padding": [
+                39,
+                103,
+                6,
+                42
+              ]
+            },
+            "16": {
+              "bounds": [
+                149,
+                202,
+                496,
+                553
+              ],
+              "padding": [
+                149,
+                202,
+                131,
+                74
+              ]
+            },
+            "64": {
+              "bounds": [
+                150,
+                202,
+                496,
+                553
+              ],
+              "padding": [
+                150,
+                202,
+                131,
+                74
+              ]
+            },
+            "128": {
+              "bounds": [
+                154,
+                203,
+                495,
+                552
+              ],
+              "padding": [
+                154,
+                203,
+                132,
+                75
+              ]
+            }
+          },
+          "cellRGBA_SHA256": "c1c4fc4ea2c7603d0e56ea545584d9a2ab90d96fb993b3eebdf00d6b5aa32a15"
+        },
+        {
+          "cell": 1,
+          "phaseRole": "knee-down",
+          "poseAcceptedForOptIn": true,
+          "bearing": "W; image left",
+          "bearingAccepted": true,
+          "kitAccepted": true,
+          "visibleLimbChainAssessment": "Visible portions are coherent; concealed joints are not certified.",
+          "gripAssessment": "Visible hands and weapon-support roles are plausible; concealed finger/contact detail is not certified.",
+          "observation": "The torso bows over one grounded knee while the other boot remains planted forward. The bent rear leg, back boot, bowed cap and lowered rifle remain distinguishable. Both hands are grouped around the weapon; exact finger/lock contacts are not certified. A knee support patch supplies ground Y independently of weapon extent.",
+          "root": [
+            354,
+            544
+          ],
+          "supportMeaning": "X=354 marks the interpreted center of support of the lowered nearer knee. Y is the exclusive alpha>=64 lower edge of that blue trouser/knee patch in its bounded ROI; the front boot, rear boot and musket do not determine it.",
+          "groundMeasurement": {
+            "roi": [
+              334,
+              529,
+              384,
+              553
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 527,
+            "minY": 529,
+            "maxYExclusive": 544
+          },
+          "alpha": {
+            "1": {
+              "bounds": [
+                55,
+                21,
+                523,
+                627
+              ],
+              "padding": [
+                55,
+                21,
+                104,
+                0
+              ]
+            },
+            "16": {
+              "bounds": [
+                81,
+                305,
+                459,
+                544
+              ],
+              "padding": [
+                81,
+                305,
+                168,
+                83
+              ]
+            },
+            "64": {
+              "bounds": [
+                82,
+                306,
+                459,
+                544
+              ],
+              "padding": [
+                82,
+                306,
+                168,
+                83
+              ]
+            },
+            "128": {
+              "bounds": [
+                84,
+                306,
+                458,
+                544
+              ],
+              "padding": [
+                84,
+                306,
+                169,
+                83
+              ]
+            }
+          },
+          "cellRGBA_SHA256": "4bc82cb76afc409586f23f3b541883fb88bc29fa36f10e168dc5246f13fa7481"
+        },
+        {
+          "cell": 2,
+          "phaseRole": "collapse",
+          "poseAcceptedForOptIn": true,
+          "bearing": "W; image left",
+          "bearingAccepted": true,
+          "kitAccepted": true,
+          "visibleLimbChainAssessment": "Visible portions are coherent; concealed joints are not certified.",
+          "gripAssessment": "Visible hands and weapon-support roles are plausible; concealed finger/contact detail is not certified.",
+          "observation": "The torso pitches forward over a tucked leg while the other leg trails to the right. Both arms lead toward the low weapon and show separate hands. The backpack, roll and canteen remain attached to the same blue-coated figure. The body is in a lowering transition, not an upright sprite rotated flat. The folded blue knee support patch to the right of the stock supplies registration.",
+          "root": [
+            409,
+            401
+          ],
+          "supportMeaning": "X=409 marks the interpreted tucked-knee/body support center beneath the forward-falling hip. Y is the exclusive alpha>=64 lower edge of the blue folded trouser support patch immediately to the right of the rifle stock. The ROI excludes the lower weapon and the projecting farther boot.",
+          "groundMeasurement": {
+            "roi": [
+              399,
+              388,
+              431,
+              410
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 314,
+            "minY": 388,
+            "maxYExclusive": 401
+          },
+          "alpha": {
+            "1": {
+              "bounds": [
+                63,
+                23,
+                621,
+                603
+              ],
+              "padding": [
+                63,
+                23,
+                6,
+                24
+              ]
+            },
+            "16": {
+              "bounds": [
+                123,
+                244,
+                557,
+                423
+              ],
+              "padding": [
+                123,
+                244,
+                70,
+                204
+              ]
+            },
+            "64": {
+              "bounds": [
+                126,
+                244,
+                557,
+                422
+              ],
+              "padding": [
+                126,
+                244,
+                70,
+                205
+              ]
+            },
+            "128": {
+              "bounds": [
+                129,
+                244,
+                556,
+                422
+              ],
+              "padding": [
+                129,
+                244,
+                71,
+                205
+              ]
+            }
+          },
+          "cellRGBA_SHA256": "cc860b8639356dda6b1cd3dd41843a2f1a136776eba2fc0f2f91046367dbb17b"
+        },
+        {
+          "cell": 3,
+          "phaseRole": "ground-rest",
+          "poseAcceptedForOptIn": true,
+          "bearing": "W; image left",
+          "bearingAccepted": true,
+          "kitAccepted": true,
+          "visibleLimbChainAssessment": "Visible portions are coherent; concealed joints are not certified.",
+          "gripAssessment": "Visible hands and weapon-support roles are plausible; concealed finger/contact detail is not certified.",
+          "observation": "The man rests on his front/side with head left, two overlapping arms near the rifle and two complete legs/boots extending right. His kit and relative head/limb forms remain coherent; the straighter legs make the resting silhouette longer than the bent-leg Confederate v20 rest. The near trouser support edge defines the illustrated ground plane, separate from the rifle below the body.",
+          "root": [
+            325,
+            427
+          ],
+          "supportMeaning": "X=325 marks the interpreted hip/side-body support center in ground rest. Y is the exclusive alpha>=64 lower edge of the nearer thigh/trouser support patch to the right of the rifle butt. The gun extending below and left of the body is excluded. This registers an illustrated support plane, not a measured physical center of mass.",
+          "groundMeasurement": {
+            "roi": [
+              362,
+              416,
+              439,
+              441
+            ],
+            "alphaThreshold": 64,
+            "solidPixels": 779,
+            "minY": 416,
+            "maxYExclusive": 427
+          },
+          "alpha": {
+            "1": {
+              "bounds": [
+                7,
+                0,
+                589,
+                627
+              ],
+              "padding": [
+                7,
+                0,
+                38,
+                0
+              ]
+            },
+            "16": {
+              "bounds": [
+                54,
+                320,
+                531,
+                438
+              ],
+              "padding": [
+                54,
+                320,
+                96,
+                189
+              ]
+            },
+            "64": {
+              "bounds": [
+                56,
+                321,
+                530,
+                437
+              ],
+              "padding": [
+                56,
+                321,
+                97,
+                190
+              ]
+            },
+            "128": {
+              "bounds": [
+                59,
+                321,
+                530,
+                437
+              ],
+              "padding": [
+                59,
+                321,
+                97,
+                190
+              ]
+            }
+          },
+          "cellRGBA_SHA256": "3e093dd06aba2a670188ced30e20d250fbd31554ed3e21af7ed5dfd9d7332eca"
+        }
+      ],
+      "measurements": {
+        "cell": 627,
+        "roots": [
+          [
+            422,
+            553
+          ],
+          [
+            354,
+            544
+          ],
+          [
+            409,
+            401
+          ],
+          [
+            325,
+            427
+          ]
+        ],
+        "groundROIs": [
+          [
+            428,
+            537,
+            502,
+            561
+          ],
+          [
+            334,
+            529,
+            384,
+            553
+          ],
+          [
+            399,
+            388,
+            431,
+            410
+          ],
+          [
+            362,
+            416,
+            439,
+            441
+          ]
+        ],
+        "groundMethods": [
+          "X=422 is the manually interpreted projected pelvis center of the reeling, bent-knee figure. Y is the exclusive alpha>=64 lower edge of the nearer rear/right boot sole in a sole-only ROI; the lowered rifle and farther boot are excluded.",
+          "X=354 marks the interpreted center of support of the lowered nearer knee. Y is the exclusive alpha>=64 lower edge of that blue trouser/knee patch in its bounded ROI; the front boot, rear boot and musket do not determine it.",
+          "X=409 marks the interpreted tucked-knee/body support center beneath the forward-falling hip. Y is the exclusive alpha>=64 lower edge of the blue folded trouser support patch immediately to the right of the rifle stock. The ROI excludes the lower weapon and the projecting farther boot.",
+          "X=325 marks the interpreted hip/side-body support center in ground rest. Y is the exclusive alpha>=64 lower edge of the nearer thigh/trouser support patch to the right of the rifle butt. The gun extending below and left of the body is excluded. This registers an illustrated support plane, not a measured physical center of mass."
+        ],
+        "referenceHeight": 365
+      }
+    }
+  ],
+  "referenceHeight": 365,
+  "measurementThreshold": 64,
+  "measurementContract": {
+    "method": "Inspect the complete native sheets and all eight 627-pixel native cell views. Manually select projected pelvic/support X positions from the visible anatomical leg/hip/support structure, excluding pack, canteen and musket. For the four contact cells select cap-crown-only and nearer rear/right supporting-sole-only ROIs. At alpha>=64 recompute cap minY and sole maxYExclusive, yielding body spans [386,348,357,373]. Their median is 365; round half upward to one referenceHeight=365 and apply it unchanged across both complete sources. Ground Y is independently recomputed from each role-appropriate support ROI. Coordinates and ROIs are native cell-local pixels, with exclusive right/bottom ROI edges. No body-box centering, phase scale normalization, casualty height normalization, raster resampling, mirroring, alpha repair, warping or synthesized intermediate pose is approved.",
+    "source": "contact alone determines the common human reference",
+    "contactBodySpans": [
+      386,
+      348,
+      357,
+      373
+    ],
+    "medianBodySpan": 365.0,
+    "rounding": "nearest integer; half upward",
+    "referenceHeight": 365,
+    "sameReferenceAcrossBothSources": true,
+    "spanRange": 38,
+    "spanRangeFractionOfMedian": 0.10410958904109589,
+    "historicalStationarySpanRuleApplied": false,
+    "phaseScaleNormalization": false,
+    "casualtyScaleNormalization": false,
+    "nativeCoordinateConvention": "Cell-local pixels; row-major order. ROIs [x0,y0,x1,y1] use exclusive right/bottom edges. Ground Y is maxYExclusive of alpha>=64 pixels inside the anatomical support ROI.",
+    "pelvisAndSupportXSelectedFromAnatomy": true,
+    "pivotsSelectedFromSilhouetteBounds": false
+  },
+  "nativePixelTreatment": "None. Both complete candidate PNGs match their generated originals byte for byte. External native-cell inspection extracts do not replace source or game textures.",
+  "solidAlphaPaddingVerified": true,
+  "nonzeroAlphaPaddingVerified": false,
+  "edgeOrFringeFreeCertified": false,
+  "sourcePreflightHashes": {
+    "contact-source-preflight.json": "dce2f85fe9f97ee25c316f03cb4f8aac70f453002997423f01b58346bb2c26bf",
+    "casualty-source-preflight.json": "348f9868a2abaa7bc53de3a4a0590fd5326c618eee643edb9a75bc9594ab7146"
+  },
+  "remainingBlockingSourceFindings": [],
+  "requiredIntegrationChecks": [
+    "Verify the exact W direction4 address and sequence marker contract, complete native exports and source/review/annotation hashes before enabling the opt-in helper.",
+    "Compare Union W and Confederate E guard/contact/fall poses together in actual opposing close combat at ordinary and close zoom; inspect scale, grounding, grip continuity and contact readability.",
+    "Inspect all casualty stages and ground rest under the shared source scale, preserving support registration and natural posture changes.",
+    "Check actual terrain at overview, ordinary and close zoom for low-alpha colored fringe or cell-edge sampling.",
+    "Verify complete-action fallback, all historical source/policy/test preservation, pause/cold resume/reduced-motion behavior and the final frozen-candidate gates before installation."
+  ],
+  "limitations": [
+    "This is independent model-assisted source inspection, not human art, usability, historical-drill or physical-anatomy certification.",
+    "The level lunge still resembles shouldered aim in isolation and its rear grip is partly occluded. The source does not establish exact two-hand thrust mechanics; actual opposing-contact playback must establish useful action readability before installation.",
+    "Native stance and joint changes are visible, especially low recovery versus high block, but still frames do not prove temporal smoothness, weight transfer, musket-length continuity or complete hand/finger mechanics.",
+    "Projected pelvis/support X positions are manually interpreted illustration registrations, not physical bone, joint or center-of-mass measurements. The oblique support plane does not require every extremity to share one image Y.",
+    "Contact cap-to-sole spans range by 38/365, about 10.41 percent, because these are braced/lunging/bent poses. Historical stationary-source 5/6 percent rules are not applied, and natural posture differences are not normalized away.",
+    "All casualty poses use the same contact-derived 365-pixel reference. Kneeling and lying height reductions are intentional; relative head/limb/boot and equipment proportions were judged visually, not anatomically certified.",
+    "Alpha>=64 silhouette margins are at least 36 pixels in contact and 56 in casualty. Very low-alpha colored noise remains, including some cell-edge pixels. Complete edge/fringe freedom is not certified; source pixels remain unchanged.",
+    "The Union A v9 source and Confederate v20 pair were viewed as kit/style/scale references. This does not inherit their source approvals or certify cross-family playback equality; both sides must be compared in the actual renderer at ordinary and close scale.",
+    "Inspection-only native cell crops were written outside the candidate without resampling. They are diagnostic views and are not exported or substituted for the complete original PNGs.",
+    "Acceptance covers only these two exact source sheets and registrations. Integration, exporter output, complete-action fallback, renderer continuity, pause/cold resume, reduced motion, GPU/ordinary-PC behavior, complete family, default art and local installation require separate checks."
+  ]
+}

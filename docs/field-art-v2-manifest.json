@@ -1,0 +1,41 @@
+[
+  {
+    "id": "manassas-ground-v2",
+    "file": "public/images/battles/manassas-ground-v2.webp",
+    "width": 1619,
+    "height": 971,
+    "bytes": 664630,
+    "sha256": "a055391e677e7a9b264da1934000ffe866890cc2b277857842f4d0152abb7dc8",
+    "original_sha256": "521c2542a5e507362f60d61461b46eeec27fb1b24e31119a17834ef58179020e",
+    "kind": "AI-generated illustrative game art",
+    "generation_mode": "Built-in image_gen.imagegen; backend model identity not exposed",
+    "alpha": false,
+    "scope": "Decorative ground and foliage. Authored game geometry determines cover; not a surveyed historical map."
+  },
+  {
+    "id": "shiloh-ground-v2",
+    "file": "public/images/battles/shiloh-ground-v2.webp",
+    "width": 1620,
+    "height": 971,
+    "bytes": 601860,
+    "sha256": "360fe4031172365027b28251fb03025125581222c8e01ef2c4f783497d753689",
+    "original_sha256": "f8a1a601d681864faf9f01b8e9915e7631ea483287df6a1714000febbe7738b4",
+    "kind": "AI-generated illustrative game art",
+    "generation_mode": "Built-in image_gen.imagegen; backend model identity not exposed",
+    "alpha": false,
+    "scope": "Decorative ground and foliage. Authored game geometry determines cover; not a surveyed historical map."
+  },
+  {
+    "id": "oak-canopy-v1",
+    "file": "public/images/battles/oak-canopy-v1.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 687166,
+    "sha256": "1c785d9545adcb0b78bba6e397d9ce5df10992aa931a714b2b5739b9afb22b64",
+    "original_sha256": "17738e08957f0c5480ccff2f025479e72a57acbc7340a7fa8212043d3685f909",
+    "kind": "AI-generated illustrative game art",
+    "generation_mode": "Built-in image_gen.imagegen; backend model identity not exposed",
+    "alpha": true,
+    "scope": "Decorative ground and foliage. Authored game geometry determines cover; not a surveyed historical map."
+  }
+]

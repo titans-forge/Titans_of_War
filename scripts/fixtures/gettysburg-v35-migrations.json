@@ -1,0 +1,42 @@
+{
+  "schema": "gettysburg-v35-historical-byte-migration-v1",
+  "status": "frozen-approved-runtime-pins",
+  "baselineSHA256": "3311882e3a8d84e361ea65269a9d685bf4431a9980c73084577b23cfae4dcca8",
+  "baselineFiles": 1573,
+  "fixture": {
+    "path": "scripts/fixtures/gettysburg-v35-preservation.json",
+    "sha256": "5aa8267f612bb1e4f21c7e327c76e9cbc7906ba3cc256074ea03b21167f049fd"
+  },
+  "capture": {
+    "path": "scripts/capture-gettysburg-v35-preservation.mjs",
+    "sha256": "060ca05d03d965b6454c54063aba24cd2f6b7d394da9b04569c7d39c52fa47d2"
+  },
+  "oldFixturesRefreshed": false,
+  "oldMigrationLedgersEdited": false,
+  "behavioralAssertionsChanged": false,
+  "mandatoryRegistration": "package.json",
+  "mandatorySuite": "scripts/test-gettysburg-v35-animation-continuity.mjs",
+  "migrations": [
+    {
+      "path": "package.json",
+      "archive": "scripts/test-support/gettysburg-v35-before/package.json",
+      "beforeSHA256": "db71d1598d7a233dee94c817410bbdc736cf558c910115149623b3cc18b91259",
+      "currentSHA256": "cfb61c1c4ec8d0eaf64456f2a455507acb4e87d1c30959c7765b42d14029c0e9",
+      "reason": "Only four mandatory v35 script registrations; version, dependencies and lockfile unchanged."
+    },
+    {
+      "path": "src/battle/CivilWarBattlefield.jsx",
+      "archive": "scripts/test-support/gettysburg-v35-before/src/battle/CivilWarBattlefield.jsx",
+      "beforeSHA256": "6cb8988dcac1dbf2296ea5101950211ff7a52dcda336b9eb6b6cfa46084a700e",
+      "currentSHA256": "84ba901a36fc892ff09d26fc09aa0a767f67ea61a21f0eeaa016f6a42cf7b516",
+      "reason": "Renderer first-draw lifecycle only, independently gated canonical animationContinuity=v35; standardContinuity=v34 and contactLayout=v33 remain independent; no new serialized sidecar."
+    },
+    {
+      "path": "scripts/test-support/gettysburgV34Preservation.mjs",
+      "archive": "scripts/test-support/gettysburg-v35-before/scripts/test-support/gettysburgV34Preservation.mjs",
+      "beforeSHA256": "5a47243636fb2e1298b792b491398a79da81c61c4626493732e3607ac180e15e",
+      "currentSHA256": "395d3fb0e73ccdfe9da510347b6b53fe69d45d475a0be601fd19c7b97480acc6",
+      "reason": "Only metadata directRead import and V35 historical reader call; original V34 ledger and every behavioral assertion remain byte exact."
+    }
+  ]
+}

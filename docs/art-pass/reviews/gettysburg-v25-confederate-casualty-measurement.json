@@ -1,0 +1,207 @@
+{
+  "artPass": "gettysburg-v25",
+  "side": "confederate",
+  "identity": "a",
+  "direction": 7,
+  "role": "casualty",
+  "source": "docs/art-pass/candidates/gettysburg-v25/confederate-a-casualty-ne-candidate.png",
+  "sourceSHA256": "4f67e2dfc24fb206c1271885e47a86e8ce176d4f774b5351efcf18ad2d6075ea",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v25-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "2560f481e547caadea34fe7da54229b6508540ac735a5895ea2489aa9354f558",
+  "referenceHeight": 364,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh confederate contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "4cbb419ea6f5560b6f3c18a02224df6378d437d5c78a3adde9fdf2a84a8d37e5",
+      "ground": [
+        311,
+        588
+      ],
+      "groundROI": [
+        297,
+        554,
+        373,
+        600
+      ],
+      "groundMethod": "Projected pelvis X follows the initial unsettled stance. Ground Y is the nearer viewer-right boot sole, isolated below the trouser cuff.",
+      "solidBounds": [
+        224,
+        130,
+        456,
+        588
+      ],
+      "solidPadding": [
+        224,
+        130,
+        171,
+        39
+      ],
+      "nonzeroBounds": [
+        105,
+        103,
+        621,
+        595
+      ]
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "59c41e8acd441d3813080f5c65701be9a2636958c51605b45db34cac428e018f",
+      "ground": [
+        279,
+        566
+      ],
+      "groundROI": [
+        261,
+        550,
+        308,
+        580
+      ],
+      "groundMethod": "Projected pelvis X at the lowered hips. Ground Y is the underside of the lowered cream-trouser knee; the ROI excludes the rear vertical boot sole and outstretched palm.",
+      "solidBounds": [
+        198,
+        317,
+        472,
+        586
+      ],
+      "solidPadding": [
+        198,
+        317,
+        155,
+        41
+      ],
+      "nonzeroBounds": [
+        33,
+        21,
+        567,
+        627
+      ]
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "16c6f2855ea8894eb038b855ce29d89bccb431377aff188705967a986fb01bc4",
+      "ground": [
+        337,
+        386
+      ],
+      "groundROI": [
+        414,
+        374,
+        436,
+        399
+      ],
+      "groundMethod": "Projected pelvis X at the collapsing hips. Ground Y is the underside of the nearer gray-sleeved bracing forearm/elbow, in a bounded ROI separated from the rifle stock below and to the left.",
+      "solidBounds": [
+        169,
+        243,
+        560,
+        471
+      ],
+      "solidPadding": [
+        169,
+        243,
+        67,
+        156
+      ],
+      "nonzeroBounds": [
+        19,
+        3,
+        623,
+        627
+      ]
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "1a90d50aa4bee6c6e5dd4492954d1793c595b8efe7fc70ca38785e7633038ceb",
+      "ground": [
+        312,
+        429
+      ],
+      "groundROI": [
+        261,
+        414,
+        286,
+        440
+      ],
+      "groundMethod": "Projected pelvis/torso X at prone rest. Ground Y is the underside of the near cream-trouser upper leg/thigh left of the rifle stock; weapon and boot bounds are excluded.",
+      "solidBounds": [
+        105,
+        278,
+        562,
+        473
+      ],
+      "solidPadding": [
+        105,
+        278,
+        65,
+        154
+      ],
+      "nonzeroBounds": [
+        7,
+        3,
+        591,
+        587
+      ]
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 7,
+      "action": "fall",
+      "key": "confederate-gettysburg-v25-a-casualty-ne",
+      "frames": [
+        "a-fall-7-0",
+        "a-fall-7-1",
+        "a-fall-7-2",
+        "a-fall-7-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.496013,
+          "y": 0.937799
+        },
+        {
+          "x": 0.444976,
+          "y": 0.902711
+        },
+        {
+          "x": 0.53748,
+          "y": 0.61563
+        },
+        {
+          "x": 0.497608,
+          "y": 0.684211
+        }
+      ],
+      "referenceHeight": 364,
+      "sourceHash": "4f67e2dfc24fb206c1271885e47a86e8ce176d4f774b5351efcf18ad2d6075ea",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeCasualtySequence": "gettysburg-v25-confederate-a-ne-casualty",
+      "scope": "Exact source-reviewed confederate A NE local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

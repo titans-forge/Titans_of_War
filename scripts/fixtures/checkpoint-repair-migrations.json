@@ -1,0 +1,33 @@
+{
+  "schema": "checkpoint-repair-historical-preservation-v1",
+  "baselineSHA256": "89588f397ab5c8523a56b42c913a5cb5d68e2258c910169c4f2b20534ec03194",
+  "baselineFiles": 1464,
+  "fixture": {
+    "path": "scripts/fixtures/gettysburg-v30-preservation.json",
+    "sha256": "e637d09ccf13e0cb2ff48376a0462e102d42589135e9a8f417bf183ff0467355"
+  },
+  "oldFixturesRefreshed": false,
+  "oldMigrationLedgersEdited": false,
+  "mandatoryRegistration": "scripts/test-save-flow-source.mjs",
+  "mandatorySuite": "scripts/test-field-suspend-save.mjs",
+  "gateBefore": {
+    "path": "scripts/test-support/checkpoint-repair-before/scripts/test-gettysburg-v30-contact.mjs",
+    "sha256": "4d4558e0cb3910f9895ce9d140effdfefe8952d6e7bd3f34e8e50dc79195c356"
+  },
+  "migrations": [
+    {
+      "path": "src/App.jsx",
+      "archive": "scripts/test-support/checkpoint-repair-before/src/App.jsx",
+      "beforeSHA256": "a542d8c772190d905014933749d2a27fdbdc1659d4be5493b28376180e69be9f",
+      "currentSHA256": "8d0b7556a667b5bc928da73c39e9f7638791830b929f13705e08b015d25faf90",
+      "reason": "Authorized checkpoint ownership autosave guard, remembered campaign owner and staged Save & Leave handler; exact anchors and storage formats unchanged."
+    },
+    {
+      "path": "scripts/test-save-flow-source.mjs",
+      "archive": "scripts/test-support/checkpoint-repair-before/scripts/test-save-flow-source.mjs",
+      "beforeSHA256": "5ec504418ceac84571bf5a9fdcdb4bebb4e40f28afcfa7dd46fc140f110a897d",
+      "currentSHA256": "e4de80c31ae72c18238ca7e38d73b2107bf384d2ad18bf00ef04f50e6472a6b1",
+      "reason": "Mandatory registration of the current-App checkpoint lifecycle and storage-fault suite; every original behavior assertion retained."
+    }
+  ]
+}

@@ -1,0 +1,403 @@
+{
+  "artPass": "gettysburg-v32",
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false,
+  "referenceHeights": {
+    "se": 412,
+    "nw": 382
+  },
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v32-independent-union-b-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "9f620c6a789171be3cff65f68a2babbf0d7077b21b51a6415f39ef6b10a117cd",
+  "registrationMethod": "Native rounded integer projected pelvis/hip X is selected from anatomy and need not lie inside the support ROI. Ground Y is the exclusive alpha>=64 maximum Y of the explicitly named supporting sole, knee/hip or forearm/hand region; lifted soles, overhead arms and released weapons are excluded.",
+  "referenceHeightMethod": "For each bearing independently, take the exact half-up median of all four contact cap-to-nearer-support-sole alpha>=64 native spans. Apply that one reference unchanged to both contact and casualty sources. SE [435,391,420,404] gives412; NW [404,381,373,383] gives382. No phase-specific, casualty-specific or borrowed normalization.",
+  "sources": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v32/union-b-contact-se-candidate.png",
+      "sha256": "788a57247efd2cc871e686efbbfd422bc604b491ffc702575af78e140a44dcac",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "role": "contact",
+      "cell": 627,
+      "referenceHeight": 412,
+      "roots": [
+        [
+          275,
+          587
+        ],
+        [
+          242,
+          567
+        ],
+        [
+          303,
+          540
+        ],
+        [
+          287,
+          544
+        ]
+      ],
+      "groundROIs": [
+        [
+          171,
+          530,
+          243,
+          599
+        ],
+        [
+          80,
+          511,
+          155,
+          579
+        ],
+        [
+          188,
+          480,
+          259,
+          548
+        ],
+        [
+          145,
+          490,
+          218,
+          551
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X selected at belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the nearer screen-left supporting boot outsole ROI.",
+        "Projected pelvis X follows the bent lunge trunk/pelvis; Y is alpha>=64 maximum exclusive Y in the rear screen-left braced support boot ROI, not the extended rifle.",
+        "Projected pelvis X selected at belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the lower screen-left support boot ROI.",
+        "Projected pelvis X selected below the buckle/crotch; Y is alpha>=64 maximum exclusive Y in the lower screen-left support boot ROI; raised hands and weapon do not affect registration."
+      ],
+      "capROIs": [
+        [
+          261,
+          145,
+          321,
+          191
+        ],
+        [
+          254,
+          169,
+          316,
+          218
+        ],
+        [
+          291,
+          113,
+          352,
+          165
+        ],
+        [
+          265,
+          140,
+          306,
+          178
+        ]
+      ],
+      "capTop": [
+        152,
+        176,
+        120,
+        140
+      ],
+      "referenceSoleROIs": [
+        [
+          180,
+          572,
+          237,
+          594
+        ],
+        [
+          95,
+          553,
+          147,
+          574
+        ],
+        [
+          197,
+          526,
+          256,
+          547
+        ],
+        [
+          154,
+          531,
+          216,
+          550
+        ]
+      ],
+      "referenceSoleGroundY": [
+        587,
+        567,
+        540,
+        544
+      ],
+      "bodySpans": [
+        435,
+        391,
+        420,
+        404
+      ],
+      "cardinal": "se"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v32/union-b-casualty-se-candidate.png",
+      "sha256": "5567d9ba6fce923b07671672d330e40b95bb91644348cc725717d3ab544b5068",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "cardinal": "se",
+      "role": "casualty",
+      "cell": 627,
+      "referenceHeight": 412,
+      "roots": [
+        [
+          294,
+          606
+        ],
+        [
+          257,
+          595
+        ],
+        [
+          322,
+          445
+        ],
+        [
+          286,
+          434
+        ]
+      ],
+      "groundROIs": [
+        [
+          196,
+          552,
+          280,
+          614
+        ],
+        [
+          296,
+          558,
+          397,
+          609
+        ],
+        [
+          276,
+          405,
+          373,
+          455
+        ],
+        [
+          440,
+          410,
+          461,
+          439
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X follows the belt/crotch axis in the stumble; ground Y is max exclusive alpha>=64 Y of the nearer planted screen-left boot, excluding the lifted rear boot.",
+        "Projected pelvis X follows the lowered hip; ground Y is max exclusive alpha>=64 Y of the planted screen-right front boot outsole, independent of lower knee and weapon.",
+        "Projected hip X follows the fallen pelvis; ground Y is max exclusive alpha>=64 Y of the folded weight-bearing knee/hip region. The raised rear boot and rifle bounds are excluded.",
+        "Projected hip X follows the side-rest pelvis; ground Y is max exclusive alpha>=64 Y of the resting wrist/hand at the end of the forearm. The separate lower rifle is excluded from the bounded ROI."
+      ]
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v32/union-b-contact-nw-candidate.png",
+      "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "role": "contact",
+      "cell": 627,
+      "referenceHeight": 382,
+      "roots": [
+        [
+          392,
+          592
+        ],
+        [
+          383,
+          593
+        ],
+        [
+          387,
+          537
+        ],
+        [
+          391,
+          545
+        ]
+      ],
+      "groundROIs": [
+        [
+          299,
+          542,
+          405,
+          606
+        ],
+        [
+          487,
+          554,
+          552,
+          605
+        ],
+        [
+          290,
+          484,
+          395,
+          547
+        ],
+        [
+          272,
+          491,
+          377,
+          556
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X follows the rear belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the nearer screen-left supporting boot ROI.",
+        "Projected pelvis X follows the bent-lunge pelvis independently of the rear boot; Y is alpha>=64 maximum exclusive Y in the screen-right rear forefoot/toe support ROI.",
+        "Projected pelvis X follows the rear belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the lower screen-left support boot ROI.",
+        "Projected pelvis X follows the rear belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the lower screen-left support boot ROI; overhead rifle and grips are excluded."
+      ],
+      "capROIs": [
+        [
+          312,
+          180,
+          372,
+          226
+        ],
+        [
+          289,
+          205,
+          346,
+          247
+        ],
+        [
+          323,
+          155,
+          379,
+          200
+        ],
+        [
+          333,
+          161,
+          365,
+          201
+        ]
+      ],
+      "capTop": [
+        188,
+        212,
+        164,
+        162
+      ],
+      "referenceSoleROIs": [
+        [
+          314,
+          579,
+          397,
+          599
+        ],
+        [
+          493,
+          580,
+          533,
+          600
+        ],
+        [
+          305,
+          526,
+          385,
+          542
+        ],
+        [
+          288,
+          533,
+          367,
+          550
+        ]
+      ],
+      "referenceSoleGroundY": [
+        592,
+        593,
+        537,
+        545
+      ],
+      "bodySpans": [
+        404,
+        381,
+        373,
+        383
+      ],
+      "cardinal": "nw"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v32/union-b-casualty-nw-candidate.png",
+      "sha256": "0d4f98691c07f66507953ceca0a1b545b1ad5a35cf17b5111891a1e4dca0dd61",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "cardinal": "nw",
+      "role": "casualty",
+      "cell": 627,
+      "referenceHeight": 382,
+      "roots": [
+        [
+          400,
+          565
+        ],
+        [
+          386,
+          546
+        ],
+        [
+          446,
+          440
+        ],
+        [
+          458,
+          446
+        ]
+      ],
+      "groundROIs": [
+        [
+          339,
+          526,
+          424,
+          568
+        ],
+        [
+          277,
+          510,
+          353,
+          550
+        ],
+        [
+          364,
+          405,
+          444,
+          449
+        ],
+        [
+          378,
+          414,
+          448,
+          451
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X follows the rear belt/crotch axis of the stumble; Y is the alpha>=64 maximum exclusive Y of the planted screen-left boot outsole. The lifted rear boot and released rifle are excluded.",
+        "Projected pelvis X follows the rear hip beneath the belt; Y is the alpha>=64 maximum exclusive Y of the folded supporting knee region. Both upturned boot soles and the low rifle are excluded.",
+        "Projected pelvis X follows the side/rear hip under the belt and pouch; Y is the alpha>=64 maximum exclusive Y of the load-bearing folded knee/hip region. Raised boot soles, forearms and rifle do not set this ground.",
+        "Projected hip X follows the side-rest pelvis beneath the rear pouch; Y is the alpha>=64 maximum exclusive Y of the resting folded thigh/knee region. Upturned soles and the separate dropped rifle are excluded."
+      ]
+    }
+  ]
+}

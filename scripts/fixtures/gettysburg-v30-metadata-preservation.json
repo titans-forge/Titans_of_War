@@ -1,0 +1,22 @@
+{
+  "schema": "gettysburg-v30-authentic-metadata-preservation-v1",
+  "capturedFrom": "/Users/titansforge/Vault/Titans_of_War",
+  "baselineSHA256": "412edc0c00b2107f0e86ac1907cd0ec603ce3b077f335505c17eaa84ce1d97a4",
+  "sourceFiles": [
+    {
+      "path": "package.json",
+      "archive": "scripts/test-support/gettysburg-v30-before/package.json",
+      "sha256": "25a27c0263076d82cd37d464c198642846efe5375863f5c663fa4ef5735d3457"
+    },
+    {
+      "path": "package-lock.json",
+      "archive": "scripts/test-support/gettysburg-v30-before/package-lock.json",
+      "sha256": "dcefcc1190ae9777f674be5b7c85868a79dc4ffe1c251e9439471d80949e39ff"
+    }
+  ],
+  "declaredVersionBefore": "0.30.0",
+  "declaredVersionAfter": "0.31.0",
+  "oldFixturesRefreshed": false,
+  "oldMigrationLedgerEdited": false,
+  "scope": "Root-authorized package version and exact mandatory v30 gate command additions only; no dependency changes."
+}

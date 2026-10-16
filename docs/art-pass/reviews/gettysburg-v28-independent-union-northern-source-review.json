@@ -1,0 +1,818 @@
+{
+  "schema": "gettysburg-v28-independent-union-northern-source-review-v1",
+  "artPass": "gettysburg-v28",
+  "timeUTC": "2026-10-05T16:57:06.843339+00:00",
+  "reviewer": "Independent Astra source reviewer /root/v19_astra_review",
+  "reviewerModel": "gpt-6-astra",
+  "reasoningEffort": "max",
+  "independentReview": true,
+  "modelAssisted": true,
+  "sourceOnly": true,
+  "acceptedForOptIn": true,
+  "acceptedForLocalInstall": false,
+  "stationaryScaleAccepted": {
+    "a-n": true,
+    "a-nw": true,
+    "b-n": true,
+    "b-nw": true
+  },
+  "referenceHeights": {
+    "a-n": 375,
+    "a-nw": 259,
+    "b-n": 378,
+    "b-nw": 255
+  },
+  "referenceHeightMethod": {
+    "referenceCellIndices": [
+      0,
+      2,
+      3
+    ],
+    "method": "Each identity/bearing sheet uses its own fresh integer median of ready, load and ram visible-cap-to-near-support-sole spans. With three integer spans there is no half-up tie. The fire span corroborates the same physical kit; all four phases share that one reference and no phase is normalized separately.",
+    "alphaThreshold": 64,
+    "capInterpretation": "Cap-only half-open ROIs use visible crown/rim pixels. Where a raised sleeve occludes the crown, the exposed left cap rim is measured; hidden anatomy is not reconstructed. B-NW load also excludes adjacent gun fringe.",
+    "groundInterpretation": "Root X independently estimates the pelvis projection. Root Y is the exclusive alpha>=64 maximum inside the independently chosen nearer supporting boot ROI. Root X need not lie inside that sole ROI.",
+    "nativeCoordinateUncertainty": "Projected pelvis X is approximately +/-8 pixels on N sheets and +/-5 on smaller NW sheets. Occluded cap rims and muzzle lips have a few pixels of semantic uncertainty even though the recorded alpha extrema are exactly reproducible."
+  },
+  "crossBearingReview": {
+    "kit": "The N/NW and existing v27 NE references preserve navy coat/cap, light-blue trousers, brown boots/straps, tan roll, black pack and left-side canteen. A keeps a black pouch; B keeps a brown pouch. Relative head, roll and limb proportions are coherent within and across the four new stationary sheets.",
+    "sampling": "The NW sources have roughly 255-259 native pixels of reference body height versus 375-378 in N. They are visibly softer in small hands, fittings and muzzle detail at a comparable enlarged display size. Their simpler small silhouette remains usable for a bounded opt-in game sprite; this is not equal native-detail quality or a close-zoom quality certificate.",
+    "identity": "B-N is a builtin whole-image edit of the A-N composition with the B kit reference. Its brown pouch remains consistent across all four poses. All four whole-source hashes and all four phase RGBA hashes per sheet are distinct; no independent-face or wholly unrelated-composition claim is made.",
+    "generationBoundary": "Selected A-NW, B-N and B-NW were generated whole-image edits. The staged sources match complete imagegen output bytes. No host-side source raster transforms, individual phase resizes or mirroring were applied by this reviewer."
+  },
+  "sources": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 6,
+      "role": "actions",
+      "source": "docs/art-pass/candidates/gettysburg-v28/union-a-actions-n-candidate.png",
+      "sha256": "6701db1baf08dd551b3de92b97670235675c42c22cd68c3934493adb7ee49880",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "measurements": {
+        "side": "union",
+        "identity": "a",
+        "direction": 6,
+        "role": "actions",
+        "cell": 627,
+        "referenceHeight": 375,
+        "roots": [
+          [
+            340,
+            602
+          ],
+          [
+            267,
+            597
+          ],
+          [
+            348,
+            537
+          ],
+          [
+            271,
+            537
+          ]
+        ],
+        "groundROIs": [
+          [
+            287,
+            558,
+            337,
+            610
+          ],
+          [
+            273,
+            557,
+            327,
+            607
+          ],
+          [
+            288,
+            493,
+            341,
+            547
+          ],
+          [
+            209,
+            493,
+            264,
+            547
+          ]
+        ],
+        "groundMethods": [
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from screen-left supporting boot sole, away from musket.",
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the slightly nearer screen-right supporting boot sole.",
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from screen-left supporting boot sole, excluding the grounded musket stock on the right.",
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from screen-left supporting boot sole, excluding the musket."
+        ],
+        "frameOrder": [
+          "a-ready-6-0",
+          "a-fire-6-0",
+          "a-reload-6-0",
+          "a-reload-6-1"
+        ],
+        "capROIs": [
+          [
+            312,
+            219,
+            368,
+            260
+          ],
+          [
+            240,
+            228,
+            280,
+            264
+          ],
+          [
+            312,
+            150,
+            337,
+            183
+          ],
+          [
+            240,
+            151,
+            291,
+            190
+          ]
+        ],
+        "capTop": [
+          230,
+          235,
+          161,
+          162
+        ],
+        "referenceSoleROIs": [
+          [
+            288,
+            585,
+            337,
+            610
+          ],
+          [
+            276,
+            583,
+            325,
+            607
+          ],
+          [
+            291,
+            522,
+            338,
+            547
+          ],
+          [
+            211,
+            524,
+            261,
+            547
+          ]
+        ],
+        "referenceSoleGroundY": [
+          602,
+          597,
+          537,
+          537
+        ],
+        "bodySpans": [
+          372,
+          362,
+          376,
+          375
+        ],
+        "muzzle": [
+          286,
+          187
+        ],
+        "muzzleROI": [
+          281,
+          179,
+          302,
+          197
+        ],
+        "muzzleMethod": "Independent native projected left steel lip of the north-facing barrel mouth, beneath the farther bayonet blade, on solid alpha>=64 pixels in firing cell1. The rear view partly hides the aperture; this is a bounded rim estimate (approximately +/-4 native pixels), not the blade tip or a bounding-box extreme."
+      },
+      "cellObservations": [
+        {
+          "cell": 0,
+          "frame": "a-ready-6-0",
+          "observation": "Ready: coherent straight north rear view, black A pouch and pack, tan blanket roll and left-side canteen. Upright carried musket is distinct from firing."
+        },
+        {
+          "cell": 1,
+          "frame": "a-fire-6-0",
+          "observation": "Fire: north-directed foreshortened barrel, shoulder/head/elbow change and braced support distinguish firing from ready. Rear hands and aperture are partly hidden; the mouth is a visible steel-rim estimate before the bayonet."
+        },
+        {
+          "cell": 2,
+          "frame": "a-reload-6-0",
+          "observation": "Load: raised hand at muzzle and lower gun support distinguish loading. The raised sleeve overlaps the cap crown; the cap-only ROI uses its visible left rim and excludes the sleeve and gun."
+        },
+        {
+          "cell": 3,
+          "frame": "a-reload-6-1",
+          "observation": "Ram: higher hand and thin rod distinguish the second reload stage. North bearing, body scale and black A kit remain coherent."
+        }
+      ],
+      "minimumSolidPaddingPerCell": [
+        25,
+        30,
+        90,
+        64
+      ],
+      "stationarySourceDecision": "accepted for the exact opt-in stationary addresses, subject to integration and final-candidate review"
+    },
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 5,
+      "role": "actions",
+      "source": "docs/art-pass/candidates/gettysburg-v28/union-a-actions-nw-candidate.png",
+      "sha256": "68e08f3b24bae78461e77cacc56dc495bf992f24ce1b5fc51596d9bef2082157",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "measurements": {
+        "groundROIs": [
+          [
+            284,
+            474,
+            338,
+            512
+          ],
+          [
+            313,
+            474,
+            368,
+            513
+          ],
+          [
+            286,
+            472,
+            342,
+            505
+          ],
+          [
+            303,
+            471,
+            361,
+            507
+          ]
+        ],
+        "capROIs": [
+          [
+            291,
+            237,
+            335,
+            266
+          ],
+          [
+            328,
+            239,
+            368,
+            269
+          ],
+          [
+            296,
+            233,
+            304,
+            259
+          ],
+          [
+            321,
+            231,
+            333,
+            262
+          ]
+        ],
+        "referenceSoleROIs": [
+          [
+            285,
+            488,
+            336,
+            511
+          ],
+          [
+            314,
+            488,
+            365,
+            512
+          ],
+          [
+            287,
+            483,
+            340,
+            504
+          ],
+          [
+            304,
+            486,
+            360,
+            506
+          ]
+        ],
+        "muzzle": [
+          235,
+          233
+        ],
+        "muzzleROI": [
+          229,
+          227,
+          241,
+          238
+        ],
+        "side": "union",
+        "identity": "a",
+        "direction": 5,
+        "role": "actions",
+        "cell": 627,
+        "roots": [
+          [
+            334,
+            504
+          ],
+          [
+            366,
+            504
+          ],
+          [
+            336,
+            497
+          ],
+          [
+            354,
+            500
+          ]
+        ],
+        "groundMethods": [
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot."
+        ],
+        "capTop": [
+          242,
+          247,
+          242,
+          241
+        ],
+        "referenceSoleGroundY": [
+          504,
+          504,
+          497,
+          500
+        ],
+        "bodySpans": [
+          262,
+          257,
+          255,
+          259
+        ],
+        "frameOrder": [
+          "a-ready-5-0",
+          "a-fire-5-0",
+          "a-reload-5-0",
+          "a-reload-5-1"
+        ],
+        "muzzleMethod": "Independent native near-left steel rim of the muzzle at the end of the thick barrel segment in fire cell1, below the narrower projecting bayonet blade. The small rear three-quarter opening is partly obscured; approximately +/-3 native pixels of interpretation uncertainty, not the farther blade tip.",
+        "referenceHeight": 259
+      },
+      "cellObservations": [
+        {
+          "cell": 0,
+          "frame": "a-ready-5-0",
+          "observation": "Ready: consistent rear three-quarter northwest view, up-left carried musket, black A pouch, tan roll and canteen on the left side. The opposing legs and torso remain plausible as a stationary stance."
+        },
+        {
+          "cell": 1,
+          "frame": "a-fire-5-0",
+          "observation": "Fire: musket projects up-left from a shoulder/cheek hold with forehand under the barrel and rear hand near the stock. The near-left thick-barrel rim is visibly behind the farther bayonet tip."
+        },
+        {
+          "cell": 2,
+          "frame": "a-reload-5-0",
+          "observation": "Load: vertical musket on the left of the figure, high hand near the mouth and a lower support hand form a distinct loading pose; left canteen and black pouch retain handedness."
+        },
+        {
+          "cell": 3,
+          "frame": "a-reload-5-1",
+          "observation": "Ram: upper hand and thin projecting rod rise above the loading hand position. Body, head and equipment proportions remain coherent; the sleeve hides part of the crown, so registration uses the exposed left cap rim."
+        }
+      ],
+      "minimumSolidPaddingPerCell": [
+        123,
+        123,
+        130,
+        127
+      ],
+      "stationarySourceDecision": "accepted for the exact opt-in stationary addresses, subject to integration and final-candidate review"
+    },
+    {
+      "side": "union",
+      "identity": "b",
+      "direction": 6,
+      "role": "actions",
+      "source": "docs/art-pass/candidates/gettysburg-v28/union-b-actions-n-candidate.png",
+      "sha256": "3bee9ead8bb0654da27d87639957a8f38b20e17d96832e8fad8d09a4e41ac17c",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "measurements": {
+        "groundROIs": [
+          [
+            287,
+            558,
+            339,
+            613
+          ],
+          [
+            273,
+            556,
+            327,
+            610
+          ],
+          [
+            288,
+            493,
+            341,
+            548
+          ],
+          [
+            209,
+            493,
+            266,
+            548
+          ]
+        ],
+        "capROIs": [
+          [
+            312,
+            219,
+            368,
+            260
+          ],
+          [
+            240,
+            228,
+            280,
+            264
+          ],
+          [
+            312,
+            150,
+            337,
+            183
+          ],
+          [
+            240,
+            151,
+            291,
+            190
+          ]
+        ],
+        "referenceSoleROIs": [
+          [
+            288,
+            585,
+            338,
+            613
+          ],
+          [
+            276,
+            583,
+            325,
+            610
+          ],
+          [
+            291,
+            523,
+            339,
+            548
+          ],
+          [
+            211,
+            524,
+            265,
+            548
+          ]
+        ],
+        "muzzle": [
+          286,
+          188
+        ],
+        "muzzleROI": [
+          281,
+          179,
+          302,
+          198
+        ],
+        "side": "union",
+        "identity": "b",
+        "direction": 6,
+        "role": "actions",
+        "cell": 627,
+        "roots": [
+          [
+            341,
+            603
+          ],
+          [
+            267,
+            598
+          ],
+          [
+            344,
+            538
+          ],
+          [
+            273,
+            539
+          ]
+        ],
+        "groundMethods": [
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the slightly nearer screen-right supporting boot sole, excluding the weapon.",
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot."
+        ],
+        "capTop": [
+          228,
+          235,
+          160,
+          161
+        ],
+        "referenceSoleGroundY": [
+          603,
+          598,
+          538,
+          539
+        ],
+        "bodySpans": [
+          375,
+          363,
+          378,
+          378
+        ],
+        "frameOrder": [
+          "b-ready-6-0",
+          "b-fire-6-0",
+          "b-reload-6-0",
+          "b-reload-6-1"
+        ],
+        "muzzleMethod": "Independent native projected left steel lip of the north-facing barrel mouth below the farther bayonet blade, at alpha>=64 in fire cell1; rear aperture is partly hidden, so this is a bounded rim estimate approximately +/-4 native pixels, not the blade tip.",
+        "referenceHeight": 378
+      },
+      "cellObservations": [
+        {
+          "cell": 0,
+          "frame": "b-ready-6-0",
+          "observation": "Ready: straight north rear view retains the brown B pouch, left canteen, black pack and tan roll. Its generated edit intentionally shares the A north composition; the brown pouch is the stable kit distinction, not a claim of a distinct face."
+        },
+        {
+          "cell": 1,
+          "frame": "b-fire-6-0",
+          "observation": "Fire: north foreshortening and shoulder support agree with the other N source. Brown pouch remains visible, body/head proportions stay consistent, and the hidden rear grip is not anatomically certified."
+        },
+        {
+          "cell": 2,
+          "frame": "b-reload-6-0",
+          "observation": "Load: raised hand at the mouth differs from ram; brown pouch and roll retain their positions. The cap-only ROI excludes the overlapping raised sleeve."
+        },
+        {
+          "cell": 3,
+          "frame": "b-reload-6-1",
+          "observation": "Ram: high hand/rod is distinct from loading, with the same north camera and brown B kit. The slightly changed pixel sole/cap extrema were measured from this exact source rather than copied from A."
+        }
+      ],
+      "minimumSolidPaddingPerCell": [
+        24,
+        29,
+        89,
+        66
+      ],
+      "stationarySourceDecision": "accepted for the exact opt-in stationary addresses, subject to integration and final-candidate review"
+    },
+    {
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "role": "actions",
+      "source": "docs/art-pass/candidates/gettysburg-v28/union-b-actions-nw-candidate.png",
+      "sha256": "258268c64969c4c68318ca64147f8cecfa309e950a53440fe0730bb786a1fc67",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "measurements": {
+        "groundROIs": [
+          [
+            307,
+            455,
+            361,
+            495
+          ],
+          [
+            319,
+            455,
+            374,
+            495
+          ],
+          [
+            303,
+            466,
+            359,
+            505
+          ],
+          [
+            328,
+            466,
+            384,
+            506
+          ]
+        ],
+        "capROIs": [
+          [
+            313,
+            227,
+            351,
+            255
+          ],
+          [
+            329,
+            231,
+            364,
+            258
+          ],
+          [
+            320,
+            232,
+            329,
+            265
+          ],
+          [
+            344,
+            231,
+            352,
+            265
+          ]
+        ],
+        "referenceSoleROIs": [
+          [
+            309,
+            475,
+            360,
+            495
+          ],
+          [
+            321,
+            475,
+            373,
+            495
+          ],
+          [
+            305,
+            485,
+            358,
+            505
+          ],
+          [
+            330,
+            486,
+            383,
+            506
+          ]
+        ],
+        "muzzle": [
+          232,
+          226
+        ],
+        "muzzleROI": [
+          228,
+          220,
+          240,
+          231
+        ],
+        "side": "union",
+        "identity": "b",
+        "direction": 5,
+        "role": "actions",
+        "cell": 627,
+        "roots": [
+          [
+            350,
+            487
+          ],
+          [
+            365,
+            487
+          ],
+          [
+            347,
+            499
+          ],
+          [
+            376,
+            498
+          ]
+        ],
+        "groundMethods": [
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+          "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot."
+        ],
+        "capTop": [
+          233,
+          237,
+          244,
+          241
+        ],
+        "referenceSoleGroundY": [
+          487,
+          487,
+          499,
+          498
+        ],
+        "bodySpans": [
+          254,
+          250,
+          255,
+          257
+        ],
+        "frameOrder": [
+          "b-ready-5-0",
+          "b-fire-5-0",
+          "b-reload-5-0",
+          "b-reload-5-1"
+        ],
+        "muzzleMethod": "Independent native near-left steel rim of the muzzle at the end of the thick barrel segment in fire cell1, below the narrower projecting bayonet blade. The small rear three-quarter opening is partly obscured; approximately +/-3 native pixels of interpretation uncertainty, not the farther blade tip.",
+        "referenceHeight": 255
+      },
+      "cellObservations": [
+        {
+          "cell": 0,
+          "frame": "b-ready-5-0",
+          "observation": "Ready: coherent northwest rear three-quarter view with brown B pouch, tan roll, black pack and left canteen; the earlier opposite-side canteen concern is absent in this selected sheet."
+        },
+        {
+          "cell": 1,
+          "frame": "b-fire-5-0",
+          "observation": "Fire: shoulder-braced up-left barrel with separate forward support and rear stock grip reads as firing. Small barrel/bayonet separation remains interpretable at native inspection, with a bounded mouth-rim estimate."
+        },
+        {
+          "cell": 2,
+          "frame": "b-reload-5-0",
+          "observation": "Load: hand near the muzzle and lower support hand distinguish the first reload stage. The cap ROI excludes both the adjacent gun fringe and the raised sleeve; it uses the exposed crown rim."
+        },
+        {
+          "cell": 3,
+          "frame": "b-reload-5-1",
+          "observation": "Ram: visibly higher rod hand distinguishes the second stage, with consistent northwest bearing and B pouch placement. Smaller hand detail remains softer than the N sources."
+        }
+      ],
+      "minimumSolidPaddingPerCell": [
+        140,
+        140,
+        128,
+        129
+      ],
+      "stationarySourceDecision": "accepted for the exact opt-in stationary addresses, subject to integration and final-candidate review"
+    }
+  ],
+  "inspectionEvidence": {
+    "path": "independent-source-inspection/source-pixel-verification.json",
+    "sha256": "ce1f93d76bbb6b9bdcb9dc699f27b00b68d664f662ae1c950e710c406a5bf62e",
+    "scope": "External native alpha/ROI, whole-copy/reference bindings and selected diagnostic crops; not candidate/public exports."
+  },
+  "blockers": [],
+  "limitations": [
+    "The rear firing grips and some muzzle openings are partly occluded; the recorded mouths are visible steel-rim estimates before the bayonet, not anatomical or drill certification.",
+    "Colored and very-low-alpha fringe remains. Solid alpha>=64 clearance is at least16 native pixels in every cell but does not establish fringe-free output.",
+    "Smaller NW sources lose fine detail at enlarged display sizes; actual game zoom, loading, firing/reload timing, terrain contrast and formation overlap must be checked during integration.",
+    "Within-sheet source scale acceptance does not certify whole-family continuity, all motion, historical equipment accuracy or human usability.",
+    "The N/NE/NW marching fallback remains unchanged and incomplete. This source group adds only ready, fire and two reload phases at N/NW for A and B.",
+    "No browser, GPU, gameplay, release, default-art or local-install acceptance is issued by this source-only review."
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false,
+  "familyApproved": false,
+  "completeFamilyApproved": false,
+  "releaseApproved": false,
+  "allMotionCertified": false,
+  "edgeOrFringeFreeCertified": false
+}

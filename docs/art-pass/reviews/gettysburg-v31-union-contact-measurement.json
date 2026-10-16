@@ -1,0 +1,267 @@
+{
+  "artPass": "gettysburg-v31",
+  "side": "union",
+  "identity": "a",
+  "direction": 5,
+  "role": "contact",
+  "source": "docs/art-pass/candidates/gettysburg-v31/union-a-contact-nw-candidate.png",
+  "sourceSHA256": "8ef7a8b577e52bb884679c47c3c028a2a5b24b1753c8ebc5d26b72ec0428e85e",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v31-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "a0b324df31af6be2523f8a5796476225a3f39d9862688e75a5dae8be01beac32",
+  "referenceHeight": 370,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh union contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "bc030b0afc419aa63266cf9d7f4c494477927e09d1211ad4c2c7b7b7c7bba813",
+      "ground": [
+        411,
+        590
+      ],
+      "groundROI": [
+        316,
+        543,
+        424,
+        607
+      ],
+      "groundMethod": "Projected pelvis X at the rear anatomical hip center beneath the belt/pouches; ground Y is the exclusive alpha>=64 maximum of the nearer screen-left planted boot sole, separate from weapon bounds.",
+      "solidBounds": [
+        152,
+        165,
+        509,
+        590
+      ],
+      "solidPadding": [
+        152,
+        165,
+        118,
+        37
+      ],
+      "nonzeroBounds": [
+        19,
+        101,
+        627,
+        619
+      ],
+      "capROI": [
+        337,
+        165,
+        397,
+        213
+      ],
+      "capTop": 177,
+      "referenceSoleROI": [
+        316,
+        543,
+        424,
+        607
+      ],
+      "referenceSoleGroundY": 590,
+      "bodySpan": 413
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "94ddf147d44b79021deaea0d36a8b7677aa11991397cba185e78a4dda5a3edfb",
+      "ground": [
+        397,
+        584
+      ],
+      "groundROI": [
+        512,
+        538,
+        596,
+        596
+      ],
+      "groundMethod": "Projected pelvis X at the hip center behind the bent forward thigh; ground Y follows the nearer trailing screen-right boot toe/sole contact with heel raised. The forward boot projects higher in the rear three-quarter view; weapon and clothing bounds are excluded.",
+      "solidBounds": [
+        27,
+        215,
+        584,
+        584
+      ],
+      "solidPadding": [
+        27,
+        215,
+        43,
+        43
+      ],
+      "nonzeroBounds": [
+        1,
+        21,
+        597,
+        596
+      ],
+      "capROI": [
+        304,
+        204,
+        371,
+        251
+      ],
+      "capTop": 215,
+      "referenceSoleROI": [
+        512,
+        538,
+        596,
+        596
+      ],
+      "referenceSoleGroundY": 584,
+      "bodySpan": 369
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "7a2b34a2c83919a7574ca853948c04ce97b4376ce888f3358a2ebcc454f463fc",
+      "ground": [
+        413,
+        540
+      ],
+      "groundROI": [
+        480,
+        500,
+        560,
+        552
+      ],
+      "groundMethod": "Projected pelvis X at the rear hip center between the braced thighs; ground Y uses the lower screen-right planted boot sole, independently from the other boot and withdrawn rifle.",
+      "solidBounds": [
+        187,
+        155,
+        548,
+        540
+      ],
+      "solidPadding": [
+        187,
+        155,
+        79,
+        87
+      ],
+      "nonzeroBounds": [
+        49,
+        67,
+        623,
+        627
+      ],
+      "capROI": [
+        341,
+        161,
+        401,
+        207
+      ],
+      "capTop": 171,
+      "referenceSoleROI": [
+        480,
+        500,
+        560,
+        552
+      ],
+      "referenceSoleGroundY": 540,
+      "bodySpan": 369
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "cd89e7931be0d976c720c04d734502b395ce5c0e931143568bc4cddb4f1aa440",
+      "ground": [
+        388,
+        549
+      ],
+      "groundROI": [
+        280,
+        503,
+        390,
+        564
+      ],
+      "groundMethod": "Projected pelvis X below the trunk between the braced legs; ground Y uses the nearer screen-left boot sole, excluding the overhead weapon and the other boot.",
+      "solidBounds": [
+        155,
+        19,
+        514,
+        549
+      ],
+      "solidPadding": [
+        155,
+        19,
+        113,
+        78
+      ],
+      "nonzeroBounds": [
+        43,
+        16,
+        591,
+        603
+      ],
+      "capROI": [
+        351,
+        179,
+        361,
+        196
+      ],
+      "capTop": 179,
+      "referenceSoleROI": [
+        280,
+        503,
+        390,
+        564
+      ],
+      "referenceSoleGroundY": 549,
+      "bodySpan": 370
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 5,
+      "action": "melee",
+      "key": "union-gettysburg-v31-a-contact-nw",
+      "frames": [
+        "a-melee-5-0",
+        "a-melee-5-1",
+        "a-melee-5-2",
+        "a-melee-5-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.655502,
+          "y": 0.940989
+        },
+        {
+          "x": 0.633174,
+          "y": 0.931419
+        },
+        {
+          "x": 0.658692,
+          "y": 0.861244
+        },
+        {
+          "x": 0.61882,
+          "y": 0.875598
+        }
+      ],
+      "referenceHeight": 370,
+      "sourceHash": "8ef7a8b577e52bb884679c47c3c028a2a5b24b1753c8ebc5d26b72ec0428e85e",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeContactSequence": "gettysburg-v31-union-a-nw-contact",
+      "scope": "Exact source-reviewed union A NW local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

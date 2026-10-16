@@ -1,0 +1,267 @@
+{
+  "artPass": "gettysburg-v24",
+  "side": "confederate",
+  "identity": "a",
+  "direction": 4,
+  "role": "contact",
+  "source": "docs/art-pass/candidates/gettysburg-v24/confederate-a-contact-w-candidate.png",
+  "sourceSHA256": "48cc90a261f93c65568043da5b5981a05f4a24bc7479a8c76a76b4a4ace0d979",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v24-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "b220b0d065adc5ccb6c00dbc04d876c49b20a5847da05065bc841a81371be24b",
+  "referenceHeight": 405,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh confederate contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "86948681f15ded1ab1bf827f2f3e1d5f8800d2c09ad86e2ff644778dd7487ac3",
+      "ground": [
+        416,
+        585
+      ],
+      "groundROI": [
+        472,
+        550,
+        563,
+        593
+      ],
+      "groundMethod": "Projected pelvis centre X; nearer right-of-image rear boot sole lower edge for Y in the low west guard.",
+      "solidBounds": [
+        99,
+        165,
+        557,
+        585
+      ],
+      "solidPadding": [
+        99,
+        165,
+        70,
+        42
+      ],
+      "nonzeroBounds": [
+        96,
+        23,
+        627,
+        627
+      ],
+      "capROI": [
+        328,
+        158,
+        390,
+        194
+      ],
+      "capTop": 165,
+      "referenceSoleROI": [
+        472,
+        550,
+        563,
+        593
+      ],
+      "referenceSoleGroundY": 585,
+      "bodySpan": 420
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "24a94b09bdfcb55e3bf846832c01e5e53e6af9a091fd7b1473b89e214bd9dab3",
+      "ground": [
+        426,
+        584
+      ],
+      "groundROI": [
+        502,
+        548,
+        589,
+        593
+      ],
+      "groundMethod": "Projected pelvis centre X in the short west extension; nearer right-of-image rear boot sole lower edge for Y.",
+      "solidBounds": [
+        25,
+        179,
+        581,
+        584
+      ],
+      "solidPadding": [
+        25,
+        179,
+        46,
+        43
+      ],
+      "nonzeroBounds": [
+        1,
+        23,
+        607,
+        623
+      ],
+      "capROI": [
+        341,
+        173,
+        404,
+        207
+      ],
+      "capTop": 179,
+      "referenceSoleROI": [
+        502,
+        548,
+        589,
+        593
+      ],
+      "referenceSoleGroundY": 584,
+      "bodySpan": 405
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "bcd68f64e1e6c3c37c05e4cd6d6af4efa6ab7f93a402bd8a803fac6900efb322",
+      "ground": [
+        424,
+        535
+      ],
+      "groundROI": [
+        490,
+        502,
+        578,
+        545
+      ],
+      "groundMethod": "Projected pelvis centre X in low recovery; nearer right-of-image rear boot sole lower edge for Y.",
+      "solidBounds": [
+        111,
+        146,
+        570,
+        535
+      ],
+      "solidPadding": [
+        111,
+        146,
+        57,
+        92
+      ],
+      "nonzeroBounds": [
+        17,
+        1,
+        623,
+        595
+      ],
+      "capROI": [
+        333,
+        139,
+        395,
+        174
+      ],
+      "capTop": 146,
+      "referenceSoleROI": [
+        490,
+        502,
+        578,
+        545
+      ],
+      "referenceSoleGroundY": 535,
+      "bodySpan": 389
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "f0c76768fbc9e76f7a041de16a0681ddde37f6dd2939fe1fa3225d205ccce0fb",
+      "ground": [
+        395,
+        541
+      ],
+      "groundROI": [
+        466,
+        510,
+        551,
+        551
+      ],
+      "groundMethod": "Projected pelvis centre X in the high guard; nearer right-of-image rear boot sole lower edge for Y.",
+      "solidBounds": [
+        161,
+        53,
+        544,
+        541
+      ],
+      "solidPadding": [
+        161,
+        53,
+        83,
+        86
+      ],
+      "nonzeroBounds": [
+        1,
+        5,
+        607,
+        587
+      ],
+      "capROI": [
+        318,
+        128,
+        385,
+        167
+      ],
+      "capTop": 136,
+      "referenceSoleROI": [
+        466,
+        510,
+        551,
+        551
+      ],
+      "referenceSoleGroundY": 541,
+      "bodySpan": 405
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 4,
+      "action": "melee",
+      "key": "confederate-gettysburg-v24-a-contact-w",
+      "frames": [
+        "a-melee-4-0",
+        "a-melee-4-1",
+        "a-melee-4-2",
+        "a-melee-4-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.663477,
+          "y": 0.933014
+        },
+        {
+          "x": 0.679426,
+          "y": 0.931419
+        },
+        {
+          "x": 0.676236,
+          "y": 0.85327
+        },
+        {
+          "x": 0.629984,
+          "y": 0.862839
+        }
+      ],
+      "referenceHeight": 405,
+      "sourceHash": "48cc90a261f93c65568043da5b5981a05f4a24bc7479a8c76a76b4a4ace0d979",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeContactSequence": "gettysburg-v24-confederate-a-w-contact",
+      "scope": "Exact source-reviewed confederate A W local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

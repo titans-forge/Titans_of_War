@@ -1,0 +1,743 @@
+{
+  "source": "docs/art-pass/candidates/gettysburg-v3/union-e-rig-guided-candidate.png",
+  "sourceHash": "fe564b8374e48e3d1732e2d6e40d3809c950003c063762a123944759bcef8bca",
+  "nativeSize": {
+    "w": 2172,
+    "h": 724
+  },
+  "nativeMode": "RGBA",
+  "publicPNG": "public/images/units/gettysburg-v3/union-a-march-e.png",
+  "atlas": "public/images/units/gettysburg-v3/union-a-march-e.json",
+  "pixelTreatment": "none; full equal native cells; public PNG copied byte-for-byte",
+  "annotationMethod": "manual visual anatomy in native cell-local pixels, checked against alpha row spans; approximately +/-5 source pixels",
+  "leftRightLimbIdentity": "withheld because the side view occludes anatomical left/right; annotations describe visible forward/rearward leg chains",
+  "commonGroundReferenceY": 632,
+  "fixedCapToGroundReferenceHeight": 548,
+  "referenceCapTopY": 84,
+  "referenceHeightMethod": "rounded median cap-to-shared-ground height; one scalar for the entire clip",
+  "clip": {
+    "side": "union",
+    "identity": "a",
+    "direction": 0,
+    "action": "march",
+    "key": "union-gettysburg-v3-march-e",
+    "frames": [
+      "a-march-0-0",
+      "a-march-0-1",
+      "a-march-0-2",
+      "a-march-0-3"
+    ],
+    "sourceHash": "fe564b8374e48e3d1732e2d6e40d3809c950003c063762a123944759bcef8bca",
+    "referenceHeight": 548,
+    "pivots": [
+      {
+        "x": 0.500921,
+        "y": 0.872928
+      },
+      {
+        "x": 0.489871,
+        "y": 0.872928
+      },
+      {
+        "x": 0.535912,
+        "y": 0.872928
+      },
+      {
+        "x": 0.576427,
+        "y": 0.872928
+      }
+    ],
+    "approval": {
+      "reviewed": true,
+      "rejected": false
+    },
+    "scope": "opt-in E marching pilot only"
+  },
+  "cells": [
+    {
+      "frame": "a-march-0-0",
+      "sourceRectangle": {
+        "x": 0,
+        "y": 0,
+        "w": 543,
+        "h": 724
+      },
+      "anatomicalAnnotation": {
+        "phase": "rearward-foot-contact",
+        "torsoCenter": [
+          266,
+          310
+        ],
+        "pelvisCenter": [
+          278,
+          408
+        ],
+        "capTopY": 92,
+        "forwardLeg": {
+          "hip": [
+            291,
+            431
+          ],
+          "knee": [
+            330,
+            492
+          ],
+          "ankle": [
+            335,
+            543
+          ],
+          "bootCenter": [
+            363,
+            566
+          ]
+        },
+        "rearwardLeg": {
+          "hip": [
+            256,
+            431
+          ],
+          "knee": [
+            198,
+            516
+          ],
+          "ankle": [
+            144,
+            579
+          ],
+          "bootCenter": [
+            164,
+            614
+          ]
+        },
+        "supportObservation": "Rearward foot is lower; forward foot is visibly raised. Leg chains separate across the pelvis."
+      },
+      "root": {
+        "x": 272.0,
+        "y": 632,
+        "method": "mean of annotated torso and pelvis X; shared ground-reference Y"
+      },
+      "normalizedPivot": {
+        "x": 0.500921,
+        "y": 0.872928
+      },
+      "capToSharedGroundHeight": 540,
+      "solidBottomYForDiagnosticsOnly": 628,
+      "solidBottomOffsetFromSharedGround": 4,
+      "capToOwnSolidBottomForDiagnosticsOnly": 536,
+      "alpha": {
+        "thresholds": {
+          "1": {
+            "pixels": 82338,
+            "bounds": [
+              23,
+              19,
+              543,
+              700
+            ]
+          },
+          "8": {
+            "pixels": 75744,
+            "bounds": [
+              109,
+              91,
+              451,
+              629
+            ]
+          },
+          "32": {
+            "pixels": 74957,
+            "bounds": [
+              109,
+              91,
+              451,
+              629
+            ]
+          },
+          "64": {
+            "pixels": 74399,
+            "bounds": [
+              109,
+              92,
+              451,
+              628
+            ]
+          },
+          "128": {
+            "pixels": 73543,
+            "bounds": [
+              110,
+              92,
+              450,
+              628
+            ]
+          },
+          "200": {
+            "pixels": 72525,
+            "bounds": [
+              110,
+              93,
+              450,
+              628
+            ]
+          },
+          "240": {
+            "pixels": 71297,
+            "bounds": [
+              111,
+              93,
+              449,
+              627
+            ]
+          },
+          "255": {
+            "pixels": 332,
+            "bounds": [
+              111,
+              93,
+              445,
+              627
+            ]
+          }
+        },
+        "solidThreshold": 64,
+        "solidPadding": {
+          "left": 109,
+          "top": 92,
+          "right": 92,
+          "bottom": 96
+        },
+        "faintGhostAlphaRange": [
+          1,
+          7
+        ],
+        "faintGhostPixels": 6594,
+        "faintGhostFractionOfNonzero": 0.080085,
+        "edgeMaxAlpha": {
+          "left": 0,
+          "right": 1,
+          "top": 0,
+          "bottom": 0
+        }
+      }
+    },
+    {
+      "frame": "a-march-0-1",
+      "sourceRectangle": {
+        "x": 543,
+        "y": 0,
+        "w": 543,
+        "h": 724
+      },
+      "anatomicalAnnotation": {
+        "phase": "first-passing",
+        "torsoCenter": [
+          262,
+          300
+        ],
+        "pelvisCenter": [
+          270,
+          404
+        ],
+        "capTopY": 79,
+        "forwardLeg": {
+          "hip": [
+            273,
+            428
+          ],
+          "knee": [
+            294,
+            480
+          ],
+          "ankle": [
+            252,
+            568
+          ],
+          "bootCenter": [
+            267,
+            599
+          ]
+        },
+        "rearwardLeg": {
+          "hip": [
+            250,
+            427
+          ],
+          "knee": [
+            242,
+            496
+          ],
+          "ankle": [
+            278,
+            531
+          ],
+          "bootCenter": [
+            290,
+            545
+          ]
+        },
+        "supportObservation": "Legs pass under the pelvis; one boot remains lower while the other is raised behind the visible shin."
+      },
+      "root": {
+        "x": 266.0,
+        "y": 632,
+        "method": "mean of annotated torso and pelvis X; shared ground-reference Y"
+      },
+      "normalizedPivot": {
+        "x": 0.489871,
+        "y": 0.872928
+      },
+      "capToSharedGroundHeight": 553,
+      "solidBottomYForDiagnosticsOnly": 613,
+      "solidBottomOffsetFromSharedGround": 19,
+      "capToOwnSolidBottomForDiagnosticsOnly": 534,
+      "alpha": {
+        "thresholds": {
+          "1": {
+            "pixels": 71515,
+            "bounds": [
+              3,
+              39,
+              543,
+              644
+            ]
+          },
+          "8": {
+            "pixels": 65653,
+            "bounds": [
+              153,
+              78,
+              427,
+              614
+            ]
+          },
+          "32": {
+            "pixels": 64946,
+            "bounds": [
+              153,
+              78,
+              426,
+              614
+            ]
+          },
+          "64": {
+            "pixels": 64533,
+            "bounds": [
+              154,
+              79,
+              426,
+              613
+            ]
+          },
+          "128": {
+            "pixels": 63859,
+            "bounds": [
+              154,
+              79,
+              426,
+              613
+            ]
+          },
+          "200": {
+            "pixels": 62999,
+            "bounds": [
+              154,
+              80,
+              425,
+              613
+            ]
+          },
+          "240": {
+            "pixels": 62000,
+            "bounds": [
+              155,
+              80,
+              425,
+              612
+            ]
+          },
+          "255": {
+            "pixels": 307,
+            "bounds": [
+              156,
+              80,
+              422,
+              612
+            ]
+          }
+        },
+        "solidThreshold": 64,
+        "solidPadding": {
+          "left": 154,
+          "top": 79,
+          "right": 117,
+          "bottom": 111
+        },
+        "faintGhostAlphaRange": [
+          1,
+          7
+        ],
+        "faintGhostPixels": 5862,
+        "faintGhostFractionOfNonzero": 0.081969,
+        "edgeMaxAlpha": {
+          "left": 0,
+          "right": 1,
+          "top": 0,
+          "bottom": 0
+        }
+      }
+    },
+    {
+      "frame": "a-march-0-2",
+      "sourceRectangle": {
+        "x": 1086,
+        "y": 0,
+        "w": 543,
+        "h": 724
+      },
+      "anatomicalAnnotation": {
+        "phase": "forward-foot-contact",
+        "torsoCenter": [
+          288,
+          310
+        ],
+        "pelvisCenter": [
+          294,
+          418
+        ],
+        "capTopY": 90,
+        "forwardLeg": {
+          "hip": [
+            312,
+            446
+          ],
+          "knee": [
+            354,
+            511
+          ],
+          "ankle": [
+            365,
+            588
+          ],
+          "bootCenter": [
+            395,
+            613
+          ]
+        },
+        "rearwardLeg": {
+          "hip": [
+            267,
+            444
+          ],
+          "knee": [
+            208,
+            499
+          ],
+          "ankle": [
+            162,
+            555
+          ],
+          "bootCenter": [
+            190,
+            570
+          ]
+        },
+        "supportObservation": "Forward foot is lower; trailing foot is visibly raised. This reverses the contact-cell-0 support geometry."
+      },
+      "root": {
+        "x": 291.0,
+        "y": 632,
+        "method": "mean of annotated torso and pelvis X; shared ground-reference Y"
+      },
+      "normalizedPivot": {
+        "x": 0.535912,
+        "y": 0.872928
+      },
+      "capToSharedGroundHeight": 542,
+      "solidBottomYForDiagnosticsOnly": 632,
+      "solidBottomOffsetFromSharedGround": 0,
+      "capToOwnSolidBottomForDiagnosticsOnly": 542,
+      "alpha": {
+        "thresholds": {
+          "1": {
+            "pixels": 82370,
+            "bounds": [
+              1,
+              34,
+              509,
+              685
+            ]
+          },
+          "8": {
+            "pixels": 75027,
+            "bounds": [
+              137,
+              89,
+              451,
+              633
+            ]
+          },
+          "32": {
+            "pixels": 74187,
+            "bounds": [
+              138,
+              89,
+              450,
+              632
+            ]
+          },
+          "64": {
+            "pixels": 73678,
+            "bounds": [
+              138,
+              90,
+              450,
+              632
+            ]
+          },
+          "128": {
+            "pixels": 72896,
+            "bounds": [
+              138,
+              90,
+              450,
+              632
+            ]
+          },
+          "200": {
+            "pixels": 71991,
+            "bounds": [
+              139,
+              91,
+              449,
+              631
+            ]
+          },
+          "240": {
+            "pixels": 70888,
+            "bounds": [
+              139,
+              91,
+              449,
+              631
+            ]
+          },
+          "255": {
+            "pixels": 282,
+            "bounds": [
+              139,
+              91,
+              448,
+              631
+            ]
+          }
+        },
+        "solidThreshold": 64,
+        "solidPadding": {
+          "left": 138,
+          "top": 90,
+          "right": 93,
+          "bottom": 92
+        },
+        "faintGhostAlphaRange": [
+          1,
+          7
+        ],
+        "faintGhostPixels": 7343,
+        "faintGhostFractionOfNonzero": 0.089147,
+        "edgeMaxAlpha": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        }
+      }
+    },
+    {
+      "frame": "a-march-0-3",
+      "sourceRectangle": {
+        "x": 1629,
+        "y": 0,
+        "w": 543,
+        "h": 724
+      },
+      "anatomicalAnnotation": {
+        "phase": "second-passing",
+        "torsoCenter": [
+          312,
+          305
+        ],
+        "pelvisCenter": [
+          314,
+          419
+        ],
+        "capTopY": 76,
+        "forwardLeg": {
+          "hip": [
+            320,
+            439
+          ],
+          "knee": [
+            339,
+            498
+          ],
+          "ankle": [
+            295,
+            582
+          ],
+          "bootCenter": [
+            308,
+            615
+          ]
+        },
+        "rearwardLeg": {
+          "hip": [
+            302,
+            441
+          ],
+          "knee": [
+            276,
+            499
+          ],
+          "ankle": [
+            265,
+            524
+          ],
+          "bootCenter": [
+            269,
+            535
+          ]
+        },
+        "supportObservation": "Legs pass under the pelvis; the raised boot appears on the opposite side of the visible supporting shin from cell 1."
+      },
+      "root": {
+        "x": 313.0,
+        "y": 632,
+        "method": "mean of annotated torso and pelvis X; shared ground-reference Y"
+      },
+      "normalizedPivot": {
+        "x": 0.576427,
+        "y": 0.872928
+      },
+      "capToSharedGroundHeight": 556,
+      "solidBottomYForDiagnosticsOnly": 632,
+      "solidBottomOffsetFromSharedGround": 0,
+      "capToOwnSolidBottomForDiagnosticsOnly": 556,
+      "alpha": {
+        "thresholds": {
+          "1": {
+            "pixels": 73029,
+            "bounds": [
+              5,
+              23,
+              507,
+              650
+            ]
+          },
+          "8": {
+            "pixels": 67439,
+            "bounds": [
+              199,
+              76,
+              470,
+              633
+            ]
+          },
+          "32": {
+            "pixels": 66757,
+            "bounds": [
+              199,
+              76,
+              470,
+              632
+            ]
+          },
+          "64": {
+            "pixels": 66326,
+            "bounds": [
+              199,
+              76,
+              470,
+              632
+            ]
+          },
+          "128": {
+            "pixels": 65585,
+            "bounds": [
+              199,
+              76,
+              469,
+              632
+            ]
+          },
+          "200": {
+            "pixels": 64689,
+            "bounds": [
+              200,
+              77,
+              469,
+              631
+            ]
+          },
+          "240": {
+            "pixels": 63683,
+            "bounds": [
+              200,
+              77,
+              468,
+              631
+            ]
+          },
+          "255": {
+            "pixels": 260,
+            "bounds": [
+              211,
+              77,
+              461,
+              631
+            ]
+          }
+        },
+        "solidThreshold": 64,
+        "solidPadding": {
+          "left": 199,
+          "top": 76,
+          "right": 73,
+          "bottom": 92
+        },
+        "faintGhostAlphaRange": [
+          1,
+          7
+        ],
+        "faintGhostPixels": 5590,
+        "faintGhostFractionOfNonzero": 0.076545,
+        "edgeMaxAlpha": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        }
+      }
+    }
+  ],
+  "review": {
+    "anatomicalContactDifference": "accepted for narrow pilot: cells 0 and 2 show opposite lower feet, and passing cells 1 and 3 show differing occluded-leg geometry",
+    "solidPaddingVerified": true,
+    "nonzeroAlphaPaddingVerified": false,
+    "sharedGroundCapHeightRange": [
+      540,
+      556
+    ],
+    "sharedGroundCapHeightSpanFraction": 0.029197,
+    "productionApproved": false,
+    "familyApproved": false,
+    "risks": [
+      "Faint alpha 1..7 ghost pixels extend beyond the solid silhouette and reach some cell edges; they are preserved in the native source.",
+      "Cap-to-common-ground height varies by 16 native pixels (about 2.9 percent); a common scale preserves this source variation instead of normalizing each pose.",
+      "Solid sole bottoms vary by up to 19 pixels from the common ground reference; the passing pose can appear slightly elevated. No per-frame lowest-boot alignment is applied.",
+      "Manual torso/pelvis landmarks are approximate; they provide a stable body root, not independently verified skeletal reconstruction.",
+      "The source has visible edge color fringes and minor equipment/clothing drift between phases; native pixels are preserved.",
+      "Only Union identity a, E, four marching phases are covered; ready, firing, other directions, identity b and Confederate clips retain accepted fallback art.",
+      "Playback still requires game-scale browser inspection for apparent foot sliding, body wobble and silhouette transition quality."
+    ]
+  }
+}

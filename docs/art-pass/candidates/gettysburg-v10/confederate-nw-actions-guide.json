@@ -1,0 +1,1539 @@
+{
+  "blenderVersion": "5.2.1 LTS",
+  "engine": "Cycles CPU",
+  "samples": 16,
+  "seed": 1861,
+  "supersample": 1,
+  "cameraElevationDegrees": 35,
+  "cellWorldHeight": 3.0,
+  "objectCount": 201,
+  "poses": [
+    {
+      "frame": "idle-5-0",
+      "yawRadians": -5.497787143782138,
+      "poseSha256": "2e3dc4b6b2e587c4906c335cc83cb3b6c6e4f3c3170d0be39730b2fe8727c3e9",
+      "bodyBobWorldZ": 0,
+      "rootWorld": [
+        -1.40625,
+        0.7355166077613831,
+        0.0
+      ],
+      "weaponPose": "fixed two-hand diagonal carry: left hand at foreend, right hand at stock",
+      "weaponStartBodyLocal": [
+        0.1599999964237213,
+        0.10000000149011612,
+        0.6000000238418579
+      ],
+      "weaponEndBodyLocal": [
+        0.1599999964237213,
+        0.528099775314331,
+        1.9119186401367188
+      ],
+      "handAttachmentBodyLocal": [
+        [
+          0.1599999964237213,
+          0.3440168797969818,
+          1.3477935791015625
+        ],
+        [
+          0.1599999964237213,
+          0.2626779079437256,
+          1.0985291004180908
+        ]
+      ],
+      "bayonetTipBodyLocal": [
+        0.19499999284744263,
+        0.6816573143005371,
+        2.382498264312744
+      ],
+      "bayonetBladeLength": 0.45000014346504574
+    },
+    {
+      "frame": "fire-5-0",
+      "yawRadians": -5.497787143782138,
+      "poseSha256": "76769dc67d2978ed084942854aed2daded7fa79a1a29ab7b319f6486b02a3b94",
+      "bodyBobWorldZ": 0,
+      "rootWorld": [
+        1.59375,
+        0.7355166077613831,
+        0.0
+      ],
+      "weaponPose": "right-shoulder aim; stock butt touches upper right shoulder; no discharge baked into source",
+      "weaponStartBodyLocal": [
+        0.20999999344348907,
+        -0.07999999821186066,
+        1.4600000381469727
+      ],
+      "weaponEndBodyLocal": [
+        0.20999999344348907,
+        1.2999999523162842,
+        1.4600000381469727
+      ],
+      "handAttachmentBodyLocal": [
+        [
+          0.20999999344348907,
+          0.5134000182151794,
+          1.4200000762939453
+        ],
+        [
+          0.20999999344348907,
+          0.22360001504421234,
+          1.4200000762939453
+        ]
+      ],
+      "bayonetTipBodyLocal": [
+        0.2449999898672104,
+        1.7949999570846558,
+        1.4600000381469727
+      ],
+      "bayonetBladeLength": 0.4500000503328083
+    },
+    {
+      "frame": "reload-5-0",
+      "yawRadians": -5.497787143782138,
+      "poseSha256": "e578b9765a7a976cee5ad0686cc44efa43b1e58a3f778aad58a45e4cd9db8a36",
+      "bodyBobWorldZ": 0,
+      "rootWorld": [
+        -1.40625,
+        -4.494823932647705,
+        0.0
+      ],
+      "weaponPose": "upright loading: hand at barrel mouth",
+      "weaponStartBodyLocal": [
+        0.11999999731779099,
+        0.2800000011920929,
+        0.03999999910593033
+      ],
+      "weaponEndBodyLocal": [
+        0.11999999731779099,
+        0.2800000011920929,
+        1.4199999570846558
+      ],
+      "handAttachmentBodyLocal": [
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          0.9369999170303345
+        ],
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          1.4549999237060547
+        ]
+      ],
+      "bayonetTipBodyLocal": [
+        0.1550000011920929,
+        0.2800000011920929,
+        1.9149999618530273
+      ],
+      "bayonetBladeLength": 0.4500000503328083
+    },
+    {
+      "frame": "reload-5-1",
+      "yawRadians": -5.497787143782138,
+      "poseSha256": "ec6147f9d08e8b45818618a229e1f6974386367b1e6b178e0b97237fd8a7f651",
+      "bodyBobWorldZ": 0,
+      "rootWorld": [
+        1.59375,
+        -4.494823932647705,
+        0.0
+      ],
+      "weaponPose": "upright loading: raised hand drives a separate ramrod along bore",
+      "weaponStartBodyLocal": [
+        0.11999999731779099,
+        0.2800000011920929,
+        0.03999999910593033
+      ],
+      "weaponEndBodyLocal": [
+        0.11999999731779099,
+        0.2800000011920929,
+        1.4199999570846558
+      ],
+      "handAttachmentBodyLocal": [
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          0.9369999170303345
+        ],
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          1.8499999046325684
+        ]
+      ],
+      "bayonetTipBodyLocal": [
+        0.1550000011920929,
+        0.2800000011920929,
+        1.9149999618530273
+      ],
+      "bayonetBladeLength": 0.4500000503328083
+    }
+  ],
+  "sourceEntries": [
+    [
+      "idle",
+      5,
+      0
+    ],
+    [
+      "fire",
+      5,
+      0
+    ],
+    [
+      "reload",
+      5,
+      0
+    ],
+    [
+      "reload",
+      5,
+      1
+    ]
+  ],
+  "phaseOrder": [
+    "ready-upright-carry",
+    "shoulder-aim-fire",
+    "upright-load-at-barrel",
+    "upright-ramrod-insertion"
+  ],
+  "purpose": "Structural confederate NW actions reference only; not accepted final artwork, full-family evidence or validated historical drill",
+  "sourceScript": "scripts/render-civil-war-infantry-v2.py",
+  "sourceScriptSha256": "14ed68fd8ca42dd66641db73dac437d9219a9a715bd18c14e06be2e6558b1877",
+  "authorableGuideScript": "scripts/render-gettysburg-action-guide.py",
+  "authorableGuideScriptSha256": "7d0b3e93b958bbf9f03184b6f8e54987c578e540b3052d2efa73bada68d5257a",
+  "wrapperScript": "scripts/render-gettysburg-confederate-diagonal-guides.py",
+  "wrapperScriptSha256": "f44eb326fbcdecec043685048111ea6e0ff5ff801c19a2dedca6b98648e5735c",
+  "unchangedPriorWrapperHashes": {
+    "scripts/render-gettysburg-diagonal-guide.py": "89748380613a939dc2cbc3f58e6f433b9baef867e4f23d2acc25ea1378079955",
+    "scripts/render-gettysburg-diagonal-action-guide.py": "e7fd86507a9ddbfb09d3ebf65408cbcf03b5b431ceb19f29902fbc7c2a3727ba",
+    "scripts/render-gettysburg-board-facing-guides.py": "62f6492e74a9cc5c5da9f179885c34b3ca7a7efdb73b10b9f3a63894d045e0bd",
+    "scripts/render-gettysburg-flanking-guides.py": "47b1e7ccb09983fcb3cdeef7bd4eb1ff2379248fe8d8d4fdd565f656c0e850f4",
+    "scripts/render-gettysburg-west-guides.py": "5f5ed2afada1f220c3d14250bff94bac3815f56314f28366dd4366a9ec278165"
+  },
+  "directionReplacement": {
+    "count": 1,
+    "before": "[(action, 0, frame) for _, action, frame in pose_specs]",
+    "after": "[(action, 5, frame) for _, action, frame in pose_specs]",
+    "meaning": "Native 3D yaw -5.497787143782138 for NW; no flat sprite rotation"
+  },
+  "poseAdaptation": "None; imported v4 body, feet, arms, weapon, camera and pose geometry remains unchanged",
+  "materialSelection": "Existing v4 confederate palette selected through original side parameter",
+  "image": "docs/art-pass/candidates/gettysburg-v10/confederate-nw-actions-guide.png",
+  "imageSha256": "43f77e81c36424284b488ac93a17896ded34fa450ed33dde58ca5aa82281bcc0",
+  "imageBytes": 442884,
+  "side": "confederate",
+  "direction": "NW",
+  "directionIndex": 5,
+  "guideKind": "actions",
+  "size": {
+    "w": 1024,
+    "h": 1024
+  },
+  "cell": {
+    "w": 512,
+    "h": 512
+  },
+  "columns": 2,
+  "rows": 2,
+  "groundOriginPixels": {
+    "x": 272,
+    "y": 440
+  },
+  "worldGroundZ": 0,
+  "pixelsPerWorldUnit": 170.66666666666666,
+  "camera": {
+    "type": "ORTHO",
+    "elevationDegrees": 35,
+    "orthographicScale": 6.0,
+    "location": [
+      0.0,
+      -81.91520690917969,
+      57.357643127441406
+    ],
+    "rotationEuler": [
+      0.9599313139915466,
+      -0.0,
+      0.0
+    ]
+  },
+  "nativeAlpha": true,
+  "alphaEvidence": {
+    "channels": 4,
+    "pngColorType": 6,
+    "pngBitDepth": 8,
+    "transparentPixels": 967118,
+    "opaquePixels": 74625
+  },
+  "rasterPostprocessing": false,
+  "nativeRenderWritesOnly": true,
+  "threads": 8,
+  "minimumSolidPaddingPixels": 24,
+  "solidPaddingAlphaThreshold": 64,
+  "jobIndex": 3,
+  "boundedJobCount": 4,
+  "bayonetExtensionWorldUnits": 0.495,
+  "bayonetBladeLengthWorldUnits": 0.45,
+  "bayonetOffsetWorldUnits": 0.035,
+  "musketBodyLengthWorldUnits": 1.38,
+  "insertedRamrodLengthWorldUnits": 0.85,
+  "legacySoleObjectLabelMeaning": {
+    "left-far": "anatomical left",
+    "right-near": "anatomical right"
+  },
+  "legacyDepthQualifierCaveat": "Far/near object names are retained from E rig; diagonal views do not inherit their depth meaning. Anatomical left/right remain authoritative.",
+  "geometry": [
+    {
+      "phase": "ready-upright-carry",
+      "sourceEntry": [
+        "idle",
+        5,
+        0
+      ],
+      "sourceFrame": "idle-5-0",
+      "cell": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "alphaBoundsThreshold": 64,
+      "alphaBounds": [
+        214,
+        51,
+        326,
+        459
+      ],
+      "paddingPixels": {
+        "left": 214,
+        "top": 51,
+        "right": 186,
+        "bottom": 53
+      },
+      "foregroundPixelCount": 19586,
+      "rootProjected": {
+        "x": 272.0,
+        "y": 440.003
+      },
+      "rootWorld": [
+        -1.40625,
+        0.7355166077613831,
+        0.0
+      ],
+      "worldGroundZ": 0,
+      "yawRadians": -5.497787143782138,
+      "bodyBobWorldZ": 0,
+      "cap": {
+        "center": {
+          "x": 271.276,
+          "y": 186.267
+        },
+        "projectedBounds": [
+          250.711,
+          165.384,
+          291.841,
+          207.15
+        ],
+        "worldMinimumZ": 1.74699998,
+        "worldMaximumZ": 1.87700009
+      },
+      "soles": {
+        "left-far": {
+          "center": {
+            "x": 253.053,
+            "y": 442.68
+          },
+          "projectedBounds": [
+            228.515,
+            426.941,
+            277.591,
+            458.418
+          ],
+          "worldMinimumZ": 0.0,
+          "worldMaximumZ": 0.034
+        },
+        "right-near": {
+          "center": {
+            "x": 280.81,
+            "y": 426.759
+          },
+          "projectedBounds": [
+            256.271,
+            411.021,
+            305.348,
+            442.497
+          ],
+          "worldMinimumZ": 0.0,
+          "worldMaximumZ": 0.034
+        }
+      },
+      "plantedSupportObjectLabels": [
+        "left-far",
+        "right-near"
+      ],
+      "anatomicalSupportLegs": [
+        "left",
+        "right"
+      ],
+      "leftHand": {
+        "center": {
+          "x": 249.793,
+          "y": 216.692
+        },
+        "projectedBounds": [
+          239.98,
+          205.544,
+          259.606,
+          227.839
+        ],
+        "worldMinimumZ": 1.27879357,
+        "worldMaximumZ": 1.41679358
+      },
+      "rightHand": {
+        "center": {
+          "x": 259.609,
+          "y": 257.169
+        },
+        "projectedBounds": [
+          249.796,
+          246.022,
+          269.422,
+          268.317
+        ],
+        "worldMinimumZ": 1.02952909,
+        "worldMaximumZ": 1.16752911
+      },
+      "weaponPose": "fixed two-hand diagonal carry: left hand at foreend, right hand at stock",
+      "weaponStartBodyLocal": [
+        0.1599999964237213,
+        0.10000000149011612,
+        0.6000000238418579
+      ],
+      "weaponEndBodyLocal": [
+        0.1599999964237213,
+        0.528099775314331,
+        1.9119186401367188
+      ],
+      "handAttachmentBodyLocal": [
+        [
+          0.1599999964237213,
+          0.3440168797969818,
+          1.3477935791015625
+        ],
+        [
+          0.1599999964237213,
+          0.2626779079437256,
+          1.0985291004180908
+        ]
+      ],
+      "musketBodyLengthWorldUnits": 1.3799999697571212,
+      "stockButtWorld": [
+        -1.363823652267456,
+        0.919364333152771,
+        0.6000000238418579
+      ],
+      "stockButtProjected": {
+        "x": 279.241,
+        "y": 338.125
+      },
+      "barrelMouthWorld": [
+        -1.6665359735488892,
+        1.222076416015625,
+        1.9119186401367188
+      ],
+      "barrelMouthProjected": {
+        "x": 227.578,
+        "y": 125.084
+      },
+      "barrelMouthAnchorMeaning": "Actual authored barrel-end point; distinct from bayonet tip; visibility is not guaranteed",
+      "bayonetTipWorld": [
+        -1.7503688335418701,
+        1.3554067611694336,
+        2.382498264312744
+      ],
+      "bayonetTipProjected": {
+        "x": 213.27,
+        "y": 46.244
+      },
+      "weaponAssembly": {
+        "musket stock": {
+          "center": {
+            "x": 263.742,
+            "y": 274.213
+          },
+          "projectedBounds": [
+            242.251,
+            207.684,
+            285.233,
+            340.741
+          ],
+          "worldMinimumZ": 0.5888322,
+          "worldMaximumZ": 1.39831913
+        },
+        "musket barrel": {
+          "center": {
+            "x": 244.368,
+            "y": 194.322
+          },
+          "projectedBounds": [
+            224.748,
+            123.848,
+            263.989,
+            264.796
+          ],
+          "worldMinimumZ": 1.05389798,
+          "worldMaximumZ": 1.91719234
+        },
+        "ramrod": {
+          "center": {
+            "x": 245.732,
+            "y": 189.57
+          },
+          "projectedBounds": [
+            229.234,
+            125.222,
+            262.229,
+            253.919
+          ],
+          "worldMinimumZ": 1.10790634,
+          "worldMaximumZ": 1.89877987
+        },
+        "bayonet socket": {
+          "center": {
+            "x": 227.203,
+            "y": 123.54
+          },
+          "projectedBounds": [
+            221.732,
+            116.32,
+            232.675,
+            130.76
+          ],
+          "worldMinimumZ": 1.8803966,
+          "worldMaximumZ": 1.96245408
+        },
+        "bayonet shank": {
+          "center": {
+            "x": 228.379,
+            "y": 118.469
+          },
+          "projectedBounds": [
+            225.171,
+            114.694,
+            231.588,
+            122.245
+          ],
+          "worldMinimumZ": 1.92686749,
+          "worldMaximumZ": 1.96351624
+        },
+        "socket bayonet blade": {
+          "center": {
+            "x": 221.694,
+            "y": 80.979
+          },
+          "projectedBounds": [
+            213.27,
+            46.244,
+            231.893,
+            116.489
+          ],
+          "worldMinimumZ": 1.95218313,
+          "worldMaximumZ": 2.38249826
+        }
+      },
+      "bodyCapToSoleSpanPixels": 293.034,
+      "bodyCapToSoleFractionOfCell": 0.5723
+    },
+    {
+      "phase": "shoulder-aim-fire",
+      "sourceEntry": [
+        "fire",
+        5,
+        0
+      ],
+      "sourceFrame": "fire-5-0",
+      "cell": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "alphaBoundsThreshold": 64,
+      "alphaBounds": [
+        89,
+        97,
+        326,
+        459
+      ],
+      "paddingPixels": {
+        "left": 89,
+        "top": 97,
+        "right": 186,
+        "bottom": 53
+      },
+      "foregroundPixelCount": 20783,
+      "rootProjected": {
+        "x": 272.0,
+        "y": 440.003
+      },
+      "rootWorld": [
+        1.59375,
+        0.7355166077613831,
+        0.0
+      ],
+      "worldGroundZ": 0,
+      "yawRadians": -5.497787143782138,
+      "bodyBobWorldZ": 0,
+      "cap": {
+        "center": {
+          "x": 271.276,
+          "y": 186.267
+        },
+        "projectedBounds": [
+          250.711,
+          165.384,
+          291.841,
+          207.15
+        ],
+        "worldMinimumZ": 1.74699998,
+        "worldMaximumZ": 1.87700009
+      },
+      "soles": {
+        "left-far": {
+          "center": {
+            "x": 253.053,
+            "y": 442.68
+          },
+          "projectedBounds": [
+            228.515,
+            426.941,
+            277.591,
+            458.418
+          ],
+          "worldMinimumZ": 0.0,
+          "worldMaximumZ": 0.034
+        },
+        "right-near": {
+          "center": {
+            "x": 280.81,
+            "y": 426.759
+          },
+          "projectedBounds": [
+            256.271,
+            411.021,
+            305.348,
+            442.497
+          ],
+          "worldMinimumZ": 0.0,
+          "worldMaximumZ": 0.034
+        }
+      },
+      "plantedSupportObjectLabels": [
+        "left-far",
+        "right-near"
+      ],
+      "anatomicalSupportLegs": [
+        "left",
+        "right"
+      ],
+      "leftHand": {
+        "center": {
+          "x": 235.386,
+          "y": 191.411
+        },
+        "projectedBounds": [
+          225.572,
+          180.264,
+          245.199,
+          202.559
+        ],
+        "worldMinimumZ": 1.35100007,
+        "worldMaximumZ": 1.48900008
+      },
+      "rightHand": {
+        "center": {
+          "x": 270.359,
+          "y": 211.471
+        },
+        "projectedBounds": [
+          260.545,
+          200.323,
+          280.172,
+          222.619
+        ],
+        "worldMinimumZ": 1.35100007,
+        "worldMaximumZ": 1.48900008
+      },
+      "weaponPose": "right-shoulder aim; stock butt touches upper right shoulder; no discharge baked into source",
+      "weaponStartBodyLocal": [
+        0.20999999344348907,
+        -0.07999999821186066,
+        1.4600000381469727
+      ],
+      "weaponEndBodyLocal": [
+        0.20999999344348907,
+        1.2999999523162842,
+        1.4600000381469727
+      ],
+      "handAttachmentBodyLocal": [
+        [
+          0.20999999344348907,
+          0.5134000182151794,
+          1.4200000762939453
+        ],
+        [
+          0.20999999344348907,
+          0.22360001504421234,
+          1.4200000762939453
+        ]
+      ],
+      "musketBodyLengthWorldUnits": 1.3799999967519787,
+      "stockButtWorld": [
+        1.7988109588623047,
+        0.827440619468689,
+        1.4600001573562622
+      ],
+      "stockButtProjected": {
+        "x": 306.997,
+        "y": 226.894
+      },
+      "barrelMouthWorld": [
+        0.8230032920837402,
+        1.8032475709915161,
+        1.4600000381469727
+      ],
+      "barrelMouthProjected": {
+        "x": 140.459,
+        "y": 131.372
+      },
+      "barrelMouthAnchorMeaning": "Actual authored barrel-end point; distinct from bayonet tip; visibility is not guaranteed",
+      "bayonetTipWorld": [
+        0.49773404002189636,
+        2.1780142784118652,
+        1.4600000381469727
+      ],
+      "bayonetTipProjected": {
+        "x": 84.947,
+        "y": 94.686
+      },
+      "weaponAssembly": {
+        "musket stock": {
+          "center": {
+            "x": 257.036,
+            "y": 198.237
+          },
+          "projectedBounds": [
+            202.73,
+            163.976,
+            311.342,
+            232.498
+          ],
+          "worldMinimumZ": 1.42400002,
+          "worldMaximumZ": 1.49600005
+        },
+        "musket barrel": {
+          "center": {
+            "x": 194.584,
+            "y": 162.417
+          },
+          "projectedBounds": [
+            138.408,
+            128.725,
+            250.76,
+            196.108
+          ],
+          "worldMinimumZ": 1.44299996,
+          "worldMaximumZ": 1.47700012
+        },
+        "ramrod": {
+          "center": {
+            "x": 193.076,
+            "y": 160.603
+          },
+          "projectedBounds": [
+            142.39,
+            131.012,
+            243.761,
+            190.193
+          ],
+          "worldMinimumZ": 1.43900001,
+          "worldMaximumZ": 1.45100009
+        },
+        "bayonet socket": {
+          "center": {
+            "x": 139.252,
+            "y": 130.68
+          },
+          "projectedBounds": [
+            132.012,
+            124.365,
+            146.493,
+            136.994
+          ],
+          "worldMinimumZ": 1.43500006,
+          "worldMaximumZ": 1.48500001
+        },
+        "bayonet shank": {
+          "center": {
+            "x": 138.347,
+            "y": 127.738
+          },
+          "projectedBounds": [
+            135.796,
+            124.417,
+            140.899,
+            131.058
+          ],
+          "worldMinimumZ": 1.45000005,
+          "worldMaximumZ": 1.47000003
+        },
+        "socket bayonet blade": {
+          "center": {
+            "x": 112.1,
+            "y": 110.26
+          },
+          "projectedBounds": [
+            84.947,
+            94.686,
+            140.664,
+            127.328
+          ],
+          "worldMinimumZ": 1.4518913,
+          "worldMaximumZ": 1.4690001
+        }
+      },
+      "bodyCapToSoleSpanPixels": 293.034,
+      "bodyCapToSoleFractionOfCell": 0.5723,
+      "stockButtToRightShoulderCenterWorldUnits": 0.08602328406307053,
+      "projectedFiringAxisDeltaPixels": {
+        "x": -166.538,
+        "y": -95.522
+      },
+      "projectedFiringAxisDegrees": -150.1625040795289,
+      "diagonalFiringProjectionContract": {
+        "directionIndex": 5,
+        "yawRadians": -5.497787143782138,
+        "expectedAxisDeltaPixels": {
+          "x": -166.53778871308594,
+          "y": -95.52215136783525
+        },
+        "idealAxisTolerancePixels": 0.009138020932674407,
+        "toleranceDerivation": {
+          "float32Epsilon": 1.1920928955078125e-07,
+          "cameraDistanceWorldUnits": 100.00000122070311,
+          "float32ErrorMultiplier": 4,
+          "endpointRoundingErrorPixels": 0.001,
+          "formula": "4*2^-23*max(1,cameraDistance,weaponLength)*pixelsPerWorldUnit + 0.001"
+        },
+        "meaning": "NE requires x>0,y<0; NW requires x<0,y<0; each measured component must also match the ideal native axis within this independently derived tolerance"
+      }
+    },
+    {
+      "phase": "upright-load-at-barrel",
+      "sourceEntry": [
+        "reload",
+        5,
+        0
+      ],
+      "sourceFrame": "reload-5-0",
+      "cell": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "alphaBoundsThreshold": 64,
+      "alphaBounds": [
+        225,
+        148,
+        326,
+        459
+      ],
+      "paddingPixels": {
+        "left": 225,
+        "top": 148,
+        "right": 186,
+        "bottom": 53
+      },
+      "foregroundPixelCount": 18823,
+      "rootProjected": {
+        "x": 272.0,
+        "y": 440.003
+      },
+      "rootWorld": [
+        -1.40625,
+        -4.494823932647705,
+        0.0
+      ],
+      "worldGroundZ": 0,
+      "yawRadians": -5.497787143782138,
+      "bodyBobWorldZ": 0,
+      "cap": {
+        "center": {
+          "x": 271.276,
+          "y": 186.267
+        },
+        "projectedBounds": [
+          250.711,
+          165.384,
+          291.841,
+          207.15
+        ],
+        "worldMinimumZ": 1.74699998,
+        "worldMaximumZ": 1.87700009
+      },
+      "soles": {
+        "left-far": {
+          "center": {
+            "x": 253.053,
+            "y": 442.68
+          },
+          "projectedBounds": [
+            228.515,
+            426.941,
+            277.591,
+            458.418
+          ],
+          "worldMinimumZ": 0.0,
+          "worldMaximumZ": 0.034
+        },
+        "right-near": {
+          "center": {
+            "x": 280.81,
+            "y": 426.759
+          },
+          "projectedBounds": [
+            256.271,
+            411.021,
+            305.348,
+            442.497
+          ],
+          "worldMinimumZ": 0.0,
+          "worldMaximumZ": 0.034
+        }
+      },
+      "plantedSupportObjectLabels": [
+        "left-far",
+        "right-near"
+      ],
+      "anatomicalSupportLegs": [
+        "left",
+        "right"
+      ],
+      "leftHand": {
+        "center": {
+          "x": 252.691,
+          "y": 281.321
+        },
+        "projectedBounds": [
+          242.878,
+          270.173,
+          262.505,
+          292.469
+        ],
+        "worldMinimumZ": 0.86799991,
+        "worldMaximumZ": 1.00599992
+      },
+      "rightHand": {
+        "center": {
+          "x": 252.691,
+          "y": 208.904
+        },
+        "projectedBounds": [
+          242.878,
+          197.756,
+          262.505,
+          220.051
+        ],
+        "worldMinimumZ": 1.38599992,
+        "worldMaximumZ": 1.52399993
+      },
+      "weaponPose": "upright loading: hand at barrel mouth",
+      "weaponStartBodyLocal": [
+        0.11999999731779099,
+        0.2800000011920929,
+        0.03999999910593033
+      ],
+      "weaponEndBodyLocal": [
+        0.11999999731779099,
+        0.2800000011920929,
+        1.4199999570846558
+      ],
+      "handAttachmentBodyLocal": [
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          0.9369999170303345
+        ],
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          1.4549999237060547
+        ]
+      ],
+      "musketBodyLengthWorldUnits": 1.3799999967519787,
+      "stockButtWorld": [
+        -1.519387125968933,
+        -4.211981296539307,
+        0.04000002145767212
+      ],
+      "stockButtProjected": {
+        "x": 252.691,
+        "y": 406.724
+      },
+      "barrelMouthWorld": [
+        -1.519387125968933,
+        -4.211981296539307,
+        1.4199999570846558
+      ],
+      "barrelMouthProjected": {
+        "x": 252.691,
+        "y": 213.797
+      },
+      "barrelMouthAnchorMeaning": "Actual authored barrel-end point; distinct from bayonet tip; visibility is not guaranteed",
+      "bayonetTipWorld": [
+        -1.494638442993164,
+        -4.187232494354248,
+        1.9149999618530273
+      ],
+      "bayonetTipProjected": {
+        "x": 256.915,
+        "y": 142.172
+      },
+      "weaponAssembly": {
+        "musket stock": {
+          "center": {
+            "x": 252.691,
+            "y": 348.845
+          },
+          "projectedBounds": [
+            246.547,
+            287.443,
+            258.835,
+            410.248
+          ],
+          "worldMinimumZ": 0.04000002,
+          "worldMaximumZ": 0.86800003
+        },
+        "musket barrel": {
+          "center": {
+            "x": 252.691,
+            "y": 276.498
+          },
+          "projectedBounds": [
+            249.79,
+            212.133,
+            255.593,
+            340.863
+          ],
+          "worldMinimumZ": 0.523,
+          "worldMaximumZ": 1.41999996
+        },
+        "ramrod": {
+          "center": {
+            "x": 255.346,
+            "y": 272.249
+          },
+          "projectedBounds": [
+            254.322,
+            213.784,
+            256.37,
+            330.714
+          ],
+          "worldMinimumZ": 0.57700002,
+          "worldMaximumZ": 1.40499997
+        },
+        "bayonet socket": {
+          "center": {
+            "x": 252.691,
+            "y": 212.399
+          },
+          "projectedBounds": [
+            248.425,
+            205.058,
+            256.958,
+            219.739
+          ],
+          "worldMinimumZ": 1.39499998,
+          "worldMaximumZ": 1.46499991
+        },
+        "bayonet shank": {
+          "center": {
+            "x": 254.803,
+            "y": 207.692
+          },
+          "projectedBounds": [
+            251.347,
+            203.978,
+            258.26,
+            211.407
+          ],
+          "worldMinimumZ": 1.43631744,
+          "worldMaximumZ": 1.4736824
+        },
+        "socket bayonet blade": {
+          "center": {
+            "x": 256.915,
+            "y": 173.628
+          },
+          "projectedBounds": [
+            255.262,
+            142.172,
+            258.724,
+            206.121
+          ],
+          "worldMinimumZ": 1.46499991,
+          "worldMaximumZ": 1.91499996
+        }
+      },
+      "bodyCapToSoleSpanPixels": 293.034,
+      "bodyCapToSoleFractionOfCell": 0.5723
+    },
+    {
+      "phase": "upright-ramrod-insertion",
+      "sourceEntry": [
+        "reload",
+        5,
+        1
+      ],
+      "sourceFrame": "reload-5-1",
+      "cell": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "alphaBoundsThreshold": 64,
+      "alphaBounds": [
+        225,
+        136,
+        326,
+        457
+      ],
+      "paddingPixels": {
+        "left": 225,
+        "top": 136,
+        "right": 186,
+        "bottom": 55
+      },
+      "foregroundPixelCount": 20203,
+      "rootProjected": {
+        "x": 272.0,
+        "y": 440.003
+      },
+      "rootWorld": [
+        1.59375,
+        -4.494823932647705,
+        0.0
+      ],
+      "worldGroundZ": 0,
+      "yawRadians": -5.497787143782138,
+      "bodyBobWorldZ": 0,
+      "cap": {
+        "center": {
+          "x": 271.276,
+          "y": 186.267
+        },
+        "projectedBounds": [
+          250.711,
+          165.384,
+          291.841,
+          207.15
+        ],
+        "worldMinimumZ": 1.74699998,
+        "worldMaximumZ": 1.87700009
+      },
+      "soles": {
+        "left-far": {
+          "center": {
+            "x": 250.036,
+            "y": 440.949
+          },
+          "projectedBounds": [
+            225.498,
+            425.211,
+            274.574,
+            456.687
+          ],
+          "worldMinimumZ": 0.0,
+          "worldMaximumZ": 0.034
+        },
+        "right-near": {
+          "center": {
+            "x": 283.827,
+            "y": 428.49
+          },
+          "projectedBounds": [
+            259.288,
+            412.751,
+            308.365,
+            444.228
+          ],
+          "worldMinimumZ": 0.0,
+          "worldMaximumZ": 0.034
+        }
+      },
+      "plantedSupportObjectLabels": [
+        "left-far",
+        "right-near"
+      ],
+      "anatomicalSupportLegs": [
+        "left",
+        "right"
+      ],
+      "leftHand": {
+        "center": {
+          "x": 252.691,
+          "y": 281.321
+        },
+        "projectedBounds": [
+          242.878,
+          270.173,
+          262.505,
+          292.469
+        ],
+        "worldMinimumZ": 0.86799991,
+        "worldMaximumZ": 1.00599992
+      },
+      "rightHand": {
+        "center": {
+          "x": 252.691,
+          "y": 153.682
+        },
+        "projectedBounds": [
+          242.878,
+          142.534,
+          262.505,
+          164.83
+        ],
+        "worldMinimumZ": 1.7809999,
+        "worldMaximumZ": 1.91899991
+      },
+      "weaponPose": "upright loading: raised hand drives a separate ramrod along bore",
+      "weaponStartBodyLocal": [
+        0.11999999731779099,
+        0.2800000011920929,
+        0.03999999910593033
+      ],
+      "weaponEndBodyLocal": [
+        0.11999999731779099,
+        0.2800000011920929,
+        1.4199999570846558
+      ],
+      "handAttachmentBodyLocal": [
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          0.9369999170303345
+        ],
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          1.8499999046325684
+        ]
+      ],
+      "musketBodyLengthWorldUnits": 1.3799999967519787,
+      "stockButtWorld": [
+        1.480612874031067,
+        -4.211981296539307,
+        0.04000002145767212
+      ],
+      "stockButtProjected": {
+        "x": 252.691,
+        "y": 406.724
+      },
+      "barrelMouthWorld": [
+        1.480612874031067,
+        -4.211981296539307,
+        1.4199999570846558
+      ],
+      "barrelMouthProjected": {
+        "x": 252.691,
+        "y": 213.797
+      },
+      "barrelMouthAnchorMeaning": "Actual authored barrel-end point; distinct from bayonet tip; visibility is not guaranteed",
+      "bayonetTipWorld": [
+        1.505361557006836,
+        -4.187232494354248,
+        1.9149999618530273
+      ],
+      "bayonetTipProjected": {
+        "x": 256.915,
+        "y": 142.172
+      },
+      "weaponAssembly": {
+        "musket stock": {
+          "center": {
+            "x": 252.691,
+            "y": 348.845
+          },
+          "projectedBounds": [
+            246.547,
+            287.443,
+            258.835,
+            410.248
+          ],
+          "worldMinimumZ": 0.04000002,
+          "worldMaximumZ": 0.86800003
+        },
+        "musket barrel": {
+          "center": {
+            "x": 252.691,
+            "y": 276.498
+          },
+          "projectedBounds": [
+            249.79,
+            212.133,
+            255.593,
+            340.863
+          ],
+          "worldMinimumZ": 0.523,
+          "worldMaximumZ": 1.41999996
+        },
+        "ramrod": {
+          "center": {
+            "x": 255.346,
+            "y": 272.249
+          },
+          "projectedBounds": [
+            254.322,
+            213.784,
+            256.37,
+            330.714
+          ],
+          "worldMinimumZ": 0.57700002,
+          "worldMaximumZ": 1.40499997
+        },
+        "bayonet socket": {
+          "center": {
+            "x": 252.691,
+            "y": 212.399
+          },
+          "projectedBounds": [
+            248.425,
+            205.058,
+            256.958,
+            219.739
+          ],
+          "worldMinimumZ": 1.39499998,
+          "worldMaximumZ": 1.46499991
+        },
+        "bayonet shank": {
+          "center": {
+            "x": 254.803,
+            "y": 207.692
+          },
+          "projectedBounds": [
+            251.347,
+            203.978,
+            258.26,
+            211.407
+          ],
+          "worldMinimumZ": 1.43631744,
+          "worldMaximumZ": 1.4736824
+        },
+        "socket bayonet blade": {
+          "center": {
+            "x": 256.915,
+            "y": 173.628
+          },
+          "projectedBounds": [
+            255.262,
+            142.172,
+            258.724,
+            206.121
+          ],
+          "worldMinimumZ": 1.46499991,
+          "worldMaximumZ": 1.91499996
+        }
+      },
+      "bodyCapToSoleSpanPixels": 291.303,
+      "bodyCapToSoleFractionOfCell": 0.569,
+      "insertedRamrod": {
+        "center": {
+          "x": 252.691,
+          "y": 196.322
+        },
+        "projectedBounds": [
+          251.497,
+          136.22,
+          253.886,
+          256.423
+        ],
+        "worldMinimumZ": 1.11999989,
+        "worldMaximumZ": 1.97000003
+      },
+      "insertedRamrodBodyLocalEndpoints": [
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          1.119999885559082
+        ],
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          1.9700000286102295
+        ]
+      ],
+      "rightHandAboveBoreWorldUnits": 0.4299999475479126,
+      "bayonetToInsertedRodCenterOffsetWorldUnits": 0.035
+    }
+  ],
+  "noBakedDischarge": true,
+  "fixedMarchAttachments": false,
+  "loadRamSupportAndWeaponContinuity": true,
+  "capCenterDriftPixels": {
+    "x": 0.0,
+    "y": 0.0
+  },
+  "poseCaveats": [
+    "Primitive rig is structural reference; exact anatomy and period drill remain unvalidated",
+    "Firing head is upright without guaranteed cheek-to-stock or sight alignment",
+    "Diagonal geometry can occlude grip, bore, rod or kit; projection checks do not certify visibility",
+    "Thin socket bayonet and loading rod may be difficult to separate visually",
+    "Original rig is a reduced kit reference, not a verified complete campaign equipment inventory"
+  ],
+  "review": {
+    "status": "Read-only inspection of all four native cells completed; structurally usable reference with recorded rig and visibility caveats",
+    "productionApproved": false,
+    "familyApproved": false,
+    "anatomicalValidation": false,
+    "historicalValidation": false,
+    "inspectionScope": "Native whole-sheet image inspection plus byte-level PNG alpha padding and source/receipt hash checks; no certification of production artwork, historical drill, or anatomy"
+  },
+  "measurementHelperScript": "scripts/render-gettysburg-board-facing-guides.py",
+  "measurementHelperScriptSha256": "62f6492e74a9cc5c5da9f179885c34b3ca7a7efdb73b10b9f3a63894d045e0bd",
+  "measurementAdaptation": "Checked v7 measure compiled into v10 globals; its one cardinal predicate changes to native NE/NW signs and ideal-axis tolerance derived before measurement; root expectation uses the native origin for each job.",
+  "nativeOriginAdaptation": {
+    "originalOriginPixels": {
+      "x": 192,
+      "y": 440
+    },
+    "selectedOriginPixels": {
+      "x": 272,
+      "y": 440
+    },
+    "adapted": true,
+    "reason": "Native 3D ground registration gives the unchanged body and complete weapon at least 24px solid cell padding",
+    "method": "Set imported authorable renderer ORIGIN before native scene construction and scoped measurement ORIGIN to the same value; every sheet pose shares this ground reference, world root z remains zero; no pixel translation"
+  },
+  "checkedOriginalScriptHashes": {
+    "scripts/render-civil-war-infantry-v2.py": "14ed68fd8ca42dd66641db73dac437d9219a9a715bd18c14e06be2e6558b1877",
+    "scripts/render-gettysburg-action-guide.py": "7d0b3e93b958bbf9f03184b6f8e54987c578e540b3052d2efa73bada68d5257a",
+    "scripts/render-gettysburg-diagonal-guide.py": "89748380613a939dc2cbc3f58e6f433b9baef867e4f23d2acc25ea1378079955",
+    "scripts/render-gettysburg-diagonal-action-guide.py": "e7fd86507a9ddbfb09d3ebf65408cbcf03b5b431ceb19f29902fbc7c2a3727ba",
+    "scripts/render-gettysburg-board-facing-guides.py": "62f6492e74a9cc5c5da9f179885c34b3ca7a7efdb73b10b9f3a63894d045e0bd",
+    "scripts/render-gettysburg-flanking-guides.py": "47b1e7ccb09983fcb3cdeef7bd4eb1ff2379248fe8d8d4fdd565f656c0e850f4",
+    "scripts/render-gettysburg-west-guides.py": "5f5ed2afada1f220c3d14250bff94bac3815f56314f28366dd4366a9ec278165"
+  },
+  "unchangedPriorGuideHashes": {
+    "docs/art-pass/candidates/gettysburg-v9/union-w-actions-guide.json": "b484a360a9cff05290bd1d44dd9de8ba5a437533da70abaa5d856206aa5b1f2b",
+    "docs/art-pass/candidates/gettysburg-v9/union-w-march-guide.json": "c613359aad0690eae58eab58189f1312cd9e9ead973e067f3dc58ef28590882a",
+    "docs/art-pass/candidates/gettysburg-v9/union-w-march-guide.png": "d786af57106a3e959c7130743701d4d394c7d31a345d0beac7c50b53457cf68a",
+    "docs/art-pass/candidates/gettysburg-v9/union-w-actions-guide.png": "0eb99c7684c4033a4377b175105eb7f17ab1ec6ae3447e02b53376d350c45c6a",
+    "docs/art-pass/candidates/gettysburg-v7/confederate-n-march-guide.json": "d85d2e1ce9becac3cec878a1abbc43347015d44da92a0c8a1f2fe62bdfedf772",
+    "docs/art-pass/candidates/gettysburg-v7/confederate-n-march-guide.png": "bc02642f32379810c85c7bbda94c4e5975379221c509945c02b14f7e970f4f4e",
+    "docs/art-pass/candidates/gettysburg-v7/confederate-n-actions-guide.png": "0724d5892c8350731274ff4317045a0aa0b4197e756af99752bb53bbba34a1b0",
+    "docs/art-pass/candidates/gettysburg-v7/union-s-march-guide.json": "3a882896b1f72cbe1c7e7f8898cd79c75a63369db5bc3a4bc57a4e925adad2b4",
+    "docs/art-pass/candidates/gettysburg-v7/union-s-actions-guide.json": "2314d676b294d9fb50afd648a761bc2af9b77764a1ec1314c331b5d271b2acc0",
+    "docs/art-pass/candidates/gettysburg-v7/union-s-actions-guide.png": "ced9e1dcaefcde88423ebcebe86653a2741f9b38bd54cf28472a9071da8036e5",
+    "docs/art-pass/candidates/gettysburg-v7/union-s-march-guide.png": "b2ca51175eef4e691340d697dff4c4f295ce4bdfb99b8089b6cb88d014318aca",
+    "docs/art-pass/candidates/gettysburg-v7/confederate-n-actions-guide.json": "d5d0da0b901b29b9100206e9a46056892ec1a1bc0060cdf9631f299d5c61c1a0",
+    "docs/art-pass/candidates/gettysburg-v6/union-se-actions-guide.png": "79a2b769e561cd92bab6f3d31b02f9af54a763d960dfe5eebb914d088cbd05c2",
+    "docs/art-pass/candidates/gettysburg-v6/union-se-actions-guide.json": "798b944ac0f7ff481f7cbc7744ae14217b63de185948bb35b29792dccdd48844",
+    "docs/art-pass/candidates/gettysburg-v8/union-sw-actions-guide.json": "936c460ecc2164af43018ad5f4f1f344492c5f59399d7086993c8f08c54c69c2",
+    "docs/art-pass/candidates/gettysburg-v8/union-sw-march-guide.json": "07e916996572a0fbc4185466f836bce0ba024dd77deb43f0a1e5f517d48876af",
+    "docs/art-pass/candidates/gettysburg-v8/union-sw-march-guide.png": "f17912a37c72fa5861d611ffc4a806524d48c22b15e467dac1842006939435d3",
+    "docs/art-pass/candidates/gettysburg-v8/union-sw-actions-guide.png": "0c47af4ced9527651375b5c28d761c28017fbf2f44598b2bfc8ff591fbdf8b0b",
+    "docs/art-pass/candidates/gettysburg-v3/union-e-rig-guide.json": "a1bbc42efeb4756b9d0c4c3ae71167a223f3056007873d8f497db99d93485b7e",
+    "docs/art-pass/candidates/gettysburg-v3/union-e-rig-guide.png": "b54219ff63d9905f22c389cce26ee8f0edea82fda60c5143a6e04360a8ac97da",
+    "docs/art-pass/candidates/gettysburg-v4/union-e-actions-guide.json": "4218e3804a624e67a3b01f51cf1b4589af9f82f1c84d8a682fabc26206f3828a",
+    "docs/art-pass/candidates/gettysburg-v4/union-e-actions-guide.png": "dd223d2bc68af11e7401956f171e0d8500e0d42098f6e0245eb6247a96b5bfcf",
+    "docs/art-pass/candidates/gettysburg-v4/union-e-march-guide.png": "e30cb9a83aae692748a83d349340e472c8da4dc6b801599f073754b7ff64e0c9",
+    "docs/art-pass/candidates/gettysburg-v4/union-e-march-guide.json": "25dea7660f4278d0722bd223a97e09d3355170f962f15ac48e48770f4ebea30f",
+    "docs/art-pass/candidates/gettysburg-v5/union-se-march-guide.png": "bde01708b912e4ac793fe268d93e7cbbacb53490a25f0acca877dc0e46c53f3c",
+    "docs/art-pass/candidates/gettysburg-v5/union-se-march-guide.json": "16b062e08c0906afeea8b9e8228a7308bc6d2a051893beaae95abec6cd289bb0"
+  },
+  "nativeDirection": "Actual 3D NW direction 5; no flat image rotation or mirroring",
+  "jobExecution": "Four sequential jobs in one Blender process; scene reset between jobs; fixed 8 CPU threads",
+  "allNonzeroAlphaPaddingEvidence": {
+    "method": "Read original native PNG IDAT with stdlib PNG filters; no pixel writes",
+    "threshold": 1,
+    "minimumPaddingPixels": 48,
+    "cells": [
+      {
+        "bounds": [
+          213,
+          48,
+          327,
+          459
+        ],
+        "padding": [
+          213,
+          48,
+          185,
+          53
+        ]
+      },
+      {
+        "bounds": [
+          85,
+          95,
+          327,
+          459
+        ],
+        "padding": [
+          85,
+          95,
+          185,
+          53
+        ]
+      },
+      {
+        "bounds": [
+          224,
+          143,
+          327,
+          459
+        ],
+        "padding": [
+          224,
+          143,
+          185,
+          53
+        ]
+      },
+      {
+        "bounds": [
+          224,
+          136,
+          327,
+          458
+        ],
+        "padding": [
+          224,
+          136,
+          185,
+          54
+        ]
+      }
+    ]
+  },
+  "helperContractSelfTest": {
+    "status": "passed",
+    "command": "python3 scripts/render-gettysburg-confederate-diagonal-guides.py --self-test",
+    "checkedOriginalScriptCount": 7,
+    "bearings": [
+      "NE",
+      "NW"
+    ],
+    "rejectionBoundaries": [
+      "unsupported bearing",
+      "opposite x sign",
+      "opposite y sign",
+      "x outside independent ideal tolerance",
+      "y outside independent ideal tolerance",
+      "wrong native yaw"
+    ]
+  }
+}

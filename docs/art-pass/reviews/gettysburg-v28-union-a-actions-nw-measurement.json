@@ -1,0 +1,345 @@
+{
+  "artPass": "gettysburg-v28",
+  "side": "union",
+  "identity": "a",
+  "direction": 5,
+  "role": "actions",
+  "source": "docs/art-pass/candidates/gettysburg-v28/union-a-actions-nw-candidate.png",
+  "sourceSHA256": "68e08f3b24bae78461e77cacc56dc495bf992f24ce1b5fc51596d9bef2082157",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v28-independent-union-northern-source-review.json",
+  "sourceReviewSHA256": "d02158dc16c249ed9fd6d0c6361c7a6b178d8d4c9e361d8f14aa986b1ce05686",
+  "referenceHeight": 259,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh own-sheet ready/load/ram median shared across independently accepted stationary phases; fire span corroborates only, no phase normalization",
+  "referenceCellIndices": [
+    0,
+    2,
+    3
+  ],
+  "frameOrder": [
+    "a-ready-5-0",
+    "a-fire-5-0",
+    "a-reload-5-0",
+    "a-reload-5-1"
+  ],
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "f4d07e49bb7d37b6cb9b944f972bc38d10082f50c4beed9b6a5e6c7989a47e0c",
+      "ground": [
+        334,
+        504
+      ],
+      "groundROI": [
+        284,
+        474,
+        338,
+        512
+      ],
+      "groundMethod": "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+      "solidBounds": [
+        235,
+        144,
+        374,
+        504
+      ],
+      "solidPadding": [
+        235,
+        144,
+        253,
+        123
+      ],
+      "nonzeroBounds": [
+        212,
+        142,
+        428,
+        580
+      ],
+      "capROI": [
+        291,
+        237,
+        335,
+        266
+      ],
+      "capTop": 242,
+      "referenceSoleROI": [
+        285,
+        488,
+        336,
+        511
+      ],
+      "referenceSoleGroundY": 504,
+      "bodySpan": 262
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "c208f353ffd76e9478c7fa19a5f431f86c42b295bf6e5b0139a6146763f041b5",
+      "ground": [
+        366,
+        504
+      ],
+      "groundROI": [
+        313,
+        474,
+        368,
+        513
+      ],
+      "groundMethod": "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+      "solidBounds": [
+        206,
+        214,
+        410,
+        504
+      ],
+      "solidPadding": [
+        206,
+        214,
+        217,
+        123
+      ],
+      "nonzeroBounds": [
+        41,
+        53,
+        432,
+        619
+      ],
+      "capROI": [
+        328,
+        239,
+        368,
+        269
+      ],
+      "capTop": 247,
+      "referenceSoleROI": [
+        314,
+        488,
+        365,
+        512
+      ],
+      "referenceSoleGroundY": 504,
+      "bodySpan": 257,
+      "muzzle": [
+        235,
+        233
+      ],
+      "muzzleROI": [
+        229,
+        227,
+        241,
+        238
+      ],
+      "muzzleMethod": "Independent native near-left steel rim of the muzzle at the end of the thick barrel segment in fire cell1, below the narrower projecting bayonet blade. The small rear three-quarter opening is partly obscured; approximately +/-3 native pixels of interpretation uncertainty, not the farther blade tip."
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "94e18b6cbc313547ac01cdc469498d3d9fc30f30c3c955218b20cf7a8015c50a",
+      "ground": [
+        336,
+        497
+      ],
+      "groundROI": [
+        286,
+        472,
+        342,
+        505
+      ],
+      "groundMethod": "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+      "solidBounds": [
+        266,
+        202,
+        378,
+        497
+      ],
+      "solidPadding": [
+        266,
+        202,
+        249,
+        130
+      ],
+      "nonzeroBounds": [
+        97,
+        38,
+        599,
+        575
+      ],
+      "capROI": [
+        296,
+        233,
+        304,
+        259
+      ],
+      "capTop": 242,
+      "referenceSoleROI": [
+        287,
+        483,
+        340,
+        504
+      ],
+      "referenceSoleGroundY": 497,
+      "bodySpan": 255
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "8fa9276b9f258b472b7902247e12e5bd201316a1c8e32e4a86da20f8a55bf96b",
+      "ground": [
+        354,
+        500
+      ],
+      "groundROI": [
+        303,
+        471,
+        361,
+        507
+      ],
+      "groundMethod": "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+      "solidBounds": [
+        290,
+        170,
+        401,
+        500
+      ],
+      "solidPadding": [
+        290,
+        170,
+        226,
+        127
+      ],
+      "nonzeroBounds": [
+        258,
+        21,
+        517,
+        513
+      ],
+      "capROI": [
+        321,
+        231,
+        333,
+        262
+      ],
+      "capTop": 241,
+      "referenceSoleROI": [
+        304,
+        486,
+        360,
+        506
+      ],
+      "referenceSoleGroundY": 500,
+      "bodySpan": 259
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 5,
+      "action": "ready",
+      "key": "union-gettysburg-v28-a-actions-nw",
+      "frames": [
+        "a-ready-5-0"
+      ],
+      "pivots": [
+        {
+          "x": 0.532695,
+          "y": 0.803828
+        }
+      ],
+      "referenceHeight": 259,
+      "sourceHash": "68e08f3b24bae78461e77cacc56dc495bf992f24ce1b5fc51596d9bef2082157",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeUnionNorthernSequence": "gettysburg-v28-union-a-nw",
+      "scope": "Exact source-reviewed Union A NW opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    },
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 5,
+      "action": "fire",
+      "key": "union-gettysburg-v28-a-actions-nw",
+      "frames": [
+        "a-fire-5-0"
+      ],
+      "pivots": [
+        {
+          "x": 0.583732,
+          "y": 0.803828
+        }
+      ],
+      "referenceHeight": 259,
+      "sourceHash": "68e08f3b24bae78461e77cacc56dc495bf992f24ce1b5fc51596d9bef2082157",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeUnionNorthernSequence": "gettysburg-v28-union-a-nw",
+      "scope": "Exact source-reviewed Union A NW opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false,
+      "muzzles": [
+        {
+          "x": 0.374801,
+          "y": 0.371611
+        }
+      ]
+    },
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 5,
+      "action": "reload",
+      "key": "union-gettysburg-v28-a-actions-nw",
+      "frames": [
+        "a-reload-5-0",
+        "a-reload-5-1"
+      ],
+      "pivots": [
+        {
+          "x": 0.535885,
+          "y": 0.792663
+        },
+        {
+          "x": 0.564593,
+          "y": 0.797448
+        }
+      ],
+      "referenceHeight": 259,
+      "sourceHash": "68e08f3b24bae78461e77cacc56dc495bf992f24ce1b5fc51596d9bef2082157",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeUnionNorthernSequence": "gettysburg-v28-union-a-nw",
+      "scope": "Exact source-reviewed Union A NW opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

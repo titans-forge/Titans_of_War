@@ -1,0 +1,26 @@
+.scenario-theater { margin-bottom:1.25rem; min-width:0; }
+.scenario-identity h2 { font-size:clamp(1.15rem,2vw,1.45rem); color:var(--text-primary); line-height:1.25; margin:0 0 .4rem; }
+.scenario-command { color:var(--accent-gold); font-family:var(--font-mono); font-size:.76rem; line-height:1.5; margin:0; }
+.scenario-view-controls { display:flex; flex-wrap:wrap; gap:.45rem; margin:.85rem 0; }
+.scenario-view-controls button { display:inline-flex; align-items:center; justify-content:center; gap:.4rem; min-height:40px; padding:.5rem .8rem; border:1px solid var(--border-color); border-radius:4px; background:rgba(0,0,0,.2); color:var(--text-secondary); font-family:inherit; font-size:.8rem; cursor:pointer; }
+.scenario-view-controls button[aria-pressed="true"] { border-color:var(--accent-gold); background:rgba(212,175,55,.12); color:#f1d58b; }
+.scenario-view-controls button:focus-visible,.scene-source summary:focus-visible { outline:2px solid #f1d58b; outline-offset:3px; }
+.scenario-figure { margin:0; overflow:hidden; border:1px solid var(--border-color); border-radius:6px; background:#0b0e12; }
+.scenario-visual { aspect-ratio:1672/941; width:100%; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+.scenario-visual img { display:block; width:100%; height:100%; }
+.scenario-figure figcaption { padding:.75rem .9rem; border-top:1px solid rgba(212,175,55,.18); }
+.scene-medium { display:block; font-family:var(--font-mono); font-size:.68rem; line-height:1.5; color:#ddbd73; letter-spacing:.07em; text-transform:uppercase; }
+.scenario-figure figcaption p { margin:.35rem 0 0; font-size:.8rem; line-height:1.5; color:#c6c9cf; }
+.scene-source { margin-top:.55rem; font-size:.75rem; color:var(--text-secondary); }
+.scene-source summary { padding:.25rem 0; cursor:pointer; width:fit-content; }
+.scene-source a { display:block; color:#e2c47c; margin-top:.45rem; text-underline-offset:3px; overflow-wrap:anywhere; }
+.scenario-briefing-text,.scenario-briefing p { font-size:.9rem; line-height:1.55; color:var(--text-secondary); }
+.scene-unavailable { padding:1rem; font-size:.85rem; line-height:1.5; }
+@media(max-width:700px) { .scenario-view-controls button { min-height:44px; } .scenario-figure figcaption { padding:.65rem .75rem; } .scenario-identity h2 { font-size:1.2rem; } }
+.campaign-report-card .battle-assessment { font-size:.95rem; line-height:1.55; }
+.campaign-report-card .battle-assessment-heading { gap:1rem; align-items:baseline; flex-wrap:wrap; }
+.campaign-report-card .battle-assessment-heading span { font-size:1.6rem; color:#e2c47c; }
+.original-command-report { margin-top:1rem; }
+.original-command-report > summary { padding:.7rem 0; color:#e2c47c; font-size:.85rem; cursor:pointer; }
+/* Historical map frames retain their own dimensions; scene plates keep their native ratio. */
+.campaign-flow .scenario-figure .scenario-visual { height:auto !important; min-height:0 !important; }

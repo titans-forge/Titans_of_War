@@ -886,7 +886,7 @@ assert.match(
 
 const snapshot = createCampaignSnapshot(
   { ...freshCampaign, currentTurn: 2, scenarioId: 'charleston_harbor_escape' },
-  { id: 'charleston_harbor_escape', title: 'Charleston Harbor Escape', choices: [] },
+  { id: 'charleston_harbor_escape', title: 'Charleston Harbor Escape', choices: [{ id: 'fixture-choice', text: 'Continue the harbor escape.' }] },
   { selectedModel: 'llama3.2', aiPortalEngaged: true }
 );
 const restored = restoreCampaignFromSnapshot(snapshot, [
@@ -902,6 +902,8 @@ const migratedV1 = restoreCampaignFromSnapshot(
     version: 1,
     state: {
       ...snapshot.state,
+      rulesVersion: 1,
+      battleRulesVersion: 1,
       metrics: {
         militaryStrength: snapshot.state.metrics.militaryStrength,
         munitions: snapshot.state.metrics.munitions,

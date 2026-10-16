@@ -1,0 +1,206 @@
+{
+  "artPass": "gettysburg-v20",
+  "source": "docs/art-pass/candidates/gettysburg-v20/confederate-a-contact-e-candidate.png",
+  "sourceSHA256": "0621f135a0428937e9010bf949ac1f063f7c0f305c1e284f9cacafa6c0075682",
+  "referenceHeight": 396,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One contact median shared across all eight natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "657811a779364e5559bfa3775c5639cbcbcde32b3dedafa646747b98c76471a9",
+      "ground": [
+        260,
+        548
+      ],
+      "groundROI": [
+        157,
+        533,
+        242,
+        552
+      ],
+      "groundMethod": "X=260 is the manually interpreted projected pelvis center beneath the coat/belt and between the two leg origins. Y is the exclusive alpha>=64 lower edge of the nearer rear/left planted boot sole in the bounded sole-only ROI; the forward boot, pack and musket are excluded.",
+      "solidBounds": [
+        157,
+        146,
+        582,
+        548
+      ],
+      "solidPadding": [
+        157,
+        146,
+        45,
+        79
+      ],
+      "nonzeroBounds": [
+        49,
+        35,
+        627,
+        627
+      ],
+      "capTop": 146,
+      "referenceSoleGroundY": 548,
+      "bodySpan": 402
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "ab0860079dbd87b73af921b701cf6f783ae4a7db84411ee0e33ab9af762cffda",
+      "ground": [
+        184,
+        543
+      ],
+      "groundROI": [
+        52,
+        529,
+        124,
+        548
+      ],
+      "groundMethod": "X=184 is the manually interpreted projected pelvis center of the wide level-bayonet lunge, excluding the displaced pack and forward arms. Y is the exclusive alpha>=64 lower edge of the nearer extended rear/left boot sole; the higher forward boot and horizontal weapon are excluded.",
+      "solidBounds": [
+        55,
+        174,
+        554,
+        543
+      ],
+      "solidPadding": [
+        55,
+        174,
+        73,
+        84
+      ],
+      "nonzeroBounds": [
+        1,
+        37,
+        575,
+        627
+      ],
+      "capTop": 174,
+      "referenceSoleGroundY": 543,
+      "bodySpan": 369
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "dfd364dfe079e77f8cec9680d04c0e45bce6586bf9ed24cac7fbd7a58a487139",
+      "ground": [
+        280,
+        534
+      ],
+      "groundROI": [
+        166,
+        519,
+        246,
+        540
+      ],
+      "groundMethod": "X=280 is the manually interpreted projected pelvis center between the trouser leg origins in the raised recovery pose. Y is the exclusive alpha>=64 lower edge of the nearer rear/left boot sole; the higher forward boot and raised bayonet are excluded.",
+      "solidBounds": [
+        168,
+        66,
+        573,
+        534
+      ],
+      "solidPadding": [
+        168,
+        66,
+        54,
+        93
+      ],
+      "nonzeroBounds": [
+        63,
+        1,
+        623,
+        593
+      ],
+      "capTop": 133,
+      "referenceSoleGroundY": 534,
+      "bodySpan": 401
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "2fa8a85f09eebd3ef4e67177d326e6407b7bddf741e2c228a0f90d9d744dae40",
+      "ground": [
+        253,
+        533
+      ],
+      "groundROI": [
+        146,
+        519,
+        224,
+        539
+      ],
+      "groundMethod": "X=253 is the manually interpreted projected pelvis center below the coat in the close guard. Y is the exclusive alpha>=64 lower edge of the nearer rear/left boot sole; the farther front boot and diagonally raised weapon are excluded.",
+      "solidBounds": [
+        147,
+        66,
+        525,
+        533
+      ],
+      "solidPadding": [
+        147,
+        66,
+        102,
+        94
+      ],
+      "nonzeroBounds": [
+        5,
+        0,
+        567,
+        627
+      ],
+      "capTop": 142,
+      "referenceSoleGroundY": 533,
+      "bodySpan": 391
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "clips": [
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 0,
+      "action": "melee",
+      "key": "confederate-gettysburg-v20-a-contact-e",
+      "frames": [
+        "a-melee-0-0",
+        "a-melee-0-1",
+        "a-melee-0-2",
+        "a-melee-0-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.414673,
+          "y": 0.874003
+        },
+        {
+          "x": 0.293461,
+          "y": 0.866029
+        },
+        {
+          "x": 0.446571,
+          "y": 0.851675
+        },
+        {
+          "x": 0.403509,
+          "y": 0.85008
+        }
+      ],
+      "referenceHeight": 396,
+      "sourceHash": "0621f135a0428937e9010bf949ac1f063f7c0f305c1e284f9cacafa6c0075682",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeContactSequence": "gettysburg-v20-confederate-a-e-contact",
+      "scope": "Exact source-reviewed Confederate A E local opt-in only; incomplete family"
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

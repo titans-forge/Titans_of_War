@@ -1,0 +1,206 @@
+{
+  "artPass": "gettysburg-v21",
+  "source": "docs/art-pass/candidates/gettysburg-v21/union-a-contact-w-candidate.png",
+  "sourceSHA256": "3c5bc6bace3aa4ea9abb3b4275a416aaa4e3067fe1c63e0a48d0ec9e059151be",
+  "referenceHeight": 365,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One contact median shared across all eight natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "46da0ca37bf4d39d26e7cae3798478471f2a504791b6ad07ec4162ca2fe9cc65",
+      "ground": [
+        404,
+        552
+      ],
+      "groundROI": [
+        436,
+        537,
+        517,
+        558
+      ],
+      "groundMethod": "X=404 is the manually interpreted projected pelvis center beneath the belt/coat and between the two trouser-leg origins, excluding pack, canteen and rifle. Y is the exclusive alpha>=64 lower edge of the nearer rear/right planted boot sole inside the bounded sole-only ROI; the farther front boot is higher in the oblique projection.",
+      "solidBounds": [
+        130,
+        163,
+        512,
+        552
+      ],
+      "solidPadding": [
+        130,
+        163,
+        115,
+        75
+      ],
+      "nonzeroBounds": [
+        119,
+        23,
+        627,
+        625
+      ],
+      "capTop": 166,
+      "referenceSoleGroundY": 552,
+      "bodySpan": 386
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "128b146c8232487d0f800d5986f0760a138b44159943e1c8fd6f3d19de9a62a2",
+      "ground": [
+        391,
+        543
+      ],
+      "groundROI": [
+        465,
+        529,
+        537,
+        550
+      ],
+      "groundMethod": "X=391 is the manually interpreted projected pelvis center of the wide leftward level lunge, excluding the backward pack and forward arms. Y is the exclusive alpha>=64 lower edge of the nearer rear/right boot sole; the forward boot and horizontal musket are excluded.",
+      "solidBounds": [
+        36,
+        195,
+        532,
+        543
+      ],
+      "solidPadding": [
+        36,
+        195,
+        95,
+        84
+      ],
+      "nonzeroBounds": [
+        33,
+        51,
+        597,
+        624
+      ],
+      "capTop": 195,
+      "referenceSoleGroundY": 543,
+      "bodySpan": 348
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "68cefd3db774203ba77d8d47ba372a9144f6fe6eae475f60a13cd7869284acee",
+      "ground": [
+        417,
+        512
+      ],
+      "groundROI": [
+        474,
+        496,
+        550,
+        521
+      ],
+      "groundMethod": "X=417 is the manually interpreted projected pelvis center below the coat in the low recovery, between the two leg origins. Y is the exclusive alpha>=64 lower edge of the nearer rear/right boot sole. The low projecting bayonet does not define the ground or the reference height.",
+      "solidBounds": [
+        108,
+        155,
+        544,
+        512
+      ],
+      "solidPadding": [
+        108,
+        155,
+        83,
+        115
+      ],
+      "nonzeroBounds": [
+        19,
+        15,
+        621,
+        611
+      ],
+      "capTop": 155,
+      "referenceSoleGroundY": 512,
+      "bodySpan": 357
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "f49fa82a347d360157af1ed48c7ad920a741bc51b776cd3dbfbbada54672e8fd",
+      "ground": [
+        389,
+        515
+      ],
+      "groundROI": [
+        446,
+        498,
+        526,
+        523
+      ],
+      "groundMethod": "X=389 is the manually interpreted projected pelvis center in the high block. Y is the exclusive alpha>=64 lower edge of the nearer rear/right supporting boot sole; the farther boot and elevated bayonet are excluded.",
+      "solidBounds": [
+        184,
+        67,
+        520,
+        515
+      ],
+      "solidPadding": [
+        184,
+        67,
+        107,
+        112
+      ],
+      "nonzeroBounds": [
+        1,
+        17,
+        611,
+        561
+      ],
+      "capTop": 142,
+      "referenceSoleGroundY": 515,
+      "bodySpan": 373
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 4,
+      "action": "melee",
+      "key": "union-gettysburg-v21-a-contact-w",
+      "frames": [
+        "a-melee-4-0",
+        "a-melee-4-1",
+        "a-melee-4-2",
+        "a-melee-4-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.644338,
+          "y": 0.880383
+        },
+        {
+          "x": 0.623604,
+          "y": 0.866029
+        },
+        {
+          "x": 0.665072,
+          "y": 0.816587
+        },
+        {
+          "x": 0.620415,
+          "y": 0.821372
+        }
+      ],
+      "referenceHeight": 365,
+      "sourceHash": "3c5bc6bace3aa4ea9abb3b4275a416aaa4e3067fe1c63e0a48d0ec9e059151be",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeContactSequence": "gettysburg-v21-union-a-w-contact",
+      "scope": "Exact source-reviewed Union A W local opt-in only; incomplete family"
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

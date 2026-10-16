@@ -1,0 +1,407 @@
+{
+  "artPass": "gettysburg-v24",
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false,
+  "familyApproved": false,
+  "completeFamilyApproved": false,
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v24-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "b220b0d065adc5ccb6c00dbc04d876c49b20a5847da05065bc841a81371be24b",
+  "referenceHeights": {
+    "union": 404,
+    "confederate": 405
+  },
+  "registrationMethod": "Select native integer X from projected pelvis/torso anatomy, independently of the ground ROI X. Select Y as the exclusive maximum alpha>=64 row in the specified boot, knee, palm/knuckle or prone trouser support ROI. Do not use the whole silhouette or weapon bounds. Semantic placement is a model-assisted visual judgment, not a physical skeleton certification.",
+  "referenceMethod": "Each army has four manually selected crown-only and support-sole-only ROIs. Recompute alpha>=64 capTop and exclusive soleGroundY; bodySpan=soleGroundY-capTop. Use the half-up rounded median contact span, shared unchanged with that army's casualty sheet. Projected crouch/fall height changes are intentional.",
+  "nativePixelUnits": true,
+  "sourceOnly": true,
+  "sources": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 0,
+      "role": "contact",
+      "action": "melee",
+      "source": "docs/art-pass/candidates/gettysburg-v24/union-a-contact-e-candidate.png",
+      "sha256": "15a3fc28397d686b02195410b76e77f374989cc65d69bff31a6e3e26e64ac48f",
+      "cell": 627,
+      "referenceHeight": 404,
+      "roots": [
+        [
+          286,
+          586
+        ],
+        [
+          245,
+          584
+        ],
+        [
+          300,
+          550
+        ],
+        [
+          270,
+          548
+        ]
+      ],
+      "groundROIs": [
+        [
+          168,
+          548,
+          247,
+          595
+        ],
+        [
+          72,
+          549,
+          157,
+          594
+        ],
+        [
+          171,
+          513,
+          255,
+          560
+        ],
+        [
+          157,
+          510,
+          236,
+          559
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis centre X; nearer left-of-image rear boot sole lower edge for Y, separate from the forward rifle.",
+        "Projected pelvis centre X in the short east extension; nearer left-of-image rear boot sole lower edge for Y.",
+        "Projected pelvis centre X in recovery; nearer left-of-image rear boot sole lower edge for Y.",
+        "Projected pelvis centre X in the high guard; nearer left-of-image rear boot sole lower edge for Y."
+      ],
+      "capROIs": [
+        [
+          281,
+          173,
+          345,
+          206
+        ],
+        [
+          227,
+          188,
+          296,
+          221
+        ],
+        [
+          289,
+          140,
+          354,
+          173
+        ],
+        [
+          248,
+          138,
+          316,
+          174
+        ]
+      ],
+      "capTop": [
+        179,
+        194,
+        146,
+        145
+      ],
+      "referenceSoleROIs": [
+        [
+          168,
+          548,
+          247,
+          595
+        ],
+        [
+          72,
+          549,
+          157,
+          594
+        ],
+        [
+          171,
+          513,
+          255,
+          560
+        ],
+        [
+          157,
+          510,
+          236,
+          559
+        ]
+      ],
+      "referenceSoleGroundY": [
+        586,
+        584,
+        550,
+        548
+      ],
+      "bodySpans": [
+        407,
+        390,
+        404,
+        403
+      ]
+    },
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 0,
+      "role": "casualty",
+      "action": "fall",
+      "source": "docs/art-pass/candidates/gettysburg-v24/union-a-casualty-e-candidate.png",
+      "sha256": "67fdb26da635143b4d5a5b94cc95cdda4598545af417c6a4bac20d418d60d9a2",
+      "cell": 627,
+      "referenceHeight": 404,
+      "roots": [
+        [
+          317,
+          604
+        ],
+        [
+          248,
+          603
+        ],
+        [
+          293,
+          471
+        ],
+        [
+          289,
+          473
+        ]
+      ],
+      "groundROIs": [
+        [
+          231,
+          577,
+          313,
+          613
+        ],
+        [
+          205,
+          573,
+          265,
+          611
+        ],
+        [
+          430,
+          452,
+          486,
+          478
+        ],
+        [
+          181,
+          448,
+          201,
+          483
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis centre X; nearer left-of-image boot sole lower edge for Y in the backward stumble.",
+        "Projected pelvis centre X; lowered left-of-image blue knee cloth underside for Y, excluding the trailing boot and forward sole.",
+        "Projected pelvis/torso X; bracing right-of-image palm underside for Y in the collapse, isolated below the rifle.",
+        "Projected pelvis centre X; grounded near-knee blue trouser underside for Y at prone rest. The ROI lies left of the rifle stock and excludes the boots."
+      ]
+    },
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 4,
+      "role": "contact",
+      "action": "melee",
+      "source": "docs/art-pass/candidates/gettysburg-v24/confederate-a-contact-w-candidate.png",
+      "sha256": "48cc90a261f93c65568043da5b5981a05f4a24bc7479a8c76a76b4a4ace0d979",
+      "cell": 627,
+      "referenceHeight": 405,
+      "roots": [
+        [
+          416,
+          585
+        ],
+        [
+          426,
+          584
+        ],
+        [
+          424,
+          535
+        ],
+        [
+          395,
+          541
+        ]
+      ],
+      "groundROIs": [
+        [
+          472,
+          550,
+          563,
+          593
+        ],
+        [
+          502,
+          548,
+          589,
+          593
+        ],
+        [
+          490,
+          502,
+          578,
+          545
+        ],
+        [
+          466,
+          510,
+          551,
+          551
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis centre X; nearer right-of-image rear boot sole lower edge for Y in the low west guard.",
+        "Projected pelvis centre X in the short west extension; nearer right-of-image rear boot sole lower edge for Y.",
+        "Projected pelvis centre X in low recovery; nearer right-of-image rear boot sole lower edge for Y.",
+        "Projected pelvis centre X in the high guard; nearer right-of-image rear boot sole lower edge for Y."
+      ],
+      "capROIs": [
+        [
+          328,
+          158,
+          390,
+          194
+        ],
+        [
+          341,
+          173,
+          404,
+          207
+        ],
+        [
+          333,
+          139,
+          395,
+          174
+        ],
+        [
+          318,
+          128,
+          385,
+          167
+        ]
+      ],
+      "capTop": [
+        165,
+        179,
+        146,
+        136
+      ],
+      "referenceSoleROIs": [
+        [
+          472,
+          550,
+          563,
+          593
+        ],
+        [
+          502,
+          548,
+          589,
+          593
+        ],
+        [
+          490,
+          502,
+          578,
+          545
+        ],
+        [
+          466,
+          510,
+          551,
+          551
+        ]
+      ],
+      "referenceSoleGroundY": [
+        585,
+        584,
+        535,
+        541
+      ],
+      "bodySpans": [
+        420,
+        405,
+        389,
+        405
+      ]
+    },
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 4,
+      "role": "casualty",
+      "action": "fall",
+      "source": "docs/art-pass/candidates/gettysburg-v24/confederate-a-casualty-w-candidate.png",
+      "sha256": "a264dfb71ff6ec767af973bf34d31f4aae597f7a955a9a00ee8181bb4491c251",
+      "cell": 627,
+      "referenceHeight": 405,
+      "roots": [
+        [
+          403,
+          591
+        ],
+        [
+          350,
+          584
+        ],
+        [
+          408,
+          427
+        ],
+        [
+          325,
+          455
+        ]
+      ],
+      "groundROIs": [
+        [
+          432,
+          558,
+          518,
+          599
+        ],
+        [
+          344,
+          558,
+          398,
+          596
+        ],
+        [
+          306,
+          415,
+          321,
+          435
+        ],
+        [
+          363,
+          435,
+          392,
+          466
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis centre X; nearer right-of-image rear boot sole lower edge for Y during the loss of balance.",
+        "Projected pelvis centre X; lowered right-of-image knee cloth underside for Y, excluding the trailing boot and rifle.",
+        "Projected pelvis/torso X; near hand knuckle underside below the rifle grip for Y while collapsing. The ROI excludes the stock tip and trailing boots.",
+        "Projected pelvis centre X; near upper-leg cream cloth underside for Y at prone rest, to the right of the rifle stock and away from the boots."
+      ]
+    }
+  ]
+}

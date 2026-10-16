@@ -1,0 +1,207 @@
+{
+  "artPass": "gettysburg-v24",
+  "side": "confederate",
+  "identity": "a",
+  "direction": 4,
+  "role": "casualty",
+  "source": "docs/art-pass/candidates/gettysburg-v24/confederate-a-casualty-w-candidate.png",
+  "sourceSHA256": "a264dfb71ff6ec767af973bf34d31f4aae597f7a955a9a00ee8181bb4491c251",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v24-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "b220b0d065adc5ccb6c00dbc04d876c49b20a5847da05065bc841a81371be24b",
+  "referenceHeight": 405,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh confederate contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "c76b12915f589650ca92745c128e165678a623f2f98439c77124de63d821a88f",
+      "ground": [
+        403,
+        591
+      ],
+      "groundROI": [
+        432,
+        558,
+        518,
+        599
+      ],
+      "groundMethod": "Projected pelvis centre X; nearer right-of-image rear boot sole lower edge for Y during the loss of balance.",
+      "solidBounds": [
+        149,
+        201,
+        508,
+        591
+      ],
+      "solidPadding": [
+        149,
+        201,
+        119,
+        36
+      ],
+      "nonzeroBounds": [
+        97,
+        89,
+        591,
+        621
+      ]
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "c7c39326b9a886672a112f9fe5035724850a93ca9dc7bb543fa674f3be8108bf",
+      "ground": [
+        350,
+        584
+      ],
+      "groundROI": [
+        344,
+        558,
+        398,
+        596
+      ],
+      "groundMethod": "Projected pelvis centre X; lowered right-of-image knee cloth underside for Y, excluding the trailing boot and rifle.",
+      "solidBounds": [
+        73,
+        324,
+        485,
+        584
+      ],
+      "solidPadding": [
+        73,
+        324,
+        142,
+        43
+      ],
+      "nonzeroBounds": [
+        17,
+        21,
+        565,
+        625
+      ]
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "ec2bb46d1a65c6f949c5f4de0dc675d012f6268b46408a0cc5febc9e0d30b1f2",
+      "ground": [
+        408,
+        427
+      ],
+      "groundROI": [
+        306,
+        415,
+        321,
+        435
+      ],
+      "groundMethod": "Projected pelvis/torso X; near hand knuckle underside below the rifle grip for Y while collapsing. The ROI excludes the stock tip and trailing boots.",
+      "solidBounds": [
+        119,
+        248,
+        578,
+        439
+      ],
+      "solidPadding": [
+        119,
+        248,
+        49,
+        188
+      ],
+      "nonzeroBounds": [
+        115,
+        59,
+        609,
+        593
+      ]
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "98c66dd2ede0ffca43a6f641eab453b551d6b2634d26c9b5f7cfbc9d593d96cc",
+      "ground": [
+        325,
+        455
+      ],
+      "groundROI": [
+        363,
+        435,
+        392,
+        466
+      ],
+      "groundMethod": "Projected pelvis centre X; near upper-leg cream cloth underside for Y at prone rest, to the right of the rifle stock and away from the boots.",
+      "solidBounds": [
+        64,
+        354,
+        534,
+        464
+      ],
+      "solidPadding": [
+        64,
+        354,
+        93,
+        163
+      ],
+      "nonzeroBounds": [
+        23,
+        3,
+        573,
+        627
+      ]
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 4,
+      "action": "fall",
+      "key": "confederate-gettysburg-v24-a-casualty-w",
+      "frames": [
+        "a-fall-4-0",
+        "a-fall-4-1",
+        "a-fall-4-2",
+        "a-fall-4-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.642743,
+          "y": 0.942584
+        },
+        {
+          "x": 0.558214,
+          "y": 0.931419
+        },
+        {
+          "x": 0.650718,
+          "y": 0.681021
+        },
+        {
+          "x": 0.518341,
+          "y": 0.725678
+        }
+      ],
+      "referenceHeight": 405,
+      "sourceHash": "a264dfb71ff6ec767af973bf34d31f4aae597f7a955a9a00ee8181bb4491c251",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeCasualtySequence": "gettysburg-v24-confederate-a-w-casualty",
+      "scope": "Exact source-reviewed confederate A W local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

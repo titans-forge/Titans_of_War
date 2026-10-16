@@ -1,0 +1,40 @@
+{
+  "artPass": "gettysburg-v10",
+  "generationTool": "Built-in imagegen",
+  "exactModelIdentifierExposed": false,
+  "nativeRGBAImages": [
+    {
+      "nativeSource": "docs/art-pass/candidates/gettysburg-v10/confederate-a-ne-march-candidate.png",
+      "builtInOutput": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-ab24edcd-59ae-4eb0-85f0-21f5183f7729.png",
+      "sha256": "48f4c9537b8326d7d1451da727aae73161661ae408fd32ecb467d5d412d26b3d",
+      "nativeCopyBytesVerified": true
+    },
+    {
+      "nativeSource": "docs/art-pass/candidates/gettysburg-v10/confederate-a-nw-march-candidate.png",
+      "builtInOutput": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-5966b1c5-96d2-4ebc-9e11-409eaa244416.png",
+      "sha256": "b66a59f4135fdf91f9b6750fb918552603055b6917497ea9934b27d9765d1a69",
+      "nativeCopyBytesVerified": true
+    },
+    {
+      "nativeSource": "docs/art-pass/candidates/gettysburg-v10/confederate-a-ne-actions-candidate.png",
+      "builtInOutput": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-b2cf0666-1547-4c7f-a4ff-93f897a8e94c.png",
+      "sha256": "3036c2de71157958023a82c7034ace597bba02d7b8bad6d09fa7b8e289e98a85",
+      "nativeCopyBytesVerified": true
+    },
+    {
+      "nativeSource": "docs/art-pass/candidates/gettysburg-v10/confederate-a-nw-actions-candidate.png",
+      "builtInOutput": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-1d87e6c8-ade7-41f5-8788-ba36357c4666.png",
+      "sha256": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0",
+      "nativeCopyBytesVerified": true
+    }
+  ],
+  "nativePixelTreatment": "none; original PNG bytes copied unchanged",
+  "prompts": "docs/art-pass/candidates/gettysburg-v10/PROMPTS.md",
+  "references": "docs/art-pass/candidates/gettysburg-v10/HISTORICAL_REFERENCES.json",
+  "guideRenderer": "scripts/render-gettysburg-confederate-diagonal-guides.py",
+  "anatomicalDiagnosticRenderer": "scripts/render-gettysburg-diagonal-leg-diagnostics.py",
+  "earlierAttempts": "Retained in external isolated work candidate at /Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v10-20261003/candidate/docs/art-pass/candidates/gettysburg-v10; excluded from selected installation scope.",
+  "approval": "Limited model-assisted source, pose and runtime preview only; human and complete-family/default approval pending.",
+  "productionApproved": false,
+  "uploaded": false
+}

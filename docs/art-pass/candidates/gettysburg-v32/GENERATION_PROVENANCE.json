@@ -1,0 +1,344 @@
+{
+  "schema": "gettysburg-v32-native-generation-provenance-1",
+  "artPass": "gettysburg-v32",
+  "createdAt": "2026-10-06T04:38:29.959285+00:00",
+  "toolMode": "built-in image_gen",
+  "actualModelIdentifier": null,
+  "actualModelIdentifierStatus": "not supplied by actual tool",
+  "actualGenerationCalls": 14,
+  "allGenerationOriginalsRetained": true,
+  "allReferenceBytesRehashed": true,
+  "wholeSelectedNativePNGs": 4,
+  "nativePoses": 16,
+  "newClips": 4,
+  "exports": 12,
+  "prompts": "docs/art-pass/candidates/gettysburg-v32/GENERATION_PROMPTS.json",
+  "promptsSHA256": "6c7a8a5501acf5249c87c2e4fc6bf0b1923c80396621249bb5cbdde7c112ea23",
+  "independentReview": "docs/art-pass/reviews/gettysburg-v32-independent-union-b-contact-casualty-source-review.json",
+  "independentReviewSHA256": "9f620c6a789171be3cff65f68a2babbf0d7077b21b51a6415f39ef6b10a117cd",
+  "annotations": "docs/art-pass/manifests/gettysburg-v32-source-annotations.json",
+  "annotationsSHA256": "6df6fc2f548ff867124c731d08cb56b9cdab09ad0b52b111c97ce35c8d24ad04",
+  "sourceAcceptanceScope": "actual independent Astra Max source-only opt-in acceptance",
+  "localInstall": false,
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "generatedRasterTransforms": false,
+  "selectedSources": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v32/union-b-contact-se-candidate.png",
+      "sha256": "788a57247efd2cc871e686efbbfd422bc604b491ffc702575af78e140a44dcac",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "cardinal": "se",
+      "role": "contact",
+      "selectedAttempt": "union-b-contact-se-attempt2",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-b804aede-0d64-4859-9d38-f16f1cc0aa6f.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-contact-se-attempt2.png",
+      "sourceEqualsWholeToolOriginal": true,
+      "publicPNG": "public/images/units/gettysburg-v32/union-b-contact-se.png",
+      "publicPNGEqualsOriginal": true,
+      "referenceHeight": 412,
+      "atlas": "public/images/units/gettysburg-v32/union-b-contact-se.json",
+      "atlasSHA256": "37dcbeff92c9b9f732f970421e6bd3b8fea1500f0e8284801fa3efb84e1a0ad4",
+      "measurement": "docs/art-pass/reviews/gettysburg-v32-union-b-contact-se-measurement.json"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v32/union-b-casualty-se-candidate.png",
+      "sha256": "5567d9ba6fce923b07671672d330e40b95bb91644348cc725717d3ab544b5068",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "cardinal": "se",
+      "role": "casualty",
+      "selectedAttempt": "union-b-casualty-se-attempt3",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-09b987a5-7bee-43b5-bb25-5da2fe3e5b4e.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-se-attempt3.png",
+      "sourceEqualsWholeToolOriginal": true,
+      "publicPNG": "public/images/units/gettysburg-v32/union-b-casualty-se.png",
+      "publicPNGEqualsOriginal": true,
+      "referenceHeight": 412,
+      "atlas": "public/images/units/gettysburg-v32/union-b-casualty-se.json",
+      "atlasSHA256": "af2c79a2b0de0a9dccaa87119579d82826aed41d2374b3078b622e06a7bbbd6f",
+      "measurement": "docs/art-pass/reviews/gettysburg-v32-union-b-casualty-se-measurement.json"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v32/union-b-contact-nw-candidate.png",
+      "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "cardinal": "nw",
+      "role": "contact",
+      "selectedAttempt": "union-b-contact-nw-attempt1",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-b08147a7-294b-4f52-862c-f987009c356d.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-contact-nw-attempt1.png",
+      "sourceEqualsWholeToolOriginal": true,
+      "publicPNG": "public/images/units/gettysburg-v32/union-b-contact-nw.png",
+      "publicPNGEqualsOriginal": true,
+      "referenceHeight": 382,
+      "atlas": "public/images/units/gettysburg-v32/union-b-contact-nw.json",
+      "atlasSHA256": "0ab00c5922e56ef873b7c5304cd0ad13bbec4de59540a719baefc1c74f924a1f",
+      "measurement": "docs/art-pass/reviews/gettysburg-v32-union-b-contact-nw-measurement.json"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v32/union-b-casualty-nw-candidate.png",
+      "sha256": "0d4f98691c07f66507953ceca0a1b545b1ad5a35cf17b5111891a1e4dca0dd61",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "cardinal": "nw",
+      "role": "casualty",
+      "selectedAttempt": "union-b-casualty-nw-attempt8",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-46fb6fb0-0660-4361-9ba1-a7c119c9115b.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt8.png",
+      "sourceEqualsWholeToolOriginal": true,
+      "publicPNG": "public/images/units/gettysburg-v32/union-b-casualty-nw.png",
+      "publicPNGEqualsOriginal": true,
+      "referenceHeight": 382,
+      "atlas": "public/images/units/gettysburg-v32/union-b-casualty-nw.json",
+      "atlasSHA256": "ef0ebbeacb133b4c1b057eae3447782fa2d725bf6e6ceba00c5dcf9d42b6c7f8",
+      "measurement": "docs/art-pass/reviews/gettysburg-v32-union-b-casualty-nw-measurement.json"
+    }
+  ],
+  "retainedActualAttempts": [
+    {
+      "id": "union-b-contact-se-attempt1",
+      "sha256": "1f6bd36894626697b1679eab209724c0ce846b3d58dfd944de7bcb97d458b419",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-ce4c6728-db47-42d3-8c21-c6e50f49f677.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-contact-se-attempt1.png",
+      "geometryPassed": false,
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false
+    },
+    {
+      "id": "union-b-contact-se-attempt2",
+      "sha256": "788a57247efd2cc871e686efbbfd422bc604b491ffc702575af78e140a44dcac",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-b804aede-0d64-4859-9d38-f16f1cc0aa6f.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-contact-se-attempt2.png",
+      "geometryPassed": true,
+      "status": "independently-source-accepted",
+      "independentSourceAccepted": true
+    },
+    {
+      "id": "union-b-contact-nw-attempt1",
+      "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-b08147a7-294b-4f52-862c-f987009c356d.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-contact-nw-attempt1.png",
+      "geometryPassed": true,
+      "status": "independently-source-accepted",
+      "independentSourceAccepted": true
+    },
+    {
+      "id": "union-b-casualty-se-attempt1",
+      "sha256": "e8aa7234e1d995d0aa7886ccdf29f9ca69907334610cb28eebe21b61e6bd4d22",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-7e21a42c-ce98-40bd-bcb7-ef8cd1fd733c.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-se-attempt1.png",
+      "geometryPassed": false,
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false
+    },
+    {
+      "id": "union-b-casualty-se-attempt2",
+      "sha256": "fa72414d45c6acde0cc1f7b5e1b6ce9c593c60f13f5c735472b141a20f507085",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-6b259097-941c-45c4-9d7d-249ee02b326f.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-se-attempt2.png",
+      "geometryPassed": false,
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false
+    },
+    {
+      "id": "union-b-casualty-nw-attempt1",
+      "sha256": "0f394419cba134856b268d184810959e3e97933f0c4e133cae10629b177bb9ca",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-0c25a754-fb55-4d4a-9dc7-6c49ca17c7c6.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt1.png",
+      "geometryPassed": false,
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false
+    },
+    {
+      "id": "union-b-casualty-se-attempt3",
+      "sha256": "5567d9ba6fce923b07671672d330e40b95bb91644348cc725717d3ab544b5068",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-09b987a5-7bee-43b5-bb25-5da2fe3e5b4e.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-se-attempt3.png",
+      "geometryPassed": true,
+      "status": "independently-source-accepted",
+      "independentSourceAccepted": true
+    },
+    {
+      "id": "union-b-casualty-nw-attempt2",
+      "sha256": "c1f327f721158b05117be556d616e1980718b5bcbfb3fc4b4ecb231dc86a63af",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-dedbeec6-f129-495a-b1cd-43202a6ff9b4.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt2.png",
+      "geometryPassed": true,
+      "status": "semantic-rejected",
+      "independentSourceAccepted": false
+    },
+    {
+      "id": "union-b-casualty-nw-attempt3",
+      "sha256": "2a6563c118d44ca5d7177f19ccfabf8101c861f42b939b45315da26072f4b6db",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-7390a028-8c39-4e07-af4d-0f5a6db6c595.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt3.png",
+      "geometryPassed": false,
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false
+    },
+    {
+      "id": "union-b-casualty-nw-attempt4",
+      "sha256": "5fcdd10d6ac3aabb47e3d2f9524f36fb40e1652f7bc42916978ea0818019d5cc",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-e00b3e7e-822e-4ffa-a8b6-d9cecebdd815.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt4.png",
+      "geometryPassed": false,
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false
+    },
+    {
+      "id": "union-b-casualty-nw-attempt5",
+      "sha256": "0c3ba1686a5825fe8e8c095e7cb5928d490fdf5bdf2bca9e4c7e9a1b73f9f09f",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-5b975b7f-4196-4f78-929b-f3ad549d77da.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt5.png",
+      "geometryPassed": false,
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false
+    },
+    {
+      "id": "union-b-casualty-nw-attempt6",
+      "sha256": "c64b4a3e258e84b26026d52719dfaeef870bcaf5cc99032e7500cbb49365093b",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-cf2decbd-9602-450e-bf8d-f1ab40ce3912.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt6.png",
+      "geometryPassed": true,
+      "status": "semantic-rejected",
+      "independentSourceAccepted": false
+    },
+    {
+      "id": "union-b-casualty-nw-attempt7",
+      "sha256": "c049554a76ae4876642b51096b7e1e32b4e57a74bc56ed7ffd643a2e145afba7",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-2f450765-e50a-4f69-a051-9cd9e42213d8.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt7.png",
+      "geometryPassed": false,
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false
+    },
+    {
+      "id": "union-b-casualty-nw-attempt8",
+      "sha256": "0d4f98691c07f66507953ceca0a1b545b1ad5a35cf17b5111891a1e4dca0dd61",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-46fb6fb0-0660-4361-9ba1-a7c119c9115b.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt8.png",
+      "geometryPassed": true,
+      "status": "independently-source-accepted",
+      "independentSourceAccepted": true
+    }
+  ],
+  "oldAuthorsBytePreserved": [
+    {
+      "path": "scripts/author-gettysburg-action-clips.py",
+      "sha256": "e3f232e6c377086404d15990da7ffd2480260e67ef81cbe515f4ce862884394b"
+    },
+    {
+      "path": "scripts/author-gettysburg-family-atlases.py",
+      "sha256": "d3264c9726145dfec77dd7bcc0c1a02f75be8e3ad5e23f427ec92668a5d77780"
+    },
+    {
+      "path": "scripts/author-gettysburg-gait-clip.py",
+      "sha256": "ee09827b45fd468a072290e37886148490a863754df1a2f6f8f30f0569094588"
+    },
+    {
+      "path": "scripts/author-gettysburg-v10-clips.py",
+      "sha256": "d9873a2602ae48fd1df644b4393fe8cf93ef076b817d5eff8bc33b7b29af0dd9"
+    },
+    {
+      "path": "scripts/author-gettysburg-v11-clips.py",
+      "sha256": "996df45a56b83746609204496fd422c073ceeb992204743071dae1953e925de7"
+    },
+    {
+      "path": "scripts/author-gettysburg-v13-clips.py",
+      "sha256": "7a5c5322690864d39dfd95b147d03bf2833455db3fcb1ac8ab538fa870f9f220"
+    },
+    {
+      "path": "scripts/author-gettysburg-v14-clips.py",
+      "sha256": "9961f99b33ad6f12d93f99d02d1e37a1b710769405f3628c23cd3c28a63ce50c"
+    },
+    {
+      "path": "scripts/author-gettysburg-v15-clips.py",
+      "sha256": "8f32cc07916af02a72aa15963155c287c4b7e437f5e77ea59dbed4262aba2805"
+    },
+    {
+      "path": "scripts/author-gettysburg-v16-clips.py",
+      "sha256": "f67d1cd35ba5af4c9d7817a83bd6382f643307778dda5315938605ec8ea3fc28"
+    },
+    {
+      "path": "scripts/author-gettysburg-v18-clips.py",
+      "sha256": "8e91dc9cb64f7ec903492d1e1a01197f29da395ade5a74cf9d83b69243a11153"
+    },
+    {
+      "path": "scripts/author-gettysburg-v20-clips.py",
+      "sha256": "e26eeb12af7fdadc67520a0fb9ccbfdc8c2473c2fa1c41855e7d7cb43e975d15"
+    },
+    {
+      "path": "scripts/author-gettysburg-v21-clips.py",
+      "sha256": "007d4c1ba846aa356c4191b104b261c6c2b5ff3fa3b8f7b1070fa0769b60c65f"
+    },
+    {
+      "path": "scripts/author-gettysburg-v22-clips.py",
+      "sha256": "c459d7e03a9e4964ff630dc70c51dec4c565e7ec44ce0a60a68262589a6c412a"
+    },
+    {
+      "path": "scripts/author-gettysburg-v23-clips.py",
+      "sha256": "c0af5c3104abd382eba25b614ac9c3c8f5f8b27687c7b3e7830c130bbe48c047"
+    },
+    {
+      "path": "scripts/author-gettysburg-v24-clips.py",
+      "sha256": "f0e5a29010aa883ac8c725c8be983bfe71e406eaeee03ffc8bc90bb0afbb3313"
+    },
+    {
+      "path": "scripts/author-gettysburg-v25-clips.py",
+      "sha256": "de9db99be5f35b09ba5ddb5f3a8f12cce260a2ed793ee20ba45a63ab01a73f5d"
+    },
+    {
+      "path": "scripts/author-gettysburg-v26-clips.py",
+      "sha256": "2b5994dd9732d9fc67148a1496fc878ffdbce9b6562b479ee875957ec293c8bf"
+    },
+    {
+      "path": "scripts/author-gettysburg-v27-clips.py",
+      "sha256": "12e1968f5af814b1344bd60a9e6f25b1bc0b9d0d2dbccf092764d6cf2485e451"
+    },
+    {
+      "path": "scripts/author-gettysburg-v28-clips.py",
+      "sha256": "73b76ea5ba57e14d25c5a2b9e2bd6c98d51c8b687e43778eb327266aca74c920"
+    },
+    {
+      "path": "scripts/author-gettysburg-v30-clips.py",
+      "sha256": "495769a22c11a348d99d1491543e1144937cf4d277f964cccb0624b2207c2cbe"
+    },
+    {
+      "path": "scripts/author-gettysburg-v31-clips.py",
+      "sha256": "1388eefaa909663ab74ab723120ea805b76b28fb310d64f63e2d820c3f91dd78"
+    },
+    {
+      "path": "scripts/author-gettysburg-v5-clips.py",
+      "sha256": "7a9f5300a58f85f5d5cf9b25018a4806d3da746be21b70734efc5719e3808e0d"
+    },
+    {
+      "path": "scripts/author-gettysburg-v6-clips.py",
+      "sha256": "daa5561c6b5013dd87558d90b8a0b8e17d2167949495b11c9f25878e406d5240"
+    },
+    {
+      "path": "scripts/author-gettysburg-v7-clips.py",
+      "sha256": "bafc16714577b1f0f17e0397d3ad95103100dcb205d4934f42ce913f6b30d894"
+    },
+    {
+      "path": "scripts/author-gettysburg-v8-clips.py",
+      "sha256": "8cf1375a358446f7327b2fc769b354ae720504a74c0469101eda553fb32d3317"
+    },
+    {
+      "path": "scripts/author-gettysburg-v9-clips.py",
+      "sha256": "9276996199744a4931fa17ab4bc59cb468ba4d602cf83756d0029eb269464b9a"
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false
+}

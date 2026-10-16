@@ -1,0 +1,711 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "independent model-assisted fresh entire native-source review and manual registration",
+  "reviewer": "civilwar_survivor_review",
+  "reviewedAtUTC": "2026-10-03T17:53:03.163992+00:00",
+  "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-march-candidate.png",
+  "sourceSha256": "9efcc748a6d6860f6248c72b3384d62220db6e76a7e60f7efb35e36a811052b7",
+  "nativeMode": "RGBA",
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "cellSize": 627,
+  "bytes": 581633,
+  "freshSourceReview": true,
+  "editIsolationEstablished": false,
+  "nativePixelsModifiedByReviewer": false,
+  "approvedPreview": true,
+  "productionApproved": false,
+  "fullFamilyApproval": false,
+  "humanAnatomicalCertification": false,
+  "historicalCertification": false,
+  "verdict": "Usable for limited opt-in Union B SE four-sample marching visual preview. Native solid margin gate and proposed registered bounds pass. Final atlas/runtime/battlefield/install acceptance remains separate.",
+  "referenceHeightRecommendation": 440,
+  "referenceHeightMethod": "One source-wide 440px body reference across all four native cells. Manual pelvisX with shared rowsoleY582 and563 preserves435/433/440/443px diagnostic cap-to-ground spans and source placement variation. No per-frame scaling or independent boot leveling.",
+  "nativeCellOrderRecommendation": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "cellOrderConfidence": "Limited model-assisted anatomical hip-chain and source-silhouette comparison; not physical or historical certification.",
+  "cells": [
+    {
+      "nativeIndex": 0,
+      "role": "left contact",
+      "root": [
+        343,
+        582
+      ],
+      "pelvisXUncertaintyPx": 8,
+      "groundYUncertaintyPx": 4,
+      "capTop": 147,
+      "capTopUncertaintyPx": 3,
+      "bodySpanAtSharedGround": 435,
+      "alphaBounds": {
+        "1": {
+          "bboxExclusive": [
+            158,
+            31,
+            627,
+            605
+          ],
+          "padding": [
+            158,
+            31,
+            0,
+            22
+          ],
+          "minimumMargin": 0
+        },
+        "8": {
+          "bboxExclusive": [
+            228,
+            72,
+            472,
+            582
+          ],
+          "padding": [
+            228,
+            72,
+            155,
+            45
+          ],
+          "minimumMargin": 45
+        },
+        "64": {
+          "bboxExclusive": [
+            230,
+            74,
+            472,
+            582
+          ],
+          "padding": [
+            230,
+            74,
+            155,
+            45
+          ],
+          "minimumMargin": 45
+        },
+        "128": {
+          "bboxExclusive": [
+            230,
+            75,
+            471,
+            582
+          ],
+          "padding": [
+            230,
+            75,
+            156,
+            45
+          ],
+          "minimumMargin": 45
+        },
+        "240": {
+          "bboxExclusive": [
+            231,
+            79,
+            470,
+            581
+          ],
+          "padding": [
+            231,
+            79,
+            157,
+            46
+          ],
+          "minimumMargin": 46
+        }
+      },
+      "registeredPreviewBody300": {
+        "1": {
+          "bounds": [
+            174.664,
+            50.718,
+            494.436,
+            442.082
+          ],
+          "fits": true
+        },
+        "8": {
+          "bounds": [
+            222.391,
+            78.673,
+            388.755,
+            426.4
+          ],
+          "fits": true
+        },
+        "64": {
+          "bounds": [
+            223.755,
+            80.036,
+            388.755,
+            426.4
+          ],
+          "fits": true
+        },
+        "128": {
+          "bounds": [
+            223.755,
+            80.718,
+            388.073,
+            426.4
+          ],
+          "fits": true
+        },
+        "240": {
+          "bounds": [
+            224.436,
+            83.445,
+            387.391,
+            425.718
+          ],
+          "fits": true
+        }
+      }
+    },
+    {
+      "nativeIndex": 1,
+      "role": "left-support passing",
+      "root": [
+        283,
+        582
+      ],
+      "pelvisXUncertaintyPx": 8,
+      "groundYUncertaintyPx": 4,
+      "capTop": 149,
+      "capTopUncertaintyPx": 3,
+      "bodySpanAtSharedGround": 433,
+      "alphaBounds": {
+        "1": {
+          "bboxExclusive": [
+            0,
+            53,
+            432,
+            585
+          ],
+          "padding": [
+            0,
+            53,
+            195,
+            42
+          ],
+          "minimumMargin": 0
+        },
+        "8": {
+          "bboxExclusive": [
+            186,
+            72,
+            387,
+            583
+          ],
+          "padding": [
+            186,
+            72,
+            240,
+            44
+          ],
+          "minimumMargin": 44
+        },
+        "64": {
+          "bboxExclusive": [
+            187,
+            73,
+            386,
+            582
+          ],
+          "padding": [
+            187,
+            73,
+            241,
+            45
+          ],
+          "minimumMargin": 45
+        },
+        "128": {
+          "bboxExclusive": [
+            188,
+            75,
+            386,
+            582
+          ],
+          "padding": [
+            188,
+            75,
+            241,
+            45
+          ],
+          "minimumMargin": 45
+        },
+        "240": {
+          "bboxExclusive": [
+            188,
+            83,
+            385,
+            581
+          ],
+          "padding": [
+            188,
+            83,
+            242,
+            46
+          ],
+          "minimumMargin": 46
+        }
+      },
+      "registeredPreviewBody300": {
+        "1": {
+          "bounds": [
+            107.845,
+            65.718,
+            402.391,
+            428.445
+          ],
+          "fits": true
+        },
+        "8": {
+          "bounds": [
+            234.664,
+            78.673,
+            371.709,
+            427.082
+          ],
+          "fits": true
+        },
+        "64": {
+          "bounds": [
+            235.345,
+            79.355,
+            371.027,
+            426.4
+          ],
+          "fits": true
+        },
+        "128": {
+          "bounds": [
+            236.027,
+            80.718,
+            371.027,
+            426.4
+          ],
+          "fits": true
+        },
+        "240": {
+          "bounds": [
+            236.027,
+            86.173,
+            370.345,
+            425.718
+          ],
+          "fits": true
+        }
+      }
+    },
+    {
+      "nativeIndex": 2,
+      "role": "right contact",
+      "root": [
+        343,
+        563
+      ],
+      "pelvisXUncertaintyPx": 8,
+      "groundYUncertaintyPx": 4,
+      "capTop": 123,
+      "capTopUncertaintyPx": 3,
+      "bodySpanAtSharedGround": 440,
+      "alphaBounds": {
+        "1": {
+          "bboxExclusive": [
+            57,
+            45,
+            621,
+            593
+          ],
+          "padding": [
+            57,
+            45,
+            6,
+            34
+          ],
+          "minimumMargin": 6
+        },
+        "8": {
+          "bboxExclusive": [
+            252,
+            46,
+            462,
+            556
+          ],
+          "padding": [
+            252,
+            46,
+            165,
+            71
+          ],
+          "minimumMargin": 46
+        },
+        "64": {
+          "bboxExclusive": [
+            252,
+            48,
+            461,
+            554
+          ],
+          "padding": [
+            252,
+            48,
+            166,
+            73
+          ],
+          "minimumMargin": 48
+        },
+        "128": {
+          "bboxExclusive": [
+            253,
+            49,
+            461,
+            554
+          ],
+          "padding": [
+            253,
+            49,
+            166,
+            73
+          ],
+          "minimumMargin": 49
+        },
+        "240": {
+          "bboxExclusive": [
+            254,
+            54,
+            460,
+            553
+          ],
+          "padding": [
+            254,
+            54,
+            167,
+            74
+          ],
+          "minimumMargin": 54
+        }
+      },
+      "registeredPreviewBody300": {
+        "1": {
+          "bounds": [
+            105.8,
+            73.218,
+            490.345,
+            446.855
+          ],
+          "fits": true
+        },
+        "8": {
+          "bounds": [
+            238.755,
+            73.9,
+            381.936,
+            421.627
+          ],
+          "fits": true
+        },
+        "64": {
+          "bounds": [
+            238.755,
+            75.264,
+            381.255,
+            420.264
+          ],
+          "fits": true
+        },
+        "128": {
+          "bounds": [
+            239.436,
+            75.945,
+            381.255,
+            420.264
+          ],
+          "fits": true
+        },
+        "240": {
+          "bounds": [
+            240.118,
+            79.355,
+            380.573,
+            419.582
+          ],
+          "fits": true
+        }
+      }
+    },
+    {
+      "nativeIndex": 3,
+      "role": "right-support passing",
+      "root": [
+        292,
+        563
+      ],
+      "pelvisXUncertaintyPx": 8,
+      "groundYUncertaintyPx": 4,
+      "capTop": 120,
+      "capTopUncertaintyPx": 3,
+      "bodySpanAtSharedGround": 443,
+      "alphaBounds": {
+        "1": {
+          "bboxExclusive": [
+            15,
+            29,
+            587,
+            565
+          ],
+          "padding": [
+            15,
+            29,
+            40,
+            62
+          ],
+          "minimumMargin": 15
+        },
+        "8": {
+          "bboxExclusive": [
+            193,
+            46,
+            390,
+            563
+          ],
+          "padding": [
+            193,
+            46,
+            237,
+            64
+          ],
+          "minimumMargin": 46
+        },
+        "64": {
+          "bboxExclusive": [
+            194,
+            47,
+            390,
+            563
+          ],
+          "padding": [
+            194,
+            47,
+            237,
+            64
+          ],
+          "minimumMargin": 47
+        },
+        "128": {
+          "bboxExclusive": [
+            194,
+            48,
+            389,
+            562
+          ],
+          "padding": [
+            194,
+            48,
+            238,
+            65
+          ],
+          "minimumMargin": 48
+        },
+        "240": {
+          "bboxExclusive": [
+            195,
+            52,
+            387,
+            561
+          ],
+          "padding": [
+            195,
+            52,
+            240,
+            66
+          ],
+          "minimumMargin": 52
+        }
+      },
+      "registeredPreviewBody300": {
+        "1": {
+          "bounds": [
+            111.936,
+            62.309,
+            501.936,
+            427.764
+          ],
+          "fits": true
+        },
+        "8": {
+          "bounds": [
+            233.3,
+            73.9,
+            367.618,
+            426.4
+          ],
+          "fits": true
+        },
+        "64": {
+          "bounds": [
+            233.982,
+            74.582,
+            367.618,
+            426.4
+          ],
+          "fits": true
+        },
+        "128": {
+          "bounds": [
+            233.982,
+            75.264,
+            366.936,
+            425.718
+          ],
+          "fits": true
+        },
+        "240": {
+          "bounds": [
+            234.664,
+            77.991,
+            365.573,
+            425.036
+          ],
+          "fits": true
+        }
+      }
+    }
+  ],
+  "gaitFindings": [
+    {
+      "cell": 0,
+      "finding": "Far/anatomical-left chain leads down-right, near/right trails left. Full thigh-knee-shin layout is plausible left-contact against colored diagnostic."
+    },
+    {
+      "cell": 1,
+      "finding": "Far/left image-right planted support, near/right image-left bent/lifted knee and boot. Distinct from BR rather than duplicated support."
+    },
+    {
+      "cell": 2,
+      "finding": "Near/right chain crosses toward forward down-right lead; far/left trails bent behind. The hip/thigh crossing is partly occluded by carry/cloth. Colored diagnostic comparison supports the opposite contact assignment; projected boot height alone does not recover toe-off/ground physics."
+    },
+    {
+      "cell": 3,
+      "finding": "Near/right image-left planted support with far/left flexed/lifted image-right. Opposite passing support to TR remains recognizable after new smaller native generation."
+    }
+  ],
+  "bearingFinding": {
+    "bearing": "SE",
+    "directionIndex": 1,
+    "observed": "Three-quarter rightward visor/nose/shoulders and down-right leading boots are plausibly in the same SE raster family as the exact retained A SE march and accepted new B SE actions. Some frontal chest variation remains.",
+    "exactWorldYawRecovered": false,
+    "exact45DegreeYawCertified": false
+  },
+  "appearanceAndKit": {
+    "identity": "Short brown hair, brown moustache with modest chin/cheek hair, navy cap and short dark navy coat remain in accepted UnionB family. Exact age/likeness and a face-only variation are not certified.",
+    "uniform": "Consistent light-blue trouser cloth and worn brown boots in all four. Saturation/shading differ somewhat from older sources; no faction/kit palette swap is evident.",
+    "attachments": "Dark rectangular knapsack and gray/taupe roll stay on back; crossed tan/gray straps, brown belt/right pouch and partly occluded silver anatomical-left canteen remain coherent under SE view. No body-side duplicate/swap observed.",
+    "weapon": "Upright wooden-stock musket/full metal barrel and bayonet maintain consistent two-hand carry/fore-end-stock contacts. Fine wrist/socket/grip detail remains approximate and partly occluded; no true standard-bearer role is implied."
+  },
+  "nativePadding": {
+    "acceptedMinimumSolidGatePx": 16,
+    "minimumByNativeCell": [
+      45,
+      45,
+      48,
+      47
+    ],
+    "allFourPass": true,
+    "alpha1NonzeroEdgePaddingPass": false,
+    "lowAlphaNote": "Native alpha1 residue reaches a cell edge inTL/TR. All original PNG bytes remain unchanged; clean alpha/fringe absence is not claimed."
+  },
+  "conspicuousBlueDiagnostic": {
+    "predicate": "r<80,g<100,b>=140,b>=r+90,b>=1.8*g+30",
+    "countsByNativeCellAndAlphaThreshold": [
+      {
+        "1": 966,
+        "8": 0,
+        "64": 0,
+        "128": 0,
+        "240": 0
+      },
+      {
+        "1": 735,
+        "8": 0,
+        "64": 0,
+        "128": 0,
+        "240": 0
+      },
+      {
+        "1": 565,
+        "8": 0,
+        "64": 0,
+        "128": 0,
+        "240": 0
+      },
+      {
+        "1": 621,
+        "8": 1,
+        "64": 0,
+        "128": 0,
+        "240": 0
+      }
+    ],
+    "alpha8Exception": {
+      "cell": 3,
+      "cellLocal": [
+        373,
+        389
+      ],
+      "RGBA": [
+        46,
+        69,
+        162,
+        11
+      ]
+    },
+    "meaning": "At alpha8 counts are0/0/0/1; every cell is0 at64/128/240. This narrow RGB diagnostic is not an exhaustive edge-color/transparency detector, and must not be described as zero atalpha8."
+  },
+  "previewBounds": {
+    "stage": [
+      640,
+      520
+    ],
+    "bodyHeight": 300,
+    "commonRootXFraction": 0.47,
+    "commonGroundYFraction": 0.82,
+    "allAlpha8And64BoundsFit": true,
+    "basis": "Read-only native alpha bounds plus fresh proposed pelvis/shared-ground/ref. Final author metadata and actual reviewer/battlefield still need checking."
+  },
+  "referenceSources": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-march-colored-yaw-attempt-1.png",
+      "sha256": "480af36f7e7564d20a070839265decd013c31bb6ad8658a084e055a90b94ede5"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-march-anatomical-guide.png",
+      "sha256": "dbd13f48a33eb7fd77ce74f44487023ae0d1d77d293b036c7a2c9a83fe86c43b"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v5/union-se-march-padded-candidate.png",
+      "sha256": "90a124967a778789bcdbaf5b83fc0cba689f145486450ba775798ec106bfc103"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-actions-candidate.png",
+      "sha256": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6"
+    }
+  ],
+  "limitations": [
+    "Fresh whole4-cell review of this exact valid composition; shrinking/translating only or preserving untargeted pixels was not established.",
+    "Hidden hip/thigh origins and projected ground contacts limit absolute support attribution, even with separate colored anatomical diagnostics.",
+    "No physically reconstructed skeleton, interpolation, gait dynamics, military drill, historical/human or complete-family approval.",
+    "One reference preserves source native body variation; manual pelvis/ground/cap annotations carry stated uncertainties.",
+    "Native low-alpha color/edge residue is retained, including one alpha8 blue-diagnostic pixel; no cleanup or perfect-transparency certification.",
+    "Final original-generated/native/public/build byte chain, atlas cell/root/reference/action/identity binding, v10 retention, phase/checkpoint/pause/performance and browser/install evidence remain separate gates.",
+    "Local opt-in preview only; no default promotion, upload, production or publication certification."
+  ]
+}

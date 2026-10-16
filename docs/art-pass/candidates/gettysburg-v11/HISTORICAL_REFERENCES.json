@@ -1,0 +1,25 @@
+{
+  "checkedOn": "2026-10-03",
+  "generationMode": "built-in imagegen",
+  "underlyingModelID": "not exposed by tool",
+  "appearanceMasters": [
+    "docs/art-pass/candidates/gettysburg-v7/union-b-s-actions-candidate.png",
+    "docs/art-pass/candidates/gettysburg-v9/union-b-w-actions-candidate.png",
+    "docs/art-pass/candidates/gettysburg-v9/union-b-w-march-candidate.png"
+  ],
+  "sources": [
+    {
+      "title": "Clothing of a Civil War Soldier",
+      "url": "https://www.nps.gov/gett/learn/education/a-nation-at-war-traveling-trunk-table-1-clothing.htm",
+      "use": "Representative kepi, sack coat, trousers, brogans and natural fabric context; not regiment-specific certification."
+    },
+    {
+      "title": "Accouterments of a Civil War Soldier",
+      "url": "https://www.nps.gov/gett/learn/education/a-nation-at-war-table-2-accouterments-of-a-civil-war-soldier-teacher-s-instructions.htm",
+      "use": "Representative knapsack, blanket, canteen, leather ammunition equipment and rifled-musket/ramrod context. Four samples do not establish a complete historical drill."
+    }
+  ],
+  "reviewLimits": "Historical kit placement and proportions are model-assisted representative interpretation; independent human and knowledgeable historical review remains pending.",
+  "productionApproved": false,
+  "familyComplete": false
+}

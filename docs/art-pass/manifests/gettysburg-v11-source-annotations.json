@@ -1,0 +1,293 @@
+{
+  "artPass": "gettysburg-v11",
+  "productionApproved": false,
+  "familyComplete": false,
+  "sources": [
+    {
+      "name": "march-e",
+      "key": "union-gettysburg-v11-b-march-e",
+      "measurementName": "union-b-march-e",
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-e-march-candidate.png",
+      "sha256": "5f15de11f707a965564bbddae925a302ab7e8119276408e29f0a177783e5290a",
+      "side": "union",
+      "identity": "b",
+      "direction": 0,
+      "cell": 627,
+      "roots": [
+        [
+          280,
+          594
+        ],
+        [
+          280,
+          594
+        ],
+        [
+          290,
+          554
+        ],
+        [
+          290,
+          554
+        ]
+      ],
+      "capTop": [
+        137,
+        138,
+        108,
+        108
+      ],
+      "bodySpans": [
+        457,
+        456,
+        446,
+        446
+      ],
+      "referenceHeight": 450,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "scope": "Local opt-in Union B E march preview, exact historical Gettysburg v11 only.",
+      "annotationMethod": "Fresh separate model-assisted entire native source inspection; manual registration with one shared source-wide body reference. Pelvis X +/-6px, row-ground Y +/-4px, cap tops +/-3px.",
+      "limitations": [
+        "Limited visual preview only; no human, physical anatomy, exact skeletal identity, 3D yaw or historical drill certification.",
+        "All native RGBA pixels and four complete equal cells copied byte-for-byte, no raster mirroring, recoloring, cropping, resampling or alpha cleanup.",
+        "Whole source inspected afresh after image changes; requested exact preservation and translation were not established.",
+        "One source-wide reference retains observed body-span variation without per-frame scale normalization. Manual roots, cap and firing-mouth measurements carry the stated uncertainty.",
+        "Low-alpha colored RGB remnants remain; selected alpha diagnostics do not establish perfectly clean transparency or exhaustive fringe absence.",
+        "Missing identity/bearing combinations, recoil and settling, transitions, melee, casualties and true standard bearers remain unfinished.",
+        "Four contact/passing visual roles reviewed against blue-left/red-right native 3D guides and colored human diagnostics; timing is inspection-based, not physical gait certification."
+      ]
+    },
+    {
+      "name": "actions-e",
+      "key": "union-gettysburg-v11-b-actions-e",
+      "measurementName": "union-b-actions-e",
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-e-actions-candidate.png",
+      "sha256": "5aebc319115ad65a7bc23089e5962ae4975a6a1a9db11a5fcce8a9c13c1780e1",
+      "side": "union",
+      "identity": "b",
+      "direction": 0,
+      "cell": 627,
+      "roots": [
+        [
+          232,
+          584
+        ],
+        [
+          177,
+          584
+        ],
+        [
+          251,
+          541
+        ],
+        [
+          242,
+          541
+        ]
+      ],
+      "capTop": [
+        166,
+        172,
+        97,
+        112
+      ],
+      "bodySpans": [
+        418,
+        412,
+        444,
+        429
+      ],
+      "referenceHeight": 430,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "scope": "Local opt-in Union B E actions preview, exact historical Gettysburg v11 only.",
+      "annotationMethod": "Fresh separate model-assisted entire native source inspection; manual registration with one shared source-wide body reference. Pelvis X +/-5px, row-ground Y +/-4px, cap tops +/-3px.",
+      "limitations": [
+        "Limited visual preview only; no human, physical anatomy, exact skeletal identity, 3D yaw or historical drill certification.",
+        "All native RGBA pixels and four complete equal cells copied byte-for-byte, no raster mirroring, recoloring, cropping, resampling or alpha cleanup.",
+        "Whole source inspected afresh after image changes; requested exact preservation and translation were not established.",
+        "One source-wide reference retains observed body-span variation without per-frame scale normalization. Manual roots, cap and firing-mouth measurements carry the stated uncertainty.",
+        "Low-alpha colored RGB remnants remain; selected alpha diagnostics do not establish perfectly clean transparency or exhaustive fringe absence.",
+        "Missing identity/bearing combinations, recoil and settling, transitions, melee, casualties and true standard bearers remain unfinished.",
+        "One held firing pose and two representative loading states do not establish recoil, exact finger/bore contact or a complete period loading drill.",
+        "Loading is 6.22 percent taller than ready in native cap-to-ground span; the measured variation is preserved."
+      ],
+      "muzzle": [
+        494,
+        240
+      ]
+    },
+    {
+      "name": "march-se",
+      "key": "union-gettysburg-v11-b-march-se",
+      "measurementName": "union-b-march-se",
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-march-candidate.png",
+      "sha256": "9efcc748a6d6860f6248c72b3384d62220db6e76a7e60f7efb35e36a811052b7",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "cell": 627,
+      "roots": [
+        [
+          343,
+          582
+        ],
+        [
+          283,
+          582
+        ],
+        [
+          343,
+          563
+        ],
+        [
+          292,
+          563
+        ]
+      ],
+      "capTop": [
+        147,
+        149,
+        123,
+        120
+      ],
+      "bodySpans": [
+        435,
+        433,
+        440,
+        443
+      ],
+      "referenceHeight": 440,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "scope": "Local opt-in Union B SE marching preview, exact historical Gettysburg v11 only.",
+      "annotationMethod": "Fresh separate model-assisted entire native source inspection after final composition repair, compared with exact blue-left/red-right diagnostic and native Blender guide. Estimated pelvis X +/-8px, shared row-ground Y +/-4px, cap tops +/-3px. One source-wide body reference, no physical skeleton or exact 3D yaw certification.",
+      "limitations": [
+        "Four contact/passing visual roles remain plausible in row-major order; this is limited visual acceptance, not human or physical gait validation.",
+        "Entire native RGBA copied byte-for-byte with full equal cells; no mirroring, recoloring, cropping, resampling or alpha cleanup.",
+        "Final composition is a fresh generated source; requested exact pixel preservation, translations and uniform geometric scaling were not established.",
+        "One source-wide reference retains native body-span variation; approximate manually estimated registrations do not recover exact physical pelvis/ground contacts.",
+        "Broad southeast projection remains slightly more frontal than the retained A source; exact 45-degree world yaw is not independently recovered.",
+        "Low-alpha colored RGB remnants remain. One conspicuous-blue pixel at alpha11 persists in BR; zero matching pixels at alpha64/128/240 does not establish perfectly clean transparency.",
+        "Missing identity/bearing combinations, recoil and settling, transitions, melee, casualties and true standard bearers remain unfinished."
+      ]
+    },
+    {
+      "name": "actions-se",
+      "key": "union-gettysburg-v11-b-actions-se",
+      "measurementName": "union-b-actions-se",
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-actions-candidate.png",
+      "sha256": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "cell": 627,
+      "roots": [
+        [
+          280,
+          588
+        ],
+        [
+          211,
+          588
+        ],
+        [
+          317,
+          547
+        ],
+        [
+          300,
+          547
+        ]
+      ],
+      "capTop": [
+        117,
+        116,
+        49,
+        78
+      ],
+      "bodySpans": [
+        471,
+        472,
+        498,
+        469
+      ],
+      "referenceHeight": 475,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "scope": "Local opt-in Union B SE actions preview, exact historical Gettysburg v11 only.",
+      "annotationMethod": "Fresh separate model-assisted entire native source inspection; manual registration with one shared source-wide body reference. Pelvis X +/-8px, row-ground Y +/-4px, cap tops +/-3px, approximate tube mouth +/-6px.",
+      "limitations": [
+        "Limited visual preview only; no human, physical anatomy, exact skeletal identity, 3D yaw or historical drill certification.",
+        "All native RGBA pixels and four complete equal cells copied byte-for-byte, no raster mirroring, recoloring, cropping, resampling or alpha cleanup.",
+        "Whole source inspected afresh after image changes; requested exact preservation and translation were not established.",
+        "One source-wide reference retains observed body-span variation without per-frame scale normalization. Manual roots, cap and firing-mouth measurements carry the stated uncertainty.",
+        "Low-alpha colored RGB remnants remain; selected alpha diagnostics do not establish perfectly clean transparency or exhaustive fringe absence.",
+        "Missing identity/bearing combinations, recoil and settling, transitions, melee, casualties and true standard bearers remain unfinished.",
+        "One held firing pose and two representative loading states do not establish recoil, exact finger/bore contact or a complete period loading drill."
+      ],
+      "muzzle": [
+        489,
+        324
+      ]
+    }
+  ],
+  "reviewStatus": "Separate model-assisted fresh four-source visual review accepts limited local opt-in preview; final native/runtime/browser verification and human/full-family approval remain separate."
+}

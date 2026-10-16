@@ -1,0 +1,56 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompts": "historical-landmark-prompts-v6.json",
+  "assets": [
+    {
+      "id": "heater-house",
+      "file": "public/images/battles/landmarks-v6/heater-house.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-cea9caf0-e350-4fb4-9dba-536172476e04.png",
+      "sha256": "a2fdea7b78238b73dff4d48dcd4618c67f116c8109d20d6a02af773503988175",
+      "bytes": 2649361,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentPixels": 787950,
+      "historicalSource": "https://www.nps.gov/places/heater-house.htm"
+    },
+    {
+      "id": "catharine-furnace",
+      "file": "public/images/battles/landmarks-v6/catharine-furnace.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-77bcc667-c99c-4c54-9803-197475fa90f1.png",
+      "sha256": "60d006b568c527014b482280a4b14b4340e6fd30dff83d9e34524428f47d856b",
+      "bytes": 2331132,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentPixels": 992339,
+      "historicalSource": "https://www.nps.gov/frsp/learn/photosmultimedia/chancellorsville-battlefield-tour.htm"
+    }
+  ],
+  "processing": "Original native PNG bytes copied unchanged; Phaser scales for display. Surroundings are native canvas drawings, outside collision footprints. No local pixel edits.",
+  "referenceInspection": "NPS contemporary Heater House and surviving Catharine Furnace photographs inspected in browser. Screenshots retained in external evidence.",
+  "historicalLimits": [
+    "Heater main-block and lower-wing massing follow the extant house. Roof covering, entrance portico and yard details are illustrative, not established as their exact 1864 appearance.",
+    "Furnace masonry shape follows the surviving round stack. Upper works, casting shed, ramp, extent and operating details are an illustrative reconstruction of a wartime ironworks, not an engineering survey.",
+    "Both sites and connecting tracks are positioned on compressed game boards; no surveyed distances or exact road traces are claimed.",
+    "NPS Heater House page and a search-indexed nomination disagree about which side of the modern highway contains the site. No precise modern-road-side claim is used.",
+    "The indexed Cedar Creek nomination PDF returned 404 and the NPS-authored furnace report on npshistory.com returned 403/size errors. Neither was inspected in full or used as measured architectural proof."
+  ],
+  "referenceUrls": [
+    "https://www.nps.gov/places/heater-house.htm",
+    "https://www.nps.gov/places/catharine-furnace-ruins.htm",
+    "https://www.nps.gov/frsp/learn/photosmultimedia/chancellorsville-battlefield-tour.htm"
+  ]
+}

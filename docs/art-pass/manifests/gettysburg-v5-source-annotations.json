@@ -1,0 +1,50 @@
+{
+  "artPass": "gettysburg-v5",
+  "productionApproved": false,
+  "sources": [
+    {
+      "name": "actions-e",
+      "source": "docs/art-pass/candidates/gettysburg-v5/union-e-actions-candidate.png",
+      "sha256": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f",
+      "side": "union",
+      "identity": "a",
+      "direction": 0,
+      "cell": 627,
+      "roots": [[219, 609], [145, 609], [247, 590], [233, 590]],
+      "capTop": [124, 143, 108, 110],
+      "bodySpans": [481, 463, 478, 476],
+      "referenceHeight": 485,
+      "actions": [["ready", [0]], ["fire", [1]], ["reload", [2, 3]]],
+      "muzzle": [488, 210],
+      "annotationMethod": "Manual torso/pelvis center X and row-shared ground Y; approximately +/-5 to 8 native pixels. Cap ROI and alpha128 sole spans are diagnostics, never per-frame scaling or lowest-boot pivots.",
+      "limitations": [
+        "Simplified two-state muzzleloading; this is not a certified full drill or exact weapon model.",
+        "Low-alpha colored RGB residue and ghost pixels remain unchanged; all measured saturated-blue residue is below alpha8.",
+        "Single held firing pose and two reload samples do not provide recoil settling or smooth loading.",
+        "Full-family, production, historical and human-anatomical approval remain false."
+      ]
+    },
+    {
+      "name": "march-se",
+      "source": "docs/art-pass/candidates/gettysburg-v5/union-se-march-padded-candidate.png",
+      "sha256": "90a124967a778789bcdbaf5b83fc0cba689f145486450ba775798ec106bfc103",
+      "side": "union",
+      "identity": "a",
+      "direction": 1,
+      "cell": 627,
+      "roots": [[342, 612], [241, 612], [344, 605], [241, 605]],
+      "capTop": [127, 139, 111, 112],
+      "bodySpans": [472, 469, 491, 477],
+      "referenceHeight": 490,
+      "actions": [["march", [0, 1, 2, 3]]],
+      "annotationMethod": "Manual torso/pelvis X and row-shared ground Y; approximately +/-5 to 8 native pixels. One common source reference preserves gait/posture differences; no per-phase boot or cap normalization.",
+      "limitations": [
+        "Alternating contact and passing legs are plausible by thigh/knee/occlusion review, not skeletal or human-anatomical certification.",
+        "Body-span variation and source placement remain visible under one common scale; generated cloth and equipment are not guaranteed physically continuous.",
+        "Low-alpha RGB residue remains untouched; padding is verified at alpha64, not at every nonzero alpha.",
+        "Only SE march is supported; ready, fire, reload, melee and casualty use accepted fallback for this bearing.",
+        "Production and full-family approval remain false pending complete coverage and named-device performance review."
+      ]
+    }
+  ]
+}

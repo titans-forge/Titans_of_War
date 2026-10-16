@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "independent model-assisted native body/kit/bearing review",
+  "reviewer": "civilwar_survivor_review",
+  "date": "2026-10-03",
+  "source": "docs/art-pass/candidates/gettysburg-v10/confederate-a-ne-march-candidate.png",
+  "sourceSha256": "48f4c9537b8326d7d1451da727aae73161661ae408fd32ecb467d5d412d26b3d",
+  "nativeMode": "RGBA",
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "cellSize": 627,
+  "bytes": 531209,
+  "nativePixelsModifiedByReviewer": false,
+  "freshSourceReview": true,
+  "editIsolationEstablished": false,
+  "bodyKitBearingPaddingApprovedPreview": true,
+  "approvedPreview": null,
+  "productionApproved": false,
+  "humanAnatomicalCertification": false,
+  "historicalCertification": false,
+  "gaitChronologyAcceptedByThisReview": false,
+  "verdict": "Body, kit, bearing and padding usable; overall march preview acceptance remains pending separate anatomical support-chain review",
+  "referenceHeightRecommendation": 430,
+  "referenceHeightMethod": "One rounded native body reference for the entire source. Per-cell pelvis estimates with row-shared ground retain pose/body variation without per-phase normalization.",
+  "cells": [
+    {
+      "nativeIndex": 0,
+      "root": [
+        275,
+        594
+      ],
+      "pelvisXUncertaintyPx": 8,
+      "groundYUncertaintyPx": 4,
+      "capTopEstimate": 162,
+      "capTopUncertaintyPx": 3,
+      "bodySpanAtSharedGround": 432,
+      "alphaBounds": {
+        "1": {
+          "bboxInclusive": [
+            63,
+            46,
+            620,
+            626
+          ],
+          "minMargin": 0
+        },
+        "8": {
+          "bboxInclusive": [
+            191,
+            48,
+            382,
+            594
+          ],
+          "minMargin": 32
+        },
+        "64": {
+          "bboxInclusive": [
+            191,
+            50,
+            381,
+            593
+          ],
+          "minMargin": 33
+        }
+      },
+      "registeredPreviewBody300Bounds": {
+        "8": [
+          242.195,
+          45.47,
+          375.451,
+          426.4
+        ],
+        "64": [
+          242.195,
+          46.865,
+          374.753,
+          425.702
+        ]
+      }
+    },
+    {
+      "nativeIndex": 1,
+      "root": [
+        285,
+        594
+      ],
+      "pelvisXUncertaintyPx": 8,
+      "groundYUncertaintyPx": 4,
+      "capTopEstimate": 161,
+      "capTopUncertaintyPx": 3,
+      "bodySpanAtSharedGround": 433,
+      "alphaBounds": {
+        "1": {
+          "bboxInclusive": [
+            25,
+            47,
+            600,
+            618
+          ],
+          "minMargin": 8
+        },
+        "8": {
+          "bboxInclusive": [
+            199,
+            48,
+            394,
+            592
+          ],
+          "minMargin": 34
+        },
+        "64": {
+          "bboxInclusive": [
+            200,
+            50,
+            393,
+            592
+          ],
+          "minMargin": 34
+        }
+      },
+      "registeredPreviewBody300Bounds": {
+        "8": [
+          240.8,
+          45.47,
+          376.847,
+          425.005
+        ],
+        "64": [
+          241.498,
+          46.865,
+          376.149,
+          425.005
+        ]
+      }
+    },
+    {
+      "nativeIndex": 2,
+      "root": [
+        273,
+        587
+      ],
+      "pelvisXUncertaintyPx": 8,
+      "groundYUncertaintyPx": 4,
+      "capTopEstimate": 161,
+      "capTopUncertaintyPx": 3,
+      "bodySpanAtSharedGround": 426,
+      "alphaBounds": {
+        "1": {
+          "bboxInclusive": [
+            0,
+            5,
+            626,
+            626
+          ],
+          "minMargin": 0
+        },
+        "8": {
+          "bboxInclusive": [
+            169,
+            46,
+            382,
+            586
+          ],
+          "minMargin": 40
+        },
+        "64": {
+          "bboxInclusive": [
+            169,
+            49,
+            381,
+            586
+          ],
+          "minMargin": 40
+        }
+      },
+      "registeredPreviewBody300Bounds": {
+        "8": [
+          228.242,
+          48.958,
+          376.847,
+          425.702
+        ],
+        "64": [
+          228.242,
+          51.051,
+          376.149,
+          425.702
+        ]
+      }
+    },
+    {
+      "nativeIndex": 3,
+      "root": [
+        285,
+        587
+      ],
+      "pelvisXUncertaintyPx": 8,
+      "groundYUncertaintyPx": 4,
+      "capTopEstimate": 161,
+      "capTopUncertaintyPx": 3,
+      "bodySpanAtSharedGround": 426,
+      "alphaBounds": {
+        "1": {
+          "bboxInclusive": [
+            1,
+            7,
+            590,
+            602
+          ],
+          "minMargin": 1
+        },
+        "8": {
+          "bboxInclusive": [
+            199,
+            46,
+            394,
+            583
+          ],
+          "minMargin": 43
+        },
+        "64": {
+          "bboxInclusive": [
+            200,
+            48,
+            393,
+            581
+          ],
+          "minMargin": 45
+        }
+      },
+      "registeredPreviewBody300Bounds": {
+        "8": [
+          240.8,
+          48.958,
+          376.847,
+          423.609
+        ],
+        "64": [
+          241.498,
+          50.353,
+          376.149,
+          422.214
+        ]
+      }
+    }
+  ],
+  "appearanceFindings": [
+    "All four cells face the nominated rear-three-quarter bearing: upper-right NE or upper-left NW as appropriate, without a mirrored-source workaround.",
+    "Gray cap and wavy neck-length brown hair, short gray-taupe coat, pale trousers, brown boots, cream roll/tan canteen, crossed brown straps and multiple dark waist pouches remain coherent across all four cells.",
+    "Body-relative kit and shoulder rifle carry agree with the accepted NE/NW stationary sources and retained N family cues. Camera perspective changes silhouette visibility; small folds, seams and head/kit contours are not pixel-invariant.",
+    "March grips/rifle carry are plausible across the four source poses; fine finger placement is partly hidden and not anatomically certified.",
+    "Both passing illustrations visibly differ in lifted/extended boots and lower silhouette. Support-leg assignment and chronological order are intentionally left to the separate exact-SHA gait reviewer.",
+    "Every native alpha64 cell passes the solid 16px padding gate, and all proposed registered alpha8/64 extents fit640\u00d7520 at body300/root.47."
+  ],
+  "limitations": [
+    "This is independent body/kit/bearing/geometry review, not final anatomical gait acceptance.",
+    "Do not equate screen-space lowest boot with the anatomical support leg. Trace hip, knee and ankle continuity under overlap in the separate gait review.",
+    "Manual pelvis/row-floor/cap references carry explicit uncertainty and preserve native heel/posture variation.",
+    "Native low-alpha residues remain, including alpha1 pixels near or at NE cell boundaries. Solid padding is not exhaustive background-compositing proof.",
+    "This is a fresh whole-source review; requested localized changes do not establish surgical edit isolation.",
+    "No new raster, mirror, recolor, alpha cleanup, crop export or interpolation was produced by this reviewer."
+  ]
+}

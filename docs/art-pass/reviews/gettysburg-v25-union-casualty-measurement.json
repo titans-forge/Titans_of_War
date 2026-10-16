@@ -1,0 +1,207 @@
+{
+  "artPass": "gettysburg-v25",
+  "side": "union",
+  "identity": "a",
+  "direction": 3,
+  "role": "casualty",
+  "source": "docs/art-pass/candidates/gettysburg-v25/union-a-casualty-sw-candidate.png",
+  "sourceSHA256": "ad45e9eb0b9fcc2170958bafadd90077e4c59364103f8e8be5c49478840c1f02",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v25-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "2560f481e547caadea34fe7da54229b6508540ac735a5895ea2489aa9354f558",
+  "referenceHeight": 403,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh union contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "6c205aaa9034156d650516d95561f43f494415f52d4d41a84b53095008825983",
+      "ground": [
+        387,
+        590
+      ],
+      "groundROI": [
+        389,
+        545,
+        474,
+        598
+      ],
+      "groundMethod": "Projected pelvis X at the hips in the initial recoil. Ground Y is the lower nearer viewer-right boot sole, isolated from the SW-pointing rifle.",
+      "solidBounds": [
+        111,
+        168,
+        470,
+        590
+      ],
+      "solidPadding": [
+        111,
+        168,
+        157,
+        37
+      ],
+      "nonzeroBounds": [
+        108,
+        0,
+        627,
+        627
+      ]
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "07874e5095772afb64749813e5c5de041678d1f91d7ccb249b6be2c111ac0a18",
+      "ground": [
+        343,
+        603
+      ],
+      "groundROI": [
+        295,
+        578,
+        339,
+        613
+      ],
+      "groundMethod": "Projected pelvis X at the hips above the lowering knee. Ground Y is the underside of the nearer bracing palm/fingertips; the ROI excludes the rifle and other boot.",
+      "solidBounds": [
+        48,
+        327,
+        496,
+        603
+      ],
+      "solidPadding": [
+        48,
+        327,
+        131,
+        24
+      ],
+      "nonzeroBounds": [
+        1,
+        21,
+        565,
+        613
+      ]
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "c42fdc1ad1853cd9bdcdfb3d7a047f676d0a3860c12749c52015b60a2df36938",
+      "ground": [
+        405,
+        464
+      ],
+      "groundROI": [
+        295,
+        443,
+        345,
+        476
+      ],
+      "groundMethod": "Projected pelvis X at the collapsing hips. Ground Y is the lower edge of the nearer supporting palm/fingertips, isolated from the rifle held by the other hand.",
+      "solidBounds": [
+        82,
+        244,
+        580,
+        464
+      ],
+      "solidPadding": [
+        82,
+        244,
+        47,
+        163
+      ],
+      "nonzeroBounds": [
+        0,
+        0,
+        627,
+        563
+      ]
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "277d4509432245daeaf4c6e3dd1966965ad3ba8f9bebb031bdc5bef29105f81a",
+      "ground": [
+        354,
+        466
+      ],
+      "groundROI": [
+        221,
+        451,
+        242,
+        477
+      ],
+      "groundMethod": "Projected pelvis/torso X at prone rest. Ground Y is the underside of the nearer resting hand/knuckles below the forearm; the selected narrow ROI excludes the adjacent rifle stock as the determining edge.",
+      "solidBounds": [
+        62,
+        326,
+        559,
+        466
+      ],
+      "solidPadding": [
+        62,
+        326,
+        68,
+        161
+      ],
+      "nonzeroBounds": [
+        1,
+        5,
+        589,
+        627
+      ]
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 3,
+      "action": "fall",
+      "key": "union-gettysburg-v25-a-casualty-sw",
+      "frames": [
+        "a-fall-3-0",
+        "a-fall-3-1",
+        "a-fall-3-2",
+        "a-fall-3-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.617225,
+          "y": 0.940989
+        },
+        {
+          "x": 0.547049,
+          "y": 0.961722
+        },
+        {
+          "x": 0.645933,
+          "y": 0.740032
+        },
+        {
+          "x": 0.564593,
+          "y": 0.743222
+        }
+      ],
+      "referenceHeight": 403,
+      "sourceHash": "ad45e9eb0b9fcc2170958bafadd90077e4c59364103f8e8be5c49478840c1f02",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeCasualtySequence": "gettysburg-v25-union-a-sw-casualty",
+      "scope": "Exact source-reviewed union A SW local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "gettysburg-v29-historical-hash-migration-v1",
+  "reason": "Authorized v29 presentation-scale runtime change with immutable historical fixtures and mandatory before/current legacy behavior differential",
+  "historicalFixturesRefreshed": false,
+  "mandatoryDifferentialGate": "scripts/test-gettysburg-v29-readability.mjs",
+  "migrations": [
+    {
+      "path": "src/battle/CivilWarBattlefield.jsx",
+      "archive": "scripts/test-support/gettysburg-v29-before/src/battle/CivilWarBattlefield.jsx",
+      "beforeSHA256": "c3817e4f2454ce6b6abdd9b889ecdc82881f05797b5c80ef2bf6c2a08b699f3d",
+      "currentSHA256": "379e91d676a98cfc8ee0f49152e89bd2595e19995c8e57113e4382ea808f7ad0",
+      "reason": "Explicit v29 infantry body/shadow/muzzle presentation factor; ground/formation/combat/checkpoint semantics retained"
+    },
+    {
+      "path": "src/battle/gettysburgInfantryVolleyPresentation.js",
+      "archive": "scripts/test-support/gettysburg-v29-before/src/battle/gettysburgInfantryVolleyPresentation.js",
+      "beforeSHA256": "613990bab5fb7de5cb4cec1cab14cf756e83d11082d5da353d2d7dd0cf9fe39c",
+      "currentSHA256": "48b0dc9e7871fb1c0ae79298728a287918799b966fc4ffde5b57b3ccf71ec94f",
+      "reason": "Explicit v29 infantry body/shadow/muzzle presentation factor; ground/formation/combat/checkpoint semantics retained"
+    },
+    {
+      "path": "scripts/test-gettysburg-v18-policy.mjs",
+      "archive": "scripts/test-support/gettysburg-v29-before/scripts/test-gettysburg-v18-policy.mjs",
+      "beforeSHA256": "b54627871b9e5b0d1ae205fce7df218680b58f49501e702c1b78f45f827078e9",
+      "currentSHA256": "bad0e6b4e716ed57eb258d71a4009584b099ba615390b469338205615dfeaef2",
+      "reason": "Only import the strict v29 historical-file assertion and replace the obsolete whole-current-file hash assertion; retain every existing behavioral assertion"
+    },
+    {
+      "path": "scripts/test-gettysburg-v20-contact.mjs",
+      "archive": "scripts/test-support/gettysburg-v29-before/scripts/test-gettysburg-v20-contact.mjs",
+      "beforeSHA256": "a9e3ef423cd491ff92d268e8f4832cf888729567469339d3ad27e54610d09d54",
+      "currentSHA256": "185655d613429aa00f1d9b0af281889a31c58cb3efecbc6140b9833796214289",
+      "reason": "Only import the strict v29 historical-file assertion and replace the obsolete whole-current-file hash assertion; retain every existing behavioral assertion"
+    },
+    {
+      "path": "scripts/test-gettysburg-v21-contact.mjs",
+      "archive": "scripts/test-support/gettysburg-v29-before/scripts/test-gettysburg-v21-contact.mjs",
+      "beforeSHA256": "e086d372f0dd003eaa504a1f4abdedfc7490fa3f43679f61bf6076fd3c51805e",
+      "currentSHA256": "46bfbe9069e186103250b7eb6aa3b9d3fa9c5b5ffd94c14e07f3060eac5fad5f",
+      "reason": "Only import the strict v29 historical-file assertion and replace the obsolete whole-current-file hash assertion; retain every existing behavioral assertion"
+    },
+    {
+      "path": "scripts/test-gettysburg-v22-contact.mjs",
+      "archive": "scripts/test-support/gettysburg-v29-before/scripts/test-gettysburg-v22-contact.mjs",
+      "beforeSHA256": "b94536100692e48df5e54484cc65597a79aeda32d164123d79e040821f0fd741",
+      "currentSHA256": "0204a3386f262bdcd1b0bf8daf8080f0f27e403df4a9ce416986a1ded2166e41",
+      "reason": "Only import the strict v29 historical-file assertion and replace the obsolete whole-current-file hash assertion; retain every existing behavioral assertion"
+    },
+    {
+      "path": "scripts/test-gettysburg-v23-contact.mjs",
+      "archive": "scripts/test-support/gettysburg-v29-before/scripts/test-gettysburg-v23-contact.mjs",
+      "beforeSHA256": "4627862d1c258a95c2d0a591c855998eb0bd8a5504d89c7e27e5b3545dc73ad5",
+      "currentSHA256": "3454d0284c278893d468f0bf956e22134df590334f2a0739b0e28a29342be86c",
+      "reason": "Only import the strict v29 historical-file assertion and replace the obsolete whole-current-file hash assertion; retain every existing behavioral assertion"
+    },
+    {
+      "path": "scripts/test-gettysburg-v24-contact.mjs",
+      "archive": "scripts/test-support/gettysburg-v29-before/scripts/test-gettysburg-v24-contact.mjs",
+      "beforeSHA256": "093d418e6fa4939330f64d20b91bcf17b73f7421c35e74afc8fb46f31c08c857",
+      "currentSHA256": "50338383ff39a23843a71c8786163fb5bb2193eb61108b27e861d40ca66e6146",
+      "reason": "Only import the strict v29 historical-file assertion and replace the obsolete whole-current-file hash assertion; retain every existing behavioral assertion"
+    },
+    {
+      "path": "scripts/test-gettysburg-v25-contact.mjs",
+      "archive": "scripts/test-support/gettysburg-v29-before/scripts/test-gettysburg-v25-contact.mjs",
+      "beforeSHA256": "9d98aeb1957381e01beb75cf325335286f17bbed91db94970b0792a1d9e2149f",
+      "currentSHA256": "392e521bce05bd5d1f9237f65945442cb0372bda72248daedac478cb44ce5357",
+      "reason": "Only import the strict v29 historical-file assertion and replace the obsolete whole-current-file hash assertion; retain every existing behavioral assertion"
+    },
+    {
+      "path": "scripts/test-gettysburg-v26-contact.mjs",
+      "archive": "scripts/test-support/gettysburg-v29-before/scripts/test-gettysburg-v26-contact.mjs",
+      "beforeSHA256": "eb152fa3ec8b304ac6b636033e20e016be12a8bcf9549fb86f095aea60e03f1c",
+      "currentSHA256": "9f0e16d3ac6e97b5ca08b4f498b998a4a278556ff4abad47819a1e00df9102a8",
+      "reason": "Only import the strict v29 historical-file assertion and replace the obsolete whole-current-file hash assertion; retain every existing behavioral assertion"
+    },
+    {
+      "path": "scripts/test-gettysburg-v27-policy.mjs",
+      "archive": "scripts/test-support/gettysburg-v29-before/scripts/test-gettysburg-v27-policy.mjs",
+      "beforeSHA256": "c2f8480f6b5742ebdec78d11f81851a775dc748cfb5095c184e2f5b7377f7da7",
+      "currentSHA256": "fe414985f552a87e2edaeacd5aa54323ebf5c32a228e44f4f772a19a6a680294",
+      "reason": "Only import the strict v29 historical-file assertion and replace the obsolete whole-current-file hash assertion; retain every existing behavioral assertion"
+    },
+    {
+      "path": "scripts/test-gettysburg-v28-policy.mjs",
+      "archive": "scripts/test-support/gettysburg-v29-before/scripts/test-gettysburg-v28-policy.mjs",
+      "beforeSHA256": "6b04fdf770707193a6f3e0540f90b5cce7c31e14c45193921c9574ae425b9ddb",
+      "currentSHA256": "4f2b192835e87cd754c2f5ba6248117bba7f763fe516c1d6361821189937c669",
+      "reason": "Only import the strict v29 historical-file assertion and replace the obsolete whole-current-file hash assertion; retain every existing behavioral assertion"
+    }
+  ],
+  "supplement": {
+    "path": "scripts/fixtures/gettysburg-v29-preservation-supplement.json",
+    "sha256": "69b36e313af364de439bf99593d3e6fb94018db00419ba3fca84204d6276e3c9"
+  }
+}

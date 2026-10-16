@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-03",
+  "priorReference": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-actions-padded-candidate.png",
+  "sources": [
+    {
+      "title": "Clothing of a Civil War Soldier",
+      "url": "https://www.nps.gov/gett/learn/education/a-nation-at-war-traveling-trunk-table-1-clothing.htm",
+      "use": "Natural cloth/wool/cotton and kepi/jacket/trousers/shoes context. Not a unit-specific uniform certification."
+    },
+    {
+      "title": "Accouterments of a Civil War Soldier",
+      "url": "https://www.nps.gov/gett/learn/education/a-nation-at-war-table-2-accouterments-of-a-civil-war-soldier-teacher-s-instructions.htm",
+      "use": "Bedroll, canteen, haversack, cartridge/cap pouches and rifled-musket loading context. Two source loading poses are representative, not a full drill."
+    }
+  ],
+  "generationMode": "built-in imagegen",
+  "underlyingModelID": "not exposed by tool",
+  "productionApproved": false,
+  "familyComplete": false
+}

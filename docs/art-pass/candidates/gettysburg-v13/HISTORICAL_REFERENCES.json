@@ -1,0 +1,22 @@
+{
+  "artPass": "gettysburg-v13",
+  "checkedDate": "2026-10-03",
+  "generationMode": "Built-in image_gen.imagegen with transparent_background true; underlying model identifier is not exposed by the tool.",
+  "identityReference": "Retained Confederate A gray/tan kit; new sources are representative interpretations rather than certified exact uniform or facial matches.",
+  "references": [
+    {
+      "title": "Gettysburg National Military Park: Clothing of a Civil War Soldier",
+      "url": "https://www.nps.gov/gett/learn/education/a-nation-at-war-traveling-trunk-table-1-clothing.htm",
+      "use": "General period clothing context: kepi, jacket, trousers, shoes and wool/cotton materials. Does not certify a particular Confederate regiment or the generated uniform cut."
+    },
+    {
+      "title": "Gettysburg National Military Park: Accouterments of a Civil War Soldier",
+      "url": "https://www.nps.gov/gett/learn/education/a-nation-at-war-table-2-accouterments-of-a-civil-war-soldier-teacher-s-instructions.htm",
+      "use": "General blanket, canteen, haversack, cartridge pouch, rifled-musket, bayonet and ramrod context. The two generated loading states are simplified visual cues, not a complete verified drill."
+    }
+  ],
+  "productionApproved": false,
+  "familyComplete": false,
+  "humanReviewed": false,
+  "historicalDrillCertified": false
+}

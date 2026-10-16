@@ -1,0 +1,194 @@
+{
+  "modelId": "not exposed by built-in tool",
+  "attempts": [
+    {
+      "id": "se-march",
+      "prompt": "Use case: historical-scene. Asset: photorealistic native RGBA sprite sheet for a Civil War infantry game. Create a NEW soldier sheet, using image 1 ONLY for the accepted Confederate soldier identity, uniform and realistic materials, and image 2 ONLY for matching equipment. Do not copy their viewing angle or high marching knee.\nSquare image, exactly FOUR full-body views in a clean 2 by 2 grid with equal square cells. Genuine transparent background, no shadow/backdrop/grid/text. Same adult bearded Confederate infantryman, worn gray kepi and wool jacket, tan trousers, brown boots and leather cross straps, black cartridge pouch, compact rolled tan blanket and round tan canteen. Anatomical right hand remains the dominant weapon hand in all views. Realistic restrained human proportions, worn cloth creases and brass/wood/steel details; no cartoon/anime, no bright colored fringes. A single complete musket with attached bayonet per cell. Elevated orthographic camera about 35 degrees above ground, exactly the same magnification, lighting and uniform in all four cells. Each entire soldier plus weapon must sit comfortably inside its own cell with at least 55 pixels of clean empty margin; make figures a little smaller if necessary. No overlapping cells or clipped bayonet tips.\nBEARING IN ALL FOUR CELLS: SOUTHEAST: toward the camera and toward IMAGE RIGHT. Visible face/chest turn diagonally DOWN-RIGHT, boots point down-right. This is a front three-quarter view, not east profile or back view.\nFOUR SUCCESSIVE NATURAL WALKING PHASES, rifle carried upright with two normal hands, moderately short stride, head/torso facing same diagonal:\nTop left: anatomical LEFT foot forward in heel contact, RIGHT foot trailing.\nTop right: anatomical LEFT leg supports body with sole planted, RIGHT foot passes forward lifted only slightly with a restrained bent knee.\nBottom left: anatomical RIGHT foot forward in heel contact, LEFT foot trailing.\nBottom right: anatomical RIGHT leg supports body with sole planted, LEFT foot passes forward lifted slightly.\nCritical: Top right and bottom right must have OPPOSITE anatomical supporting legs. Trace each hip through knee and shin to the boot. The airborne foot is not the contact foot. Natural weight over the planted sole. Do not repeat the same legs or show a high parade goose-step.",
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-6af04dd3-2016-467a-9497-66adefbb5e28.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-se-march-attempt-1.png",
+      "sha256": "393aabfef55da4d207e3deaff8d18e9548907bfc08bce914845b7e8e14e62569",
+      "mode": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "se-actions",
+      "prompt": "Use case: historical-scene. Asset: photorealistic native RGBA sprite sheet for a Civil War infantry game. Create a NEW soldier sheet, using image 1 ONLY for the accepted Confederate soldier identity, uniform and realistic materials, and image 2 ONLY for matching equipment. Do not copy their viewing angle or high marching knee.\nSquare image, exactly FOUR full-body views in a clean 2 by 2 grid with equal square cells. Genuine transparent background, no shadow/backdrop/grid/text. Same adult bearded Confederate infantryman, worn gray kepi and wool jacket, tan trousers, brown boots and leather cross straps, black cartridge pouch, compact rolled tan blanket and round tan canteen. Anatomical right hand remains the dominant weapon hand in all views. Realistic restrained human proportions, worn cloth creases and brass/wood/steel details; no cartoon/anime, no bright colored fringes. A single complete musket with attached bayonet per cell. Elevated orthographic camera about 35 degrees above ground, exactly the same magnification, lighting and uniform in all four cells. Each entire soldier plus weapon must sit comfortably inside its own cell with at least 55 pixels of clean empty margin; make figures a little smaller if necessary. No overlapping cells or clipped bayonet tips.\nBEARING IN ALL FOUR CELLS: SOUTHEAST: toward the camera and toward IMAGE RIGHT. Visible face/chest turn diagonally DOWN-RIGHT, boots point down-right. This is a front three-quarter view, not east profile or back view.\nFOUR DISTINCT STATIONARY MUSKET ACTIONS, both boots planted:\nTop left READY: upright musket held at anatomical right side with realistic two hand grip.\nTop right FIRE: butt actually seated against anatomical right shoulder, cheek at stock, right index finger at trigger, left hand supporting fore-end. Barrel aimed horizontally in the world along this diagonal toward the viewer; show natural foreshortening and distinct visible barrel mouth with offset attached bayonet. No muzzle flash, smoke or baked recoil.\nBottom left LOAD: musket upright, butt grounded beside boot, one hand stabilizing and the loading hand working at the barrel mouth.\nBottom right RAM: same upright musket, distinct slender extracted ramrod aligned down into barrel, raised ramming hand, other hand stabilizes. Rod is separate thin straight steel, not a second rifle.\nAll are the same person from the same diagonal camera. Correct two arms/two legs and plausible grips.",
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-6475adc3-80d8-418a-8673-0929525c7a5f.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-se-actions-attempt-1.png",
+      "sha256": "b7777111dc0d157ece2593e73e6d5a1d7f7deb0d469138dffca799292eb4fb97",
+      "mode": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "sw-march",
+      "prompt": "Use case: historical-scene. Asset: photorealistic native RGBA sprite sheet for a Civil War infantry game. Create a NEW soldier sheet, using image 1 ONLY for the accepted Confederate soldier identity, uniform and realistic materials, and image 2 ONLY for matching equipment. Do not copy their viewing angle or high marching knee.\nSquare image, exactly FOUR full-body views in a clean 2 by 2 grid with equal square cells. Genuine transparent background, no shadow/backdrop/grid/text. Same adult bearded Confederate infantryman, worn gray kepi and wool jacket, tan trousers, brown boots and leather cross straps, black cartridge pouch, compact rolled tan blanket and round tan canteen. Anatomical right hand remains the dominant weapon hand in all views. Realistic restrained human proportions, worn cloth creases and brass/wood/steel details; no cartoon/anime, no bright colored fringes. A single complete musket with attached bayonet per cell. Elevated orthographic camera about 35 degrees above ground, exactly the same magnification, lighting and uniform in all four cells. Each entire soldier plus weapon must sit comfortably inside its own cell with at least 55 pixels of clean empty margin; make figures a little smaller if necessary. No overlapping cells or clipped bayonet tips.\nBEARING IN ALL FOUR CELLS: SOUTHWEST: toward the camera and toward IMAGE LEFT. Visible face/chest turn diagonally DOWN-LEFT, boots point down-left. This is a front three-quarter view, not west profile or back view. Independently render anatomy and kit; do NOT mirror an existing view.\nFOUR SUCCESSIVE NATURAL WALKING PHASES, rifle carried upright with two normal hands, moderately short stride, head/torso facing same diagonal:\nTop left: anatomical LEFT foot forward in heel contact, RIGHT foot trailing.\nTop right: anatomical LEFT leg supports body with sole planted, RIGHT foot passes forward lifted only slightly with a restrained bent knee.\nBottom left: anatomical RIGHT foot forward in heel contact, LEFT foot trailing.\nBottom right: anatomical RIGHT leg supports body with sole planted, LEFT foot passes forward lifted slightly.\nCritical: Top right and bottom right must have OPPOSITE anatomical supporting legs. Trace each hip through knee and shin to the boot. The airborne foot is not the contact foot. Natural weight over the planted sole. Do not repeat the same legs or show a high parade goose-step.",
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-62bda201-cf20-4b7a-a2b1-ba6b268acfc5.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-sw-march-attempt-1.png",
+      "sha256": "780805f75ab6e04a26133bf61aa3d6201f13221968ad4fedcfedf1f3bd9ee60c",
+      "mode": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "sw-actions",
+      "prompt": "Use case: historical-scene. Asset: photorealistic native RGBA sprite sheet for a Civil War infantry game. Create a NEW soldier sheet, using image 1 ONLY for the accepted Confederate soldier identity, uniform and realistic materials, and image 2 ONLY for matching equipment. Do not copy their viewing angle or high marching knee.\nSquare image, exactly FOUR full-body views in a clean 2 by 2 grid with equal square cells. Genuine transparent background, no shadow/backdrop/grid/text. Same adult bearded Confederate infantryman, worn gray kepi and wool jacket, tan trousers, brown boots and leather cross straps, black cartridge pouch, compact rolled tan blanket and round tan canteen. Anatomical right hand remains the dominant weapon hand in all views. Realistic restrained human proportions, worn cloth creases and brass/wood/steel details; no cartoon/anime, no bright colored fringes. A single complete musket with attached bayonet per cell. Elevated orthographic camera about 35 degrees above ground, exactly the same magnification, lighting and uniform in all four cells. Each entire soldier plus weapon must sit comfortably inside its own cell with at least 55 pixels of clean empty margin; make figures a little smaller if necessary. No overlapping cells or clipped bayonet tips.\nBEARING IN ALL FOUR CELLS: SOUTHWEST: toward the camera and toward IMAGE LEFT. Visible face/chest turn diagonally DOWN-LEFT, boots point down-left. This is a front three-quarter view, not west profile or back view. Independently render anatomy and kit; do NOT mirror an existing view.\nFOUR DISTINCT STATIONARY MUSKET ACTIONS, both boots planted:\nTop left READY: upright musket held at anatomical right side with realistic two hand grip.\nTop right FIRE: butt actually seated against anatomical right shoulder, cheek at stock, right index finger at trigger, left hand supporting fore-end. Barrel aimed horizontally in the world along this diagonal toward the viewer; show natural foreshortening and distinct visible barrel mouth with offset attached bayonet. No muzzle flash, smoke or baked recoil.\nBottom left LOAD: musket upright, butt grounded beside boot, one hand stabilizing and the loading hand working at the barrel mouth.\nBottom right RAM: same upright musket, distinct slender extracted ramrod aligned down into barrel, raised ramming hand, other hand stabilizes. Rod is separate thin straight steel, not a second rifle.\nAll are the same person from the same diagonal camera. Correct two arms/two legs and plausible grips.",
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-39f91f52-49f6-42ef-b122-d821ae328250.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-sw-actions-attempt-1.png",
+      "sha256": "93190ec534cf99ff7c2f894ae7fd81bbe770b1999e6ac2fb57b9b9ba1ccad157",
+      "mode": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "se-march",
+      "prompt": "Use case: historical-scene. Create a new photorealistic Civil War Confederate infantry four-phase walking sprite sheet with true transparency.\nImage 1 is the AUTHORITATIVE native 3D guide for camera angle, figure size, cell position and especially the complete LEFT and RIGHT leg chains. The BLUE full leg chain is anatomical LEFT; RED full leg chain is anatomical RIGHT. Replace those diagnostic colors with ordinary TAN wool trousers and brown boots, using realistic anatomy. Image 2 is ONLY the worn Confederate uniform, bearded identity, gray kepi/jacket, leather straps, musket, blanket roll and canteen appearance reference, NOT the layout or direction.\nCritical: reproduce the exact four different leg chains from the first guide. TL: LEFT leg contacts forward; RIGHT trails. TR: LEFT sole planted supporting, RIGHT knee gently bends with lifted passing boot. BL: RIGHT leg contacts forward, LEFT trails. BR: RIGHT sole planted supporting, LEFT knee gently bends with lifted passing boot. TR and BR must have opposite supporting legs; TL and BL opposite forward legs. Trace from colored hip through knee/shin/boot; do not substitute the same front leg in all cells. A modest natural walk, no high goose-step.\nAll four soldiers face diagonally toward camera and IMAGE RIGHT, front three-quarter SOUTHEAST matching guide. A single upright musket/bayonet with two believable hands. Same adult, uniform/kit, camera and magnification. Detailed worn wool, skin, leather, wood, steel; grounded realistic human anatomy, no cartoon. Do not mirror any sprite.\nLayout: exactly2x2 equal square cells on square RGBA canvas. Match the SMALL FIGURES in guide: figure plus ENTIRE rifle/bayonet fills only about 50-55 percent of each cell HEIGHT; centered near cell center, with at least100px transparent space under/above each whole figure at1254px canvas. Keep every bayonet tip, boot and pouch well within its cell. Do not enlarge the figures like the appearance reference. No overlap, no cross-row pixels, no ground, shadow, text, labels, grid or colored residual outlines. All alpha outside cutouts is zero.",
+      "refs": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-se/confederate-a-se-march-colored-leg-native-guide.png",
+        "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v14/confederate-a-s-actions-candidate.png"
+      ],
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-9146b53a-d52c-4bb3-9ea9-0148210c722c.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-se-march-attempt-2.png",
+      "sha256": "8c9b61a5c14c402393c8c0b7346d53f5f46a28644b0c390c6b7a8b57ff244712",
+      "mode": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "sw-march",
+      "prompt": "Use case: historical-scene. Create a new photorealistic Civil War Confederate infantry four-phase walking sprite sheet with true transparency.\nImage 1 is the AUTHORITATIVE native 3D guide for camera angle, figure size, cell position and especially the complete LEFT and RIGHT leg chains. The BLUE full leg chain is anatomical LEFT; RED full leg chain is anatomical RIGHT. Replace those diagnostic colors with ordinary TAN wool trousers and brown boots, using realistic anatomy. Image 2 is ONLY the worn Confederate uniform, bearded identity, gray kepi/jacket, leather straps, musket, blanket roll and canteen appearance reference, NOT the layout or direction.\nCritical: reproduce the exact four different leg chains from the first guide. TL: LEFT leg contacts forward; RIGHT trails. TR: LEFT sole planted supporting, RIGHT knee gently bends with lifted passing boot. BL: RIGHT leg contacts forward, LEFT trails. BR: RIGHT sole planted supporting, LEFT knee gently bends with lifted passing boot. TR and BR must have opposite supporting legs; TL and BL opposite forward legs. Trace from colored hip through knee/shin/boot; do not substitute the same front leg in all cells. A modest natural walk, no high goose-step.\nAll four soldiers face diagonally toward camera and IMAGE LEFT, front three-quarter SOUTHWEST matching guide. A single upright musket/bayonet with two believable hands. Same adult, uniform/kit, camera and magnification. Detailed worn wool, skin, leather, wood, steel; grounded realistic human anatomy, no cartoon. Do not mirror any sprite.\nLayout: exactly2x2 equal square cells on square RGBA canvas. Match the SMALL FIGURES in guide: figure plus ENTIRE rifle/bayonet fills only about 50-55 percent of each cell HEIGHT; centered near cell center, with at least100px transparent space under/above each whole figure at1254px canvas. Keep every bayonet tip, boot and pouch well within its cell. Do not enlarge the figures like the appearance reference. No overlap, no cross-row pixels, no ground, shadow, text, labels, grid or colored residual outlines. All alpha outside cutouts is zero.",
+      "refs": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-sw/confederate-a-sw-march-colored-leg-native-guide.png",
+        "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v14/confederate-a-s-actions-candidate.png"
+      ],
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-6b822112-df6d-4080-ac86-9a271aeaa604.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-sw-march-attempt-2.png",
+      "sha256": "48a70c96e2931e28f6cdf88c9e89f466d5b52be855a8b17f59ce24f45ff2d00e",
+      "mode": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "se-actions",
+      "prompt": "Use case: historical-scene. New photorealistic Confederate infantry RGBA action sprite sheet.\nImage1 is a native structural guide ONLY for SE front-three-quarter direction, small figure size and the2x2 cell composition. Keep this SMALL composition, about50percent of each cell height. Image2 is the accepted identity and uniform/material reference ONLY: gray kepi and worn gray wool jacket, tan trousers/brown boots, brown crossed straps, dark leather cartridge pouch, compact tan blanket roll/canteen, bearded adult. Replace diagnostic colored guide legs with realistic tan trousers and brown boots. No diagnostic colors or outlines survive.\nFour full-body stationary views of the SAME soldier, two planted boots in each, all facing toward camera and IMAGE RIGHT, chest/head/toes diagonally DOWN-RIGHT with elevated35degree orthographic camera, identical lighting/magnification.\nTL READY: one upright complete rifle/musket and attached bayonet carried naturally at anatomical right with two plausible hands.\nTR FIRE: muzzle points along this actual diagonal towards the camera. Show realistic world-level barrel foreshortened. Correct anatomical RIGHT shoulder receiving rifle butt, right cheek against stock and right index finger at trigger, left hand under fore-end. Make actual round barrel mouth distinguishable from offset bayonet tip. Correct anatomy/head posture takes priority over primitive guide. No baked flash/smoke/recoil.\nBL LOAD: rifle upright butt grounded beside boot, stabilizing hand on stock and loading hand putting cartridge into barrel mouth.\nBR RAM: same rifle upright, raised dominant hand on distinct thin extracted ramrod moving into barrel, other hand stabilizes. Clearly different from loading, no extra weapons/limbs.\nCRITICAL LAYOUT: square transparent canvas exactly2x2equalcells. Follow guide small size and placement. Each whole figure AND rifle/bayonet/ramrod must fit well within its cell, occupying only50-55percent of cellheight. At1254canvas allow at least100pixels empty padding ABOVE AND BELOW every figure, even raised ramrod and bayonet. No cross-row pixels, no oversize figure like appearance reference. Entire rifles, rods, boots fully visible, no overlaps, text, grid, ground, shadows or colored fringe. Realistic skin/wool/leather/wood/steel detail, restrained anatomy, no cartoons. This is a newly rendered native diagonal perspective; do not mirror.",
+      "refs": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-se/confederate-a-se-actions-native-guide.png",
+        "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v14/confederate-a-s-actions-candidate.png"
+      ],
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-fcbe45ef-afe2-40f9-8509-385b81a62e8a.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-se-actions-attempt-2.png",
+      "sha256": "94dbce4e33aaa22cd07ee83c6831dac37c999544e5ddad4e63a0f9256bc02e51",
+      "mode": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "sw-actions",
+      "prompt": "Use case: historical-scene. New photorealistic Confederate infantry RGBA action sprite sheet.\nImage1 is a native structural guide ONLY for SW front-three-quarter direction, small figure size and the2x2 cell composition. Keep this SMALL composition, about50percent of each cell height. Image2 is the accepted identity and uniform/material reference ONLY: gray kepi and worn gray wool jacket, tan trousers/brown boots, brown crossed straps, dark leather cartridge pouch, compact tan blanket roll/canteen, bearded adult. Replace diagnostic colored guide legs with realistic tan trousers and brown boots. No diagnostic colors or outlines survive.\nFour full-body stationary views of the SAME soldier, two planted boots in each, all facing toward camera and IMAGE LEFT, chest/head/toes diagonally DOWN-LEFT with elevated35degree orthographic camera, identical lighting/magnification.\nTL READY: one upright complete rifle/musket and attached bayonet carried naturally at anatomical right with two plausible hands.\nTR FIRE: muzzle points along this actual diagonal towards the camera. Show realistic world-level barrel foreshortened. Correct anatomical RIGHT shoulder receiving rifle butt, right cheek against stock and right index finger at trigger, left hand under fore-end. Make actual round barrel mouth distinguishable from offset bayonet tip. Correct anatomy/head posture takes priority over primitive guide. No baked flash/smoke/recoil.\nBL LOAD: rifle upright butt grounded beside boot, stabilizing hand on stock and loading hand putting cartridge into barrel mouth.\nBR RAM: same rifle upright, raised dominant hand on distinct thin extracted ramrod moving into barrel, other hand stabilizes. Clearly different from loading, no extra weapons/limbs.\nCRITICAL LAYOUT: square transparent canvas exactly2x2equalcells. Follow guide small size and placement. Each whole figure AND rifle/bayonet/ramrod must fit well within its cell, occupying only50-55percent of cellheight. At1254canvas allow at least100pixels empty padding ABOVE AND BELOW every figure, even raised ramrod and bayonet. No cross-row pixels, no oversize figure like appearance reference. Entire rifles, rods, boots fully visible, no overlaps, text, grid, ground, shadows or colored fringe. Realistic skin/wool/leather/wood/steel detail, restrained anatomy, no cartoons. This is a newly rendered native diagonal perspective; do not mirror.",
+      "refs": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-sw/confederate-a-sw-actions-native-guide.png",
+        "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v14/confederate-a-s-actions-candidate.png"
+      ],
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-957101c6-5f60-467a-900d-75629f8510b5.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-sw-actions-attempt-2.png",
+      "sha256": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d",
+      "mode": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "se-march-colored",
+      "prompt": "Edit the FIRST IMAGE as a structural sprite sheet. Preserve its EXACT 2x2 layout, camera bearing, four body poses, hip-to-knee-to-boot geometry, and the placement/size of every figure. Turn the primitive mannequin into a photorealistic adult bearded Civil War Confederate infantryman, with gray wool kepi and gray worn jacket, tan blanket roll/canteen, brown crossed leather straps/boots, dark cartridge pouch, one complete upright wooden musket with steel bayonet and natural two-hand grip.\nCRITICAL: Keep anatomical LEFT trousers/leg/boot BLUE and anatomical RIGHT trousers/leg/boot RED exactly as in this diagnostic image, so we can verify topology. The guide leg colors identify separate connected hips, knees, shins, and boots; follow each COMPLETE colored chain. Do not replace the four poses with your idea of generic marching. The upper left and bottom left forward legs are opposite. The upper right support is BLUE/LEFT; bottom right support is RED/RIGHT. The airborne legs are opposite. Maintain those exact complete chains and restrained knee bends. Do not alter these poses or repeat a supporting leg.\nThe final image for this step deliberately retains colored trousers/boots for verification, all else photoreal cloth/skin/kit. Genuine RGBA transparency, no shadow/background/grid/text. Same SMALL figures inside equal cells as input, wide clean transparent padding; never enlarge or clip weapon/boots. Direction remains SE native front three-quarter facing toward camera and imageRIGHT. No mirroring, and no new additional images/subjects.",
+      "refs": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-se/confederate-a-se-march-colored-leg-native-guide.png"
+      ],
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-00d363ac-e49f-4aa1-b7be-2e8a4bcc5ac1.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-se-march-colored-intermediate.png",
+      "sha256": "04faf9c3e282612d2d10304cfebb90d6e23afef65cd1759228649abd09a1429d",
+      "mode": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "sw-march-colored",
+      "prompt": "Edit the FIRST IMAGE as a structural sprite sheet. Preserve its EXACT 2x2 layout, camera bearing, four body poses, hip-to-knee-to-boot geometry, and the placement/size of every figure. Turn the primitive mannequin into a photorealistic adult bearded Civil War Confederate infantryman, with gray wool kepi and gray worn jacket, tan blanket roll/canteen, brown crossed leather straps/boots, dark cartridge pouch, one complete upright wooden musket with steel bayonet and natural two-hand grip.\nCRITICAL: Keep anatomical LEFT trousers/leg/boot BLUE and anatomical RIGHT trousers/leg/boot RED exactly as in this diagnostic image, so we can verify topology. The guide leg colors identify separate connected hips, knees, shins, and boots; follow each COMPLETE colored chain. Do not replace the four poses with your idea of generic marching. The upper left and bottom left forward legs are opposite. The upper right support is BLUE/LEFT; bottom right support is RED/RIGHT. The airborne legs are opposite. Maintain those exact complete chains and restrained knee bends. Do not alter these poses or repeat a supporting leg.\nThe final image for this step deliberately retains colored trousers/boots for verification, all else photoreal cloth/skin/kit. Genuine RGBA transparency, no shadow/background/grid/text. Same SMALL figures inside equal cells as input, wide clean transparent padding; never enlarge or clip weapon/boots. Direction remains SW native front three-quarter facing toward camera and imageLEFT. No mirroring, and no new additional images/subjects.",
+      "refs": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-sw/confederate-a-sw-march-colored-leg-native-guide.png"
+      ],
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-154c46d1-c610-462d-96a6-5787b1a5ee7a.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-sw-march-colored-intermediate.png",
+      "sha256": "ee539c57924c8a243ecf9d554f07387113beb8216eafe4515a9f55528497511e",
+      "mode": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "se-march",
+      "refs": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-se-march-colored-intermediate.png"
+      ],
+      "prompt": "Edit this native2x2 sprite sheet. Change ONLY the diagnostic BLUE and RED trousers to the same weathered TAN wool trousers and the blue/red boots to natural dark BROWN leather boots. Keep the exact FOUR DIFFERENT poses, complete left/right anatomical leg chains, knee bends, supporting legs and airborne foot positions. Preserve every silhouette, viewing bearing, rifle/hands/kit/face/jacket/cap, body scale, cell positions and empty transparent padding. No geometric change or reposing. The two contact frames have opposite forward legs and the two passing frames opposite supports; keep them intact. This is a material/color replacement ONLY. Final kit is ordinary Confederate gray jacket/kepi, tan trousers, brown boots/straps; no blue/red trousers or bright fringe remains. Same native square transparent RGBA2x2 sheet, four complete soldiers, no background/shadow/text/grid. Do not mirror, crop or enlarge any figure.",
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-add6bf8f-8f04-419c-a2c3-0d66daf40ec6.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-se-march-attempt-3.png",
+      "sha256": "b82669f342a640e0d980fe58ee0bbe6e781bae78db3797f9dc46b7608dcf011c",
+      "mode": "built-in image_gen",
+      "transparent_background": true
+    },
+    {
+      "id": "sw-march",
+      "refs": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-sw-march-colored-intermediate.png"
+      ],
+      "prompt": "Edit this native2x2 sprite sheet. Change ONLY the diagnostic BLUE and RED trousers to the same weathered TAN wool trousers and the blue/red boots to natural dark BROWN leather boots. Keep the exact FOUR DIFFERENT poses, complete left/right anatomical leg chains, knee bends, supporting legs and airborne foot positions. Preserve every silhouette, viewing bearing, rifle/hands/kit/face/jacket/cap, body scale, cell positions and empty transparent padding. No geometric change or reposing. The two contact frames have opposite forward legs and the two passing frames opposite supports; keep them intact. This is a material/color replacement ONLY. Final kit is ordinary Confederate gray jacket/kepi, tan trousers, brown boots/straps; no blue/red trousers or bright fringe remains. Same native square transparent RGBA2x2 sheet, four complete soldiers, no background/shadow/text/grid. Do not mirror, crop or enlarge any figure.",
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-3114c7f9-7f8e-4571-96fb-b2fa796d2bf9.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-sw-march-attempt-3.png",
+      "sha256": "e75aa92762f09338f9d5d577a010d1025eed81ff36321d2fb275e0663db32f43",
+      "mode": "built-in image_gen",
+      "transparent_background": true
+    }
+  ],
+  "purpose": "Exact generation and built-in edit provenance; accepted source selection remains separately review bound",
+  "generatedCalls": 12,
+  "humanCertified": false,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "selectedAttempts": [
+    {
+      "id": "se-march",
+      "file": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-se-march-attempt-3.png",
+      "sha256": "b82669f342a640e0d980fe58ee0bbe6e781bae78db3797f9dc46b7608dcf011c",
+      "selectedSource": "docs/art-pass/candidates/gettysburg-v15/confederate-a-se-march-candidate.png"
+    },
+    {
+      "id": "se-actions",
+      "file": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-se-actions-attempt-2.png",
+      "sha256": "94dbce4e33aaa22cd07ee83c6831dac37c999544e5ddad4e63a0f9256bc02e51",
+      "selectedSource": "docs/art-pass/candidates/gettysburg-v15/confederate-a-se-actions-candidate.png"
+    },
+    {
+      "id": "sw-march",
+      "file": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-sw-march-attempt-3.png",
+      "sha256": "e75aa92762f09338f9d5d577a010d1025eed81ff36321d2fb275e0663db32f43",
+      "selectedSource": "docs/art-pass/candidates/gettysburg-v15/confederate-a-sw-march-candidate.png"
+    },
+    {
+      "id": "sw-actions",
+      "file": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-sw-actions-attempt-2.png",
+      "sha256": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d",
+      "selectedSource": "docs/art-pass/candidates/gettysburg-v15/confederate-a-sw-actions-candidate.png"
+    }
+  ],
+  "nativeStructuralGuides": [
+    {
+      "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-se/confederate-a-se-actions-native-guide.png",
+      "sha256": "5537338f067406a4db6a8e6f7accf79a7ae7ebd09eb8c8906b4603a0b58af8e3",
+      "purpose": "Native3D structural reference only; not selected soldier art"
+    },
+    {
+      "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-se/confederate-a-se-march-colored-leg-native-guide.png",
+      "sha256": "ab7505bdc33704d02badc66e20d86f8a3ab7cfd9831b63ae61acae762c4509ea",
+      "purpose": "Native3D structural reference only; not selected soldier art"
+    },
+    {
+      "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-sw/confederate-a-sw-actions-native-guide.png",
+      "sha256": "7dc01a894c569107772a34f2eb4f9819d5a665acedc1c803e60b24ad8e75f874",
+      "purpose": "Native3D structural reference only; not selected soldier art"
+    },
+    {
+      "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-sw/confederate-a-sw-march-colored-leg-native-guide.png",
+      "sha256": "4af93ad9dcb1756aee3419fd25a83851ac3329f84a134579b0a40bd2167dc833",
+      "purpose": "Native3D structural reference only; not selected soldier art"
+    }
+  ]
+}

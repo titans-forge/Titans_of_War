@@ -1,0 +1,247 @@
+{
+  "blenderVersion": "5.2.1 LTS",
+  "engine": "Cycles CPU",
+  "samples": 16,
+  "seed": 1861,
+  "supersample": 1,
+  "cameraElevationDegrees": 35,
+  "cellWorldHeight": 3.0,
+  "objectCount": 188,
+  "poses": [
+    {
+      "frame": "walk-0-1",
+      "yawRadians": -1.5707963267948966,
+      "poseSha256": "d28ce82af818b4513c3acebe6a8fe03697be04418251b78ffc6d62a7dbc927f4"
+    },
+    {
+      "frame": "walk-0-2",
+      "yawRadians": -1.5707963267948966,
+      "poseSha256": "274a57466134ef8f875d40a47b8e0f39f4c7134525365fc2833a22d495d0b216"
+    },
+    {
+      "frame": "walk-0-3",
+      "yawRadians": -1.5707963267948966,
+      "poseSha256": "fb71d0d7e20c7147f40f61b19f10edcd41e485c1cd3020577b1509ed389ca689"
+    },
+    {
+      "frame": "walk-0-0",
+      "yawRadians": -1.5707963267948966,
+      "poseSha256": "c5e573a9e9b9f5ebc7aaab27de49c43ff2c8af15958bb58d6e033e17c4a05ffd"
+    }
+  ],
+  "purpose": "Structural gait reference only; not proposed default artwork or anatomically validated motion",
+  "side": "union",
+  "direction": "E",
+  "phaseOrder": [
+    "left-contact",
+    "near-passing",
+    "right-contact",
+    "far-passing"
+  ],
+  "sourceEntries": [
+    [
+      "walk",
+      0,
+      1
+    ],
+    [
+      "walk",
+      0,
+      2
+    ],
+    [
+      "walk",
+      0,
+      3
+    ],
+    [
+      "walk",
+      0,
+      0
+    ]
+  ],
+  "sourceScript": "scripts/render-civil-war-infantry-v2.py",
+  "sourceScriptSha256": "14ed68fd8ca42dd66641db73dac437d9219a9a715bd18c14e06be2e6558b1877",
+  "wrapperScript": "scripts/render-gettysburg-gait-guide.py",
+  "wrapperScriptSha256": "afe5d54cb9a00a7da06839e9455f74f02e09f306f5ed0e6a118db25170182708",
+  "image": "docs/art-pass/candidates/gettysburg-v3/union-e-rig-guide.png",
+  "imageSha256": "b54219ff63d9905f22c389cce26ee8f0edea82fda60c5143a6e04360a8ac97da",
+  "imageBytes": 360289,
+  "size": {
+    "w": 1536,
+    "h": 512
+  },
+  "cell": {
+    "w": 384,
+    "h": 512
+  },
+  "groundOriginPixels": {
+    "x": 192,
+    "y": 440
+  },
+  "nativeAlpha": true,
+  "rasterPostprocessing": false,
+  "threads": 8,
+  "geometry": [
+    {
+      "phase": "left-contact",
+      "sourceFrame": "walk-0-1",
+      "cell": {
+        "x": 0,
+        "y": 0,
+        "w": 384,
+        "h": 512
+      },
+      "alphaBounds": [
+        126,
+        168,
+        299,
+        457
+      ],
+      "paddingPixels": {
+        "left": 126,
+        "top": 168,
+        "right": 85,
+        "bottom": 55
+      },
+      "capCenter": {
+        "x": 202.458,
+        "y": 190.183
+      },
+      "leftFarSoleCenter": {
+        "x": 245.248,
+        "y": 423.433
+      },
+      "rightNearSoleCenter": {
+        "x": 153.088,
+        "y": 445.948
+      }
+    },
+    {
+      "phase": "near-passing",
+      "sourceFrame": "walk-0-2",
+      "cell": {
+        "x": 384,
+        "y": 0,
+        "w": 384,
+        "h": 512
+      },
+      "alphaBounds": [
+        150,
+        161,
+        286,
+        440
+      ],
+      "paddingPixels": {
+        "left": 150,
+        "top": 161,
+        "right": 98,
+        "bottom": 72
+      },
+      "capCenter": {
+        "x": 202.458,
+        "y": 183.745
+      },
+      "leftFarSoleCenter": {
+        "x": 199.168,
+        "y": 423.433
+      },
+      "rightNearSoleCenter": {
+        "x": 199.168,
+        "y": 429.172
+      }
+    },
+    {
+      "phase": "right-contact",
+      "sourceFrame": "walk-0-3",
+      "cell": {
+        "x": 768,
+        "y": 0,
+        "w": 384,
+        "h": 512
+      },
+      "alphaBounds": [
+        126,
+        168,
+        275,
+        457
+      ],
+      "paddingPixels": {
+        "left": 126,
+        "top": 168,
+        "right": 109,
+        "bottom": 55
+      },
+      "capCenter": {
+        "x": 202.458,
+        "y": 190.183
+      },
+      "leftFarSoleCenter": {
+        "x": 153.088,
+        "y": 423.433
+      },
+      "rightNearSoleCenter": {
+        "x": 245.248,
+        "y": 445.948
+      }
+    },
+    {
+      "phase": "far-passing",
+      "sourceFrame": "walk-0-0",
+      "cell": {
+        "x": 1152,
+        "y": 0,
+        "w": 384,
+        "h": 512
+      },
+      "alphaBounds": [
+        151,
+        161,
+        287,
+        457
+      ],
+      "paddingPixels": {
+        "left": 151,
+        "top": 161,
+        "right": 97,
+        "bottom": 55
+      },
+      "capCenter": {
+        "x": 202.458,
+        "y": 183.745
+      },
+      "leftFarSoleCenter": {
+        "x": 199.168,
+        "y": 406.657
+      },
+      "rightNearSoleCenter": {
+        "x": 199.168,
+        "y": 445.948
+      }
+    }
+  ],
+  "capCenterDriftPixels": {
+    "x": 0.0,
+    "y": 6.438
+  },
+  "review": "Visually reviewed as a structural reference only; not approved as game artwork",
+  "visualReview": {
+    "status": "accepted_as_structural_reference_only",
+    "method": "Read-only view_image inspection of the recorded native PNG, alongside projected 3D boot and cap geometry",
+    "opposingAnatomicalContactsVerifiedInGuide": true,
+    "distinctNearAndFarPassingPoses": true,
+    "clippedOrNeighboringSilhouettesObserved": false,
+    "minimumAlphaPaddingPixels": 55,
+    "headDriftPixels": {
+      "x": 0.0,
+      "y": 6.438
+    },
+    "limitations": [
+      "Stylized mesh proportions, hands, face, clothing, and plain equipment are structural cues only.",
+      "The inherited musket tilts forward and lacks a distinct fixed bayonet; generated art should retain its historical identity reference.",
+      "The contact and passing phases intentionally have 6.438 source pixels of vertical torso/head bob.",
+      "Near passing boots partly overlap in this elevated profile view; the 3D receipt confirms distinct supporting and lifted legs.",
+      "This four-pose guide has not established naturalistic gait, historical accuracy, or gameplay animation quality."
+    ]
+  }
+}

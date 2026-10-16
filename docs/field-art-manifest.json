@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "created": "2026-09-08",
+  "generator": "OpenAI image generation tool",
+  "file": "public/images/battles/field-ground-v1.webp",
+  "width": 1723,
+  "height": 913,
+  "bytes": 630428,
+  "sha256": "22ec688b8022ba9f225059213d5f5f218553f5bc24207fa2ea47ae5c1a6fdd3a",
+  "purpose": "Neutral overhead grass and earth plate shared by ten representative tactical boards. Scenario-specific geography is drawn from the same zones and road bands used by the simulation.",
+  "promptSummary": "Straight overhead 1860s eastern American pasture, worn grass and earth, quiet natural variation, no horizon, sky, buildings, soldiers, roads, text or flags.",
+  "conversion": "cwebp -q 90 -m 6; original resolution retained",
+  "flags": "New v4 scenarios use symbolic Union blue and Confederate red standards, not claims of exact regimental flags. Gettysburg v3 keeps its existing period-inspired flags.",
+  "limitations": [
+    "Representative game coordinates, not surveyed battle maps.",
+    "Trees and ridge contours illustrate the authored cover zones; exact zone boundaries are available with Terrain rules.",
+    "Original scenario paintings remain available for older battle rules."
+  ]
+}

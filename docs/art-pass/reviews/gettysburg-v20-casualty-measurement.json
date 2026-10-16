@@ -1,0 +1,194 @@
+{
+  "artPass": "gettysburg-v20",
+  "source": "docs/art-pass/candidates/gettysburg-v20/confederate-a-casualty-e-candidate.png",
+  "sourceSHA256": "2e06139713abaf66811a26bace098d19fdc4ced40be11f8ca2e5aa3aefdd4134",
+  "referenceHeight": 396,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One contact median shared across all eight natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "9743955499bdd4592f879ab93ff17bb79e928d63ab2853eb3258af2344dea093",
+      "ground": [
+        321,
+        577
+      ],
+      "groundROI": [
+        250,
+        563,
+        321,
+        583
+      ],
+      "groundMethod": "X=321 is the manually interpreted projected pelvis center of the backward-reeling figure. Y is the exclusive alpha>=64 lower edge of the nearer left planted boot sole in a sole-only ROI; the lower musket stock and farther boot are excluded.",
+      "solidBounds": [
+        208,
+        151,
+        443,
+        577
+      ],
+      "solidPadding": [
+        208,
+        151,
+        184,
+        50
+      ],
+      "nonzeroBounds": [
+        41,
+        103,
+        623,
+        612
+      ]
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "28e84357212d5dd0761663adfd264c72d38dec648e9a2aaa9bbade2f3febf52f",
+      "ground": [
+        236,
+        573
+      ],
+      "groundROI": [
+        206,
+        558,
+        255,
+        581
+      ],
+      "groundMethod": "X=236 marks the interpreted support center of the lowered nearer knee. Y is the exclusive alpha>=64 lower edge of that folded knee/trouser support patch in the bounded ROI; the rear upright boot, front boot and weapon are excluded.",
+      "solidBounds": [
+        137,
+        316,
+        500,
+        575
+      ],
+      "solidPadding": [
+        137,
+        316,
+        127,
+        52
+      ],
+      "nonzeroBounds": [
+        41,
+        21,
+        523,
+        624
+      ]
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "8f3b194861ae0828533edd6daa52af6816c0f8594998a3e2000eb43df452db1a",
+      "ground": [
+        284,
+        432
+      ],
+      "groundROI": [
+        250,
+        418,
+        277,
+        439
+      ],
+      "groundMethod": "X=284 marks the interpreted folded-knee/body support center as the torso pitches forward. Y is the exclusive alpha>=64 lower edge of the trouser support edge immediately left of the rifle butt, using an ROI that excludes the weapon. The projecting rear boot and rifle butt are not the body registration reference.",
+      "solidBounds": [
+        123,
+        251,
+        577,
+        463
+      ],
+      "solidPadding": [
+        123,
+        251,
+        50,
+        164
+      ],
+      "nonzeroBounds": [
+        17,
+        68,
+        609,
+        585
+      ]
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "109a84c5b2cc9f015dbd2029fc02b7ec99507bc500c8a481410c147b91b058fb",
+      "ground": [
+        247,
+        439
+      ],
+      "groundROI": [
+        152,
+        430,
+        207,
+        450
+      ],
+      "groundMethod": "X=247 marks the interpreted hip/side-body support center in ground rest. Y is the exclusive alpha>=64 lower edge of the nearer folded thigh support patch, left of the rifle butt. The rifle below the body and the forward cap are excluded; this is an illustrated support-plane registration, not a physical center-of-mass measurement.",
+      "solidBounds": [
+        87,
+        313,
+        556,
+        467
+      ],
+      "solidPadding": [
+        87,
+        313,
+        71,
+        160
+      ],
+      "nonzeroBounds": [
+        9,
+        3,
+        561,
+        610
+      ]
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "clips": [
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 0,
+      "action": "fall",
+      "key": "confederate-gettysburg-v20-a-casualty-e",
+      "frames": [
+        "a-fall-0-0",
+        "a-fall-0-1",
+        "a-fall-0-2",
+        "a-fall-0-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.511962,
+          "y": 0.920255
+        },
+        {
+          "x": 0.376396,
+          "y": 0.913876
+        },
+        {
+          "x": 0.452951,
+          "y": 0.688995
+        },
+        {
+          "x": 0.393939,
+          "y": 0.700159
+        }
+      ],
+      "referenceHeight": 396,
+      "sourceHash": "2e06139713abaf66811a26bace098d19fdc4ced40be11f8ca2e5aa3aefdd4134",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeCasualtySequence": "gettysburg-v20-confederate-a-e-casualty",
+      "scope": "Exact source-reviewed Confederate A E local opt-in only; incomplete family"
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

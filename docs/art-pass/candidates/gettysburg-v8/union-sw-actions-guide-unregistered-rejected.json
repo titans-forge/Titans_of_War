@@ -1,0 +1,218 @@
+{
+  "blenderVersion": "5.2.1 LTS",
+  "engine": "Cycles CPU",
+  "samples": 16,
+  "seed": 1861,
+  "supersample": 1,
+  "cameraElevationDegrees": 35,
+  "cellWorldHeight": 3.0,
+  "objectCount": 201,
+  "poses": [
+    {
+      "frame": "idle-3-0",
+      "yawRadians": -3.9269908169872414,
+      "poseSha256": "2e3dc4b6b2e587c4906c335cc83cb3b6c6e4f3c3170d0be39730b2fe8727c3e9",
+      "bodyBobWorldZ": 0,
+      "rootWorld": [
+        -1.875,
+        0.7355166077613831,
+        0.0
+      ],
+      "weaponPose": "fixed two-hand diagonal carry: left hand at foreend, right hand at stock",
+      "weaponStartBodyLocal": [
+        0.1599999964237213,
+        0.10000000149011612,
+        0.6000000238418579
+      ],
+      "weaponEndBodyLocal": [
+        0.1599999964237213,
+        0.528099775314331,
+        1.9119186401367188
+      ],
+      "handAttachmentBodyLocal": [
+        [
+          0.1599999964237213,
+          0.3440168797969818,
+          1.3477935791015625
+        ],
+        [
+          0.1599999964237213,
+          0.2626779079437256,
+          1.0985291004180908
+        ]
+      ],
+      "bayonetTipBodyLocal": [
+        0.19499999284744263,
+        0.6816573143005371,
+        2.382498264312744
+      ],
+      "bayonetBladeLength": 0.45000014346504574
+    },
+    {
+      "frame": "fire-3-0",
+      "yawRadians": -3.9269908169872414,
+      "poseSha256": "76769dc67d2978ed084942854aed2daded7fa79a1a29ab7b319f6486b02a3b94",
+      "bodyBobWorldZ": 0,
+      "rootWorld": [
+        1.125,
+        0.7355166077613831,
+        0.0
+      ],
+      "weaponPose": "right-shoulder aim; stock butt touches upper right shoulder; no discharge baked into source",
+      "weaponStartBodyLocal": [
+        0.20999999344348907,
+        -0.07999999821186066,
+        1.4600000381469727
+      ],
+      "weaponEndBodyLocal": [
+        0.20999999344348907,
+        1.2999999523162842,
+        1.4600000381469727
+      ],
+      "handAttachmentBodyLocal": [
+        [
+          0.20999999344348907,
+          0.5134000182151794,
+          1.4200000762939453
+        ],
+        [
+          0.20999999344348907,
+          0.22360001504421234,
+          1.4200000762939453
+        ]
+      ],
+      "bayonetTipBodyLocal": [
+        0.2449999898672104,
+        1.7949999570846558,
+        1.4600000381469727
+      ],
+      "bayonetBladeLength": 0.4500000503328083
+    },
+    {
+      "frame": "reload-3-0",
+      "yawRadians": -3.9269908169872414,
+      "poseSha256": "e578b9765a7a976cee5ad0686cc44efa43b1e58a3f778aad58a45e4cd9db8a36",
+      "bodyBobWorldZ": 0,
+      "rootWorld": [
+        -1.875,
+        -4.494823932647705,
+        0.0
+      ],
+      "weaponPose": "upright loading: hand at barrel mouth",
+      "weaponStartBodyLocal": [
+        0.11999999731779099,
+        0.2800000011920929,
+        0.03999999910593033
+      ],
+      "weaponEndBodyLocal": [
+        0.11999999731779099,
+        0.2800000011920929,
+        1.4199999570846558
+      ],
+      "handAttachmentBodyLocal": [
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          0.9369999170303345
+        ],
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          1.4549999237060547
+        ]
+      ],
+      "bayonetTipBodyLocal": [
+        0.1550000011920929,
+        0.2800000011920929,
+        1.9149999618530273
+      ],
+      "bayonetBladeLength": 0.4500000503328083
+    },
+    {
+      "frame": "reload-3-1",
+      "yawRadians": -3.9269908169872414,
+      "poseSha256": "ec6147f9d08e8b45818618a229e1f6974386367b1e6b178e0b97237fd8a7f651",
+      "bodyBobWorldZ": 0,
+      "rootWorld": [
+        1.125,
+        -4.494823932647705,
+        0.0
+      ],
+      "weaponPose": "upright loading: raised hand drives a separate ramrod along bore",
+      "weaponStartBodyLocal": [
+        0.11999999731779099,
+        0.2800000011920929,
+        0.03999999910593033
+      ],
+      "weaponEndBodyLocal": [
+        0.11999999731779099,
+        0.2800000011920929,
+        1.4199999570846558
+      ],
+      "handAttachmentBodyLocal": [
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          0.9369999170303345
+        ],
+        [
+          0.11999999731779099,
+          0.2800000011920929,
+          1.8499999046325684
+        ]
+      ],
+      "bayonetTipBodyLocal": [
+        0.1550000011920929,
+        0.2800000011920929,
+        1.9149999618530273
+      ],
+      "bayonetBladeLength": 0.4500000503328083
+    }
+  ],
+  "sourceEntries": [
+    [
+      "idle",
+      3,
+      0
+    ],
+    [
+      "fire",
+      3,
+      0
+    ],
+    [
+      "reload",
+      3,
+      0
+    ],
+    [
+      "reload",
+      3,
+      1
+    ]
+  ],
+  "phaseOrder": [
+    "ready-upright-carry",
+    "shoulder-aim-fire",
+    "upright-load-at-barrel",
+    "upright-ramrod-insertion"
+  ],
+  "rejection": {
+    "status": "rejected; raw native PNG preserved without changes",
+    "reason": "Native unchanged SW firearm/bayonet extends into neighboring ready cell at origin(192,440);24px solid padding check failed with ready cell right=0. Action-only authored origin adaptation required.",
+    "failedPaddingCheck": {
+      "phase": "ready-upright-carry",
+      "alphaThreshold": 64,
+      "paddingPixels": {
+        "left": 87,
+        "top": 145,
+        "right": 0,
+        "bottom": 47
+      }
+    },
+    "image": "docs/art-pass/candidates/gettysburg-v8/union-sw-actions-guide-unregistered-rejected.png",
+    "imageSha256": "5cb60128cca330a36b721755ff0a19e9a0868b9f00f8129a435daca306f08f2b",
+    "rasterPostprocessing": false,
+    "productionApproved": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "generator": "Built-in OpenAI image_gen tool",
+  "status": "Illustrative historical reconstructions",
+  "assets": [
+    {
+      "id": "belle-grove",
+      "path": "public/images/battles/landmarks-v1/belle-grove.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 1538929,
+      "sha256": "e2b908c17f8817423910fa38f55c5619063df89e6167913aaa42bd8a119c7a7a"
+    },
+    {
+      "id": "hackwood",
+      "path": "public/images/battles/landmarks-v1/hackwood.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 1546036,
+      "sha256": "39cc41ed9889f23380b9bd3196c9677ad1c9a922aab941401818b5823ee86e6d"
+    },
+    {
+      "id": "henry-house",
+      "path": "public/images/battles/landmarks-v1/henry-house.png",
+      "width": 1431,
+      "height": 1099,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 2216378,
+      "sha256": "ac36381dc298136c0576f352ed0ea49874f68fc0f383b93c5c85ef094e407de8"
+    }
+  ],
+  "references": {
+    "henry-house": [
+      "https://home.nps.gov/mana/learn/kidsyouth/hugh-fauntleroy-henry.htm",
+      "https://www.nps.gov/places/000/henry-house.htm"
+    ],
+    "hackwood": [
+      "User-provided Hackwood and Patton interpretive sign photograph",
+      "https://www.shenandoahatwar.org/third-winchester-article-1",
+      "https://www.battlefields.org/learn/maps/battle-third-winchester-300-400pm"
+    ],
+    "belle-grove": [
+      "https://bellegrove.org/about/history",
+      "https://npgallery.nps.gov/GetAsset/31491367-4395-4447-ac68-e25a8e851107",
+      "https://home.nps.gov/places/belle-grove-plantation.htm"
+    ]
+  },
+  "limitations": [
+    "Game placement and scale are representative, not surveyed.",
+    "Hackwood reconstruction uses the house illustration in the user photo; uncertain architectural details remain illustrative.",
+    "Belle Grove porch details are interpretive; the asset is not a measured 1864 reconstruction.",
+    "Henry House is represented standing before destruction; no in-battle destruction mechanic in this pass.",
+    "Generated alpha PNGs copied unchanged; no external raster editing.",
+    "Only these three new buildings have rules-8 collision and fire occlusion. Existing decorative buildings elsewhere are unchanged."
+  ]
+}

@@ -1,9 +1,9 @@
-import { summarizeCabinetCrises, summarizePoliticalEconomy } from './simulationEngine.js';
+import { getChoiceAvailability, summarizeCabinetCrises, summarizePoliticalEconomy } from './simulationEngine.js';
 
-const DEFAULT_BRIEFS = {
-  hotspur: 'The field army cannot afford another display of hesitation. Strike before the enemy decides the tempo for us.',
-  fox: 'Supply, rail, and discipline are the real campaign. Preserve the army that can still fight next month.',
-  wolf: 'Leverage, perception, and political timing matter as much as raw casualties. Use the next move to reshape the wider war.',
+const FACTION_PRIORITIES = {
+  hotspur: 'I weigh this motion by its effect on morale and our freedom to take the initiative.',
+  fox: 'I weigh this motion by the troops, supplies, and funds it leaves for the next campaign.',
+  wolf: 'I weigh this motion by its political leverage, public confidence, and cost.',
 };
 
 const FACTION_NAMES = {
@@ -171,7 +171,8 @@ export function generateAdvisorDebate(state, scenario, model = null) {
   const politicalEconomy = summarizePoliticalEconomy(state);
   const crisisSummary = summarizeCabinetCrises(state);
   const historyContext = latestHistoryLine(state);
-  const choices = Array.isArray(scenario?.choices) ? scenario.choices : [];
+  const choices = (Array.isArray(scenario?.choices) ? scenario.choices : [])
+    .filter((choice) => !getChoiceAvailability(choice, scenario, state).locked);
 
   const result = {
     source: model ? 'deterministic-fallback' : 'deterministic',
@@ -186,7 +187,6 @@ export function generateAdvisorDebate(state, scenario, model = null) {
       .sort((left, right) => right.score - left.score);
 
     const backedChoice = ranked[0]?.choice || null;
-    const baseBrief = sentence(scenario?.advisors?.[faction] || DEFAULT_BRIEFS[faction]);
     const riskContext = sentence(factionRiskLine(faction, politicalEconomy));
     const crisisContext = sentence(crisisLine(faction, scenario, crisisSummary));
     const recommendation = backedChoice
@@ -194,11 +194,11 @@ export function generateAdvisorDebate(state, scenario, model = null) {
       : 'No viable motion is on the table.';
 
     const argument = [
-      baseBrief,
+      sentence(recommendation),
+      backedChoice ? FACTION_PRIORITIES[faction] : '',
       historyContext,
       riskContext,
       crisisContext,
-      sentence(recommendation),
       backedChoice ? describeExpectedEffects(backedChoice) : '',
     ]
       .filter(Boolean)
@@ -217,6 +217,6 @@ export function generateAdvisorDebate(state, scenario, model = null) {
     .map((faction) => `${FACTION_NAMES[faction]} backs ${result[faction]?.choiceLabel || '—'}`)
     .join(' · ');
 
-  result.summary = `${supported}. Debate synthesized from current pressures, recent history, and authored advisor doctrine.`;
+  result.summary = `${supported}. Debate synthesized from available choices, current pressures, and recent history.`;
   return result;
 }

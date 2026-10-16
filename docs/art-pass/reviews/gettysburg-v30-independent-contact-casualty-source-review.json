@@ -1,0 +1,788 @@
+{
+  "artPass": "gettysburg-v30",
+  "reviewer": "Independent Astra Max source reviewer (/root/v19_astra_review)",
+  "reviewerModel": "gpt-6-astra",
+  "reasoningEffort": "max",
+  "independentReview": true,
+  "modelAssisted": true,
+  "sourceOnly": true,
+  "localInstall": false,
+  "acceptedForLocalInstall": false,
+  "acceptedForOptIn": true,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false,
+  "familyApproved": false,
+  "completeFamilyApproved": false,
+  "edgeOrFringeFreeCertified": false,
+  "allMotionCertified": false,
+  "referenceHeights": {
+    "union": 372,
+    "confederate": 384
+  },
+  "scope": "Four exact whole native generated sources only: Union A SE contact/casualty and Confederate A NW contact/casualty. Source suitability and registration acceptance precede, and do not establish, runtime or local-install acceptance.",
+  "nativeSourceDimensions": [
+    1254,
+    1254
+  ],
+  "nativeCellDimensions": [
+    627,
+    627
+  ],
+  "referenceMethod": "For each army, independently select native cap-only and near-support-sole ROIs in the four contact cells; recompute alpha>=64 cap top and exclusive sole bottom, subtract, sort the four spans and round the midpoint median half up. Apply that one unchanged contact reference to its entire contact and casualty pair. Natural lunge/crouch/fall projection is retained without individual phase-height normalization.",
+  "pivotMethod": "Choose integer X from the visually projected pelvis or prone hip center independently of the support ROI horizontal location. Choose support-specific near sole, knee, hip-side, torso or forearm ROI; integer Y must equal its exclusive alpha>=64 maximum. Weapon bounds and lifted far boots do not define later fall roots.",
+  "pairScaleAccepted": {
+    "union": true,
+    "confederate": true
+  },
+  "pairScaleJudgment": "All four whole sources and sixteen native cells were inspected. Within each army pair, cap/head, blanket/pack, limb thickness and boot proportions remain coherent under changes in projection. The taller first stumble and shortened crouch/fall projections are retained; this judgment does not certify exact physical anatomy or phase-perfect motion.",
+  "kitReferences": [
+    {
+      "source": "public/images/units/gettysburg-v6/union-a-actions-se.png",
+      "sha256": "bd4650f0d15bf5abf612ebfd01edecf9560c7a459b96e2643ad76ca5d023b61e",
+      "usage": "Previously accepted native kit/camera comparison; not a source of pixels or copied registration."
+    },
+    {
+      "source": "public/images/units/gettysburg-v10/confederate-a-actions-nw.png",
+      "sha256": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0",
+      "usage": "Previously accepted native kit/camera comparison; not a source of pixels or copied registration."
+    }
+  ],
+  "inspectionEvidence": [
+    {
+      "path": "independent-source-inspection/selected-four-source-native-verification.json",
+      "sha256": "4314131813f5644ccbf3738461ce89ac409ccfb065a20069bb7093927b1f5e03"
+    }
+  ],
+  "sources": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v30/union-a-contact-se-candidate.png",
+      "sha256": "b3809882a633ed20c2468a141aa8c4732be5a79aeaf8280a6f21f7c4c7ee8e7a",
+      "side": "union",
+      "identity": "a",
+      "direction": 1,
+      "role": "contact",
+      "action": "melee",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cell": 627,
+      "acceptedForOptIn": true,
+      "measurements": {
+        "side": "union",
+        "identity": "a",
+        "direction": 1,
+        "role": "contact",
+        "action": "melee",
+        "cell": 627,
+        "referenceHeight": 372,
+        "roots": [
+          [
+            297,
+            582
+          ],
+          [
+            248,
+            573
+          ],
+          [
+            315,
+            523
+          ],
+          [
+            259,
+            531
+          ]
+        ],
+        "groundROIs": [
+          [
+            185,
+            520,
+            258,
+            592
+          ],
+          [
+            122,
+            508,
+            194,
+            583
+          ],
+          [
+            190,
+            465,
+            267,
+            536
+          ],
+          [
+            138,
+            465,
+            220,
+            541
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X follows the hips below the coat, independently of the boot X. Ground Y is the exclusive alpha>=64 bottom of the nearer viewer-left supporting boot, below its cuff; weapon pixels are excluded.",
+          "Projected pelvis X follows the hips behind the extended arms. Ground Y uses the nearer viewer-left trailing support-boot sole; the forward viewer-right foot and rifle do not define the anchor.",
+          "Projected pelvis X follows the withdrawn hips beneath the coat. Ground Y uses the nearer viewer-left support-boot sole and excludes the lower weapon extremity.",
+          "Projected pelvis X follows the hips beneath the high block. Ground Y uses the nearer viewer-left support-boot sole; rifle tip and farther boot are excluded."
+        ],
+        "capROIs": [
+          [
+            310,
+            202,
+            375,
+            245
+          ],
+          [
+            251,
+            211,
+            309,
+            255
+          ],
+          [
+            320,
+            132,
+            382,
+            178
+          ],
+          [
+            257,
+            151,
+            317,
+            193
+          ]
+        ],
+        "capTop": [
+          211,
+          219,
+          141,
+          159
+        ],
+        "referenceSoleROIs": [
+          [
+            187,
+            557,
+            257,
+            592
+          ],
+          [
+            124,
+            550,
+            190,
+            583
+          ],
+          [
+            194,
+            499,
+            266,
+            536
+          ],
+          [
+            142,
+            508,
+            219,
+            541
+          ]
+        ],
+        "referenceSoleGroundY": [
+          582,
+          573,
+          523,
+          531
+        ],
+        "bodySpans": [
+          371,
+          354,
+          382,
+          372
+        ]
+      },
+      "cellObservations": [
+        {
+          "cell": 0,
+          "observation": "Cell 0 is a low SE guard with two hands separated on the rifle and coherent Union A blue/tan kit.",
+          "solidBounds": [
+            187,
+            211,
+            606,
+            582
+          ],
+          "solidPadding": [
+            187,
+            211,
+            21,
+            45
+          ],
+          "supportInterpretation": "Projected pelvis X follows the hips below the coat, independently of the boot X. Ground Y is the exclusive alpha>=64 bottom of the nearer viewer-left supporting boot, below its cuff; weapon pixels are excluded."
+        },
+        {
+          "cell": 1,
+          "observation": "Cell 1 visibly extends both hands and the bayonet toward lower-right, with stock below shoulder and forward weight shift; it reads as a short contact thrust rather than a cheek-level sighting pose.",
+          "solidBounds": [
+            127,
+            219,
+            570,
+            573
+          ],
+          "solidPadding": [
+            127,
+            219,
+            57,
+            54
+          ],
+          "supportInterpretation": "Projected pelvis X follows the hips behind the extended arms. Ground Y uses the nearer viewer-left trailing support-boot sole; the forward viewer-right foot and rifle do not define the anchor."
+        },
+        {
+          "cell": 2,
+          "observation": "Cell 2 draws the weapon and elbows inward and returns weight toward the rear support leg.",
+          "solidBounds": [
+            196,
+            141,
+            581,
+            523
+          ],
+          "solidPadding": [
+            196,
+            141,
+            46,
+            104
+          ],
+          "supportInterpretation": "Projected pelvis X follows the withdrawn hips beneath the coat. Ground Y uses the nearer viewer-left support-boot sole and excludes the lower weapon extremity."
+        },
+        {
+          "cell": 3,
+          "observation": "Cell 3 raises the rifle across the body into a high block; hands overlap in projection but the two forearms remain readable.",
+          "solidBounds": [
+            144,
+            109,
+            525,
+            531
+          ],
+          "solidPadding": [
+            144,
+            109,
+            102,
+            96
+          ],
+          "supportInterpretation": "Projected pelvis X follows the hips beneath the high block. Ground Y uses the nearer viewer-left support-boot sole; rifle tip and farther boot are excluded."
+        }
+      ]
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v30/union-a-casualty-se-candidate.png",
+      "sha256": "528eeddc5ff5b2159247cd5076e7293bd6098ee0f8894d08e51d551b41e82eb6",
+      "side": "union",
+      "identity": "a",
+      "direction": 1,
+      "role": "casualty",
+      "action": "fall",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cell": 627,
+      "acceptedForOptIn": true,
+      "measurements": {
+        "side": "union",
+        "identity": "a",
+        "direction": 1,
+        "role": "casualty",
+        "action": "fall",
+        "cell": 627,
+        "referenceHeight": 372,
+        "roots": [
+          [
+            312,
+            575
+          ],
+          [
+            253,
+            515
+          ],
+          [
+            238,
+            413
+          ],
+          [
+            312,
+            434
+          ]
+        ],
+        "groundROIs": [
+          [
+            181,
+            490,
+            251,
+            586
+          ],
+          [
+            175,
+            473,
+            240,
+            525
+          ],
+          [
+            200,
+            374,
+            253,
+            428
+          ],
+          [
+            336,
+            395,
+            394,
+            445
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X follows the leaning hips below the coat. Ground Y is the alpha>=64 exclusive bottom of the nearer viewer-left support boot; the released rifle is excluded.",
+          "Projected pelvis X follows the hips above the bent legs. Ground Y is the exclusive alpha>=64 bottom of the nearer bent knee/proximal shin beneath the body. The rear lifted boot, reaching hands and released rifle are excluded.",
+          "Projected pelvis X follows the collapsing hips. Ground Y is the exclusive alpha>=64 bottom of the folded near knee beneath the pelvis, independently of the trailing boot and released weapon.",
+          "Projected pelvis X follows the prone hip center under the pack. Ground Y is the exclusive alpha>=64 lower edge of the near forearm/torso support, isolated from the separate rifle and boots."
+        ]
+      },
+      "cellObservations": [
+        {
+          "cell": 0,
+          "observation": "Cell 0 tilts the SE-facing body back with open hands and a visibly released musket; the cap, blue coat/trousers, tan roll and brown boots match the contact identity.",
+          "solidBounds": [
+            163,
+            170,
+            600,
+            575
+          ],
+          "solidPadding": [
+            163,
+            170,
+            27,
+            52
+          ],
+          "supportInterpretation": "Projected pelvis X follows the leaning hips below the coat. Ground Y is the alpha>=64 exclusive bottom of the nearer viewer-left support boot; the released rifle is excluded."
+        },
+        {
+          "cell": 1,
+          "observation": "Cell 1 drops to the knees with the torso leaning down and both hands moving toward the ground; the separate rifle lies ahead without a firing grip.",
+          "solidBounds": [
+            96,
+            272,
+            569,
+            597
+          ],
+          "solidPadding": [
+            96,
+            272,
+            58,
+            30
+          ],
+          "supportInterpretation": "Projected pelvis X follows the hips above the bent legs. Ground Y is the exclusive alpha>=64 bottom of the nearer bent knee/proximal shin beneath the body. The rear lifted boot, reaching hands and released rifle are excluded."
+        },
+        {
+          "cell": 2,
+          "observation": "Cell 2 continues lower and sideways with folded knee, trailing leg and bent arms; its changed projected height is intentional, not a request for phase resizing.",
+          "solidBounds": [
+            37,
+            211,
+            536,
+            500
+          ],
+          "solidPadding": [
+            37,
+            211,
+            91,
+            127
+          ],
+          "supportInterpretation": "Projected pelvis X follows the collapsing hips. Ground Y is the exclusive alpha>=64 bottom of the folded near knee beneath the pelvis, independently of the trailing boot and released weapon."
+        },
+        {
+          "cell": 3,
+          "observation": "Cell 3 is curled forward at ground rest with head down beside the forearm and no grip on the separate musket; it does not read as active prone aiming.",
+          "solidBounds": [
+            91,
+            260,
+            572,
+            522
+          ],
+          "solidPadding": [
+            91,
+            260,
+            55,
+            105
+          ],
+          "supportInterpretation": "Projected pelvis X follows the prone hip center under the pack. Ground Y is the exclusive alpha>=64 lower edge of the near forearm/torso support, isolated from the separate rifle and boots."
+        }
+      ]
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v30/confederate-a-contact-nw-candidate.png",
+      "sha256": "1b65a367c3434ee7d1b2e65d9e32c2bd7e9d9efd49904077bca129969f536af7",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 5,
+      "role": "contact",
+      "action": "melee",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cell": 627,
+      "acceptedForOptIn": true,
+      "measurements": {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 5,
+        "role": "contact",
+        "action": "melee",
+        "cell": 627,
+        "referenceHeight": 384,
+        "roots": [
+          [
+            431,
+            577
+          ],
+          [
+            406,
+            562
+          ],
+          [
+            446,
+            536
+          ],
+          [
+            414,
+            550
+          ]
+        ],
+        "groundROIs": [
+          [
+            330,
+            532,
+            420,
+            586
+          ],
+          [
+            322,
+            517,
+            410,
+            573
+          ],
+          [
+            346,
+            488,
+            438,
+            548
+          ],
+          [
+            329,
+            504,
+            423,
+            561
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X follows the pants/hip center below the coat and pack, independently of the support foot. Ground Y is the exclusive alpha>=64 bottom of the nearer viewer-left boot sole.",
+          "Projected pelvis X follows the hips behind the extended forearm and weighted front leg. Ground Y is the exclusive alpha>=64 bottom of the viewer-left supporting boot, separate from the weapon and far boot.",
+          "Projected pelvis X follows the withdrawn hips below the rear pouch. Ground Y uses the nearer viewer-left support-boot sole below the cuff.",
+          "Projected pelvis X follows the hips beneath the raised two-hand block. Ground Y uses the nearer viewer-left support-boot sole; raised weapon bounds do not affect it."
+        ],
+        "capROIs": [
+          [
+            367,
+            183,
+            425,
+            222
+          ],
+          [
+            347,
+            182,
+            408,
+            224
+          ],
+          [
+            381,
+            141,
+            439,
+            182
+          ],
+          [
+            356,
+            160,
+            409,
+            200
+          ]
+        ],
+        "capTop": [
+          191,
+          190,
+          151,
+          167
+        ],
+        "referenceSoleROIs": [
+          [
+            331,
+            557,
+            419,
+            586
+          ],
+          [
+            320,
+            544,
+            409,
+            574
+          ],
+          [
+            347,
+            514,
+            438,
+            550
+          ],
+          [
+            329,
+            528,
+            423,
+            562
+          ]
+        ],
+        "referenceSoleGroundY": [
+          577,
+          562,
+          536,
+          550
+        ],
+        "bodySpans": [
+          386,
+          372,
+          385,
+          383
+        ]
+      },
+      "cellObservations": [
+        {
+          "cell": 0,
+          "observation": "Cell 0 presents a rear NW low guard with a visibly lowered buttstock, gray kepi/coat, pale trousers, tan blanket roll, canteen and dark pouch.",
+          "solidBounds": [
+            169,
+            178,
+            552,
+            577
+          ],
+          "solidPadding": [
+            169,
+            178,
+            75,
+            50
+          ],
+          "supportInterpretation": "Projected pelvis X follows the pants/hip center below the coat and pack, independently of the support foot. Ground Y is the exclusive alpha>=64 bottom of the nearer viewer-left boot sole."
+        },
+        {
+          "cell": 1,
+          "observation": "Cell 1 extends the forward forearm and rifle toward upper-left with a shifted wide stance. The buttstock stays alongside the hip, below the shoulder; this reads as a stylized contact extension rather than a shouldered firing pose.",
+          "solidBounds": [
+            114,
+            124,
+            567,
+            562
+          ],
+          "solidPadding": [
+            114,
+            124,
+            60,
+            65
+          ],
+          "supportInterpretation": "Projected pelvis X follows the hips behind the extended forearm and weighted front leg. Ground Y is the exclusive alpha>=64 bottom of the viewer-left supporting boot, separate from the weapon and far boot."
+        },
+        {
+          "cell": 2,
+          "observation": "Cell 2 withdraws the forward hand toward the body and reduces the extension, maintaining rear NW kit and a planted support foot.",
+          "solidBounds": [
+            179,
+            151,
+            569,
+            536
+          ],
+          "solidPadding": [
+            179,
+            151,
+            58,
+            91
+          ],
+          "supportInterpretation": "Projected pelvis X follows the withdrawn hips below the rear pouch. Ground Y uses the nearer viewer-left support-boot sole below the cuff."
+        },
+        {
+          "cell": 3,
+          "observation": "Cell 3 raises the rifle across the upper body; both hands are visible at separated grip positions and the body retains rear NW bearing.",
+          "solidBounds": [
+            163,
+            38,
+            552,
+            550
+          ],
+          "solidPadding": [
+            163,
+            38,
+            75,
+            77
+          ],
+          "supportInterpretation": "Projected pelvis X follows the hips beneath the raised two-hand block. Ground Y uses the nearer viewer-left support-boot sole; raised weapon bounds do not affect it."
+        }
+      ]
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v30/confederate-a-casualty-nw-candidate.png",
+      "sha256": "38e176b82f3820838c33e3921afa507d1016df213f52792a1750b3faa7d7c406",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 5,
+      "role": "casualty",
+      "action": "fall",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cell": 627,
+      "acceptedForOptIn": true,
+      "measurements": {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 5,
+        "role": "casualty",
+        "action": "fall",
+        "cell": 627,
+        "referenceHeight": 384,
+        "roots": [
+          [
+            395,
+            563
+          ],
+          [
+            384,
+            522
+          ],
+          [
+            431,
+            447
+          ],
+          [
+            385,
+            425
+          ]
+        ],
+        "groundROIs": [
+          [
+            398,
+            509,
+            465,
+            578
+          ],
+          [
+            316,
+            460,
+            348,
+            546
+          ],
+          [
+            359,
+            390,
+            392,
+            470
+          ],
+          [
+            286,
+            355,
+            324,
+            450
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X follows the tilted hips below the rear pouch. Ground Y is the exclusive alpha>=64 bottom of the nearer descending boot/toe support; the separate falling rifle is excluded.",
+          "Projected pelvis X follows the hips as the body drops. Ground Y is the exclusive alpha>=64 bottom of the nearer bent knee/proximal shin, with X restricted beyond the released rifle butt; the lifted boots are excluded.",
+          "Projected pelvis X follows the rolling hip center beneath the rear pouch. Ground Y is the exclusive alpha>=64 bottom of the nearer folded knee/hip-side support; the separate musket and outward boot soles are excluded.",
+          "Projected pelvis X follows the prone hip center below the rear pouch. Ground Y is the exclusive alpha>=64 bottom of the near lower-torso/forearm ground support; the separately lying musket and extended boots are excluded."
+        ]
+      },
+      "cellObservations": [
+        {
+          "cell": 0,
+          "observation": "Cell 0 is a rear NW hit/stumble with lifted free hand, loosening weapon hand and tilted torso; gray/cream clothing, tan roll, canteen and dark pouch match contact 3.",
+          "solidBounds": [
+            128,
+            137,
+            534,
+            563
+          ],
+          "solidPadding": [
+            128,
+            137,
+            93,
+            64
+          ],
+          "supportInterpretation": "Projected pelvis X follows the tilted hips below the rear pouch. Ground Y is the exclusive alpha>=64 bottom of the nearer descending boot/toe support; the separate falling rifle is excluded."
+        },
+        {
+          "cell": 1,
+          "observation": "Cell 1 drops onto a bent knee with arms away from the released rifle and rear soles visible; the head and gear remain proportionate to the contact sheet.",
+          "solidBounds": [
+            64,
+            261,
+            546,
+            569
+          ],
+          "solidPadding": [
+            64,
+            261,
+            81,
+            58
+          ],
+          "supportInterpretation": "Projected pelvis X follows the hips as the body drops. Ground Y is the exclusive alpha>=64 bottom of the nearer bent knee/proximal shin, with X restricted beyond the released rifle butt; the lifted boots are excluded."
+        },
+        {
+          "cell": 2,
+          "observation": "Cell 2 continues the sideways collapse with the knee/hip nearer the ground and bent near forearm; it is distinct from the prior knee-drop through torso rotation and limb position.",
+          "solidBounds": [
+            89,
+            203,
+            592,
+            514
+          ],
+          "solidPadding": [
+            89,
+            203,
+            35,
+            113
+          ],
+          "supportInterpretation": "Projected pelvis X follows the rolling hip center beneath the rear pouch. Ground Y is the exclusive alpha>=64 bottom of the nearer folded knee/hip-side support; the separate musket and outward boot soles are excluded."
+        },
+        {
+          "cell": 3,
+          "observation": "Cell 3 lies on the side/front with relaxed arms and lowered head; the musket is separate and no shoulder/cheek firing relationship remains.",
+          "solidBounds": [
+            78,
+            257,
+            581,
+            498
+          ],
+          "solidPadding": [
+            78,
+            257,
+            46,
+            129
+          ],
+          "supportInterpretation": "Projected pelvis X follows the prone hip center below the rear pouch. Ground Y is the exclusive alpha>=64 bottom of the near lower-torso/forearm ground support; the separately lying musket and extended boots are excluded."
+        }
+      ]
+    }
+  ],
+  "rejectedSourcesRemainRejected": true,
+  "rejectionSummary": "The initial four sheets failed the same 16 px solid-padding boundary; the initial Confederate extension also read as a shouldered aiming pose. Subsequent unsafe-margin attempts were not rescued by alpha edits, crops, mirroring, export resizing or threshold waivers. The selected four original PNG files were independently compared byte for byte with their generated originals.",
+  "blockers": [],
+  "limitations": [
+    "Confederate rear grips are partly occluded by torso/pack in the guard, extension and recovery; the final lowered stock and extended forearm distinguish contact from firing, but no anatomy or historical-drill certification is given.",
+    "Colored low-alpha fringe and nonzero-alpha noise remain. Solid alpha>=64 margins pass; this is not an edge/fringe-free certification.",
+    "Stylized fingers, close hand overlap, pack occlusion and single-still weight transfer remain practical limits at high zoom.",
+    "Natural pose projection and support-dependent falling roots require actual exported playback to assess timing and apparent sliding; source-only inspection does not prove every runtime phase.",
+    "Formation overlap may obscure these small figures in real play. No full-family, human usability, GPU, default-art, production/release, or whole-game quality approval is implied."
+  ]
+}

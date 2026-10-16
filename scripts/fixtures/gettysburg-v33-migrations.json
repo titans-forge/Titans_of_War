@@ -1,0 +1,59 @@
+{
+  "schema": "gettysburg-v33-historical-byte-migration-v1",
+  "status": "frozen-approved-runtime-pins",
+  "baselineSHA256": "b32990ab452dc92a1e55223f390b4198a653cf284848f388b4ecb7c9823e9ce0",
+  "baselineFiles": 1548,
+  "fixture": {
+    "path": "scripts/fixtures/gettysburg-v33-preservation.json",
+    "sha256": "62cab66694c9fb1b11431a0b3c241950b3031a001a31249c12718501a5cba9d4"
+  },
+  "oldFixturesRefreshed": false,
+  "oldMigrationLedgersEdited": false,
+  "behavioralAssertionsChanged": false,
+  "mandatoryRegistration": "package.json",
+  "mandatorySuite": "scripts/test-gettysburg-v33-contact-layout.mjs",
+  "migrations": [
+    {
+      "path": "package.json",
+      "archive": "scripts/test-support/gettysburg-v33-before/package.json",
+      "beforeSHA256": "a79baf25996a54c90397e606ba821eb494b3554d992d26b82cd7a9df6b41b0c0",
+      "currentSHA256": "d9a09499b9ff24ab5eca6ec852f230eb706d29971aadec2fb1d137fb79bb7e1e",
+      "reason": "Only four mandatory v33 test script registrations; version, dependencies and lockfile unchanged."
+    },
+    {
+      "path": "src/battle/CivilWarBattlefield.jsx",
+      "archive": "scripts/test-support/gettysburg-v33-before/src/battle/CivilWarBattlefield.jsx",
+      "beforeSHA256": "379e91d676a98cfc8ee0f49152e89bd2595e19995c8e57113e4382ea808f7ad0",
+      "currentSHA256": "005e7cebd723eb3ec399c117b8e47e5ba588c107dfb0d77cb0c049b5ecb885bd",
+      "reason": "Root-approved optional contact layout and saved casualty continuity, with authentic legacy behavior witnesses and raw combat preservation."
+    },
+    {
+      "path": "scripts/test-support/gettysburgV29Preservation.mjs",
+      "archive": "scripts/test-support/gettysburg-v33-before/scripts/test-support/gettysburgV29Preservation.mjs",
+      "beforeSHA256": "ca72235c34761efe6d7d5660e2cedd4d630bc95811ffa7ee0588e5b130405157",
+      "currentSHA256": "2212b8b711f782cf22396221b02fbc9577a8a22f5948c5a5599a71115ca640d0",
+      "reason": "Only the metadata safeRead import and V33 historical reader call; original V29 ledger and every behavior assertion preserved."
+    },
+    {
+      "path": "scripts/test-support/gettysburgV32Preservation.mjs",
+      "archive": "scripts/test-support/gettysburg-v33-before/scripts/test-support/gettysburgV32Preservation.mjs",
+      "beforeSHA256": "195d83e67187c3862d102951a3d734484421a05f4e51d6da0404e7c3145566d1",
+      "currentSHA256": "ac37edc62f413b6f8debbcd510f1d1c9e22adb87c4911913eac02edbbfc2fe9e",
+      "reason": "Only the metadata safeRead import and V33 historical reader call; original V32 ledger and current runtime imports preserved."
+    },
+    {
+      "path": "scripts/test-gettysburg-v31-contact.mjs",
+      "archive": "scripts/test-support/gettysburg-v33-before/scripts/test-gettysburg-v31-contact.mjs",
+      "beforeSHA256": "92520cf4f6e3be2da56d441465581d69464f5efea294ca37357045f8235d715c",
+      "currentSHA256": "3b69a3e2cfab348851e99ebca5b5687371794136da603753a8d167e819925876",
+      "reason": "Only its direct Scene metadata hash uses the existing historical reader; all current behavioral assertions remain unchanged."
+    },
+    {
+      "path": "scripts/test-gettysburg-v32-contact.mjs",
+      "archive": "scripts/test-support/gettysburg-v33-before/scripts/test-gettysburg-v32-contact.mjs",
+      "beforeSHA256": "1b958ec8849ce8ca7702d82ed6d97042baa46de077a84d82e1ab3c5c6879d2f0",
+      "currentSHA256": "c0ed55647c7a0f18ab9449132026d414ab58117de250ca83a482f765a14e91e8",
+      "reason": "Only its direct Scene metadata hash uses the existing historical reader; all current behavioral assertions remain unchanged."
+    }
+  ]
+}

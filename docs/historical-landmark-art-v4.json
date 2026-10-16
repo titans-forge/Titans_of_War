@@ -1,0 +1,57 @@
+{
+  "tool": "built-in image_gen",
+  "model": "not reported",
+  "historicalAccuracy": "Illustrative reconstructions; board positions and scale are representative, not surveyed.",
+  "assets": [
+    {
+      "id": "widow-tapp-house",
+      "path": "public/images/battles/landmarks-v4/widow-tapp-house.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-edeab609-7938-4242-8ed7-7f68f62b3e1c.png",
+      "sha256": "6e5f0d59d33dcd953d22f95cb8e2847377f536a51ead9356916f7a0cb75933e5",
+      "size": [
+        1374,
+        1145
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 647784,
+      "fullyOrNearlyOpaquePixels": 894375,
+      "pixelEdits": false
+    },
+    {
+      "id": "garthright-house",
+      "path": "public/images/battles/landmarks-v4/garthright-house.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-2c6e321d-7570-463d-a591-56a1155f51c8.png",
+      "sha256": "9dfd4b10642cbb0c72bff925992448f0eff58c775c39eee08767b75c0cceae13",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 734231,
+      "fullyOrNearlyOpaquePixels": 813701,
+      "pixelEdits": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.nps.gov/places/tapp-field.htm",
+      "supports": "Farm tenancy, civilian experience, Texas Brigade and Longstreet context."
+    },
+    {
+      "url": "https://www.hmdb.org/m.asp?m=112326",
+      "supports": "Photographed NPS wayside transcription describes the Tapp home as a 1.5-story log cabin. Architecture beyond that is interpretive; direct page access failed, indexed transcription was available."
+    },
+    {
+      "url": "https://www.nps.gov/rich/learn/historyculture/cold-harbor-tour.htm",
+      "supports": "Garthright House behind Wright VI Corps after June 3 and ten days of field-hospital use."
+    },
+    {
+      "url": "https://www.nps.gov/rich/planyourvisit/placestogo.htm",
+      "supports": "NPS historical photograph of Garthright family and house; viewed for timber, roof and chimney character."
+    },
+    {
+      "url": "https://npshistory.com/publications/rich/garthright-house-hsr.pdf",
+      "supports": "NPS Historic Structures Report, Description of Structure: brick original, frame second story and west addition, center hall, end chimneys, partial basement. Indexed excerpt read; full PDF retained in external evidence, local text extraction unavailable."
+    }
+  ]
+}

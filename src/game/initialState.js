@@ -1,4 +1,11 @@
 export const INITIAL_STATE = {
+  // Historical seed state remains rules 1; createFreshCampaignState explicitly
+  // starts new campaigns on rules 2. Missing fields in old archives never opt in.
+  rulesVersion: 1,
+  battleRulesVersion: 1,
+  difficulty: 'standard',
+  campaignEconomy: { treasuryArrears: 0, munitionsArrears: 0, emergencyUsed: 0 },
+  supplyPlan: null,
   currentTurn: 1,
   actor: 'Major Robert Anderson',
   roleLabel: 'Fort Commander',
@@ -20,6 +27,7 @@ export const INITIAL_STATE = {
   letterText: '',
   letterSentiment: null,
   history: [],
+  battleCampaign: { version: 1, results: {} },
   gameOver: false,
   statusMessage: 'Secession crisis resolved into flashpoint. Fort Sumter isolated in Charleston Harbor.'
 };

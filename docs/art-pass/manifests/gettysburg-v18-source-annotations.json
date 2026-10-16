@@ -1,0 +1,220 @@
+{
+  "artPass": "gettysburg-v18",
+  "productionApproved": false,
+  "defaultApproved": false,
+  "familyComplete": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "sources": [
+    {
+      "cell": 512,
+      "roots": [
+        [
+          231,
+          458
+        ],
+        [
+          181,
+          458
+        ],
+        [
+          228,
+          441
+        ],
+        [
+          212,
+          441
+        ],
+        [
+          235,
+          440
+        ],
+        [
+          179,
+          440
+        ]
+      ],
+      "capTop": [
+        104,
+        117,
+        81,
+        89,
+        95,
+        100
+      ],
+      "bodySpans": [
+        354,
+        341,
+        360,
+        352,
+        345,
+        340
+      ],
+      "referenceHeight": 349,
+      "capROIs": [
+        [
+          206,
+          98,
+          269,
+          126
+        ],
+        [
+          168,
+          110,
+          230,
+          144
+        ],
+        [
+          202,
+          74,
+          274,
+          111
+        ],
+        [
+          178,
+          83,
+          250,
+          116
+        ],
+        [
+          200,
+          88,
+          278,
+          125
+        ],
+        [
+          172,
+          94,
+          232,
+          128
+        ]
+      ],
+      "supportingSoleROIs": [
+        [
+          181,
+          448,
+          249,
+          463
+        ],
+        [
+          127,
+          446,
+          199,
+          463
+        ],
+        [
+          179,
+          430,
+          249,
+          447
+        ],
+        [
+          157,
+          430,
+          228,
+          448
+        ],
+        [
+          187,
+          429,
+          260,
+          447
+        ],
+        [
+          120,
+          429,
+          199,
+          447
+        ]
+      ],
+      "pelvisCenterX": [
+        231,
+        181,
+        228,
+        212,
+        235,
+        179
+      ],
+      "measurementThreshold": 64,
+      "muzzle": [
+        394,
+        161
+      ],
+      "muzzleROI": [
+        388,
+        154,
+        401,
+        168
+      ],
+      "name": "actions-e",
+      "key": "confederate-gettysburg-v18-a-actions-e",
+      "measurementName": "confederate-a-e-actions",
+      "source": "docs/art-pass/candidates/gettysburg-v18/confederate-a-e-actions-candidate.png",
+      "sha256": "0430ceb12a9b7e5198cb590a1582b80cf8036057e70562ea5ee52cb2a59ca4cd",
+      "side": "confederate",
+      "identity": "a",
+      "identityKit": "confederate-a",
+      "direction": 0,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3,
+            4,
+            5
+          ]
+        ]
+      ],
+      "nativeReview": {
+        "sourceHash": "0430ceb12a9b7e5198cb590a1582b80cf8036057e70562ea5ee52cb2a59ca4cd",
+        "identity": "confederate-a",
+        "kitAccepted": true,
+        "allSixCellsReviewed": true,
+        "independentReview": true,
+        "modelAssisted": true
+      },
+      "sourceReview": "docs/art-pass/reviews/gettysburg-v18-independent-e-actions-source-review.json",
+      "sourceReviewSHA256": "9b199ca76e7d2ffbee681d70dafeba89a835ffa0c3c9f4fad6098ceb86540ce3",
+      "annotationMethod": "Each X is the independently interpreted projected pelvic center of that native pose, excluding the pack, blanket, pouch and weapon. Each Y is the exclusive lower edge of alpha>=64 pixels in the nearer visibly supporting boot sole. X is a manual illustration registration, not a physical anatomy measurement. Inspect both complete leg-to-boot chains in each native cell, select a narrow sole-only ROI on the nearer weight-bearing boot, and compute maxYExclusive at alpha>=64. The farther boot is higher in the oblique projection and does not replace the nearer sole. Gun butt, shadow and sheet bounds are excluded. Subtract the independently selected cap-crown alpha>=64 minimum Y from the supporting-sole ground Y in each cell. Use the six-span median 348.5, rounded half upward to one source-wide referenceHeight of 349. No phase-specific size normalization is permitted. The reviewer selected six cap-crown-only rectangles and six narrow supporting-sole rectangles by inspecting the complete native sheet and each cell. Temporary in-memory cell views and neutral-field composites clarified alpha and anatomy; no diagnostic raster was saved and no source or exported pixel was changed. ROIs were recomputed against the exact copied candidate SHA-256. The fire cell was inspected at native resolution and with a temporary nearest-neighbor pixel enlargement. [394,161] marks the visible end of the upper dark barrel before the thinner projecting bayonet; the reviewed point has native alpha 113. The bounded ROI includes the barrel-end metal. This is a visual effects anchor, not a certified physical barrel aperture.",
+      "sourceSpecificPostureAllowance": {
+        "sourceHash": "0430ceb12a9b7e5198cb590a1582b80cf8036057e70562ea5ee52cb2a59ca4cd",
+        "reviewHash": "9b199ca76e7d2ffbee681d70dafeba89a835ffa0c3c9f4fad6098ceb86540ce3",
+        "originalTargetFractionOfMedian": 0.05,
+        "originalTargetMet": false,
+        "maximumSpanRangeFractionOfMedian": 0.06,
+        "spanRangeFractionOfMedian": 0.05738880918220947,
+        "phaseScaleNormalization": false,
+        "basis": "The two aimed poses are 341/340 pixels; upright ready/cartridge are 354/360; charge and raised ram are 352/345. The spread follows the illustrated posture pattern and the complete sheet shows no obvious torso/limb family scale substitution. Cap-to-sole extent is pose-sensitive, so this narrow exception is defensible for an opt-in illustration pilot. It does not relax older sources or certify anatomy.",
+        "actualRendererNormalAndCloseZoomPlaybackRequiredBeforeInstallation": true
+      },
+      "limitations": [
+        "This is a genuinely separate model-assisted source inspection, not human art, anatomy, historical or usability certification.",
+        "The original 5% cap-to-sole gate failed: 20/348.5 = 5.738880918220947%. Acceptance uses the explicit source-specific 6% amendment only.",
+        "Manual pelvis centers and ROI selection are interpreted from a painted illustration; they are not physical joint or bone measurements.",
+        "All six broad action roles and complete visible leg chains are readable, but concealed fingers, true weapon internals, bayonet continuity, intermediate ramrod handling and full historical drill chronology remain unverified.",
+        "Fire and final aim are static shouldered poses. Firing, recoil, shot emission and time continuity require renderer evidence.",
+        "The full cap-to-sole range is about 1.84 pixels at a 32-pixel reference height and 2.73 pixels at 58 times 0.82 before camera zoom. This is a calculated extent difference, not a measured animation-jitter result.",
+        "Very faint alpha values reach some cell edges. Solid alpha padding passes, but complete edge/fringe freedom is not certified.",
+        "This approval covers exactly this complete unresampled native source and does not approve default art, the remaining identities/bearings, melee, casualties or the whole game.",
+        "Charging and ramming poses omit or obscure the projecting bayonet visible in ready/cartridge/aim. This source does not establish bayonet, lock, barrel, ramrod or paper-cartridge continuity across a complete historical drill.",
+        "All exported PNG bytes remain native and unchanged, including very faint alpha>=1 pixels at some cell edges. No alpha cleanup, cross-cell repair, phase interpolation, raster resizing, warping or per-phase body normalization is applied.",
+        "Only the four-phase reload definition carries nativeReloadSequence gettysburg-v18-confederate-a-e; ready and fire remain single-pose definitions. Action timing, turning, pause/cold-resume, shot anchoring, field memory and human usability remain separate checks."
+      ],
+      "scope": "Exact native Gettysburg v18 local opt-in Confederate A east stationary illustration pilot only; default, production, complete family, human, physical anatomy and historical drill approval remain false."
+    }
+  ]
+}

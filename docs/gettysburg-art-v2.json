@@ -1,0 +1,16 @@
+{
+  "id": "gettysburg-terrain-v2",
+  "kind": "AI-generated interpretive game terrain",
+  "rendererScope": "Gettysburg battle rules version 3 only",
+  "runtime": "public/images/battles/gettysburg-terrain-v2.webp",
+  "width": 1724,
+  "height": 912,
+  "runtimeBytes": 455278,
+  "runtimeSha256": "0a31e600af1eb24f462f0464ba43be264892464ad5ac0a4ed92b168cb12e8a1f",
+  "sourceSha256": "9bcf5862823d66f8380e1279831db1991261fe4ded3bd72063eaf32e6c93b9fb",
+  "generator": "OpenAI imagegen; September 8, 2026",
+  "encoding": "cwebp -q 90 -m 6; dimensions and composition retained",
+  "historicalScope": "Representative gameplay board, not a surveyed reconstruction or an archival photograph. Road, wall, and cover overlay are authored at the simulation coordinates. Terrain plate contains no military standards.",
+  "artillery": "Original procedural bronze gun, olive carriage and directional crew; visible barrel and smoke share one muzzle transform. Representative field gun, not a per-battery ordnance reconstruction.",
+  "localExperiment": "One existing Bonsai local render completed but failed visual acceptance; preserved outside runtime. FLUX9B experimental content remains excluded."
+}

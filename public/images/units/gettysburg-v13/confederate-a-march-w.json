@@ -1,0 +1,158 @@
+{
+  "frames": {
+    "a-march-4-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.548644,
+        "y": 0.950558
+      },
+      "bodyHeight": 471
+    },
+    "a-march-4-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.575758,
+        "y": 0.971292
+      },
+      "bodyHeight": 471
+    },
+    "a-march-4-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.547049,
+        "y": 0.894737
+      },
+      "bodyHeight": 471
+    },
+    "a-march-4-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.586922,
+        "y": 0.920255
+      },
+      "bodyHeight": 471
+    }
+  },
+  "meta": {
+    "image": "confederate-a-march-w.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "ab28e7c28ee6be3b17a833cbc3b627f3961dfbb8d9efef93c4ecc07482ed9981",
+    "source": "docs/art-pass/candidates/gettysburg-v13/confederate-a-w-march-candidate.png",
+    "artPass": "gettysburg-v13",
+    "candidate": true,
+    "productionApproved": false,
+    "pixelTreatment": "none; byte-for-byte native PNG copy, full equal cells",
+    "clips": [
+      {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 4,
+        "action": "march",
+        "key": "confederate-gettysburg-v13-a-march-w",
+        "frames": [
+          "a-march-4-0",
+          "a-march-4-1",
+          "a-march-4-2",
+          "a-march-4-3"
+        ],
+        "sourceHash": "ab28e7c28ee6be3b17a833cbc3b627f3961dfbb8d9efef93c4ecc07482ed9981",
+        "referenceHeight": 471,
+        "pivots": [
+          {
+            "x": 0.548644,
+            "y": 0.950558
+          },
+          {
+            "x": 0.575758,
+            "y": 0.971292
+          },
+          {
+            "x": 0.547049,
+            "y": 0.894737
+          },
+          {
+            "x": 0.586922,
+            "y": 0.920255
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "Exact historical Gettysburg v13 local opt-in preview only; incomplete unapproved art family."
+      }
+    ],
+    "measurementReview": "docs/art-pass/reviews/gettysburg-v13-confederate-a-march-w-measurement.json"
+  }
+}

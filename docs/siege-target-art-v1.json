@@ -1,0 +1,88 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompts": "siege-target-prompts-v1.json",
+  "assets": [
+    {
+      "path": "public/images/battles/siege-targets-v1/western-siege-train.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-09213e2d-1615-4426-adbb-17966b317fbd.png",
+      "sha256": "966faffeb5c59a108d7fee6202114115bd100cae32ff7f619164ef36592d9db4",
+      "bytes": 3021734,
+      "mode": "RGBA",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentPixels": 618304
+    },
+    {
+      "path": "public/images/battles/siege-targets-v1/eastern-engineer-depot.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-ca17e30b-c201-4ffa-8e9b-d15305bf4753.png",
+      "sha256": "f2e9107e647a591206fbd09dc0084db2ebb6967a710a007ae377fa2321940ebb",
+      "bytes": 2889789,
+      "mode": "RGBA",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentPixels": 688946
+    },
+    {
+      "path": "public/images/battles/siege-targets-v1/western-siege-train-damaged.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-c52f5dc8-322a-4dd1-a89e-0f9a5cb55fef.png",
+      "sha256": "0e07ba3cc322a66d195b790aef55bdf44d799bae802131ef33bbc56ba90227d9",
+      "bytes": 3088231,
+      "mode": "RGBA",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentPixels": 599976
+    },
+    {
+      "path": "public/images/battles/siege-targets-v1/eastern-engineer-depot-damaged.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-d5537b0e-cef5-450a-852f-52bc0c00982b.png",
+      "sha256": "6031b746350c396833f094af7fa4dc54c87134b45cc19536a084365902f77226",
+      "bytes": 2888635,
+      "mode": "RGBA",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentPixels": 706919
+    }
+  ],
+  "rejected": [
+    {
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-7f3bd402-6e19-4934-b398-1a471fc42375.png",
+      "reason": "RGB image with opaque backdrop; not installed"
+    },
+    {
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-95fd2812-c4e5-48ac-8e61-f4a7343aedd0.png",
+      "reason": "RGB image with opaque backdrop; not installed"
+    },
+    {
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-fac2e535-60b0-4941-a03c-312ec0a9c4d3.png",
+      "reason": "RGB image with opaque backdrop; not installed"
+    }
+  ],
+  "processing": "Native PNG bytes copied unchanged. No pixel edits. Phaser scales for display. Damaged replacements were generated independently after edit attempts failed alpha validation; layouts are similar, not pixel registered.",
+  "historicalQualification": "Representative material yards for abstract scenario targets. Not surveyed Petersburg site reconstructions or newly verified named landmarks.",
+  "source": "https://home.nps.gov/cwdw/learn/historyculture/engineering-the-defenses.htm",
+  "sourceScope": "NPS description of Civil War engineering materials, fascines, gabions and material depots in the Washington defenses; not proof of exact Petersburg placement."
+}

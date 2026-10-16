@@ -1,0 +1,147 @@
+{
+  "artPass": "gettysburg-v16",
+  "productionApproved": false,
+  "defaultApproved": false,
+  "familyComplete": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "sources": [
+    {
+      "name": "march-sw",
+      "key": "confederate-gettysburg-v16-a-march-sw",
+      "measurementName": "confederate-a-march-sw",
+      "source": "docs/art-pass/candidates/gettysburg-v16/confederate-a-sw-march-candidate.png",
+      "sha256": "cbd83756f656a82abf57d9b00eebdb2ad02447a8365144d3ac11d6e79d2a603c",
+      "side": "confederate",
+      "identity": "a",
+      "identityKit": "confederate-a",
+      "direction": 3,
+      "cell": 627,
+      "roots": [
+        [
+          361,
+          561
+        ],
+        [
+          359,
+          558
+        ],
+        [
+          372,
+          542
+        ],
+        [
+          360,
+          545
+        ]
+      ],
+      "capTop": [
+        121,
+        121,
+        99,
+        105
+      ],
+      "bodySpans": [
+        440,
+        437,
+        443,
+        440
+      ],
+      "referenceHeight": 440,
+      "capROIs": [
+        [
+          305,
+          100,
+          395,
+          155
+        ],
+        [
+          305,
+          100,
+          395,
+          155
+        ],
+        [
+          310,
+          80,
+          400,
+          134
+        ],
+        [
+          307,
+          85,
+          397,
+          140
+        ]
+      ],
+      "supportingSoleROIs": [
+        [
+          280,
+          542,
+          375,
+          576
+        ],
+        [
+          325,
+          539,
+          415,
+          574
+        ],
+        [
+          266,
+          520,
+          371,
+          556
+        ],
+        [
+          275,
+          522,
+          376,
+          564
+        ]
+      ],
+      "pelvisCenterX": [
+        361,
+        359,
+        372,
+        360
+      ],
+      "measurementThreshold": 64,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "nativeReview": {
+        "sourceHash": "cbd83756f656a82abf57d9b00eebdb2ad02447a8365144d3ac11d6e79d2a603c",
+        "identity": "confederate-a",
+        "kitAccepted": true,
+        "allFourCellsReviewed": true,
+        "independentReview": true,
+        "modelAssisted": true
+      },
+      "sourceReview": "docs/art-pass/reviews/gettysburg-v16-independent-sw-march-source-review.json",
+      "sourceReviewSHA256": "a775682ad05f4e440f0c8e9dca72bbca57fd72f8eb20b9a2fbcd7e6eb7c12192",
+      "annotationMethod": "Fresh independent final-native per-cell alpha>=64 cap-only minimum Y and manually selected boot-sole-only maximum exclusive Y. Manually interpreted concealed pelvis-center X is projected to each separately measured supporting-sole Y as a 2D registration pivot, not reconstructed pelvis or verified physical ground. All four ROIs, roots, cap tops and spans were freshly selected and measured on final SHA. One rounded-half-up median reference height across the complete source; no per-phase scaling or pivot interpolation.",
+      "limitations": [
+        "Acceptance binds only to final native SHA cbd83756f656a82abf57d9b00eebdb2ad02447a8365144d3ac11d6e79d2a603c and all four independently inspected cells for the local Gettysburg v16 opt-in.",
+        "Four discrete contact/passing illustrations are not continuous skeletal animation, proof of physical gait, historical marching drill or zero foot sliding.",
+        "Concealed pelvis/hips and thigh overlap, ankle/heel attachments, supporting-versus-swinging boot depth and exact anatomical identity remain model-assisted 2D interpretations. Pelvis-center X is manually estimated, approximately plus or minus10 native pixels.",
+        "Final-native cap-to-selected-supporting-sole spans are [440,437,443,440] pixels; one reference height440 retains6-pixel variation1.364%. Posture, camera/boot depth and body-framing variation are not separated or normalized.",
+        "Final builtin material/edge edits changed some framing and untargeted body/kit details relative to colored diagnostics. Geometric or pixel equivalence to those inputs is not claimed; all final measurements and roles were freshly inspected.",
+        "Targeted saturated red(r>=200,g/b<=90) and yellow(r/g>=200,b<=90) residues remain at alpha1to3; zero alpha>=8 or64 pixels meet those criteria. Maximum targeted residue alpha is3. This is not exhaustive fringe/color/alpha cleanup, and nonzero low-alpha residue remains untouched.",
+        "Gray kepi/jacket, tan trousers, dark leather boots, brown cross straps, dark waist pouches, tan back roll and shoulder bag preserve broad ConfederateA kit. Face/skeleton and exact manufactured equipment continuity are not established.",
+        "Model-assisted independent inspection; human, physical anatomy, historical equipment/drill, default, production and complete-family certification remain false.",
+        "Renderer temporal behavior, turn/action continuity, pause/checkpoint geometry, decoded/GPU/process residency, device performance and human usability remain separate checks."
+      ],
+      "scope": "Exact historical Gettysburg v16 local opt-in only; default, production, complete family, human, physical anatomy and historical drill approval remain false."
+    }
+  ]
+}

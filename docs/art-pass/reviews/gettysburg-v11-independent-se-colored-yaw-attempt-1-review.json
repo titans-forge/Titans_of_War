@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "fresh independent model-assisted colored anatomical gait and bearing diagnostic review",
+  "reviewer": "civilwar_survivor_review",
+  "reviewedAtUTC": "2026-10-03T17:31:04.677294+00:00",
+  "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-march-colored-yaw-attempt-1.png",
+  "sourceSha256": "480af36f7e7564d20a070839265decd013c31bb6ad8658a084e055a90b94ede5",
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "nativeMode": "RGBA",
+  "diagnosticOnly": true,
+  "gaitStructureAcceptedForDiagnostic": true,
+  "bearingPlausibleForLimitedSEDiagnostic": true,
+  "acceptedForFinalNativeUniformGeneration": true,
+  "approvedPreview": false,
+  "finalGameArtApproved": false,
+  "productionApproved": false,
+  "registrationAuthored": false,
+  "nativePixelsModifiedByReviewer": false,
+  "editIsolationEstablished": false,
+  "verdict": "Narrow visual diagnostic accepted: all four colored anatomical chains retain opposed contact/passing roles and visible three-quarter down-right bearing is plausiblySE relative to actual accepted A SE march and B SE actions. Not final gameart approval.",
+  "referenceSources": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v5/union-se-march-padded-candidate.png",
+      "sha256": "90a124967a778789bcdbaf5b83fc0cba689f145486450ba775798ec106bfc103"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-actions-candidate.png",
+      "sha256": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-march-anatomical-guide.png",
+      "sha256": "dbd13f48a33eb7fd77ce74f44487023ae0d1d77d293b036c7a2c9a83fe86c43b"
+    }
+  ],
+  "cells": [
+    {
+      "nativeIndex": 0,
+      "proposedRole": "left contact",
+      "chainFinding": "Blue-left/far chain leads down-right; red-right/near chain trails left. Entire colored thigh/knee/shin/boot chain is consistent with guideTL.",
+      "acceptedDiagnostic": true
+    },
+    {
+      "nativeIndex": 1,
+      "proposedRole": "left-support passing",
+      "chainFinding": "Blue-left/far planted support under pelvis; red-right/near knee/leg bends and lifts to image-left.",
+      "acceptedDiagnostic": true
+    },
+    {
+      "nativeIndex": 2,
+      "proposedRole": "right contact",
+      "chainFinding": "Red-right/near chain crosses toward forward image-right/down lead; blue-left/far bends behind, with trailing boot higher in projection. The full colored anatomical exchange remains explicit.",
+      "acceptedDiagnostic": true,
+      "caveat": "Projected trailing-boot height does not establish world ground/toe-off status; no physical contact certification."
+    },
+    {
+      "nativeIndex": 3,
+      "proposedRole": "right-support passing",
+      "chainFinding": "Red-right/near planted support image-left; blue-left/far chain flexes/lifts to image-right. Opposite support from TR remains clearly distinguishable.",
+      "acceptedDiagnostic": true
+    }
+  ],
+  "proposedNativeCellOrder": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "orderStatus": "For exact colored diagnostic only. Final uncolored generated source must be reviewed again for anatomical correspondence/chronology.",
+  "bearingFinding": {
+    "category": "Plausible limitedSE visual diagnostic",
+    "evidence": "Rightward visor/nose and three-quarter head/shoulder/chest, exposed back pack/roll side and down-right leading boots reasonably match the accepted rasterSE family. Comparison used actual original A SE march and new B SE actions, not a mathematical yaw assumption.",
+    "remainingDifference": "Torso/chest remains somewhat more frontal than older A SE march. Native families have drawing/perspective variation; no clear S-only blocker warrants further mandatory yaw generation on this diagnostic.",
+    "absoluteWorldYawRecovered": false,
+    "exact45DegreeYawCertified": false,
+    "guideProjectionExactlyMatched": false,
+    "supersedes": "The older colored diagnostic frontal-bearing concern is addressed sufficiently for a narrow comparison preview by this new exact source plus direct accepted-raster comparison."
+  },
+  "appearanceAndKit": "B face/moustache family, navy cap/short coat, pack and gray roll on back, crossed tan/gray straps, anatomical-left canteen/right pouch and fixed upright two-hand musket carry remain coherent across all4. Diagnostic red/blue legs/boots are structural evidence only and must not enter gameart.",
+  "minimumSolidPaddingByCell": [
+    21,
+    23,
+    17,
+    17
+  ],
+  "accepted16pxGatePass": true,
+  "tightMarginCaveat": "Both bottom cells have17px solid bayonet/top clearance, close to the16px gate. A final conversion may move geometry; do not transfer this margin pass to different bytes.",
+  "finalNativeConversionRequirements": [
+    "Use image generation to produce native realistic light-blue trouser cloth and worn brown boots, keeping complete anatomical chain roles and SE projection. Do not recolor existing PNG pixels programmatically.",
+    "The left/right color removal must preserve hip-thigh-knee-shin-ankle roles, not merely endpoint positions or outer silhouettes.",
+    "Obtain fresh all4 final source review and exactSHA after conversion, including contact/passing anatomy, head/kit/grips/bearing and all cell margins.",
+    "Only final accepted native bytes may receive fresh pelvis/rowground/cap/body-reference annotations, exact atlas bindings, runtime phase and viewport gates.",
+    "No final source or surgical/unmodified-geometry claim follows from an instruction to preserve it."
+  ],
+  "limits": [
+    "Model-assisted limited structural visual diagnostic only.",
+    "No human, physical skeletal, actual ground-contact, historical drill or equipment certification.",
+    "No final gameart, complete-family, production, default promotion or publication approval."
+  ]
+}

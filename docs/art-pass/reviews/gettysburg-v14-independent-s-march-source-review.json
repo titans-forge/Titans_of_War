@@ -1,0 +1,391 @@
+{
+  "reviewType": "Independent native-source visual and pixel review",
+  "reviewedAtUTC": "2026-10-04T00:47:22.878893+00:00",
+  "reviewer": "v14_priority_review independent model agent",
+  "scope": "Exact Confederate A SOUTH v14 native four-phase marching source; limited local opt-in preview only",
+  "source": {
+    "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/attempts/confederate-a-s-march-attempt-3.png",
+    "sha256": "a41a75bfa5874661e9c8f333f5bc9d2aecce9cf7cedc8e7add940dcc3678f26c",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "cell": [
+      627,
+      627
+    ]
+  },
+  "imagePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/attempts/confederate-a-s-march-attempt-3.png",
+  "sha256": "a41a75bfa5874661e9c8f333f5bc9d2aecce9cf7cedc8e7add940dcc3678f26c",
+  "acceptedForOptIn": true,
+  "modelAssisted": true,
+  "independentReview": true,
+  "identityKit": "confederate-a",
+  "kitAccepted": true,
+  "allFourCellsReviewed": true,
+  "completeNativeSheetInspected": true,
+  "humanReviewed": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "completeFamilyApproved": false,
+  "verdict": "PASS for exact-source local opt-in SOUTH four-phase march preview, with 2D role and foot-contact limits recorded",
+  "appearance": {
+    "kit": "Gray kepi-like cap and worn gray jacket, tan trousers, brown boots, brown crossed shoulder straps, tan upper-back roll/canteen and dark hip pouches appear in all four cells.",
+    "referenceContinuity": "Broad kit/palette compared with accepted v14 S actions1 and retained v13 E actions source. Native source is drawn smaller within its cells but uses its own measured height at runtime. Exact face, skeleton and manufactured equipment continuity is not established.",
+    "comparisonSources": [
+      {
+        "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/attempts/confederate-a-s-actions-attempt-1.png",
+        "sha256": "cbc0c38d83a73b934ea3e69cbf4ed7a0b4da23a3c5d27d5af002ac2610faf2b1"
+      },
+      {
+        "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v13/confederate-a-e-actions-candidate.png",
+        "sha256": "6aa46680436709a13d502c2bbbb3b1202377ef10575ed7155e77d7208124d861"
+      }
+    ]
+  },
+  "bearingAndGrip": {
+    "direction": "S",
+    "directionIndex": 2,
+    "actualFacingAccepted": true,
+    "bearing": "All four show front cap brim/head/chest, both front shoulder straps, front trouser chains and screen-down toe presentation from an elevated front camera; no cell is native N rear or E/W side profile.",
+    "grip": "Two separated hands plausibly contact upright weapon stock/fore-end in each phase, with lower grip and upper cross-body grip retained.",
+    "limits": "Hidden pelvis, thighs under jacket, fingers and contact depth are estimated from2D overlap. No recovered camera calibration, physical anatomy or historically verified drill."
+  },
+  "cells": [
+    {
+      "cell": 0,
+      "name": "TL left contact",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "fullLegChainRoleAccepted": true,
+      "observation": "TL contact: anatomical LEFT/imageRIGHT full hip-thigh-knee-shin-boot chain leads screen-down; anatomical RIGHT/imageLEFT leg trails shorter behind. Both contact soles are shown, with imageRIGHT leading boot lower in screenY."
+    },
+    {
+      "cell": 1,
+      "name": "TR left-support/right passing",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "fullLegChainRoleAccepted": true,
+      "observation": "TR passing: anatomical LEFT/imageRIGHT full leg is long/planted supporting; anatomical RIGHT/imageLEFT knee/shin flexes with boot raised closer under hip and higher than TL trailing contact. Support belongs to the same leading side as TL, correcting prior attempts."
+    },
+    {
+      "cell": 2,
+      "name": "BL right contact",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "fullLegChainRoleAccepted": true,
+      "observation": "BL opposite contact: anatomical RIGHT/imageLEFT full chain now leads screen-down; anatomical LEFT/imageRIGHT full chain trails shorter behind. The contact leg roles visibly reverse TL."
+    },
+    {
+      "cell": 3,
+      "name": "BR right-support/left passing",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "fullLegChainRoleAccepted": true,
+      "observation": "BR opposite passing: anatomical RIGHT/imageLEFT full leg is long/planted supporting; anatomical LEFT/imageRIGHT knee/shin flexes with boot raised nearer hip and higher than BL trailing contact. Full support/swing roles reverse TR."
+    }
+  ],
+  "poseSequenceReview": {
+    "completeNativeRoleSequenceAccepted": true,
+    "method": "Fresh all-four-cell full hip-to-thigh-to-knee-to-shin-to-boot visual inspection; role inference uses whole chains and supporting/swing assignment, not isolated boot tips. The two contacts reverse leading legs and the two passing states reverse supporting legs.",
+    "geometricReferenceOnly": "New colored native S guide used solely to disambiguate intended role/camera; anatomical LEFT=front-view imageRIGHT and anatomical RIGHT=imageLEFT. No roots, cap/sole coordinates, guide scale or guide approval copied.",
+    "guidePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/attempts/guidescoloredlegs/confederate-a-s-march-colored-leg-native-guide.png",
+    "guideSHA256": "d19d1aa42bccac716ca6126d70c6994003ca22583715f1c2e516005e3836b31e",
+    "limits": "Contact heel/toe attachment and trailing contact depth remain less clear than support/swing role. Passing lift is modest and under/near hip; four discrete illustrations do not certify a continuous physical gait or zero foot sliding."
+  },
+  "measurementContract": {
+    "coordinateSpace": "Native per-cell pixels from cell top-left; TL/TR/BL/BR order. Bounds and supporting sole Y are exclusive.",
+    "rootMeaning": "Fresh manual concealed pelvis-center X projected to independently visible supporting boot sole Y in each cell; a2D registration pivot, not certified pelvis reconstruction or recovered physical ground.",
+    "roots": [
+      [
+        315,
+        564
+      ],
+      [
+        316,
+        564
+      ],
+      [
+        314,
+        544
+      ],
+      [
+        315,
+        544
+      ]
+    ],
+    "pelvisX": [
+      315,
+      316,
+      314,
+      315
+    ],
+    "rootXUncertaintyPixels": 8,
+    "rootYUncertaintyPixels": 3,
+    "perCellSupportingSoleGroundY": [
+      564,
+      564,
+      544,
+      544
+    ],
+    "supportingSoleRegions": [
+      {
+        "cell": 0,
+        "soleROI": [
+          315,
+          518,
+          360,
+          580
+        ],
+        "boundsInROI": [
+          6,
+          0,
+          38,
+          46
+        ],
+        "groundY": 564
+      },
+      {
+        "cell": 1,
+        "soleROI": [
+          315,
+          518,
+          360,
+          580
+        ],
+        "boundsInROI": [
+          5,
+          0,
+          36,
+          46
+        ],
+        "groundY": 564
+      },
+      {
+        "cell": 2,
+        "soleROI": [
+          272,
+          495,
+          320,
+          565
+        ],
+        "boundsInROI": [
+          7,
+          0,
+          38,
+          49
+        ],
+        "groundY": 544
+      },
+      {
+        "cell": 3,
+        "soleROI": [
+          272,
+          495,
+          320,
+          565
+        ],
+        "boundsInROI": [
+          9,
+          0,
+          42,
+          49
+        ],
+        "groundY": 544
+      }
+    ],
+    "groundMethod": "Fresh visually selected alpha>=64 boot-only ROIs for the leading/supporting imageRIGHT boot in TL/TR and imageLEFT boot in BL/BR; exclusive bottom Y measured separately in every cell. Upright weapon, lifted/trailing boot and torso pixels are excluded.",
+    "capTop": [
+      230,
+      230,
+      220,
+      220
+    ],
+    "capTopY": [
+      230,
+      230,
+      220,
+      220
+    ],
+    "capROIs": [
+      [
+        289,
+        215,
+        340,
+        290
+      ],
+      [
+        289,
+        215,
+        340,
+        290
+      ],
+      [
+        289,
+        195,
+        340,
+        270
+      ],
+      [
+        289,
+        195,
+        340,
+        270
+      ]
+    ],
+    "capMethod": "Fresh alpha>=64 minimumY in manually selected cap crown regions; excludes rifle to imageLEFT and back-roll/shoulder pixels.",
+    "capTopUncertaintyPixels": 2,
+    "bodySpans": [
+      334,
+      334,
+      324,
+      324
+    ],
+    "capToRegisteredGroundSpans": [
+      334,
+      334,
+      324,
+      324
+    ],
+    "referenceHeight": 329,
+    "commonBodyReferenceHeight": 329,
+    "referenceMethod": "Rounded median of four fresh cap-to-individual-supporting-sole spans; one whole-source scale, no per-phase scaling.",
+    "bodySpanRangePixels": 10,
+    "rangeAsPercentOfCommonReference": 3.0395,
+    "muzzleApplicable": false,
+    "measurementValuesInheritedFromGuideOrV13": false
+  },
+  "nativePixelEvidence": {
+    "alphaThreshold": 64,
+    "boundsExclusive": [
+      [
+        242,
+        159,
+        373,
+        564
+      ],
+      [
+        242,
+        159,
+        374,
+        564
+      ],
+      [
+        242,
+        141,
+        374,
+        544
+      ],
+      [
+        242,
+        142,
+        374,
+        544
+      ]
+    ],
+    "paddingLTRB": [
+      [
+        242,
+        159,
+        254,
+        63
+      ],
+      [
+        242,
+        159,
+        253,
+        63
+      ],
+      [
+        242,
+        141,
+        253,
+        83
+      ],
+      [
+        242,
+        142,
+        253,
+        83
+      ]
+    ],
+    "minimumPaddingByCell": [
+      63,
+      63,
+      83,
+      83
+    ],
+    "minimumRequiredPadding": 16,
+    "strictPaddingPassed": true,
+    "nativeSquareRGBA2x2": true,
+    "redYellowCriterion": "R>180,B<80,and(G<90 or G>170), alpha>0",
+    "redYellowAlphaDistributionByCell": [
+      {
+        "1": 301,
+        "4": 12
+      },
+      {
+        "1": 230,
+        "2": 2,
+        "4": 8
+      },
+      {
+        "1": 195,
+        "2": 5,
+        "4": 6
+      },
+      {
+        "1": 289,
+        "2": 4,
+        "4": 3
+      }
+    ],
+    "redYellowAtAlpha64": 0,
+    "coloredRGBAssessment": "Targeted red/yellow samples occur only at alpha1/2/4; no solid red/yellow criterion hits atalpha64. Native viewers overemphasize nearly transparent RGB. This is not exhaustive transparency/fringe certification.",
+    "rasterCleanupPerformed": false,
+    "sourceChangedDuringReview": false
+  },
+  "nativeReview": {
+    "exactSHAInspected": "a41a75bfa5874661e9c8f333f5bc9d2aecce9cf7cedc8e7add940dcc3678f26c",
+    "completeNativeSheetInspected": true,
+    "allFourCellsReviewed": true,
+    "kitAccepted": true,
+    "acceptedForOptIn": true,
+    "modelAssisted": true,
+    "independentReview": true,
+    "humanReviewed": false,
+    "anatomyCertified": false,
+    "historyCertified": false,
+    "actualFacingAccepted": true,
+    "poseAccepted": true,
+    "manualRootsMeasured": true,
+    "manualMuzzleMeasured": false,
+    "oneSourceReferenceHeight": 329
+  },
+  "blockers": [],
+  "limits": [
+    "Acceptance binds only to this exactSHA and allfour inspected cells for localoptin preview.",
+    "Four discrete native poses are not skeletal/continuous animation or proof of historical marching drill and foot contact.",
+    "Contact depth/heel-to-ground assignment, hidden pelvis, fingers and approximate supporting sole remain uncertain.",
+    "Native cap-to-supporting-sole spans vary by10pixels; one whole-source height329 retains the variation without per-phase normalization.",
+    "Source is drawn smaller in its native627cells than S actions; runtime scale comes from separately measured sourceheight, while final renderer clarity/temporal behavior remains tobe checked.",
+    "Low-alpha colored RGB residue remains; targeted alpha criteria do not prove perfectly clean transparency or absence of every fringe color.",
+    "Model-assisted review, not human, anatomy, historical equipment/drill, default, production or complete-family certification.",
+    "Runtime phase timing, turns, pause/checkpoint geometry, decoded/GPU/process residency and device performance remain separate checks."
+  ],
+  "registrationAssessment": "Each phase uses fresh individual supporting soleY and manual concealed pelvisX; per-source median scales the complete sheet. Native pixels and layout are unchanged.",
+  "selectedSource": "docs/art-pass/candidates/gettysburg-v14/confederate-a-s-march-candidate.png",
+  "selectedSourceSha256": "a41a75bfa5874661e9c8f333f5bc9d2aecce9cf7cedc8e7add940dcc3678f26c"
+}

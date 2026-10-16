@@ -1,0 +1,1815 @@
+{
+  "artPass": "gettysburg-v32",
+  "maxAttemptsPerAddress": 2,
+  "maxTotalAttempts": 15,
+  "toolMode": "built-in image_gen",
+  "noDeterministicRasterEdits": true,
+  "familyComplete": false,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "attempts": [
+    {
+      "id": "union-b-contact-se-attempt1",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "role": "contact",
+      "cardinal": "se",
+      "requestedAt": "2026-10-06T03:47:39.166353+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "generate new sheet using identity and pose reference images",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v11/union-b-actions-se.png",
+          "sha256": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6",
+          "role": "identity/kit/camera"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v30/union-a-contact-se.png",
+          "sha256": "b3809882a633ed20c2468a141aa8c4732be5a79aeaf8280a6f21f7c4c7ee8e7a",
+          "role": "pose/style only"
+        }
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: native transparent 2x2 tactical-game infantry melee sprite sheet, four distinct authored phases, one whole square RGBA PNG.\nInput images: Image 1 is the ACCEPTED UNION B identity/kit and southeast camera reference. Image 2 is UNION A southeast melee pose/style guidance only; do not adopt A's face or alternate identity.\nPrimary request: Draw the Union B soldier from Image 1 in FOUR southeast-facing close-combat poses in strict row-major order: top-left LOW GUARD, top-right LOW BAYONET THRUST, bottom-left RECOVERY, bottom-right HIGH PARRY.\nSubject and bearing: The same adult Union B soldier in all four cells, facing southeast/lower-right in the same elevated three-quarter front camera as Image 1. Preserve B's bearded face, blue forage cap, natural navy wool coat, sky-blue trousers, brown boots, crossed straps, waist kit, canteen, pack and rolled blanket from Image 1. Preserve realistic human head/torso/leg proportions and the same head, hands, pack and limb size across phases.\nAction specificity: Low guard holds the rifle across the lower torso. The thrust is unmistakable bayonet combat: a small forward lunge, both hands gripping stock and forestock, arms projecting the weapon forward at waist/lower-chest level, butt and stock well BELOW and AWAY from cheek/shoulder, eyes not aligned to sights. Recovery visibly draws the rifle and body back from that lunge. High parry lifts the rifle diagonally ABOVE the head with two sound grips as a block; it is not firing or aiming.\nStyle/medium: Match the accepted reference's realistic, softly shaded natural uniforms and readable game-art finish. Natural cloth folds and anatomy; no caricature or exaggerated muscles.\nComposition/framing: Exactly FOUR complete separate full-body figures, centered one per equal square quadrant, no printed grid. True transparent background. Generous transparent separation: preferably at least 60 native pixels between every solid silhouette INCLUDING all bayonet tips, boots, pack, rifle and hands and EACH cell edge. Keep complete silhouettes within each cell; never bridge the center divides. Fit with empty space, not shortened limbs or distorted weapons.\nConstraints: Same camera, soldier identity and physical kit scale across all four cells. Distinct natural postures; no mirrored copies, no per-phase height normalization, no extra people, no muzzle flash, no smoke, no blood, no wounds, no ground/scenery, no text, no labels, no watermark. Preserve clean true alpha transparency. Generate a new whole sheet; do not modify either reference file.",
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false,
+      "completedAt": "2026-10-06T03:49:03.691927+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-ce4c6728-db47-42d3-8c21-c6e50f49f677.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-contact-se-attempt1.png",
+      "sha256": "1f6bd36894626697b1679eab209724c0ce846b3d58dfd944de7bcb97d458b419",
+      "bytes": 721654,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            170,
+            110,
+            570,
+            590
+          ],
+          "padding": [
+            170,
+            110,
+            57,
+            37
+          ],
+          "minPadding": 37,
+          "rgbaSHA256": "123e2d5f405118088b407dff952e7b89a7c9023009a0c0e18db37dd52b264732"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            64,
+            154,
+            613,
+            627
+          ],
+          "padding": [
+            64,
+            154,
+            14,
+            0
+          ],
+          "minPadding": 0,
+          "rgbaSHA256": "3ce8faf13f1d7134125486c487b8207f74852b8d4403268e60ec085e2d55d6b0"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            173,
+            94,
+            561,
+            548
+          ],
+          "padding": [
+            173,
+            94,
+            66,
+            79
+          ],
+          "minPadding": 66,
+          "rgbaSHA256": "6375cc68cd1f3356846df2c2f7c3f9a17322a2a61773b5fdc2e7cf8a9c8b09cd"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            161,
+            0,
+            578,
+            548
+          ],
+          "padding": [
+            161,
+            0,
+            49,
+            79
+          ],
+          "minPadding": 0,
+          "rgbaSHA256": "74b2c27e9c20f0046b241bf14e4e3f367a37bf7f33ca533a5f989bfd9b4c53f2"
+        }
+      ],
+      "geometryPassed": false,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-ce4c6728-db47-42d3-8c21-c6e50f49f677.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": null
+    },
+    {
+      "id": "union-b-contact-se-attempt2",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "role": "contact",
+      "cardinal": "se",
+      "requestedAt": "2026-10-06T03:49:44.620506+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "generate new sheet using identity and pose reference images",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v11/union-b-actions-se.png",
+          "sha256": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6",
+          "role": "identity/kit/camera"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v30/union-a-contact-se.png",
+          "sha256": "b3809882a633ed20c2468a141aa8c4732be5a79aeaf8280a6f21f7c4c7ee8e7a",
+          "role": "pose/style only"
+        }
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: native transparent 2x2 tactical-game infantry melee sprite sheet, four distinct authored phases, one whole square RGBA PNG.\nInput images: Image 1 is the ACCEPTED UNION B identity/kit and southeast camera reference. Image 2 is UNION A southeast melee pose/style guidance only; do not adopt A's face or alternate identity.\nPrimary request: Draw the Union B soldier from Image 1 in FOUR southeast-facing close-combat poses in strict row-major order: top-left LOW GUARD, top-right LOW BAYONET THRUST, bottom-left RECOVERY, bottom-right HIGH PARRY.\nSubject and bearing: The same adult Union B soldier in all four cells, facing southeast/lower-right in the same elevated three-quarter front camera as Image 1. Preserve B's bearded face, blue forage cap, natural navy wool coat, sky-blue trousers, brown boots, crossed straps, waist kit, canteen, pack and rolled blanket from Image 1. Preserve realistic human head/torso/leg proportions and the same head, hands, pack and limb size across phases.\nAction specificity: Low guard holds the rifle across the lower torso. The thrust is unmistakable bayonet combat: a small forward lunge, both hands gripping stock and forestock, arms projecting the weapon forward at waist/lower-chest level, butt and stock well BELOW and AWAY from cheek/shoulder, eyes not aligned to sights. Recovery visibly draws the rifle and body back from that lunge. High parry lifts the rifle diagonally ABOVE the head with two sound grips as a block; it is not firing or aiming.\nStyle/medium: Match the accepted reference's realistic, softly shaded natural uniforms and readable game-art finish. Natural cloth folds and anatomy; no caricature or exaggerated muscles.\nComposition/framing: Exactly FOUR complete separate full-body figures, centered one per equal square quadrant, no printed grid. True transparent background. Generous transparent separation: preferably at least 60 native pixels between every solid silhouette INCLUDING all bayonet tips, boots, pack, rifle and hands and EACH cell edge. Keep complete silhouettes within each cell; never bridge the center divides. Fit with empty space, not shortened limbs or distorted weapons.\nConstraints: Same camera, soldier identity and physical kit scale across all four cells. Distinct natural postures; no mirrored copies, no per-phase height normalization, no extra people, no muzzle flash, no smoke, no blood, no wounds, no ground/scenery, no text, no labels, no watermark. Preserve clean true alpha transparency. Generate a new whole sheet; do not modify either reference file.\nCritical correction from the first rejected generation: DRAW ALL FOUR SOLDIERS AND COMPLETE RIFLES AT A UNIFORMLY SMALLER COMPOSITION SCALE, with each complete pose contained in the central 75% width AND central 75% height of its own quadrant. Leave approximately 80-100 transparent native pixels on all four sides of EVERY cell, including its bayonet. The bottom-right high parry must have the whole rifle nearly horizontal above the head rather than pointing steeply upward, and its highest bayonet/hand pixel must stay well BELOW that bottom cell's top boundary. The top-right thrust bayonet must stop well before its cell's right boundary. No pixels from any figure or weapon may cross either invisible center divide. Do not shorten/distort anatomy or weapons to fit; compose each entire full-body figure and rifle with more surrounding transparent space, using the SAME head/limb/kit drawing scale in every phase.",
+      "status": "independently-source-accepted",
+      "independentSourceAccepted": true,
+      "retryReason": "First whole sheet crossed center row divider in high parry and failed unchanged alpha64 margin>=16.",
+      "completedAt": "2026-10-06T03:52:17.698854+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-b804aede-0d64-4859-9d38-f16f1cc0aa6f.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-contact-se-attempt2.png",
+      "sha256": "788a57247efd2cc871e686efbbfd422bc604b491ffc702575af78e140a44dcac",
+      "bytes": 668383,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            171,
+            152,
+            567,
+            587
+          ],
+          "padding": [
+            171,
+            152,
+            60,
+            40
+          ],
+          "minPadding": 40,
+          "rgbaSHA256": "352342874fea827d7e8be1c9689a319ea04705d653091908f9a8e1a03c90c457"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            87,
+            176,
+            593,
+            567
+          ],
+          "padding": [
+            87,
+            176,
+            34,
+            60
+          ],
+          "minPadding": 34,
+          "rgbaSHA256": "b14de395737b98e0b762841df810155f2aef2f032004ff793f29cc2a78d68d69"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            194,
+            120,
+            554,
+            540
+          ],
+          "padding": [
+            194,
+            120,
+            73,
+            87
+          ],
+          "minPadding": 73,
+          "rgbaSHA256": "faf1789e85e5f41b152e2d1667e0045b6fca66cee64da0728b3384ea68fe61e5"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            107,
+            110,
+            552,
+            544
+          ],
+          "padding": [
+            107,
+            110,
+            75,
+            83
+          ],
+          "minPadding": 75,
+          "rgbaSHA256": "48e2247b4ff0fb9153ff18e5f82e19e5a86fda7a3944de79b8274daf39558dc9"
+        }
+      ],
+      "geometryPassed": true,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-b804aede-0d64-4859-9d38-f16f1cc0aa6f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-contact-se-candidate.png",
+      "independentContactVisualJudgment": {
+        "status": "provisionally accepted",
+        "reviewer": "independent Astra reviewer",
+        "evidence": "direct Astra/root messages in current task",
+        "pairScaleAndFourSourceAcceptance": "pending"
+      },
+      "selectedCandidateCurrent": true,
+      "independentAcceptance": {
+        "review": "docs/art-pass/reviews/gettysburg-v32-independent-union-b-contact-casualty-source-review.json",
+        "reviewSHA256": "9f620c6a789171be3cff65f68a2babbf0d7077b21b51a6415f39ef6b10a117cd",
+        "reviewerModel": "gpt-6-astra",
+        "reasoningEffort": "max",
+        "sourceOnly": true,
+        "localInstall": false,
+        "certificationClaimed": false
+      }
+    },
+    {
+      "id": "union-b-contact-nw-attempt1",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "role": "contact",
+      "cardinal": "nw",
+      "requestedAt": "2026-10-06T03:52:59.422980+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "generate new sheet using identity and pose reference images",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v28/union-b-actions-nw.png",
+          "sha256": "258268c64969c4c68318ca64147f8cecfa309e950a53440fe0730bb786a1fc67",
+          "role": "identity/kit/camera"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v31/union-a-contact-nw.png",
+          "sha256": "8ef7a8b577e52bb884679c47c3c028a2a5b24b1753c8ebc5d26b72ec0428e85e",
+          "role": "pose/style only"
+        }
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: new native transparent 2x2 tactical-game infantry melee sprite sheet, four distinct authored poses in one complete square RGBA PNG.\nInput images: Image 1 is the ACCEPTED UNION B identity, uniform/kit and NORTHWEST camera reference. Image 2 is Union A northwest melee pose/style guidance ONLY; retain B's identity and kit, not A's.\nPrimary request: The SAME Union B adult soldier in four NORTHWEST-facing bayonet combat poses, strict row-major order: top-left LOW GUARD, top-right LOW THRUST, bottom-left RECOVERY, bottom-right HIGH PARRY.\nBearing/camera/kit: Match Image 1's elevated rear three-quarter view, soldier facing northwest/upper-left with back and pack visible, face mostly away. Preserve the B blue forage cap, natural navy wool coat, sky-blue trousers, brown boots, crossed straps, pack, rolled light blanket with straps, canteen and waist kit. Preserve the reference's realistic head/torso/leg proportions, same head/hand/pack/limb size in all phases, and softly shaded natural-cloth game-art finish. Do not mirror another direction.\nAction: Low guard holds rifle below chest, stock at hip, bayonet toward northwest. Low thrust is a visible small forward lunge with extended arms and both hands correctly gripping stock/forestock, butt far BELOW and AWAY from shoulder/cheek, aimed at an opponent's lower torso; no shoulder-fired aiming pose. Recovery distinctly retracts the rifle and weight after thrust. High parry raises the COMPLETE rifle nearly horizontally ABOVE the head with two sound grips to block, rather than sighting or firing.\nComposition: Exactly four separate full-body figures, one per equal square quadrant, no printed grid, background truly transparent. Keep every complete silhouette INCLUDING boots, hands, rifle, bayonet tip and pack inside the central 75% WIDTH AND HEIGHT of its own cell. Prefer 80-100 transparent native pixels on ALL four cell edges; never fewer than60. Neither center divide may be crossed. Leave ample empty space by composing all actors at the SAME suitably modest drawing scale; do not shorten weapons, distort limbs or normalize each phase's height to fit.\nAvoid: extra people, extra limbs, duplicated or fused grips, front-facing rotation, muzzle flash, smoke, blood, graphic wounds, floor/scenery/shadows outside feet, labels, numbers, text, watermark, opaque or checkerboard background. Generate a new whole sheet and leave both reference files unchanged.",
+      "status": "independently-source-accepted",
+      "independentSourceAccepted": true,
+      "completedAt": "2026-10-06T03:53:54.722035+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-b08147a7-294b-4f52-862c-f987009c356d.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-contact-nw-attempt1.png",
+      "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+      "bytes": 627865,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            136,
+            188,
+            470,
+            592
+          ],
+          "padding": [
+            136,
+            188,
+            157,
+            35
+          ],
+          "minPadding": 35,
+          "rgbaSHA256": "d9778a909f35b1321458737e6aff4363a930138670392d710de65a79f196ca62"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            37,
+            212,
+            553,
+            593
+          ],
+          "padding": [
+            37,
+            212,
+            74,
+            34
+          ],
+          "minPadding": 34,
+          "rgbaSHA256": "4547222beb592670185257dca5a18ad05362a4de6d68d2ec08c66ee4965ad89a"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            160,
+            134,
+            500,
+            537
+          ],
+          "padding": [
+            160,
+            134,
+            127,
+            90
+          ],
+          "minPadding": 90,
+          "rgbaSHA256": "715755db4aa22f8302dc95a6b9d420dc75ccc69bd71505eda524367f2735a94d"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            135,
+            47,
+            515,
+            545
+          ],
+          "padding": [
+            135,
+            47,
+            112,
+            82
+          ],
+          "minPadding": 47,
+          "rgbaSHA256": "73a6e25e0aa94bafea6b54e4686b8854d1f467611862bd84b9c23ba493fe2770"
+        }
+      ],
+      "geometryPassed": true,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-b08147a7-294b-4f52-862c-f987009c356d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-contact-nw-candidate.png",
+      "independentContactVisualJudgment": {
+        "status": "provisionally accepted",
+        "reviewer": "independent Astra reviewer",
+        "evidence": "direct Astra/root messages in current task",
+        "pairScaleAndFourSourceAcceptance": "pending"
+      },
+      "selectedCandidateCurrent": true,
+      "independentAcceptance": {
+        "review": "docs/art-pass/reviews/gettysburg-v32-independent-union-b-contact-casualty-source-review.json",
+        "reviewSHA256": "9f620c6a789171be3cff65f68a2babbf0d7077b21b51a6415f39ef6b10a117cd",
+        "reviewerModel": "gpt-6-astra",
+        "reasoningEffort": "max",
+        "sourceOnly": true,
+        "localInstall": false,
+        "certificationClaimed": false
+      }
+    },
+    {
+      "id": "union-b-casualty-se-attempt1",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "role": "casualty",
+      "cardinal": "se",
+      "requestedAt": "2026-10-06T03:55:28.235459+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "generate new sheet using B identity/contact and A pose references",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v11/union-b-actions-se.png",
+          "sha256": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6",
+          "role": "accepted B identity/kit/camera"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-contact-se-candidate.png",
+          "sha256": "788a57247efd2cc871e686efbbfd422bc604b491ffc702575af78e140a44dcac",
+          "role": "fresh B contact consistency guide; independent acceptance pending"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v30/union-a-casualty-se.png",
+          "sha256": "528eeddc5ff5b2159247cd5076e7293bd6098ee0f8894d08e51d551b41e82eb6",
+          "role": "A pose/style only"
+        }
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: new native transparent 2x2 tactical-game infantry casualty sprite sheet, four distinct NON-GRAPHIC falling poses, one complete square RGBA PNG.\nInput images: Image 1 is the accepted UNION B identity, uniform/kit and SOUTHEAST camera reference. Image 2 is the newly drawn B southeast contact sheet, used only to keep the same B head/limb/pack/kit scale and appearance across the pair. Image 3 is Union A southeast casualty pose/style guidance ONLY; do not adopt A identity.\nPrimary request: Draw the same adult Union B soldier facing SOUTHEAST/lower-right in four clear progressive fall stages, strict row-major order: top-left STUMBLE, top-right KNEE DOWN, bottom-left COLLAPSE, bottom-right SETTLED ON GROUND.\nKit/camera: Match B's blue forage cap, bearded face, navy natural wool coat, sky-blue trousers, brown boots, crossed straps, pack/rolled blanket/canteen/pouches. Use the same elevated three-quarter-front southeast view as B Image 1. Preserve B body proportions and the same actual head, hands, pack and limb size across all stages; falling postures change naturally, not by shrinking the person.\nAction specificity: STUMBLE visibly loses balance without blood, one planted near boot and bent knees. KNEE DOWN bears weight on a near knee and/or planted support hand. COLLAPSE lowers torso and hip with plausible bent limbs and a weight-bearing forearm/hand. SETTLED is a stable relaxed side/front-ground posture with supported torso/hip and forearm, head and legs readable, no levitation or continued kneeling. All four remain anatomically coherent and connected. A released rifle with attached bayonet may rest beside the person, but remains wholly within its cell and spatially separate from the near boot/knee/forearm supports so support pixels stay clear.\nStyle: Match the realistic softly shaded natural-cloth game-art references. No blood, visible injury, dismemberment or gore; these are non-graphic game falling animations.\nComposition: Exactly FOUR full separate complete figure/kit/rifle poses, one in each equal square quadrant, no gridlines. True transparent background. Generous padding on all cell edges, preferably80-100 native pixels and at least60. Keep the entire silhouette including dropped rifle, bayonet, hands, boots and pack inside the CENTRAL75% width AND height of each quadrant. No item may cross either center divide or touch the sheet border. Compose complete figures and weapons with ample space; never truncate, shorten/distort anatomy or weapons, mirror cells, or individually normalize phase heights.\nAvoid: extra people, extra limbs/fused hands, aiming/firing pose, smoke/muzzleflash, floor/scenery/opaque backdrop, labels/text/numbers/watermarks. Generate a new whole sheet and leave all reference files unchanged.",
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false,
+      "completedAt": "2026-10-06T03:56:21.721037+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-7e21a42c-ce98-40bd-bcb7-ef8cd1fd733c.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-se-attempt1.png",
+      "sha256": "e8aa7234e1d995d0aa7886ccdf29f9ca69907334610cb28eebe21b61e6bd4d22",
+      "bytes": 805224,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            126,
+            123,
+            592,
+            627
+          ],
+          "padding": [
+            126,
+            123,
+            35,
+            0
+          ],
+          "minPadding": 0,
+          "rgbaSHA256": "76479eeffb083a6f9c295c7aa63e7c7abe7cfca69887cb64eca1c435d417b8f8"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            87,
+            278,
+            584,
+            627
+          ],
+          "padding": [
+            87,
+            278,
+            43,
+            0
+          ],
+          "minPadding": 0,
+          "rgbaSHA256": "a1bedf01f3f30ce9faa287e94a594514567754231eaa74da674ca58a9392a15e"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            55,
+            0,
+            577,
+            516
+          ],
+          "padding": [
+            55,
+            0,
+            50,
+            111
+          ],
+          "minPadding": 0,
+          "rgbaSHA256": "a2bfbfaeac2cdb449447ef39e1cf6bea6e1b4114a57224f6bd0fa733d3e57333"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            54,
+            0,
+            575,
+            506
+          ],
+          "padding": [
+            54,
+            0,
+            52,
+            121
+          ],
+          "minPadding": 0,
+          "rgbaSHA256": "4be573918818c5e98911e5564ca3b77ac5568d3b8d508d8213d28fb7689a118a"
+        }
+      ],
+      "geometryPassed": false,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-7e21a42c-ce98-40bd-bcb7-ef8cd1fd733c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": null
+    },
+    {
+      "id": "union-b-casualty-se-attempt2",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "role": "casualty",
+      "cardinal": "se",
+      "requestedAt": "2026-10-06T03:59:05.806999+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "generate new sheet using B identity/contact and A pose references",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-contact-se-candidate.png",
+          "sha256": "788a57247efd2cc871e686efbbfd422bc604b491ffc702575af78e140a44dcac",
+          "role": "fresh B contact identity/scale; independent single-sheet visual acceptance provisional"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v11/union-b-actions-se.png",
+          "sha256": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6",
+          "role": "accepted B stationary kit/camera"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v30/union-a-casualty-se.png",
+          "sha256": "528eeddc5ff5b2159247cd5076e7293bd6098ee0f8894d08e51d551b41e82eb6",
+          "role": "A casualty body pose/style only"
+        }
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: one new whole transparent RGBA square 2x2 Union B SOUTHEAST non-graphic falling sprite sheet.\nInput images: Image 1 is the independently provisionally accepted NEW B southeast contact sheet and establishes this soldier's exact head/hand/limb/kit drawing scale. Image 2 is the accepted B southeast stationary uniform/camera identity reference. Image 3 is A casualty BODY-POSTURE guidance only, not identity or rifle placement.\nFour row-major full-body stages: top-left STUMBLE with one near boot planted, top-right KNEE DOWN with near knee/support hand bearing weight, bottom-left COLLAPSE onto forearm and hip, bottom-right SETTLED stable side/front-ground torso and hip rest. Same bearded B face, cap, natural navy coat/sky-blue trousers/brown boots, cross straps, pack and bedroll/canteen/kit; same elevated three-quarter FRONT camera facing southeast/lower-right. Distinct coherent natural postures; no blood or visible injury. Preserve the contact sheet's physical head/limb/pack scale throughout the casualty pair, not enlarged bodies or phase-height normalization.\nCRITICAL COMPOSITION FIX: The first rejected casualty sheet put the rifles below the top-row feet and across the central row divide. This NEW sheet must leave broad empty bands around BOTH invisible center divides. On a square1254x1254 sheet, its four627px cells have these strictly INSIDE allowed content boxes: top-left x80..547,y80..547; top-right x707..1174,y80..547; bottom-left x80..547,y707..1174; bottom-right x707..1174,y707..1174. Every solid pixel of figures, complete boots, pack, hands, rifle and bayonet must fit in its own box. Do NOT draw these boxes or labels.\nRifle placement: In STUMBLE the rifle can remain loosely held beside the torso, with stock and bayonet entirely ABOVE the lowest boot; do not put a separate rifle underneath the feet. In the other stages a dropped rifle may lie along the SIDE of the body at mid-body/support level with space from supporting knee/forearm. Do not add a rifle beneath the lowest boot, knee or forearm; nothing may protrude into the blank cell border. Retain correct full rifle/bayonet proportions and natural anatomy; leave empty space by coherent framing, never by truncation, shortening or stretching.\nStyle: Match the realistic softly shaded natural wool/leather/metal reference finish and anatomically ordinary adult B. Four separate complete poses, no extra limbs, no fused hands, no floor/scenery/background shadow, no flash/smoke/aiming, no text/numbers/gridlines/watermark. TRUE transparent background, ample alpha padding ideally80px, no pixel repair. Generate an entirely new whole sheet; all reference files stay unchanged.",
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false,
+      "retryReason": "First SE casualty whole sheet crossed center row with droppedrifles; all4 alpha64 marginsfailed unchanged>=16 threshold.",
+      "completedAt": "2026-10-06T03:59:55.320776+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-6b259097-941c-45c4-9d7d-249ee02b326f.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-se-attempt2.png",
+      "sha256": "fa72414d45c6acde0cc1f7b5e1b6ce9c593c60f13f5c735472b141a20f507085",
+      "bytes": 776515,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            131,
+            138,
+            589,
+            613
+          ],
+          "padding": [
+            131,
+            138,
+            38,
+            14
+          ],
+          "minPadding": 14,
+          "rgbaSHA256": "cbee4f3cc741591ed7e54597b37ba8a29c9a62a1fe94ae71b8ddd0418086b89d"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            73,
+            278,
+            590,
+            620
+          ],
+          "padding": [
+            73,
+            278,
+            37,
+            7
+          ],
+          "minPadding": 7,
+          "rgbaSHA256": "da7f74a7d5722d0c75eba70615bf949550745d516d9f92cf4e6852b1fb5726e9"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            65,
+            193,
+            598,
+            506
+          ],
+          "padding": [
+            65,
+            193,
+            29,
+            121
+          ],
+          "minPadding": 29,
+          "rgbaSHA256": "451dc747459268cee62c00483c76dc733e41f69d5cca4751b933ce264c24c722"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            30,
+            275,
+            603,
+            537
+          ],
+          "padding": [
+            30,
+            275,
+            24,
+            90
+          ],
+          "minPadding": 24,
+          "rgbaSHA256": "a81d098930f8ece1365b46c6ada702762c85fa8463d81867e00b0922ca82481e"
+        }
+      ],
+      "geometryPassed": false,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-6b259097-941c-45c4-9d7d-249ee02b326f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": null
+    },
+    {
+      "id": "union-b-casualty-nw-attempt1",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "role": "casualty",
+      "cardinal": "nw",
+      "requestedAt": "2026-10-06T04:00:56.567856+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "generate new sheet using B identity/contact and A pose references",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-contact-nw-candidate.png",
+          "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+          "role": "fresh B contact identity/scale; independent single-sheet visual acceptance provisional"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v28/union-b-actions-nw.png",
+          "sha256": "258268c64969c4c68318ca64147f8cecfa309e950a53440fe0730bb786a1fc67",
+          "role": "accepted B stationary kit/camera"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v31/union-a-casualty-nw.png",
+          "sha256": "9c03405991c9171c70411336641ea82b92db7f9bb1c9f70138d7e113029c9e85",
+          "role": "A casualty body pose/style only"
+        }
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: new whole transparent RGBA square 2x2 Union B NORTHWEST non-graphic falling sprite sheet.\nInput images: Image 1 is the freshly independently provisionally accepted B northwest contact sheet and establishes the same B head/limb/hand/pack scale. Image 2 is the accepted B northwest uniform/kit/camera identity reference. Image 3 is A northwest casualty BODY POSTURE guidance only, not A identity.\nDraw FOUR DISTINCT full-body progressive falling stages in strict row-major order: top-left STUMBLE with a near boot planted, top-right KNEE DOWN with near knee/support hand bearing weight, bottom-left COLLAPSE onto forearm/hip, bottom-right SETTLED stable ground-rest supported by torso/hip and forearm. Same adult B soldier in every phase, NORTHWEST/upper-left bearing, elevated REAR three-quarter camera with back and pack visible and face mainly away. Preserve B blue forage cap, natural navy coat, sky-blue trousers, brown boots, crossed straps, light rolled blanket, pack/canteen/pouches. Retain the contact sheet's physical head/pack/limb size and realistic adult proportions; no per-phase shrinking or stretched legs.\nComposition is critical: Whole square sheet1254x1254 with four627px square cells. Complete figures and COMPLETE rifles/bayonets must fit inside these generous content boxes: top-left x80..547,y80..547; top-right x707..1174,y80..547; bottom-left x80..547,y707..1174; bottom-right x707..1174,y707..1174. Do not draw these boxes or any grid. Leave invisible blank bands around all cell edges and both center divides, ideally80-100px padding. Nothing may touch or cross a cell edge, including a dropped stock, boot or bayonet.\nPlace the complete musket/bayonet NEXT TO the body at middle/support level, never below the lowest boot/knee/forearm. In stumble it can stay loosely held beside the torso rather than airborne. In later phases it may rest beside the body, but leave supporting knees, forearms and near boots clearly separable from rifle pixels. Keep the weapon wholly within its cell. Natural connected two-leg/two-arm anatomy, sensible hands and joints, coherent loss-of-balance to settled progression; no continued kneeling for the final phase.\nStyle: Match the softly shaded realistic natural-uniform game art of the B references. Transparent background, no blood/visible injury/gore, extra people/limbs, floor/scenery/shadow outside feet, muzzleflash/smoke/firing, front-facing rotation/mirrors, text/labels/gridlines/watermarks. Generate a new complete sheet; do not modify any reference.",
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false,
+      "completedAt": "2026-10-06T04:01:43.323903+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-0c25a754-fb55-4d4a-9dc7-6c49ca17c7c6.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt1.png",
+      "sha256": "0f394419cba134856b268d184810959e3e97933f0c4e133cae10629b177bb9ca",
+      "bytes": 700765,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            100,
+            113,
+            534,
+            607
+          ],
+          "padding": [
+            100,
+            113,
+            93,
+            20
+          ],
+          "minPadding": 20,
+          "rgbaSHA256": "566493255bce6dabeb318311915f47708077e0ad9b7b98b92c113a6a98936c1f"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            68,
+            219,
+            563,
+            571
+          ],
+          "padding": [
+            68,
+            219,
+            64,
+            56
+          ],
+          "minPadding": 56,
+          "rgbaSHA256": "fc26cf41e9b2cbdb91422c8d36b6ff79d68090f432adbee64a05466de46286fc"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            49,
+            195,
+            614,
+            474
+          ],
+          "padding": [
+            49,
+            195,
+            13,
+            153
+          ],
+          "minPadding": 13,
+          "rgbaSHA256": "05d1df987b1ad142ff5446a424c0f1e60c44183487e4405976c6bde38e7cf737"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            48,
+            246,
+            607,
+            510
+          ],
+          "padding": [
+            48,
+            246,
+            20,
+            117
+          ],
+          "minPadding": 20,
+          "rgbaSHA256": "a42da39f6aa65d7a1ffaad25605aeefacd8fbb7d3a8e27d0bd6b363d8e4d8d3b"
+        }
+      ],
+      "geometryPassed": false,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-0c25a754-fb55-4d4a-9dc7-6c49ca17c7c6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": null
+    },
+    {
+      "id": "union-b-casualty-se-attempt3",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "role": "casualty",
+      "cardinal": "se",
+      "requestedAt": "2026-10-06T04:03:20.339604+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "generate new whole sheet using accepted B identity and fresh B contact reference",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-contact-se-candidate.png",
+          "sha256": "788a57247efd2cc871e686efbbfd422bc604b491ffc702575af78e140a44dcac",
+          "role": "fresh B contact identity/scale; independent single-sheet visual acceptance provisional"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v11/union-b-actions-se.png",
+          "sha256": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6",
+          "role": "accepted B stationary kit/camera"
+        }
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: NEW WHOLE square transparent RGBA1254x1254 sprite sheet containing four627x627 cells, Union B southeast non-graphic casualty sequence.\nReferences: Image 1 is the new independently provisionally accepted Union B southeast contact sheet; preserve this exact B head/hand/limb/pack size and natural anatomy across the contact/casualty pair. Image 2 is accepted B uniform/kit and southeast camera. Do not use Union A identity.\nDraw FOUR complete distinct natural falling stages in strict row-major order: top-left STUMBLE, top-right KNEE DOWN, bottom-left COLLAPSE, bottom-right SETTLED resting on side/front-ground torso/hip/forearm. Keep same adult bearded B soldier, blue forage cap/navy wool coat/sky-blue trousers/brown boots/cross straps/pack/blanket/canteen and pouches; elevated three-quarter FRONT southeast camera, head/torso facing lower-right. Same physical drawing scale and body proportions in every phase, natural knees/hips/arms; no phase enlargement, shrinking, stretching or mirrored poses.\nCRITICAL FRAMING: Upper-row figures and complete rifles must be composed HIGHER IN THEIR CELLS. All top-left content MUST stay inside x60..565 and y60..540. All top-right content MUST stay inside x687..1192 and y60..540. Keep the upper two full pose groups centered around y300 rather than down near the row divider y627. Leave a broad fully transparent band from y550 to y705 across the sheet. No toe, cap, hand, pack, stock or bayonet may enter that blank band. In the lower row, keep complete poses inside each cell's x60..565,y80..550 local coordinates (bottom-left global x60..565,y707..1177; bottom-right x687..1192,y707..1177). Do not print these coordinates, boxes or any grid.\nSTUMBLE: one near boot planted, body leans/loss of balance; rifle loosely held close alongside torso, its stock and tip at lower torso height, NOT below the boots. KNEE DOWN: near knee/hand support bears weight; rifle rests beside the body at knee/torso height, not below the supporting knee or hand. COLLAPSE and SETTLED: connected body with plausible bent limbs and supported forearm/hip/torso, settled pose fully down and stable; rifle beside the torso along its direction, not underneath the lowest body pixels. Every rifle/bayonet must be complete and fully inside its cell.\nMatch the realistic natural-cloth/leather softly shaded B references. Clean true transparent alpha, generous60-80px cell clearance. No blood/visible wounds/gore, extra people/limbs, fused hands, aiming/firing/flash/smoke, floor/scenery/shadows outside feet, labels/numbers/text/watermark. Generate an entirely new complete sheet; do not crop, move, scale or edit any existing image.",
+      "status": "independently-source-accepted",
+      "independentSourceAccepted": true,
+      "retryReason": "Authorized attempt3 for whole-cell framing after attempt2 nativepadding14/7/29/24. Pose reference omitted to prioritize fresh B scale and upper-row negative space.",
+      "completedAt": "2026-10-06T04:04:14.475944+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-09b987a5-7bee-43b5-bb25-5da2fe3e5b4e.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-se-attempt3.png",
+      "sha256": "5567d9ba6fce923b07671672d330e40b95bb91644348cc725717d3ab544b5068",
+      "bytes": 678385,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            164,
+            105,
+            521,
+            606
+          ],
+          "padding": [
+            164,
+            105,
+            106,
+            21
+          ],
+          "minPadding": 21,
+          "rgbaSHA256": "7eff650ca02d651eaefd9cd700544cfd9f8b9892a25d07f4ed21e51c16c4efd8"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            69,
+            264,
+            603,
+            595
+          ],
+          "padding": [
+            69,
+            264,
+            24,
+            32
+          ],
+          "minPadding": 24,
+          "rgbaSHA256": "5420da89a5e95442e93acd8b17a838939f9a5702ee6667ba981f8accc6920fe7"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            79,
+            207,
+            589,
+            488
+          ],
+          "padding": [
+            79,
+            207,
+            38,
+            139
+          ],
+          "minPadding": 38,
+          "rgbaSHA256": "023c4865a628988ba9a8d2dc6b8eb6a27761e1e313c745de0db1a39984cc2a79"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            58,
+            251,
+            590,
+            475
+          ],
+          "padding": [
+            58,
+            251,
+            37,
+            152
+          ],
+          "minPadding": 37,
+          "rgbaSHA256": "26e60f314d2ddc3b8b3a7514eba4fa7f92a82f1ebfa0749c945a9170cb0f7abc"
+        }
+      ],
+      "geometryPassed": true,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-09b987a5-7bee-43b5-bb25-5da2fe3e5b4e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-casualty-se-candidate.png",
+      "selectedCandidateCurrent": true,
+      "independentAcceptance": {
+        "review": "docs/art-pass/reviews/gettysburg-v32-independent-union-b-contact-casualty-source-review.json",
+        "reviewSHA256": "9f620c6a789171be3cff65f68a2babbf0d7077b21b51a6415f39ef6b10a117cd",
+        "reviewerModel": "gpt-6-astra",
+        "reasoningEffort": "max",
+        "sourceOnly": true,
+        "localInstall": false,
+        "certificationClaimed": false
+      }
+    },
+    {
+      "id": "union-b-casualty-nw-attempt2",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "role": "casualty",
+      "cardinal": "nw",
+      "requestedAt": "2026-10-06T04:05:12.676755+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "generate new whole sheet using accepted B kit and fresh B contact reference",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-contact-nw-candidate.png",
+          "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+          "role": "fresh B contact identity/scale; independent single-sheet visual acceptance provisional"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v28/union-b-actions-nw.png",
+          "sha256": "258268c64969c4c68318ca64147f8cecfa309e950a53440fe0730bb786a1fc67",
+          "role": "accepted B stationary kit/camera"
+        }
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: NEW WHOLE transparent RGBA square1254x1254 sprite sheet, four627x627 cells, Union B northwest NON-GRAPHIC falling sequence.\nReferences: Image 1 is the freshly independently provisionally accepted Union B NORTHWEST contact sheet and fixes the same B head/hand/limb/pack scale for this pair. Image 2 is the accepted B northwest uniform/kit and rear-camera reference.\nDraw FOUR distinct progressive full-body phases in strict row-major order: top-left STUMBLE with a planted near boot/lost balance; top-right KNEE DOWN with near knee and/or support hand carrying weight; bottom-left COLLAPSE onto forearm/hip; bottom-right SETTLED with torso/hip/forearm fully supported on ground. Same adult B in blue forage cap, natural navy wool coat, sky-blue trousers, brown boots, cross straps/pack/light rolled blanket/canteen/pouches. Match elevated REAR three-quarter northwest camera, soldier facing upper-left with back/pack visible and face mostly away. Same head/pack/limb dimensions throughout; natural motion changes posture, not body scale or limb length.\nCRITICAL WHOLE-CELL FRAMING: Previous failed generation let collapse-phase boot approach the cell right edge. Keep EVERY complete pose including all boots, hands, kit and full rifle/bayonet between local x60..565 and y60..550 in its own cell. On this1254square sheet, upper-right offsets start at x627 and lower cells at y627. Leave wide completely empty transparent bands around BOTH center divides, and all four canvas edges. No solid pixel may touch a boundary; aim60-80px empty padding.\nKeep collapse and settled poses compact with NATURALLY BENT KNEES/HIPS instead of extending straight legs far to the right. Keep complete boot toes well inside each right border (localx<=550); never crop feet, shorten limbs or stretch anatomy. Rifle/bayonet may be loosely held or resting closely beside torso along its direction, all within the cell. Bayonet tip must stay well inside the left boundary(localx>=60), and the rifle must not be placed beneath the lowest support point. Preserve supporting boot/knee/forearm/torso silhouettes clearly separate from rifle pixels. Final pose must be relaxed stable ground rest, not another kneeling or floating pose.\nStyle: realistic natural-cloth/leather/metal softly shaded game art matching the B references, no exaggerated musculature. Exactly four complete separate figures, actual transparent alpha, no visible injury/blood/gore, extra characters/limbs/fused hands, floor/scenery/extra shadows, smoke/flash/firing, mirrored front view, text/labels/gridlines/watermarks. Generate a wholly new sheet; no editing, cropping, mirroring or scaling any existing image.",
+      "status": "semantic-rejected",
+      "independentSourceAccepted": false,
+      "retryReason": "First NW casualty collapse cell rightpadding13 fails unchanged>=16. Target whole-cell framing with naturally bent knees/hips and retained head/limb/kit scale.",
+      "completedAt": "2026-10-06T04:06:38.066597+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-dedbeec6-f129-495a-b1cd-43202a6ff9b4.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt2.png",
+      "sha256": "c1f327f721158b05117be556d616e1980718b5bcbfb3fc4b4ecb231dc86a63af",
+      "bytes": 625356,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            92,
+            94,
+            580,
+            599
+          ],
+          "padding": [
+            92,
+            94,
+            47,
+            28
+          ],
+          "minPadding": 28,
+          "rgbaSHA256": "a538696e2069967f807bbc0dee684d2be9c7b9816aa6853012227abba4491e39"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            147,
+            128,
+            547,
+            598
+          ],
+          "padding": [
+            147,
+            128,
+            80,
+            29
+          ],
+          "minPadding": 29,
+          "rgbaSHA256": "d7b5387307fc837335c2b49bb8dbbceec6c733dce4817beac708586d701e75e6"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            88,
+            114,
+            578,
+            458
+          ],
+          "padding": [
+            88,
+            114,
+            49,
+            169
+          ],
+          "minPadding": 49,
+          "rgbaSHA256": "e48f73f087a79ac747d54879d2e0eb0581fd7a5c353ec333715fad2a96c04a9e"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            63,
+            184,
+            559,
+            443
+          ],
+          "padding": [
+            63,
+            184,
+            68,
+            184
+          ],
+          "minPadding": 63,
+          "rgbaSHA256": "e16b6bac9f06d2789ee3154248e048853a2c173aa38c1e0ed4fce10a46971e8e"
+        }
+      ],
+      "geometryPassed": true,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-dedbeec6-f129-495a-b1cd-43202a6ff9b4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-casualty-nw-candidate.png",
+      "independentSemanticReview": {
+        "decision": "rejected",
+        "reviewer": "independent Astra reviewer",
+        "evidence": "direct reviewer message in current task",
+        "reason": "Cells1/2/3 retain kneeling/prone aiming; final cheek-supported rifle, raisedhead/muzzle and activelybracedarm. Whole redraw with released groundedrifle/relaxedhead/hands required.",
+        "recordedAt": "2026-10-06T04:09:06.427419+00:00"
+      },
+      "selectedCandidateCurrent": false
+    },
+    {
+      "id": "union-b-casualty-nw-attempt3",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "role": "casualty",
+      "cardinal": "nw",
+      "requestedAt": "2026-10-06T04:11:15.549707+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "generate new whole sheet correcting independently rejected aiming semantics",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-contact-nw-candidate.png",
+          "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+          "role": "fresh accepted B contact identity/scale"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v31/union-a-casualty-nw.png",
+          "sha256": "9c03405991c9171c70411336641ea82b92db7f9bb1c9f70138d7e113029c9e85",
+          "role": "A casualty relaxed bodypose/style only"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v28/union-b-actions-nw.png",
+          "sha256": "258268c64969c4c68318ca64147f8cecfa309e950a53440fe0730bb786a1fc67",
+          "role": "accepted B stationary kit/camera"
+        }
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: NEW WHOLE transparent RGBA1254x1254 square2x2 Union B NORTHWEST NON-GRAPHIC casualty sprite sheet. Four627x627 cells, exactly one complete distinct falling pose per cell.\nReferences: Image 1 is new independently provisionally accepted B northwest contact, fixing B uniform/kit/head/limb/pack scale. Image 2 is A northwest FALLING/RELAXED BODY POSTURE guidance ONLY, never A identity. Image 3 is accepted B northwest kit/camera identity reference. Preserve B brown waist pouch, crossstraps/pack/light bedroll/canteen, blue cap/navy natural wool coat/sky-blue trousers/brown boots and realistic adult proportions.\nCritical correction: Rejected prior sheets retained cheek-supported aiming, especially final. This new sheet must show LOSS OF WEAPON CONTROL and a relaxed grounded final rest, NEVER kneeling firing or prone firing. In cells1,2,3 the rifle is FULLY RELEASED, lying flat on the ground BESIDE the body with attached bayonet. No hand grips it; there is clearly transparent space between rifle and hands/cheek. Rifle stock stays far away from face/shoulder. Barrel and bayonet lie flat and are NOT raised in the air.\nStrict row-major phases: top-left STUMBLE(phase0), near boot planted, arms starting to loosen, rifle LOW below chest away from cheek. Top-right KNEE DOWN(phase1), near knee and an OPEN supporting hand bear weight, rifle already released flat beside body. Bottom-left COLLAPSE(phase2), torso lowers onto relaxed forearm/hip, open/loosely curled hand, released gun besidebody; no shoulder firing. Bottom-right SETTLED(phase3), body completely at relaxed stable side/front-ground rest, head lowered GROUNDED ON A RELAXED FOREARM, other hand open/relaxed and away from gun, no raised head, no active braced firing arm. Knees/hips naturally bent, complete legs readable; do not straighten legs across cellborder.\nBearing/camera: same elevated REAR three-quarter NORTHWEST view as B, facing upper-left with pack/back visible and face mainly away. Keep contact sheet's head/hand/limb/pack SIZE and same physical body scale in all four poses; no enlarging, shrinking, stretching or individual-height normalization.\nFraming: each COMPLETE silhouette including full rifle/bayonet/boots/hands/pack inside localx60..565,y60..550 of its627pxcell. Keep generous60-80px transparent blank bands around all cell edges and both invisible center divides. Rifle rests closely along body's northwest direction beside the torso, spatially separate from near knee/forearm support; never beneath the lowest supporting body pixels or across a cellborder. No cropping, shortened/distorted weapons/limbs, mirror copies, printed gridlines or labels.\nStyle realistic softly shaded natural-cloth/leather gameart. True transparent background. No blood/visiblewounds/gore, extra people/limbs/fusedhands, floor/scenery/shadowoutsidefeet, smoke/flash/firing, text/numbers/watermark. Generate all four poses anew as a whole sheet; edit no existing image.",
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false,
+      "retryReason": "Exactly one additional NW casualty attempt3 authorized by root after independent semantic rejection; no source threshold/raster edits.",
+      "completedAt": "2026-10-06T04:12:15.529545+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-7390a028-8c39-4e07-af4d-0f5a6db6c595.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt3.png",
+      "sha256": "2a6563c118d44ca5d7177f19ccfabf8101c861f42b939b45315da26072f4b6db",
+      "bytes": 747821,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            60,
+            158,
+            555,
+            582
+          ],
+          "padding": [
+            60,
+            158,
+            72,
+            45
+          ],
+          "minPadding": 45,
+          "rgbaSHA256": "2446ebc8c9a96b99e04ac4781945b4499df02ddfea734f4624f02d7576fc3245"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            37,
+            265,
+            577,
+            605
+          ],
+          "padding": [
+            37,
+            265,
+            50,
+            22
+          ],
+          "minPadding": 22,
+          "rgbaSHA256": "bc17f27f826b68a09ad807daf52e103c7a89ecdd575b9c676ffc6ccee6c2a54a"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            42,
+            213,
+            627,
+            476
+          ],
+          "padding": [
+            42,
+            213,
+            0,
+            151
+          ],
+          "minPadding": 0,
+          "rgbaSHA256": "e23ac438e531fbf56cb9d57c51ceebb2b5c28a0d18b1090f91a98517cc86b57e"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            12,
+            254,
+            603,
+            511
+          ],
+          "padding": [
+            12,
+            254,
+            24,
+            116
+          ],
+          "minPadding": 12,
+          "rgbaSHA256": "e2a75562f53457e37b8a8e87c5147262200bca01bcb15b063acaf5d912d89846"
+        }
+      ],
+      "geometryPassed": false,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-7390a028-8c39-4e07-af4d-0f5a6db6c595.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": null
+    },
+    {
+      "id": "union-b-casualty-nw-attempt4",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "role": "casualty",
+      "cardinal": "nw",
+      "requestedAt": "2026-10-06T04:15:10.115085+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "targeted whole-sheet native edit correcting geometry-rejected attempt3 leg/divider placement",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt3.png",
+          "sha256": "2a6563c118d44ca5d7177f19ccfabf8101c861f42b939b45315da26072f4b6db",
+          "role": "exact geometry-rejected casualty attempt3 whole edit target; improved rest semantics, not accepted"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-contact-nw-candidate.png",
+          "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+          "role": "fresh independently provisionally accepted B contact identity/scale"
+        }
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: EDIT the complete supplied transparent RGBA1254x1254 Union B NORTHWEST casualty sheet (image1). Preserve its four distinct non-graphic fall stages, kit, body-part dimensions, natural rendering, northwest rear three-quarter bearing and released grounded rifles. Image2 is its new B northwest contact sheet for exact head/hand/limb/pack dimensions and physical pair scale. Do NOT adopt any A identity.\nCritical targeted correction: the bottom-left collapse boot currently crosses the invisible central vertical divide at x627. Redraw the lower-row legs with naturally bent knees closer to the hips so BOTH complete bodies and boots fit comfortably inside their own cells. Also nudge released grounded rifles inward without shortening or changing their proportions. Do not shrink any head, limb, pack or whole character. Do not crop or cut away pixels; redraw anatomically natural poses/placement at the SAME body scale.\nThis is a whole-sheet native edit, not a crop or resized sprite. Four equal627x627 cells, no visible lines. Reserve at least60px of transparent blank space along all four edges of EACH cell and both center divides: local x60..565,y60..565. Every boot, hand, cap, pack, rifle stock and full bayonet must remain inside these safe interior bounds. Shift complete poses inward/upward where needed; never draw any silhouette across x627 or y627. Targeting generous60px blank bands is essential.\nKeep the top-left STUMBLE: near boot supports, hands loosening; gun low/released below chest and away from cheek. Keep top-right KNEE DOWN: near knee and open supporting hand grounded, rifle fully released flat beside body, nudge pose slightly upward for safe lower padding. Bottom-left COLLAPSE: forearm/hip lowering, legs naturally folded at knees closer to hips, hands loose and not touching gun, released rifle flat beside torso. Bottom-right SETTLED: head fully grounded on relaxed forearm, other hand relaxed/open, legs naturally bent close enough to remain comfortably inside the cell, released rifle besidebody. Final pose is relaxed rest, never prone firing or an aiming posture. No active bracing grip, raised head or raised barrel. Gun stock stays away from face/shoulder, clear transparent space between gun and hands.\nPreserve exact B kit: blue cap, navy natural wool coat, sky-blue trousers, brown boots, brown waist pouch, crossstraps, backpack/light rolled blanket/canteen, rear upper-left northwest camera. Keep four distinct stages, coherent adult anatomy, realistic softly shaded cloth/leather. Maintain true transparency, same complete2x2 canvas, no mirroring, phase scaling, pasted duplicates, added ground/shadows/scenery, gore/wounds, muzzle flash/smoke, text/grid/labels/watermark.",
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false,
+      "retryReason": "Exactly one additional NW casualty attempt4 expressly authorized after attempt3 geometry rejection. No deterministic pixel edits or relaxed threshold.",
+      "completedAt": "2026-10-06T04:15:50.025369+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-e00b3e7e-822e-4ffa-a8b6-d9cecebdd815.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt4.png",
+      "sha256": "5fcdd10d6ac3aabb47e3d2f9524f36fb40e1652f7bc42916978ea0818019d5cc",
+      "bytes": 849007,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            77,
+            138,
+            586,
+            627
+          ],
+          "padding": [
+            77,
+            138,
+            41,
+            0
+          ],
+          "minPadding": 0,
+          "rgbaSHA256": "0486e0579eedde3f0dfd696558e5dbe94e99c6f96ac17583c0cc8a6d65a45411"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            23,
+            256,
+            573,
+            627
+          ],
+          "padding": [
+            23,
+            256,
+            54,
+            0
+          ],
+          "minPadding": 0,
+          "rgbaSHA256": "86143aaf65b2d466aad87322e8ffc2a622a4974cdcd2af1a277fb37bfc281450"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            66,
+            0,
+            600,
+            518
+          ],
+          "padding": [
+            66,
+            0,
+            27,
+            109
+          ],
+          "minPadding": 0,
+          "rgbaSHA256": "b844a78ac13e2e16e1dc2d773404cd9493d5593ce08ebb69efc4b7cbcfd8bf3f"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            23,
+            0,
+            567,
+            521
+          ],
+          "padding": [
+            23,
+            0,
+            60,
+            106
+          ],
+          "minPadding": 0,
+          "rgbaSHA256": "a54166c25017ab06a8008ad7a4c3029187d63654d0b1ee7d9b5709ea85b53256"
+        }
+      ],
+      "geometryPassed": false,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-e00b3e7e-822e-4ffa-a8b6-d9cecebdd815.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": null
+    },
+    {
+      "id": "union-b-casualty-nw-attempt5",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "role": "casualty",
+      "cardinal": "nw",
+      "requestedAt": "2026-10-06T04:17:09.259368+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "targeted whole-sheet native edit correcting attempt4 upper-row divider spill",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt4.png",
+          "sha256": "5fcdd10d6ac3aabb47e3d2f9524f36fb40e1652f7bc42916978ea0818019d5cc",
+          "role": "exact geometry-rejected casualty attempt4 whole edit target; improved relaxed rest/leg bend, not accepted"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-contact-nw-candidate.png",
+          "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+          "role": "fresh independently provisionally accepted B contact identity/scale"
+        }
+      ],
+      "prompt": "Use case: historical-scene\nPerform a targeted WHOLE-IMAGE EDIT of image1: Union B Northwest casualty transparent1254x1254 native2x2 sheet, four equal627x627cells. The action semantics and lower-row bent legs are now correct. Preserve both lower-row poses, all four physical head/hand/limb/backpack dimensions, natural uniform and exact northwest elevated rear three-quarter bearing.\nOnly framing repair: move BOTH COMPLETE TOP-ROW SOLDIERS AND THEIR COMPLETE RELEASED RIFLES upward by approximately100 native sourcepixels within their627pxcells, with NO CHANGE IN SIZE. Their cap and pack have available empty transparent space above. Keep all boots, hands, caps, packs and full rifle/bayonet within each cell; top-row rifle stock and boots must no longer touch or cross horizontal divide y627. Lower-row figures stay where they are and do not inherit upper-row rifle fragments.\nTarget60px transparent clearance on every cell edge: safe localx60..565,y60..565. Keep cap at least60px below its topedge while moving body/rifle upward enough to place the complete silhouette above localy565. Released rifles may be redrawn slightly closer beside eachbody at SAME full proportions to fit safe interior. Do not truncate or shorten any weapon, limb or boot; do not shrink a pose or change phase scale. Preserve the same complete1254canvas and four627cells. No visible grid, no crop, no mirror, no rescale or background.\nKeep row-major stumble/knee-down/collapse/settled: all guns released flat on ground clear of hands/face, no active aim or cheek-supported stock. Final head grounded on relaxed forearm, knees bent, hands open/loose. Preserve B brown waistpouch/bedroll/backpack/canteen/crossstraps, cap/navy wool coat/sky-blue trousers/brown boots, realistic adult proportions and natural softly shaded rendering. Image2 is exact contact pair kit/physical-size reference, not an instruction to replace the fallingpostures.\nThis edit must correct the framing of the whole original through generation, never deterministic pixel translation/cropping. Preserve true transparent RGBA. No new people/limbs/shadows/scenery, no gore/wounds, no muzzleflash/smoke/firing, text/labels/watermark.",
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false,
+      "retryReason": "Exactly one additional NW casualty attempt5 expressly authorized after attempt4 geometry rejection; no further automatic retries.",
+      "completedAt": "2026-10-06T04:17:56.439980+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-5b975b7f-4196-4f78-929b-f3ad549d77da.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt5.png",
+      "sha256": "0c3ba1686a5825fe8e8c095e7cb5928d490fdf5bdf2bca9e4c7e9a1b73f9f09f",
+      "bytes": 849358,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            75,
+            97,
+            591,
+            594
+          ],
+          "padding": [
+            75,
+            97,
+            36,
+            33
+          ],
+          "minPadding": 33,
+          "rgbaSHA256": "8044f3323bcd5a85716726d46eba089c253208c8c165ebc5f155dc9e35fca51f"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            20,
+            219,
+            577,
+            623
+          ],
+          "padding": [
+            20,
+            219,
+            50,
+            4
+          ],
+          "minPadding": 4,
+          "rgbaSHA256": "5590b09d3ef2658a8ab5e5ab11087735123428aa462b49aca529dc2b67fb31e2"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            59,
+            212,
+            603,
+            517
+          ],
+          "padding": [
+            59,
+            212,
+            24,
+            110
+          ],
+          "minPadding": 24,
+          "rgbaSHA256": "574a6f2928e875ba28367098795b44b2aa1796f6a6b058765e82602c37a94bcc"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            20,
+            261,
+            573,
+            521
+          ],
+          "padding": [
+            20,
+            261,
+            54,
+            106
+          ],
+          "minPadding": 20,
+          "rgbaSHA256": "ba3e1ce3f30e12228b6be9f72b213076554c775494acf277af746d0ab679d2f0"
+        }
+      ],
+      "geometryPassed": false,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-5b975b7f-4196-4f78-929b-f3ad549d77da.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": null
+    },
+    {
+      "id": "union-b-casualty-nw-attempt6",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "role": "casualty",
+      "cardinal": "nw",
+      "requestedAt": "2026-10-06T04:19:02.702765+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "targeted whole-sheet native edit correcting only attempt5 upper-right released-rifle margin",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt5.png",
+          "sha256": "0c3ba1686a5825fe8e8c095e7cb5928d490fdf5bdf2bca9e4c7e9a1b73f9f09f",
+          "role": "exact geometry-rejected attempt5 whole native edit target; no source acceptance"
+        }
+      ],
+      "prompt": "Targeted whole-image native EDIT of the supplied transparent RGBA1254x1254 Union B northwest casualty2x2 sheet. Four627x627cells. Make ONE specific framing correction only:\nIn the UPPER-RIGHT cell, relocate the COMPLETE RELEASED RIFLE WITH ITS FULL ATTACHED BAYONET approximately100 sourcepixels UPWARD at exactly the same size and angle. Its wooden stock currently ends at localy623 and must end at localy530 OR HIGHER after the edit. Keep the rifle flat on the ground, visibly detached from the soldier's hands, cheek and shoulder. The full rifle and bayonet must remain inside that cell. Target60px blank transparent clearance around this moved rifle and the invisible cell divides.\nPreserve ALL FOUR SOLDIERS and every boot/hand/face/cap/pack/blanket/canteen/waistpouch/uniform exactly in pose, physical scale, northwest rear three-quarter camera, natural adult proportions and realistic rendering. Preserve the other THREE RELEASED RIFLES, all lower-row bent legs, settled head resting on relaxed forearm, loose/open hands, and distinct stumble/knee/collapse/settled stages. Do not change the canvas, cellsize, body scale, any natural pose or kit. Do not replace the final rest with prone aiming. No cropping, shortening, resizing, mirroring, adding shadows/scenery, bleeding into a neighborcell, blood/wounds/gore, muzzleflash/smoke, text/labels/grid/watermark. True transparent background remains.\nThis is an image-generation whole-sheet edit of the one defective upper-right rifle placement, not deterministic pixel translation. Return the COMPLETE whole1254x1254 RGBA PNG with all four native cells.",
+      "status": "semantic-rejected",
+      "independentSourceAccepted": false,
+      "retryReason": "Exactly one additional NW casualty attempt6 expressly authorized; no automatic further retries.",
+      "completedAt": "2026-10-06T04:20:08.708433+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-cf2decbd-9602-450e-bf8d-f1ab40ce3912.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt6.png",
+      "sha256": "c64b4a3e258e84b26026d52719dfaeef870bcaf5cc99032e7500cbb49365093b",
+      "bytes": 856589,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            74,
+            97,
+            593,
+            596
+          ],
+          "padding": [
+            74,
+            97,
+            34,
+            31
+          ],
+          "minPadding": 31,
+          "rgbaSHA256": "09bcfcc8233e0505cdcd6be0670859f1a5fba1c77a66ca9029e6f9ff7d6855ed"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            19,
+            219,
+            579,
+            603
+          ],
+          "padding": [
+            19,
+            219,
+            48,
+            24
+          ],
+          "minPadding": 19,
+          "rgbaSHA256": "c320203d8e8e4081d5fa14c44732b17a4563b699a3aec911f8b2ebef6f4d03f0"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            59,
+            213,
+            606,
+            518
+          ],
+          "padding": [
+            59,
+            213,
+            21,
+            109
+          ],
+          "minPadding": 21,
+          "rgbaSHA256": "c9c0cd40dbc41c388205646af61676e077fa84bce41030d4a5637779689c223a"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            20,
+            261,
+            576,
+            524
+          ],
+          "padding": [
+            20,
+            261,
+            51,
+            103
+          ],
+          "minPadding": 20,
+          "rgbaSHA256": "51d1858d29c491199e57797d04199cb2b4302d09446e07563588fe5f3d26cc6d"
+        }
+      ],
+      "geometryPassed": true,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-cf2decbd-9602-450e-bf8d-f1ab40ce3912.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-casualty-nw-candidate.png",
+      "replacedRejectedCandidateSHA256": "c1f327f721158b05117be556d616e1980718b5bcbfb3fc4b4ecb231dc86a63af",
+      "selectedCandidateCurrent": false,
+      "independentRejection": {
+        "reviewer": "independent Astra Max; corroborated by root",
+        "reason": "Actual pair-scale mismatch: cap/pack/planted boot too large against unchanged NW contact beyond projection; no normalization or acceptance",
+        "authority": "direct trusted root message",
+        "recordedAt": "2026-10-06T04:22:49.481414+00:00",
+        "record": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/source-inspection/nw-casualty-attempt6-independent-rejection.json",
+        "sha256": "d184fd20c8f9e7296493455cf9488e550ef2d901a776f68898e1d333b0b2c6e4",
+        "actualIsolatedCapWidthContact": 83,
+        "actualIsolatedCapWidthRejected": 106,
+        "actualPlantedBootWidthContact": 83,
+        "actualPlantedBootWidthRejected": 108
+      }
+    },
+    {
+      "id": "union-b-casualty-nw-attempt7",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "role": "casualty",
+      "cardinal": "nw",
+      "requestedAt": "2026-10-06T04:25:53.730530+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "new whole-sheet redraw to exact contact anatomical size; rejected attempt6 used for fallingposture only",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-contact-nw-candidate.png",
+          "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+          "role": "fresh B contact: primary actual anatomical dimensions/physical scale"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/public/images/units/gettysburg-v28/union-b-actions-nw.png",
+          "sha256": "258268c64969c4c68318ca64147f8cecfa309e950a53440fe0730bb786a1fc67",
+          "role": "accepted B stationary: kit/identity/camera only; contact fixes physical scale"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt6.png",
+          "sha256": "c64b4a3e258e84b26026d52719dfaeef870bcaf5cc99032e7500cbb49365093b",
+          "role": "exact rejected casualty attempt6: action/postures only; anatomical enlargement explicitly not accepted"
+        }
+      ],
+      "prompt": "Use case: historical-scene\nCreate a NEW complete transparent RGBA1254x1254 native2x2 Union B NORTHWEST NON-GRAPHIC casualty sheet. Four627x627cells, four distinct row-major stumble/knee/collapse/settled poses.\nReference hierarchy is essential:\nIMAGE1, the accepted new B northwest CONTACT sheet, is the PRIMARY PHYSICAL ANATOMICAL SIZE reference. Match its actual cap/head, pack/rolled blanket, hands, adult limb thickness and boots at native source scale.\nIMAGE2, accepted B northwest stationary actions, supplies unchanged B kit/identity/rear northwest camera only; use IMAGE1's physical size.\nIMAGE3 is REJECTED casualty attempt6: use ONLY its relaxed four-stage falling POSTURES and released rifle sequence. Its soldiers/kit were drawn TOO LARGE. Redraw EVERY soldier and carried item at consistently about20\u201323% SMALLER physical anatomical size than image3, across ALL FOUR cells. This is a fresh native redraw through generation, no crop/raster resizing, no per-phase height normalization.\nIndependent actual comparison: contact image1's isolated phase0 cap is83 sourcepixels wide and near planted boot83px wide; rejected image3 had cap106 and planted boot108. Target contact-sized head/cap and boots (roughly83px for comparable orientation), coherently smaller roll/pack/limb/torso/hand dimensions. Do NOT use total cap-to-ground pose height to fake this scale; different bent postures have natural projected heights. Preserve each complete anatomical body's true proportions and a single consistent physical scale with its contact partner.\nPreserve B navy wool coat, sky-blue trousers, blue cap, brown boots/brown waistpouch/crossstraps/backpack/lightrolledblanket/canteen and realistic adult identity. Same elevated REAR NORTHWEST three-quarter view facing upper-left, back/pack visible.\nRow-major phases: upper-left stumble with nearboot grounded and armsloosening, gun low/released away from cheek; upper-right near-knee-down with open supporting hand, rifle RELEASED FLAT on ground besidebody and separated from hands/cheek; lower-left collapse onto forearm/hip, naturally bent legs close to hips, loosehands, released groundgun; lower-right complete SETTLED relaxed rest with head GROUNDED ON RELAXED FOREARM, other hand open/loose, legs naturally bent, gun flat and fully released besidebody. No active aiming, gripping the gun, raised barrel/head or braced firing arm. Full proportionate rifle/bayonet stays beside body, never under support ground or across divider.\nPlace complete smaller figures with generous60\u201390px transparent blank space around EVERY627cell and both invisible centerdivides; safe localx60..565,y60..565. Leave enough empty space beside bentlegs for full released rifle. No silhouettes touching any cellboundary, no shortened/distorted limbs/weapons or detached fragments. Preserve whole1254canvas and exactly4 distinct poses, no pasted copies, no mirrors, no individual enlargement/shrinking between phases.\nStyle natural realistic softly shaded cloth/leather gameart. True transparency. No blood/wounds/gore, extra people/limbs/fusedhands, smoke/muzzleflash/firing, scenery/floor/extra shadows, text/gridlines/numbers/labels/watermark.",
+      "status": "geometry-rejected",
+      "independentSourceAccepted": false,
+      "retryReason": "Exactly one additional NW casualty attempt7 expressly authorized after independent measured pair-scale rejection; no further automatic retries.",
+      "completedAt": "2026-10-06T04:27:07.414636+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-2f450765-e50a-4f69-a051-9cd9e42213d8.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt7.png",
+      "sha256": "c049554a76ae4876642b51096b7e1e32b4e57a74bc56ed7ffd643a2e145afba7",
+      "bytes": 566411,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            131,
+            206,
+            530,
+            607
+          ],
+          "padding": [
+            131,
+            206,
+            97,
+            20
+          ],
+          "minPadding": 20,
+          "rgbaSHA256": "b73e7d633654604e85a6fb7ef31913f5fb10c00cce8739add193e86bc28289dc"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            120,
+            293,
+            504,
+            624
+          ],
+          "padding": [
+            120,
+            293,
+            123,
+            3
+          ],
+          "minPadding": 3,
+          "rgbaSHA256": "5c8b1a6b9c8236288cef69e3297fbbcd88e2b2a17ec37e0d5d42d4737553860c"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            133,
+            215,
+            594,
+            492
+          ],
+          "padding": [
+            133,
+            215,
+            33,
+            135
+          ],
+          "minPadding": 33,
+          "rgbaSHA256": "b7744dae3dfd9b2a44721f3dd16b2e7c4662a44c0bb19ac34bc4bee9bb281b07"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            93,
+            276,
+            570,
+            493
+          ],
+          "padding": [
+            93,
+            276,
+            57,
+            134
+          ],
+          "minPadding": 57,
+          "rgbaSHA256": "3c154007ba423c65ffdedfc4aec127160c8aee247437d48e0dcccef3ac1232f3"
+        }
+      ],
+      "geometryPassed": false,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-2f450765-e50a-4f69-a051-9cd9e42213d8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": null,
+      "independentProvisionalScaleReview": {
+        "record": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/source-inspection/nw-casualty-attempt7-provisional-scale-review.json",
+        "sha256": "4c9d6d4cfbb649f0401a9dbb05381bbd86c08acbeab318febe45df79af7a2ece",
+        "finalAcceptanceTransferred": false,
+        "capWidth": 78,
+        "contactCapWidth": 83,
+        "plantedBootWidth": 73,
+        "contactPlantedBootWidth": 83
+      }
+    },
+    {
+      "id": "union-b-casualty-nw-attempt8",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "role": "casualty",
+      "cardinal": "nw",
+      "requestedAt": "2026-10-06T04:28:37.098841+00:00",
+      "toolMode": "built-in image_gen",
+      "intent": "one-target whole native edit of attempt7 released-rifle framing only",
+      "actualModelIdentifier": null,
+      "actualModelIdentifierStatus": "not supplied",
+      "transparentBackground": true,
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt7.png",
+          "sha256": "c049554a76ae4876642b51096b7e1e32b4e57a74bc56ed7ffd643a2e145afba7",
+          "role": "exact attempt7 native whole edit target; geometry-rejected, smaller contact-matched anatomy retained"
+        }
+      ],
+      "prompt": "Edit this WHOLE transparent1254x1254 native2x2 Union B northwest casualty sheet, four627x627cells. Make exactly ONE targeted change: move ONLY the COMPLETE UPPER-RIGHT RELEASED RIFLE with its full bayonet90 SOURCEPIXELS UPWARD at unchanged size, shape and angle. Its stock must end at localy530 or higher, leaving about60px or more transparent lower clearance inside thatcell. Keep it lying flat on ground away from cheek/shoulder/hands; do not turn it into an aiming weapon.\nExplicitly preserve all FOUR SOLDIERS at their current anatomical size/pose/placement: smaller contact-matched heads/caps/hands/boots/rolls/packs/limbs, northwest rear camera, natural B navycoat/skybluetrousers/brownkit. Preserve the OTHER THREE WEAPONS, all lower-row bentlegs, grounded final relaxed head/forearm/openhands, and distinct stumble/knee/collapse/settled sequence. The present whole-sheet physical scale is correct; DO NOT enlarge, shrink or redesign any character or carriedkit.\nKeep exactly1254canvas,627cells, true RGBA transparency and no visible grid. Move that one releasedrifle through generative image editing only; no crop, rescale, shortened bayonet/stock, mirror, added shadows/scenery, blood/wounds/gore, firing/smoke, text/labels/watermark. All silhouettes remain safely within their own native cell; target60px blank cell-edge bands. Return the COMPLETE original-format whole four-cell PNG, not a singled-out crop.",
+      "status": "independently-source-accepted",
+      "independentSourceAccepted": true,
+      "retryReason": "Exactly one additional NW casualty attempt8 expressly authorized; no further automatic retries.",
+      "completedAt": "2026-10-06T04:30:09.873322+00:00",
+      "originalToolPath": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-46fb6fb0-0660-4361-9ba1-a7c119c9115b.png",
+      "preservedOriginalPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt8.png",
+      "sha256": "0d4f98691c07f66507953ceca0a1b545b1ad5a35cf17b5111891a1e4dca0dd61",
+      "bytes": 559683,
+      "mode": "RGBA",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "cells": [
+        {
+          "phase": 0,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            132,
+            205,
+            533,
+            609
+          ],
+          "padding": [
+            132,
+            205,
+            94,
+            18
+          ],
+          "minPadding": 18,
+          "rgbaSHA256": "e2a7f7e45d50c0e5061b3f723e227732fc97d32cf7bec9e11d047437960e08ab"
+        },
+        {
+          "phase": 1,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            75,
+            292,
+            507,
+            590
+          ],
+          "padding": [
+            75,
+            292,
+            120,
+            37
+          ],
+          "minPadding": 37,
+          "rgbaSHA256": "ae824b7a2e18c3564dafddcb0a311a49c0b956b131c1609423d30a2149554cef"
+        },
+        {
+          "phase": 2,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            135,
+            214,
+            596,
+            494
+          ],
+          "padding": [
+            135,
+            214,
+            31,
+            133
+          ],
+          "minPadding": 31,
+          "rgbaSHA256": "e8c25b1a3f8bc88c7bed104010b7a76fc74dae6b178d151430ad460193099b04"
+        },
+        {
+          "phase": 3,
+          "solidAlphaThreshold": 64,
+          "solidBounds": [
+            92,
+            275,
+            572,
+            494
+          ],
+          "padding": [
+            92,
+            275,
+            55,
+            133
+          ],
+          "minPadding": 55,
+          "rgbaSHA256": "cd2260a84e94bc1ea7318ce6585e6a0eab8e21b9bc7bea6d5165683b3200db01"
+        }
+      ],
+      "geometryPassed": true,
+      "toolOutputHint": "Generated images are saved to /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464 as /Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-46fb6fb0-0660-4361-9ba1-a7c119c9115b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedCandidatePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/candidate/docs/art-pass/candidates/gettysburg-v32/union-b-casualty-nw-candidate.png",
+      "replacedRejectedCandidateSHA256": "c64b4a3e258e84b26026d52719dfaeef870bcaf5cc99032e7500cbb49365093b",
+      "selectedCandidateCurrent": true,
+      "independentAcceptance": {
+        "review": "docs/art-pass/reviews/gettysburg-v32-independent-union-b-contact-casualty-source-review.json",
+        "reviewSHA256": "9f620c6a789171be3cff65f68a2babbf0d7077b21b51a6415f39ef6b10a117cd",
+        "reviewerModel": "gpt-6-astra",
+        "reasoningEffort": "max",
+        "sourceOnly": true,
+        "localInstall": false,
+        "certificationClaimed": false
+      }
+    }
+  ],
+  "boundedRetryAuthorizations": [
+    {
+      "address": "union-b-casualty-se",
+      "additionalAttempt": 3,
+      "authority": "direct root message in current task",
+      "reason": "Attempts1 and2 fail unchangedalpha64 margin>=16; attempt3 authorized for whole-cell framing only.",
+      "recordedAt": "2026-10-06T04:03:20.339449+00:00"
+    },
+    {
+      "address": "union-b-casualty-nw",
+      "additionalAttempt": 3,
+      "authority": "direct root message in currenttask after independent semantic rejection",
+      "reason": "Attempt2 retained kneeling/prone aim; redraw whole source with fullyreleased groundedrifle and relaxedhead/hands.",
+      "recordedAt": "2026-10-06T04:11:15.549529+00:00"
+    },
+    {
+      "address": "union-b-casualty-nw",
+      "attempt": 4,
+      "authority": "direct parent/root message",
+      "reason": "Specific single targeted whole-sheet edit after attempt3 geometry failure; preserve kit/bearing/pair scale, naturally bent legs and compact placement, padding64>=16 unchanged, no further automatic retries",
+      "authorizedAt": "2026-10-06T04:15:10.114925+00:00"
+    },
+    {
+      "address": "union-b-casualty-nw",
+      "attempt": 5,
+      "authority": "direct parent/root message",
+      "reason": "Specific single targeted whole-sheet tool edit moves both complete upper-row bodies/rifles upward approximately100 native pixels at unchanged scale; preserve lower-row poses, alpha64 margin16 and requested60, no further automatic retries",
+      "authorizedAt": "2026-10-06T04:17:09.259192+00:00"
+    },
+    {
+      "address": "union-b-casualty-nw",
+      "attempt": 6,
+      "authority": "direct parent/root message",
+      "reason": "Specific single whole-sheet tool edit relocates only the complete upper-right released rifle about90 sourcepixels upward, stock<=local530, unchanged size/otherposes/kit; margin16 unchanged, requested60; stop if fails",
+      "authorizedAt": "2026-10-06T04:19:02.702613+00:00"
+    },
+    {
+      "address": "union-b-casualty-nw",
+      "attempt": 7,
+      "authority": "direct parent/root message",
+      "reason": "Specific single new whole-sheet redraw corrects independently measured cap/boot/kit enlargement vs contact; coherent20\u201323% smaller DRAWN anatomy acrossallphases, unchanged contactref382, padding64>=16, no deterministic raster scaling",
+      "authorizedAt": "2026-10-06T04:25:53.730383+00:00"
+    },
+    {
+      "address": "union-b-casualty-nw",
+      "attempt": 8,
+      "authority": "direct parent/root message",
+      "reason": "Specific one-target whole native edit relocates upper-right releasedrifle upward90px, unchanged current anatomical scale/all four soldiers/otherthreeweapons/grid; onlyattempt7guide, requested60/min16 unchanged; stop if fails",
+      "authorizedAt": "2026-10-06T04:28:37.098703+00:00"
+    }
+  ],
+  "finalIndependentSourceAcceptance": {
+    "review": "docs/art-pass/reviews/gettysburg-v32-independent-union-b-contact-casualty-source-review.json",
+    "reviewSHA256": "9f620c6a789171be3cff65f68a2babbf0d7077b21b51a6415f39ef6b10a117cd",
+    "annotations": "docs/art-pass/manifests/gettysburg-v32-source-annotations.json",
+    "annotationsSHA256": "6df6fc2f548ff867124c731d08cb56b9cdab09ad0b52b111c97ce35c8d24ad04",
+    "sources": 4,
+    "poses": 16,
+    "sourceOnly": true,
+    "localInstall": false,
+    "reviewerModel": "gpt-6-astra",
+    "reasoningEffort": "max",
+    "referenceHeights": {
+      "se": 412,
+      "nw": 382
+    }
+  }
+}

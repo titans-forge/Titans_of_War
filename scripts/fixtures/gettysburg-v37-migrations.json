@@ -1,0 +1,53 @@
+{
+  "schema": "gettysburg-v37-historical-byte-migration-v1",
+  "status": "frozen-approved-runtime-pins",
+  "baselineSHA256": "5d173c32873db1d5a2d82dc9d3f692a4f8e83ad879f5089f6084833aef985d65",
+  "baselineFiles": 1596,
+  "baselineBytes": 557196222,
+  "fixture": {
+    "path": "scripts/fixtures/gettysburg-v37-preservation.json",
+    "sha256": "1f7c3dbfc7eb4bac60dbd6bf44457a97a95531fcd319f083ccfb2664b1db434e"
+  },
+  "capture": {
+    "path": "scripts/capture-gettysburg-v37-preservation.mjs",
+    "sha256": "7ffb7696e36087dad20a3c9e76742f62f7cb5882a863ab39e2ff26d6a87271f9"
+  },
+  "oldFixturesRefreshed": false,
+  "oldMigrationLedgersEdited": false,
+  "behavioralAssertionsChanged": false,
+  "mandatoryRegistration": "package.json",
+  "mandatorySuite": "scripts/test-gettysburg-v37-rank-readability.mjs",
+  "migrations": [
+    {
+      "path": "package.json",
+      "archive": "scripts/test-support/gettysburg-v37-before/package.json",
+      "beforeSHA256": "be299127e141ec1f282c6306dea5b69c04441f06c696e79b7215d25433e30df4",
+      "currentSHA256": "96fa03c5ae8c1165c56cdd664ba2ddee4f4727a2198c4522600448068119d458",
+      "reason": "Only four mandatory v37 script registrations; version, dependencies and lockfile unchanged."
+    },
+    {
+      "path": "src/battle/CivilWarBattlefield.jsx",
+      "archive": "scripts/test-support/gettysburg-v37-before/src/battle/CivilWarBattlefield.jsx",
+      "beforeSHA256": "6e3e7db89428b1d87db551a5945b92e96b88fd2dac3ffdd26023b761efdc166a",
+      "currentSHA256": "6eafd829c159bc3afe99ed784862dcfae59e4ef40b7210d64b4e02257451b6f8",
+      "reason": "Independent canonical rankReadability=v37 gate with artPass=gettysburg-v32 enables the existing uniform 0.74 infantry presentation scale for every pose and fresh shot geometry; optional gate absence preserves installed v36."
+    },
+    {
+      "path": "scripts/test-support/gettysburgV36Preservation.mjs",
+      "archive": "scripts/test-support/gettysburg-v37-before/scripts/test-support/gettysburgV36Preservation.mjs",
+      "beforeSHA256": "a75e8a6bd2e3236c4c08e243ed203e4551a560950b662b468876b67a414c2f81",
+      "currentSHA256": "463db0cac6a15fb51b97b190d848842aad3b7c258b14510aa951f3565eab375e",
+      "reason": "Only metadata directRead import and V37 historical reader call; original V36 ledger, fixtures and every behavioral assertion remain byte exact."
+    }
+  ],
+  "newSourcePins": [
+    {
+      "path": "scripts/test-gettysburg-v37-rank-readability.mjs",
+      "sha256": "717e895d0195df188068e039c2699285978859348f447ee6bfc74dd3d9372115"
+    },
+    {
+      "path": "docs/CIVIL_WAR_V37_RANK_READABILITY.md",
+      "sha256": "3852027e26e34a91910b8c662a762d96831179c927693eeb09d3af5f996bc275"
+    }
+  ]
+}

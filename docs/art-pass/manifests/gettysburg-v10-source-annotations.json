@@ -1,0 +1,292 @@
+{
+  "artPass": "gettysburg-v10",
+  "productionApproved": false,
+  "familyComplete": false,
+  "reviewStatus": "Separate model-assisted source and pose review accepts limited opt-in preview; human and full family approval pending.",
+  "sources": [
+    {
+      "name": "march-ne",
+      "key": "confederate-gettysburg-v10-a-march-ne",
+      "measurementName": "confederate-a-march-ne",
+      "source": "docs/art-pass/candidates/gettysburg-v10/confederate-a-ne-march-candidate.png",
+      "sha256": "48f4c9537b8326d7d1451da727aae73161661ae408fd32ecb467d5d412d26b3d",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 7,
+      "cell": 627,
+      "roots": [
+        [
+          275,
+          594
+        ],
+        [
+          285,
+          594
+        ],
+        [
+          273,
+          587
+        ],
+        [
+          285,
+          587
+        ]
+      ],
+      "capTop": [
+        162,
+        161,
+        161,
+        161
+      ],
+      "bodySpans": [
+        432,
+        433,
+        426,
+        426
+      ],
+      "referenceHeight": 430,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "scope": "Opt-in Confederate A NE four-sample contact/passing visual preview; exact historical Gettysburg v10 only.",
+      "annotationMethod": "Fresh separate model-assisted inspection of all final native cells, calibrated against color-coded anatomical left/right native 3D guides. Manual pelvis X uncertain +/-8 native pixels; shared rowground Y +/-4px and cap tops +/-3px. One body reference across all four source frames. No physical skeletal, human or historical certification.",
+      "limitations": [
+        "Narrow model-assisted visual gait and kit review accepts row-major contact/passing playback. This is not independent human, physical skeletal/ground contact or historical drill certification.",
+        "NE pelvis overlap partly hides the support chain; confidence in absolute anatomical attribution is lower than NW. Distinct passing support silhouettes and contact hip-chain exchange were reviewed against native blue-left/red-right guides.",
+        "Final body and uniform were reviewed afresh after every accepted image change. Requests to preserve untargeted cells or exact translations were not achieved precisely; invariant-pixel or surgical-edit isolation is not claimed.",
+        "Every native RGBA pixel is retained, with full equal cells and byte-for-byte PNG export. No mirroring, recoloring, crop, resampling or alpha cleanup.",
+        "A single source-wide body reference retains natural native body-span variation; no phase-dependent scale correction. Manual roots and cap measurements carry the stated uncertainty.",
+        "Low-alpha RGB residue remains; diagnostics at selected thresholds do not establish perfect transparency or exhaustive fringe absence.",
+        "Additional identities and missing bearings, recoil/settling, transition poses, melee, casualties and true standard bearers remain unfinished."
+      ]
+    },
+    {
+      "name": "actions-ne",
+      "key": "confederate-gettysburg-v10-a-actions-ne",
+      "measurementName": "confederate-a-actions-ne",
+      "source": "docs/art-pass/candidates/gettysburg-v10/confederate-a-ne-actions-candidate.png",
+      "sha256": "3036c2de71157958023a82c7034ace597bba02d7b8bad6d09fa7b8e289e98a85",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 7,
+      "cell": 627,
+      "roots": [
+        [
+          285,
+          591
+        ],
+        [
+          250,
+          591
+        ],
+        [
+          289,
+          529
+        ],
+        [
+          267,
+          529
+        ]
+      ],
+      "capTop": [
+        212,
+        213,
+        139,
+        140
+      ],
+      "bodySpans": [
+        379,
+        378,
+        390,
+        389
+      ],
+      "referenceHeight": 380,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "muzzle": [
+        481,
+        176
+      ],
+      "scope": "Opt-in Confederate A NE stationary actions; exact historical Gettysburg v10 only.",
+      "annotationMethod": "Fresh separate model-assisted source inspection. Manual pelvis X uncertain by about +/-8 native pixels; row-shared sole Y +/-4px; cap tops +/-3px; actual tube mouth +/-4px. One body reference for all four cells. No human, anatomical or historical certification.",
+      "limitations": [
+        "Four native equal cells copied byte-for-byte; no mirroring, recoloring, cropping, resampling or alpha cleanup.",
+        "Full fresh all-cell review after image generation; requested exact layout/size changes were not achieved precisely, and untargeted pixel preservation is not claimed.",
+        "Same-identity appearance and body-relative kit accepted for limited opt-in review; full family and default approval remain pending.",
+        "A held firing silhouette and two representative loading states do not establish recoil, settling, fingers, a complete verified period drill or melee/casualty states.",
+        "Hidden trigger, bore/socket and some hip relationships remain partly occluded.",
+        "Roots, caps and tube mouth are approximate manual registrations, and one source body reference preserves native pose-size variation without per-frame correction.",
+        "Low-alpha native RGB remnants remain unchanged; diagnostic thresholds are not exhaustive fringe certification."
+      ]
+    },
+    {
+      "name": "march-nw",
+      "key": "confederate-gettysburg-v10-a-march-nw",
+      "measurementName": "confederate-a-march-nw",
+      "source": "docs/art-pass/candidates/gettysburg-v10/confederate-a-nw-march-candidate.png",
+      "sha256": "b66a59f4135fdf91f9b6750fb918552603055b6917497ea9934b27d9765d1a69",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 5,
+      "cell": 627,
+      "roots": [
+        [
+          341,
+          592
+        ],
+        [
+          316,
+          592
+        ],
+        [
+          341,
+          576
+        ],
+        [
+          317,
+          576
+        ]
+      ],
+      "capTop": [
+        179,
+        179,
+        154,
+        155
+      ],
+      "bodySpans": [
+        413,
+        413,
+        422,
+        421
+      ],
+      "referenceHeight": 420,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "scope": "Opt-in Confederate A NW four-sample contact/passing visual preview; exact historical Gettysburg v10 only.",
+      "annotationMethod": "Fresh separate model-assisted inspection of all final native cells, calibrated against color-coded anatomical left/right native 3D guides. Manual pelvis X uncertain +/-8 native pixels; shared rowground Y +/-4px and cap tops +/-3px. One body reference across all four source frames. No physical skeletal, human or historical certification.",
+      "limitations": [
+        "Narrow model-assisted visual gait and kit review accepts row-major contact/passing playback. This is not independent human, physical skeletal/ground contact or historical drill certification.",
+        "NE pelvis overlap partly hides the support chain; confidence in absolute anatomical attribution is lower than NW. Distinct passing support silhouettes and contact hip-chain exchange were reviewed against native blue-left/red-right guides.",
+        "Final body and uniform were reviewed afresh after every accepted image change. Requests to preserve untargeted cells or exact translations were not achieved precisely; invariant-pixel or surgical-edit isolation is not claimed.",
+        "Every native RGBA pixel is retained, with full equal cells and byte-for-byte PNG export. No mirroring, recoloring, crop, resampling or alpha cleanup.",
+        "A single source-wide body reference retains natural native body-span variation; no phase-dependent scale correction. Manual roots and cap measurements carry the stated uncertainty.",
+        "Low-alpha RGB residue remains; diagnostics at selected thresholds do not establish perfect transparency or exhaustive fringe absence.",
+        "Additional identities and missing bearings, recoil/settling, transition poses, melee, casualties and true standard bearers remain unfinished."
+      ]
+    },
+    {
+      "name": "actions-nw",
+      "key": "confederate-gettysburg-v10-a-actions-nw",
+      "measurementName": "confederate-a-actions-nw",
+      "source": "docs/art-pass/candidates/gettysburg-v10/confederate-a-nw-actions-candidate.png",
+      "sha256": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 5,
+      "cell": 627,
+      "roots": [
+        [
+          345,
+          606
+        ],
+        [
+          355,
+          606
+        ],
+        [
+          356,
+          545
+        ],
+        [
+          360,
+          545
+        ]
+      ],
+      "capTop": [
+        249,
+        253,
+        184,
+        180
+      ],
+      "bodySpans": [
+        357,
+        353,
+        361,
+        365
+      ],
+      "referenceHeight": 360,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "muzzle": [
+        185,
+        228
+      ],
+      "scope": "Opt-in Confederate A NW stationary actions; exact historical Gettysburg v10 only.",
+      "annotationMethod": "Fresh separate model-assisted source inspection. Manual pelvis X uncertain by about +/-8 native pixels; row-shared sole Y +/-4px; cap tops +/-3px; actual tube mouth +/-4px. One body reference for all four cells. No human, anatomical or historical certification.",
+      "limitations": [
+        "Four native equal cells copied byte-for-byte; no mirroring, recoloring, cropping, resampling or alpha cleanup.",
+        "Full fresh all-cell review after image generation; requested exact layout/size changes were not achieved precisely, and untargeted pixel preservation is not claimed.",
+        "Same-identity appearance and body-relative kit accepted for limited opt-in review; full family and default approval remain pending.",
+        "A held firing silhouette and two representative loading states do not establish recoil, settling, fingers, a complete verified period drill or melee/casualty states.",
+        "Hidden trigger, bore/socket and some hip relationships remain partly occluded.",
+        "Roots, caps and tube mouth are approximate manual registrations, and one source body reference preserves native pose-size variation without per-frame correction.",
+        "Low-alpha native RGB remnants remain unchanged; diagnostic thresholds are not exhaustive fringe certification."
+      ]
+    }
+  ]
+}

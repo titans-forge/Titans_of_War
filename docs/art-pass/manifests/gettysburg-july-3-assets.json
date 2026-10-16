@@ -1,0 +1,896 @@
+{
+  "schemaVersion": 1,
+  "snapshotDate": "2026-09-30",
+  "scope": {
+    "scenarioId": "gettysburg",
+    "scenarioName": "Gettysburg, July 3",
+    "excludesScenarioIds": [
+      "gettysburg_jackson"
+    ],
+    "battleRulesVersion": 17,
+    "choiceIdUsedForStaticAudit": "option_a",
+    "world": {
+      "width": 1700,
+      "height": 900
+    },
+    "source": "CivilWarBattlefield.preload evaluated by scripts/audit-field-assets.mjs with a fresh campaign state"
+  },
+  "statusDefinitions": {
+    "active": "Selected during ordinary rules-17 July 3 rendering.",
+    "conditional-active": "Selected only for a specific current pose or direction.",
+    "loaded-unselected": "Fetched and registered or composited, but not selected by the Gettysburg July 3 renderer.",
+    "fallback": "Fetched for compatibility but superseded when current assets load successfully."
+  },
+  "summary": {
+    "loaderEntries": 47,
+    "uniquePreloadFiles": 45,
+    "uniqueImages": 25,
+    "jsonFiles": 20,
+    "uniquePreloadBytes": 38913341,
+    "uniquePreloadMiB": 37.1107,
+    "uniqueDecodedImagePixels": 39501101,
+    "uniqueDecodedRgbaBytesLowerBound": 158004404,
+    "uniqueDecodedRgbaMiBLowerBound": 150.6847,
+    "generatedCanvasRgbaBytesRepresented": 98525760,
+    "generatedCanvasRgbaMiBRepresented": 93.9615,
+    "duplicateLoaderUrls": [
+      "public/images/units/realistic-v1/axial-aim.png",
+      "public/images/units/realistic-v1/artillery-crew.png"
+    ],
+    "byRuntimeUse": {
+      "active": {
+        "files": 22,
+        "bytes": 25323724
+      },
+      "conditional-active": {
+        "files": 2,
+        "bytes": 828700
+      },
+      "loaded-unselected": {
+        "files": 2,
+        "bytes": 2266592
+      },
+      "fallback": {
+        "files": 19,
+        "bytes": 10494325
+      }
+    }
+  },
+  "preloadFamilies": [
+    {
+      "category": "terrain",
+      "runtimeUse": "active",
+      "files": [
+        {
+          "path": "public/images/battles/gettysburg-terrain-v3.png",
+          "role": "base-terrain-plate",
+          "bytes": 2511799,
+          "sha256": "4b82798c9d15b75010cc96cc9b352488fa4a2e5ba58465525dd98dd0764c2ba1",
+          "dimensions": {
+            "width": 1724,
+            "height": 912
+          },
+          "displayDimensions": {
+            "width": 1700,
+            "height": 900
+          }
+        }
+      ]
+    },
+    {
+      "category": "landmark",
+      "runtimeUse": "active",
+      "files": [
+        {
+          "path": "public/images/battles/landmarks-v7/brian-house.png",
+          "role": "abraham-brian-house",
+          "bytes": 3045224,
+          "sha256": "6062dfbc85fd2340acb65536586f8d1e25e7af7c8713d64f597ce1c3a42b056c",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "displayDimensions": {
+            "width": 162,
+            "height": 126
+          }
+        },
+        {
+          "path": "public/images/battles/landmarks-v3/leister-house.png",
+          "role": "leister-house",
+          "bytes": 2281704,
+          "sha256": "128ca8bfdf4004326507b327e4584352b3e72289eef7b4651189d978df3f1bc0",
+          "dimensions": {
+            "width": 1374,
+            "height": 1145
+          },
+          "displayDimensions": {
+            "width": 150,
+            "height": 128
+          }
+        }
+      ]
+    },
+    {
+      "category": "standard",
+      "runtimeUse": "active",
+      "files": [
+        {
+          "path": "public/images/battles/realistic-v2/bunting.png",
+          "role": "cloth-material-for-generated-standard-atlases",
+          "bytes": 3092715,
+          "sha256": "df7c37b6e53ea4f667339e24be3babd3292b5fd8cb0702d28ed4789526895e3f",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ]
+    },
+    {
+      "category": "scenery",
+      "runtimeUse": "active",
+      "files": [
+        {
+          "path": "public/images/battles/realistic-v2/earthworks.png",
+          "role": "fence-and-stone-wall-source-sheet",
+          "bytes": 2145673,
+          "sha256": "75892748bd9d5141649abb7d71711c7c044b45261afad5466f2352243e72255c",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/battles/realistic-v2/earthworks.json",
+          "role": "earthworks-frame-index",
+          "bytes": 293,
+          "sha256": "681bf98cf9151c9d718a5c37298a81b6c095cb363679acbb67eaa18b192058f5",
+          "frames": 4
+        }
+      ]
+    },
+    {
+      "category": "scenery",
+      "runtimeUse": "loaded-unselected",
+      "files": [
+        {
+          "path": "public/images/battles/realistic-v2/foliage.png",
+          "role": "foliage-source-sheet-not-stamped-by-gettysburg-terrain",
+          "bytes": 2266302,
+          "sha256": "2e06aea3eeb3723aa7f8824343aa9a13a3b1ea0efb4351b24ceaa8aa775d64ac",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/battles/realistic-v2/foliage.json",
+          "role": "foliage-frame-index-not-stamped-by-gettysburg-terrain",
+          "bytes": 290,
+          "sha256": "ed0490c5a99fc551a459f0561cc8a7aab15ea2930f4fb18755d0eb70589b8d86",
+          "frames": 4
+        }
+      ]
+    },
+    {
+      "category": "unit",
+      "runtimeUse": "active",
+      "family": "detailed-v2",
+      "files": [
+        {
+          "path": "public/images/units/detailed-v2/union-ready.png",
+          "role": "union-infantry-ready-source",
+          "bytes": 1507548,
+          "sha256": "75160c7f8168a69f9dbddc0460c4fd6406708798cbea1f3c3965b4c3e4c3f0cc",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/units/detailed-v2/union-ready.json",
+          "role": "union-infantry-ready-atlas",
+          "bytes": 4040,
+          "sha256": "99c24f07847236216828690de9377d071a17b1ab29fba2227ec8608354c8c065",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "frames": 8
+        },
+        {
+          "path": "public/images/units/detailed-v2/union-walk.png",
+          "role": "union-infantry-walk-source",
+          "bytes": 1506765,
+          "sha256": "ad8559c5f1da1d46b2ab465d63ff78f8779ae11c8439eb8f68cb954778dda5d0",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/units/detailed-v2/union-walk.json",
+          "role": "union-infantry-walk-atlas",
+          "bytes": 4039,
+          "sha256": "2565d7fa4e1d84988f5a7f76cd98bc9ea6d6432f884b8e30ff692128a9ef3f5b",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "frames": 8
+        },
+        {
+          "path": "public/images/units/detailed-v2/union-aim.png",
+          "role": "union-infantry-aim-source",
+          "bytes": 1451167,
+          "sha256": "093cd17c3ef757c86c98b1c2e8aec5d9d74341ef9a475d30cc1445a35e400288",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/units/detailed-v2/union-aim.json",
+          "role": "union-infantry-aim-atlas",
+          "bytes": 3185,
+          "sha256": "548da3fbad4a7e3f2264ff519d7e97d80c3488c9d2e3aace737c9dcc14c1781c",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "frames": 6
+        },
+        {
+          "path": "public/images/units/detailed-v2/union-crew.png",
+          "role": "union-artillery-crew-source",
+          "bytes": 1485353,
+          "sha256": "b5263432b17de6fac93b2be38859f55e2b2a0d2956f6e755ff0794c70ec60fea",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/units/detailed-v2/union-crew.json",
+          "role": "union-artillery-crew-atlas",
+          "bytes": 3179,
+          "sha256": "3fb98fe09221f8b01f9e8fda19df435672476beb4fc956a052c07104ad7d1bb5",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "frames": 6
+        },
+        {
+          "path": "public/images/units/detailed-v2/confederate-ready.png",
+          "role": "confederate-infantry-ready-source",
+          "bytes": 1630823,
+          "sha256": "a245bac6766655de6142fe75250642e488ac7ae33d1df327c442be67160773fe",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/units/detailed-v2/confederate-ready.json",
+          "role": "confederate-infantry-ready-atlas",
+          "bytes": 4044,
+          "sha256": "28bc6635cda04b9c8d697d6f27d631f721d6a825f1bd17aac56f20596add314b",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "frames": 8
+        },
+        {
+          "path": "public/images/units/detailed-v2/confederate-walk.png",
+          "role": "confederate-infantry-walk-source",
+          "bytes": 1597978,
+          "sha256": "72bcd09a3e5de364c83e545caf64e421516de2dc8fc52b63997daad096308c47",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/units/detailed-v2/confederate-walk.json",
+          "role": "confederate-infantry-walk-atlas",
+          "bytes": 4043,
+          "sha256": "bdcffa9000ab769fc171fe2f4c92ebcea51edc729b7a3b7a58d71019769410f9",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "frames": 8
+        },
+        {
+          "path": "public/images/units/detailed-v2/confederate-aim.png",
+          "role": "confederate-infantry-aim-source",
+          "bytes": 1553757,
+          "sha256": "354f5f090be54dbb310939c8c9e69375e4ad0da9beea682863f60fa5f3353500",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/units/detailed-v2/confederate-aim.json",
+          "role": "confederate-infantry-aim-atlas",
+          "bytes": 3191,
+          "sha256": "ff4ad2a2fde7d1ad6fae701f1b948230f1cabb560bb5aef0c24931ba85b7ec02",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "frames": 6
+        },
+        {
+          "path": "public/images/units/detailed-v2/confederate-crew.png",
+          "role": "confederate-artillery-crew-source",
+          "bytes": 1484016,
+          "sha256": "0fac66f929307da0497e8672ff1599ca2e7ef03bb3563c93cea566258841b4a1",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/units/detailed-v2/confederate-crew.json",
+          "role": "confederate-artillery-crew-atlas",
+          "bytes": 3188,
+          "sha256": "712995f70f45dc09fb272ffc9b66bdb0a9edefd460dc330bccc46ed56389c85b",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "frames": 6
+        }
+      ]
+    },
+    {
+      "category": "unit",
+      "runtimeUse": "conditional-active",
+      "family": "realistic-v1-rear-fire-fallback",
+      "files": [
+        {
+          "path": "public/images/units/realistic-v1/axial-aim.png",
+          "role": "shared-axial-aim-sheet-selected-for-union-rear-fire",
+          "bytes": 827255,
+          "sha256": "9f31ea9adeb6eabb147a99e1f3348d37f3bdee9445d7ceeb90fb4853eeab047d",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "path": "public/images/units/realistic-v1/union-aim.json",
+          "role": "union-axial-aim-atlas",
+          "bytes": 1445,
+          "sha256": "c3d50ed363f665d9ac78ceb8500906f39a2b4f6c9eb17136aa513803cccae249",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          },
+          "frames": 2
+        }
+      ]
+    },
+    {
+      "category": "unit",
+      "runtimeUse": "fallback",
+      "files": [
+        {
+          "path": "public/images/units/confederate-infantry-v1.webp",
+          "role": "legacy-confederate-infantry",
+          "bytes": 38012,
+          "sha256": "213c9c83d379ce5749e6ffb2219fc7d720a977c8b9b4bd2a2b0b192126b6b512",
+          "dimensions": {
+            "width": 384,
+            "height": 576
+          }
+        },
+        {
+          "path": "public/images/units/union-infantry-v1.webp",
+          "role": "legacy-union-infantry",
+          "bytes": 34616,
+          "sha256": "a8b6ded95e3b72d72af9eca82dccc138af0faebcaef3cfd6f1066f0f1c881778",
+          "dimensions": {
+            "width": 384,
+            "height": 576
+          }
+        },
+        {
+          "path": "public/images/units/union-artillery-v2.png",
+          "role": "legacy-artillery-image-hidden-by-procedural-tactical-artillery",
+          "bytes": 1767373,
+          "sha256": "85531bada0588b58f62a0a4f9eea4caae645550538d32979367c7d5fcb89fffa",
+          "dimensions": {
+            "width": 1421,
+            "height": 1107
+          }
+        },
+        {
+          "path": "public/images/units/realistic-v1/union-infantry.png",
+          "role": "realistic-union-infantry-fallback",
+          "bytes": 2093508,
+          "sha256": "83e7b3d82802f29ad4614e3d82130df4e6571e192ae560f91dd23992a66d02ba",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/units/realistic-v1/union-infantry.json",
+          "role": "realistic-union-infantry-atlas-fallback",
+          "bytes": 13569,
+          "sha256": "cc375d0335c8c8f19bae9566c695fe699c278a0f98a3b02d13fd4646a0e89a85",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "frames": 32
+        },
+        {
+          "path": "public/images/units/realistic-v1/artillery-crew.png",
+          "role": "shared-realistic-artillery-crew-fallback",
+          "bytes": 2104502,
+          "sha256": "e30f759575388b83e02d6bbd1327bc6e1f41d80dcdb573d1be3ec7a68c4f40c4",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/units/realistic-v1/union-crew.json",
+          "role": "realistic-union-artillery-crew-atlas-fallback",
+          "bytes": 7085,
+          "sha256": "943a3589ceba3efa366f7992b623b39b289389e2b747ab9cbdb0bf2ed52321c2",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "frames": 16
+        },
+        {
+          "path": "public/images/units/directional-melee-v1/union-infantry.webp",
+          "role": "union-directional-melee-fallback",
+          "bytes": 147186,
+          "sha256": "8b61f2e60526613ae5bcdf579b23b0804e14213b53911894a637017c16798972",
+          "dimensions": {
+            "width": 2048,
+            "height": 320
+          }
+        },
+        {
+          "path": "public/images/units/directional-melee-v1/union-infantry.json",
+          "role": "union-directional-melee-atlas-fallback",
+          "bytes": 13986,
+          "sha256": "5e763c9012973b716663c7ecebbab7cf8be4ea3ef33ea6745afcca9a0e478ed5",
+          "dimensions": {
+            "width": 2048,
+            "height": 320
+          },
+          "frames": 32
+        },
+        {
+          "path": "public/images/units/directional-v2/union-infantry.webp",
+          "role": "union-directional-infantry-fallback",
+          "bytes": 908674,
+          "sha256": "62d68209464e6d7efa6481d68fedcdf098d2e289d6bc9e5b24aacf708624b294",
+          "dimensions": {
+            "width": 2048,
+            "height": 1920
+          }
+        },
+        {
+          "path": "public/images/units/directional-v2/union-infantry.json",
+          "role": "union-directional-infantry-atlas-fallback",
+          "bytes": 78671,
+          "sha256": "9d4c6d7c624d5b07d4a4cb81965608833af4c69d99d62e7540c05925d64d0be2",
+          "dimensions": {
+            "width": 2048,
+            "height": 1920
+          },
+          "frames": 192
+        },
+        {
+          "path": "public/images/units/realistic-v1/confederate-aim.json",
+          "role": "confederate-axial-aim-atlas-fallback",
+          "bytes": 1449,
+          "sha256": "0991e3655fd558821d6e568569e62a5990de1d68e1c1739221ebc898eb877867",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          },
+          "frames": 2
+        },
+        {
+          "path": "public/images/units/realistic-v1/confederate-infantry.png",
+          "role": "realistic-confederate-infantry-fallback",
+          "bytes": 2181294,
+          "sha256": "1db31c1c37d4b175e5d36dad45e1292ab616be71df85b3a609f3d9be55e6c4ba",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "path": "public/images/units/realistic-v1/confederate-infantry.json",
+          "role": "realistic-confederate-infantry-atlas-fallback",
+          "bytes": 13587,
+          "sha256": "46e9f7f0ed97ae69cf8b2cac8417863c5d8bc30633f5b64cc637c582435ded32",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "frames": 32
+        },
+        {
+          "path": "public/images/units/realistic-v1/confederate-crew.json",
+          "role": "realistic-confederate-artillery-crew-atlas-fallback",
+          "bytes": 7100,
+          "sha256": "51936c15b6aafd38c68029f8255b0a5a662f06fdfa3ca16f120a21a90275dc78",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "frames": 16
+        },
+        {
+          "path": "public/images/units/directional-melee-v1/confederate-infantry.webp",
+          "role": "confederate-directional-melee-fallback",
+          "bytes": 138166,
+          "sha256": "af41c5980adb2e2af1fa6437df561c4ddb8132049deb000bcc00b52eeaa69415",
+          "dimensions": {
+            "width": 2048,
+            "height": 320
+          }
+        },
+        {
+          "path": "public/images/units/directional-melee-v1/confederate-infantry.json",
+          "role": "confederate-directional-melee-atlas-fallback",
+          "bytes": 13992,
+          "sha256": "d0828cb1d7dd5252cae8d0ebfd5d0939a31a2bfae54f457ea611976add2d42d0",
+          "dimensions": {
+            "width": 2048,
+            "height": 320
+          },
+          "frames": 32
+        },
+        {
+          "path": "public/images/units/directional-v2/confederate-infantry.webp",
+          "role": "confederate-directional-infantry-fallback",
+          "bytes": 852878,
+          "sha256": "3e7c7c4ca3bab3a6c5663365500bf1e7d9a4181759f421b42e0c7eecee2e2840",
+          "dimensions": {
+            "width": 2048,
+            "height": 1920
+          }
+        },
+        {
+          "path": "public/images/units/directional-v2/confederate-infantry.json",
+          "role": "confederate-directional-infantry-atlas-fallback",
+          "bytes": 78677,
+          "sha256": "17de0a61ef3547b64dda700fe8c86907031b0cba9a9e9196806c429b729ea2b0",
+          "dimensions": {
+            "width": 2048,
+            "height": 1920
+          },
+          "frames": 192
+        }
+      ]
+    }
+  ],
+  "runtimeGeneratedTextures": [
+    {
+      "keys": [
+        "union-detailed-ready",
+        "union-detailed-walk",
+        "union-detailed-aim",
+        "union-detailed-crew",
+        "confederate-detailed-ready",
+        "confederate-detailed-walk",
+        "confederate-detailed-aim",
+        "confederate-detailed-crew"
+      ],
+      "runtimeUse": "active",
+      "count": 8,
+      "dimensionsEach": {
+        "width": 1536,
+        "height": 1024
+      },
+      "estimatedRgbaBytes": 50331648,
+      "creation": "Chroma-composited canvases registered as Phaser atlases; source textures removed afterward."
+    },
+    {
+      "keys": [
+        "cloth-us-national-34",
+        "cloth-anv-13"
+      ],
+      "runtimeUse": "active",
+      "count": 2,
+      "dimensionsEach": {
+        "width": 1920,
+        "height": 768
+      },
+      "framesEach": 32,
+      "estimatedRgbaBytes": 11796480,
+      "creation": "Code-drawn period design multiplied with bunting material and deformed into a cloth atlas."
+    },
+    {
+      "keys": [
+        "cloth-us-national-35",
+        "cloth-first-national-11",
+        "cloth-first-national-13"
+      ],
+      "runtimeUse": "generated-unselected",
+      "count": 3,
+      "dimensionsEach": {
+        "width": 1920,
+        "height": 768
+      },
+      "framesEach": 32,
+      "estimatedRgbaBytes": 17694720,
+      "creation": "Generated by the shared standard builder although Gettysburg cannot select these patterns."
+    },
+    {
+      "keys": [
+        "earthworks-photo"
+      ],
+      "runtimeUse": "active",
+      "count": 1,
+      "dimensionsEach": {
+        "width": 1536,
+        "height": 1024
+      },
+      "estimatedRgbaBytes": 6291456,
+      "creation": "Magenta chroma-composited scenery canvas; source texture removed afterward."
+    },
+    {
+      "keys": [
+        "foliage-photo"
+      ],
+      "runtimeUse": "generated-unselected",
+      "count": 1,
+      "dimensionsEach": {
+        "width": 1536,
+        "height": 1024
+      },
+      "estimatedRgbaBytes": 6291456,
+      "creation": "Magenta chroma-composited scenery canvas; Gettysburg does not stamp its frames."
+    },
+    {
+      "keys": [
+        "gettysburg-physical-scenery-v2"
+      ],
+      "runtimeUse": "active",
+      "count": 1,
+      "dimensionsEach": {
+        "width": 1700,
+        "height": 900
+      },
+      "estimatedRgbaBytes": 6120000,
+      "creation": "World-size canvas containing rule-aligned fences, wall, yards, lanes and cultivation."
+    }
+  ],
+  "proceduralVisuals": [
+    {
+      "category": "artillery",
+      "module": "src/battle/artilleryVisual.js",
+      "items": [
+        "gun carriage",
+        "limber",
+        "wheels",
+        "barrel",
+        "recoil",
+        "apparatus shadows"
+      ],
+      "externalImage": false
+    },
+    {
+      "category": "effects",
+      "module": "src/battle/CivilWarBattlefield.jsx",
+      "items": [
+        "formation shadows",
+        "travel dust",
+        "infantry volley smoke",
+        "artillery smoke and muzzle flash",
+        "selection arc",
+        "fire arc",
+        "route and destination marks"
+      ],
+      "externalImage": false
+    },
+    {
+      "category": "retreat",
+      "module": "src/battle/retreatPresentation.js",
+      "items": [
+        "one-field-second departure fade"
+      ],
+      "externalImage": false
+    },
+    {
+      "category": "ui",
+      "module": "src/battle/CivilWarBattlefield.jsx",
+      "items": [
+        "hover and touch unit label",
+        "strength bar",
+        "condition cue",
+        "ridge sectors",
+        "rear exits",
+        "mission markers",
+        "landmark labels and outlines",
+        "terrain overlay labels"
+      ],
+      "externalImage": false
+    }
+  ],
+  "applicationShellAssetsOutsideScenePreload": [
+    {
+      "path": "src/assets/images/gettysburg_card.jpg",
+      "role": "pre-battle-scenario-card",
+      "bytes": 334300,
+      "sha256": "8e274ca8d7e99f3990fdada5353cf29963d147a0180cddcba639f4836db1eadc",
+      "dimensions": {
+        "width": 768,
+        "height": 768
+      },
+      "includedInPreloadTotals": false
+    },
+    {
+      "path": "public/fonts/outfit-400.ttf",
+      "role": "global-ui-font-regular",
+      "bytes": 47844,
+      "sha256": "6a8c9be856a6b9e09c66615634904616152c9de5e44db343a3ced240479c586a",
+      "includedInPreloadTotals": false,
+      "fetchDependsOnRenderedTextAndBrowserCache": true
+    },
+    {
+      "path": "public/fonts/outfit-600.ttf",
+      "role": "global-ui-font-semibold",
+      "bytes": 48456,
+      "sha256": "8900df5726b5a6f23e723594f11d5ea27e695bd85c884f18d88ed080544fe205",
+      "includedInPreloadTotals": false,
+      "fetchDependsOnRenderedTextAndBrowserCache": true
+    },
+    {
+      "path": "public/fonts/outfit-800.ttf",
+      "role": "global-ui-font-extrabold",
+      "bytes": 48272,
+      "sha256": "27147c0353ecafbb8e69fe02da56680f7d12bdc2764c8346012ec031374036d6",
+      "includedInPreloadTotals": false,
+      "fetchDependsOnRenderedTextAndBrowserCache": true
+    },
+    {
+      "path": "public/fonts/share-tech-mono-400.ttf",
+      "role": "global-monospace-ui-font",
+      "bytes": 41912,
+      "sha256": "5f6b57538a1a35469a038dc3073003cebc4c101ad7b3c219e9555a3b3c0a81d2",
+      "includedInPreloadTotals": false,
+      "fetchDependsOnRenderedTextAndBrowserCache": true
+    }
+  ],
+  "visibleComposition": {
+    "formations": 10,
+    "infantryFormations": 8,
+    "artilleryFormations": 2,
+    "maximumInfantryFigures": 256,
+    "artilleryCrewFigures": 6,
+    "proceduralGunSystems": 2,
+    "standards": 10,
+    "landmarks": 2
+  },
+  "explicitlyNotLoadedByThisBaseline": [
+    "public/images/battles/gettysburg-terrain-v1.webp",
+    "public/images/battles/gettysburg-terrain-v2.webp",
+    "public/images/battles/landmarks-v3/evergreen-gatehouse.png",
+    "public/images/battles/oak-canopy-v1.webp",
+    "all siege terrain and siege target assets"
+  ],
+  "sourceReferences": [
+    {
+      "path": "src/battle/CivilWarBattlefield.jsx",
+      "symbols": [
+        "CivilWarBattleScene.constructor",
+        "preload",
+        "create",
+        "createFormation",
+        "syncFormation"
+      ]
+    },
+    {
+      "path": "src/battle/battleDefinitions.js",
+      "symbols": [
+        "GETTYSBURG_FORMATIONS",
+        "BATTLE_ENGINE_CONFIGS.gettysburg"
+      ]
+    },
+    {
+      "path": "src/battle/historicalLandmarks.js",
+      "symbols": [
+        "sites.gettysburg",
+        "landmarksFor"
+      ]
+    },
+    {
+      "path": "src/battle/gettysburgTerrainVisual.js",
+      "symbols": [
+        "drawGettysburgTerrain"
+      ]
+    },
+    {
+      "path": "src/battle/detailedUnitVisual.js",
+      "symbols": [
+        "DETAILED_UNIT_PAGES",
+        "createDetailedUnitTextures",
+        "detailedInfantryPose"
+      ]
+    },
+    {
+      "path": "src/battle/realisticStandards.js",
+      "symbols": [
+        "createStandardTextures",
+        "createRealisticStandard"
+      ]
+    },
+    {
+      "path": "src/battle/periodStandards.js",
+      "symbols": [
+        "periodStandardFor",
+        "updatePeriodStandard"
+      ]
+    },
+    {
+      "path": "src/battle/realisticScenery.js",
+      "symbols": [
+        "createSceneryTextures",
+        "stampScenery"
+      ]
+    },
+    {
+      "path": "src/battle/artilleryVisual.js",
+      "symbols": [
+        "createArtilleryVisual",
+        "updateArtilleryVisual"
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "command": "node scripts/audit-field-assets.mjs",
+      "status": "passed",
+      "evidence": "Gettysburg: 47 loader entries, 45 unique files, 38,913,341 local file bytes."
+    },
+    {
+      "command": "npm run validate-assets",
+      "status": "passed",
+      "evidence": "All asset stages passed; historical manifest had 17 entries and zero warnings; 41 PNG pixel/metadata preservation checks passed."
+    },
+    {
+      "command": "npm run test:gettysburg",
+      "status": "passed",
+      "tests": 81,
+      "evidence": "Mechanics, command/debrief presentation and artillery visual suites passed."
+    },
+    {
+      "command": "npm run test:landmarks",
+      "status": "passed",
+      "tests": 175,
+      "evidence": "All landmark generations and connected-surroundings suites passed."
+    }
+  ],
+  "performanceEvidenceBoundary": {
+    "staticPreloadAuditCaptured": true,
+    "liveBrowserFieldProfileCaptured": false,
+    "fieldProfileQuery": "?fieldProfile=1",
+    "availableLiveMetrics": [
+      "readyMs",
+      "frameP95Ms",
+      "updateP95Ms",
+      "snapshotBuilds",
+      "formationPasses"
+    ],
+    "note": "Decoded and generated RGBA figures are dimension-based estimates, not measured browser heap or GPU allocation."
+  }
+}

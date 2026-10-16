@@ -1,0 +1,50 @@
+{
+  "schema": "gettysburg-v31-historical-byte-migration-v1",
+  "baselineSHA256": "9869bc7964c84a49967172da23e635a04b4263b0259aa6e7b571910a71bc59d9",
+  "baselineFiles": 1473,
+  "fixture": {
+    "path": "scripts/fixtures/gettysburg-v31-preservation.json",
+    "sha256": "0b30c2341f0682f97f1223726fb30e5915d8143c8104f867b656a9c888773783"
+  },
+  "oldFixturesRefreshed": false,
+  "oldMigrationLedgersEdited": false,
+  "mandatoryRegistration": "package.json",
+  "mandatorySuite": "scripts/test-gettysburg-v31-contact.mjs",
+  "migrations": [
+    {
+      "path": "package.json",
+      "archive": "scripts/test-support/gettysburg-v31-before/package.json",
+      "beforeSHA256": "11ecabaf2714e0a5ab8b459545f211bc5a20d2ca8d7d60c6dbd273ebe1413ae9",
+      "currentSHA256": "cf20efa26f7d799db5aff324d42098a40fde6456b54280e4205ad30d4b727ffc",
+      "reason": "Only append mandatory v31 art, native and full-pipeline gates, with version and dependencies unchanged."
+    },
+    {
+      "path": "src/battle/gettysburgInfantryClipPolicy.js",
+      "archive": "scripts/test-support/gettysburg-v31-before/src/battle/gettysburgInfantryClipPolicy.js",
+      "beforeSHA256": "696aebd546ec807a46f98e6af20a22eff503df310c9fde10db935aab3a96aed5",
+      "currentSHA256": "4e8db4cd5a9a758e39fd871f3004a1af709fffcdc3d8dde454bcd274ce0e211f",
+      "reason": "Add only optional Gettysburg v31 reverse-axis atlases atop exact v30 scale profiles."
+    },
+    {
+      "path": "src/battle/gettysburgInfantryClips.js",
+      "archive": "scripts/test-support/gettysburg-v31-before/src/battle/gettysburgInfantryClips.js",
+      "beforeSHA256": "5cb8ec2d60fd7f4c49020fd8457ba0c1462fae256fd2ba29000e3c403c9efc1e",
+      "currentSHA256": "51eed59a0737e5a6b10d8453d49b52dc72eeae68416f210011c7440e569b47d3",
+      "reason": "Register strict native v31 validation and pose dispatch; every prior selector and shot address remains unchanged."
+    },
+    {
+      "path": "scripts/test-gettysburg-v30-contact.mjs",
+      "archive": "scripts/test-support/gettysburg-v31-before/scripts/test-gettysburg-v30-contact.mjs",
+      "beforeSHA256": "068d853ac23178cc0a1b65debd66df4b8c095b3787d9ebb2d61cdc6bf1add9c5",
+      "currentSHA256": "f2c9fe58fabbba41dd78b554811f6e2e9f8bd8f549410f3168f7dae28e67ea95",
+      "reason": "Only add the fixed v31 metadata migration import and authentic package before-byte reader; every old behavioral assertion stays active."
+    },
+    {
+      "path": "scripts/test-field-suspend-save.mjs",
+      "archive": "scripts/test-support/gettysburg-v31-before/scripts/test-field-suspend-save.mjs",
+      "beforeSHA256": "cdf23e1ebd898632bc46c477e64bb3b7d52f4675eb0dbec10f8eaf0852d3d0a5",
+      "currentSHA256": "5f4465e3d6d9b2d3bfd2884ef34511f6cc12cc0f5d4c5b11c0bce3ec9c6f67a0",
+      "reason": "Only add the fixed v31 before-byte migration import and authentic v30 test before-byte reader; all 67 current save behavior cases remain active."
+    }
+  ]
+}

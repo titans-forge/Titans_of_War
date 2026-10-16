@@ -1,13 +1,19 @@
 # Titans of War
 
-> **Current licensing policy — Forge Game License 2.0 (FG2-TITANS-OF-WAR-CIVIL-WAR-20261015).** This licensing-only edition requires separate permission for either public hosting or AI training by above-threshold entities on qualifying new Forge-controlled material. Previously supplied gameplay/media retain MIT, earlier Forge and other applicable grants. No retroactive restriction is claimed. See [release scope](LICENSING.md), [complete current terms](LICENSE), [preserved prior terms](LICENSE-LEGACY-PRE-FORGE-2.0.txt), [offline licensing page](FORGE-LICENSING.html) and [new download](https://github.com/titans-forge/Titans_of_War/releases/tag/forge-license-2.0-20261015). Earlier statements below describe the earlier game and preserved grants.
+> **Current licensing policy — Forge Game License 2.0 (FG2-TITANS-OF-WAR-CIVIL-WAR-20261015).** That licensing checkpoint requires separate permission for either public hosting or AI training by above-threshold entities on qualifying new Forge-controlled material. Previously supplied gameplay/media retain MIT, earlier Forge and other applicable grants. No retroactive restriction is claimed. See [release scope](LICENSING.md), [complete current terms](LICENSE), [preserved prior terms](LICENSE-LEGACY-PRE-FORGE-2.0.txt), [offline licensing page](FORGE-LICENSING.html) and [new download](https://github.com/titans-forge/Titans_of_War/releases/tag/forge-license-2.0-20261015). Earlier statements below describe the earlier game and preserved grants.
 
 
-## Play the current browser release
+## Current source: 0.32.0 / v45 — iPhone edition
 
-**Civil War 0.31.0 / v44 — October 8, 2026:** [Play on GitHub](https://titans-forge.github.io/Titans_of_War/) · [Play on itch.io](https://titans-forge.itch.io/titans-of-war-civil-war) · [Release and download](https://github.com/titans-forge/Titans_of_War/releases/tag/civil-war-v44-20261008)
+The main branch now contains the polished v44 game source and the new iPhone app shell, replacing the earlier 0.3.1 source snapshot. It includes the cannon app icon, bundled offline assets, native save sharing, pause/suspend integration, safe-area handling and compact phone layouts.
 
-The current prebuilt browser release fixes field-result campaign consequences, selected-formation/camera recovery and withdrawal explanations. Its `gh-pages` branch and release ZIP contain the same verified distribution. The `main` branch below remains the earlier 0.3.1 source edition; it is not presented as a source rebuild of the newer browser package. Existing Forge licensing, earlier MIT grants and separate media terms remain intact; the new distribution includes its own versioned checkpoint.
+- [iPhone build and testing notes](docs/IPHONE_APP.md)
+- [v45 release](https://github.com/titans-forge/Titans_of_War/releases/tag/civil-war-v45-iphone-20261015)
+- [Play the existing browser release](https://titans-forge.github.io/Titans_of_War/) · [Play on itch.io](https://titans-forge.itch.io/titans-of-war-civil-war)
+
+The hosted browser and itch releases remain v44. This release updates the GitHub source and adds a v45 browser ZIP for download; it does not publish to the App Store. iPhone installation requires your own Apple signing and provisioning.
+
+Forge Game License 2.0 applies according to the material's versioned scope; earlier MIT/Forge grants and separate media rights remain preserved. The existing licensing checkpoint records its original adoption, not a new audit of every v45 file.
 
 
 [Play on itch.io](https://titans-forge.itch.io/titans-of-war-civil-war) ·
@@ -19,7 +25,7 @@ This is the Civil War entry in the Titans of War collection. The existing
 repository moved from JCapone83 to Titans Forge on September 30, 2026, retaining
 its history and licensing checkpoints. Historical owner names in those records
 remain intentional; earlier MIT grants and separate media rights are preserved.
-The source branch is not certified to match the current itch.io build.
+The native edition is based on the verified v44 source; see the release notes for packaging changes and testing limits.
 
 Titans of War is a source-available historical strategy prototype from Titans Forge. It turns Civil War command decisions into a playable pressure system: logistics, food, morale, cabinet politics, military strength, and alternate-history divergence all compound across a campaign.
 
@@ -37,7 +43,7 @@ Titans of War is both a game and a public proof artifact for Titans Forge. The g
 - Runtime: browser app built with React and Vite
 - AI requirement: none; local Ollama support is optional
 - Release channel: GitHub-first source-available project; prior MIT grants retained
-- Current project policy: Forge Game Hosting License 1.0; earlier MIT code grants retained
+- Current project policy: Forge Game License 2.0; earlier MIT code grants retained
 - Media license: separate per asset; see `NOTICE` and the media manifests
 
 ## Features
@@ -56,7 +62,7 @@ Titans of War is both a game and a public proof artifact for Titans Forge. The g
 
 ## Requirements
 
-- Node.js 20+
+- Node.js 20.19+ or 22.12+ (as specified in package.json)
 - npm 10+
 - Optional: Ollama on `http://localhost:11434`
 - Optional local model: Gemma 4 12B-it is the recommended agent model when available through your local runner

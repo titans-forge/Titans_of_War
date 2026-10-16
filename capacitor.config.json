@@ -1,0 +1,11 @@
+{
+  "appId": "com.titansforge.civilwar",
+  "appName": "Civil War",
+  "webDir": "dist",
+  "backgroundColor": "#11171c",
+  "ios": {
+    "contentInset": "never",
+    "preferredContentMode": "mobile",
+    "backgroundColor": "#11171c"
+  }
+}

@@ -1,0 +1,62 @@
+.motion-review { position: relative; z-index: 1; max-width: 1440px; margin: 0 auto; padding: 30px 28px 48px; color: #e8edf2; }
+.motion-review-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin-bottom: 22px; }
+.motion-review-kicker { color: #72c4d4; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; }
+.motion-review h1 { font-size: clamp(28px, 4vw, 42px); line-height: 1.1; margin-bottom: 10px; }
+.motion-review-header p:last-child { color: #aebdcb; max-width: 760px; line-height: 1.5; }
+.motion-review a { color: #a0d9e5; text-underline-offset: 3px; }
+.motion-review-back { flex-shrink: 0; font-size: 14px; padding: 10px 0; }
+.motion-review-notice { border: 1px solid #815c36; border-left: 3px solid #d9a568; background: #231e18; color: #e3c7a4; padding: 13px 16px; line-height: 1.5; margin-bottom: 18px; font-size: 14px; }
+.motion-review-controls { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.motion-review-preset-row { display: grid; grid-template-columns: minmax(250px, 360px) minmax(0, 1fr); align-items: center; gap: 18px; margin-bottom: 18px; }
+.motion-review-preset-row label { color: #adbfcb; font-size: 13px; }
+.motion-review-preset-row select { display: block; width: 100%; margin-top: 6px; }
+.motion-review-preset-row p { color: #adbfcb; font-size: 13px; line-height: 1.5; }
+.motion-review button, .motion-review select { font: inherit; border: 1px solid #455765; border-radius: 5px; color: #e8edf2; background: #17232d; }
+.motion-review button { cursor: pointer; padding: 10px 14px; min-height: 42px; }
+.motion-review button:hover { background: #263b49; }
+.motion-review button:disabled { cursor: default; opacity: .45; }
+.motion-review button:disabled:hover { background: #17232d; }
+.motion-review button:focus-visible, .motion-review select:focus-visible, .motion-review input:focus-visible { outline: 2px solid #8eeaf8; outline-offset: 3px; }
+.motion-review .motion-review-play { min-width: 86px; background: #204754; border-color: #5496a6; }
+.motion-review-controls label { display: flex; align-items: center; gap: 8px; color: #adbfcb; font-size: 13px; }
+.motion-review select { padding: 9px 10px; min-height: 42px; }
+.motion-review-phase { font-variant-numeric: tabular-nums; color: #c8dae5; font-size: 14px; padding-right: 8px; }
+.motion-review-guide-toggle input { width: 18px; height: 18px; accent-color: #6bc4d6; }
+.motion-review-help { color: #93a8b7; line-height: 1.5; font-size: 13px; margin: 14px 0 18px; }
+.motion-review-sequence { color: #c8dae5; font-size: 13px; line-height: 1.5; min-height: 20px; margin-top: 14px; }
+.motion-review-panel-controls { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 16px 12px; }
+.motion-review-panel-controls button { font-size: 12px; padding: 8px 10px; }
+.motion-review-panel-controls span { flex-basis: 100%; color: #93a8b7; font-size: 12px; line-height: 1.5; }
+.motion-review-empty { padding: 20px; color: #aebdcb; }
+.motion-review-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.motion-review-study { min-width: 0; border: 1px solid #33434f; border-radius: 8px; background: #111b23; overflow: hidden; }
+.motion-review-study-header { display: grid; gap: 12px; padding: 16px; border-bottom: 1px solid #33434f; }
+.motion-review-study-header label { color: #aebdcb; font-size: 12px; }
+.motion-review-study-header select { display: block; width: 100%; margin-top: 6px; color: #e8edf2; font-size: 15px; }
+.motion-review-status { justify-self: start; border: 1px solid #815241; color: #efb69e; background: #30221f; border-radius: 4px; padding: 4px 8px; font-size: 12px; }
+.motion-review .status-reference_only, .motion-review .status-pilot { border-color: #436876; color: #a9d4df; background: #1c3039; }
+.motion-review-stage { height: 520px; overflow: auto; overscroll-behavior: contain; background-color: #27323b; background-image: linear-gradient(45deg, #303e49 25%, transparent 25%), linear-gradient(-45deg, #303e49 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #303e49 75%), linear-gradient(-45deg, transparent 75%, #303e49 75%); background-size: 24px 24px; background-position: 0 0, 0 12px, 12px -12px, -12px 0; }
+.motion-review-stage-content { width: max-content; min-width: 100%; min-height: 100%; display: grid; place-items: center; }
+.motion-review-pose { position: relative; flex-shrink: 0; overflow: hidden; }
+.motion-review-source-cell { position: absolute; left: 0; top: 0; overflow: hidden; }
+.motion-review-pose img { position: absolute; max-width: none; object-fit: fill; user-select: none; pointer-events: none; }
+.motion-review-pose.has-guides { outline: 1px solid #e7bd7480; outline-offset: -1px; }
+.motion-review-guides { position: absolute; inset: 0; pointer-events: none; }
+.motion-review-guides::before { content: ''; position: absolute; left: var(--root-x); top: 0; bottom: 0; border-left: 1px dashed #6be0f099; }
+.motion-review-guides::after { content: ''; position: absolute; top: var(--root-y); left: 0; right: 0; border-top: 1px dashed #6be0f099; }
+.motion-review-root { position: absolute; left: var(--root-x); top: var(--root-y); width: 9px; height: 9px; border: 2px solid #8eeaf8; border-radius: 50%; transform: translate(-50%, -50%); background: #12252c; }
+.motion-review-phase-caption { display: flex; gap: 12px; justify-content: space-between; padding: 13px 16px; line-height: 1.4; font-size: 13px; color: #aebdcb; }
+.motion-review-phase-caption strong { color: #e8edf2; flex-shrink: 0; }
+.motion-review-mode { margin: 0 16px 12px; color: #83b7c5; font-size: 12px; line-height: 1.5; }
+.motion-review-filmstrip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; padding: 0 16px 16px; }
+.motion-review-filmstrip button { display: grid; justify-items: center; align-content: center; gap: 7px; min-width: 0; padding: 8px 3px; background: #1c2932; }
+.motion-review-filmstrip button[aria-pressed='true'] { border-color: #7ed1e2; background: #253e48; box-shadow: inset 0 0 0 1px #7ed1e2; }
+.motion-review-filmstrip span { font-size: 12px; }
+.motion-review-source-details { padding: 16px; border-top: 1px solid #33434f; font-size: 12px; line-height: 1.6; color: #aebdcb; }
+.motion-review-source-details p + p { margin-top: 5px; }
+.motion-review-source-details ul { padding-left: 18px; margin: 12px 0; }
+.motion-review-source-details li + li { margin-top: 6px; }
+.motion-review-source-links { display: flex; gap: 16px; flex-wrap: wrap; }
+.motion-review-error { margin: 12px 16px; padding: 10px; color: #f2b3a3; border: 1px solid #9a6251; background: #33221d; font-size: 13px; }
+@media (max-width: 800px) { .motion-review { padding: 22px 16px 36px; } .motion-review-comparison { grid-template-columns: minmax(0, 1fr); } .motion-review-header { flex-direction: column; gap: 8px; } .motion-review-preset-row { grid-template-columns: minmax(0, 1fr); gap: 10px; } }
+@media (max-width: 420px) { .motion-review { padding: 18px 10px 30px; } .motion-review-controls { gap: 8px; } .motion-review-controls label { width: auto; } .motion-review-guide-toggle { flex-basis: 100%; } .motion-review-study-header, .motion-review-source-details { padding: 12px; } .motion-review-phase-caption { gap: 8px; padding: 12px; } .motion-review-filmstrip { padding: 0 12px 12px; gap: 5px; } }

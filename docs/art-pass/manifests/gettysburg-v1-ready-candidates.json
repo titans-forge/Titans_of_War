@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "artPass": "gettysburg-v1",
+  "scenarioId": "gettysburg",
+  "page": "ready",
+  "status": "opt-in-candidate",
+  "selector": "?artPass=gettysburg-v1",
+  "generatedAt": "2026-09-30",
+  "generation": {
+    "tool": "OpenAI built-in image generation",
+    "model": "not reported by tool",
+    "promptFile": "docs/art-pass/prompts/gettysburg-v1-ready-turnarounds.md",
+    "background": "native alpha"
+  },
+  "assets": [
+    {
+      "id": "gettysburg-v1-union-ready",
+      "side": "union",
+      "source": "docs/art-pass/candidates/gettysburg-v1/union-ready-turnaround-candidate.png",
+      "shippingCandidate": "public/images/units/gettysburg-v1/union-ready.png",
+      "atlas": "public/images/units/gettysburg-v1/union-ready.json",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1994133,
+      "sha256": "8b983d1f0b5a70a6db247589d3718371e5446b45efb4d260eca00fa17d327384"
+    },
+    {
+      "id": "gettysburg-v1-confederate-ready",
+      "side": "confederate",
+      "source": "docs/art-pass/candidates/gettysburg-v1/confederate-ready-turnaround-candidate.png",
+      "shippingCandidate": "public/images/units/gettysburg-v1/confederate-ready.png",
+      "atlas": "public/images/units/gettysburg-v1/confederate-ready.json",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2032562,
+      "sha256": "b76f16812df13e4a620c0f3bb137b6100e9508b9e70cc91e86fe5c6677e7ac7a"
+    }
+  ],
+  "scope": {
+    "defaultChanged": false,
+    "alternateGettysburgChanged": false,
+    "nonReadyPagesChanged": false
+  },
+  "review": "docs/art-pass/reviews/gettysburg-v1-ready-candidate-review.md"
+}

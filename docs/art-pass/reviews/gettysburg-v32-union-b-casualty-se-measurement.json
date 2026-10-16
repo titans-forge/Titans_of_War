@@ -1,0 +1,208 @@
+{
+  "artPass": "gettysburg-v32",
+  "side": "union",
+  "identity": "b",
+  "direction": 1,
+  "cardinal": "se",
+  "role": "casualty",
+  "source": "docs/art-pass/candidates/gettysburg-v32/union-b-casualty-se-candidate.png",
+  "sourceSHA256": "5567d9ba6fce923b07671672d330e40b95bb91644348cc725717d3ab544b5068",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v32-independent-union-b-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "9f620c6a789171be3cff65f68a2babbf0d7077b21b51a6415f39ef6b10a117cd",
+  "referenceHeight": 412,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh union B SE contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "7eff650ca02d651eaefd9cd700544cfd9f8b9892a25d07f4ed21e51c16c4efd8",
+      "ground": [
+        294,
+        606
+      ],
+      "groundROI": [
+        196,
+        552,
+        280,
+        614
+      ],
+      "groundMethod": "Projected pelvis X follows the belt/crotch axis in the stumble; ground Y is max exclusive alpha>=64 Y of the nearer planted screen-left boot, excluding the lifted rear boot.",
+      "solidBounds": [
+        164,
+        105,
+        521,
+        606
+      ],
+      "solidPadding": [
+        164,
+        105,
+        106,
+        21
+      ],
+      "nonzeroBounds": [
+        0,
+        21,
+        627,
+        627
+      ]
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "5420da89a5e95442e93acd8b17a838939f9a5702ee6667ba981f8accc6920fe7",
+      "ground": [
+        257,
+        595
+      ],
+      "groundROI": [
+        296,
+        558,
+        397,
+        609
+      ],
+      "groundMethod": "Projected pelvis X follows the lowered hip; ground Y is max exclusive alpha>=64 Y of the planted screen-right front boot outsole, independent of lower knee and weapon.",
+      "solidBounds": [
+        69,
+        264,
+        603,
+        595
+      ],
+      "solidPadding": [
+        69,
+        264,
+        24,
+        32
+      ],
+      "nonzeroBounds": [
+        15,
+        21,
+        607,
+        619
+      ]
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "023c4865a628988ba9a8d2dc6b8eb6a27761e1e313c745de0db1a39984cc2a79",
+      "ground": [
+        322,
+        445
+      ],
+      "groundROI": [
+        276,
+        405,
+        373,
+        455
+      ],
+      "groundMethod": "Projected hip X follows the fallen pelvis; ground Y is max exclusive alpha>=64 Y of the folded weight-bearing knee/hip region. The raised rear boot and rifle bounds are excluded.",
+      "solidBounds": [
+        79,
+        207,
+        589,
+        488
+      ],
+      "solidPadding": [
+        79,
+        207,
+        38,
+        139
+      ],
+      "nonzeroBounds": [
+        0,
+        16,
+        601,
+        627
+      ]
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "26e60f314d2ddc3b8b3a7514eba4fa7f92a82f1ebfa0749c945a9170cb0f7abc",
+      "ground": [
+        286,
+        434
+      ],
+      "groundROI": [
+        440,
+        410,
+        461,
+        439
+      ],
+      "groundMethod": "Projected hip X follows the side-rest pelvis; ground Y is max exclusive alpha>=64 Y of the resting wrist/hand at the end of the forearm. The separate lower rifle is excluded from the bounded ROI.",
+      "solidBounds": [
+        58,
+        251,
+        590,
+        475
+      ],
+      "solidPadding": [
+        58,
+        251,
+        37,
+        152
+      ],
+      "nonzeroBounds": [
+        6,
+        55,
+        617,
+        627
+      ]
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "action": "fall",
+      "key": "union-gettysburg-v32-b-casualty-se",
+      "frames": [
+        "b-fall-1-0",
+        "b-fall-1-1",
+        "b-fall-1-2",
+        "b-fall-1-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.4689,
+          "y": 0.966507
+        },
+        {
+          "x": 0.409888,
+          "y": 0.948963
+        },
+        {
+          "x": 0.513557,
+          "y": 0.709729
+        },
+        {
+          "x": 0.45614,
+          "y": 0.692185
+        }
+      ],
+      "referenceHeight": 412,
+      "sourceHash": "5567d9ba6fce923b07671672d330e40b95bb91644348cc725717d3ab544b5068",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeCasualtySequence": "gettysburg-v32-union-b-se-casualty",
+      "scope": "Exact source-reviewed union B SE local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

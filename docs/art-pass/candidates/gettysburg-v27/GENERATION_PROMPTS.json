@@ -1,0 +1,237 @@
+{
+  "artPass": "gettysburg-v27",
+  "mode": "built-in imagegen",
+  "imageModelIdentity": "not exposed by built-in tool; no specific model claim",
+  "scope": "Union A+B NE stationary ready/fire/load/ram; all new marching attempts rejected and unselected",
+  "nativeWholePNGOnly": true,
+  "generationAttempts": [
+    {
+      "attempt": "a-actions-1",
+      "mode": "built-in imagegen",
+      "prompt": "Generate a NEW whole native transparent 2x2 sprite atlas of the same realistic Union A Civil War infantryman. Reference1 supplies exact rear-left elevated NORTHEAST camera and own kit ONLY, not its walking poses. Reference2 supplies the four weapon action concepts, NOT its west-facing camera. All FOUR figures face and aim NORTHEAST, away toward upper-right: backs, left rear shoulders, back of forage caps and pack visible, face mostly hidden, never turn southwest toward viewer. Union A is a sturdy adult in navy cap/dark blue wool coat/light muted sky-blue trousers/tan rolled blanket strapped above dark pack/cross straps/black leather pouches/tin canteen/small worn brown brogans. Match this identity's same body proportions, head/pack/limbs, painterly realistic rendering and equipment across all four cells. He remains STATIONARY on the same patch of ground, modest natural weight shift. Top-left READY: natural musket shoulder/port held in both hands, full steel fixed bayonet. Top-right FIRE: musket butt properly at RIGHT shoulder, left hand supports forestock, right hand at trigger, cheek close to stock; barrel points northeast upper-right. Anatomical hands correct and barrel mouth visible and separately distinguishable from bayonet projecting farther. NO flash, muzzle smoke or glow painted into sheet; engine adds those. Bottom-left LOAD: stock butt planted beside feet, barrel vertical supported by left hand; right hand places paper cartridge/charge into muzzle. Bottom-right RAM: same grounded musket, long THIN steel ramrod partly inserted into barrel and grasped by raised right hand, clearly different raised forearm from load; no second rifle or extra rod sticking out of pack. Ready, aimed fire, loading, ramming must visibly differ, coherent 19th century musket animation, not modern bolt action. Camera, physical figure scale and full kit identical across all cells. Exactly one soldier per equal square cell, row-major order. Every cap, bayonet, ramrod, boot and cloth edge wholly inside own cell with AT LEAST 70 native pixels zero-alpha clearance at all four edges, including BELOW soles. Entire person plus firearm about 65% of cell height, enough padding for raised ramrod and horizontal gun. Four uncropped complete realistic figures, no text, borders, painted checkerboard, scenery, ground plane, reflections or cast ground shadow. Genuine transparent RGBA. Redraw a whole complete atlas, no collaged crops or mirroring.",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-3bf0b511-7a1c-4edb-9b7a-5b89e3042616.png",
+          "sha256": "983d7e366aeca55bb986d86b243751023ac048c54323425c5c92c256ba291bb5"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v9/union-a-actions-w.png",
+          "sha256": "3676bb60c6c4373cd1176e30b4079ad68cebb94de26fe7bea582dd675b936d96"
+        }
+      ],
+      "originalSHA256": "0d612aa1d2a13ac5d35184caf14009391ff903e55318833db2a14b7c35dd9462",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-12965c0b-f398-46b3-9474-ca333e03b8f1.png",
+      "archivePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v27-20261005/generation-attempts/a-actions-1-generated.png",
+      "selectedForCandidate": true,
+      "independentAcceptancePending": false,
+      "nativePixelsEdited": false,
+      "result": "Exact whole stationary source accepted by actual independent Astra Max source review",
+      "acceptedForOptIn": true
+    },
+    {
+      "attempt": "a-march-1",
+      "mode": "built-in imagegen",
+      "prompt": "Use case: historical-scene. Asset type: native transparent RGBA infantry march sprite atlas for Titans of War: Civil War Gettysburg.\nReference image1 is the accepted Union identity A kit and EXACT northeast rear three-quarter camera. Reference image2 is a supporting kit/musket-carry reference only; do NOT use its front-facing camera or copy its old rigid anatomy.\nCreate ONE square native image with precisely FOUR equal square cells arranged2columns2rows, true transparent background, no labels, no grid, no floor or shadow plane. Each cell contains exactly one whole human Union infantryman viewed from moderately elevated rear-left, facing northeast/up-right throughout. Photorealistic believable adult anatomy, natural weathered wool and leather, a lean human soldier rather than a toy or heroic game figurine. Navy sack coat and forage cap, muted sky-blue trousers, worn brown brogans, dark leather haversack/cartridge pouches, black soft knapsack with tan blanket roll, tin canteen, Springfield-type long rifle-musket with slender fixed socket bayonet. Preserve reference1 kit and scale while producing original natural motion. Matte natural lighting and fine seams/folds, no anime, plastic sheen, inflated boots/hands or chunky weapon.\nThe four cells in reading order are a complete clearly DIFFERENT calm marching gait cycle: (1) LEFT boot planted forward toward NE, right heel lifting behind; (2) LEFT support midstance, RIGHT knee/boot passing forward; (3) RIGHT boot planted forward toward NE, left heel lifting behind; (4) RIGHT support midstance, LEFT knee/boot passing forward. Both arms carry the long musket securely near vertical at the right shoulder or natural port, gentle shoulder/hip counter-rotation and independent coat folds. Legs must actually alternate; no repeated static pose, no jumping, no crouching, no reverse walking. Keep same face/hair/kit/body size and same camera in all4cells.\nCRITICAL layout: every soldier plus entire bayonet and boots fits wholly inside its OWN cell with at least50nativepixels of empty transparent space on ALL sides, including the central gutters. Put anatomical pelvis over the same approximate cell center and planted sole near80%cellheight. Keep the human about60%cellheight to leave overhead room for bayonet; never let weapon touch cell borders. No overlap between cells. Entire native atlas is final game art; do not place a checkerboard or opaque backdrop inside the pixels.",
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v26/union-a-contact-ne.png",
+          "sha256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v7/union-a-march-s.png",
+          "sha256": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000"
+        }
+      ],
+      "originalSHA256": "7a47ab50afeb095c980e595afc6c774b18c68a7e1cf5956a5dc6400353cfe280",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-6b6038ff-822c-428b-94b3-e5360f6d4dcd.png",
+      "archivePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v27-20261005/generation-attempts/a-march-1-generated.png",
+      "selectedForCandidate": false,
+      "independentAcceptancePending": false,
+      "nativePixelsEdited": false,
+      "result": "Rejected; not selected for gameplay",
+      "acceptedForOptIn": false
+    },
+    {
+      "attempt": "a-march-2",
+      "mode": "built-in imagegen",
+      "prompt": "Use case: historical-scene. Create a complete native transparent RGBA game sprite atlas, square, FOUR isolated figures in equal2x2cells.\nReference image is ONLY Union A uniform/kit and northeast rear-quarter camera. Keep that same adult soldier, navy forage cap and sackcoat, muted skyblue wool trousers, small worn brown brogans, dark cartridge pouches/black knapsack/tan rolled blanket/tin canteen and long Springfield rifle-musket with thin socket bayonet. Realistic human proportions and natural soft fabric folds; no anime, toy, plastic or oversized boots.\nALL four figures look up-right/northeast from an elevated rear-left camera. FOUR CLEARLY DIFFERENT consecutive ordinary marching poses in reading order. (1) LEFT LEG extended FORWARD/up-right and planted; RIGHT LEG is BEHIND/down-left lifting its heel. (2) Weight on LEFT leg, RIGHT knee and boot PASSING forward beside the support leg. (3) RIGHT LEG extended FORWARD/up-right and planted; LEFT LEG is BEHIND/down-left lifting its heel. (4) Weight on RIGHT leg, LEFT knee and boot PASSING forward beside the support leg. The front leg MUST visibly SWITCH between top-left and bottom-left. Rows must not all show the same right boot ahead. Left and right boots exchange their screen positions. Natural modest step width, weight shift, gentle shoulders/hips counter-rotation, no jumping. Both arms securely carry the rifle-musket near vertical at the right shoulder. Musket and bayonet are unchanged throughout.\nLAYOUT is crucial: deliberately SMALLER whole silhouettes, each occupies ONLY the central65%ofitscell. Include entire bayonet, cap, pack and boots. Leave abundant empty genuine alpha0 air on every side:70pixels minimum clear margin inside each cell including central gutters, with at least100pixels empty below boots. Planted foot around75%cellheight, not at bottom edge. No crop, no overlap, no labels, grid, floor, shadowplane or checkerboard. Same body/kit physical scale in all four cells. Diffuse matte natural lighting and sharply rendered realistic seams/materials. Return the entire final native atlas without later cropping/resizing.",
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v26/union-a-contact-ne.png",
+          "sha256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc"
+        }
+      ],
+      "originalSHA256": "353ef4c3d2be8b451a3c9b83110bd283d4401dc8018978980638ed8e39d82bcc",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-0cd2a1ec-5458-4023-a48d-955fd81f3064.png",
+      "archivePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v27-20261005/generation-attempts/a-march-2-generated.png",
+      "selectedForCandidate": false,
+      "independentAcceptancePending": false,
+      "nativePixelsEdited": false,
+      "result": "Rejected; not selected for gameplay",
+      "acceptedForOptIn": false
+    },
+    {
+      "attempt": "a-march-3",
+      "mode": "built-in imagegen",
+      "prompt": "Create a NEW corrected native transparent RGBA 2x2 game sprite atlas from this reference. Reference image is UnionA kit/camera only; do NOT copy its repeating gait. Same realistic navy-coated CivilWar UnionA soldier seen from elevated REAR LEFT facing up-right/northeast, same navycap/skybluewooltrousers/wornsmallbrownbrogans/blackpack/tanblanketroll/tincanteen/darkpouches, and long rifle-musket near upright right shoulder with slim socketbayonet.\nFour clearly different walking poses in reading order. TOP LEFT: the LEG NEAREST THE CAMERA (his LEFT LEG) reaches FORWARD toward the RIGHT oftheimage; its knee/boot are IN FRONT oftheotherleg. FAR leg is behind, stretched leftwards withheelraised. TOP RIGHT: far leg swings past the planted near leg with bent knee. BOTTOM LEFT: opposite contact, FAR leg reaches FORWARD towardimageRIGHT, NEAR leg is behind stretchedimageLEFT heelraised. BOTTOM RIGHT: near leg swings past planted far leg with bent knee. It is mandatory to visibly EXCHANGE which leg is forward between TOP LEFT and BOTTOM LEFT. No repeated same forward boot. Natural modest walking, not running, jumping or a high knee parade. Upper bodies gently counterrotate, musketsecureinbothhands. Keep coherent limbs, identical kit/physical body scale/camera in all4cells.\nComposition: make the FOUR silhouettes notably SMALLER. Native square atlas four EQUAL cells. Each WHOLE soldier plusmusketbayonet is enclosed well inside itscell, central60%height and55%width; at least80pixels transparent air on everyedge, at least120pixels BELOW sole. The soldier's ground sole is at70%cellheight, not97% like the reference. Do not touch cellborders/gutters or crop ANY boot/bayonet. No text/grid/opaque floor/shadowplane. Photoreal matte natural wool/leather details, ordinary lean humanproportions, real worn seams andboots, no toy/anime/plastic. True alpha0 background, entire final native atlas, no rescaled raster export outside imagegen.",
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v26/union-a-contact-ne.png",
+          "sha256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc"
+        }
+      ],
+      "originalSHA256": "983d7e366aeca55bb986d86b243751023ac048c54323425c5c92c256ba291bb5",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-3bf0b511-7a1c-4edb-9b7a-5b89e3042616.png",
+      "archivePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v27-20261005/generation-attempts/a-march-3-generated.png",
+      "selectedForCandidate": false,
+      "independentAcceptancePending": false,
+      "nativePixelsEdited": false,
+      "result": "Rejected; not selected for gameplay",
+      "acceptedForOptIn": false
+    },
+    {
+      "attempt": "a-march-4",
+      "mode": "built-in imagegen",
+      "prompt": "A realistic animation reference sheet of ONE American Civil War Union infantry soldier, FOUR fullbody WALK poses arranged in a clean2x2layout, square transparent RGBA PNG. Elevated threequarter REARLEFT camera: we see the soldier's backpack and back of coat, his head and body face diagonally AWAY toward the UPPER RIGHT in ALL fourframes. Navy foragecap, weathered darknavy sackcoat, muted skyblue trousers, small worn brownleather shoes, blackclothknapsack with tan rolledblanket across top, tin canteen left hip, dark leather cartridgebox/haversack. Adult normalhumanproportions, matte lifelike wool/leather/seams/folds. Long CivilWar rifle-musket with slender socketbayonet held securely upright atRIGHTshoulder inbothhands. Exactsameuniform/equipment/person/camera/body physical scale acrossframes.\nShow the FULL left-right cycle, like four distinct chronophotographs ofwalking. FrameTOPLEFT: LEFT FOOT FORWARD, RIGHT FOOT BACK. The near-camera LEFT thigh swings forward, knee overthefrontboot towardupperright; farRIGHTlegstretchesbacktowardslowerleft. FrameTOPRIGHT: RIGHT knee swings forward PAST planted LEFTleg, legs brieflyclose. FrameBOTTOMLEFT: RIGHT FOOT FORWARD, LEFT FOOT BACK; farRIGHTthigh swings forward towardupperright while nearLEFTleg stretchesback lowerleft. FrameBOTTOMRIGHT: LEFT knee swings forward PAST planted RIGHTleg. Leftlead inframe0, rightlead inframe2 must be obvious, distinctly opposite legcontacts. Keep calmshortsteps and naturalsmallweightshift; no running/highknees/jumps or samehalfcycle repeated. Shoulders/hips subtlycounterrotate.\nFour EQUAL squarecells. Small completefigures centered with extremelygenerous transparentspace: wholebayonettocleat extent atmost60%cellheight,80pixels clear margin onall sides,120pixels below soles. Feetground at70%cellheight. Everyboot/barrel/bayonet remains inside itsowncell, nooverlap/crop. No labels, gridlines, floor, checkerboard, paintedbackground or shadows. TRUE transparentalpha0surroundings. Highresolution sharp photographic gameasset quality, no cartoon/anime/toy/pixelart/plastic.",
+      "references": [],
+      "originalSHA256": "0bfc91d6cdb901410b069d1a5885b5682f213f18266b04b71587a788a0cd6bd4",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-8b910aeb-2ced-4b69-a9f6-5b515cb81309.png",
+      "archivePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v27-20261005/generation-attempts/a-march-4-generated.png",
+      "selectedForCandidate": false,
+      "independentAcceptancePending": false,
+      "nativePixelsEdited": false,
+      "result": "Rejected; not selected for gameplay",
+      "acceptedForOptIn": false
+    },
+    {
+      "attempt": "a-march-5",
+      "mode": "built-in imagegen",
+      "prompt": "EDIT this whole transparent2x2UnionA atlas. Keep its camera, navyuniform, backpack/roll/pouches/canteen/head, musketcarry, light and comfortable transparent margins consistent. We must repair the missing HALF of the walkcycle. Do not recreate the old repeated legposes.\nREADING ORDER: top-left is RIGHT foot contact/front and LEFT foot trailing/back; top-right should show LEFT leg passing forward while RIGHT leg supports. Bottom-left must be the OPPOSITE contact: LEFT foot IN FRONT/up-right, RIGHT foot BEHIND/down-left. Bottom-right LEFT leg supports infront while RIGHT leg passes.\nSpecifically REDRAW the lower legs in the BOTTOMLEFT figure: the leg NEAREST THE CAMERA (left thigh, starting on the left side ofthehips) must bend/reach FORWARD and terminate at the boot on the RIGHT side oftheimage. The FAR right leg must stretch BACK and terminate at the boot on the LEFT side. SWAP the leading/trailing boots fromTOPLEFT; redraw anatomically coherent thighs/calves toconnect tocorrecthips, no duplicate legs or mirroring the upperbody. Bottomrightmustalsohaveoppositesupportlegfromtopright. Topright's nearLEFTkneepassesfarRIGHTsupportleg.\nFour genuinelydifferent consecutive naturalcalmwalkphases, modestshortstride, nohighknees/jumping. Identical humanbody/kit size and NE rear-quartercamera throughout. Wholefigures entirelyinside owncells with>=60pixels transparentaironeachside, no crop/grid/text/floor/shadowplane. GenuineRGBAalpha0 background. Preserve the realistic mattewool/leatherdetails. Return a complete NEW native four-cell image fromimagegen, no manualrasteredits.",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-3bf0b511-7a1c-4edb-9b7a-5b89e3042616.png",
+          "sha256": "983d7e366aeca55bb986d86b243751023ac048c54323425c5c92c256ba291bb5"
+        }
+      ],
+      "originalSHA256": "a0f355f92c249b5550fdf05b2d8c966e45c860bed7f8acd34c0d778135dcb356",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-4164d3ad-9a9d-4845-bc50-0bcdc92ba5cb.png",
+      "archivePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v27-20261005/generation-attempts/a-march-5-generated.png",
+      "selectedForCandidate": false,
+      "independentAcceptancePending": false,
+      "nativePixelsEdited": false,
+      "result": "Rejected; not selected for gameplay",
+      "acceptedForOptIn": false
+    },
+    {
+      "attempt": "a-march-6",
+      "mode": "built-in imagegen",
+      "prompt": "Create a whole new transparent 2 by 2 sprite atlas. Reference 1 is the AUTHORITATIVE FOUR DIFFERENT ANATOMICAL WALK POSES, in row-major order. Redraw EACH of those four different poses after rotating the soldier's facing in 3D to NORTHEAST (walking away toward upper-right), viewed from a moderately elevated camera behind his left shoulder. Do not copy the lower limbs from reference 2: that sheet has a deliberately incorrect repeating step. Reference 2 supplies ONLY the rear-facing Union A clothing and equipment: navy forage cap, dark navy coat, sky-blue trousers, tan rolled blanket strapped above dark pack, cross straps, black leather pouches, tin canteen and brown brogans, brown musket with steel fixed bayonet. The first reference has opposite legs extended in its upper and lower rows. Preserve that OPPOSITE LEADING LEG contrast when rotating the anatomy. Top-left: soldier's RIGHT leg reaches forward along his direction of travel and LEFT leg trails. Top-right: LEFT knee swings past the RIGHT planted support leg. Bottom-left: soldier's LEFT leg reaches forward along travel and RIGHT leg trails. Bottom-right: RIGHT knee swings past LEFT support. In this rear-left view, the NEAREST anatomical LEFT leg must switch from trailing in top-left to LEADING FORWARD toward image upper-right in bottom-left. The FAR anatomical RIGHT leg simultaneously switches from leading to trailing backward toward image lower-left. This is essential. The lower-left thigh must visibly point FORWARD under his belt; do not repeat top-left. In bottom-right the FAR RIGHT boot passes forward while the near LEFT boot supports beneath pelvis. Normal small measured walking steps, no giant airborne leaps. Distinct leg silhouettes in ALL four cells, two opposed contact poses and two opposed passing poses. Musket remains carried consistently at shoulder, never mirrored to the other hand. Camera, head, body scale, pack and kit identical in all cells. Smoothly painted realistic historical game art, no text labels, no ground, no frame or backgrounds. Full visible soldier and bayonet occupy about 65 percent of each cell height; shrink the entire figure enough to keep at least 70 native pixels transparent around every cap, musket tip, arm and boot in its own cell and below its sole. Preserve generous cell separation. Real zero-alpha background, no checkerboard painted in, no shadows underneath, no cropped limbs. Native whole atlas with exactly four complete bodies; do not resample or collate pasted crops.",
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v7/union-a-march-s.png",
+          "sha256": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000"
+        },
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-3bf0b511-7a1c-4edb-9b7a-5b89e3042616.png",
+          "sha256": "983d7e366aeca55bb986d86b243751023ac048c54323425c5c92c256ba291bb5"
+        }
+      ],
+      "originalSHA256": "0e89a2d0466acdbbcaf03e894b81d639bd1e1b8b350a1a846ee81025a0779369",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-56c99149-a83c-4bcf-b532-2d3af1b25443.png",
+      "archivePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v27-20261005/generation-attempts/a-march-6-generated.png",
+      "selectedForCandidate": false,
+      "independentAcceptancePending": false,
+      "nativePixelsEdited": false,
+      "result": "Rejected; not selected for gameplay",
+      "acceptedForOptIn": false
+    },
+    {
+      "attempt": "b-actions-1",
+      "mode": "built-in imagegen",
+      "prompt": "Use case: historical-scene. Native gameasset: ONE genuine transparentRGBA square atlas, four equal2x2cells, one fullbody UnionB soldier in each.\nReference1 defines UnionB rearNEkit and physical body scale ONLY, not its rejected walking motion. Reference2 defines UnionB's stationary musket action sequence and ownkit ONLY, not its frontcamera. Preserve B's croppedhair/navyforagecap, trimmernavywoolsackcoat, mutedskybluetrousers, grey-tanbedroll/straps onblackknapsack, brownleatherpouches/haversack/tincanteen, small wornbrownbrogans. Normalhumananatomy, photoreal weatheredwool/leather/seams, matte natural lighting; no toy/anime/plastic/giantboots.\nExactmoderatelyelevated REARLEFT camera, body andhead facing AWAY/up-right/NORTHEAST in ALLfourcells. Sameface/kit/physicalbody/head/pack/limbscale. Naturalstandingposture, smallweightshift and clothfoldvariation, not marching. Four DIFFERENT actions in readingorder: TOPLEFT ready, safelyholding longSpringfieldrifle-musket atnaturalport angledaboveup-right; TOPRIGHT aimedfirepose, stock firmlyonRIGHTshoulder, cheekagainststock, LEFThandsupportingforestocks, RIGHThandattrigger, barrel andfixedslenderbayonet aimedNE/up-right slightlyupwards inimage, clearlyvisible actualbarrelmouth DISTINCTFROMbayonettip. No drawnsmoke/flash because gameadds them. BOTTOMLEFT loadingpapercharge: musketnearverticalbuttonGround, LEFThandsteadiesbarrel, RIGHThandinserts paper-cartridgecontents atBARRELMOUTH nearheadheight. BOTTOMRIGHT ramming: musketstillverticalbuttGround, LEFThandholds barrel, RIGHThandworks a THINSEPARATEsteelRAMROD partlyinserted inbarrel andprojectingupward; rod notsecondrifle. Thetwo loadingstages MUSThaveclearlydifferentrightarm/hand/rodpositions.\nBody scale mustmatch reference1 while deliberately fitting ALLrifle,bayonet,ramrodandboots whollyinside owncells. Whole silhouttescentral65%ofcell;>=70pixelsalpha0margin EVERYside,>=80pixelsbelowfeet, sole at75%cellheight. Rifle/ramrodtop cannotreachcellborder orcentralgutter. Fourisolatedfigures neveroverlap. EntirefinalnativePNG only. No grid,text,labels,floor,checkerboard,shadowplaneorbackgroundpixels.",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-975a137a-b9b5-4775-aafe-e0147d91f83d.png",
+          "sha256": "d2a27ed502dbe5e40f890971cd36953349b6b7a6585d3db33efc20f2f529ac93"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v11/union-b-actions-se.png",
+          "sha256": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6"
+        }
+      ],
+      "originalSHA256": "6cd48eb4f9ba31b5ed07deb2a5c0ddc5376f8855248eb44e2a172068daae1b55",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-2bc1c502-bed2-48e5-ac19-8d7fe9b33a84.png",
+      "archivePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v27-20261005/generation-attempts/b-actions-1-generated.png",
+      "selectedForCandidate": true,
+      "independentAcceptancePending": false,
+      "nativePixelsEdited": false,
+      "result": "Exact whole stationary source accepted by actual independent Astra Max source review",
+      "acceptedForOptIn": true
+    },
+    {
+      "attempt": "b-march-1",
+      "mode": "built-in imagegen",
+      "prompt": "Use case: historical-scene. Asset: ONE square native transparent RGBA 2x2 sprite atlas with four isolated whole Union B infantry march poses.\nReference image1 defines UNION B's own kit/uniform, not the camera: shorter cropped brown hair, navy forage cap and slightly trimmer navy sackcoat, muted sky-blue wool trousers, small brown leather brogans, grey/tan pack straps, black knapsack with compact grey-tan bedroll and Union B's brown haversack/pouch arrangement, tin canteen, long Springfield-type rifle-musket with slender fixed socket bayonet. Retain B as a distinct human uniform variant; do not copy Union A's longer hair and pouch arrangement. Reference image2 is ONLY the accepted NORTHEAST rear-quarter camera and realistic material quality, not A's identity kit or combat poses.\nAll four B figures are seen from moderately elevated rear-left, facing northeast/up-right. Photo-real believable lean adult body, matte wool/leather, fine seams/creases and modest natural weight shift, no anime, toy, cartoon, plastic sheen, heroic bulk, inflated boots or hands.\nFour consecutive CLEARLY DIFFERENT walking phases in reading order: top-left LEFT foot extended FORWARD/up-right planted with RIGHT foot BEHIND/down-left heel lifting; top-right supported LEFT leg with RIGHT knee/boot passing forward beside it; bottom-left RIGHT foot extended FORWARD/up-right planted with LEFT foot BEHIND/down-left heel lifting; bottom-right supported RIGHT leg with LEFT knee/boot passing forward beside it. Top-left and bottom-left MUST visibly swap which leg leads. No repeated same leading boot in all four cells, no static hover, no backward march or jumping. Hold the musket near vertical at the right shoulder in both hands; gentle alternating hip/shoulder rotation, same kit/weapon/camera/body physical scale.\nDeliberately leave MUCH MORE air than the old reference: each whole silhouette including entire bayonet occupies at most the central65%of its equal cell, at least70nativepixels clear alpha0 margin on ALL sides and100pixels below boots. Planted sole around75%cellheight. Never crop any bayonet or boot, cross a gutter or touch any cell border. No labels, grid, floor, ground-shadowplane, opaque background or checkerboard pixels. Genuinely transparent native PNG atlas.",
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v11/union-b-march-se.png",
+          "sha256": "9efcc748a6d6860f6248c72b3384d62220db6e76a7e60f7efb35e36a811052b7"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v26/union-a-contact-ne.png",
+          "sha256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc"
+        }
+      ],
+      "originalSHA256": "d2a27ed502dbe5e40f890971cd36953349b6b7a6585d3db33efc20f2f529ac93",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-975a137a-b9b5-4775-aafe-e0147d91f83d.png",
+      "archivePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v27-20261005/generation-attempts/b-march-1-generated.png",
+      "selectedForCandidate": false,
+      "independentAcceptancePending": false,
+      "nativePixelsEdited": false,
+      "result": "Rejected; not selected for gameplay",
+      "acceptedForOptIn": false
+    },
+    {
+      "attempt": "b-march-2",
+      "mode": "built-in imagegen",
+      "prompt": "Make a NEW corrected whole native sprite atlas from the reference's UNION B kit and rear northeast camera. Same realistic ordinary adult UnionB navy foragecap/sackcoat, mutedskybluewooltrousers, small brownbrogans, grey/tanstraps, blackknapsack andgrey-tanroll, B's brownleatherpouches/tincanteen, long Springfieldtypemusket with fixedthinbayonet. Same moderately elevated REAR-LEFT view facing northeast/uprightimageRIGHT in allcells. Samebodyphysicalscale/kit/camera; natural materials/creasedfabric, no anime/toy/plastic.\nThis is a FOUR-PHASE COMPLETE WALK, not repeated halfcycle. Equal2x2cells in readingorder:\n0.TOPLEFT: RIGHT foot planted FORWARD toward NE, LEFT leg trailing toward SW.\n1.TOPRIGHT: weight on planted RIGHT leg; LEFT leg swings forward through a passingpose.\n2.BOTTOMLEFT: LEFT foot planted FORWARD toward NE, RIGHT leg trailing toward SW. THIS CELL MUST EXCHANGE THE FORWARD AND BACKWARD FEET FROMCELL0. The nearer LEFT leg visibly reaches infront towardscreenRIGHT here; fartherRIGHTlegstretchesbacktowardscreenLEFT. Do not copycell0's screen-right leadleg.\n3.BOTTOMRIGHT: weight on planted LEFT leg; RIGHT leg swings forward through passingpose. Distinctfromcell1.\nKeep gait modest, walkingnotrunning, gentle hip/shouldercounterrotation, rifle carried securely near upright rightshoulder inbothhands. Anatomicallycoherentlegs, no jumping/hovering/highknees. Nativealternatecontacts mustreadclearly evenwithoutlabels.\nImprove cellclearance too: wholefigures plusbayonets enclosedinside central60%ofeachcell; leave70pixels minimum alpha0air onEVERYedge includinggutters,100pixels underboots. Groundaround75%cellheight. Everyboot/rifle/bayonetcomplete; nooverlaps/cropping. True transparentRGBA, no gridtextfloorcheckerboard orshadowplane. Photorealisticmattenaturaluniforms andhumanproportions. Outputwholeatlas generatednatively, no manuallychangedpixels.",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-975a137a-b9b5-4775-aafe-e0147d91f83d.png",
+          "sha256": "d2a27ed502dbe5e40f890971cd36953349b6b7a6585d3db33efc20f2f529ac93"
+        }
+      ],
+      "originalSHA256": "4e2a973fb175cc47433f75c574dae1041ee052b6cd2d86412e9a4a8274334fc1",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-e26dcc12-7221-4523-8cc5-c08beb6b7cda.png",
+      "archivePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v27-20261005/generation-attempts/b-march-2-generated.png",
+      "selectedForCandidate": false,
+      "independentAcceptancePending": false,
+      "nativePixelsEdited": false,
+      "result": "Rejected; not selected for gameplay",
+      "acceptedForOptIn": false
+    },
+    {
+      "attempt": "gait-guide-1",
+      "mode": "built-in imagegen",
+      "prompt": "A clean technical WALK CYCLE pose-reference sheet, exactly four simple faceless articulated human mannequins, full-body 2x2 grid, generous empty spacing, transparent background. Fixed moderately elevated camera behind the LEFT shoulder, all mannequins face NORTH-EAST away toward upper-right of image. Head torso and arms medium gray. The mannequin's ANATOMICAL LEFT leg is vivid GREEN from hip to foot. The anatomical RIGHT leg is vivid MAGENTA from hip to foot. Each mannequin has exactly one green leg and one magenta leg. Legs are straight simple rigid segments articulated at real hips and knees, small human feet. DIFFERENT WALK-CYCLE KEYFRAMES in row-major sequence: TOP LEFT: MAGENTA RIGHT thigh/foot extended FORWARD upper-right, GREEN LEFT leg extended BACKWARD lower-left, two opposed legs. TOP RIGHT: MAGENTA RIGHT foot supports the body planted BELOW pelvis, GREEN LEFT knee bends and passes FORWARD upper-right. BOTTOM LEFT: GREEN LEFT thigh/foot extended FORWARD upper-right, MAGENTA RIGHT thigh/foot extended BACKWARD lower-left, exactly the OPPOSITE contact to top-left. BOTTOM RIGHT: GREEN LEFT foot supports below pelvis, MAGENTA RIGHT knee bends and swings FORWARD upper-right. Important GREEN leg in bottom-left must be IN FRONT along direction of travel and magenta foot behind. This green/magenta swap must be unmistakable. No random standing poses, no all four green legs trailing. Arms have ordinary opposite-leg walking swing. Same camera, same proportions, same pelvis position and same scale. Each complete body occupies half of square cell with ample transparent margins and feet entirely visible. Only the four mannequins, no text, no arrows, no floor, no scenery, no shadows, no weapons, no clothes. The sheet is for an animator to directly read two opposite contact poses alternating with opposite passing poses.",
+      "references": [],
+      "originalSHA256": "5c20ff51e3d936948a2bc16e31165fb7fd226b984f1bdcc5f9f3dfde2ac85b72",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-a759bee9-ce0f-4a00-92c2-a4e1e77f0e88.png",
+      "archivePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v27-20261005/generation-attempts/gait-guide-1-generated.png",
+      "selectedForCandidate": false,
+      "independentAcceptancePending": false,
+      "nativePixelsEdited": false,
+      "result": "Rejected; not selected for gameplay",
+      "acceptedForOptIn": false
+    }
+  ],
+  "attemptCount": 11,
+  "selectedWholeSources": 2,
+  "sourceReviewPending": false,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "sourceReviewSHA256": "64b91110340012ce73c307718157302953420196a5082798859962e13e190df3"
+}

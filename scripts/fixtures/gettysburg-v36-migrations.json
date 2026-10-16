@@ -1,0 +1,64 @@
+{
+  "schema": "gettysburg-v36-historical-byte-migration-v1",
+  "status": "frozen-approved-runtime-pins",
+  "baselineSHA256": "3e8971398ca8bba9ddf4238ea2c549e5012b1b0ff441473a531d331f54160894",
+  "baselineFiles": 1584,
+  "fixture": {
+    "path": "scripts/fixtures/gettysburg-v36-preservation.json",
+    "sha256": "cff10ef54fe5813aaf6daddaab62bf5aa1686a58b76b31361f9b54d13d95d566"
+  },
+  "capture": {
+    "path": "scripts/capture-gettysburg-v36-preservation.mjs",
+    "sha256": "538c3b07a6e72884ff40258347800add17e0d00b709bedc205f0e5479d7e3115"
+  },
+  "oldFixturesRefreshed": false,
+  "oldMigrationLedgersEdited": false,
+  "behavioralAssertionsChanged": false,
+  "mandatoryRegistration": "package.json",
+  "mandatorySuite": "scripts/test-gettysburg-v36-dust-continuity.mjs",
+  "migrations": [
+    {
+      "path": "package.json",
+      "archive": "scripts/test-support/gettysburg-v36-before/package.json",
+      "beforeSHA256": "cfb61c1c4ec8d0eaf64456f2a455507acb4e87d1c30959c7765b42d14029c0e9",
+      "currentSHA256": "be299127e141ec1f282c6306dea5b69c04441f06c696e79b7215d25433e30df4",
+      "reason": "Only four mandatory v36 script registrations; version, dependencies and lockfile unchanged."
+    },
+    {
+      "path": "src/battle/CivilWarBattlefield.jsx",
+      "archive": "scripts/test-support/gettysburg-v36-before/src/battle/CivilWarBattlefield.jsx",
+      "beforeSHA256": "84ba901a36fc892ff09d26fc09aa0a767f67ea61a21f0eeaa016f6a42cf7b516",
+      "currentSHA256": "6e3e7db89428b1d87db551a5945b92e96b88fd2dac3ffdd26023b761efdc166a",
+      "reason": "Cosmetic transient travel-dust checkpoint continuity only, independently gated canonical dustContinuity=v36 with artPass=gettysburg-v32; raw formation/body/standard/shots/combat and other optional gates remain preserved."
+    },
+    {
+      "path": "scripts/test-support/gettysburgV35Preservation.mjs",
+      "archive": "scripts/test-support/gettysburg-v36-before/scripts/test-support/gettysburgV35Preservation.mjs",
+      "beforeSHA256": "12d5d85f1258ae138eab3ba6ecde03010c252784a75a34eb74ed8e93ab581920",
+      "currentSHA256": "faaf8bf9688aba0f2bf7c6837538cfad7059096c9341c400e6d96516ff4ee341",
+      "reason": "Only metadata directRead import and V36 historical reader call; original V35 ledger, fixtures and every behavioral assertion remain byte exact."
+    }
+  ],
+  "newSourcePins": [
+    {
+      "path": "src/battle/gettysburgDustCheckpoint.js",
+      "sha256": "e293eedf3127f9c02638f4c597747bd5e456db7c1a7ca38673fa8f444c5b2baa"
+    },
+    {
+      "path": "scripts/test-gettysburg-v36-dust-continuity.mjs",
+      "sha256": "715367eaa512a22df2e371ddd39e106e264ac3e0367df3a645ff86eb3f950147"
+    },
+    {
+      "path": "scripts/test-support/gettysburgV36Regression.mjs",
+      "sha256": "d13588deb475c7f77532158a87f208a47c5d72bb7df6b59517a68e7405c3f81a"
+    },
+    {
+      "path": "scripts/fixtures/gettysburg-v36-owned-save.json",
+      "sha256": "c70c58c96ca47705742dfd19fc88436e6d56613113fe70189e5501736ef6b300"
+    },
+    {
+      "path": "docs/CIVIL_WAR_V36_DUST_CONTINUITY.md",
+      "sha256": "0763336b73f5ea74a0fd543b0e430882ea6d5de1daed12a382a0a87060b11bbd"
+    }
+  ]
+}

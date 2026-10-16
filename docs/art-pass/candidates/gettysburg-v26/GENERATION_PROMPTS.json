@@ -1,0 +1,217 @@
+{
+  "artPass": "gettysburg-v26",
+  "generator": "built-in image_gen imagegen",
+  "generatorModelIdentityExposed": false,
+  "transparentBackground": true,
+  "nativePixelsManuallyEdited": false,
+  "familyComplete": false,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "attempts": [
+    {
+      "side": "confederate",
+      "role": "casualty",
+      "attempt": 1,
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-c66c125b-beef-4139-a4d9-fddcb5660c16.png",
+      "originalSHA256": "dbc8f909508118da0dd450d6ddc6ba3fc8f8c9b15ae3da6af5181cb8223d73af",
+      "prompt": "Use case: historical-scene. Draw a NEW whole transparent RGBA square 2x2 CASUALTY sprite atlas, four distinct full-body phases of ONE realistic 1863 Confederate infantryman. FIRST reference is actual new contact character and controls exact head/boots/bedroll/limb physical size and elevated FRONT three-quarter SOUTHWEST view: gray forage cap and weathered gray wool coat, cream trousers, brown boots, dark pack with horizontal tan blanket roll, brown cross straps, tan round canteen/black pouches. SECOND reference ONLY supplies sparse fall layout/sequence, not blue uniform. Face/nose/head toward DOWN-LEFT throughout, boots UP-RIGHT for collapsed/prone phases. Reading order top-left clear hit recoil on feet with softened knees; top-right drop onto one knee with supporting hand; bottom-left weighted collapse onto forearms/bent hip; bottom-right motionless prone rest. Musket lowered or released compactly alongside body, no aiming/fire/gore. Match FIRST reference's actual physical head/gear/boot/limb dimensions; projected fall height naturally shorter and must not be inflated to fill cells. Sparse layout approximately1254 square/627px cells: standing around400px cap-to-sole and prone total length around470px maximum, ENTIRE figure AND rifle centered at each quadrant midpoint with at least60px totally TRANSPARENT margin from every cell edge. Broad blank midlines/outer border, no supporting hand, boots or weapon close to boundary. Natural adult weighted anatomy, realistic rough wool/leather/wood/steel, four distinct phases. No ground/shadows/backdrop/grid/text/flags/other figures/extra anatomy. Draw all four whole poses natively; never mirror/resize/warp/edit/reuse source pixels.",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-1d3b9cd4-be49-47c2-94cc-3ecc21539f02.png",
+          "sha256": "1eb2930b3c90c9db5dedf5f0278c80947173d4b5f568d16282d5c1c5b8caffeb"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v25/union-a-casualty-sw.png",
+          "sha256": "ad45e9eb0b9fcc2170958bafadd90077e4c59364103f8e8be5c49478840c1f02"
+        }
+      ],
+      "selected": false,
+      "minimumSolidPadding": 31,
+      "reason": "Astra rejected: enlarged boots/head/kit relative to actual contact partner"
+    },
+    {
+      "side": "confederate",
+      "role": "casualty",
+      "attempt": 2,
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-5c748f9c-b731-4161-8df8-661dc880fd5b.png",
+      "originalSHA256": "aa2fc7c0735482c6f983a756099f539f090359777131960c8d7ae7721c409444",
+      "prompt": "Create a NEW original whole transparent RGBA 2x2 Confederate casualty atlas. FIRST reference is the actual CONTACT character to match exactly in physical HEAD/BOOT/GEAR/limb size. SECOND reference provides ONLY recoil/knee/collapse/rest layout and camera; its man is TOO LARGE (especially caps and boots). Newly draw the human and all kit about10-15% smaller than SECOND reference, matching FIRST reference instead; don't edit/resample old pixels. Gray forage cap/gray wool coat, cream pants,brownboots,tanroundcanteen,darkpack with tanhorizontalbedroll,brownstraps/blackpouches. Elevated FRONT three-quarter SOUTHWEST view, face/head DOWN-LEFT throughout, feet UP-RIGHT in falls. Four fresh phases reading order: on-foot hit recoil with softknees; one-knee drop with supportinghand; weighted forearm/hipcollapse; still prone. Lower/release musket compactly close alongside, no shooting/gore. Same natural physical head/limb/boot size across phases and same as FIRSTCONTACT, NEVER inflate crouch/prone to fill cells. Concrete standing envelope in approximately1254square/627pxcells: cap-to-nearsole around380-400px, cap crown about70pxwide, boots and bedroll narrower than oversized secondref. Standingcap near y140and soles near530, not a450pxtallbody. Entire fall bodies/rifles centered in own cells, prone length around440pxmaximum. At least60px EMPTY TRANSPARENT margin to EVERY cell edge including bayonet/boot/hand, broad outerborder/midlines. All complete body/rifle envelopes inside cell, no ground/shadows/grid/text/labels/flags/otherfigures/extraanatomy. Realistic natural human proportions/roughwool/leather/wood/steel. Four original native drawings, no copying/mirroring/warping/resizing/editing reference pixels.",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-1d3b9cd4-be49-47c2-94cc-3ecc21539f02.png",
+          "sha256": "1eb2930b3c90c9db5dedf5f0278c80947173d4b5f568d16282d5c1c5b8caffeb"
+        },
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-c66c125b-beef-4139-a4d9-fddcb5660c16.png",
+          "sha256": "dbc8f909508118da0dd450d6ddc6ba3fc8f8c9b15ae3da6af5181cb8223d73af"
+        }
+      ],
+      "selected": false,
+      "minimumSolidPadding": 4,
+      "reason": "Rejected: only four pixels of solid-alpha cell clearance"
+    },
+    {
+      "side": "confederate",
+      "role": "casualty",
+      "attempt": 3,
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-ad2b93ab-0d9f-4d0b-80ff-7568ebc95613.png",
+      "originalSHA256": "df22288282945e4491707b94f092872837bd261850d2ca243a3873764d1d423c",
+      "prompt": "NEW original transparent RGBA sprite atlas, square 2by2 equalcells. Single reference is EXACT1863 Confederate soldier identity and physical head/boot/roll/canteen size. Draw FOUR CASUALTY phases, not the reference contact actions: standing recoil, one-knee drop with supporting hand, forearm/hip collapse, motionless prone. Elevated FRONT three-quarter SOUTHWEST camera throughout, face/head DOWN-LEFT, boots UP-RIGHT in prone. Grayforagecap/graycoat,creamtrousers,brownboots,browncrossstraps,darkpack/tanhorizontalroll/tancanteen/blackpouches. Match reference anatomy/kit, all phases SAMEPHYSICALSIZE; crouch/proneprojectedheightshorter, never enlarge them. Make SMALL figures floating centered in BIGEMPTY CELLS. In approx1254square/627pxcells upright cap-to-sole around370-390px, capcrownONLY60-65pxwide, boots/roll/canteen equal reference smallsize. Toprow entirefigure/rifle bounds between y120and520, bottomrowbetweeny780and1160. At least80px EMPTY TRANSPARENT margin to ALL cell edges around ENTIRE silhouette AND lowered/releasedmusket; broadblankmiddlecrossgutter, riflecompactlyalongside. Proneground-plane length450pxmaximum. No figure close to cellboundary or enlarged to fill it. Natural weighted realistichuman/wool/leather/wood/steel, no anime/toy/gore. No ground/shadows/background/grid/text/flags/extrafigures/limbs. Four whole newlydrawn poses, never mirror/copy/warp/rescale/edit reference pixels.",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-1d3b9cd4-be49-47c2-94cc-3ecc21539f02.png",
+          "sha256": "1eb2930b3c90c9db5dedf5f0278c80947173d4b5f568d16282d5c1c5b8caffeb"
+        }
+      ],
+      "selected": true,
+      "minimumSolidPadding": 22,
+      "reason": "Astra Max accepted exact source in paired group for bounded opt-in authoring",
+      "candidate": "docs/art-pass/candidates/gettysburg-v26/confederate-a-casualty-sw-candidate.png",
+      "independentSourceReviewSHA256": "8f6cc672b119b13f7659b58c72bafce3d8396abe0798499874070c27b88b8171"
+    },
+    {
+      "side": "confederate",
+      "role": "contact",
+      "attempt": 1,
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-1d3b9cd4-be49-47c2-94cc-3ecc21539f02.png",
+      "originalSHA256": "1eb2930b3c90c9db5dedf5f0278c80947173d4b5f568d16282d5c1c5b8caffeb",
+      "prompt": "Use case: historical-scene. Create a NEW whole transparent RGBA square 2x2 sprite atlas of four separate full-body CONTACT COMBAT poses of ONE realistic 1863 Confederate infantryman. Attached accepted game action atlas supplies the exact elevated FRONT three-quarter SOUTHWEST camera and kit ONLY, not its firing/reloading actions. Chest/face visible, nose/toes toward DOWN-LEFT throughout. Gray forage cap, weathered gray wool coat, cream/beige trousers, brown boots, brown leather cross straps, dark pack with horizontal tan blanket roll, tan round canteen and black pouches. Four poses in reading order: top-left low bayonet guard; top-right clear SHORT HIP BAYONET THRUST toward down-left with buttstock at low hip/waist and forehand extended visibly ahead of torso, short grounded weight shift; bottom-left visibly retracted LOW recovery with weight back; bottom-right low parry. Two natural visible hands on wooden musket; no stock at shoulder/cheek, no aiming/fire/reload/smoke/flash. Realistic textured wool/leather and natural adult anatomy, no rigid toy/anime build. Same physical head/kit/limb size in each cell. Sparse layout: standing body only350-390px cap-to-sole in approximately1254 square/627px cells; center ENTIRE body/rifle/bayonet envelope near each cell midpoint, at least70px empty TRANSPARENT space to every cell edge, broad empty middle gutter/outer border. Boots well above lower edges. Four whole original native drawings, never mirror/rescale/reuse reference pixels. No ground, shadows, backdrop, grid, text, flags, other people or extra anatomy.",
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v15/confederate-a-actions-sw.png",
+          "sha256": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d"
+        }
+      ],
+      "selected": true,
+      "minimumSolidPadding": 65,
+      "reason": "Astra Max accepted exact source in paired group for bounded opt-in authoring",
+      "candidate": "docs/art-pass/candidates/gettysburg-v26/confederate-a-contact-sw-candidate.png",
+      "independentSourceReviewSHA256": "8f6cc672b119b13f7659b58c72bafce3d8396abe0798499874070c27b88b8171"
+    },
+    {
+      "side": "union",
+      "role": "casualty",
+      "attempt": 1,
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-797aafc8-335d-4da3-b4c8-eddf2281fc68.png",
+      "originalSHA256": "9fae7b64b2571bc16de4ab6b977c3efc9dcf7ec19680917c8bf4a8dd25c6cba3",
+      "prompt": "Use case: historical-scene. Draw a NEW whole transparent RGBA square 2x2 CASUALTY sprite atlas, four distinct native poses of ONE realistic 1863 Union infantryman. FIRST reference is actual new NE contact soldier: match exact head/boots/horizontal tan blanket roll/canteen/body physical scale and navy forage cap/sack coat, sky blue trousers, brown boots, dark pack, leather straps/pouches. SECOND reference ONLY guides recoil/knee/collapse/rest sequence; rotate by newly drawing the correct camera, never borrow its pixels or its north camera. Throughout use elevated REAR three-quarter NORTHEAST/up-right view with back and pack visible, head oriented upper-right and boots lower-left. Reading order: top-left obvious hit recoil still on feet with weight backward; top-right one knee drops and a hand reaches down to support; bottom-left weighted collapse supported on forearms and bent hip; bottom-right motionless prone rest. Musket lowered or released close alongside body, no shouldered aim, no firing/gore. Same natural human HEAD/GEAR/BOOT dimensions as FIRST contact, shortened projected height of knee/prone is normal and must NOT be enlarged to fill cells. Sparse2x2 layout: each entire silhouette plus rifle centered near own cell midpoint in approximately1254 square/627pxcells. Upright natural cap-to-sole around440px matching first reference, prone diagonal length around470px maximum. Ensure at least60px EMPTY TRANSPARENT space to ALL cell edges and between rows/columns; don't place supporting hand or boots at a boundary. Whole rifle fully inside each cell, angle/release compactly alongside. Four clearly distinct weighted stages, textured real wool/leather/wood/steel, no toy/anime anatomy. No ground, shadows, backdrop, grid, text, flags, other people or extra limbs. Four fresh whole native drawings, do not mirror/warp/resample/clean/copy pixels.",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-89a2bd6d-9c7a-43fe-963b-fbf4a20ea279.png",
+          "sha256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v23/union-a-casualty-n.png",
+          "sha256": "ff8b68d8dad15ad420b40b583d9aef79cac9d4c2c8d2bf3aefd0734458f01a97"
+        }
+      ],
+      "selected": false,
+      "minimumSolidPadding": 0,
+      "reason": "Rejected: zero solid-alpha cell clearance"
+    },
+    {
+      "side": "union",
+      "role": "casualty",
+      "attempt": 2,
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-e7588759-61da-4322-b2a1-58b8d6a9c458.png",
+      "originalSHA256": "2578a429f7f3524f4695ee4e47fdc5322d61fb1ac793c52f650c1edbcaf4e4f0",
+      "prompt": "Draw a NEW whole transparent RGBA 2x2 casualty sprite atlas. Reference is exact Union character/physical scale and elevated REAR three-quarter NORTHEAST camera: same navy cap/coat, sky blue pants, brown boots, tan horizontal blanket roll on dark pack, gray-blue canteen and leather straps/pouches. Match reference HEAD/ROLL/BOOT/limb dimensions; not enlarge body to fill any cell. Face UP-RIGHT with back dominant in every phase. Four distinct stages reading order: on-foot recoil with knees soft and musket lowered diagonally close to body; drop to one knee and reach supporting hand; collapse supported on forearms with bent hip; still prone rest with HEAD UPPER-RIGHT and BOOTS LOWER-LEFT. Compact lowered/released rifle next to body; avoid raised outstretched rifle that expands envelope. Fresh natural weighted anatomy/textured wool/leather, no gore. CRITICAL layout: approximately1254 square, four627pxcells; center entire soldier AND weapon silhouette at each cell midpoint, all insets at least60px empty TRANSPARENT. Upper-left/upper-right entire envelopes including boots/support hand/rifle fit between y80 and y550, never touch row boundary627. Bottom row ENTIRE figures and rifles fit between y760 and y1170, never reach1254. Upright cap-to-sole about430-450px and fallen ground-plane length about460px at SAME physical head/gear size as reference; shorter projected fall height is normal, no height normalization. Broad blank outer border and middle gutters. Draw new complete native poses, never mirror/resize/warp/copy/edit reference pixels. No ground, shadows, background, grid, text, labels, flags, extra figures or limbs.",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-89a2bd6d-9c7a-43fe-963b-fbf4a20ea279.png",
+          "sha256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc"
+        }
+      ],
+      "selected": false,
+      "minimumSolidPadding": 0,
+      "reason": "Rejected: zero solid-alpha cell clearance"
+    },
+    {
+      "side": "union",
+      "role": "casualty",
+      "attempt": 3,
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-3ad98daf-2dcf-4416-a0c1-6bb85338adbc.png",
+      "originalSHA256": "5e3ad306d8769378fd6f794ea095ec8ccad92a5f2e06704d6c87f94f784065d6",
+      "prompt": "Draw a NEW whole transparent RGBA 2x2 Union casualty sprite atlas. FIRST reference is actual contact soldier, exact physical head/boots/bedroll/body scale. SECOND reference provides ONLY NE recoil/knee/collapse/prone pose ideas; its standing body is TOO LARGE and too low in cell. Draw the human/kit about12% smaller than SECOND to MATCH FIRST, and center every whole silhouette vertically near cell MIDPOINT. FIRST uniform navy cap/coat, sky-blue pants,brownboots,tanhorizontalbedroll/darkpack,blue-graycanteen/leatherpouches. Camera elevated REAR three-quarter NORTHEAST; face/body/head UP-RIGHT, back visible. Four fresh distinct weighted phases: top-left recoils on feet, knees soft, musket lowered close alongside; top-right knee drop with supporthand; bottom-left collapse on forearms/benthip; bottom-right still prone headUPRIGHT bootsLOWERLEFT. Match FIRST actual cap/roll/boots width and limb length, not oversized second. Upright cap-to-sole about425-435px in627pxcell; cap near y100 and soles near530, ALL top row body/rifle/supporthand well above horizontalmidline627. Bottom row wholebody/rifle fits between y750and1160, nevernear1254. Broad blank middle gutters and at least70px totally EMPTY TRANSPARENT on ALL sides of each entire figure/weapon. Long rifle lowered/released compactly alongside, whole bayonet insidecell. Same physical human/gear size across phases; fallprojectedheightshorter naturally, no enlarging prone. Naturalrealisticanatomy/wool/leather/wood/steel, no toy/anime/gore. No ground/shadow/grid/text/flags/extralimbs/otherfigures. Four newlydrawn whole native poses, never copy/mirror/warp/resample/edit reference pixels.",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-89a2bd6d-9c7a-43fe-963b-fbf4a20ea279.png",
+          "sha256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc"
+        },
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-e7588759-61da-4322-b2a1-58b8d6a9c458.png",
+          "sha256": "2578a429f7f3524f4695ee4e47fdc5322d61fb1ac793c52f650c1edbcaf4e4f0"
+        }
+      ],
+      "selected": false,
+      "minimumSolidPadding": 0,
+      "reason": "Rejected: zero solid-alpha cell clearance"
+    },
+    {
+      "side": "union",
+      "role": "casualty",
+      "attempt": 4,
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-a50144b6-26db-4f61-9aad-a50ddcada213.png",
+      "originalSHA256": "959ff206b9c42275a6e18ef7e19bcfbde6e228d9b53c9501a05b26c7b7b13b59",
+      "prompt": "A sparse square transparent RGBA sprite atlas with 2 rows and 2 columns. Draw four SMALL FULL BODY realistic1863 Union soldier casualty poses, floating near the CENTER of each quadrant, lots of empty transparent space all around. Use attached soldier only for exact adult anatomy, physical head/boot/bedroll/limb sizes, uniform and elevated rear three-quarter NORTHEAST camera. Navycap/coat,skybluepants,brownboots,tanroll/darkpack/canteen. All face up-right/back visible. Top-left clear backward hit recoil with BOTH KNEES DEEPLY SOFTENED and torso tilted back, feet still on ground, lowered rifle close beside; top-right one-knee drop plus supporting hand; bottom-left collapse on forearms/bent hip; bottom-right motionless prone head upper-right boots lower-left. Original weighted human drawings, no copied/mirrored/resized reference pixels. Do not enlarge crouching/fallen heads or gear. First pose naturally shorter in projection because bent knees, around350-380px cap-to-sole in a1254sheet, but head and equipment stay same physical size as reference. Keep ALL silhouettes including rifle tips in generous transparent padding, ideally90px empty space from each cell edge, never touching middle cross or outer border. Center whole figure envelopes vertically and horizontally, not near bottom edge. Lower/release rifle compactly alongside body. No ground,shadow,background,grid,text,flags,gore,extra anatomy.",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-89a2bd6d-9c7a-43fe-963b-fbf4a20ea279.png",
+          "sha256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc"
+        }
+      ],
+      "selected": false,
+      "minimumSolidPadding": 49,
+      "reason": "Astra rejected: lower phases and final rest read as active prone aiming"
+    },
+    {
+      "side": "union",
+      "role": "casualty",
+      "attempt": 5,
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-5d88a6e5-02b6-4a5a-a67e-4f55af97ef69.png",
+      "originalSHA256": "22ef7b1ecbfd71538a638d2721d74ad0de7d2f2393d68702ac4812fc9cccb875",
+      "prompt": "Draw a NEW whole transparent RGBA 2x2 Union casualty sprite atlas. FIRST reference gives correct SMALL physical character scale and generous padding, but its bottom two poses are WRONG: they look like active prone shooting. SECOND reference supplies the same character kit. Keep first reference's physical head/boots/bedroll/limb size and elevated REAR three-quarter NORTHEAST/up-right camera. Navycap/coat, skybluepants,brownboots,tanhorizontalroll/darkpack,bluegraycanteen/leatherpouches. Four distinct freshlydrawn weighted casualty stages in readingorder: on-foot backward recoil with softknees and LOWered rifle; kneel-drop with supporthand; forearm/hip collapse with face lowered and RIFLE RELEASED BESIDE BODY; final limp motionless prone with HEAD RESTING ON FOREARM OR GROUND, relaxed fingers, bootslowerleft/headupperright. In bottom cells both hands are relaxed or supporting body; NEITHER HAND GRIPS a shooting weapon. Rifle is SEPARATE from hands, lies LOW on ground parallel beside body at side, stock well away from shoulder/cheek, muzzle/bayonet cannot point from a raised sighting pose. NO RAISED HEAD aiming, no shoulderstock, no forearms holding gun, no shooting. Natural convincing motionless casualty, no gore. Wholebody/rifle centered inside each627pxcell of approx1254square, at least70px transparent space from ALL edges, broad empty middle gutters. Same human/kit physical scale across4phases, fallprojectionnaturallyshorter, do not enlarge. Realistic anatomy/wool/leather/wood/steel, no groundpatch/shadows/background/grid/text/flags/extrafigures/limbs. Four whole original native drawings, don't mirror/resample/warp/edit/copy reference pixels.",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-a50144b6-26db-4f61-9aad-a50ddcada213.png",
+          "sha256": "959ff206b9c42275a6e18ef7e19bcfbde6e228d9b53c9501a05b26c7b7b13b59"
+        },
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-89a2bd6d-9c7a-43fe-963b-fbf4a20ea279.png",
+          "sha256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc"
+        }
+      ],
+      "selected": true,
+      "minimumSolidPadding": 19,
+      "reason": "Astra Max accepted exact source in paired group for bounded opt-in authoring",
+      "candidate": "docs/art-pass/candidates/gettysburg-v26/union-a-casualty-ne-candidate.png",
+      "independentSourceReviewSHA256": "8f6cc672b119b13f7659b58c72bafce3d8396abe0798499874070c27b88b8171"
+    },
+    {
+      "side": "union",
+      "role": "contact",
+      "attempt": 1,
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-89a2bd6d-9c7a-43fe-963b-fbf4a20ea279.png",
+      "originalSHA256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc",
+      "prompt": "Use case: historical-scene. Create a NEW whole transparent RGBA square 2x2 sprite atlas of four separate full-body poses of ONE realistic 1863 Union infantryman. First reference is the existing Union NORTH rear-view contact kit: navy forage cap and sack coat, sky blue wool trousers, brown boots, tan horizontal blanket roll on dark pack, gray-blue round canteen, leather cross straps and pouches. It is not an existing NE source. Second reference provides only realistic material quality and LOW bayonet actions, NOT its front SW camera. Draw a fresh elevated REAR three-quarter NORTHEAST view, facing UP-RIGHT, back/pack dominate, only right cheek edge may show. All four face up-right with SAME actual human/head/kit size. Reading order top-left low guard; top-right clear SHORT HIP BAYONET THRUST, stock at waist below shoulder, forward hand visibly extended ahead of torso with a gap, controlled knee/torso weight transfer; bottom-left visibly withdrawn LOW recovery with rearward weight; bottom-right low defensive parry. Both natural hands grip wooden musket at waist/lower chest, forearm visible, no shouldered aiming/fire/reload/smoke/flash. Natural adult anatomy, rough wool/leather/wood/steel, not toy/anime proportions. Layout is a sparse atlas: in a roughly1254 square with627px cells the upright soldier only350-390px cap-to-sole, entire rifle+bayonet+body stays centered with at least70px totally TRANSPARENT margin from EVERY cell edge. Place full silhouettes around each cell midpoint, boots well above bottom edge, broad empty middle gutter. Four distinct original native poses; no borrowing/mirroring/resizing/warping reference pixels. No ground, shadows, backdrop, grids, labels, text, flags, extra figures or limbs.",
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v23/union-a-contact-n.png",
+          "sha256": "db3cf93fc162470857028cb0164284ba7ea2e9e504a977d7de21f0e6b52a365d"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v25/union-a-contact-sw.png",
+          "sha256": "351d98d1c87cc0c405a3e0eeca3b3193b2937395e38db837597228817c5ba463"
+        }
+      ],
+      "selected": true,
+      "minimumSolidPadding": 36,
+      "reason": "Astra Max accepted exact source in paired group for bounded opt-in authoring",
+      "candidate": "docs/art-pass/candidates/gettysburg-v26/union-a-contact-ne-candidate.png",
+      "independentSourceReviewSHA256": "8f6cc672b119b13f7659b58c72bafce3d8396abe0798499874070c27b88b8171"
+    }
+  ]
+}

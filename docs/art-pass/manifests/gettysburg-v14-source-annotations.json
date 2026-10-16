@@ -1,0 +1,172 @@
+{
+  "artPass": "gettysburg-v14",
+  "productionApproved": false,
+  "familyComplete": false,
+  "sources": [
+    {
+      "name": "march-s",
+      "key": "confederate-gettysburg-v14-a-march-s",
+      "measurementName": "confederate-a-march-s",
+      "source": "docs/art-pass/candidates/gettysburg-v14/confederate-a-s-march-candidate.png",
+      "sha256": "a41a75bfa5874661e9c8f333f5bc9d2aecce9cf7cedc8e7add940dcc3678f26c",
+      "side": "confederate",
+      "identity": "a",
+      "identityKit": "confederate-a",
+      "direction": 2,
+      "cell": 627,
+      "roots": [
+        [
+          315,
+          564
+        ],
+        [
+          316,
+          564
+        ],
+        [
+          314,
+          544
+        ],
+        [
+          315,
+          544
+        ]
+      ],
+      "capTop": [
+        230,
+        230,
+        220,
+        220
+      ],
+      "bodySpans": [
+        334,
+        334,
+        324,
+        324
+      ],
+      "referenceHeight": 329,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "nativeReview": {
+        "sourceHash": "a41a75bfa5874661e9c8f333f5bc9d2aecce9cf7cedc8e7add940dcc3678f26c",
+        "identity": "confederate-a",
+        "kitAccepted": true,
+        "allFourCellsReviewed": true,
+        "independentReview": true,
+        "modelAssisted": true
+      },
+      "sourceReview": "docs/art-pass/reviews/gettysburg-v14-independent-s-march-source-review.json",
+      "sourceReviewSHA256": "9da16dde0f75845f4a4fab451eb0cd0b8a24a47ca7d72ba853f4b2360d08a6c0",
+      "annotationMethod": "Fresh manual concealed pelvis-center X projected to independently visible supporting boot sole Y in each cell; a2D registration pivot, not certified pelvis reconstruction or recovered physical ground. Fresh visually selected alpha>=64 boot-only ROIs for the leading/supporting imageRIGHT boot in TL/TR and imageLEFT boot in BL/BR; exclusive bottom Y measured separately in every cell. Upright weapon, lifted/trailing boot and torso pixels are excluded. Rounded median of four fresh cap-to-individual-supporting-sole spans; one whole-source scale, no per-phase scaling.",
+      "limitations": [
+        "Acceptance binds only to this exactSHA and allfour inspected cells for localoptin preview.",
+        "Four discrete native poses are not skeletal/continuous animation or proof of historical marching drill and foot contact.",
+        "Contact depth/heel-to-ground assignment, hidden pelvis, fingers and approximate supporting sole remain uncertain.",
+        "Native cap-to-supporting-sole spans vary by10pixels; one whole-source height329 retains the variation without per-phase normalization.",
+        "Source is drawn smaller in its native627cells than S actions; runtime scale comes from separately measured sourceheight, while final renderer clarity/temporal behavior remains tobe checked.",
+        "Low-alpha colored RGB residue remains; targeted alpha criteria do not prove perfectly clean transparency or absence of every fringe color.",
+        "Model-assisted review, not human, anatomy, historical equipment/drill, default, production or complete-family certification.",
+        "Runtime phase timing, turns, pause/checkpoint geometry, decoded/GPU/process residency and device performance remain separate checks."
+      ],
+      "scope": "Exact historical Gettysburg v14 local opt-in only; no default, full-family or production approval"
+    },
+    {
+      "name": "actions-s",
+      "key": "confederate-gettysburg-v14-a-actions-s",
+      "measurementName": "confederate-a-actions-s",
+      "source": "docs/art-pass/candidates/gettysburg-v14/confederate-a-s-actions-candidate.png",
+      "sha256": "cbc0c38d83a73b934ea3e69cbf4ed7a0b4da23a3c5d27d5af002ac2610faf2b1",
+      "side": "confederate",
+      "identity": "a",
+      "identityKit": "confederate-a",
+      "direction": 2,
+      "cell": 627,
+      "roots": [
+        [
+          337,
+          582
+        ],
+        [
+          327,
+          582
+        ],
+        [
+          337,
+          566
+        ],
+        [
+          324,
+          568
+        ]
+      ],
+      "capTop": [
+        71,
+        90,
+        65,
+        65
+      ],
+      "bodySpans": [
+        511,
+        492,
+        501,
+        503
+      ],
+      "referenceHeight": 502,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "nativeReview": {
+        "sourceHash": "cbc0c38d83a73b934ea3e69cbf4ed7a0b4da23a3c5d27d5af002ac2610faf2b1",
+        "identity": "confederate-a",
+        "kitAccepted": true,
+        "allFourCellsReviewed": true,
+        "independentReview": true,
+        "modelAssisted": true
+      },
+      "sourceReview": "docs/art-pass/reviews/gettysburg-v14-independent-s-actions-source-review.json",
+      "sourceReviewSHA256": "f0cf226516672235c12c25fdf7629521bb4cdb851974b35b601d01ad3bcc0497",
+      "annotationMethod": "Fresh manual concealed pelvis-center X projected to independently selected visible supporting boot sole Y in each cell. A 2D registration pivot, not recovered certified anatomical pelvis or physical ground. Fresh visually selected alpha>=64 supporting-boot-only ROIs; root Y uses the exclusive bottom in each ROI. Ready/loading ROIs exclude the rifle butt: TL source-wide bottom583 is not used because boot-only sole is582; BL source-wide bottom568 is not used because selected boot sole is566. Paired planted boots and camera depth leave about3-pixel uncertainty. Rounded median of four fresh cap-to-individual-supporting-sole spans; one whole-source scale and no per-phase scaling.",
+      "limitations": [
+        "Acceptance binds only to this exact source SHA and all four inspected cells for local opt-in preview.",
+        "Four stationary poses do not establish verified historical loading/ramming drill or smooth ready-to-aim/loading transitions.",
+        "Hidden pelvis, fingertips, shoulder stock attachment and 2D supporting-foot ground estimates remain uncertain.",
+        "Native cap-to-supporting-sole spans vary by19pixels; the whole-source height502 retains variation.",
+        "Targeted red/yellow pixel test does not establish perfectly clean alpha or exhaustive absence of fringe.",
+        "Model-assisted review, not human, physical anatomy, historical equipment/drill, default, production or complete-family certification.",
+        "Temporal renderer, pauses/checkpoints, smoke lifetime, decoded/GPU/process residency and device performance remain separate checks."
+      ],
+      "scope": "Exact historical Gettysburg v14 local opt-in only; no default, full-family or production approval",
+      "muzzle": [
+        242,
+        343
+      ]
+    }
+  ]
+}

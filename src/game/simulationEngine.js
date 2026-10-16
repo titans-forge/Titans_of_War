@@ -1,4 +1,6 @@
 // Titans of War — Core Game State & Physics Resolution Engine
+import { campaignRulesVersion, commitRecoveryAllocation, createCampaignEconomy, applySupplyDeltas, getCampaignUpkeep, getFundedBenefitRatio, getCurrentRecoveryPlan, getRecoveryOptions, getBattleSupplyProfile, getCampaignChoice } from './campaignSupply.js';
+import { resolveFieldResultConsequences, satisfiesFieldResultRequirement, fieldElectionFactors, removeUnsupportedFieldScoreCredit } from './fieldResultConsequences.js';
 
 // Clamps a metric between 0 and 100
 const clamp = (val) => Math.max(0, Math.min(100, val));
@@ -13,6 +15,7 @@ function historyEntryMatchesRequirement(entry, requirement) {
   if (requirement.choiceId && entry.choiceId !== requirement.choiceId) return false;
   if (Array.isArray(requirement.choiceIds) && !requirement.choiceIds.includes(entry.choiceId)) return false;
   if (requirement.choiceSucceeded !== undefined && entry.choiceSucceeded !== requirement.choiceSucceeded) return false;
+  if (!satisfiesFieldResultRequirement(entry, requirement)) return false;
   return true;
 }
 
@@ -133,13 +136,37 @@ export function deriveSeed(campaignSeed, turn) {
 }
 
 export function tickMetrics(state, choice = null, successModifier = 0, options = {}) {
-  let nextMetrics = { ...state.metrics };
+  choice = getCampaignChoice(state, { id: options.activeScenarioId || state.scenarioId }, choice);
+  const newRules = campaignRulesVersion(state) === 2;
+  const prepared = newRules && choice ? commitRecoveryAllocation(state) : state;
+  let nextMetrics = { ...prepared.metrics };
+  let economy = { ...createCampaignEconomy(), ...prepared.campaignEconomy };
+  const resourceTransitions = { version: 1, before: { ...nextMetrics } };
+  if (newRules) {
+    resourceTransitions.before = { ...state.metrics };
+    resourceTransitions.afterAllocation = { ...nextMetrics };
+  }
+  const supplyReport = newRules ? {
+    version: 1, allocationId: getCurrentRecoveryPlan(prepared)?.committed ? getCurrentRecoveryPlan(prepared).allocationId : 'none',
+    upkeep: {}, shortages: [], repayments: [], benefitRatio: 1,
+    arrearsBefore: { treasury: state.campaignEconomy?.treasuryArrears || 0, munitions: state.campaignEconomy?.munitionsArrears || 0 },
+    arrearsAfter: null, notes: [],
+  } : null;
   let nextShards = JSON.parse(JSON.stringify(state.shards));
   let divergence = state.divergenceIndex;
   let activeRevolts = { hotspur: false, fox: false, wolf: false };
 
   // 1. Natural turn decay / consumption
-  if (!options.skipTurnDecay) {
+  if (newRules) {
+    const upkeep = getCampaignUpkeep(prepared, options);
+    const applied = applySupplyDeltas(nextMetrics, economy, upkeep);
+    nextMetrics = applied.metrics;
+    economy = applied.economy;
+    supplyReport.upkeep = upkeep;
+    supplyReport.shortages.push(...applied.shortages);
+    supplyReport.repayments.push(...applied.repayments);
+    if (!options.skipTurnDecay) for (const key of ['hotspur', 'fox', 'wolf']) activeRevolts[key] = state.shards[key].alignment < 30;
+  } else if (!options.skipTurnDecay) {
     nextMetrics.munitions = clamp(nextMetrics.munitions - 5);
     nextMetrics.treasury = clamp(nextMetrics.treasury - 5);
     if (nextMetrics.foodSupply !== undefined) {
@@ -181,6 +208,9 @@ export function tickMetrics(state, choice = null, successModifier = 0, options =
     }
   }
 
+  resourceTransitions.afterUpkeep = { ...nextMetrics };
+  resourceTransitions.afterDecisionEffects = { ...nextMetrics };
+
   // 2. Apply choice effects (Stochastic or Deterministic)
   let choiceSucceeded = null;
   let resolvedEffects = null;
@@ -195,7 +225,7 @@ export function tickMetrics(state, choice = null, successModifier = 0, options =
       const rng = mulberry32(deriveSeed(state.seed ?? 0, state.currentTurn));
       const roll = rng();
       const effectiveSuccessRate = Math.min(1.0, choice.successRate + successModifier);
-      if (roll < effectiveSuccessRate) {
+      if (typeof options.forecastOutcome === 'boolean' ? options.forecastOutcome : roll < effectiveSuccessRate) {
         choiceSucceeded = true;
         resolvedEffects = choice.successEffects || choice.effects;
         resolvedConsequence = choice.successConsequence || choice.consequence;
@@ -209,8 +239,26 @@ export function tickMetrics(state, choice = null, successModifier = 0, options =
       }
     }
 
+    const fieldConsequences = resolveFieldResultConsequences(state, options.activeScenarioId || state.scenarioId, choice);
+    if (fieldConsequences) {
+      choiceSucceeded = fieldConsequences.choiceSucceeded;
+      resolvedEffects = fieldConsequences.effects;
+      resolvedConsequence = fieldConsequences.consequence;
+    }
+
     if (resolvedEffects) {
-      if (resolvedEffects.metrics) {
+      if (newRules) {
+        const benefitRatio = getFundedBenefitRatio(nextMetrics, resolvedEffects);
+        supplyReport.benefitRatio = benefitRatio;
+        resolvedEffects = { ...resolvedEffects, metrics: { ...resolvedEffects.metrics }, shards: { ...resolvedEffects.shards } };
+        for (const key of ['militaryStrength', 'publicMorale']) if (resolvedEffects.metrics[key] > 0) resolvedEffects.metrics[key] *= benefitRatio;
+        for (const key of Object.keys(resolvedEffects.shards)) if (resolvedEffects.shards[key] > 0) resolvedEffects.shards[key] *= benefitRatio;
+        const applied = applySupplyDeltas(nextMetrics, economy, resolvedEffects.metrics);
+        nextMetrics = applied.metrics;
+        economy = applied.economy;
+        supplyReport.shortages.push(...applied.shortages);
+        supplyReport.repayments.push(...applied.repayments);
+      } else if (resolvedEffects.metrics) {
         Object.keys(resolvedEffects.metrics).forEach(key => {
           if (nextMetrics[key] !== undefined) {
             nextMetrics[key] = clamp(nextMetrics[key] + resolvedEffects.metrics[key]);
@@ -231,10 +279,19 @@ export function tickMetrics(state, choice = null, successModifier = 0, options =
       }
     }
 
+    resourceTransitions.afterDecisionEffects = { ...nextMetrics };
+
     // Some authored stabilization choices are meant to guarantee survival
     // into the next scenario even from a dangerously weak state.
     applyMetricFloor(nextMetrics, choice.survivalFloor);
     applyShardAlignmentFloor(nextShards, choice.shardAlignmentFloor);
+  }
+  resourceTransitions.afterDecision = { ...nextMetrics };
+  if (newRules) {
+    supplyReport.arrearsAfter = { treasury: economy.treasuryArrears, munitions: economy.munitionsArrears };
+    if (supplyReport.shortages.length) supplyReport.notes.push('Unfunded Treasury and Munitions costs are deferred obligations. Later gains repay them before replenishing the reserve bars.');
+    if (supplyReport.benefitRatio < 1) supplyReport.notes.push(`Insufficient funding reduced positive Army, Morale and cabinet-alignment gains to ${Math.round(supplyReport.benefitRatio * 100)}% of the authored benefit. Losses were not increased.`);
+    if (options.activeScenarioId === 'fort_sumter' && choice?.id === 'option_b') supplyReport.notes.push('New-rules Sumter evacuation models the Northern rally with +8 Public Morale rather than the legacy penalty.');
   }
 
   // 3. Evaluate failure criteria / campaign ending
@@ -286,9 +343,36 @@ export function tickMetrics(state, choice = null, successModifier = 0, options =
     statusMessage,
     choiceSucceeded,
     appliedEffects: resolvedEffects,
+    resourceTransitions,
     resolvedConsequence,
-    activeRevolts
+    activeRevolts,
+    ...(newRules ? { campaignEconomy: economy, supplyPlan: prepared.supplyPlan || null, supplyReport } : {})
   };
+}
+
+// Forecast both possible tactical results without exposing the seeded roll.
+// It calls the same resolution function used on commitment, including clamping,
+// allocation, upkeep, obligations, survival floors and new-rules corrections.
+export function forecastCampaignChoice(state, scenario, choice, successModifier = 0) {
+  const options = { skipTurnDecay: Boolean(scenario?.interlude || scenario?.crisisFor), endsCampaign: Boolean(scenario?.endsCampaign || choice?.endsCampaign), activeScenarioId: scenario?.id || state.scenarioId };
+  const chance = choice?.successRate === undefined ? null : Math.max(0, Math.min(1, choice.successRate + successModifier));
+  const alternatives = chance === null ? [null] : chance <= 0 ? [false] : chance >= 1 ? [true] : [false, true];
+  const outcomes = alternatives.map(result => {
+    const resolved = tickMetrics(state, choice, successModifier, { ...options, ...(result === null ? {} : { forecastOutcome: result }) });
+    return { result: result === null ? 'certain' : result ? 'success' : 'failure', metrics: resolved.metrics,
+      gameOver: resolved.gameOver, won: resolved.won, statusMessage: resolved.statusMessage, supplyReport: resolved.supplyReport || null,
+      campaignEconomy: resolved.campaignEconomy || state.campaignEconomy || null, resourceTransitions: resolved.resourceTransitions };
+  });
+  const resources = Object.fromEntries(Object.keys(state.metrics).map(key => {
+    const values = outcomes.map(outcome => outcome.metrics[key]);
+    return [key, { min: Math.min(...values), max: Math.max(...values), deltaMin: Math.min(...values) - state.metrics[key], deltaMax: Math.max(...values) - state.metrics[key] }];
+  }));
+  const prepared = choice ? commitRecoveryAllocation(state) : state;
+  return { rulesVersion: campaignRulesVersion(state), difficulty: state.difficulty || 'standard', successChance: chance,
+    resources, outcomes, allocationId: getCurrentRecoveryPlan(state)?.allocationId || 'none',
+    allocationOptions: getRecoveryOptions(state), battleSupply: getBattleSupplyProfile(prepared),
+    upkeep: outcomes[0]?.supplyReport?.upkeep || null, possibleCollapse: outcomes.some(outcome => outcome.gameOver && !outcome.won && !state.gameOver),
+    scope: 'Campaign resolution before any unplayed field battle. Field losses and its success modifier can change these ranges.' };
 }
 
 // --- Divergence tiers (the index becomes narratively + mechanically meaningful) ---
@@ -307,7 +391,7 @@ function finalTurnStatusMessage(state, choice, divergence) {
     case 'appomattox_decision:option_a':
       return 'CAMPAIGN CONCLUDED — surrender is refused. Organized armies give way to scattered resistance, desertion, and partisan violence as conventional war dissolves into local conflict.';
     case 'appomattox_decision:option_b':
-      return 'CAMPAIGN CONCLUDED — Grant\'s parole terms are accepted. The Army of Northern Virginia lays down its arms, and the war closes in disciplined surrender rather than social collapse.';
+      return 'CAMPAIGN CONCLUDED — Grant\'s parole terms are accepted. The Army of Northern Virginia lays down its arms. This campaign ends with paroles; other Confederate forces and the work of Reconstruction remain beyond this ending.';
     case 'appomattox_decision:option_c':
       return 'CAMPAIGN CONCLUDED — a conditional settlement is sought, but not independence. The military end still comes under Union supremacy, though the political terms remain contested.';
     case 'appomattox_decision:option_d':
@@ -877,9 +961,35 @@ function isTacticalEntry(entry) {
   return !entry?.crisisFor && /Commander/i.test(role);
 }
 
-function choiceScoreCard(entry) {
+export const HISTORY_SCORE_CARD_VERSION = 2;
+
+export function resolveChoiceScoreCard(scenarioId, choice, battleResult = null) {
+  const key = `${scenarioId || ''}:${choice?.id || ''}`;
+  const card = removeUnsupportedFieldScoreCredit({ ...CHOICE_SCORE_CARD_OVERRIDES[key], ...choice?.scoreCard }, choice?.id, battleResult);
+  if (battleResult) {
+    card.tactical = (card.tactical || 0) + (battleResult.tacticalScore || 0);
+  }
+  return card;
+}
+
+export function choiceScoreCard(entry) {
   const key = `${entry?.scenarioId || ''}:${entry?.choiceId || ''}`;
-  return entry?.scoreCard || CHOICE_SCORE_CARD_OVERRIDES[key] || {};
+  const authored = CHOICE_SCORE_CARD_OVERRIDES[key] || {};
+  const stored = entry?.scoreCard;
+  const battle = entry?.battleResult;
+  if (entry?.scoreCardVersion >= HISTORY_SCORE_CARD_VERSION) {
+    return { ...authored, ...stored };
+  }
+
+  // Old battle cards already include the bonus. Only a bonus-only card can
+  // be identified as missing authored tactics without guessing at inline edits.
+  if (battle && (!stored || (
+    Object.keys(stored).length === 1
+    && stored.tactical === (battle.tacticalScore || 0)
+  ))) {
+    return resolveChoiceScoreCard(entry.scenarioId, { id: entry.choiceId }, battle);
+  }
+  return { ...authored, ...stored };
 }
 
 function scoreTacticalEntry(entry) {
@@ -967,7 +1077,7 @@ export function calculateCampaignScore(state) {
   const m = state.metrics || {};
   const shards = state.shards || {};
   const turn = state.currentTurn || 0;
-  const campaignConcluded = !!state.gameOver || turn >= CAMPAIGN_FINAL_TURN;
+  const campaignConcluded = !!state.gameOver;
   const survived = campaignConcluded && (m.militaryStrength || 0) > 10 && (m.publicMorale || 0) > 10 && (m.foodSupply || 0) > 5;
   const turnsCompleted = Math.min(CAMPAIGN_FINAL_TURN, turn);
   const crisisSummary = summarizeCabinetCrises(state);
@@ -977,11 +1087,24 @@ export function calculateCampaignScore(state) {
   const strategicPts = Math.round((reportCards.strategicBrilliance.score / 100) * REPORT_CARD_WEIGHTS.strategicBrilliance);
   const timelinePts = Math.round((reportCards.timelineFidelity.score / 100) * REPORT_CARD_WEIGHTS.timelineFidelity);
   const total = tacticalPts + strategicPts + timelinePts;
-  const ending = classifyCampaignEnding(state);
+  const commandScore = clampScore(
+    (reportCards.tacticalSmarts.score * REPORT_CARD_WEIGHTS.tacticalSmarts
+      + reportCards.strategicBrilliance.score * REPORT_CARD_WEIGHTS.strategicBrilliance)
+    / (REPORT_CARD_WEIGHTS.tacticalSmarts + REPORT_CARD_WEIGHTS.strategicBrilliance)
+  );
+  const ending = campaignConcluded ? classifyCampaignEnding(state) : {
+    endingClass: 'Campaign In Progress',
+    endingNote: 'No campaign ending has been reached.',
+  };
 
   return {
     total,
     grade: gradeForStability(total),
+    commandScore,
+    commandGrade: gradeForReportCard(commandScore),
+    campaignConcluded,
+    chronologicalStage: turn,
+    decisionsMade: Array.isArray(state.history) ? state.history.length : 0,
     survived,
     turnsCompleted,
     divergence: state.divergenceIndex || 0,
@@ -1084,11 +1207,15 @@ export function calculateElectionPressure(history = [], threshold = 7) {
 
   const thirdWinchester = latest('third_winchester');
   const winchesterScores = { option_a: -2, option_b: -1, option_c: 1, option_d: 2 };
-  add(thirdWinchester, winchesterScores[thirdWinchester?.choiceId] || 0, 'Third Winchester result');
+  const winchesterFieldFactors = fieldElectionFactors(thirdWinchester);
+  if (winchesterFieldFactors) for (const factor of winchesterFieldFactors) add(thirdWinchester, factor.points, factor.label);
+  else add(thirdWinchester, winchesterScores[thirdWinchester?.choiceId] || 0, 'Third Winchester result');
 
   const cedarCreek = latest('cedar_creek');
   const cedarCreekScores = { option_a: 3, option_b: -3, option_c: -1, option_d: -1 };
-  add(cedarCreek, cedarCreekScores[cedarCreek?.choiceId] || 0, 'Cedar Creek result');
+  const cedarFieldFactors = fieldElectionFactors(cedarCreek);
+  if (cedarFieldFactors) for (const factor of cedarFieldFactors) add(cedarCreek, factor.points, factor.label);
+  else add(cedarCreek, cedarCreekScores[cedarCreek?.choiceId] || 0, 'Cedar Creek result');
 
   return {
     score,
@@ -1133,9 +1260,11 @@ export function resolveNextScenario(currentScenario, choice, nextTurn, scenarios
     // McClellan victory is gated on two hard historical conditions:
     //   1. Atlanta did not fall on schedule (Keep Johnston at the orthodox
     //      decision turned the campaign into a political contest), AND
-    //   2. Cedar Creek ended as a Confederate victory (the early-morning
-    //      attack converted into a real political event, not a Sheridan
-    //      rally). Without both, even a high pressure score returns to
+    //   2. Cedar Creek's attack won the field, or its early withdrawal
+    //      preserved the army and supply train. Newly recorded results must
+    //      support the selected prerequisite. Legacy history retains the
+    //      branch contract under which it was recorded. A high score alone
+    //      cannot replace the prerequisites and returns to
     //      the Lincoln branch — the structural argument is that one win
     //      alone could not break the Northern coalition.
     let winner = assessment.winner;

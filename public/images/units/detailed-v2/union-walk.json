@@ -1,0 +1,218 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 96,
+        "y": 48,
+        "w": 273,
+        "h": 441
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 273,
+        "h": 441
+      },
+      "sourceSize": {
+        "w": 273,
+        "h": 441
+      },
+      "pivot": {
+        "x": 0.459707,
+        "y": 0.993197
+      },
+      "bodyHeight": 434
+    },
+    "1": {
+      "frame": {
+        "x": 470,
+        "y": 39,
+        "w": 255,
+        "h": 465
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 255,
+        "h": 465
+      },
+      "sourceSize": {
+        "w": 255,
+        "h": 465
+      },
+      "pivot": {
+        "x": 0.427451,
+        "y": 0.993548
+      },
+      "bodyHeight": 449
+    },
+    "2": {
+      "frame": {
+        "x": 832,
+        "y": 40,
+        "w": 244,
+        "h": 465
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 244,
+        "h": 465
+      },
+      "sourceSize": {
+        "w": 244,
+        "h": 465
+      },
+      "pivot": {
+        "x": 0.403689,
+        "y": 0.993548
+      },
+      "bodyHeight": 450
+    },
+    "3": {
+      "frame": {
+        "x": 1204,
+        "y": 41,
+        "w": 200,
+        "h": 465
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 200,
+        "h": 465
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 465
+      },
+      "pivot": {
+        "x": 0.4975,
+        "y": 0.993548
+      },
+      "bodyHeight": 451
+    },
+    "4": {
+      "frame": {
+        "x": 86,
+        "y": 526,
+        "w": 260,
+        "h": 446
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 260,
+        "h": 446
+      },
+      "sourceSize": {
+        "w": 260,
+        "h": 446
+      },
+      "pivot": {
+        "x": 0.498077,
+        "y": 0.993274
+      },
+      "bodyHeight": 437
+    },
+    "5": {
+      "frame": {
+        "x": 479,
+        "y": 527,
+        "w": 205,
+        "h": 452
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 205,
+        "h": 452
+      },
+      "sourceSize": {
+        "w": 205,
+        "h": 452
+      },
+      "pivot": {
+        "x": 0.731707,
+        "y": 0.993363
+      },
+      "bodyHeight": 444
+    },
+    "6": {
+      "frame": {
+        "x": 825,
+        "y": 526,
+        "w": 222,
+        "h": 453
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 222,
+        "h": 453
+      },
+      "sourceSize": {
+        "w": 222,
+        "h": 453
+      },
+      "pivot": {
+        "x": 0.524775,
+        "y": 0.993377
+      },
+      "bodyHeight": 444
+    },
+    "7": {
+      "frame": {
+        "x": 1231,
+        "y": 529,
+        "w": 207,
+        "h": 453
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 207,
+        "h": 453
+      },
+      "sourceSize": {
+        "w": 207,
+        "h": 453
+      },
+      "pivot": {
+        "x": 0.413043,
+        "y": 0.993377
+      },
+      "bodyHeight": 447
+    }
+  },
+  "meta": {
+    "image": "union-walk.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "sha256": "ad8559c5f1da1d46b2ab465d63ff78f8779ae11c8439eb8f68cb954778dda5d0",
+    "chromaKey": "#00ff00",
+    "generation": "OpenAI built-in imagegen; model identifier not reported",
+    "originalPixelsPreserved": true,
+    "originalFileSha256": "5a5362a5fec34126613e3f1e335c951dd43cbabbb480f607ffc22252d2d0479d",
+    "pixelSha256": "cf54e28dbb34731a0960a8010716b61caffdc7b4208547f95b1e626de248588d",
+    "encoding": "Lossless PNG repack; original decoded pixels and non-IDAT chunks preserved"
+  }
+}

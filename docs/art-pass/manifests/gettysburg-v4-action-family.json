@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-01",
+  "tool": "built-in image_gen appearance transfer",
+  "toolModelIdentifier": "not reported",
+  "promptRecord": "docs/art-pass/prompts/gettysburg-v4-action-family.md",
+  "nativeSourceTreatment": "none; public PNG byte-for-byte copy; metadata registration only",
+  "scope": "Exact historical Gettysburg, artPass=gettysburg-v4, Union identity A, direction E only",
+  "actions": {
+    "ready": 1,
+    "march": 4,
+    "fire": 1,
+    "reload": 2
+  },
+  "independentSourceReview": "docs/art-pass/reviews/gettysburg-v4-independent-source-review.md",
+  "sources": [
+    {
+      "name": "march",
+      "source": "docs/art-pass/candidates/gettysburg-v4/union-e-march-candidate.png",
+      "publicPNG": "public/images/units/gettysburg-v4/union-a-march-e.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "43b8f4394b6071958b693d83c14eb7f324e277706bd5513d23b536467e9f6a42",
+      "bytes": 520759,
+      "publicCopyIdentical": true,
+      "guide": "docs/art-pass/candidates/gettysburg-v4/union-e-march-guide.png",
+      "guideSHA256": "e30cb9a83aae692748a83d349340e472c8da4dc6b801599f073754b7ff64e0c9",
+      "guideReceipt": "docs/art-pass/candidates/gettysburg-v4/union-e-march-guide.json",
+      "approval": {
+        "optInPreview": true,
+        "production": false,
+        "family": false
+      }
+    },
+    {
+      "name": "actions",
+      "source": "docs/art-pass/candidates/gettysburg-v4/union-e-actions-candidate.png",
+      "publicPNG": "public/images/units/gettysburg-v4/union-a-actions-e.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "3e0ef9a0a0de5be7a5f10e16a703a611441088d5c39e081a0e11d7d436ad5c4a",
+      "bytes": 542117,
+      "publicCopyIdentical": true,
+      "guide": "docs/art-pass/candidates/gettysburg-v4/union-e-actions-guide.png",
+      "guideSHA256": "dd223d2bc68af11e7401956f171e0d8500e0d42098f6e0245eb6247a96b5bfcf",
+      "guideReceipt": "docs/art-pass/candidates/gettysburg-v4/union-e-actions-guide.json",
+      "approval": {
+        "optInPreview": true,
+        "production": false,
+        "family": false
+      }
+    }
+  ],
+  "productionApproved": false,
+  "familyApproved": false
+}

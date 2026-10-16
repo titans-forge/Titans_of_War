@@ -1,0 +1,15 @@
+[
+  {
+    "id": "manassas-ground-v3",
+    "file": "public/images/battles/manassas-ground-v3.png",
+    "width": 1613,
+    "height": 975,
+    "bytes": 3111512,
+    "sha256": "a6baaf36683493f532ee47984fdc5e3a30d58f3fea35b6369f29fedcff0a224a",
+    "kind": "AI-generated illustrative game art",
+    "generation_mode": "Built-in image_gen tool",
+    "scope": "Decorative ground matched to authored ridge positions; not a surveyed historical map. No new obstacles or cover rules. Original generated pixels and PNG metadata preserved through lossless repacking.",
+    "originalFileSha256": "c7aba1364bb252d0627803e521f02a5f30c6774a313a6b79476c6bdcb2b14cca",
+    "pixelSha256": "875b0bf2ba84a6c42888d51b6cc3424ae02ddcff328b50f57fa5460ae859fc9e"
+  }
+]

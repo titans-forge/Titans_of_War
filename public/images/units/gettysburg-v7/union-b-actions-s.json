@@ -1,0 +1,200 @@
+{
+  "frames": {
+    "b-ready-2-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.547049,
+        "y": 0.955343
+      },
+      "bodyHeight": 460
+    },
+    "b-fire-2-0": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.46571,
+        "y": 0.955343
+      },
+      "bodyHeight": 460
+    },
+    "b-reload-2-0": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.566188,
+        "y": 0.869219
+      },
+      "bodyHeight": 460
+    },
+    "b-reload-2-1": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.494418,
+        "y": 0.869219
+      },
+      "bodyHeight": 460
+    }
+  },
+  "meta": {
+    "image": "union-b-actions-s.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c",
+    "source": "docs/art-pass/candidates/gettysburg-v7/union-b-s-actions-candidate.png",
+    "artPass": "gettysburg-v7",
+    "candidate": true,
+    "productionApproved": false,
+    "pixelTreatment": "none; byte-for-byte native PNG copy, full equal cells",
+    "clips": [
+      {
+        "side": "union",
+        "identity": "b",
+        "direction": 2,
+        "action": "ready",
+        "key": "union-gettysburg-v7-b-actions-s",
+        "frames": [
+          "b-ready-2-0"
+        ],
+        "sourceHash": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c",
+        "referenceHeight": 460,
+        "pivots": [
+          {
+            "x": 0.547049,
+            "y": 0.955343
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "opt-in Union B S stationary actions; exact historical Gettysburg v7 only"
+      },
+      {
+        "side": "union",
+        "identity": "b",
+        "direction": 2,
+        "action": "fire",
+        "key": "union-gettysburg-v7-b-actions-s",
+        "frames": [
+          "b-fire-2-0"
+        ],
+        "sourceHash": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c",
+        "referenceHeight": 460,
+        "pivots": [
+          {
+            "x": 0.46571,
+            "y": 0.955343
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "opt-in Union B S stationary actions; exact historical Gettysburg v7 only",
+        "muzzles": [
+          {
+            "x": 0.45933,
+            "y": 0.649123
+          }
+        ]
+      },
+      {
+        "side": "union",
+        "identity": "b",
+        "direction": 2,
+        "action": "reload",
+        "key": "union-gettysburg-v7-b-actions-s",
+        "frames": [
+          "b-reload-2-0",
+          "b-reload-2-1"
+        ],
+        "sourceHash": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c",
+        "referenceHeight": 460,
+        "pivots": [
+          {
+            "x": 0.566188,
+            "y": 0.869219
+          },
+          {
+            "x": 0.494418,
+            "y": 0.869219
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "opt-in Union B S stationary actions; exact historical Gettysburg v7 only"
+      }
+    ],
+    "measurementReview": "docs/art-pass/reviews/gettysburg-v7-union-b-actions-s-measurement.json"
+  }
+}

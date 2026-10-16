@@ -1,0 +1,5021 @@
+{
+  "schemaVersion": 1,
+  "capturedFrom": "/Users/titansforge/Vault/Titans_of_War",
+  "artPass": "gettysburg-v17",
+  "capture": "Direct original module outputs and native file bytes, before candidate v18 implementation; actual scene tests are separate.",
+  "assets": 36,
+  "clips": 72,
+  "hashes": [
+    {
+      "key": "union-gettysburg-v4-march-e",
+      "image": "43b8f4394b6071958b693d83c14eb7f324e277706bd5513d23b536467e9f6a42",
+      "json": "8d9fb8d427508147fc50fe58dd16f3ce33469ad95762dbab383a67172b2b3b95"
+    },
+    {
+      "key": "union-gettysburg-v5-actions-e",
+      "image": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f",
+      "json": "250642ff8d84cb9c8afbeb0b078e5bbded154dcf60b08c976838081dffa9b7e5"
+    },
+    {
+      "key": "union-gettysburg-v5-march-se",
+      "image": "90a124967a778789bcdbaf5b83fc0cba689f145486450ba775798ec106bfc103",
+      "json": "0cfce543040bd6e9e44c699aec9ead6a7e3284df77b4099c469444454056d56d"
+    },
+    {
+      "key": "union-gettysburg-v6-actions-se",
+      "image": "bd4650f0d15bf5abf612ebfd01edecf9560c7a459b96e2643ad76ca5d023b61e",
+      "json": "a6bc23ebb20ddaf3910de0b50019834126d3886c48518504fd79be2ea7ce1a9f"
+    },
+    {
+      "key": "union-gettysburg-v7-a-march-s",
+      "image": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000",
+      "json": "a3e1ae063aa5ac954d4b4286cd7069c0482f67de692f6b4c339c5551b51945e7"
+    },
+    {
+      "key": "union-gettysburg-v7-a-actions-s",
+      "image": "fe4b4a0a531f6e4e6709fa747393d4fa6cc6e5e13ced71fd287c4cd440d1e1c2",
+      "json": "f8b54ff60597eb1e233416791b4ec5ebaf673b105afd46b4654982b2f0e3d7b5"
+    },
+    {
+      "key": "union-gettysburg-v7-b-march-s",
+      "image": "544dd143918b18af8807e34a406affe7c83b23378a554d5f88a12586cc16ef68",
+      "json": "4422c81a318865e49fc76883c3c2366bfe565019b7aab4cb91bb6adf08026bd9"
+    },
+    {
+      "key": "union-gettysburg-v7-b-actions-s",
+      "image": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c",
+      "json": "ac4f24a5d8b4a7e67416c3c196dd4e76ae7e225c55c6b8a9eb6c19baa1c122d6"
+    },
+    {
+      "key": "confederate-gettysburg-v7-a-march-n",
+      "image": "cf9e0535f7dd581b815940c32a35d51b4ec573d92c6a3cdfbaf4bb74ccc10e64",
+      "json": "5ad3e3547f43780b233efa07c659b4f8491666c5cca928826acaca7ecc4b83a5"
+    },
+    {
+      "key": "confederate-gettysburg-v7-a-actions-n",
+      "image": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0",
+      "json": "0052a95fcb51150470b7c7d9b86690fcf3f7ef82178bb22ce5c78c49fb821653"
+    },
+    {
+      "key": "union-gettysburg-v8-a-march-sw",
+      "image": "94f87dfa8bd853789be2459f5f5405507421f1447ccf553f4723293c2a29fe6b",
+      "json": "d3a50ecbbbe88fa715c286d467c43249011028db034742dc603de4dd238c029d"
+    },
+    {
+      "key": "union-gettysburg-v8-a-actions-sw",
+      "image": "485b13ee60360562d3ee5d0e93311f223971880622735ecdb5b6dd4d9e7f5a16",
+      "json": "b8f008e5a51762cb54d6c7bf76f7f7b93b4cad319a686a353226295f62175c2d"
+    },
+    {
+      "key": "union-gettysburg-v8-b-march-sw",
+      "image": "fbe92c00f29cdd11bf79970601a7668b1c17050a6b8952a514bcff8c14a02452",
+      "json": "e2eb138e9be6f22e36d67059c102ecbd6231711ddff0a5fd24415e4a58aabfd8"
+    },
+    {
+      "key": "union-gettysburg-v8-b-actions-sw",
+      "image": "e98918507e6eadc38fe828814782c95a51f132ab918fdacfa185d8660e15d8af",
+      "json": "c87e4cd17804d224dd55f28a9e0a817b61096cf61e4dd97188f3f5a511cca6f9"
+    },
+    {
+      "key": "union-gettysburg-v9-a-march-w",
+      "image": "8548f147d8021126f8bc4ce3069983dd7bf5eb29429a1fbafb1401e0f0d5acbb",
+      "json": "f060336aa7f42eb0c6f4c29ccc3edf0792977d10a2edd956c59f6df90b9698b3"
+    },
+    {
+      "key": "union-gettysburg-v9-a-actions-w",
+      "image": "3676bb60c6c4373cd1176e30b4079ad68cebb94de26fe7bea582dd675b936d96",
+      "json": "b19217a43bc3b745ab0b3a2a75022898b543e788e06259d585058a8d0a6c44cc"
+    },
+    {
+      "key": "union-gettysburg-v9-b-march-w",
+      "image": "7842f97c0ea99f1683b8f138bd6411744cbed1e9326b2d061c2b40c7696e7aaf",
+      "json": "48a792b18f5c035e2bebe7ff06ba1b6c529539a0e857a4541db65066755fc5c1"
+    },
+    {
+      "key": "union-gettysburg-v9-b-actions-w",
+      "image": "81b66db974e4f026083fe60abe6670461afd7853ea33a845dd7f39aac0d7d35f",
+      "json": "40209a3bafd5a7ac5207bde5e8a20b8a2a69e49de0b0449e4608d435305794aa"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-march-ne",
+      "image": "48f4c9537b8326d7d1451da727aae73161661ae408fd32ecb467d5d412d26b3d",
+      "json": "66bb7eab80d48052f118c0092a863138923631520b644ecd3403b88ccfd8937e"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-actions-ne",
+      "image": "3036c2de71157958023a82c7034ace597bba02d7b8bad6d09fa7b8e289e98a85",
+      "json": "1f55d2a371d997e3c6b031eb9ca82f426497844315f05f82257ad8177732a7ed"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-march-nw",
+      "image": "b66a59f4135fdf91f9b6750fb918552603055b6917497ea9934b27d9765d1a69",
+      "json": "a7e3bcedf6ebc33c84a6e8ef534c58b65df8ec038120fdb3cdde6ddda96a73b6"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-actions-nw",
+      "image": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0",
+      "json": "5b0b54f298b758523a978590a1eb056e2b664c908a5006b27fa7ac6923773c00"
+    },
+    {
+      "key": "union-gettysburg-v11-b-march-e",
+      "image": "5f15de11f707a965564bbddae925a302ab7e8119276408e29f0a177783e5290a",
+      "json": "6e0579a9d7d94ab85ec3b66bbcec02c9ed82502714d3b8abf5ad6293fa801585"
+    },
+    {
+      "key": "union-gettysburg-v11-b-actions-e",
+      "image": "5aebc319115ad65a7bc23089e5962ae4975a6a1a9db11a5fcce8a9c13c1780e1",
+      "json": "6cc1412d5997287fc1eadef4bffd79f536d3ad2b46d19e1d75e0d4b2297ba379"
+    },
+    {
+      "key": "union-gettysburg-v11-b-march-se",
+      "image": "9efcc748a6d6860f6248c72b3384d62220db6e76a7e60f7efb35e36a811052b7",
+      "json": "17d8a6332ab2b6588b695074f030eb3bed362746be5549fccf82c8e7141a5672"
+    },
+    {
+      "key": "union-gettysburg-v11-b-actions-se",
+      "image": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6",
+      "json": "204d753490b0e076dee8707b80f21045aee36e1023878e257cb4da01f5993358"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-march-e",
+      "image": "2e7f6b41f065f01a813db6cb57c3146ab514957ee49232f3004b0d60788dcd99",
+      "json": "0f7dc2724e1099717f3146b0927de378231322ebf2bafd01b3f2ae6feddcbdb6"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-actions-e",
+      "image": "6aa46680436709a13d502c2bbbb3b1202377ef10575ed7155e77d7208124d861",
+      "json": "c1fc477d5e82cfb02f241017aef25534bed70dbfcb30a3031d8ecea1fe9cadac"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-march-w",
+      "image": "ab28e7c28ee6be3b17a833cbc3b627f3961dfbb8d9efef93c4ecc07482ed9981",
+      "json": "233be3ec0a9cb4091967b14b522c5419ac1babc7d4722b66d99db22dbf4b4fee"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-actions-w",
+      "image": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b",
+      "json": "4e5c1d57316cd11d416f5719ff918bbdbcb68cad2e522cb6a8bc41cbc5be5e8c"
+    },
+    {
+      "key": "confederate-gettysburg-v14-a-march-s",
+      "image": "a41a75bfa5874661e9c8f333f5bc9d2aecce9cf7cedc8e7add940dcc3678f26c",
+      "json": "ffb41bb5da9375e1b16999ac19e15252fa4e18b1d14dc7b9623bfd7f9cb8dd04"
+    },
+    {
+      "key": "confederate-gettysburg-v14-a-actions-s",
+      "image": "cbc0c38d83a73b934ea3e69cbf4ed7a0b4da23a3c5d27d5af002ac2610faf2b1",
+      "json": "dea42c89d6b1b2b8e54c3872122c2e030fe10ddf9c9060d5f155fc25f1152bd7"
+    },
+    {
+      "key": "confederate-gettysburg-v15-a-march-se",
+      "image": "b82669f342a640e0d980fe58ee0bbe6e781bae78db3797f9dc46b7608dcf011c",
+      "json": "0b636b1c98d0f1cff37d4a8eb1ee28057c766204f5fa2151d8d478509f0bb93d"
+    },
+    {
+      "key": "confederate-gettysburg-v15-a-actions-se",
+      "image": "94dbce4e33aaa22cd07ee83c6831dac37c999544e5ddad4e63a0f9256bc02e51",
+      "json": "363dc062a53ddb8dc20e7910869f4d5164c9a0e5d60976a929b63b363d5d02dd"
+    },
+    {
+      "key": "confederate-gettysburg-v16-a-march-sw",
+      "image": "cbd83756f656a82abf57d9b00eebdb2ad02447a8365144d3ac11d6e79d2a603c",
+      "json": "d62cf6d5fe1d1ad1c17e5aaafaa67dd19619aa450ff91bc3153226657054e25c"
+    },
+    {
+      "key": "confederate-gettysburg-v15-a-actions-sw",
+      "image": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d",
+      "json": "f30b30d7c73c07a0bf8fede5ee630973833062f7c557569c963d9d8baeb35c7b"
+    }
+  ],
+  "allPriorAssets": [
+    {
+      "key": "union-gettysburg-v3-march-e",
+      "image": "images/units/gettysburg-v3/union-a-march-e.png",
+      "json": "images/units/gettysburg-v3/union-a-march-e.json"
+    },
+    {
+      "key": "union-gettysburg-v4-march-e",
+      "image": "images/units/gettysburg-v4/union-a-march-e.png",
+      "json": "images/units/gettysburg-v4/union-a-march-e.json"
+    },
+    {
+      "key": "union-gettysburg-v4-actions-e",
+      "image": "images/units/gettysburg-v4/union-a-actions-e.png",
+      "json": "images/units/gettysburg-v4/union-a-actions-e.json"
+    },
+    {
+      "key": "union-gettysburg-v5-actions-e",
+      "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+      "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+    },
+    {
+      "key": "union-gettysburg-v5-march-se",
+      "image": "images/units/gettysburg-v5/union-a-march-se.png",
+      "json": "images/units/gettysburg-v5/union-a-march-se.json"
+    },
+    {
+      "key": "union-gettysburg-v6-actions-se",
+      "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+      "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+    },
+    {
+      "key": "union-gettysburg-v7-a-march-s",
+      "image": "images/units/gettysburg-v7/union-a-march-s.png",
+      "json": "images/units/gettysburg-v7/union-a-march-s.json"
+    },
+    {
+      "key": "union-gettysburg-v7-a-actions-s",
+      "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+      "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+    },
+    {
+      "key": "union-gettysburg-v7-b-march-s",
+      "image": "images/units/gettysburg-v7/union-b-march-s.png",
+      "json": "images/units/gettysburg-v7/union-b-march-s.json"
+    },
+    {
+      "key": "union-gettysburg-v7-b-actions-s",
+      "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+      "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+    },
+    {
+      "key": "confederate-gettysburg-v7-a-march-n",
+      "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+      "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+    },
+    {
+      "key": "confederate-gettysburg-v7-a-actions-n",
+      "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+      "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+    },
+    {
+      "key": "union-gettysburg-v8-a-march-sw",
+      "image": "images/units/gettysburg-v8/union-a-march-sw.png",
+      "json": "images/units/gettysburg-v8/union-a-march-sw.json"
+    },
+    {
+      "key": "union-gettysburg-v8-a-actions-sw",
+      "image": "images/units/gettysburg-v8/union-a-actions-sw.png",
+      "json": "images/units/gettysburg-v8/union-a-actions-sw.json"
+    },
+    {
+      "key": "union-gettysburg-v8-b-march-sw",
+      "image": "images/units/gettysburg-v8/union-b-march-sw.png",
+      "json": "images/units/gettysburg-v8/union-b-march-sw.json"
+    },
+    {
+      "key": "union-gettysburg-v8-b-actions-sw",
+      "image": "images/units/gettysburg-v8/union-b-actions-sw.png",
+      "json": "images/units/gettysburg-v8/union-b-actions-sw.json"
+    },
+    {
+      "key": "union-gettysburg-v9-a-march-w",
+      "image": "images/units/gettysburg-v9/union-a-march-w.png",
+      "json": "images/units/gettysburg-v9/union-a-march-w.json"
+    },
+    {
+      "key": "union-gettysburg-v9-a-actions-w",
+      "image": "images/units/gettysburg-v9/union-a-actions-w.png",
+      "json": "images/units/gettysburg-v9/union-a-actions-w.json"
+    },
+    {
+      "key": "union-gettysburg-v9-b-march-w",
+      "image": "images/units/gettysburg-v9/union-b-march-w.png",
+      "json": "images/units/gettysburg-v9/union-b-march-w.json"
+    },
+    {
+      "key": "union-gettysburg-v9-b-actions-w",
+      "image": "images/units/gettysburg-v9/union-b-actions-w.png",
+      "json": "images/units/gettysburg-v9/union-b-actions-w.json"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-march-ne",
+      "image": "images/units/gettysburg-v10/confederate-a-march-ne.png",
+      "json": "images/units/gettysburg-v10/confederate-a-march-ne.json"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-actions-ne",
+      "image": "images/units/gettysburg-v10/confederate-a-actions-ne.png",
+      "json": "images/units/gettysburg-v10/confederate-a-actions-ne.json"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-march-nw",
+      "image": "images/units/gettysburg-v10/confederate-a-march-nw.png",
+      "json": "images/units/gettysburg-v10/confederate-a-march-nw.json"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-actions-nw",
+      "image": "images/units/gettysburg-v10/confederate-a-actions-nw.png",
+      "json": "images/units/gettysburg-v10/confederate-a-actions-nw.json"
+    },
+    {
+      "key": "union-gettysburg-v11-b-march-e",
+      "image": "images/units/gettysburg-v11/union-b-march-e.png",
+      "json": "images/units/gettysburg-v11/union-b-march-e.json"
+    },
+    {
+      "key": "union-gettysburg-v11-b-actions-e",
+      "image": "images/units/gettysburg-v11/union-b-actions-e.png",
+      "json": "images/units/gettysburg-v11/union-b-actions-e.json"
+    },
+    {
+      "key": "union-gettysburg-v11-b-march-se",
+      "image": "images/units/gettysburg-v11/union-b-march-se.png",
+      "json": "images/units/gettysburg-v11/union-b-march-se.json"
+    },
+    {
+      "key": "union-gettysburg-v11-b-actions-se",
+      "image": "images/units/gettysburg-v11/union-b-actions-se.png",
+      "json": "images/units/gettysburg-v11/union-b-actions-se.json"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-march-e",
+      "image": "images/units/gettysburg-v13/confederate-a-march-e.png",
+      "json": "images/units/gettysburg-v13/confederate-a-march-e.json"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-actions-e",
+      "image": "images/units/gettysburg-v13/confederate-a-actions-e.png",
+      "json": "images/units/gettysburg-v13/confederate-a-actions-e.json"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-march-w",
+      "image": "images/units/gettysburg-v13/confederate-a-march-w.png",
+      "json": "images/units/gettysburg-v13/confederate-a-march-w.json"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-actions-w",
+      "image": "images/units/gettysburg-v13/confederate-a-actions-w.png",
+      "json": "images/units/gettysburg-v13/confederate-a-actions-w.json"
+    },
+    {
+      "key": "confederate-gettysburg-v14-a-march-s",
+      "image": "images/units/gettysburg-v14/confederate-a-march-s.png",
+      "json": "images/units/gettysburg-v14/confederate-a-march-s.json"
+    },
+    {
+      "key": "confederate-gettysburg-v14-a-actions-s",
+      "image": "images/units/gettysburg-v14/confederate-a-actions-s.png",
+      "json": "images/units/gettysburg-v14/confederate-a-actions-s.json"
+    },
+    {
+      "key": "confederate-gettysburg-v15-a-march-se",
+      "image": "images/units/gettysburg-v15/confederate-a-march-se.png",
+      "json": "images/units/gettysburg-v15/confederate-a-march-se.json"
+    },
+    {
+      "key": "confederate-gettysburg-v15-a-actions-se",
+      "image": "images/units/gettysburg-v15/confederate-a-actions-se.png",
+      "json": "images/units/gettysburg-v15/confederate-a-actions-se.json"
+    },
+    {
+      "key": "confederate-gettysburg-v15-a-march-sw",
+      "image": "images/units/gettysburg-v15/confederate-a-march-sw.png",
+      "json": "images/units/gettysburg-v15/confederate-a-march-sw.json"
+    },
+    {
+      "key": "confederate-gettysburg-v15-a-actions-sw",
+      "image": "images/units/gettysburg-v15/confederate-a-actions-sw.png",
+      "json": "images/units/gettysburg-v15/confederate-a-actions-sw.json"
+    },
+    {
+      "key": "confederate-gettysburg-v16-a-march-sw",
+      "image": "images/units/gettysburg-v16/confederate-a-march-sw.png",
+      "json": "images/units/gettysburg-v16/confederate-a-march-sw.json"
+    }
+  ],
+  "allPriorHashes": [
+    {
+      "key": "union-gettysburg-v3-march-e",
+      "image": "fe564b8374e48e3d1732e2d6e40d3809c950003c063762a123944759bcef8bca",
+      "json": "55ac4104e1fc32970ea9d7dea6e27f5a3db413791e0e7a3736a953c2b66f63d3"
+    },
+    {
+      "key": "union-gettysburg-v4-march-e",
+      "image": "43b8f4394b6071958b693d83c14eb7f324e277706bd5513d23b536467e9f6a42",
+      "json": "8d9fb8d427508147fc50fe58dd16f3ce33469ad95762dbab383a67172b2b3b95"
+    },
+    {
+      "key": "union-gettysburg-v4-actions-e",
+      "image": "3e0ef9a0a0de5be7a5f10e16a703a611441088d5c39e081a0e11d7d436ad5c4a",
+      "json": "4715495e6bd71a5188ec835539f769ab68f0e47c759cc352fb6e0ad5da2e37d0"
+    },
+    {
+      "key": "union-gettysburg-v5-actions-e",
+      "image": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f",
+      "json": "250642ff8d84cb9c8afbeb0b078e5bbded154dcf60b08c976838081dffa9b7e5"
+    },
+    {
+      "key": "union-gettysburg-v5-march-se",
+      "image": "90a124967a778789bcdbaf5b83fc0cba689f145486450ba775798ec106bfc103",
+      "json": "0cfce543040bd6e9e44c699aec9ead6a7e3284df77b4099c469444454056d56d"
+    },
+    {
+      "key": "union-gettysburg-v6-actions-se",
+      "image": "bd4650f0d15bf5abf612ebfd01edecf9560c7a459b96e2643ad76ca5d023b61e",
+      "json": "a6bc23ebb20ddaf3910de0b50019834126d3886c48518504fd79be2ea7ce1a9f"
+    },
+    {
+      "key": "union-gettysburg-v7-a-march-s",
+      "image": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000",
+      "json": "a3e1ae063aa5ac954d4b4286cd7069c0482f67de692f6b4c339c5551b51945e7"
+    },
+    {
+      "key": "union-gettysburg-v7-a-actions-s",
+      "image": "fe4b4a0a531f6e4e6709fa747393d4fa6cc6e5e13ced71fd287c4cd440d1e1c2",
+      "json": "f8b54ff60597eb1e233416791b4ec5ebaf673b105afd46b4654982b2f0e3d7b5"
+    },
+    {
+      "key": "union-gettysburg-v7-b-march-s",
+      "image": "544dd143918b18af8807e34a406affe7c83b23378a554d5f88a12586cc16ef68",
+      "json": "4422c81a318865e49fc76883c3c2366bfe565019b7aab4cb91bb6adf08026bd9"
+    },
+    {
+      "key": "union-gettysburg-v7-b-actions-s",
+      "image": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c",
+      "json": "ac4f24a5d8b4a7e67416c3c196dd4e76ae7e225c55c6b8a9eb6c19baa1c122d6"
+    },
+    {
+      "key": "confederate-gettysburg-v7-a-march-n",
+      "image": "cf9e0535f7dd581b815940c32a35d51b4ec573d92c6a3cdfbaf4bb74ccc10e64",
+      "json": "5ad3e3547f43780b233efa07c659b4f8491666c5cca928826acaca7ecc4b83a5"
+    },
+    {
+      "key": "confederate-gettysburg-v7-a-actions-n",
+      "image": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0",
+      "json": "0052a95fcb51150470b7c7d9b86690fcf3f7ef82178bb22ce5c78c49fb821653"
+    },
+    {
+      "key": "union-gettysburg-v8-a-march-sw",
+      "image": "94f87dfa8bd853789be2459f5f5405507421f1447ccf553f4723293c2a29fe6b",
+      "json": "d3a50ecbbbe88fa715c286d467c43249011028db034742dc603de4dd238c029d"
+    },
+    {
+      "key": "union-gettysburg-v8-a-actions-sw",
+      "image": "485b13ee60360562d3ee5d0e93311f223971880622735ecdb5b6dd4d9e7f5a16",
+      "json": "b8f008e5a51762cb54d6c7bf76f7f7b93b4cad319a686a353226295f62175c2d"
+    },
+    {
+      "key": "union-gettysburg-v8-b-march-sw",
+      "image": "fbe92c00f29cdd11bf79970601a7668b1c17050a6b8952a514bcff8c14a02452",
+      "json": "e2eb138e9be6f22e36d67059c102ecbd6231711ddff0a5fd24415e4a58aabfd8"
+    },
+    {
+      "key": "union-gettysburg-v8-b-actions-sw",
+      "image": "e98918507e6eadc38fe828814782c95a51f132ab918fdacfa185d8660e15d8af",
+      "json": "c87e4cd17804d224dd55f28a9e0a817b61096cf61e4dd97188f3f5a511cca6f9"
+    },
+    {
+      "key": "union-gettysburg-v9-a-march-w",
+      "image": "8548f147d8021126f8bc4ce3069983dd7bf5eb29429a1fbafb1401e0f0d5acbb",
+      "json": "f060336aa7f42eb0c6f4c29ccc3edf0792977d10a2edd956c59f6df90b9698b3"
+    },
+    {
+      "key": "union-gettysburg-v9-a-actions-w",
+      "image": "3676bb60c6c4373cd1176e30b4079ad68cebb94de26fe7bea582dd675b936d96",
+      "json": "b19217a43bc3b745ab0b3a2a75022898b543e788e06259d585058a8d0a6c44cc"
+    },
+    {
+      "key": "union-gettysburg-v9-b-march-w",
+      "image": "7842f97c0ea99f1683b8f138bd6411744cbed1e9326b2d061c2b40c7696e7aaf",
+      "json": "48a792b18f5c035e2bebe7ff06ba1b6c529539a0e857a4541db65066755fc5c1"
+    },
+    {
+      "key": "union-gettysburg-v9-b-actions-w",
+      "image": "81b66db974e4f026083fe60abe6670461afd7853ea33a845dd7f39aac0d7d35f",
+      "json": "40209a3bafd5a7ac5207bde5e8a20b8a2a69e49de0b0449e4608d435305794aa"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-march-ne",
+      "image": "48f4c9537b8326d7d1451da727aae73161661ae408fd32ecb467d5d412d26b3d",
+      "json": "66bb7eab80d48052f118c0092a863138923631520b644ecd3403b88ccfd8937e"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-actions-ne",
+      "image": "3036c2de71157958023a82c7034ace597bba02d7b8bad6d09fa7b8e289e98a85",
+      "json": "1f55d2a371d997e3c6b031eb9ca82f426497844315f05f82257ad8177732a7ed"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-march-nw",
+      "image": "b66a59f4135fdf91f9b6750fb918552603055b6917497ea9934b27d9765d1a69",
+      "json": "a7e3bcedf6ebc33c84a6e8ef534c58b65df8ec038120fdb3cdde6ddda96a73b6"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-actions-nw",
+      "image": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0",
+      "json": "5b0b54f298b758523a978590a1eb056e2b664c908a5006b27fa7ac6923773c00"
+    },
+    {
+      "key": "union-gettysburg-v11-b-march-e",
+      "image": "5f15de11f707a965564bbddae925a302ab7e8119276408e29f0a177783e5290a",
+      "json": "6e0579a9d7d94ab85ec3b66bbcec02c9ed82502714d3b8abf5ad6293fa801585"
+    },
+    {
+      "key": "union-gettysburg-v11-b-actions-e",
+      "image": "5aebc319115ad65a7bc23089e5962ae4975a6a1a9db11a5fcce8a9c13c1780e1",
+      "json": "6cc1412d5997287fc1eadef4bffd79f536d3ad2b46d19e1d75e0d4b2297ba379"
+    },
+    {
+      "key": "union-gettysburg-v11-b-march-se",
+      "image": "9efcc748a6d6860f6248c72b3384d62220db6e76a7e60f7efb35e36a811052b7",
+      "json": "17d8a6332ab2b6588b695074f030eb3bed362746be5549fccf82c8e7141a5672"
+    },
+    {
+      "key": "union-gettysburg-v11-b-actions-se",
+      "image": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6",
+      "json": "204d753490b0e076dee8707b80f21045aee36e1023878e257cb4da01f5993358"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-march-e",
+      "image": "2e7f6b41f065f01a813db6cb57c3146ab514957ee49232f3004b0d60788dcd99",
+      "json": "0f7dc2724e1099717f3146b0927de378231322ebf2bafd01b3f2ae6feddcbdb6"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-actions-e",
+      "image": "6aa46680436709a13d502c2bbbb3b1202377ef10575ed7155e77d7208124d861",
+      "json": "c1fc477d5e82cfb02f241017aef25534bed70dbfcb30a3031d8ecea1fe9cadac"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-march-w",
+      "image": "ab28e7c28ee6be3b17a833cbc3b627f3961dfbb8d9efef93c4ecc07482ed9981",
+      "json": "233be3ec0a9cb4091967b14b522c5419ac1babc7d4722b66d99db22dbf4b4fee"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-actions-w",
+      "image": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b",
+      "json": "4e5c1d57316cd11d416f5719ff918bbdbcb68cad2e522cb6a8bc41cbc5be5e8c"
+    },
+    {
+      "key": "confederate-gettysburg-v14-a-march-s",
+      "image": "a41a75bfa5874661e9c8f333f5bc9d2aecce9cf7cedc8e7add940dcc3678f26c",
+      "json": "ffb41bb5da9375e1b16999ac19e15252fa4e18b1d14dc7b9623bfd7f9cb8dd04"
+    },
+    {
+      "key": "confederate-gettysburg-v14-a-actions-s",
+      "image": "cbc0c38d83a73b934ea3e69cbf4ed7a0b4da23a3c5d27d5af002ac2610faf2b1",
+      "json": "dea42c89d6b1b2b8e54c3872122c2e030fe10ddf9c9060d5f155fc25f1152bd7"
+    },
+    {
+      "key": "confederate-gettysburg-v15-a-march-se",
+      "image": "b82669f342a640e0d980fe58ee0bbe6e781bae78db3797f9dc46b7608dcf011c",
+      "json": "0b636b1c98d0f1cff37d4a8eb1ee28057c766204f5fa2151d8d478509f0bb93d"
+    },
+    {
+      "key": "confederate-gettysburg-v15-a-actions-se",
+      "image": "94dbce4e33aaa22cd07ee83c6831dac37c999544e5ddad4e63a0f9256bc02e51",
+      "json": "363dc062a53ddb8dc20e7910869f4d5164c9a0e5d60976a929b63b363d5d02dd"
+    },
+    {
+      "key": "confederate-gettysburg-v15-a-march-sw",
+      "image": "e75aa92762f09338f9d5d577a010d1025eed81ff36321d2fb275e0663db32f43",
+      "json": "b00f699fc9b6a2af8b5f798901bc6be7c320f48353b9406dec652c9bc3191357"
+    },
+    {
+      "key": "confederate-gettysburg-v15-a-actions-sw",
+      "image": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d",
+      "json": "f30b30d7c73c07a0bf8fede5ee630973833062f7c557569c963d9d8baeb35c7b"
+    },
+    {
+      "key": "confederate-gettysburg-v16-a-march-sw",
+      "image": "cbd83756f656a82abf57d9b00eebdb2ad02447a8365144d3ac11d6e79d2a603c",
+      "json": "d62cf6d5fe1d1ad1c17e5aaafaa67dd19619aa450ff91bc3153226657054e25c"
+    }
+  ],
+  "protectedModules": [
+    {
+      "path": "src/battle/CivilWarBattlefield.jsx",
+      "sha256": "c3817e4f2454ce6b6abdd9b889ecdc82881f05797b5c80ef2bf6c2a08b699f3d"
+    },
+    {
+      "path": "src/battle/formationVisualState.js",
+      "sha256": "b387ee4e4a52fe921ec2a3a5d83d764bd6e8dcd619dbc91d6f0d38a384531389"
+    },
+    {
+      "path": "src/battle/formationVisualCheckpoint.js",
+      "sha256": "292dde64f05884c383c0dc74bf9319aea796a051b4ae4c7a723ee729ff4e8b65"
+    },
+    {
+      "path": "src/battle/gettysburgInfantryClips.js",
+      "sha256": "8ddc01b9c28c3870a1bcb100b720fe71a6d200de797b87761b235ef300a680ee"
+    },
+    {
+      "path": "src/battle/gettysburgInfantryShotMotion.js",
+      "sha256": "cd375a89d2d2da580138a7f50f998b4799da91d4ad113e158a52700a063ee1d1"
+    },
+    {
+      "path": "src/battle/civilWarEngine.js",
+      "sha256": "e0c7ac497c267bf178288e61bc08e985d6a3246a740ac36e16ea416747d1fa1c"
+    },
+    {
+      "path": "src/battle/gettysburgMechanics.js",
+      "sha256": "ac3175e1a3a39801d258168ad7cc62a89d6c16fabf85832ec240f2f8c9a2fc55"
+    },
+    {
+      "path": "src/game/campaignStorage.js",
+      "sha256": "88d3108ebc429df7c7b8174627680fe17342370d14bc8853f2dc7911e1281dea"
+    }
+  ],
+  "clipHash": "4b682f5c85e135be26f1ec73202d4be1ca3f335011a8756ae4c0cec08fada73d",
+  "addresses": [
+    {
+      "address": [
+        "union",
+        "a",
+        0,
+        "march"
+      ],
+      "key": "union-gettysburg-v4-march-e",
+      "frames": [
+        "a-march-0-0",
+        "a-march-0-1",
+        "a-march-0-2",
+        "a-march-0-3"
+      ],
+      "rows": 1792,
+      "poseHash": "3a0bb2e9ba229f0f2b7a3b259f0f44edbc5eb96aca0c6a9c6fa89d6b98134dbc"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        0,
+        "ready"
+      ],
+      "key": "union-gettysburg-v5-actions-e",
+      "frames": [
+        "a-ready-0-0"
+      ],
+      "rows": 1792,
+      "poseHash": "08f13dc7eaf940c0f580e56666b2b6f6051cc25573d29de62f6ef877012abb98"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        0,
+        "fire"
+      ],
+      "key": "union-gettysburg-v5-actions-e",
+      "frames": [
+        "a-fire-0-0"
+      ],
+      "rows": 896,
+      "poseHash": "48210cc70ee840023dca1d2d1e731706afa062dbd46ed8852f60bae45a9bfd7b"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        0,
+        "reload"
+      ],
+      "key": "union-gettysburg-v5-actions-e",
+      "frames": [
+        "a-reload-0-0",
+        "a-reload-0-1"
+      ],
+      "rows": 896,
+      "poseHash": "3c27b20a5290d1097cbb4c1ed0e13e48a02f00ddd532dfba4a3114ffd4f1e575"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        1,
+        "march"
+      ],
+      "key": "union-gettysburg-v5-march-se",
+      "frames": [
+        "a-march-1-0",
+        "a-march-1-1",
+        "a-march-1-2",
+        "a-march-1-3"
+      ],
+      "rows": 1792,
+      "poseHash": "2d6fc00cccb06ad26a509618c8068a6faf411243f254ef66d3b2c92bddba401b"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        1,
+        "ready"
+      ],
+      "key": "union-gettysburg-v6-actions-se",
+      "frames": [
+        "a-ready-1-0"
+      ],
+      "rows": 1792,
+      "poseHash": "cab7fce83f9676df2d8ff2989bad8d913645f8f2c028b88cec7af93ab6706cd9"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        1,
+        "fire"
+      ],
+      "key": "union-gettysburg-v6-actions-se",
+      "frames": [
+        "a-fire-1-0"
+      ],
+      "rows": 896,
+      "poseHash": "a2fbf97bcbfbfb83c525e8bcad5c47126f986298ae0ca2af7c376b739cef7fcb"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        1,
+        "reload"
+      ],
+      "key": "union-gettysburg-v6-actions-se",
+      "frames": [
+        "a-reload-1-0",
+        "a-reload-1-1"
+      ],
+      "rows": 896,
+      "poseHash": "135c80ec886a15e4ff9fa0b5045f74c21095406e725f85bba49c59edc2d38e0d"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        2,
+        "march"
+      ],
+      "key": "union-gettysburg-v7-a-march-s",
+      "frames": [
+        "a-march-2-0",
+        "a-march-2-1",
+        "a-march-2-2",
+        "a-march-2-3"
+      ],
+      "rows": 1792,
+      "poseHash": "8a669c1efbdd05c5d9203e054e762796a293e493c61dadc7ea60c9a89543cd13"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        2,
+        "ready"
+      ],
+      "key": "union-gettysburg-v7-a-actions-s",
+      "frames": [
+        "a-ready-2-0"
+      ],
+      "rows": 1792,
+      "poseHash": "93130be16693da890f847a63e9fa20090fcc527bc76ad686e341bcadf06afe04"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        2,
+        "fire"
+      ],
+      "key": "union-gettysburg-v7-a-actions-s",
+      "frames": [
+        "a-fire-2-0"
+      ],
+      "rows": 896,
+      "poseHash": "af6c3ffc11d5637a1b06fe3b995937f8eb92e607f94a697934c58362702f41b3"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        2,
+        "reload"
+      ],
+      "key": "union-gettysburg-v7-a-actions-s",
+      "frames": [
+        "a-reload-2-0",
+        "a-reload-2-1"
+      ],
+      "rows": 896,
+      "poseHash": "c3b43f1d33d071fcb9db7a374aecd1c33d2840779e2855e2ff170e17e3d8e191"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        2,
+        "march"
+      ],
+      "key": "union-gettysburg-v7-b-march-s",
+      "frames": [
+        "b-march-2-0",
+        "b-march-2-1",
+        "b-march-2-2",
+        "b-march-2-3"
+      ],
+      "rows": 1792,
+      "poseHash": "1c6af61aa4836d02640a7b9febfcb6fe58b762ff98c3fa0aa579cc498b61c245"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        2,
+        "ready"
+      ],
+      "key": "union-gettysburg-v7-b-actions-s",
+      "frames": [
+        "b-ready-2-0"
+      ],
+      "rows": 1792,
+      "poseHash": "a753b67924cdf2344284180d16df6286b04e69b823d56f0f7b3e532a1ae3482c"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        2,
+        "fire"
+      ],
+      "key": "union-gettysburg-v7-b-actions-s",
+      "frames": [
+        "b-fire-2-0"
+      ],
+      "rows": 896,
+      "poseHash": "9ef2e6aaaae505a1f1b222abe688fabea9bc11e30cb04ec7b9dd3b99b8d21cac"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        2,
+        "reload"
+      ],
+      "key": "union-gettysburg-v7-b-actions-s",
+      "frames": [
+        "b-reload-2-0",
+        "b-reload-2-1"
+      ],
+      "rows": 896,
+      "poseHash": "73c159a5a4ed8fe6f62dbb6c84d497873470195beae8a6c2b0b251f87d53f957"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        6,
+        "march"
+      ],
+      "key": "confederate-gettysburg-v7-a-march-n",
+      "frames": [
+        "a-march-6-0",
+        "a-march-6-1",
+        "a-march-6-2",
+        "a-march-6-3"
+      ],
+      "rows": 1792,
+      "poseHash": "17ba76bf845b1d14b1d4b1fbb5ae222ed53720c17b4e99987a1dd83374a3337f"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        6,
+        "ready"
+      ],
+      "key": "confederate-gettysburg-v7-a-actions-n",
+      "frames": [
+        "a-ready-6-0"
+      ],
+      "rows": 1792,
+      "poseHash": "76d66d67cd3e122cf64774e984666ef9e7266e0148929f429f148c022b59a26c"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        6,
+        "fire"
+      ],
+      "key": "confederate-gettysburg-v7-a-actions-n",
+      "frames": [
+        "a-fire-6-0"
+      ],
+      "rows": 896,
+      "poseHash": "e1ed80c0d6e9a7e823415176453055b9213694a6a438d7bba578baef9f1af1a4"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        6,
+        "reload"
+      ],
+      "key": "confederate-gettysburg-v7-a-actions-n",
+      "frames": [
+        "a-reload-6-0",
+        "a-reload-6-1"
+      ],
+      "rows": 896,
+      "poseHash": "812032af1287bda06ba9b8c38cb9c4e6e74b9a870fe41fbb1569cf4e103402f6"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        3,
+        "march"
+      ],
+      "key": "union-gettysburg-v8-a-march-sw",
+      "frames": [
+        "a-march-3-0",
+        "a-march-3-1",
+        "a-march-3-2",
+        "a-march-3-3"
+      ],
+      "rows": 1792,
+      "poseHash": "2905ee2a12349a8fbf15c908c73b29538e7280e857fe3dbd448ac57f5b639072"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        3,
+        "ready"
+      ],
+      "key": "union-gettysburg-v8-a-actions-sw",
+      "frames": [
+        "a-ready-3-0"
+      ],
+      "rows": 1792,
+      "poseHash": "a02be275903d1ca535e1d72cfd11c82e498dfd4a6ad000e1e600f366de0b52b5"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        3,
+        "fire"
+      ],
+      "key": "union-gettysburg-v8-a-actions-sw",
+      "frames": [
+        "a-fire-3-0"
+      ],
+      "rows": 896,
+      "poseHash": "94599a3f837757440414cd13e046fbe6be20ba511c131193c826e7893f595715"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        3,
+        "reload"
+      ],
+      "key": "union-gettysburg-v8-a-actions-sw",
+      "frames": [
+        "a-reload-3-0",
+        "a-reload-3-1"
+      ],
+      "rows": 896,
+      "poseHash": "e058bae53e581f9c048c78aec00c72d9017eec56b0cec5f92817f11080e413b6"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        3,
+        "march"
+      ],
+      "key": "union-gettysburg-v8-b-march-sw",
+      "frames": [
+        "b-march-3-0",
+        "b-march-3-1",
+        "b-march-3-2",
+        "b-march-3-3"
+      ],
+      "rows": 1792,
+      "poseHash": "16db08ce1799db5a468e8fe9eeb69e84dbb5836dfa1f17a3e2bf61a28d83d4cf"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        3,
+        "ready"
+      ],
+      "key": "union-gettysburg-v8-b-actions-sw",
+      "frames": [
+        "b-ready-3-0"
+      ],
+      "rows": 1792,
+      "poseHash": "e8d1e7c1b8018d9acd2c2de45ca3853fcaa3d4fcaa0690f896272aa1885d9f39"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        3,
+        "fire"
+      ],
+      "key": "union-gettysburg-v8-b-actions-sw",
+      "frames": [
+        "b-fire-3-0"
+      ],
+      "rows": 896,
+      "poseHash": "d8477f93ade65eada35adde8a39ca2d7b2ac95e820c60af3a0bc9fc2b5ad1ae5"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        3,
+        "reload"
+      ],
+      "key": "union-gettysburg-v8-b-actions-sw",
+      "frames": [
+        "b-reload-3-0",
+        "b-reload-3-1"
+      ],
+      "rows": 896,
+      "poseHash": "a058d550ceed605a96976019b9c4d2e29b5e6eed3b076430be5a0b3a4850a5dd"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        4,
+        "march"
+      ],
+      "key": "union-gettysburg-v9-a-march-w",
+      "frames": [
+        "a-march-4-0",
+        "a-march-4-1",
+        "a-march-4-2",
+        "a-march-4-3"
+      ],
+      "rows": 1792,
+      "poseHash": "6437457f58c55706343ae490056b8dea43c1583493a1decaf461ba8d8eeff615"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        4,
+        "ready"
+      ],
+      "key": "union-gettysburg-v9-a-actions-w",
+      "frames": [
+        "a-ready-4-0"
+      ],
+      "rows": 1792,
+      "poseHash": "cc9e32d0cb51218b758d398bcb16cd867446d4a09c79c8f8cd7e8c3512deaeb7"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        4,
+        "fire"
+      ],
+      "key": "union-gettysburg-v9-a-actions-w",
+      "frames": [
+        "a-fire-4-0"
+      ],
+      "rows": 896,
+      "poseHash": "4eb7f0a2a233391eea42e13b913d2ef7442cdd263b7c28dfccc1db8288b6f58b"
+    },
+    {
+      "address": [
+        "union",
+        "a",
+        4,
+        "reload"
+      ],
+      "key": "union-gettysburg-v9-a-actions-w",
+      "frames": [
+        "a-reload-4-0",
+        "a-reload-4-1"
+      ],
+      "rows": 896,
+      "poseHash": "440e123bce582d5b761891cd00d3a7c637a92b827ec48a49e70c37a5e5c6eea7"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        4,
+        "march"
+      ],
+      "key": "union-gettysburg-v9-b-march-w",
+      "frames": [
+        "b-march-4-0",
+        "b-march-4-1",
+        "b-march-4-2",
+        "b-march-4-3"
+      ],
+      "rows": 1792,
+      "poseHash": "c5b5b37d57a780ab865fce7bbef54e2bc412fbbeffb00cc7deb1314d75ec9f00"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        4,
+        "ready"
+      ],
+      "key": "union-gettysburg-v9-b-actions-w",
+      "frames": [
+        "b-ready-4-0"
+      ],
+      "rows": 1792,
+      "poseHash": "df569705e697fada6da73e9e03a1554a3b25c278dbce39f1a147ec75abf847e0"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        4,
+        "fire"
+      ],
+      "key": "union-gettysburg-v9-b-actions-w",
+      "frames": [
+        "b-fire-4-0"
+      ],
+      "rows": 896,
+      "poseHash": "0aa2b4ee987aedd92ee6ffdf2453571ff7b4c09f0cafd8cae27a3ff65fd9a3d0"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        4,
+        "reload"
+      ],
+      "key": "union-gettysburg-v9-b-actions-w",
+      "frames": [
+        "b-reload-4-0",
+        "b-reload-4-1"
+      ],
+      "rows": 896,
+      "poseHash": "cd4d5029810d901712ab0cfd2eeb6fb241955a3feccabf494a3a622df49764a7"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        7,
+        "march"
+      ],
+      "key": "confederate-gettysburg-v10-a-march-ne",
+      "frames": [
+        "a-march-7-0",
+        "a-march-7-1",
+        "a-march-7-2",
+        "a-march-7-3"
+      ],
+      "rows": 1792,
+      "poseHash": "bd8ba504635c1d08ce2119ac21bb6841df6c1e548786f5451b4924de02fe9fcb"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        7,
+        "ready"
+      ],
+      "key": "confederate-gettysburg-v10-a-actions-ne",
+      "frames": [
+        "a-ready-7-0"
+      ],
+      "rows": 1792,
+      "poseHash": "f9342dfef7efda1fbe96dee793560c4591d4a79cd3b1339a243c0c2ff247a9b2"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        7,
+        "fire"
+      ],
+      "key": "confederate-gettysburg-v10-a-actions-ne",
+      "frames": [
+        "a-fire-7-0"
+      ],
+      "rows": 896,
+      "poseHash": "412581c44e48d1fd0779275485d0cdbb78b956252b4287c54884f910b4db16ba"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        7,
+        "reload"
+      ],
+      "key": "confederate-gettysburg-v10-a-actions-ne",
+      "frames": [
+        "a-reload-7-0",
+        "a-reload-7-1"
+      ],
+      "rows": 896,
+      "poseHash": "fdab224bd0626830e7f6e4dd315d245743093f87af79c09c75da57a211dbaf99"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        5,
+        "march"
+      ],
+      "key": "confederate-gettysburg-v10-a-march-nw",
+      "frames": [
+        "a-march-5-0",
+        "a-march-5-1",
+        "a-march-5-2",
+        "a-march-5-3"
+      ],
+      "rows": 1792,
+      "poseHash": "9fc0d5fb3be100cde75a7dc4470ccbd7d0a258b3d4c85d76905a93ec639dddf4"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        5,
+        "ready"
+      ],
+      "key": "confederate-gettysburg-v10-a-actions-nw",
+      "frames": [
+        "a-ready-5-0"
+      ],
+      "rows": 1792,
+      "poseHash": "dbc2c16a30ec1d5e3ea1ec7185b553ad210399fbc036cf31c73b3b5c61e3fe32"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        5,
+        "fire"
+      ],
+      "key": "confederate-gettysburg-v10-a-actions-nw",
+      "frames": [
+        "a-fire-5-0"
+      ],
+      "rows": 896,
+      "poseHash": "0518ce57e45c0ba0a964d6232b5480bf951ac50ae737cdbbd4f41fe4286518dc"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        5,
+        "reload"
+      ],
+      "key": "confederate-gettysburg-v10-a-actions-nw",
+      "frames": [
+        "a-reload-5-0",
+        "a-reload-5-1"
+      ],
+      "rows": 896,
+      "poseHash": "8c4179eaa47db02fb9b8e3fc9d51c09850517e3dcfead87052da1beeeb1784e5"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        0,
+        "march"
+      ],
+      "key": "union-gettysburg-v11-b-march-e",
+      "frames": [
+        "b-march-0-0",
+        "b-march-0-1",
+        "b-march-0-2",
+        "b-march-0-3"
+      ],
+      "rows": 1792,
+      "poseHash": "a35cc8e1cdd61b36c73983f507af5f85aeaae98c27fccc4ed190c2e22a5e22a8"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        0,
+        "ready"
+      ],
+      "key": "union-gettysburg-v11-b-actions-e",
+      "frames": [
+        "b-ready-0-0"
+      ],
+      "rows": 1792,
+      "poseHash": "48cbe63ff8b1193c7381b5f8774da27dcbd52db28ca4782818a5e72f6b284c72"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        0,
+        "fire"
+      ],
+      "key": "union-gettysburg-v11-b-actions-e",
+      "frames": [
+        "b-fire-0-0"
+      ],
+      "rows": 896,
+      "poseHash": "e4f20bd49bf316de9ab23fa71f4788cfe022795488f0714e32e7ec199d72ce47"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        0,
+        "reload"
+      ],
+      "key": "union-gettysburg-v11-b-actions-e",
+      "frames": [
+        "b-reload-0-0",
+        "b-reload-0-1"
+      ],
+      "rows": 896,
+      "poseHash": "0e0c1105821e7c3b727220939dc8616d2c975bfe8702e3a3c5085f7e98ff6db2"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        1,
+        "march"
+      ],
+      "key": "union-gettysburg-v11-b-march-se",
+      "frames": [
+        "b-march-1-0",
+        "b-march-1-1",
+        "b-march-1-2",
+        "b-march-1-3"
+      ],
+      "rows": 1792,
+      "poseHash": "109e6564c6db188e3b243f40903d5100252f2169c5458f552c44d2c93506f557"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        1,
+        "ready"
+      ],
+      "key": "union-gettysburg-v11-b-actions-se",
+      "frames": [
+        "b-ready-1-0"
+      ],
+      "rows": 1792,
+      "poseHash": "3858c6c21a002c2973c318a8675f961efdc86253c822f0762edc5bcae52428e2"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        1,
+        "fire"
+      ],
+      "key": "union-gettysburg-v11-b-actions-se",
+      "frames": [
+        "b-fire-1-0"
+      ],
+      "rows": 896,
+      "poseHash": "ac34403ad6384e4b6d791dfee2728475914aed24fc3c777b8bc26dcb620579fd"
+    },
+    {
+      "address": [
+        "union",
+        "b",
+        1,
+        "reload"
+      ],
+      "key": "union-gettysburg-v11-b-actions-se",
+      "frames": [
+        "b-reload-1-0",
+        "b-reload-1-1"
+      ],
+      "rows": 896,
+      "poseHash": "930c7717fb4fc55835324b7193f577f838e4f1b01a803ee2dbc4e9d58f44dc00"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        0,
+        "march"
+      ],
+      "key": "confederate-gettysburg-v13-a-march-e",
+      "frames": [
+        "a-march-0-0",
+        "a-march-0-1",
+        "a-march-0-2",
+        "a-march-0-3"
+      ],
+      "rows": 1792,
+      "poseHash": "96d6d004c6dc38d62e4f1a4caaf579b9dd9deb024baebcbc1dfd239cd77e66de"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        0,
+        "ready"
+      ],
+      "key": "confederate-gettysburg-v13-a-actions-e",
+      "frames": [
+        "a-ready-0-0"
+      ],
+      "rows": 1792,
+      "poseHash": "764a3e8b149275dafca655ee395f04db1a5e7d2521218db606ad2c5d21017350"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        0,
+        "fire"
+      ],
+      "key": "confederate-gettysburg-v13-a-actions-e",
+      "frames": [
+        "a-fire-0-0"
+      ],
+      "rows": 896,
+      "poseHash": "4eb37b0d6d56f2dd44edb280e09d32fb2e7e0ece498e6723446a8da96c9b5da9"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        0,
+        "reload"
+      ],
+      "key": "confederate-gettysburg-v13-a-actions-e",
+      "frames": [
+        "a-reload-0-0",
+        "a-reload-0-1"
+      ],
+      "rows": 896,
+      "poseHash": "58577609a25a6e15eeb7d758ab4fb584fbc388dd9c047746178e5766761d735f"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        4,
+        "march"
+      ],
+      "key": "confederate-gettysburg-v13-a-march-w",
+      "frames": [
+        "a-march-4-0",
+        "a-march-4-1",
+        "a-march-4-2",
+        "a-march-4-3"
+      ],
+      "rows": 1792,
+      "poseHash": "3de412ba17c0afa609758dcb2787ac6acb18df446cb71ba6f50548255d6e5162"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        4,
+        "ready"
+      ],
+      "key": "confederate-gettysburg-v13-a-actions-w",
+      "frames": [
+        "a-ready-4-0"
+      ],
+      "rows": 1792,
+      "poseHash": "35edeb6dd3e25bb3a19a38ceab63bbe8483bbb581987cf579e7a6dafdc3f8efd"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        4,
+        "fire"
+      ],
+      "key": "confederate-gettysburg-v13-a-actions-w",
+      "frames": [
+        "a-fire-4-0"
+      ],
+      "rows": 896,
+      "poseHash": "b07642cb3b6b7275f3dec32657730fe183c4451ef06c827545b9214cfbfb0354"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        4,
+        "reload"
+      ],
+      "key": "confederate-gettysburg-v13-a-actions-w",
+      "frames": [
+        "a-reload-4-0",
+        "a-reload-4-1"
+      ],
+      "rows": 896,
+      "poseHash": "a98b966004f70b768e53cf834bf0b52e92dacf73028664504eac64505da3ae91"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        2,
+        "march"
+      ],
+      "key": "confederate-gettysburg-v14-a-march-s",
+      "frames": [
+        "a-march-2-0",
+        "a-march-2-1",
+        "a-march-2-2",
+        "a-march-2-3"
+      ],
+      "rows": 1792,
+      "poseHash": "3c562053160b32236e3f464c65710a047562e90f3ff159251387a45b913ee952"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        2,
+        "ready"
+      ],
+      "key": "confederate-gettysburg-v14-a-actions-s",
+      "frames": [
+        "a-ready-2-0"
+      ],
+      "rows": 1792,
+      "poseHash": "627123250cad6e1635186990bfa37b3a8ea38bff05c27024d05eab1afa72d984"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        2,
+        "fire"
+      ],
+      "key": "confederate-gettysburg-v14-a-actions-s",
+      "frames": [
+        "a-fire-2-0"
+      ],
+      "rows": 896,
+      "poseHash": "b39f3d682017ec3d3f6a8aadd8cfd8a2b3e2de67db3d424570fc9a160b23e503"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        2,
+        "reload"
+      ],
+      "key": "confederate-gettysburg-v14-a-actions-s",
+      "frames": [
+        "a-reload-2-0",
+        "a-reload-2-1"
+      ],
+      "rows": 896,
+      "poseHash": "234b0d2683d7f4e8a18e581d59b0234c9afb18694dea2ace2dfe0002bebdd229"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        1,
+        "march"
+      ],
+      "key": "confederate-gettysburg-v15-a-march-se",
+      "frames": [
+        "a-march-1-0",
+        "a-march-1-1",
+        "a-march-1-2",
+        "a-march-1-3"
+      ],
+      "rows": 1792,
+      "poseHash": "3c7a7fe70e382993113e890b62ee5eebf3e626ff0947d28f614bc8a4af7c1e32"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        1,
+        "ready"
+      ],
+      "key": "confederate-gettysburg-v15-a-actions-se",
+      "frames": [
+        "a-ready-1-0"
+      ],
+      "rows": 1792,
+      "poseHash": "4e804d35d514947751067b59c8d9db7b08294c3c955893cda492ab4f1064e7b5"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        1,
+        "fire"
+      ],
+      "key": "confederate-gettysburg-v15-a-actions-se",
+      "frames": [
+        "a-fire-1-0"
+      ],
+      "rows": 896,
+      "poseHash": "df1ea066545e90524574e33bca3bb425be4209f213b3e83bde3a4b413030b1cd"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        1,
+        "reload"
+      ],
+      "key": "confederate-gettysburg-v15-a-actions-se",
+      "frames": [
+        "a-reload-1-0",
+        "a-reload-1-1"
+      ],
+      "rows": 896,
+      "poseHash": "8b4ec765f54c5a7b71f4953c3dc512c575513c5a310ec3dd8c69d3c15e04be64"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        3,
+        "march"
+      ],
+      "key": "confederate-gettysburg-v16-a-march-sw",
+      "frames": [
+        "a-march-3-0",
+        "a-march-3-1",
+        "a-march-3-2",
+        "a-march-3-3"
+      ],
+      "rows": 1792,
+      "poseHash": "0edc8f3fc0a9ef6e4a4b6e1371729773fe2c5a41f01baaad61b8d7c4bfb36666"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        3,
+        "ready"
+      ],
+      "key": "confederate-gettysburg-v15-a-actions-sw",
+      "frames": [
+        "a-ready-3-0"
+      ],
+      "rows": 1792,
+      "poseHash": "bc6c4a9a59c986da24373caf4ca6c98d18b04670fea1d173a5d6705db2fd30fb"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        3,
+        "fire"
+      ],
+      "key": "confederate-gettysburg-v15-a-actions-sw",
+      "frames": [
+        "a-fire-3-0"
+      ],
+      "rows": 896,
+      "poseHash": "434a0dfebd689964ac64df87dab094c60fb42b6f610daa1ceade5bfa77a6d629"
+    },
+    {
+      "address": [
+        "confederate",
+        "a",
+        3,
+        "reload"
+      ],
+      "key": "confederate-gettysburg-v15-a-actions-sw",
+      "frames": [
+        "a-reload-3-0",
+        "a-reload-3-1"
+      ],
+      "rows": 896,
+      "poseHash": "3d767705fa696192aa985c6e61cd3146d7247d15b04985fdb4e2cc56b292b83a"
+    }
+  ],
+  "oldPasses": [
+    {
+      "pass": "gettysburg-v3",
+      "policy": {
+        "directions": [
+          0
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v3",
+            "key": "union-gettysburg-v3-march-e",
+            "image": "union-a-march-e.png"
+          }
+        ],
+        "stableUnionIdentity": false
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v3-march-e",
+          "image": "images/units/gettysburg-v3/union-a-march-e.png",
+          "json": "images/units/gettysburg-v3/union-a-march-e.json"
+        }
+      ],
+      "clips": 1,
+      "clipHash": "ca3ca6bcc345be13a4b54fb57af08bab588a9c2bab7c37cab02bd1848e84dbf3",
+      "poseRows": 1792,
+      "poseHash": "53bccdeee80ed2360c56022c86ee39783050b0882501dc777953f2b0552d1f04"
+    },
+    {
+      "pass": "gettysburg-v4",
+      "policy": {
+        "directions": [
+          0
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-actions-e",
+            "image": "union-a-actions-e.png"
+          }
+        ],
+        "stableUnionIdentity": false
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v4-actions-e",
+          "image": "images/units/gettysburg-v4/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v4/union-a-actions-e.json"
+        }
+      ],
+      "clips": 4,
+      "clipHash": "3589b77dc0848e5df070c11459c20c2c299180489784cf034a5ae4388a5a5caf",
+      "poseRows": 5376,
+      "poseHash": "fdb9bf7d65a372604a0a01769db6af19136760c2e3a7d00cd4d9b304dc2b20cd"
+    },
+    {
+      "pass": "gettysburg-v5",
+      "policy": {
+        "directions": [
+          0,
+          1
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          }
+        ],
+        "stableUnionIdentity": false
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        }
+      ],
+      "clips": 5,
+      "clipHash": "510c8406594183d3bcc4026abd46903764210469ee61f6e7acd447ef8bffec96",
+      "poseRows": 7168,
+      "poseHash": "84307f11e2756fb67fe1da711505c1840979a404408fc5d9cc48bd4533f33072"
+    },
+    {
+      "pass": "gettysburg-v6",
+      "policy": {
+        "directions": [
+          0,
+          1
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v6",
+            "key": "union-gettysburg-v6-actions-se",
+            "image": "union-a-actions-se.png"
+          }
+        ],
+        "stableUnionIdentity": false
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v6-actions-se",
+          "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+          "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+        }
+      ],
+      "clips": 8,
+      "clipHash": "8467fad706c68ac0a962d1f97f5437d22c3eb418ddad15a22e5bea33f07fbb51",
+      "poseRows": 10752,
+      "poseHash": "c70fdc985b78f3ff00256bb48680c48fe4b6a5e7fdc7f793daa1b213e2370303"
+    },
+    {
+      "pass": "gettysburg-v7",
+      "policy": {
+        "directions": [
+          0,
+          1,
+          2,
+          6
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v6",
+            "key": "union-gettysburg-v6-actions-se",
+            "image": "union-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-march-s",
+            "image": "union-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-actions-s",
+            "image": "union-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-march-s",
+            "image": "union-b-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-actions-s",
+            "image": "union-b-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-march-n",
+            "image": "confederate-a-march-n.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-actions-n",
+            "image": "confederate-a-actions-n.png"
+          }
+        ],
+        "stableUnionIdentity": true
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v6-actions-se",
+          "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+          "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-march-s",
+          "image": "images/units/gettysburg-v7/union-a-march-s.png",
+          "json": "images/units/gettysburg-v7/union-a-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-actions-s",
+          "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-march-s",
+          "image": "images/units/gettysburg-v7/union-b-march-s.png",
+          "json": "images/units/gettysburg-v7/union-b-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-actions-s",
+          "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-march-n",
+          "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-actions-n",
+          "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+        }
+      ],
+      "clips": 20,
+      "clipHash": "f847a03e1fe215edb139994a59d5a3829a6253c845ae1e2b27a12a36ed9aa942",
+      "poseRows": 26880,
+      "poseHash": "8f45e4e392c9ea5ddab5f680e92e394f45712792471c4e737ef6fbf1a8bf0895"
+    },
+    {
+      "pass": "gettysburg-v8",
+      "policy": {
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          6
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v6",
+            "key": "union-gettysburg-v6-actions-se",
+            "image": "union-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-march-s",
+            "image": "union-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-actions-s",
+            "image": "union-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-march-s",
+            "image": "union-b-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-actions-s",
+            "image": "union-b-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-march-n",
+            "image": "confederate-a-march-n.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-actions-n",
+            "image": "confederate-a-actions-n.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-march-sw",
+            "image": "union-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-actions-sw",
+            "image": "union-a-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-march-sw",
+            "image": "union-b-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-actions-sw",
+            "image": "union-b-actions-sw.png"
+          }
+        ],
+        "stableUnionIdentity": true
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v6-actions-se",
+          "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+          "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-march-s",
+          "image": "images/units/gettysburg-v7/union-a-march-s.png",
+          "json": "images/units/gettysburg-v7/union-a-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-actions-s",
+          "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-march-s",
+          "image": "images/units/gettysburg-v7/union-b-march-s.png",
+          "json": "images/units/gettysburg-v7/union-b-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-actions-s",
+          "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-march-n",
+          "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-actions-n",
+          "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-march-sw",
+          "image": "images/units/gettysburg-v8/union-a-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-actions-sw",
+          "image": "images/units/gettysburg-v8/union-a-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-march-sw",
+          "image": "images/units/gettysburg-v8/union-b-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-actions-sw",
+          "image": "images/units/gettysburg-v8/union-b-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-actions-sw.json"
+        }
+      ],
+      "clips": 28,
+      "clipHash": "72aa6f0dfc2af7d219944a981e53f34e02bfd4c6f245faf2996c9e1cba252560",
+      "poseRows": 37632,
+      "poseHash": "91ed8b495cd4192bcdbe61fc6e41f1952fa82b372497dd5b55be6dac491e49a8"
+    },
+    {
+      "pass": "gettysburg-v9",
+      "policy": {
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v6",
+            "key": "union-gettysburg-v6-actions-se",
+            "image": "union-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-march-s",
+            "image": "union-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-actions-s",
+            "image": "union-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-march-s",
+            "image": "union-b-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-actions-s",
+            "image": "union-b-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-march-n",
+            "image": "confederate-a-march-n.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-actions-n",
+            "image": "confederate-a-actions-n.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-march-sw",
+            "image": "union-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-actions-sw",
+            "image": "union-a-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-march-sw",
+            "image": "union-b-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-actions-sw",
+            "image": "union-b-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-march-w",
+            "image": "union-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-actions-w",
+            "image": "union-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-march-w",
+            "image": "union-b-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-actions-w",
+            "image": "union-b-actions-w.png"
+          }
+        ],
+        "stableUnionIdentity": true
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v6-actions-se",
+          "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+          "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-march-s",
+          "image": "images/units/gettysburg-v7/union-a-march-s.png",
+          "json": "images/units/gettysburg-v7/union-a-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-actions-s",
+          "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-march-s",
+          "image": "images/units/gettysburg-v7/union-b-march-s.png",
+          "json": "images/units/gettysburg-v7/union-b-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-actions-s",
+          "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-march-n",
+          "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-actions-n",
+          "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-march-sw",
+          "image": "images/units/gettysburg-v8/union-a-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-actions-sw",
+          "image": "images/units/gettysburg-v8/union-a-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-march-sw",
+          "image": "images/units/gettysburg-v8/union-b-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-actions-sw",
+          "image": "images/units/gettysburg-v8/union-b-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-march-w",
+          "image": "images/units/gettysburg-v9/union-a-march-w.png",
+          "json": "images/units/gettysburg-v9/union-a-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-actions-w",
+          "image": "images/units/gettysburg-v9/union-a-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-a-actions-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-march-w",
+          "image": "images/units/gettysburg-v9/union-b-march-w.png",
+          "json": "images/units/gettysburg-v9/union-b-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-actions-w",
+          "image": "images/units/gettysburg-v9/union-b-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-b-actions-w.json"
+        }
+      ],
+      "clips": 36,
+      "clipHash": "1aa62ae5c1aca86910b3cc1eadff365132e8a53481edb5f76c72f657d8a3a3d5",
+      "poseRows": 48384,
+      "poseHash": "b06ca35bd58949a1f39b2b86ec9d6ed30afb75b087634298e92891cfc8c09dbb"
+    },
+    {
+      "pass": "gettysburg-v10",
+      "policy": {
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v6",
+            "key": "union-gettysburg-v6-actions-se",
+            "image": "union-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-march-s",
+            "image": "union-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-actions-s",
+            "image": "union-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-march-s",
+            "image": "union-b-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-actions-s",
+            "image": "union-b-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-march-n",
+            "image": "confederate-a-march-n.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-actions-n",
+            "image": "confederate-a-actions-n.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-march-sw",
+            "image": "union-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-actions-sw",
+            "image": "union-a-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-march-sw",
+            "image": "union-b-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-actions-sw",
+            "image": "union-b-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-march-w",
+            "image": "union-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-actions-w",
+            "image": "union-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-march-w",
+            "image": "union-b-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-actions-w",
+            "image": "union-b-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-ne",
+            "image": "confederate-a-march-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-ne",
+            "image": "confederate-a-actions-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-nw",
+            "image": "confederate-a-march-nw.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-nw",
+            "image": "confederate-a-actions-nw.png"
+          }
+        ],
+        "stableUnionIdentity": true
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v6-actions-se",
+          "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+          "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-march-s",
+          "image": "images/units/gettysburg-v7/union-a-march-s.png",
+          "json": "images/units/gettysburg-v7/union-a-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-actions-s",
+          "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-march-s",
+          "image": "images/units/gettysburg-v7/union-b-march-s.png",
+          "json": "images/units/gettysburg-v7/union-b-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-actions-s",
+          "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-march-n",
+          "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-actions-n",
+          "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-march-sw",
+          "image": "images/units/gettysburg-v8/union-a-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-actions-sw",
+          "image": "images/units/gettysburg-v8/union-a-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-march-sw",
+          "image": "images/units/gettysburg-v8/union-b-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-actions-sw",
+          "image": "images/units/gettysburg-v8/union-b-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-march-w",
+          "image": "images/units/gettysburg-v9/union-a-march-w.png",
+          "json": "images/units/gettysburg-v9/union-a-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-actions-w",
+          "image": "images/units/gettysburg-v9/union-a-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-a-actions-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-march-w",
+          "image": "images/units/gettysburg-v9/union-b-march-w.png",
+          "json": "images/units/gettysburg-v9/union-b-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-actions-w",
+          "image": "images/units/gettysburg-v9/union-b-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-b-actions-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-march-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-march-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-nw.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-nw.json"
+        }
+      ],
+      "clips": 44,
+      "clipHash": "33bc311b487d48782bf433bc4028be58593ffaa82ce2b348ec2c69b9e6db8e16",
+      "poseRows": 59136,
+      "poseHash": "25773c6b5eb1929f5a62bcf7d19c77a9765f003e465a2415a2936d4928deb6c1"
+    },
+    {
+      "pass": "gettysburg-v11",
+      "policy": {
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v6",
+            "key": "union-gettysburg-v6-actions-se",
+            "image": "union-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-march-s",
+            "image": "union-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-actions-s",
+            "image": "union-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-march-s",
+            "image": "union-b-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-actions-s",
+            "image": "union-b-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-march-n",
+            "image": "confederate-a-march-n.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-actions-n",
+            "image": "confederate-a-actions-n.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-march-sw",
+            "image": "union-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-actions-sw",
+            "image": "union-a-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-march-sw",
+            "image": "union-b-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-actions-sw",
+            "image": "union-b-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-march-w",
+            "image": "union-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-actions-w",
+            "image": "union-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-march-w",
+            "image": "union-b-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-actions-w",
+            "image": "union-b-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-ne",
+            "image": "confederate-a-march-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-ne",
+            "image": "confederate-a-actions-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-nw",
+            "image": "confederate-a-march-nw.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-nw",
+            "image": "confederate-a-actions-nw.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-e",
+            "image": "union-b-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-e",
+            "image": "union-b-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-se",
+            "image": "union-b-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-se",
+            "image": "union-b-actions-se.png"
+          }
+        ],
+        "stableUnionIdentity": true
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v6-actions-se",
+          "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+          "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-march-s",
+          "image": "images/units/gettysburg-v7/union-a-march-s.png",
+          "json": "images/units/gettysburg-v7/union-a-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-actions-s",
+          "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-march-s",
+          "image": "images/units/gettysburg-v7/union-b-march-s.png",
+          "json": "images/units/gettysburg-v7/union-b-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-actions-s",
+          "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-march-n",
+          "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-actions-n",
+          "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-march-sw",
+          "image": "images/units/gettysburg-v8/union-a-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-actions-sw",
+          "image": "images/units/gettysburg-v8/union-a-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-march-sw",
+          "image": "images/units/gettysburg-v8/union-b-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-actions-sw",
+          "image": "images/units/gettysburg-v8/union-b-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-march-w",
+          "image": "images/units/gettysburg-v9/union-a-march-w.png",
+          "json": "images/units/gettysburg-v9/union-a-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-actions-w",
+          "image": "images/units/gettysburg-v9/union-a-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-a-actions-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-march-w",
+          "image": "images/units/gettysburg-v9/union-b-march-w.png",
+          "json": "images/units/gettysburg-v9/union-b-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-actions-w",
+          "image": "images/units/gettysburg-v9/union-b-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-b-actions-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-march-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-march-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-nw.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-nw.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-e",
+          "image": "images/units/gettysburg-v11/union-b-march-e.png",
+          "json": "images/units/gettysburg-v11/union-b-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-e",
+          "image": "images/units/gettysburg-v11/union-b-actions-e.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-se",
+          "image": "images/units/gettysburg-v11/union-b-march-se.png",
+          "json": "images/units/gettysburg-v11/union-b-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-se",
+          "image": "images/units/gettysburg-v11/union-b-actions-se.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-se.json"
+        }
+      ],
+      "clips": 52,
+      "clipHash": "77dd943e2f2849a79cb868ca33c3d1a558342c5a297eb614fea696c4bcf2b40e",
+      "poseRows": 69888,
+      "poseHash": "43eb8b1bc392e1502478b85e5d97396f3420332811fedcc18044651e355d0270"
+    },
+    {
+      "pass": "gettysburg-v12",
+      "policy": {
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v6",
+            "key": "union-gettysburg-v6-actions-se",
+            "image": "union-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-march-s",
+            "image": "union-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-actions-s",
+            "image": "union-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-march-s",
+            "image": "union-b-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-actions-s",
+            "image": "union-b-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-march-n",
+            "image": "confederate-a-march-n.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-actions-n",
+            "image": "confederate-a-actions-n.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-march-sw",
+            "image": "union-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-actions-sw",
+            "image": "union-a-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-march-sw",
+            "image": "union-b-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-actions-sw",
+            "image": "union-b-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-march-w",
+            "image": "union-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-actions-w",
+            "image": "union-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-march-w",
+            "image": "union-b-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-actions-w",
+            "image": "union-b-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-ne",
+            "image": "confederate-a-march-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-ne",
+            "image": "confederate-a-actions-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-nw",
+            "image": "confederate-a-march-nw.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-nw",
+            "image": "confederate-a-actions-nw.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-e",
+            "image": "union-b-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-e",
+            "image": "union-b-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-se",
+            "image": "union-b-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-se",
+            "image": "union-b-actions-se.png"
+          }
+        ],
+        "stableUnionIdentity": true,
+        "shotMotion": true
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v6-actions-se",
+          "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+          "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-march-s",
+          "image": "images/units/gettysburg-v7/union-a-march-s.png",
+          "json": "images/units/gettysburg-v7/union-a-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-actions-s",
+          "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-march-s",
+          "image": "images/units/gettysburg-v7/union-b-march-s.png",
+          "json": "images/units/gettysburg-v7/union-b-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-actions-s",
+          "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-march-n",
+          "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-actions-n",
+          "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-march-sw",
+          "image": "images/units/gettysburg-v8/union-a-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-actions-sw",
+          "image": "images/units/gettysburg-v8/union-a-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-march-sw",
+          "image": "images/units/gettysburg-v8/union-b-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-actions-sw",
+          "image": "images/units/gettysburg-v8/union-b-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-march-w",
+          "image": "images/units/gettysburg-v9/union-a-march-w.png",
+          "json": "images/units/gettysburg-v9/union-a-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-actions-w",
+          "image": "images/units/gettysburg-v9/union-a-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-a-actions-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-march-w",
+          "image": "images/units/gettysburg-v9/union-b-march-w.png",
+          "json": "images/units/gettysburg-v9/union-b-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-actions-w",
+          "image": "images/units/gettysburg-v9/union-b-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-b-actions-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-march-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-march-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-nw.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-nw.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-e",
+          "image": "images/units/gettysburg-v11/union-b-march-e.png",
+          "json": "images/units/gettysburg-v11/union-b-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-e",
+          "image": "images/units/gettysburg-v11/union-b-actions-e.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-se",
+          "image": "images/units/gettysburg-v11/union-b-march-se.png",
+          "json": "images/units/gettysburg-v11/union-b-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-se",
+          "image": "images/units/gettysburg-v11/union-b-actions-se.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-se.json"
+        }
+      ],
+      "clips": 52,
+      "clipHash": "77dd943e2f2849a79cb868ca33c3d1a558342c5a297eb614fea696c4bcf2b40e",
+      "poseRows": 69888,
+      "poseHash": "b9086710a86fea06c30dfa1f259461635090efc4b056587fc40f7322606e1067"
+    },
+    {
+      "pass": "gettysburg-v13",
+      "policy": {
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v6",
+            "key": "union-gettysburg-v6-actions-se",
+            "image": "union-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-march-s",
+            "image": "union-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-actions-s",
+            "image": "union-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-march-s",
+            "image": "union-b-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-actions-s",
+            "image": "union-b-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-march-n",
+            "image": "confederate-a-march-n.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-actions-n",
+            "image": "confederate-a-actions-n.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-march-sw",
+            "image": "union-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-actions-sw",
+            "image": "union-a-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-march-sw",
+            "image": "union-b-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-actions-sw",
+            "image": "union-b-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-march-w",
+            "image": "union-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-actions-w",
+            "image": "union-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-march-w",
+            "image": "union-b-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-actions-w",
+            "image": "union-b-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-ne",
+            "image": "confederate-a-march-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-ne",
+            "image": "confederate-a-actions-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-nw",
+            "image": "confederate-a-march-nw.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-nw",
+            "image": "confederate-a-actions-nw.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-e",
+            "image": "union-b-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-e",
+            "image": "union-b-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-se",
+            "image": "union-b-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-se",
+            "image": "union-b-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-march-e",
+            "image": "confederate-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-actions-e",
+            "image": "confederate-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-march-w",
+            "image": "confederate-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-actions-w",
+            "image": "confederate-a-actions-w.png"
+          }
+        ],
+        "stableUnionIdentity": true,
+        "shotMotion": true,
+        "shotPresentationId": "gettysburg-v13"
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v6-actions-se",
+          "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+          "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-march-s",
+          "image": "images/units/gettysburg-v7/union-a-march-s.png",
+          "json": "images/units/gettysburg-v7/union-a-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-actions-s",
+          "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-march-s",
+          "image": "images/units/gettysburg-v7/union-b-march-s.png",
+          "json": "images/units/gettysburg-v7/union-b-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-actions-s",
+          "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-march-n",
+          "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-actions-n",
+          "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-march-sw",
+          "image": "images/units/gettysburg-v8/union-a-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-actions-sw",
+          "image": "images/units/gettysburg-v8/union-a-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-march-sw",
+          "image": "images/units/gettysburg-v8/union-b-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-actions-sw",
+          "image": "images/units/gettysburg-v8/union-b-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-march-w",
+          "image": "images/units/gettysburg-v9/union-a-march-w.png",
+          "json": "images/units/gettysburg-v9/union-a-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-actions-w",
+          "image": "images/units/gettysburg-v9/union-a-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-a-actions-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-march-w",
+          "image": "images/units/gettysburg-v9/union-b-march-w.png",
+          "json": "images/units/gettysburg-v9/union-b-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-actions-w",
+          "image": "images/units/gettysburg-v9/union-b-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-b-actions-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-march-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-march-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-nw.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-nw.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-e",
+          "image": "images/units/gettysburg-v11/union-b-march-e.png",
+          "json": "images/units/gettysburg-v11/union-b-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-e",
+          "image": "images/units/gettysburg-v11/union-b-actions-e.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-se",
+          "image": "images/units/gettysburg-v11/union-b-march-se.png",
+          "json": "images/units/gettysburg-v11/union-b-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-se",
+          "image": "images/units/gettysburg-v11/union-b-actions-se.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-se.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-march-e",
+          "image": "images/units/gettysburg-v13/confederate-a-march-e.png",
+          "json": "images/units/gettysburg-v13/confederate-a-march-e.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-actions-e",
+          "image": "images/units/gettysburg-v13/confederate-a-actions-e.png",
+          "json": "images/units/gettysburg-v13/confederate-a-actions-e.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-march-w",
+          "image": "images/units/gettysburg-v13/confederate-a-march-w.png",
+          "json": "images/units/gettysburg-v13/confederate-a-march-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-actions-w",
+          "image": "images/units/gettysburg-v13/confederate-a-actions-w.png",
+          "json": "images/units/gettysburg-v13/confederate-a-actions-w.json"
+        }
+      ],
+      "clips": 60,
+      "clipHash": "934ea92806563f484041b04e340d24c90184ddf2f81bcb5e00faa1ac72bf6626",
+      "poseRows": 80640,
+      "poseHash": "a0e2102604eccb783b604f088d8110e57ed38fe80f0333376b55e6832b320b7a"
+    },
+    {
+      "pass": "gettysburg-v14",
+      "policy": {
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v6",
+            "key": "union-gettysburg-v6-actions-se",
+            "image": "union-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-march-s",
+            "image": "union-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-actions-s",
+            "image": "union-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-march-s",
+            "image": "union-b-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-actions-s",
+            "image": "union-b-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-march-n",
+            "image": "confederate-a-march-n.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-actions-n",
+            "image": "confederate-a-actions-n.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-march-sw",
+            "image": "union-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-actions-sw",
+            "image": "union-a-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-march-sw",
+            "image": "union-b-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-actions-sw",
+            "image": "union-b-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-march-w",
+            "image": "union-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-actions-w",
+            "image": "union-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-march-w",
+            "image": "union-b-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-actions-w",
+            "image": "union-b-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-ne",
+            "image": "confederate-a-march-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-ne",
+            "image": "confederate-a-actions-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-nw",
+            "image": "confederate-a-march-nw.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-nw",
+            "image": "confederate-a-actions-nw.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-e",
+            "image": "union-b-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-e",
+            "image": "union-b-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-se",
+            "image": "union-b-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-se",
+            "image": "union-b-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-march-e",
+            "image": "confederate-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-actions-e",
+            "image": "confederate-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-march-w",
+            "image": "confederate-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-actions-w",
+            "image": "confederate-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v14",
+            "key": "confederate-gettysburg-v14-a-march-s",
+            "image": "confederate-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v14",
+            "key": "confederate-gettysburg-v14-a-actions-s",
+            "image": "confederate-a-actions-s.png"
+          }
+        ],
+        "stableUnionIdentity": true,
+        "shotMotion": true,
+        "shotPresentationId": "gettysburg-v14"
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v6-actions-se",
+          "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+          "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-march-s",
+          "image": "images/units/gettysburg-v7/union-a-march-s.png",
+          "json": "images/units/gettysburg-v7/union-a-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-actions-s",
+          "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-march-s",
+          "image": "images/units/gettysburg-v7/union-b-march-s.png",
+          "json": "images/units/gettysburg-v7/union-b-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-actions-s",
+          "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-march-n",
+          "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-actions-n",
+          "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-march-sw",
+          "image": "images/units/gettysburg-v8/union-a-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-actions-sw",
+          "image": "images/units/gettysburg-v8/union-a-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-march-sw",
+          "image": "images/units/gettysburg-v8/union-b-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-actions-sw",
+          "image": "images/units/gettysburg-v8/union-b-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-march-w",
+          "image": "images/units/gettysburg-v9/union-a-march-w.png",
+          "json": "images/units/gettysburg-v9/union-a-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-actions-w",
+          "image": "images/units/gettysburg-v9/union-a-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-a-actions-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-march-w",
+          "image": "images/units/gettysburg-v9/union-b-march-w.png",
+          "json": "images/units/gettysburg-v9/union-b-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-actions-w",
+          "image": "images/units/gettysburg-v9/union-b-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-b-actions-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-march-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-march-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-nw.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-nw.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-e",
+          "image": "images/units/gettysburg-v11/union-b-march-e.png",
+          "json": "images/units/gettysburg-v11/union-b-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-e",
+          "image": "images/units/gettysburg-v11/union-b-actions-e.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-se",
+          "image": "images/units/gettysburg-v11/union-b-march-se.png",
+          "json": "images/units/gettysburg-v11/union-b-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-se",
+          "image": "images/units/gettysburg-v11/union-b-actions-se.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-se.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-march-e",
+          "image": "images/units/gettysburg-v13/confederate-a-march-e.png",
+          "json": "images/units/gettysburg-v13/confederate-a-march-e.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-actions-e",
+          "image": "images/units/gettysburg-v13/confederate-a-actions-e.png",
+          "json": "images/units/gettysburg-v13/confederate-a-actions-e.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-march-w",
+          "image": "images/units/gettysburg-v13/confederate-a-march-w.png",
+          "json": "images/units/gettysburg-v13/confederate-a-march-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-actions-w",
+          "image": "images/units/gettysburg-v13/confederate-a-actions-w.png",
+          "json": "images/units/gettysburg-v13/confederate-a-actions-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v14-a-march-s",
+          "image": "images/units/gettysburg-v14/confederate-a-march-s.png",
+          "json": "images/units/gettysburg-v14/confederate-a-march-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v14-a-actions-s",
+          "image": "images/units/gettysburg-v14/confederate-a-actions-s.png",
+          "json": "images/units/gettysburg-v14/confederate-a-actions-s.json"
+        }
+      ],
+      "clips": 64,
+      "clipHash": "85d18a841d607c24546a60a177471dc980a5492b86884c9f44e385b671145496",
+      "poseRows": 86016,
+      "poseHash": "bc706feca636722f1ccb91fbe4e0c8d695e02d8237b16f1df7b45ae205db50af"
+    },
+    {
+      "pass": "gettysburg-v15",
+      "policy": {
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v6",
+            "key": "union-gettysburg-v6-actions-se",
+            "image": "union-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-march-s",
+            "image": "union-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-actions-s",
+            "image": "union-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-march-s",
+            "image": "union-b-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-actions-s",
+            "image": "union-b-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-march-n",
+            "image": "confederate-a-march-n.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-actions-n",
+            "image": "confederate-a-actions-n.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-march-sw",
+            "image": "union-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-actions-sw",
+            "image": "union-a-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-march-sw",
+            "image": "union-b-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-actions-sw",
+            "image": "union-b-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-march-w",
+            "image": "union-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-actions-w",
+            "image": "union-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-march-w",
+            "image": "union-b-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-actions-w",
+            "image": "union-b-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-ne",
+            "image": "confederate-a-march-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-ne",
+            "image": "confederate-a-actions-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-nw",
+            "image": "confederate-a-march-nw.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-nw",
+            "image": "confederate-a-actions-nw.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-e",
+            "image": "union-b-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-e",
+            "image": "union-b-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-se",
+            "image": "union-b-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-se",
+            "image": "union-b-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-march-e",
+            "image": "confederate-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-actions-e",
+            "image": "confederate-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-march-w",
+            "image": "confederate-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-actions-w",
+            "image": "confederate-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v14",
+            "key": "confederate-gettysburg-v14-a-march-s",
+            "image": "confederate-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v14",
+            "key": "confederate-gettysburg-v14-a-actions-s",
+            "image": "confederate-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v15",
+            "key": "confederate-gettysburg-v15-a-march-se",
+            "image": "confederate-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v15",
+            "key": "confederate-gettysburg-v15-a-actions-se",
+            "image": "confederate-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v15",
+            "key": "confederate-gettysburg-v15-a-march-sw",
+            "image": "confederate-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v15",
+            "key": "confederate-gettysburg-v15-a-actions-sw",
+            "image": "confederate-a-actions-sw.png"
+          }
+        ],
+        "stableUnionIdentity": true,
+        "shotMotion": true,
+        "shotPresentationId": "gettysburg-v15"
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v6-actions-se",
+          "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+          "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-march-s",
+          "image": "images/units/gettysburg-v7/union-a-march-s.png",
+          "json": "images/units/gettysburg-v7/union-a-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-actions-s",
+          "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-march-s",
+          "image": "images/units/gettysburg-v7/union-b-march-s.png",
+          "json": "images/units/gettysburg-v7/union-b-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-actions-s",
+          "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-march-n",
+          "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-actions-n",
+          "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-march-sw",
+          "image": "images/units/gettysburg-v8/union-a-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-actions-sw",
+          "image": "images/units/gettysburg-v8/union-a-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-march-sw",
+          "image": "images/units/gettysburg-v8/union-b-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-actions-sw",
+          "image": "images/units/gettysburg-v8/union-b-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-march-w",
+          "image": "images/units/gettysburg-v9/union-a-march-w.png",
+          "json": "images/units/gettysburg-v9/union-a-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-actions-w",
+          "image": "images/units/gettysburg-v9/union-a-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-a-actions-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-march-w",
+          "image": "images/units/gettysburg-v9/union-b-march-w.png",
+          "json": "images/units/gettysburg-v9/union-b-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-actions-w",
+          "image": "images/units/gettysburg-v9/union-b-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-b-actions-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-march-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-march-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-nw.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-nw.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-e",
+          "image": "images/units/gettysburg-v11/union-b-march-e.png",
+          "json": "images/units/gettysburg-v11/union-b-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-e",
+          "image": "images/units/gettysburg-v11/union-b-actions-e.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-se",
+          "image": "images/units/gettysburg-v11/union-b-march-se.png",
+          "json": "images/units/gettysburg-v11/union-b-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-se",
+          "image": "images/units/gettysburg-v11/union-b-actions-se.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-se.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-march-e",
+          "image": "images/units/gettysburg-v13/confederate-a-march-e.png",
+          "json": "images/units/gettysburg-v13/confederate-a-march-e.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-actions-e",
+          "image": "images/units/gettysburg-v13/confederate-a-actions-e.png",
+          "json": "images/units/gettysburg-v13/confederate-a-actions-e.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-march-w",
+          "image": "images/units/gettysburg-v13/confederate-a-march-w.png",
+          "json": "images/units/gettysburg-v13/confederate-a-march-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-actions-w",
+          "image": "images/units/gettysburg-v13/confederate-a-actions-w.png",
+          "json": "images/units/gettysburg-v13/confederate-a-actions-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v14-a-march-s",
+          "image": "images/units/gettysburg-v14/confederate-a-march-s.png",
+          "json": "images/units/gettysburg-v14/confederate-a-march-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v14-a-actions-s",
+          "image": "images/units/gettysburg-v14/confederate-a-actions-s.png",
+          "json": "images/units/gettysburg-v14/confederate-a-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v15-a-march-se",
+          "image": "images/units/gettysburg-v15/confederate-a-march-se.png",
+          "json": "images/units/gettysburg-v15/confederate-a-march-se.json"
+        },
+        {
+          "key": "confederate-gettysburg-v15-a-actions-se",
+          "image": "images/units/gettysburg-v15/confederate-a-actions-se.png",
+          "json": "images/units/gettysburg-v15/confederate-a-actions-se.json"
+        },
+        {
+          "key": "confederate-gettysburg-v15-a-march-sw",
+          "image": "images/units/gettysburg-v15/confederate-a-march-sw.png",
+          "json": "images/units/gettysburg-v15/confederate-a-march-sw.json"
+        },
+        {
+          "key": "confederate-gettysburg-v15-a-actions-sw",
+          "image": "images/units/gettysburg-v15/confederate-a-actions-sw.png",
+          "json": "images/units/gettysburg-v15/confederate-a-actions-sw.json"
+        }
+      ],
+      "clips": 72,
+      "clipHash": "c76466756cf6c0ecc4b0cda13f06e5d81ae5d89f6af2517d9580a81bccbefb30",
+      "poseRows": 96768,
+      "poseHash": "612e2cf127ca0a463c1292a5743cae377289940ad509d46c9d54e8e25923901c"
+    },
+    {
+      "pass": "gettysburg-v16",
+      "policy": {
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v6",
+            "key": "union-gettysburg-v6-actions-se",
+            "image": "union-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-march-s",
+            "image": "union-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-actions-s",
+            "image": "union-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-march-s",
+            "image": "union-b-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-actions-s",
+            "image": "union-b-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-march-n",
+            "image": "confederate-a-march-n.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-actions-n",
+            "image": "confederate-a-actions-n.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-march-sw",
+            "image": "union-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-actions-sw",
+            "image": "union-a-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-march-sw",
+            "image": "union-b-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-actions-sw",
+            "image": "union-b-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-march-w",
+            "image": "union-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-actions-w",
+            "image": "union-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-march-w",
+            "image": "union-b-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-actions-w",
+            "image": "union-b-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-ne",
+            "image": "confederate-a-march-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-ne",
+            "image": "confederate-a-actions-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-nw",
+            "image": "confederate-a-march-nw.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-nw",
+            "image": "confederate-a-actions-nw.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-e",
+            "image": "union-b-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-e",
+            "image": "union-b-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-se",
+            "image": "union-b-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-se",
+            "image": "union-b-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-march-e",
+            "image": "confederate-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-actions-e",
+            "image": "confederate-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-march-w",
+            "image": "confederate-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-actions-w",
+            "image": "confederate-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v14",
+            "key": "confederate-gettysburg-v14-a-march-s",
+            "image": "confederate-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v14",
+            "key": "confederate-gettysburg-v14-a-actions-s",
+            "image": "confederate-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v15",
+            "key": "confederate-gettysburg-v15-a-march-se",
+            "image": "confederate-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v15",
+            "key": "confederate-gettysburg-v15-a-actions-se",
+            "image": "confederate-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v16",
+            "key": "confederate-gettysburg-v16-a-march-sw",
+            "image": "confederate-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v15",
+            "key": "confederate-gettysburg-v15-a-actions-sw",
+            "image": "confederate-a-actions-sw.png"
+          }
+        ],
+        "stableUnionIdentity": true,
+        "shotMotion": true,
+        "shotPresentationId": "gettysburg-v16"
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v6-actions-se",
+          "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+          "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-march-s",
+          "image": "images/units/gettysburg-v7/union-a-march-s.png",
+          "json": "images/units/gettysburg-v7/union-a-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-actions-s",
+          "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-march-s",
+          "image": "images/units/gettysburg-v7/union-b-march-s.png",
+          "json": "images/units/gettysburg-v7/union-b-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-actions-s",
+          "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-march-n",
+          "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-actions-n",
+          "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-march-sw",
+          "image": "images/units/gettysburg-v8/union-a-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-actions-sw",
+          "image": "images/units/gettysburg-v8/union-a-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-march-sw",
+          "image": "images/units/gettysburg-v8/union-b-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-actions-sw",
+          "image": "images/units/gettysburg-v8/union-b-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-march-w",
+          "image": "images/units/gettysburg-v9/union-a-march-w.png",
+          "json": "images/units/gettysburg-v9/union-a-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-actions-w",
+          "image": "images/units/gettysburg-v9/union-a-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-a-actions-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-march-w",
+          "image": "images/units/gettysburg-v9/union-b-march-w.png",
+          "json": "images/units/gettysburg-v9/union-b-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-actions-w",
+          "image": "images/units/gettysburg-v9/union-b-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-b-actions-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-march-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-march-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-nw.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-nw.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-e",
+          "image": "images/units/gettysburg-v11/union-b-march-e.png",
+          "json": "images/units/gettysburg-v11/union-b-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-e",
+          "image": "images/units/gettysburg-v11/union-b-actions-e.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-se",
+          "image": "images/units/gettysburg-v11/union-b-march-se.png",
+          "json": "images/units/gettysburg-v11/union-b-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-se",
+          "image": "images/units/gettysburg-v11/union-b-actions-se.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-se.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-march-e",
+          "image": "images/units/gettysburg-v13/confederate-a-march-e.png",
+          "json": "images/units/gettysburg-v13/confederate-a-march-e.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-actions-e",
+          "image": "images/units/gettysburg-v13/confederate-a-actions-e.png",
+          "json": "images/units/gettysburg-v13/confederate-a-actions-e.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-march-w",
+          "image": "images/units/gettysburg-v13/confederate-a-march-w.png",
+          "json": "images/units/gettysburg-v13/confederate-a-march-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-actions-w",
+          "image": "images/units/gettysburg-v13/confederate-a-actions-w.png",
+          "json": "images/units/gettysburg-v13/confederate-a-actions-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v14-a-march-s",
+          "image": "images/units/gettysburg-v14/confederate-a-march-s.png",
+          "json": "images/units/gettysburg-v14/confederate-a-march-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v14-a-actions-s",
+          "image": "images/units/gettysburg-v14/confederate-a-actions-s.png",
+          "json": "images/units/gettysburg-v14/confederate-a-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v15-a-march-se",
+          "image": "images/units/gettysburg-v15/confederate-a-march-se.png",
+          "json": "images/units/gettysburg-v15/confederate-a-march-se.json"
+        },
+        {
+          "key": "confederate-gettysburg-v15-a-actions-se",
+          "image": "images/units/gettysburg-v15/confederate-a-actions-se.png",
+          "json": "images/units/gettysburg-v15/confederate-a-actions-se.json"
+        },
+        {
+          "key": "confederate-gettysburg-v16-a-march-sw",
+          "image": "images/units/gettysburg-v16/confederate-a-march-sw.png",
+          "json": "images/units/gettysburg-v16/confederate-a-march-sw.json"
+        },
+        {
+          "key": "confederate-gettysburg-v15-a-actions-sw",
+          "image": "images/units/gettysburg-v15/confederate-a-actions-sw.png",
+          "json": "images/units/gettysburg-v15/confederate-a-actions-sw.json"
+        }
+      ],
+      "clips": 72,
+      "clipHash": "4b682f5c85e135be26f1ec73202d4be1ca3f335011a8756ae4c0cec08fada73d",
+      "poseRows": 96768,
+      "poseHash": "ed781aac1d574ee21d09ebd7c5652e6b1f94cb634d706129aab16561e3b5b9d3"
+    },
+    {
+      "pass": "gettysburg-v17",
+      "policy": {
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "atlases": [
+          {
+            "directory": "gettysburg-v4",
+            "key": "union-gettysburg-v4-march-e",
+            "image": "union-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-actions-e",
+            "image": "union-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v5",
+            "key": "union-gettysburg-v5-march-se",
+            "image": "union-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v6",
+            "key": "union-gettysburg-v6-actions-se",
+            "image": "union-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-march-s",
+            "image": "union-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-a-actions-s",
+            "image": "union-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-march-s",
+            "image": "union-b-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "union-gettysburg-v7-b-actions-s",
+            "image": "union-b-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-march-n",
+            "image": "confederate-a-march-n.png"
+          },
+          {
+            "directory": "gettysburg-v7",
+            "key": "confederate-gettysburg-v7-a-actions-n",
+            "image": "confederate-a-actions-n.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-march-sw",
+            "image": "union-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-a-actions-sw",
+            "image": "union-a-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-march-sw",
+            "image": "union-b-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v8",
+            "key": "union-gettysburg-v8-b-actions-sw",
+            "image": "union-b-actions-sw.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-march-w",
+            "image": "union-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-a-actions-w",
+            "image": "union-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-march-w",
+            "image": "union-b-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v9",
+            "key": "union-gettysburg-v9-b-actions-w",
+            "image": "union-b-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-ne",
+            "image": "confederate-a-march-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-ne",
+            "image": "confederate-a-actions-ne.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-march-nw",
+            "image": "confederate-a-march-nw.png"
+          },
+          {
+            "directory": "gettysburg-v10",
+            "key": "confederate-gettysburg-v10-a-actions-nw",
+            "image": "confederate-a-actions-nw.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-e",
+            "image": "union-b-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-e",
+            "image": "union-b-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-march-se",
+            "image": "union-b-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v11",
+            "key": "union-gettysburg-v11-b-actions-se",
+            "image": "union-b-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-march-e",
+            "image": "confederate-a-march-e.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-actions-e",
+            "image": "confederate-a-actions-e.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-march-w",
+            "image": "confederate-a-march-w.png"
+          },
+          {
+            "directory": "gettysburg-v13",
+            "key": "confederate-gettysburg-v13-a-actions-w",
+            "image": "confederate-a-actions-w.png"
+          },
+          {
+            "directory": "gettysburg-v14",
+            "key": "confederate-gettysburg-v14-a-march-s",
+            "image": "confederate-a-march-s.png"
+          },
+          {
+            "directory": "gettysburg-v14",
+            "key": "confederate-gettysburg-v14-a-actions-s",
+            "image": "confederate-a-actions-s.png"
+          },
+          {
+            "directory": "gettysburg-v15",
+            "key": "confederate-gettysburg-v15-a-march-se",
+            "image": "confederate-a-march-se.png"
+          },
+          {
+            "directory": "gettysburg-v15",
+            "key": "confederate-gettysburg-v15-a-actions-se",
+            "image": "confederate-a-actions-se.png"
+          },
+          {
+            "directory": "gettysburg-v16",
+            "key": "confederate-gettysburg-v16-a-march-sw",
+            "image": "confederate-a-march-sw.png"
+          },
+          {
+            "directory": "gettysburg-v15",
+            "key": "confederate-gettysburg-v15-a-actions-sw",
+            "image": "confederate-a-actions-sw.png"
+          }
+        ],
+        "stableUnionIdentity": true,
+        "shotMotion": true,
+        "shotPresentationId": "gettysburg-v17",
+        "monotonicReload": true
+      },
+      "assets": [
+        {
+          "key": "union-gettysburg-v4-march-e",
+          "image": "images/units/gettysburg-v4/union-a-march-e.png",
+          "json": "images/units/gettysburg-v4/union-a-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-actions-e",
+          "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+          "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v5-march-se",
+          "image": "images/units/gettysburg-v5/union-a-march-se.png",
+          "json": "images/units/gettysburg-v5/union-a-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v6-actions-se",
+          "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+          "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-march-s",
+          "image": "images/units/gettysburg-v7/union-a-march-s.png",
+          "json": "images/units/gettysburg-v7/union-a-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-a-actions-s",
+          "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-march-s",
+          "image": "images/units/gettysburg-v7/union-b-march-s.png",
+          "json": "images/units/gettysburg-v7/union-b-march-s.json"
+        },
+        {
+          "key": "union-gettysburg-v7-b-actions-s",
+          "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+          "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-march-n",
+          "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+        },
+        {
+          "key": "confederate-gettysburg-v7-a-actions-n",
+          "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-march-sw",
+          "image": "images/units/gettysburg-v8/union-a-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-a-actions-sw",
+          "image": "images/units/gettysburg-v8/union-a-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-a-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-march-sw",
+          "image": "images/units/gettysburg-v8/union-b-march-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-march-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v8-b-actions-sw",
+          "image": "images/units/gettysburg-v8/union-b-actions-sw.png",
+          "json": "images/units/gettysburg-v8/union-b-actions-sw.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-march-w",
+          "image": "images/units/gettysburg-v9/union-a-march-w.png",
+          "json": "images/units/gettysburg-v9/union-a-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-a-actions-w",
+          "image": "images/units/gettysburg-v9/union-a-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-a-actions-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-march-w",
+          "image": "images/units/gettysburg-v9/union-b-march-w.png",
+          "json": "images/units/gettysburg-v9/union-b-march-w.json"
+        },
+        {
+          "key": "union-gettysburg-v9-b-actions-w",
+          "image": "images/units/gettysburg-v9/union-b-actions-w.png",
+          "json": "images/units/gettysburg-v9/union-b-actions-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-march-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-ne",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-ne.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-ne.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-march-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-march-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-march-nw.json"
+        },
+        {
+          "key": "confederate-gettysburg-v10-a-actions-nw",
+          "image": "images/units/gettysburg-v10/confederate-a-actions-nw.png",
+          "json": "images/units/gettysburg-v10/confederate-a-actions-nw.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-e",
+          "image": "images/units/gettysburg-v11/union-b-march-e.png",
+          "json": "images/units/gettysburg-v11/union-b-march-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-e",
+          "image": "images/units/gettysburg-v11/union-b-actions-e.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-e.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-march-se",
+          "image": "images/units/gettysburg-v11/union-b-march-se.png",
+          "json": "images/units/gettysburg-v11/union-b-march-se.json"
+        },
+        {
+          "key": "union-gettysburg-v11-b-actions-se",
+          "image": "images/units/gettysburg-v11/union-b-actions-se.png",
+          "json": "images/units/gettysburg-v11/union-b-actions-se.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-march-e",
+          "image": "images/units/gettysburg-v13/confederate-a-march-e.png",
+          "json": "images/units/gettysburg-v13/confederate-a-march-e.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-actions-e",
+          "image": "images/units/gettysburg-v13/confederate-a-actions-e.png",
+          "json": "images/units/gettysburg-v13/confederate-a-actions-e.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-march-w",
+          "image": "images/units/gettysburg-v13/confederate-a-march-w.png",
+          "json": "images/units/gettysburg-v13/confederate-a-march-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v13-a-actions-w",
+          "image": "images/units/gettysburg-v13/confederate-a-actions-w.png",
+          "json": "images/units/gettysburg-v13/confederate-a-actions-w.json"
+        },
+        {
+          "key": "confederate-gettysburg-v14-a-march-s",
+          "image": "images/units/gettysburg-v14/confederate-a-march-s.png",
+          "json": "images/units/gettysburg-v14/confederate-a-march-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v14-a-actions-s",
+          "image": "images/units/gettysburg-v14/confederate-a-actions-s.png",
+          "json": "images/units/gettysburg-v14/confederate-a-actions-s.json"
+        },
+        {
+          "key": "confederate-gettysburg-v15-a-march-se",
+          "image": "images/units/gettysburg-v15/confederate-a-march-se.png",
+          "json": "images/units/gettysburg-v15/confederate-a-march-se.json"
+        },
+        {
+          "key": "confederate-gettysburg-v15-a-actions-se",
+          "image": "images/units/gettysburg-v15/confederate-a-actions-se.png",
+          "json": "images/units/gettysburg-v15/confederate-a-actions-se.json"
+        },
+        {
+          "key": "confederate-gettysburg-v16-a-march-sw",
+          "image": "images/units/gettysburg-v16/confederate-a-march-sw.png",
+          "json": "images/units/gettysburg-v16/confederate-a-march-sw.json"
+        },
+        {
+          "key": "confederate-gettysburg-v15-a-actions-sw",
+          "image": "images/units/gettysburg-v15/confederate-a-actions-sw.png",
+          "json": "images/units/gettysburg-v15/confederate-a-actions-sw.json"
+        }
+      ],
+      "clips": 72,
+      "clipHash": "4b682f5c85e135be26f1ec73202d4be1ca3f335011a8756ae4c0cec08fada73d",
+      "poseRows": 96768,
+      "poseHash": "17c070a7ba09375dba7a35c406100d47b748267cd6c1ea82b6b08596d3c677d3"
+    }
+  ],
+  "studyRows": 202,
+  "studyHash": "0d6f5fe1763a14168f52e639ab12da2ae9a2b7a01a3b3d7f5911bceb44157374",
+  "presetRows": 125,
+  "presetHash": "d47debb686d9edb2b5659ecb80d378103229bd3204e8ba44ed60b37593965190",
+  "initialPreset": "v15-confederate-s-se-actions",
+  "playbackState": {
+    "panels": {
+      "left": {
+        "studyId": "confederate-se-march-v15",
+        "phase": 0
+      },
+      "right": {
+        "studyId": "confederate-se-actions-v15",
+        "phase": 0
+      }
+    },
+    "presetId": "inspection",
+    "sequence": [],
+    "sampleIndex": 0,
+    "playing": false
+  }
+}

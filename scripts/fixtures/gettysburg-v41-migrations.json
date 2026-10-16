@@ -1,0 +1,68 @@
+{
+  "schema": "gettysburg-v41-historical-byte-migration-v1",
+  "status": "frozen-approved-runtime-pins",
+  "baselineSHA256": "795e6607b02618f83c937c4475b3271f4b2aaeebd096f986a3d11ca9a5f3a2bc",
+  "baselineFiles": 1637,
+  "baselineBytes": 559111430,
+  "fixture": {
+    "path": "scripts/fixtures/gettysburg-v41-preservation.json",
+    "sha256": "327ba76d9dd5c23f872a324f96e0ac6d9cd7ad550b3805d5cadbb4c27f561fb7"
+  },
+  "capture": {
+    "path": "scripts/capture-gettysburg-v41-preservation.mjs",
+    "sha256": "f15392f8daed28a9dc4c409567401c590149114e8c4f69a37682743254a654f2"
+  },
+  "oldFixturesRefreshed": false,
+  "oldMigrationLedgersEdited": false,
+  "behavioralAssertionsChanged": false,
+  "mandatoryRegistration": "package.json",
+  "mandatorySuite": "scripts/test-battle-display-preferences.mjs",
+  "migrations": [
+    {
+      "path": "package.json",
+      "archive": "scripts/test-support/gettysburg-v41-before/package.json",
+      "beforeSHA256": "46d8f733dfef8b39a3dd42e34e16300081307631ac09ac4b3f75d09c071881f2",
+      "currentSHA256": "6216a2ea9f00b01553db34c427db3a320eb9221dfdc91d5617b72b446eba2c3c",
+      "reason": "Only four mandatory battle-display script registrations; version, dependencies and lockfile unchanged."
+    },
+    {
+      "path": "src/components/CivilWarBattleEncounter.jsx",
+      "archive": "scripts/test-support/gettysburg-v41-before/src/components/CivilWarBattleEncounter.jsx",
+      "beforeSHA256": "ebacdb09a6845f648a7a9f8713bd64e365c7d6c5817b764ea9c87b8225e4f018",
+      "currentSHA256": "7d88976dd0813224f3826ca68344942a026bece0805b0545b8732f8a11eae10e",
+      "reason": "Persist bounded optional display preferences and move existing heading/target controls without changing command handlers, combat, save transaction or historical assertions."
+    },
+    {
+      "path": "src/battle/CivilWarBattlefield.jsx",
+      "archive": "scripts/test-support/gettysburg-v41-before/src/battle/CivilWarBattlefield.jsx",
+      "beforeSHA256": "e36fadd98d455d9462487be3ede3950bf8b32e75e7d193faee639be234a36510",
+      "currentSHA256": "5f30baf4b8fa1388c106ed33f1f0f97856faaa3021c2bbf63952dff883b59ec5",
+      "reason": "React wrapper only: initialize and synchronize the declarative showRange prop; the entire CivilWarBattleScene class remains byte exact."
+    },
+    {
+      "path": "scripts/test-support/gettysburgV40Preservation.mjs",
+      "archive": "scripts/test-support/gettysburg-v41-before/scripts/test-support/gettysburgV40Preservation.mjs",
+      "beforeSHA256": "92ae66bce38348cc23eb9c41d61534b31a8cd853025029bea6a37b0d60956651",
+      "currentSHA256": "f2f0d77228a8809b3dd4c31eaec7639e652a75d609880a86ccd8839da1eb6f74",
+      "reason": "Only V41 historical-source import and metadata directRead return; every original V40 fixture, ledger and assertion remains byte exact."
+    }
+  ],
+  "newSourcePins": [
+    {
+      "path": "src/battle/battleDisplayPreferences.js",
+      "sha256": "70e0e131790606418255eff63430455df317baacd97f25068ad820c4b2546446"
+    },
+    {
+      "path": "scripts/test-battle-display-preferences.mjs",
+      "sha256": "263473beb6153c963b1ffa8a3a267c76aaf292f6b3c57e4091c0a2e80f3bba4f"
+    },
+    {
+      "path": "scripts/test-support/battleDisplayComponentHarness.mjs",
+      "sha256": "eb6119cbd1be0a5ac2f5aca72612aa46b6d88a346b7724baab04192bed19200d"
+    },
+    {
+      "path": "docs/CIVIL_WAR_V41_DISPLAY_CONTINUITY.md",
+      "sha256": "44864bc1fd0cf5f7e91c3fae8d8ff96f8a93846e961877cc60e499d8eb423f60"
+    }
+  ]
+}

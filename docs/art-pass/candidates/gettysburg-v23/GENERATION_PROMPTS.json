@@ -1,0 +1,176 @@
+{
+  "artPass": "gettysburg-v23",
+  "generator": "built-in image_gen imagegen",
+  "generatorModelIdentityExposed": false,
+  "transparentBackground": true,
+  "nativePixelsEdited": false,
+  "familyComplete": false,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "attempts": [
+    {
+      "side": "union",
+      "role": "contact",
+      "attempt": 1,
+      "key": "v23UnionContactPrompt",
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-c5c55348-a509-48df-8a28-322f66416ddd.png",
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v22/confederate-a-contact-n-candidate.png",
+          "sha256": "56e05a772097a187f372df1be8dd77594e3150efe1459975a956d77919817363"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v22/union-a-contact-s-candidate.png",
+          "sha256": "5f2d97fcf8957daa12c3c8d12efd0bd44a06983bfd1d2b2106a8e03f432b4cfa"
+        }
+      ],
+      "selected": false,
+      "reason": "Rejected: minimum solid frame margin 11px",
+      "prompt": "Create a NEW whole native transparent RGBA 2x2 sprite sheet for Gettysburg infantry, UNION A NORTH close combat. Match the first reference's exact north/rear camera, adult proportions, detail, materials and contact action sequence, but transfer the SECOND reference's Union soldier identity and entire kit: dark navy forage cap and wool sack coat, sky-blue trousers, dark leather boots, brown crossed straps and pack with brown rolled blanket, dark pouches, circular pale blue-gray canteen. NO gray Confederate coat or cream trousers. Every pose shows his BACK with body and head facing NORTH/up into screen. Same man, equipment and projected body scale in all cells. 1254x1254 square if possible, four equal square cells, row-major: guarded ready at low hip, short forward bayonet extension with small weight transfer, low recovery guard, compact parry. Crucial geometry for extension top-right: cap around x .50 y .38 of its cell, buttstock low at right hip x .67 y .59, rear hand on stock around .63 .52, forward supporting hand .56 .38, bayonet tip just LEFT of cap along tight near-vertical NORTH lane x .52 y .18. Rifle is held in BOTH hands below shoulder; BOTH shoulders and upper arms down, elbows low, forearms extending forward toward NORTH, stock below shoulder, NEVER shouldered firing or overhead loading. Rifle must remain straight and coherent with long metal bayonet. Three other poses retain NORTH intent, modest weapon sweeps are guards not wrong-facing firing. Visible two separate boots, normal hips/knees/ankles, no fused or crossed feet, no extra hands or limbs. Leave at least 60px transparent clearance around entire body, weapon and bayonet in EACH cell; keep all fully within own quadrant. No text, labels, ground, flags, drop shadow, cell lines or background. Render realistic textured miniature tactical game soldier consistent with refs, no anime, no bulky inflated limbs, restrained daylight. Original native art only; do not flip, rotate or edit either source.",
+      "originalSHA256": "e8a642f14681d938179069c796ceec249248ed45fbec18b13d48a9c7b21de5cd"
+    },
+    {
+      "side": "union",
+      "role": "contact",
+      "attempt": 2,
+      "key": "v23UnionContactPrompt2",
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-7d2ebbed-2d66-4411-9a6d-19d49ef2fe89.png",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-c5c55348-a509-48df-8a28-322f66416ddd.png",
+          "sha256": "e8a642f14681d938179069c796ceec249248ed45fbec18b13d48a9c7b21de5cd"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v22/union-a-contact-s-candidate.png",
+          "sha256": "5f2d97fcf8957daa12c3c8d12efd0bd44a06983bfd1d2b2106a8e03f432b4cfa"
+        }
+      ],
+      "selected": true,
+      "reason": "Geometry passed 20px; independent group review pending",
+      "prompt": "Create a NEW whole native transparent RGBA 2x2 sprite sheet for Gettysburg infantry, UNION A NORTH close combat. Match the first reference's exact north/rear camera, adult proportions, detail, materials and contact action sequence, but transfer the SECOND reference's Union soldier identity and entire kit: dark navy forage cap and wool sack coat, sky-blue trousers, dark leather boots, brown crossed straps and pack with brown rolled blanket, dark pouches, circular pale blue-gray canteen. NO gray Confederate coat or cream trousers. Every pose shows his BACK with body and head facing NORTH/up into screen. Same man, equipment and projected body scale in all cells. 1254x1254 square if possible, four equal square cells, row-major: guarded ready at low hip, short forward bayonet extension with small weight transfer, low recovery guard, compact parry. Crucial geometry for extension top-right: cap around x .50 y .38 of its cell, buttstock low at right hip x .67 y .59, rear hand on stock around .63 .52, forward supporting hand .56 .38, bayonet tip just LEFT of cap along tight near-vertical NORTH lane x .52 y .18. Rifle is held in BOTH hands below shoulder; BOTH shoulders and upper arms down, elbows low, forearms extending forward toward NORTH, stock below shoulder, NEVER shouldered firing or overhead loading. Rifle must remain straight and coherent with long metal bayonet. Three other poses retain NORTH intent, modest weapon sweeps are guards not wrong-facing firing. Visible two separate boots, normal hips/knees/ankles, no fused or crossed feet, no extra hands or limbs. Leave at least 60px transparent clearance around entire body, weapon and bayonet in EACH cell; keep all fully within own quadrant. No text, labels, ground, flags, drop shadow, cell lines or background. Render realistic textured miniature tactical game soldier consistent with refs, no anime, no bulky inflated limbs, restrained daylight. Original native art only; do not flip, rotate or edit either source.\nCORRECTION: redraw the entire native sheet; make ALL FOUR figures and their weapons only 80% as large as the supplied rear-contact guide within each quadrant, centered with large empty transparent margin. Every weapon including parry tip must stay 75 pixels inside cell edges. Lower the compact ready and recovery guard: stock firmly by right hip, forward hand near waist and barrel rising moderately NORTH-left from chest; arms not held up at face/shoulder. For short extension let left shoulder drop, left elbow below shoulder and hand near cap height due perspective, stock at right hip. Do not reuse identical legs in all phases: ready both boots planted, extension one modest forward step with trailing heel lifted, recovery boots again separated and knees bent, parry weight back. Body remains rear NORTH view. Keep bayonet NORTH for extension. Do not add floor or shadow.",
+      "originalSHA256": "db3cf93fc162470857028cb0164284ba7ea2e9e504a977d7de21f0e6b52a365d"
+    },
+    {
+      "side": "confederate",
+      "role": "contact",
+      "attempt": 1,
+      "key": "v23ConfederateContactPrompt",
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-62aee266-73c5-434b-9011-ebe83209fd37.png",
+      "references": [
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v22/union-a-contact-s-candidate.png",
+          "sha256": "5f2d97fcf8957daa12c3c8d12efd0bd44a06983bfd1d2b2106a8e03f432b4cfa"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v14/confederate-a-s-actions-candidate.png",
+          "sha256": "cbc0c38d83a73b934ea3e69cbf4ed7a0b4da23a3c5d27d5af002ac2610faf2b1"
+        }
+      ],
+      "selected": true,
+      "reason": "Geometry passed 25px; independent group review pending",
+      "prompt": "NEW whole native 2x2 transparent RGBA tactical infantry sprite sheet, CONFEDERATE A SOUTH close combat. Use first reference only for four close-combat actions and camera, second reference for exact CONFEDERATE identity: gray forage cap, gray wool jacket, beige trousers, brown boots, tan rolled blanket/pack with leather straps, black cartridge pouch and off-white canteen, short brown beard. Same adult man, outfit, equipment, correct ordinary proportions, realistic detailed miniature natural cloth/leather/metal. High oblique front SOUTH camera: face/chest toward BOTTOM of sheet in all four phases; fixed head/body bearing SOUTH, no rear or side turn. Equal square quadrants row-major 0 compact low-hip ready guard, 1 controlled forward/down-screen bayonet short extension with bent front knee, 2 drawn-back low guard with weapon diagonal, 3 compact parry across chest with elbows bent. Rifle and long metal socket bayonet rigid straight and coherent, two normal hands grasp it plausibly, stock stays below shoulder during extension, no overhead loading/shooting. Distinct modest weight transfer across four phases. Separate boots no fused/crossed legs. 1254 square if possible, individual body scale consistent; ALL limbs and rifle/bayonet within own cell with at least 70 native pixels empty transparent space from all edges. Render subject approximately 75 percent reference size in each cell to reserve wide margins. No cropping, no floor shadow/background, no labels/grid/flags/text or extra people. Original drawing, do not mirror/edit either reference. Calm neutral daylight, no blood or gore.",
+      "originalSHA256": "94a0cf85398094c1f498d9da8538b5c8489db37ac1830efe1d2faa9f46a80bca"
+    },
+    {
+      "side": "union",
+      "role": "casualty",
+      "attempt": 1,
+      "key": "v23UnionCasualtyPrompt",
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-bfea3cab-e814-4236-8097-617221a68766.png",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-7d2ebbed-2d66-4411-9a6d-19d49ef2fe89.png",
+          "sha256": "db3cf93fc162470857028cb0164284ba7ea2e9e504a977d7de21f0e6b52a365d"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v22/confederate-a-casualty-n-candidate.png",
+          "sha256": "3eb0fcb2c6870d927bb83b47718476e1c51ddc5553b3818e1832a577fcdf55b9"
+        }
+      ],
+      "selected": false,
+      "reason": "Rejected on pair scale: first cap and bedroll visibly broader; about13percent crown width diagnostic; whole redraw, no pixel rescale",
+      "prompt": "Create NEW whole native transparent RGBA 2x2 sprite sheet UNION A NORTH casualty sequence for tactical Gettysburg game. First reference is exact new Union north kit/body/style and approximate small scale; second reference is REAR NORTH casualty sequence to use for camera and anatomical action only, do NOT use Confederate gray/cream colors. UNION navy forage cap and coat, sky-blue trousers, brown boots, brown rolled blanket and pack, leather crossed straps and same black pouches/light blue-gray round canteen. Consistent adult body size across all four quadrants, don't enlarge kneeling/fallen figures to fill cells. Fixed high-oblique rear camera, body bearing NORTH/up away, face hidden; head stays north/up of boots, backpack visible. 2x2 row-major: 0 loses balance with knees bent, rifle still in left hand, right hand reaching toward support; 1 drops to one knee, right palm reaches ground; 2 supported collapse with right hand on ground, hips lowering and separate legs trailing south; 3 ground rest prone/backpack visible, head NORTH/top, two boots SOUTH/bottom, legs distinct with natural knees. Rifle and bayonet remain one straight weapon and lie beside left side in rest; coherent grip in earlier phases. Natural normal proportions, only two hands/two legs, no blood/gore. All body and bayonet fully inside own cell at least70px clear transparent margin. Leave generous empty space and maintain contact reference small body size. Render realistic native detailed cloth/leather/metal same game style and lighting as contact. No floor, shadows, grids, labels, text, flags/background. Original full native new drawing, no flipping, pixel editing or pasted pieces.",
+      "originalSHA256": "9c59a83c16e96af8c869fa83287128075d8497b643d6615cb8ef423cbbac27b9"
+    },
+    {
+      "side": "confederate",
+      "role": "casualty",
+      "attempt": 1,
+      "key": "v23ConfederateCasualtyPrompt",
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-451f9c43-ee2d-4c29-8904-540474427d42.png",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-62aee266-73c5-434b-9011-ebe83209fd37.png",
+          "sha256": "94a0cf85398094c1f498d9da8538b5c8489db37ac1830efe1d2faa9f46a80bca"
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v22/union-a-casualty-s-candidate.png",
+          "sha256": "9e772954efa04dfbd29020c59f1f7d53916fb3bec878ef5735e22ada3565d10f"
+        }
+      ],
+      "selected": false,
+      "reason": "Rejected: minimum solid frame margin 0px",
+      "prompt": "Create NEW whole native transparent RGBA 2x2 tactical Gettysburg CONFEDERATE A SOUTH casualty sprite sheet. First reference supplies exact Confederate front identity/kit and body scale; second reference supplies ONLY south front casualty motion, no Union colors. Confederate gray forage cap, gray wool jacket, beige trousers, brown boots, tan rolled blanket and pack, dark leather crossing straps/black pouches, light off-white round canteen, brown beard. Same adult man/fixed proportions in all cells; don't independently enlarge later poses. Fixed high oblique FRONT camera, body facing SOUTH/down; face/chest aimed down, head stays SOUTH/bottom of boots in final rest. Equal square quadrants row-major:0 loss of balance, both bent knees, left hand retains straight rifle+bayonet and right hand reaches forward/down for ground;1 supported kneeling drop, right hand touches ground, normal pelvis/knee/ankle angles;2 collapse with right palm bearing weight and left hand still near rifle, torso lowering and legs trailing north;3 grounded prone rest, cap/head SOUTH/bottom, backpack/roll visible behind head, two boots NORTH/top and legs separate, rifle rests diagonal alongside body with coherent straight barrel. Native detailed realistic miniature cloth/leather/steel same lighting/style as reference. No blood, gore, wounds. Two arms/two legs only, coherent hands and feet no fused limbs. All equipment/body/bayonet fully inside own quadrant with at least70 pixels transparent margin, generous spacing. Native 1254 square if possible. No text/grid/background/floor/shadow/flags. Newly draw all pixels; no flipping, cropping or pasting refs.",
+      "originalSHA256": "5a4da8f3a92aa78fa61802de3942cfadeabe40bf9142002d471ff0224c515915"
+    },
+    {
+      "side": "confederate",
+      "role": "casualty",
+      "attempt": 2,
+      "key": "v23ConfederateCasualtyPrompt2",
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-ce3cbdc1-001d-45ee-aff3-20e3f13b22b2.png",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-62aee266-73c5-434b-9011-ebe83209fd37.png",
+          "sha256": "94a0cf85398094c1f498d9da8538b5c8489db37ac1830efe1d2faa9f46a80bca"
+        },
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-451f9c43-ee2d-4c29-8904-540474427d42.png",
+          "sha256": "5a4da8f3a92aa78fa61802de3942cfadeabe40bf9142002d471ff0224c515915"
+        }
+      ],
+      "selected": true,
+      "reason": "Geometry passed 34px; independent group review pending",
+      "prompt": "Create NEW whole native transparent RGBA 2x2 tactical Gettysburg CONFEDERATE A SOUTH casualty sprite sheet. First reference supplies exact Confederate front identity/kit and body scale; second reference supplies ONLY south front casualty motion, no Union colors. Confederate gray forage cap, gray wool jacket, beige trousers, brown boots, tan rolled blanket and pack, dark leather crossing straps/black pouches, light off-white round canteen, brown beard. Same adult man/fixed proportions in all cells; don't independently enlarge later poses. Fixed high oblique FRONT camera, body facing SOUTH/down; face/chest aimed down, head stays SOUTH/bottom of boots in final rest. Equal square quadrants row-major:0 loss of balance, both bent knees, left hand retains straight rifle+bayonet and right hand reaches forward/down for ground;1 supported kneeling drop, right hand touches ground, normal pelvis/knee/ankle angles;2 collapse with right palm bearing weight and left hand still near rifle, torso lowering and legs trailing north;3 grounded prone rest, cap/head SOUTH/bottom, backpack/roll visible behind head, two boots NORTH/top and legs separate, rifle rests diagonal alongside body with coherent straight barrel. Native detailed realistic miniature cloth/leather/steel same lighting/style as reference. No blood, gore, wounds. Two arms/two legs only, coherent hands and feet no fused limbs. All equipment/body/bayonet fully inside own quadrant with at least70 pixels transparent margin, generous spacing. Native 1254 square if possible. No text/grid/background/floor/shadow/flags. Newly draw all pixels; no flipping, cropping or pasting refs.\nCORRECTION: the last source overfilled cells and crossed a boundary. Redraw a whole NEW native sheet with ALL FOUR figures and rifle/bayonets precisely 80% as large within each cell, centered with wide transparent margins. Leave 80px clear between every solid part and own quadrant edges. Body scale must match first reference contact phase0, including same head size; DO NOT swell head, torso, hands or pack compared to contact. Maintain natural shortened kneeling and prone projection rather than enlarging it. Keep all 4 different actions and fixed south/front camera.",
+      "originalSHA256": "950ebd14c63c0bdca37c478f6608937a451b67bf6f62840d0a5bff65d2a4226a"
+    },
+    {
+      "side": "union",
+      "role": "casualty",
+      "attempt": 2,
+      "key": "v23UnionCasualtyPrompt2",
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-cca624a6-aaa4-4b9d-8830-8fe489109434.png",
+      "references": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-7d2ebbed-2d66-4411-9a6d-19d49ef2fe89.png",
+          "sha256": "db3cf93fc162470857028cb0164284ba7ea2e9e504a977d7de21f0e6b52a365d"
+        },
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-bfea3cab-e814-4236-8097-617221a68766.png",
+          "sha256": "9c59a83c16e96af8c869fa83287128075d8497b643d6615cb8ef423cbbac27b9"
+        }
+      ],
+      "selected": true,
+      "reason": "Fresh whole native pair-scale redraw, review pending",
+      "prompt": "Create NEW whole native transparent RGBA 2x2 sprite sheet UNION A NORTH casualty sequence for tactical Gettysburg game. First reference is exact new Union north kit/body/style and approximate small scale; second reference is REAR NORTH casualty sequence to use for camera and anatomical action only, do NOT use Confederate gray/cream colors. UNION navy forage cap and coat, sky-blue trousers, brown boots, brown rolled blanket and pack, leather crossed straps and same black pouches/light blue-gray round canteen. Consistent adult body size across all four quadrants, don't enlarge kneeling/fallen figures to fill cells. Fixed high-oblique rear camera, body bearing NORTH/up away, face hidden; head stays north/up of boots, backpack visible. 2x2 row-major: 0 loses balance with knees bent, rifle still in left hand, right hand reaching toward support; 1 drops to one knee, right palm reaches ground; 2 supported collapse with right hand on ground, hips lowering and separate legs trailing south; 3 ground rest prone/backpack visible, head NORTH/top, two boots SOUTH/bottom, legs distinct with natural knees. Rifle and bayonet remain one straight weapon and lie beside left side in rest; coherent grip in earlier phases. Natural normal proportions, only two hands/two legs, no blood/gore. All body and bayonet fully inside own cell at least70px clear transparent margin. Leave generous empty space and maintain contact reference small body size. Render realistic native detailed cloth/leather/metal same game style and lighting as contact. No floor, shadows, grids, labels, text, flags/background. Original full native new drawing, no flipping, pixel editing or pasted pieces.\nCRITICAL CORRECTION: previous casualty reference has a noticeably larger cap/head/pack than our new small Union contact. Entire new casualty must preserve EXACT projected cap width, pack width and body proportions of FIRST reference CONTACT, 80% of second casualty reference's current native figure size. Redraw all four poses natively smaller with generous transparent margins; no independent per-phase rescale. In phase0 cap size and pack size should match contact first quadrant; supported/drop/prone phases naturally shorter, head stays same size. Preserve all rear NORTH actions and correct Union outfit. Render approximately300 nativepixel standing bodycap-to-nearsole in627cell, not350. All four bodies/weapon/bayonet at least75pxclear of edges. No shadow.",
+      "originalSHA256": "ff8b68d8dad15ad420b40b583d9aef79cac9d4c2c8d2bf3aefd0734458f01a97"
+    }
+  ],
+  "sourceGroupAcceptance": {
+    "acceptedForOptIn": true,
+    "scope": "source authoring; gameplay and final installation review separate",
+    "reviewerModel": "gpt-6-astra",
+    "reasoningEffort": "max",
+    "review": "docs/art-pass/reviews/gettysburg-v23-independent-contact-casualty-source-review.json",
+    "reviewSHA256": "27c41c71d82f9fbef3ae7831e585ac714fe0e15ac81948636c5299ee3aa8c877",
+    "annotationsSHA256": "93ac19317b6a099dce1fd4851ab6a1d2140f26293e60cc92e8def93d1d564e1b",
+    "referenceHeights": {
+      "union": 330,
+      "confederate": 454
+    },
+    "allCertificationFlagsRemainFalse": true
+  }
+}

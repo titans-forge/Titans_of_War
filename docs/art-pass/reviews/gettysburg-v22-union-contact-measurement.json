@@ -1,0 +1,267 @@
+{
+  "artPass": "gettysburg-v22",
+  "side": "union",
+  "identity": "a",
+  "direction": 2,
+  "role": "contact",
+  "source": "docs/art-pass/candidates/gettysburg-v22/union-a-contact-s-candidate.png",
+  "sourceSHA256": "5f2d97fcf8957daa12c3c8d12efd0bd44a06983bfd1d2b2106a8e03f432b4cfa",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v22-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "66ef816943a6b21cf9aa2954124145a8b7182a7ad35d9bb229afbc250397ed7f",
+  "referenceHeight": 371,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh union contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "7235b709a9be8acba6fa8ed4a4a7604c14dcab8d19bc550ac80120ef04ebdd56",
+      "ground": [
+        364,
+        559
+      ],
+      "groundROI": [
+        301,
+        531,
+        362,
+        566
+      ],
+      "groundMethod": "Projected pelvis X; nearer screen-left front boot sole ground Y, excluding bayonet.",
+      "solidBounds": [
+        272,
+        169,
+        443,
+        559
+      ],
+      "solidPadding": [
+        272,
+        169,
+        184,
+        68
+      ],
+      "nonzeroBounds": [
+        152,
+        85,
+        627,
+        562
+      ],
+      "capROI": [
+        315,
+        160,
+        381,
+        194
+      ],
+      "capTop": 169,
+      "referenceSoleROI": [
+        301,
+        531,
+        362,
+        566
+      ],
+      "referenceSoleGroundY": 559,
+      "bodySpan": 390
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "78aba290935e9f714156e2342d17afdf1a4db51d14109b390555bc02f55b2972",
+      "ground": [
+        308,
+        565
+      ],
+      "groundROI": [
+        263,
+        541,
+        313,
+        576
+      ],
+      "groundMethod": "Projected pelvis X; nearer forward boot sole, excluding the adjacent bayonet point.",
+      "solidBounds": [
+        228,
+        183,
+        389,
+        565
+      ],
+      "solidPadding": [
+        228,
+        183,
+        238,
+        62
+      ],
+      "nonzeroBounds": [
+        41,
+        21,
+        478,
+        568
+      ],
+      "capROI": [
+        270,
+        174,
+        336,
+        208
+      ],
+      "capTop": 183,
+      "referenceSoleROI": [
+        263,
+        541,
+        313,
+        576
+      ],
+      "referenceSoleGroundY": 565,
+      "bodySpan": 382
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "16da705528610e9ba1e4e03b8c62cf6510b4fe533abc2c8d8c1e9e538780b334",
+      "ground": [
+        365,
+        490
+      ],
+      "groundROI": [
+        422,
+        472,
+        475,
+        505
+      ],
+      "groundMethod": "Projected pelvis X; nearer screen-right planted boot sole in wide low recovery.",
+      "solidBounds": [
+        183,
+        143,
+        468,
+        490
+      ],
+      "solidPadding": [
+        183,
+        143,
+        159,
+        137
+      ],
+      "nonzeroBounds": [
+        146,
+        17,
+        627,
+        567
+      ],
+      "capROI": [
+        314,
+        132,
+        382,
+        163
+      ],
+      "capTop": 143,
+      "referenceSoleROI": [
+        422,
+        472,
+        475,
+        505
+      ],
+      "referenceSoleGroundY": 490,
+      "bodySpan": 347
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "30852fbb57be914d869c6ec0f5c79f405086d51aea091607be866074daf43d55",
+      "ground": [
+        337,
+        500
+      ],
+      "groundROI": [
+        399,
+        479,
+        455,
+        509
+      ],
+      "groundMethod": "Projected pelvis X; nearer screen-right planted sole during raised cross-body guard.",
+      "solidBounds": [
+        165,
+        89,
+        447,
+        500
+      ],
+      "solidPadding": [
+        165,
+        89,
+        180,
+        127
+      ],
+      "nonzeroBounds": [
+        37,
+        51,
+        565,
+        601
+      ],
+      "capROI": [
+        302,
+        130,
+        370,
+        164
+      ],
+      "capTop": 140,
+      "referenceSoleROI": [
+        399,
+        479,
+        455,
+        509
+      ],
+      "referenceSoleGroundY": 500,
+      "bodySpan": 360
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 2,
+      "action": "melee",
+      "key": "union-gettysburg-v22-a-contact-s",
+      "frames": [
+        "a-melee-2-0",
+        "a-melee-2-1",
+        "a-melee-2-2",
+        "a-melee-2-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.580542,
+          "y": 0.891547
+        },
+        {
+          "x": 0.491228,
+          "y": 0.901116
+        },
+        {
+          "x": 0.582137,
+          "y": 0.781499
+        },
+        {
+          "x": 0.53748,
+          "y": 0.797448
+        }
+      ],
+      "referenceHeight": 371,
+      "sourceHash": "5f2d97fcf8957daa12c3c8d12efd0bd44a06983bfd1d2b2106a8e03f432b4cfa",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeContactSequence": "gettysburg-v22-union-a-s-contact",
+      "scope": "Exact source-reviewed union A S local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

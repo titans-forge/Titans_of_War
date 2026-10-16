@@ -103,3 +103,21 @@ public/images/cw_pictures/*.png
 !public/images/cw_pictures/generic battle scene 3.jpeg
 !public/images/cw_pictures/re-enactment2.jpg
 public/audio/dixie_instrumental.mp3
+
+# v45 release-allowlisted campaign pictures
+!public/images/cw_pictures/map_virginia_campaigns_reference.jpeg
+!public/images/cw_pictures/map_third_winchester.png
+!public/images/cw_pictures/map_first_manassas.png
+!public/images/cw_pictures/map_seven_days.png
+!public/images/cw_pictures/map_chancellorsville.jpeg
+!public/images/cw_pictures/re-enactment.jpg
+
+# Native developer state and signing material
+*.xcuserstate
+*.mobileprovision
+*.p12
+*.p8
+*.ipa
+.env*
+
+node_modules

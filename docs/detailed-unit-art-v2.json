@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-09",
+  "generation": "OpenAI built-in imagegen",
+  "model": "Not reported by tool; no model-version claim",
+  "nativePixelsPreserved": true,
+  "compositing": "Native RGB sheets use a flat green backdrop. The Canvas renderer removes excess green once when each scene loads; no per-frame pixel processing. Source PNGs are not re-encoded.",
+  "animation": "Ready and contact poses with mirrored opposing views and procedural lift/recoil/breathing. Limited-frame 2D animation, not motion capture.",
+  "acceptance": "Eight new sheets indexed using actual cutout bounds and measured head-to-boot scale. 56 frames indexed; 53 used: inaccurate Union rear aiming and both rear working-crew views are excluded. Existing Union axial rear firing is retained.",
+  "limits": [
+    "The native generator returned a baked checkerboard on two transparency requests; both drafts were rejected.",
+    "A requested opposite-footstep edit did not deliver a reliable opposite phase and was rejected.",
+    "Uniforms and equipment are representative; mirrored walking/left firing frames are not exact equipment-side documentation.",
+    "Artillery uses existing direction-correct apparatus, recoil and travel-driven wheels with upgraded crew. Ground/flags/campaign pictures retain the approved previous art."
+  ],
+  "assets": [
+    {
+      "key": "union-ready",
+      "file": "public/images/units/detailed-v2/union-ready.png",
+      "sha256": "98d5bec5a0000ddbee38d0fe26977280ab7328764e9fc524535c94b7d8e338af",
+      "bytes": 1730617,
+      "frames": 8
+    },
+    {
+      "key": "confederate-ready",
+      "file": "public/images/units/detailed-v2/confederate-ready.png",
+      "sha256": "6980e0bd8a8bd49eb7ae64839a90056e2ed6ce68773b5b099747621a42918b5f",
+      "bytes": 1889708,
+      "frames": 8
+    },
+    {
+      "key": "union-walk",
+      "file": "public/images/units/detailed-v2/union-walk.png",
+      "sha256": "5a5362a5fec34126613e3f1e335c951dd43cbabbb480f607ffc22252d2d0479d",
+      "bytes": 1734588,
+      "frames": 8
+    },
+    {
+      "key": "confederate-walk",
+      "file": "public/images/units/detailed-v2/confederate-walk.png",
+      "sha256": "60ecc35c857bee968e7af851505b0b35dcbb4f2ee2e91f3dccddec2b1900de34",
+      "bytes": 1848862,
+      "frames": 8
+    },
+    {
+      "key": "union-aim",
+      "file": "public/images/units/detailed-v2/union-aim.png",
+      "sha256": "d06e058977c36583330304d80e583a1f54f6a2ccf0e792c0b880fa4d5222a3b4",
+      "bytes": 1693669,
+      "frames": 6
+    },
+    {
+      "key": "confederate-aim",
+      "file": "public/images/units/detailed-v2/confederate-aim.png",
+      "sha256": "74b3bae87a390fecba187fd2e3d91a125ce1607e4c920b21625ec0ab4c8a21ec",
+      "bytes": 1804624,
+      "frames": 6
+    },
+    {
+      "key": "union-crew",
+      "file": "public/images/units/detailed-v2/union-crew.png",
+      "sha256": "f67ad92320d992ad15b91d9e759326d514fdbe708ecd71be3574f5738be6305b",
+      "bytes": 1731115,
+      "frames": 6
+    },
+    {
+      "key": "confederate-crew",
+      "file": "public/images/units/detailed-v2/confederate-crew.png",
+      "sha256": "6bdebe535b7c384b09852c1492ecec052b410c473b4ed1e2b57a62d35d28828a",
+      "bytes": 1734167,
+      "frames": 6
+    }
+  ]
+}

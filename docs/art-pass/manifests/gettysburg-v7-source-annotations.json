@@ -1,0 +1,421 @@
+{
+  "artPass": "gettysburg-v7",
+  "productionApproved": false,
+  "sources": [
+    {
+      "name": "march-s",
+      "key": "union-gettysburg-v7-a-march-s",
+      "measurementName": "union-a-march-s",
+      "source": "docs/art-pass/candidates/gettysburg-v7/union-a-s-march-candidate.png",
+      "sha256": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000",
+      "side": "union",
+      "identity": "a",
+      "direction": 2,
+      "cell": 627,
+      "roots": [
+        [
+          345,
+          608
+        ],
+        [
+          272,
+          608
+        ],
+        [
+          344,
+          597
+        ],
+        [
+          272,
+          597
+        ]
+      ],
+      "capTop": [
+        172,
+        172,
+        162,
+        162
+      ],
+      "bodySpans": [
+        433,
+        430,
+        431,
+        425
+      ],
+      "referenceHeight": 440,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            3,
+            2,
+            1
+          ]
+        ]
+      ],
+      "scope": "opt-in Union A S marching; exact historical Gettysburg v7 only",
+      "annotationMethod": "Separate model-assisted review. Manual pelvis X and row-shared ground Y are uncertain by approximately ±5–8 native pixels. Chronological native-cell order [0,3,2,1] corrects swapped passing cells. One 440 px reference applies to the whole source; cap/sole spans are diagnostics.",
+      "limitations": [
+        "Native passing cells differ from the guide order; metadata selects [0,3,2,1] without rearranging pixels.",
+        "Two carrying grips are plausible. Carrying side differs from the primitive guide; exact historical drill and equipment are not certified.",
+        "Requested body size and 24 px margins were not exact. The measured common reference is 440 px; minimum alpha64 margin is 18 px.",
+        "Faint RGB/alpha residue remains; the blue diagnostic stays below alpha8.",
+        "Four poses do not establish a continuous skeletal rig or planted-foot trajectories. Production, full-family, human and historical validation remain false."
+      ]
+    },
+    {
+      "name": "march-s",
+      "key": "union-gettysburg-v7-b-march-s",
+      "measurementName": "union-b-march-s",
+      "source": "docs/art-pass/candidates/gettysburg-v7/union-b-s-march-candidate.png",
+      "sha256": "544dd143918b18af8807e34a406affe7c83b23378a554d5f88a12586cc16ef68",
+      "side": "union",
+      "identity": "b",
+      "direction": 2,
+      "cell": 627,
+      "roots": [
+        [
+          345,
+          609
+        ],
+        [
+          272,
+          609
+        ],
+        [
+          344,
+          600
+        ],
+        [
+          272,
+          600
+        ]
+      ],
+      "capTop": [
+        171,
+        172,
+        161,
+        161
+      ],
+      "bodySpans": [
+        434,
+        431,
+        434,
+        428
+      ],
+      "referenceHeight": 440,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            3,
+            2,
+            1
+          ]
+        ]
+      ],
+      "scope": "opt-in Union B S marching; exact historical Gettysburg v7 only",
+      "annotationMethod": "Separate model-assisted review. Fresh identity, gait and grip inspection; manual pelvis X and shared ground Y are uncertain by approximately ±5–8 native pixels. Chronological native-cell order is [0,3,2,1]. One 440 px source reference preserves phase differences.",
+      "limitations": [
+        "Fresh review supports chronological cell order [0,3,2,1], opposite contacts/passing and plausible attached grips.",
+        "The facial variation is subtle and consistent; exact age, named likeness and an isolated face-only edit are not certified.",
+        "Minimum solid padding is 18 px at alpha64. Low-alpha red, green and blue residue remains untouched.",
+        "One 440 px source reference preserves natural phase differences; no per-phase correction.",
+        "Continuous foot trajectories, exact drill, full-family, production, human and historical validation remain incomplete."
+      ]
+    },
+    {
+      "name": "actions-s",
+      "key": "union-gettysburg-v7-a-actions-s",
+      "measurementName": "union-a-actions-s",
+      "source": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-spaced-candidate.png",
+      "sha256": "fe4b4a0a531f6e4e6709fa747393d4fa6cc6e5e13ced71fd287c4cd440d1e1c2",
+      "side": "union",
+      "identity": "a",
+      "direction": 2,
+      "cell": 627,
+      "roots": [
+        [
+          343,
+          598
+        ],
+        [
+          291,
+          598
+        ],
+        [
+          355,
+          543
+        ],
+        [
+          309,
+          543
+        ]
+      ],
+      "capTop": [
+        145,
+        149,
+        75,
+        97
+      ],
+      "bodySpans": [
+        448,
+        445,
+        454,
+        442
+      ],
+      "referenceHeight": 460,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "muzzle": [
+        287,
+        406
+      ],
+      "scope": "opt-in Union A S stationary actions; exact historical Gettysburg v7 only",
+      "annotationMethod": "Separate model-assisted review of all four cells. Manual pelvis X and shared ground Y are uncertain by approximately ±5–8 native pixels. One 460 px stationary reference covers ready, fire, load and ram. Tube mouth (287,406), distinct from the blade tip, is uncertain by ±3–4 px.",
+      "limitations": [
+        "Frontal fire projects chiefly south, approximately 86.4 degrees from screen-right. Shoulder, cheek and grips are plausible by model-assisted review, without anatomical certification.",
+        "Two representative loading states retain separate bore, rod and offset blade; foreshortening and occlusion limit exact weapon/drill reconstruction.",
+        "Requested size and translation edits changed untargeted details. The final source was reviewed and remeasured.",
+        "Minimum alpha64 padding is 29 px. Two alpha1 boundary pixels and faint colored residue remain unchanged.",
+        "One held firing pose lacks recoil/settling. Melee, casualties, true bearers and full-family/production/human/historical validation remain incomplete."
+      ]
+    },
+    {
+      "name": "march-n",
+      "key": "confederate-gettysburg-v7-a-march-n",
+      "measurementName": "confederate-a-march-n",
+      "source": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-spaced-candidate.png",
+      "sha256": "cf9e0535f7dd581b815940c32a35d51b4ec573d92c6a3cdfbaf4bb74ccc10e64",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 6,
+      "cell": 627,
+      "roots": [
+        [
+          318,
+          596
+        ],
+        [
+          258,
+          596
+        ],
+        [
+          320,
+          595
+        ],
+        [
+          256,
+          595
+        ]
+      ],
+      "capTop": [
+        153,
+        153,
+        160,
+        160
+      ],
+      "bodySpans": [
+        438,
+        433,
+        430,
+        424
+      ],
+      "referenceHeight": 440,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "scope": "opt-in Confederate A N marching; exact historical Gettysburg v7 only",
+      "annotationMethod": "Separate model-assisted rear-pose review. Manual pelvis X and row-shared ground Y are uncertain by approximately ±5–8 native pixels. One 440 px reference covers the native chronological order [0,1,2,3]. Cap/sole spans are diagnostics, without per-phase correction.",
+      "limitations": [
+        "All four leg chains were reviewed afresh: opposite contacts and alternating passing supports. Earlier repeated-support and padding failures remain preserved.",
+        "Rear kit and the visible grip remain coherent; the forward supporting hand is naturally occluded and uncertified.",
+        "The placement edit changed untargeted details; an exact 40 px translation is not claimed.",
+        "Minimum alpha64 padding is 35 px. Native full cells and alpha remain unchanged; low-alpha RGB residue was not removed.",
+        "Four marching poses do not establish continuous walking, planted-foot trajectories, exact drill or equipment accuracy. Production, full-family, human and historical validation remain false."
+      ]
+    },
+    {
+      "name": "actions-s",
+      "key": "union-gettysburg-v7-b-actions-s",
+      "measurementName": "union-b-actions-s",
+      "source": "docs/art-pass/candidates/gettysburg-v7/union-b-s-actions-candidate.png",
+      "sha256": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c",
+      "side": "union",
+      "identity": "b",
+      "direction": 2,
+      "cell": 627,
+      "roots": [
+        [
+          343,
+          599
+        ],
+        [
+          292,
+          599
+        ],
+        [
+          355,
+          545
+        ],
+        [
+          310,
+          545
+        ]
+      ],
+      "capTop": [
+        143,
+        148,
+        74,
+        97
+      ],
+      "bodySpans": [
+        450,
+        447,
+        457,
+        444
+      ],
+      "referenceHeight": 460,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "muzzle": [
+        288,
+        407
+      ],
+      "scope": "opt-in Union B S stationary actions; exact historical Gettysburg v7 only",
+      "annotationMethod": "Separate model-assisted review of all four cells. Manual pelvis X and shared ground Y are uncertain by approximately ±5–8 native pixels. One 460 px stationary reference covers ready, fire, load and ram. Tube mouth (288,407), distinct from the blade tip, is uncertain by ±3–4 px.",
+      "limitations": [
+        "Subtle moustache/chin-hair variation is stable by model-assisted review; exact age/likeness and a pixel-isolated identity edit are not certified.",
+        "Fire projects chiefly south, approximately 86.4 degrees from screen-right; exact shoulder, cheek and grip anatomy is not certified.",
+        "Two simplified loading states retain separate bore, rod and offset blade, with remaining foreshortening/occlusion limits.",
+        "Minimum alpha64 padding is 29 px. Ready/load boundary pixels at alpha1 and low-alpha colored residue remain unchanged.",
+        "One held firing pose lacks recoil/settling. Full-family, production, human and historical validation remain false."
+      ]
+    },
+    {
+      "name": "actions-n",
+      "key": "confederate-gettysburg-v7-a-actions-n",
+      "measurementName": "confederate-a-actions-n",
+      "source": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-actions-padded-candidate.png",
+      "sha256": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 6,
+      "cell": 627,
+      "roots": [
+        [
+          348,
+          606
+        ],
+        [
+          264,
+          606
+        ],
+        [
+          352,
+          543
+        ],
+        [
+          268,
+          543
+        ]
+      ],
+      "capTop": [
+        234,
+        242,
+        167,
+        172
+      ],
+      "bodySpans": [
+        364,
+        360,
+        369,
+        365
+      ],
+      "referenceHeight": 375,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "muzzle": [
+        285,
+        195
+      ],
+      "scope": "opt-in Confederate A N stationary actions; exact historical Gettysburg v7 only",
+      "annotationMethod": "Separate model-assisted all-four-cell review. Manual pelvis X and row-shared ground Y are uncertain by approximately ±5–8 native pixels. Cap/sole spans are diagnostics; one 375 px reference applies across ready, fire, load and ram. Actual tube mouth (285,195) is uncertain by ±4 px and distinct from the blade tip near (292,159).",
+      "limitations": [
+        "Rear-facing fire is distinct from upright carry through its elbow, shoulder and stock-region relationships; the hidden foregrip, exact butt/cheek/sight contact and world axis are not recovered or certified.",
+        "Visible rear-axis landmark (291,250) to mouth (285,195) projects chiefly north, approximately −96.2 degrees; this is not a measured full stock-to-mouth world length.",
+        "Two representative loading states retain a separate working rod and fixed kit; occlusion limits exact bore, blade/socket and rod-insertion assessment.",
+        "The requested 75 percent reduction was not exactly achieved. Final source dimensions, poses and padding were remeasured; no exact edit-isolation claim.",
+        "Minimum solid padding is 24 px at alpha64. Neon red/yellow/green diagnostic residue remains at alpha2 or below, blue at alpha1; none reach alpha8. Native pixels remain unchanged.",
+        "Recoil/settling, melee, casualties, true bearers and other bearings/identities are absent. Full-family, production, human and historical validation remain false."
+      ]
+    }
+  ]
+}

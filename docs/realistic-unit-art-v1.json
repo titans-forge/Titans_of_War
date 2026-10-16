@@ -1,0 +1,50 @@
+{
+  "generation": "OpenAI built-in imagegen",
+  "date": "2026-09-09",
+  "native_alpha_preserved": true,
+  "image_pixel_processing": "None. Original PNG bytes copied; JSON frame rectangles and boot pivots measured from alpha.",
+  "direction_handling": "Eight engine bearings. E mirrored for W, NW mirrored for NE. Separate axial aiming sheet supplies front/back firing. Mirrored equipment is a representation, not regiment-specific equipment documentation.",
+  "animation": "Four authored infantry poses plus deterministic gait, recoil, reload recovery, weight shift and contact thrust. Two crew working poses. This is limited-frame 2D animation, not motion capture.",
+  "assets": {
+    "confederate-infantry.png": {
+      "sha256": "fc57db83394465a69ac90bf136c5116bd323c17b8885c8a3dd248e1a36503eab",
+      "bytes": 2290260
+    },
+    "confederate-aim.json": {
+      "sha256": "fd2c38720c71ab864a1b6359f9baef7f70d234b2bd61596c12c0936455c7318d",
+      "bytes": 688
+    },
+    "confederate-crew.json": {
+      "sha256": "a76b205838b80ab16ae03a99a838df8808b7872dbb4191d666ad8970e41426b5",
+      "bytes": 3441
+    },
+    "axial-aim.png": {
+      "sha256": "6a9a1b1ff4116bce9b04bfd7232be93e3b43e10a4905fd7b3b0be36647ea02cb",
+      "bytes": 829940
+    },
+    "confederate-infantry.json": {
+      "sha256": "328be16e7130f212736fee5304fe2fa64b8ab719343be05d87584ab4de7148ca",
+      "bytes": 6616
+    },
+    "union-infantry.json": {
+      "sha256": "3136ae48cd71e8dfc6a0fef533d21de2d3fd372c85916c7a799d53f9fd7135ef",
+      "bytes": 6598
+    },
+    "union-infantry.png": {
+      "sha256": "dc5e7b341f0b0107d3d47d844f7bf99d3a93d88bc204a25d2b31d6eaaa49ee49",
+      "bytes": 2209116
+    },
+    "union-crew.json": {
+      "sha256": "cb1d5dba4a894a72350b722710863c3eda01ce590853371c341a3094d4a7221a",
+      "bytes": 3426
+    },
+    "union-aim.json": {
+      "sha256": "571c6732d31c54e77491273ae16cb5c44e5ea3762353011eca583d1e0afaa5fb",
+      "bytes": 684
+    },
+    "artillery-crew.png": {
+      "sha256": "1d6051e67dc320fe139a57726ec5abbdd7ea349f8c69b84a5bf107087818016f",
+      "bytes": 2211067
+    }
+  }
+}

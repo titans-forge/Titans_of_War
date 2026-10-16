@@ -1,0 +1,306 @@
+{
+  "artPass": "gettysburg-v13",
+  "purpose": "Bounded native structural guides and strict local source authoring wrapper",
+  "productionApproved": false,
+  "familyComplete": false,
+  "scriptHashes": {
+    "scripts/author-gettysburg-v13-clips.py": "7a5c5322690864d39dfd95b147d03bf2833455db3fcb1ac8ab538fa870f9f220",
+    "scripts/render-gettysburg-confederate-east-west-guides.py": "d83d025c6de6c3713ec1ff5c655436dfbac83b2d7fe67738d034dcff3a8235af",
+    "scripts/author-gettysburg-v5-clips.py": "7a9f5300a58f85f5d5cf9b25018a4806d3da746be21b70734efc5719e3808e0d",
+    "scripts/author-gettysburg-v11-clips.py": "996df45a56b83746609204496fd422c073ceeb992204743071dae1953e925de7"
+  },
+  "structuralGuides": [
+    {
+      "name": "e-march",
+      "image": "docs/art-pass/candidates/gettysburg-v13/confederate-a-e-march-guide.png",
+      "imageSha256": "0a30eeae7ec4c346f7d7d3430ef8f66f8ce00ee984859fb4c230d53cc63d9315",
+      "receipt": "docs/art-pass/candidates/gettysburg-v13/confederate-a-e-march-guide.json",
+      "receiptSha256": "dd20145f66d9563493ab9bcb40f3d5a22515ea52a289c094e09321898464fd1e",
+      "side": "confederate",
+      "directionIndex": 0,
+      "phaseOrder": [
+        "left-contact",
+        "left-passing",
+        "right-contact",
+        "right-passing"
+      ],
+      "sourceEntries": [
+        [
+          "walk",
+          0,
+          1
+        ],
+        [
+          "walk",
+          0,
+          2
+        ],
+        [
+          "walk",
+          0,
+          3
+        ],
+        [
+          "walk",
+          0,
+          0
+        ]
+      ],
+      "groundOriginPixels": {
+        "x": 192,
+        "y": 440
+      },
+      "minimumSolidPaddingPixels": 53
+    },
+    {
+      "name": "e-actions",
+      "image": "docs/art-pass/candidates/gettysburg-v13/confederate-a-e-actions-guide.png",
+      "imageSha256": "24ba724948888e184833ae45da66621077589b5b852b7d811e98edb7556a22e3",
+      "receipt": "docs/art-pass/candidates/gettysburg-v13/confederate-a-e-actions-guide.json",
+      "receiptSha256": "ae6513b5acb6dd8312c45bcd1bb28b0483f9076050b4d0d2efe208c86fa1b8ef",
+      "side": "confederate",
+      "directionIndex": 0,
+      "phaseOrder": [
+        "ready-upright-carry",
+        "shoulder-aim-fire",
+        "upright-load-at-barrel",
+        "upright-ramrod-insertion"
+      ],
+      "sourceEntries": [
+        [
+          "idle",
+          0,
+          0
+        ],
+        [
+          "fire",
+          0,
+          0
+        ],
+        [
+          "reload",
+          0,
+          0
+        ],
+        [
+          "reload",
+          0,
+          1
+        ]
+      ],
+      "groundOriginPixels": {
+        "x": 176,
+        "y": 440
+      },
+      "minimumSolidPaddingPixels": 39
+    },
+    {
+      "name": "w-march",
+      "image": "docs/art-pass/candidates/gettysburg-v13/confederate-a-w-march-guide.png",
+      "imageSha256": "956a73f4d8a7188e5d3a73d023f299dc20c98a36a5d896a06dd71788509d6b1e",
+      "receipt": "docs/art-pass/candidates/gettysburg-v13/confederate-a-w-march-guide.json",
+      "receiptSha256": "4a5b7692d7175be7fafa7c5abed3867ca30a8b33a9ede7dcc8056870393a4ce8",
+      "side": "confederate",
+      "directionIndex": 4,
+      "phaseOrder": [
+        "left-contact",
+        "left-passing",
+        "right-contact",
+        "right-passing"
+      ],
+      "sourceEntries": [
+        [
+          "walk",
+          4,
+          1
+        ],
+        [
+          "walk",
+          4,
+          2
+        ],
+        [
+          "walk",
+          4,
+          3
+        ],
+        [
+          "walk",
+          4,
+          0
+        ]
+      ],
+      "groundOriginPixels": {
+        "x": 192,
+        "y": 440
+      },
+      "minimumSolidPaddingPixels": 53
+    },
+    {
+      "name": "w-actions",
+      "image": "docs/art-pass/candidates/gettysburg-v13/confederate-a-w-actions-guide.png",
+      "imageSha256": "2e39354063e8fba056cfcfc7ef145c25266d2044c333b541e18ce69fd6931719",
+      "receipt": "docs/art-pass/candidates/gettysburg-v13/confederate-a-w-actions-guide.json",
+      "receiptSha256": "0148fa61b5a89fd05980fc92a953c032621b3e4620fc9d1d42565e4871f8925a",
+      "side": "confederate",
+      "directionIndex": 4,
+      "phaseOrder": [
+        "ready-upright-carry",
+        "shoulder-aim-fire",
+        "upright-load-at-barrel",
+        "upright-ramrod-insertion"
+      ],
+      "sourceEntries": [
+        [
+          "idle",
+          4,
+          0
+        ],
+        [
+          "fire",
+          4,
+          0
+        ],
+        [
+          "reload",
+          4,
+          0
+        ],
+        [
+          "reload",
+          4,
+          1
+        ]
+      ],
+      "groundOriginPixels": {
+        "x": 344,
+        "y": 440
+      },
+      "minimumSolidPaddingPixels": 47
+    }
+  ],
+  "structuralRenderContract": {
+    "nativeSize": [
+      1024,
+      1024
+    ],
+    "cellSize": [
+      512,
+      512
+    ],
+    "grid": [
+      2,
+      2
+    ],
+    "mode": "RGBA",
+    "elevationDegrees": 35,
+    "camera": "orthographic",
+    "orthographicScale": 6,
+    "engine": "Cycles CPU",
+    "samples": 16,
+    "threads": 8,
+    "supersample": 1,
+    "worldGroundZ": 0,
+    "newGuideCount": 4,
+    "sequentialJobs": true,
+    "rasterPostprocessing": false,
+    "originalCheckedMachineryUnchanged": true,
+    "originalReducedConfederateMaterialsUnchanged": true
+  },
+  "verification": {
+    "guideSelfTest": "passed; ideal cardinal E/W axis and wrong-bearing, reversed-axis, yaw, finite-value rejection",
+    "nativeImageAndReceiptVerification": "passed; four SHA-256 matches, RGBA 1024-square, alpha extrema 0/255, whole four-cell pose receipts, sample/thread/camera/ground/padding checks",
+    "modelAssistedReadOnlyVisualGuideInspection": {
+      "fourGuidesInspected": true,
+      "compositionReferenceOnly": true,
+      "humanValidation": false
+    },
+    "authorContractGuardFixtures": {
+      "invalidFixtureCount": 22,
+      "allRejected": true,
+      "syntheticFixturesOnly": true,
+      "assetsWritten": false
+    },
+    "authorExports": "Not executed by this helper; fresh generated sources and exact source-bound annotations remain root-owned"
+  },
+  "authorSchema": {
+    "names": [
+      "march-e",
+      "actions-e",
+      "march-w",
+      "actions-w"
+    ],
+    "side": "confederate",
+    "identity": "a",
+    "identityKit": "confederate-a",
+    "directionByBearing": {
+      "e": 0,
+      "w": 4
+    },
+    "keyTemplate": "confederate-gettysburg-v13-a-{name}",
+    "sourceTemplate": "docs/art-pass/candidates/gettysburg-v13/confederate-a-{bearing}-{kind}-candidate.png",
+    "measurementNameTemplate": "confederate-a-{name}",
+    "sourceWideReferenceHeight": true,
+    "marchActions": [
+      [
+        "march",
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ]
+    ],
+    "actionsActions": [
+      [
+        "ready",
+        [
+          0
+        ]
+      ],
+      [
+        "fire",
+        [
+          1
+        ]
+      ],
+      [
+        "reload",
+        [
+          2,
+          3
+        ]
+      ]
+    ],
+    "nativeReviewRequired": {
+      "sourceHash": "exact source sha256",
+      "identity": "confederate-a",
+      "kitAccepted": true,
+      "allFourCellsReviewed": true,
+      "independentReview": true,
+      "modelAssisted": true
+    },
+    "freshPerCellMeasurements": [
+      "roots[4][2]",
+      "capTop[4]",
+      "bodySpans[4]"
+    ],
+    "freshActionMeasurement": "muzzle[2] is actual barrel mouth in fire cell1, distinct from bayonet tip",
+    "reviewInterpretation": "Declared source-bound independent model-assisted inspection; not independent human or historical certification"
+  },
+  "exportAPI": {
+    "core": "unchanged author-gettysburg-v5-clips.py",
+    "call": "native.run(config, check=False, directory='gettysburg-v13')",
+    "allSourcesPreflightBeforeWrites": true,
+    "pixelTreatment": "byte-for-byte native PNG export; complete equal cells; no raster cleanup, mirroring, resampling or body phase scaling",
+    "publicPNGTemplate": "public/images/units/gettysburg-v13/confederate-a-{name}.png",
+    "publicAtlasTemplate": "public/images/units/gettysburg-v13/confederate-a-{name}.json",
+    "reviewTemplate": "docs/art-pass/reviews/gettysburg-v13-confederate-a-{name}-measurement.json"
+  },
+  "limitations": [
+    "Reduced primitive geometry does not certify Confederate A likeness, full kit, historical drill, anatomy or physical gait.",
+    "Native guide roots/cap/weapon coordinates are not final-source measurements. Every final generated source requires fresh independent inspection and manual registration.",
+    "No annotation manifest, existing PNG, runtime, package or tests were changed by this helper."
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "original": "/Users/titansforge/Vault/Titans_of_War",
+  "artPass": "gettysburg-v13",
+  "assets": 30,
+  "clips": 60,
+  "hashes": [
+    {
+      "key": "union-gettysburg-v4-march-e",
+      "image": "43b8f4394b6071958b693d83c14eb7f324e277706bd5513d23b536467e9f6a42",
+      "json": "8d9fb8d427508147fc50fe58dd16f3ce33469ad95762dbab383a67172b2b3b95"
+    },
+    {
+      "key": "union-gettysburg-v5-actions-e",
+      "image": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f",
+      "json": "250642ff8d84cb9c8afbeb0b078e5bbded154dcf60b08c976838081dffa9b7e5"
+    },
+    {
+      "key": "union-gettysburg-v5-march-se",
+      "image": "90a124967a778789bcdbaf5b83fc0cba689f145486450ba775798ec106bfc103",
+      "json": "0cfce543040bd6e9e44c699aec9ead6a7e3284df77b4099c469444454056d56d"
+    },
+    {
+      "key": "union-gettysburg-v6-actions-se",
+      "image": "bd4650f0d15bf5abf612ebfd01edecf9560c7a459b96e2643ad76ca5d023b61e",
+      "json": "a6bc23ebb20ddaf3910de0b50019834126d3886c48518504fd79be2ea7ce1a9f"
+    },
+    {
+      "key": "union-gettysburg-v7-a-march-s",
+      "image": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000",
+      "json": "a3e1ae063aa5ac954d4b4286cd7069c0482f67de692f6b4c339c5551b51945e7"
+    },
+    {
+      "key": "union-gettysburg-v7-a-actions-s",
+      "image": "fe4b4a0a531f6e4e6709fa747393d4fa6cc6e5e13ced71fd287c4cd440d1e1c2",
+      "json": "f8b54ff60597eb1e233416791b4ec5ebaf673b105afd46b4654982b2f0e3d7b5"
+    },
+    {
+      "key": "union-gettysburg-v7-b-march-s",
+      "image": "544dd143918b18af8807e34a406affe7c83b23378a554d5f88a12586cc16ef68",
+      "json": "4422c81a318865e49fc76883c3c2366bfe565019b7aab4cb91bb6adf08026bd9"
+    },
+    {
+      "key": "union-gettysburg-v7-b-actions-s",
+      "image": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c",
+      "json": "ac4f24a5d8b4a7e67416c3c196dd4e76ae7e225c55c6b8a9eb6c19baa1c122d6"
+    },
+    {
+      "key": "confederate-gettysburg-v7-a-march-n",
+      "image": "cf9e0535f7dd581b815940c32a35d51b4ec573d92c6a3cdfbaf4bb74ccc10e64",
+      "json": "5ad3e3547f43780b233efa07c659b4f8491666c5cca928826acaca7ecc4b83a5"
+    },
+    {
+      "key": "confederate-gettysburg-v7-a-actions-n",
+      "image": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0",
+      "json": "0052a95fcb51150470b7c7d9b86690fcf3f7ef82178bb22ce5c78c49fb821653"
+    },
+    {
+      "key": "union-gettysburg-v8-a-march-sw",
+      "image": "94f87dfa8bd853789be2459f5f5405507421f1447ccf553f4723293c2a29fe6b",
+      "json": "d3a50ecbbbe88fa715c286d467c43249011028db034742dc603de4dd238c029d"
+    },
+    {
+      "key": "union-gettysburg-v8-a-actions-sw",
+      "image": "485b13ee60360562d3ee5d0e93311f223971880622735ecdb5b6dd4d9e7f5a16",
+      "json": "b8f008e5a51762cb54d6c7bf76f7f7b93b4cad319a686a353226295f62175c2d"
+    },
+    {
+      "key": "union-gettysburg-v8-b-march-sw",
+      "image": "fbe92c00f29cdd11bf79970601a7668b1c17050a6b8952a514bcff8c14a02452",
+      "json": "e2eb138e9be6f22e36d67059c102ecbd6231711ddff0a5fd24415e4a58aabfd8"
+    },
+    {
+      "key": "union-gettysburg-v8-b-actions-sw",
+      "image": "e98918507e6eadc38fe828814782c95a51f132ab918fdacfa185d8660e15d8af",
+      "json": "c87e4cd17804d224dd55f28a9e0a817b61096cf61e4dd97188f3f5a511cca6f9"
+    },
+    {
+      "key": "union-gettysburg-v9-a-march-w",
+      "image": "8548f147d8021126f8bc4ce3069983dd7bf5eb29429a1fbafb1401e0f0d5acbb",
+      "json": "f060336aa7f42eb0c6f4c29ccc3edf0792977d10a2edd956c59f6df90b9698b3"
+    },
+    {
+      "key": "union-gettysburg-v9-a-actions-w",
+      "image": "3676bb60c6c4373cd1176e30b4079ad68cebb94de26fe7bea582dd675b936d96",
+      "json": "b19217a43bc3b745ab0b3a2a75022898b543e788e06259d585058a8d0a6c44cc"
+    },
+    {
+      "key": "union-gettysburg-v9-b-march-w",
+      "image": "7842f97c0ea99f1683b8f138bd6411744cbed1e9326b2d061c2b40c7696e7aaf",
+      "json": "48a792b18f5c035e2bebe7ff06ba1b6c529539a0e857a4541db65066755fc5c1"
+    },
+    {
+      "key": "union-gettysburg-v9-b-actions-w",
+      "image": "81b66db974e4f026083fe60abe6670461afd7853ea33a845dd7f39aac0d7d35f",
+      "json": "40209a3bafd5a7ac5207bde5e8a20b8a2a69e49de0b0449e4608d435305794aa"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-march-ne",
+      "image": "48f4c9537b8326d7d1451da727aae73161661ae408fd32ecb467d5d412d26b3d",
+      "json": "66bb7eab80d48052f118c0092a863138923631520b644ecd3403b88ccfd8937e"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-actions-ne",
+      "image": "3036c2de71157958023a82c7034ace597bba02d7b8bad6d09fa7b8e289e98a85",
+      "json": "1f55d2a371d997e3c6b031eb9ca82f426497844315f05f82257ad8177732a7ed"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-march-nw",
+      "image": "b66a59f4135fdf91f9b6750fb918552603055b6917497ea9934b27d9765d1a69",
+      "json": "a7e3bcedf6ebc33c84a6e8ef534c58b65df8ec038120fdb3cdde6ddda96a73b6"
+    },
+    {
+      "key": "confederate-gettysburg-v10-a-actions-nw",
+      "image": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0",
+      "json": "5b0b54f298b758523a978590a1eb056e2b664c908a5006b27fa7ac6923773c00"
+    },
+    {
+      "key": "union-gettysburg-v11-b-march-e",
+      "image": "5f15de11f707a965564bbddae925a302ab7e8119276408e29f0a177783e5290a",
+      "json": "6e0579a9d7d94ab85ec3b66bbcec02c9ed82502714d3b8abf5ad6293fa801585"
+    },
+    {
+      "key": "union-gettysburg-v11-b-actions-e",
+      "image": "5aebc319115ad65a7bc23089e5962ae4975a6a1a9db11a5fcce8a9c13c1780e1",
+      "json": "6cc1412d5997287fc1eadef4bffd79f536d3ad2b46d19e1d75e0d4b2297ba379"
+    },
+    {
+      "key": "union-gettysburg-v11-b-march-se",
+      "image": "9efcc748a6d6860f6248c72b3384d62220db6e76a7e60f7efb35e36a811052b7",
+      "json": "17d8a6332ab2b6588b695074f030eb3bed362746be5549fccf82c8e7141a5672"
+    },
+    {
+      "key": "union-gettysburg-v11-b-actions-se",
+      "image": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6",
+      "json": "204d753490b0e076dee8707b80f21045aee36e1023878e257cb4da01f5993358"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-march-e",
+      "image": "2e7f6b41f065f01a813db6cb57c3146ab514957ee49232f3004b0d60788dcd99",
+      "json": "0f7dc2724e1099717f3146b0927de378231322ebf2bafd01b3f2ae6feddcbdb6"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-actions-e",
+      "image": "6aa46680436709a13d502c2bbbb3b1202377ef10575ed7155e77d7208124d861",
+      "json": "c1fc477d5e82cfb02f241017aef25534bed70dbfcb30a3031d8ecea1fe9cadac"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-march-w",
+      "image": "ab28e7c28ee6be3b17a833cbc3b627f3961dfbb8d9efef93c4ecc07482ed9981",
+      "json": "233be3ec0a9cb4091967b14b522c5419ac1babc7d4722b66d99db22dbf4b4fee"
+    },
+    {
+      "key": "confederate-gettysburg-v13-a-actions-w",
+      "image": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b",
+      "json": "4e5c1d57316cd11d416f5719ff918bbdbcb68cad2e522cb6a8bc41cbc5be5e8c"
+    }
+  ],
+  "rowCount": 4811,
+  "poseHash": "f9fb107bcc80662ab41105a4fb545c67daa84ec17d9c71c26cfd1507cba7cd3d",
+  "clipHash": "934ea92806563f484041b04e340d24c90184ddf2f81bcb5e00faa1ac72bf6626",
+  "studyHash": "77955a9fdca4102eec99aa40eb004d095ce1fc41d2ec6d716587ddb792ff95bb",
+  "presetHash": "4162e904b9b2cb955a3e45e365dcf1b535746b0764a2ce4b8f09db6f3518fd92",
+  "initialPreset": "v13-confederate-e-w-actions",
+  "playbackState": {
+    "panels": {
+      "left": {
+        "studyId": "confederate-e-march-v13",
+        "phase": 0
+      },
+      "right": {
+        "studyId": "confederate-e-actions-v13",
+        "phase": 0
+      }
+    },
+    "presetId": "inspection",
+    "sequence": [],
+    "sampleIndex": 0,
+    "playing": false
+  }
+}

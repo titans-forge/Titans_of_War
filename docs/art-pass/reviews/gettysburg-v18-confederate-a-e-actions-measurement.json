@@ -1,0 +1,1595 @@
+{
+  "source": "docs/art-pass/candidates/gettysburg-v18/confederate-a-e-actions-candidate.png",
+  "sourceHash": "0430ceb12a9b7e5198cb590a1582b80cf8036057e70562ea5ee52cb2a59ca4cd",
+  "publicPNG": "public/images/units/gettysburg-v18/confederate-a-actions-e.png",
+  "atlas": "public/images/units/gettysburg-v18/confederate-a-actions-e.json",
+  "nativeSize": {
+    "w": 1024,
+    "h": 1536
+  },
+  "nativeMode": "RGBA",
+  "pixelTreatment": "none; byte-for-byte whole native PNG copy, full equal cells",
+  "annotationMethod": "Each X is the independently interpreted projected pelvic center of that native pose, excluding the pack, blanket, pouch and weapon. Each Y is the exclusive lower edge of alpha>=64 pixels in the nearer visibly supporting boot sole. X is a manual illustration registration, not a physical anatomy measurement. Inspect both complete leg-to-boot chains in each native cell, select a narrow sole-only ROI on the nearer weight-bearing boot, and compute maxYExclusive at alpha>=64. The farther boot is higher in the oblique projection and does not replace the nearer sole. Gun butt, shadow and sheet bounds are excluded. Subtract the independently selected cap-crown alpha>=64 minimum Y from the supporting-sole ground Y in each cell. Use the six-span median 348.5, rounded half upward to one source-wide referenceHeight of 349. No phase-specific size normalization is permitted. The reviewer selected six cap-crown-only rectangles and six narrow supporting-sole rectangles by inspecting the complete native sheet and each cell. Temporary in-memory cell views and neutral-field composites clarified alpha and anatomy; no diagnostic raster was saved and no source or exported pixel was changed. ROIs were recomputed against the exact copied candidate SHA-256. The fire cell was inspected at native resolution and with a temporary nearest-neighbor pixel enlargement. [394,161] marks the visible end of the upper dark barrel before the thinner projecting bayonet; the reviewed point has native alpha 113. The bounded ROI includes the barrel-end metal. This is a visual effects anchor, not a certified physical barrel aperture.",
+  "referenceHeight": 349,
+  "scaleMethod": "One uniform reference for all six source cells; no action or phase size correction.",
+  "solidPaddingVerified": true,
+  "nonzeroAlphaPaddingVerified": false,
+  "edgeOrFringeFreeCertified": false,
+  "cells": [
+    {
+      "cell": 0,
+      "phaseRole": "ready",
+      "cap": {
+        "roi": [
+          206,
+          98,
+          269,
+          126
+        ],
+        "solidPixels": 976,
+        "minY": 104,
+        "maxYExclusive": 126
+      },
+      "supportingSole": {
+        "roi": [
+          181,
+          448,
+          249,
+          463
+        ],
+        "solidPixels": 432,
+        "minY": 448,
+        "maxYExclusive": 458
+      },
+      "capTopY": 104,
+      "supportingSoleGroundY": 458,
+      "bodySpan": 354,
+      "alpha": {
+        "1": {
+          "pixels": 39871,
+          "bounds": [
+            0,
+            34,
+            504,
+            508
+          ],
+          "padding": [
+            0,
+            34,
+            8,
+            4
+          ]
+        },
+        "8": {
+          "pixels": 33750,
+          "bounds": [
+            157,
+            37,
+            306,
+            458
+          ],
+          "padding": [
+            157,
+            37,
+            206,
+            54
+          ]
+        },
+        "64": {
+          "pixels": 32818,
+          "bounds": [
+            157,
+            38,
+            305,
+            458
+          ],
+          "padding": [
+            157,
+            38,
+            207,
+            54
+          ]
+        },
+        "128": {
+          "pixels": 32207,
+          "bounds": [
+            157,
+            41,
+            305,
+            458
+          ],
+          "padding": [
+            157,
+            41,
+            207,
+            54
+          ]
+        },
+        "240": {
+          "pixels": 30560,
+          "bounds": [
+            158,
+            55,
+            304,
+            457
+          ],
+          "padding": [
+            158,
+            55,
+            208,
+            55
+          ]
+        }
+      },
+      "solidAlphaBounds": [
+        157,
+        38,
+        305,
+        458
+      ],
+      "solidAlphaPadding": [
+        157,
+        38,
+        207,
+        54
+      ]
+    },
+    {
+      "cell": 1,
+      "phaseRole": "fire",
+      "cap": {
+        "roi": [
+          168,
+          110,
+          230,
+          144
+        ],
+        "solidPixels": 1171,
+        "minY": 117,
+        "maxYExclusive": 144
+      },
+      "supportingSole": {
+        "roi": [
+          127,
+          446,
+          199,
+          463
+        ],
+        "solidPixels": 544,
+        "minY": 446,
+        "maxYExclusive": 458
+      },
+      "capTopY": 117,
+      "supportingSoleGroundY": 458,
+      "bodySpan": 341,
+      "alpha": {
+        "1": {
+          "pixels": 37119,
+          "bounds": [
+            107,
+            89,
+            469,
+            462
+          ],
+          "padding": [
+            107,
+            89,
+            43,
+            50
+          ]
+        },
+        "8": {
+          "pixels": 31808,
+          "bounds": [
+            114,
+            117,
+            469,
+            458
+          ],
+          "padding": [
+            114,
+            117,
+            43,
+            54
+          ]
+        },
+        "64": {
+          "pixels": 30973,
+          "bounds": [
+            114,
+            117,
+            467,
+            458
+          ],
+          "padding": [
+            114,
+            117,
+            45,
+            54
+          ]
+        },
+        "128": {
+          "pixels": 30469,
+          "bounds": [
+            115,
+            117,
+            466,
+            457
+          ],
+          "padding": [
+            115,
+            117,
+            46,
+            55
+          ]
+        },
+        "240": {
+          "pixels": 28932,
+          "bounds": [
+            115,
+            118,
+            460,
+            457
+          ],
+          "padding": [
+            115,
+            118,
+            52,
+            55
+          ]
+        }
+      },
+      "solidAlphaBounds": [
+        114,
+        117,
+        467,
+        458
+      ],
+      "solidAlphaPadding": [
+        114,
+        117,
+        45,
+        54
+      ],
+      "muzzleReview": {
+        "roi": [
+          388,
+          154,
+          401,
+          168
+        ],
+        "point": [
+          394,
+          161
+        ],
+        "solidPixelsInROI": 93,
+        "physicalBarrelApertureCertified": false
+      }
+    },
+    {
+      "cell": 2,
+      "phaseRole": "cartridge",
+      "cap": {
+        "roi": [
+          202,
+          74,
+          274,
+          111
+        ],
+        "solidPixels": 1469,
+        "minY": 81,
+        "maxYExclusive": 111
+      },
+      "supportingSole": {
+        "roi": [
+          179,
+          430,
+          249,
+          447
+        ],
+        "solidPixels": 526,
+        "minY": 430,
+        "maxYExclusive": 441
+      },
+      "capTopY": 81,
+      "supportingSoleGroundY": 441,
+      "bodySpan": 360,
+      "alpha": {
+        "1": {
+          "pixels": 44518,
+          "bounds": [
+            143,
+            53,
+            482,
+            448
+          ],
+          "padding": [
+            143,
+            53,
+            30,
+            64
+          ]
+        },
+        "8": {
+          "pixels": 37200,
+          "bounds": [
+            147,
+            79,
+            321,
+            441
+          ],
+          "padding": [
+            147,
+            79,
+            191,
+            71
+          ]
+        },
+        "64": {
+          "pixels": 36175,
+          "bounds": [
+            149,
+            81,
+            321,
+            441
+          ],
+          "padding": [
+            149,
+            81,
+            191,
+            71
+          ]
+        },
+        "128": {
+          "pixels": 35567,
+          "bounds": [
+            149,
+            82,
+            321,
+            441
+          ],
+          "padding": [
+            149,
+            82,
+            191,
+            71
+          ]
+        },
+        "240": {
+          "pixels": 33914,
+          "bounds": [
+            150,
+            82,
+            320,
+            440
+          ],
+          "padding": [
+            150,
+            82,
+            192,
+            72
+          ]
+        }
+      },
+      "solidAlphaBounds": [
+        149,
+        81,
+        321,
+        441
+      ],
+      "solidAlphaPadding": [
+        149,
+        81,
+        191,
+        71
+      ]
+    },
+    {
+      "cell": 3,
+      "phaseRole": "charge",
+      "cap": {
+        "roi": [
+          178,
+          83,
+          250,
+          116
+        ],
+        "solidPixels": 1298,
+        "minY": 89,
+        "maxYExclusive": 116
+      },
+      "supportingSole": {
+        "roi": [
+          157,
+          430,
+          228,
+          448
+        ],
+        "solidPixels": 543,
+        "minY": 430,
+        "maxYExclusive": 441
+      },
+      "capTopY": 89,
+      "supportingSoleGroundY": 441,
+      "bodySpan": 352,
+      "alpha": {
+        "1": {
+          "pixels": 45797,
+          "bounds": [
+            31,
+            3,
+            496,
+            512
+          ],
+          "padding": [
+            31,
+            3,
+            16,
+            0
+          ]
+        },
+        "8": {
+          "pixels": 38765,
+          "bounds": [
+            129,
+            88,
+            330,
+            442
+          ],
+          "padding": [
+            129,
+            88,
+            182,
+            70
+          ]
+        },
+        "64": {
+          "pixels": 37636,
+          "bounds": [
+            129,
+            89,
+            329,
+            441
+          ],
+          "padding": [
+            129,
+            89,
+            183,
+            71
+          ]
+        },
+        "128": {
+          "pixels": 37035,
+          "bounds": [
+            129,
+            89,
+            329,
+            441
+          ],
+          "padding": [
+            129,
+            89,
+            183,
+            71
+          ]
+        },
+        "240": {
+          "pixels": 35279,
+          "bounds": [
+            130,
+            90,
+            328,
+            440
+          ],
+          "padding": [
+            130,
+            90,
+            184,
+            72
+          ]
+        }
+      },
+      "solidAlphaBounds": [
+        129,
+        89,
+        329,
+        441
+      ],
+      "solidAlphaPadding": [
+        129,
+        89,
+        183,
+        71
+      ]
+    },
+    {
+      "cell": 4,
+      "phaseRole": "ram",
+      "cap": {
+        "roi": [
+          200,
+          88,
+          278,
+          125
+        ],
+        "solidPixels": 1493,
+        "minY": 95,
+        "maxYExclusive": 125
+      },
+      "supportingSole": {
+        "roi": [
+          187,
+          429,
+          260,
+          447
+        ],
+        "solidPixels": 464,
+        "minY": 429,
+        "maxYExclusive": 440
+      },
+      "capTopY": 95,
+      "supportingSoleGroundY": 440,
+      "bodySpan": 345,
+      "alpha": {
+        "1": {
+          "pixels": 42125,
+          "bounds": [
+            137,
+            23,
+            481,
+            464
+          ],
+          "padding": [
+            137,
+            23,
+            31,
+            48
+          ]
+        },
+        "8": {
+          "pixels": 35904,
+          "bounds": [
+            159,
+            27,
+            322,
+            440
+          ],
+          "padding": [
+            159,
+            27,
+            190,
+            72
+          ]
+        },
+        "64": {
+          "pixels": 34897,
+          "bounds": [
+            159,
+            28,
+            322,
+            440
+          ],
+          "padding": [
+            159,
+            28,
+            190,
+            72
+          ]
+        },
+        "128": {
+          "pixels": 34285,
+          "bounds": [
+            159,
+            28,
+            322,
+            440
+          ],
+          "padding": [
+            159,
+            28,
+            190,
+            72
+          ]
+        },
+        "240": {
+          "pixels": 32637,
+          "bounds": [
+            160,
+            32,
+            321,
+            439
+          ],
+          "padding": [
+            160,
+            32,
+            191,
+            73
+          ]
+        }
+      },
+      "solidAlphaBounds": [
+        159,
+        28,
+        322,
+        440
+      ],
+      "solidAlphaPadding": [
+        159,
+        28,
+        190,
+        72
+      ]
+    },
+    {
+      "cell": 5,
+      "phaseRole": "return-to-shouldered-aim",
+      "cap": {
+        "roi": [
+          172,
+          94,
+          232,
+          128
+        ],
+        "solidPixels": 1148,
+        "minY": 100,
+        "maxYExclusive": 128
+      },
+      "supportingSole": {
+        "roi": [
+          120,
+          429,
+          199,
+          447
+        ],
+        "solidPixels": 454,
+        "minY": 429,
+        "maxYExclusive": 440
+      },
+      "capTopY": 100,
+      "supportingSoleGroundY": 440,
+      "bodySpan": 340,
+      "alpha": {
+        "1": {
+          "pixels": 37945,
+          "bounds": [
+            1,
+            1,
+            476,
+            512
+          ],
+          "padding": [
+            1,
+            1,
+            36,
+            0
+          ]
+        },
+        "8": {
+          "pixels": 32315,
+          "bounds": [
+            110,
+            100,
+            472,
+            440
+          ],
+          "padding": [
+            110,
+            100,
+            40,
+            72
+          ]
+        },
+        "64": {
+          "pixels": 31501,
+          "bounds": [
+            111,
+            100,
+            470,
+            440
+          ],
+          "padding": [
+            111,
+            100,
+            42,
+            72
+          ]
+        },
+        "128": {
+          "pixels": 30904,
+          "bounds": [
+            111,
+            101,
+            468,
+            439
+          ],
+          "padding": [
+            111,
+            101,
+            44,
+            73
+          ]
+        },
+        "240": {
+          "pixels": 29467,
+          "bounds": [
+            112,
+            101,
+            420,
+            438
+          ],
+          "padding": [
+            112,
+            101,
+            92,
+            74
+          ]
+        }
+      },
+      "solidAlphaBounds": [
+        111,
+        100,
+        470,
+        440
+      ],
+      "solidAlphaPadding": [
+        111,
+        100,
+        42,
+        72
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 0,
+      "action": "ready",
+      "key": "confederate-gettysburg-v18-a-actions-e",
+      "frames": [
+        "a-ready-0-0"
+      ],
+      "sourceHash": "0430ceb12a9b7e5198cb590a1582b80cf8036057e70562ea5ee52cb2a59ca4cd",
+      "referenceHeight": 349,
+      "pivots": [
+        {
+          "x": 0.451172,
+          "y": 0.894531
+        }
+      ],
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "scope": "Exact native Gettysburg v18 local opt-in Confederate A east stationary illustration pilot only; default, production, complete family, human, physical anatomy and historical drill approval remain false."
+    },
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 0,
+      "action": "fire",
+      "key": "confederate-gettysburg-v18-a-actions-e",
+      "frames": [
+        "a-fire-0-0"
+      ],
+      "sourceHash": "0430ceb12a9b7e5198cb590a1582b80cf8036057e70562ea5ee52cb2a59ca4cd",
+      "referenceHeight": 349,
+      "pivots": [
+        {
+          "x": 0.353516,
+          "y": 0.894531
+        }
+      ],
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "scope": "Exact native Gettysburg v18 local opt-in Confederate A east stationary illustration pilot only; default, production, complete family, human, physical anatomy and historical drill approval remain false.",
+      "muzzles": [
+        {
+          "x": 0.769531,
+          "y": 0.314453
+        }
+      ]
+    },
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 0,
+      "action": "reload",
+      "key": "confederate-gettysburg-v18-a-actions-e",
+      "frames": [
+        "a-reload-0-0",
+        "a-reload-0-1",
+        "a-reload-0-2",
+        "a-reload-0-3"
+      ],
+      "sourceHash": "0430ceb12a9b7e5198cb590a1582b80cf8036057e70562ea5ee52cb2a59ca4cd",
+      "referenceHeight": 349,
+      "pivots": [
+        {
+          "x": 0.445312,
+          "y": 0.861328
+        },
+        {
+          "x": 0.414062,
+          "y": 0.861328
+        },
+        {
+          "x": 0.458984,
+          "y": 0.859375
+        },
+        {
+          "x": 0.349609,
+          "y": 0.859375
+        }
+      ],
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "scope": "Exact native Gettysburg v18 local opt-in Confederate A east stationary illustration pilot only; default, production, complete family, human, physical anatomy and historical drill approval remain false.",
+      "nativeReloadSequence": "gettysburg-v18-confederate-a-e"
+    }
+  ],
+  "limitations": [
+    "This is a genuinely separate model-assisted source inspection, not human art, anatomy, historical or usability certification.",
+    "The original 5% cap-to-sole gate failed: 20/348.5 = 5.738880918220947%. Acceptance uses the explicit source-specific 6% amendment only.",
+    "Manual pelvis centers and ROI selection are interpreted from a painted illustration; they are not physical joint or bone measurements.",
+    "All six broad action roles and complete visible leg chains are readable, but concealed fingers, true weapon internals, bayonet continuity, intermediate ramrod handling and full historical drill chronology remain unverified.",
+    "Fire and final aim are static shouldered poses. Firing, recoil, shot emission and time continuity require renderer evidence.",
+    "The full cap-to-sole range is about 1.84 pixels at a 32-pixel reference height and 2.73 pixels at 58 times 0.82 before camera zoom. This is a calculated extent difference, not a measured animation-jitter result.",
+    "Very faint alpha values reach some cell edges. Solid alpha padding passes, but complete edge/fringe freedom is not certified.",
+    "This approval covers exactly this complete unresampled native source and does not approve default art, the remaining identities/bearings, melee, casualties or the whole game.",
+    "Charging and ramming poses omit or obscure the projecting bayonet visible in ready/cartridge/aim. This source does not establish bayonet, lock, barrel, ramrod or paper-cartridge continuity across a complete historical drill.",
+    "All exported PNG bytes remain native and unchanged, including very faint alpha>=1 pixels at some cell edges. No alpha cleanup, cross-cell repair, phase interpolation, raster resizing, warping or per-phase body normalization is applied.",
+    "Only the four-phase reload definition carries nativeReloadSequence gettysburg-v18-confederate-a-e; ready and fire remain single-pose definitions. Action timing, turning, pause/cold-resume, shot anchoring, field memory and human usability remain separate checks."
+  ],
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v18-independent-e-actions-source-review.json",
+  "sourceReviewSHA256": "9b199ca76e7d2ffbee681d70dafeba89a835ffa0c3c9f4fad6098ceb86540ce3",
+  "completeFamilyApproved": false,
+  "familyApproved": false,
+  "freshMeasurementContract": {
+    "threshold": 64,
+    "sourceHash": "0430ceb12a9b7e5198cb590a1582b80cf8036057e70562ea5ee52cb2a59ca4cd",
+    "cells": [
+      {
+        "cell": 0,
+        "phaseRole": "ready",
+        "cap": {
+          "roi": [
+            206,
+            98,
+            269,
+            126
+          ],
+          "solidPixels": 976,
+          "minY": 104,
+          "maxYExclusive": 126
+        },
+        "supportingSole": {
+          "roi": [
+            181,
+            448,
+            249,
+            463
+          ],
+          "solidPixels": 432,
+          "minY": 448,
+          "maxYExclusive": 458
+        },
+        "capTopY": 104,
+        "supportingSoleGroundY": 458,
+        "bodySpan": 354,
+        "alpha": {
+          "1": {
+            "pixels": 39871,
+            "bounds": [
+              0,
+              34,
+              504,
+              508
+            ],
+            "padding": [
+              0,
+              34,
+              8,
+              4
+            ]
+          },
+          "8": {
+            "pixels": 33750,
+            "bounds": [
+              157,
+              37,
+              306,
+              458
+            ],
+            "padding": [
+              157,
+              37,
+              206,
+              54
+            ]
+          },
+          "64": {
+            "pixels": 32818,
+            "bounds": [
+              157,
+              38,
+              305,
+              458
+            ],
+            "padding": [
+              157,
+              38,
+              207,
+              54
+            ]
+          },
+          "128": {
+            "pixels": 32207,
+            "bounds": [
+              157,
+              41,
+              305,
+              458
+            ],
+            "padding": [
+              157,
+              41,
+              207,
+              54
+            ]
+          },
+          "240": {
+            "pixels": 30560,
+            "bounds": [
+              158,
+              55,
+              304,
+              457
+            ],
+            "padding": [
+              158,
+              55,
+              208,
+              55
+            ]
+          }
+        },
+        "solidAlphaBounds": [
+          157,
+          38,
+          305,
+          458
+        ],
+        "solidAlphaPadding": [
+          157,
+          38,
+          207,
+          54
+        ]
+      },
+      {
+        "cell": 1,
+        "phaseRole": "fire",
+        "cap": {
+          "roi": [
+            168,
+            110,
+            230,
+            144
+          ],
+          "solidPixels": 1171,
+          "minY": 117,
+          "maxYExclusive": 144
+        },
+        "supportingSole": {
+          "roi": [
+            127,
+            446,
+            199,
+            463
+          ],
+          "solidPixels": 544,
+          "minY": 446,
+          "maxYExclusive": 458
+        },
+        "capTopY": 117,
+        "supportingSoleGroundY": 458,
+        "bodySpan": 341,
+        "alpha": {
+          "1": {
+            "pixels": 37119,
+            "bounds": [
+              107,
+              89,
+              469,
+              462
+            ],
+            "padding": [
+              107,
+              89,
+              43,
+              50
+            ]
+          },
+          "8": {
+            "pixels": 31808,
+            "bounds": [
+              114,
+              117,
+              469,
+              458
+            ],
+            "padding": [
+              114,
+              117,
+              43,
+              54
+            ]
+          },
+          "64": {
+            "pixels": 30973,
+            "bounds": [
+              114,
+              117,
+              467,
+              458
+            ],
+            "padding": [
+              114,
+              117,
+              45,
+              54
+            ]
+          },
+          "128": {
+            "pixels": 30469,
+            "bounds": [
+              115,
+              117,
+              466,
+              457
+            ],
+            "padding": [
+              115,
+              117,
+              46,
+              55
+            ]
+          },
+          "240": {
+            "pixels": 28932,
+            "bounds": [
+              115,
+              118,
+              460,
+              457
+            ],
+            "padding": [
+              115,
+              118,
+              52,
+              55
+            ]
+          }
+        },
+        "solidAlphaBounds": [
+          114,
+          117,
+          467,
+          458
+        ],
+        "solidAlphaPadding": [
+          114,
+          117,
+          45,
+          54
+        ],
+        "muzzleReview": {
+          "roi": [
+            388,
+            154,
+            401,
+            168
+          ],
+          "point": [
+            394,
+            161
+          ],
+          "solidPixelsInROI": 93,
+          "physicalBarrelApertureCertified": false
+        }
+      },
+      {
+        "cell": 2,
+        "phaseRole": "cartridge",
+        "cap": {
+          "roi": [
+            202,
+            74,
+            274,
+            111
+          ],
+          "solidPixels": 1469,
+          "minY": 81,
+          "maxYExclusive": 111
+        },
+        "supportingSole": {
+          "roi": [
+            179,
+            430,
+            249,
+            447
+          ],
+          "solidPixels": 526,
+          "minY": 430,
+          "maxYExclusive": 441
+        },
+        "capTopY": 81,
+        "supportingSoleGroundY": 441,
+        "bodySpan": 360,
+        "alpha": {
+          "1": {
+            "pixels": 44518,
+            "bounds": [
+              143,
+              53,
+              482,
+              448
+            ],
+            "padding": [
+              143,
+              53,
+              30,
+              64
+            ]
+          },
+          "8": {
+            "pixels": 37200,
+            "bounds": [
+              147,
+              79,
+              321,
+              441
+            ],
+            "padding": [
+              147,
+              79,
+              191,
+              71
+            ]
+          },
+          "64": {
+            "pixels": 36175,
+            "bounds": [
+              149,
+              81,
+              321,
+              441
+            ],
+            "padding": [
+              149,
+              81,
+              191,
+              71
+            ]
+          },
+          "128": {
+            "pixels": 35567,
+            "bounds": [
+              149,
+              82,
+              321,
+              441
+            ],
+            "padding": [
+              149,
+              82,
+              191,
+              71
+            ]
+          },
+          "240": {
+            "pixels": 33914,
+            "bounds": [
+              150,
+              82,
+              320,
+              440
+            ],
+            "padding": [
+              150,
+              82,
+              192,
+              72
+            ]
+          }
+        },
+        "solidAlphaBounds": [
+          149,
+          81,
+          321,
+          441
+        ],
+        "solidAlphaPadding": [
+          149,
+          81,
+          191,
+          71
+        ]
+      },
+      {
+        "cell": 3,
+        "phaseRole": "charge",
+        "cap": {
+          "roi": [
+            178,
+            83,
+            250,
+            116
+          ],
+          "solidPixels": 1298,
+          "minY": 89,
+          "maxYExclusive": 116
+        },
+        "supportingSole": {
+          "roi": [
+            157,
+            430,
+            228,
+            448
+          ],
+          "solidPixels": 543,
+          "minY": 430,
+          "maxYExclusive": 441
+        },
+        "capTopY": 89,
+        "supportingSoleGroundY": 441,
+        "bodySpan": 352,
+        "alpha": {
+          "1": {
+            "pixels": 45797,
+            "bounds": [
+              31,
+              3,
+              496,
+              512
+            ],
+            "padding": [
+              31,
+              3,
+              16,
+              0
+            ]
+          },
+          "8": {
+            "pixels": 38765,
+            "bounds": [
+              129,
+              88,
+              330,
+              442
+            ],
+            "padding": [
+              129,
+              88,
+              182,
+              70
+            ]
+          },
+          "64": {
+            "pixels": 37636,
+            "bounds": [
+              129,
+              89,
+              329,
+              441
+            ],
+            "padding": [
+              129,
+              89,
+              183,
+              71
+            ]
+          },
+          "128": {
+            "pixels": 37035,
+            "bounds": [
+              129,
+              89,
+              329,
+              441
+            ],
+            "padding": [
+              129,
+              89,
+              183,
+              71
+            ]
+          },
+          "240": {
+            "pixels": 35279,
+            "bounds": [
+              130,
+              90,
+              328,
+              440
+            ],
+            "padding": [
+              130,
+              90,
+              184,
+              72
+            ]
+          }
+        },
+        "solidAlphaBounds": [
+          129,
+          89,
+          329,
+          441
+        ],
+        "solidAlphaPadding": [
+          129,
+          89,
+          183,
+          71
+        ]
+      },
+      {
+        "cell": 4,
+        "phaseRole": "ram",
+        "cap": {
+          "roi": [
+            200,
+            88,
+            278,
+            125
+          ],
+          "solidPixels": 1493,
+          "minY": 95,
+          "maxYExclusive": 125
+        },
+        "supportingSole": {
+          "roi": [
+            187,
+            429,
+            260,
+            447
+          ],
+          "solidPixels": 464,
+          "minY": 429,
+          "maxYExclusive": 440
+        },
+        "capTopY": 95,
+        "supportingSoleGroundY": 440,
+        "bodySpan": 345,
+        "alpha": {
+          "1": {
+            "pixels": 42125,
+            "bounds": [
+              137,
+              23,
+              481,
+              464
+            ],
+            "padding": [
+              137,
+              23,
+              31,
+              48
+            ]
+          },
+          "8": {
+            "pixels": 35904,
+            "bounds": [
+              159,
+              27,
+              322,
+              440
+            ],
+            "padding": [
+              159,
+              27,
+              190,
+              72
+            ]
+          },
+          "64": {
+            "pixels": 34897,
+            "bounds": [
+              159,
+              28,
+              322,
+              440
+            ],
+            "padding": [
+              159,
+              28,
+              190,
+              72
+            ]
+          },
+          "128": {
+            "pixels": 34285,
+            "bounds": [
+              159,
+              28,
+              322,
+              440
+            ],
+            "padding": [
+              159,
+              28,
+              190,
+              72
+            ]
+          },
+          "240": {
+            "pixels": 32637,
+            "bounds": [
+              160,
+              32,
+              321,
+              439
+            ],
+            "padding": [
+              160,
+              32,
+              191,
+              73
+            ]
+          }
+        },
+        "solidAlphaBounds": [
+          159,
+          28,
+          322,
+          440
+        ],
+        "solidAlphaPadding": [
+          159,
+          28,
+          190,
+          72
+        ]
+      },
+      {
+        "cell": 5,
+        "phaseRole": "return-to-shouldered-aim",
+        "cap": {
+          "roi": [
+            172,
+            94,
+            232,
+            128
+          ],
+          "solidPixels": 1148,
+          "minY": 100,
+          "maxYExclusive": 128
+        },
+        "supportingSole": {
+          "roi": [
+            120,
+            429,
+            199,
+            447
+          ],
+          "solidPixels": 454,
+          "minY": 429,
+          "maxYExclusive": 440
+        },
+        "capTopY": 100,
+        "supportingSoleGroundY": 440,
+        "bodySpan": 340,
+        "alpha": {
+          "1": {
+            "pixels": 37945,
+            "bounds": [
+              1,
+              1,
+              476,
+              512
+            ],
+            "padding": [
+              1,
+              1,
+              36,
+              0
+            ]
+          },
+          "8": {
+            "pixels": 32315,
+            "bounds": [
+              110,
+              100,
+              472,
+              440
+            ],
+            "padding": [
+              110,
+              100,
+              40,
+              72
+            ]
+          },
+          "64": {
+            "pixels": 31501,
+            "bounds": [
+              111,
+              100,
+              470,
+              440
+            ],
+            "padding": [
+              111,
+              100,
+              42,
+              72
+            ]
+          },
+          "128": {
+            "pixels": 30904,
+            "bounds": [
+              111,
+              101,
+              468,
+              439
+            ],
+            "padding": [
+              111,
+              101,
+              44,
+              73
+            ]
+          },
+          "240": {
+            "pixels": 29467,
+            "bounds": [
+              112,
+              101,
+              420,
+              438
+            ],
+            "padding": [
+              112,
+              101,
+              92,
+              74
+            ]
+          }
+        },
+        "solidAlphaBounds": [
+          111,
+          100,
+          470,
+          440
+        ],
+        "solidAlphaPadding": [
+          111,
+          100,
+          42,
+          72
+        ]
+      }
+    ],
+    "medianBodySpan": 348.5,
+    "spanRange": 20,
+    "spanRangeFractionOfMedian": 0.05738880918220947,
+    "maximumSpanRangeFractionOfMedian": 0.06,
+    "originalTargetFractionOfMedian": 0.05,
+    "originalTargetMet": false,
+    "postureAllowance": "Source-specific opt-in illustration judgment by Astra at Max; normal and close-zoom playback required.",
+    "manualROIsIndependentlyReviewed": true,
+    "freshNativePixelsRecomputed": true,
+    "phaseScaleNormalization": false
+  },
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

@@ -1,0 +1,215 @@
+{
+  "artPass": "gettysburg-v20",
+  "referenceHeight": 396,
+  "measurementThreshold": 64,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false,
+  "completeFamilyApproved": false,
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v20-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "6b319e2c5583b486d1e406c8bfd47f0b5318c1c44afe785695d35e9a81c69465",
+  "annotationMethod": "Independently inspect the complete unresampled native sheets and each native 627-pixel cell. Select anatomical projected pelvis/support X positions manually, excluding packs and weapons; do not center alpha boxes. Select bounded cap-only and nearer supporting-sole-only rectangles for all four contact cells. Measure cap minY and sole maxYExclusive at alpha>=64; subtract to obtain [402,369,401,391], whose median is 396. Round the median half upward and apply the same referenceHeight=396 to every cell in both sources. Ground Y is recomputed separately from each role-appropriate support ROI. No per-phase or casualty height normalization, resampling, mirroring, alpha repair, warping or synthesized intermediate frame is approved.",
+  "coordinateConvention": "Cell-local pixels, row-major order. ROIs are [x0,y0,x1,y1] with exclusive right/bottom edges. Ground Y is maxYExclusive for alpha>=64 pixels inside the support ROI.",
+  "sources": [
+    {
+      "role": "contact",
+      "source": "docs/art-pass/candidates/gettysburg-v20/confederate-a-contact-e-candidate.png",
+      "sha256": "0621f135a0428937e9010bf949ac1f063f7c0f305c1e284f9cacafa6c0075682",
+      "cell": 627,
+      "roots": [
+        [
+          260,
+          548
+        ],
+        [
+          184,
+          543
+        ],
+        [
+          280,
+          534
+        ],
+        [
+          253,
+          533
+        ]
+      ],
+      "groundROIs": [
+        [
+          157,
+          533,
+          242,
+          552
+        ],
+        [
+          52,
+          529,
+          124,
+          548
+        ],
+        [
+          166,
+          519,
+          246,
+          540
+        ],
+        [
+          146,
+          519,
+          224,
+          539
+        ]
+      ],
+      "groundMethods": [
+        "X=260 is the manually interpreted projected pelvis center beneath the coat/belt and between the two leg origins. Y is the exclusive alpha>=64 lower edge of the nearer rear/left planted boot sole in the bounded sole-only ROI; the forward boot, pack and musket are excluded.",
+        "X=184 is the manually interpreted projected pelvis center of the wide level-bayonet lunge, excluding the displaced pack and forward arms. Y is the exclusive alpha>=64 lower edge of the nearer extended rear/left boot sole; the higher forward boot and horizontal weapon are excluded.",
+        "X=280 is the manually interpreted projected pelvis center between the trouser leg origins in the raised recovery pose. Y is the exclusive alpha>=64 lower edge of the nearer rear/left boot sole; the higher forward boot and raised bayonet are excluded.",
+        "X=253 is the manually interpreted projected pelvis center below the coat in the close guard. Y is the exclusive alpha>=64 lower edge of the nearer rear/left boot sole; the farther front boot and diagonally raised weapon are excluded."
+      ],
+      "capROIs": [
+        [
+          236,
+          139,
+          319,
+          173
+        ],
+        [
+          194,
+          168,
+          271,
+          199
+        ],
+        [
+          249,
+          123,
+          335,
+          162
+        ],
+        [
+          227,
+          132,
+          308,
+          173
+        ]
+      ],
+      "capTop": [
+        146,
+        174,
+        133,
+        142
+      ],
+      "bodySpans": [
+        402,
+        369,
+        401,
+        391
+      ],
+      "referenceSoleROIs": [
+        [
+          157,
+          533,
+          242,
+          552
+        ],
+        [
+          52,
+          529,
+          124,
+          548
+        ],
+        [
+          166,
+          519,
+          246,
+          540
+        ],
+        [
+          146,
+          519,
+          224,
+          539
+        ]
+      ],
+      "referenceSoleGroundY": [
+        548,
+        543,
+        534,
+        533
+      ],
+      "referenceHeight": 396
+    },
+    {
+      "role": "casualty",
+      "source": "docs/art-pass/candidates/gettysburg-v20/confederate-a-casualty-e-candidate.png",
+      "sha256": "2e06139713abaf66811a26bace098d19fdc4ced40be11f8ca2e5aa3aefdd4134",
+      "cell": 627,
+      "roots": [
+        [
+          321,
+          577
+        ],
+        [
+          236,
+          573
+        ],
+        [
+          284,
+          432
+        ],
+        [
+          247,
+          439
+        ]
+      ],
+      "groundROIs": [
+        [
+          250,
+          563,
+          321,
+          583
+        ],
+        [
+          206,
+          558,
+          255,
+          581
+        ],
+        [
+          250,
+          418,
+          277,
+          439
+        ],
+        [
+          152,
+          430,
+          207,
+          450
+        ]
+      ],
+      "groundMethods": [
+        "X=321 is the manually interpreted projected pelvis center of the backward-reeling figure. Y is the exclusive alpha>=64 lower edge of the nearer left planted boot sole in a sole-only ROI; the lower musket stock and farther boot are excluded.",
+        "X=236 marks the interpreted support center of the lowered nearer knee. Y is the exclusive alpha>=64 lower edge of that folded knee/trouser support patch in the bounded ROI; the rear upright boot, front boot and weapon are excluded.",
+        "X=284 marks the interpreted folded-knee/body support center as the torso pitches forward. Y is the exclusive alpha>=64 lower edge of the trouser support edge immediately left of the rifle butt, using an ROI that excludes the weapon. The projecting rear boot and rifle butt are not the body registration reference.",
+        "X=247 marks the interpreted hip/side-body support center in ground rest. Y is the exclusive alpha>=64 lower edge of the nearer folded thigh support patch, left of the rifle butt. The rifle below the body and the forward cap are excluded; this is an illustrated support-plane registration, not a physical center-of-mass measurement."
+      ],
+      "referenceHeight": 396
+    }
+  ],
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "limitations": [
+    "This is independent model-assisted source inspection, not human art, anatomy, historical-drill, injury, usability or production certification.",
+    "All selected X pivots and support interpretations are visual registrations of painted anatomy, not physical joint, center-of-mass or measured biomechanics data. Source support points lie in an oblique projected ground plane; every extremity is not required to share a single image Y.",
+    "The level contact lunge resembles shouldered aim when isolated. Actual native sequence timing at normal and close zoom must establish useful contact readability before installation; no impact or historically correct bayonet drill is certified.",
+    "Recovery and close guard are subtly different poses. Their transition rhythm, hand/weapon continuity and registration stability require actual-renderer playback.",
+    "Contact cap-to-sole range is 33/396 = 8.333333333333334 percent, reflecting the bent/wide lunge and guard postures. The old v18 stationary 5/6 percent rule is not applied to these new contact/casualty sources, and no pixels or per-phase scales were changed to flatten that range.",
+    "Falling and kneeling silhouettes intentionally shorten under the one contact-derived scale. Relative heads, boots, limbs and equipment were inspected visually; concealed joints, fingers and exact proportions remain uncertified.",
+    "Nonzero-alpha noise reaches some cell edges and faint colored fringe remains in native pixels. Alpha>=64 margins are at least 45 pixels, but edge/fringe-free rendering is not certified. Ground and cap measurements exclude alpha below 64 without changing source pixels.",
+    "Inspection-only native cell extracts were written outside the candidate for close reading; they were not resampled, used as game textures or substituted for either complete native PNG.",
+    "This source-only decision does not accept the integration, renderer playback, pause/cold-resume/reduced-motion behavior, ordinary-PC performance, full infantry family, default policy or final local installation."
+  ]
+}

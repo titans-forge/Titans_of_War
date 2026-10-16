@@ -1,0 +1,66 @@
+{
+  "tool": "built-in image_gen",
+  "model": "not reported",
+  "assets": [
+    {
+      "id": "ravine",
+      "file": "public/images/battles/siege-v1/ravine.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-fd416b25-3721-4b98-977f-056c790f81c1.png",
+      "sha256": "33b7e99bf527fbda2ee99916eb7624af1e170aeeb8907318edb50fd0ed6417e3",
+      "size": [
+        1983,
+        793
+      ],
+      "mode": "RGBA",
+      "pixelEdits": false
+    },
+    {
+      "id": "earthwork",
+      "file": "public/images/battles/siege-v1/earthwork.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-1373677b-3eca-4d94-b891-7858dea6551c.png",
+      "sha256": "71bc57f14ba977b2f93a0a984a32ee87f757b9c3e4f6d51507527a9a2ab18f6f",
+      "size": [
+        2087,
+        754
+      ],
+      "mode": "RGBA",
+      "pixelEdits": false
+    },
+    {
+      "id": "crater",
+      "file": "public/images/battles/siege-v1/crater.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-2482f9f5-0fce-4288-ac5a-fc2d7dd66171.png",
+      "sha256": "44f89ff6a31cf09381bbe881916e5bda8bef135e28836b7ffe42d272a6fccdbf",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "pixelEdits": false
+    }
+  ],
+  "historicalQualification": "Generated interpretive terrain, compressed to the game\u2019s existing rule zones; not surveyed earthworks or an archival image.",
+  "sources": [
+    {
+      "url": "https://www.nps.gov/rich/learn/historyculture/cold-harbor-tour.htm",
+      "supports": "Ravines divided attacking columns and exposed them to crossfire."
+    },
+    {
+      "url": "https://www.nps.gov/teachers/classrooms/archeology-cold-harbor.htm",
+      "supports": "Excavated defenses and timber stakes in the Cold Harbor landscape."
+    },
+    {
+      "url": "https://www.nps.gov/places/the-crater.htm",
+      "supports": "Elongated blast pit and trapped Union attack, July 30 1864."
+    },
+    {
+      "url": "https://www.nps.gov/pete/learn/historyculture/battle-of-the-crater.htm",
+      "supports": "Elliott salient, mine explosion, Confederate recovery and counterattack."
+    },
+    {
+      "url": "https://npshistory.com/handbooks/historical/13/hh13f.htm",
+      "supports": "Confederate salient and supporting defensive works."
+    }
+  ],
+  "alphaCheck": "All assets have native transparency. Bright red RGB fringe pixels visible in generation previews have alpha at most 10; none are visibly opaque. Browser compositing checked."
+}

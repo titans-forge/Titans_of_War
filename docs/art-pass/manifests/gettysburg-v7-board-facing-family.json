@@ -1,0 +1,1267 @@
+{
+  "date": "2026-10-01",
+  "snapshotAtUTC": "2026-10-01T22:27:36.952485+00:00",
+  "tool": "built-in imagegen and native direct Blender structural guides",
+  "toolModelIdentifier": "not reported",
+  "nativeSourceTreatment": "No raster edits. Full native PNGs copied byte-for-byte; runtime cells, uniform scaling and metadata registration only.",
+  "approval": {
+    "optInPreview": true,
+    "production": false,
+    "fullFamily": false,
+    "independentHuman": false,
+    "historical": false,
+    "anatomicalCertification": false
+  },
+  "scope": {
+    "scenario": "gettysburg",
+    "query": "artPass=gettysburg-v7",
+    "v6Query": "artPass=gettysburg-v6",
+    "defaultPromoted": false,
+    "uploaded": false,
+    "supported": [
+      {
+        "side": "union",
+        "identity": "a",
+        "bearings": [
+          "E",
+          "SE",
+          "S"
+        ],
+        "actions": [
+          "ready",
+          "march",
+          "fire",
+          "reload"
+        ]
+      },
+      {
+        "side": "union",
+        "identity": "b",
+        "bearings": [
+          "S"
+        ],
+        "actions": [
+          "ready",
+          "march",
+          "fire",
+          "reload"
+        ]
+      },
+      {
+        "side": "confederate",
+        "identity": "a",
+        "bearings": [
+          "N"
+        ],
+        "actions": [
+          "ready",
+          "march",
+          "fire",
+          "reload"
+        ]
+      }
+    ],
+    "otherCoverage": "Direct accepted-art fallback; no borrowing missing B clips from A.",
+    "identityAssignment": "Stable per-soldier hash A/B for Union only in exact v7 historical Gettysburg; Confederate A. Existing other pass identity behavior preserved."
+  },
+  "sources": [
+    {
+      "key": "union-gettysburg-v4-march-e",
+      "retainedFromV6": true,
+      "assetURLs": {
+        "image": "images/units/gettysburg-v4/union-a-march-e.png",
+        "json": "images/units/gettysburg-v4/union-a-march-e.json"
+      },
+      "files": {
+        "nativeSourcePNG": {
+          "path": "docs/art-pass/candidates/gettysburg-v4/union-e-march-candidate.png",
+          "bytes": 520759,
+          "sha256": "43b8f4394b6071958b693d83c14eb7f324e277706bd5513d23b536467e9f6a42"
+        },
+        "publicPNG": {
+          "path": "public/images/units/gettysburg-v4/union-a-march-e.png",
+          "bytes": 520759,
+          "sha256": "43b8f4394b6071958b693d83c14eb7f324e277706bd5513d23b536467e9f6a42"
+        },
+        "builtPNG": {
+          "path": "dist/images/units/gettysburg-v4/union-a-march-e.png",
+          "bytes": 520759,
+          "sha256": "43b8f4394b6071958b693d83c14eb7f324e277706bd5513d23b536467e9f6a42"
+        },
+        "publicJSON": {
+          "path": "public/images/units/gettysburg-v4/union-a-march-e.json",
+          "bytes": 3214,
+          "sha256": "8d9fb8d427508147fc50fe58dd16f3ce33469ad95762dbab383a67172b2b3b95"
+        },
+        "builtJSON": {
+          "path": "dist/images/units/gettysburg-v4/union-a-march-e.json",
+          "bytes": 3214,
+          "sha256": "8d9fb8d427508147fc50fe58dd16f3ce33469ad95762dbab383a67172b2b3b95"
+        }
+      },
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cellDimensions": [
+        [
+          627,
+          627
+        ]
+      ],
+      "atlasFrameCount": 4,
+      "pngBytes": 520759,
+      "jsonBytes": 3214,
+      "candidateFileBytes": 523973,
+      "nominalDecodedRGBABytes": 6290064,
+      "nominalDecodedRGBAMethod": "width * height * 4; theoretical single RGBA8 image, not measured runtime/CPU/GPU/peak memory",
+      "checks": {
+        "sourcePublicPNGIdentical": true,
+        "publicBuiltPNGIdentical": true,
+        "publicBuiltJSONIdentical": true,
+        "declaredPNGHashMatches": true,
+        "allClipSourceHashesMatch": true,
+        "declaredDimensionsMatch": true,
+        "sourcePublicBuiltDimensionsMatch": true,
+        "sourcePublicBuiltModeRGBA": true,
+        "fourCompleteNativeGridCellsUntrimmed": true
+      },
+      "clips": [
+        {
+          "side": "union",
+          "identity": "a",
+          "direction": 0,
+          "action": "march",
+          "frameCount": 4,
+          "referenceHeight": 412,
+          "key": "union-gettysburg-v4-march-e"
+        }
+      ],
+      "approval": {
+        "candidate": true,
+        "productionApproved": false
+      }
+    },
+    {
+      "key": "union-gettysburg-v5-actions-e",
+      "retainedFromV6": true,
+      "assetURLs": {
+        "image": "images/units/gettysburg-v5/union-a-actions-e.png",
+        "json": "images/units/gettysburg-v5/union-a-actions-e.json"
+      },
+      "files": {
+        "nativeSourcePNG": {
+          "path": "docs/art-pass/candidates/gettysburg-v5/union-e-actions-candidate.png",
+          "bytes": 592405,
+          "sha256": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f"
+        },
+        "publicPNG": {
+          "path": "public/images/units/gettysburg-v5/union-a-actions-e.png",
+          "bytes": 592405,
+          "sha256": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f"
+        },
+        "builtPNG": {
+          "path": "dist/images/units/gettysburg-v5/union-a-actions-e.png",
+          "bytes": 592405,
+          "sha256": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f"
+        },
+        "publicJSON": {
+          "path": "public/images/units/gettysburg-v5/union-a-actions-e.json",
+          "bytes": 4359,
+          "sha256": "250642ff8d84cb9c8afbeb0b078e5bbded154dcf60b08c976838081dffa9b7e5"
+        },
+        "builtJSON": {
+          "path": "dist/images/units/gettysburg-v5/union-a-actions-e.json",
+          "bytes": 4359,
+          "sha256": "250642ff8d84cb9c8afbeb0b078e5bbded154dcf60b08c976838081dffa9b7e5"
+        }
+      },
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cellDimensions": [
+        [
+          627,
+          627
+        ]
+      ],
+      "atlasFrameCount": 4,
+      "pngBytes": 592405,
+      "jsonBytes": 4359,
+      "candidateFileBytes": 596764,
+      "nominalDecodedRGBABytes": 6290064,
+      "nominalDecodedRGBAMethod": "width * height * 4; theoretical single RGBA8 image, not measured runtime/CPU/GPU/peak memory",
+      "checks": {
+        "sourcePublicPNGIdentical": true,
+        "publicBuiltPNGIdentical": true,
+        "publicBuiltJSONIdentical": true,
+        "declaredPNGHashMatches": true,
+        "allClipSourceHashesMatch": true,
+        "declaredDimensionsMatch": true,
+        "sourcePublicBuiltDimensionsMatch": true,
+        "sourcePublicBuiltModeRGBA": true,
+        "fourCompleteNativeGridCellsUntrimmed": true
+      },
+      "clips": [
+        {
+          "side": "union",
+          "identity": "a",
+          "direction": 0,
+          "action": "ready",
+          "frameCount": 1,
+          "referenceHeight": 485,
+          "key": "union-gettysburg-v5-actions-e"
+        },
+        {
+          "side": "union",
+          "identity": "a",
+          "direction": 0,
+          "action": "fire",
+          "frameCount": 1,
+          "referenceHeight": 485,
+          "key": "union-gettysburg-v5-actions-e"
+        },
+        {
+          "side": "union",
+          "identity": "a",
+          "direction": 0,
+          "action": "reload",
+          "frameCount": 2,
+          "referenceHeight": 485,
+          "key": "union-gettysburg-v5-actions-e"
+        }
+      ],
+      "approval": {
+        "candidate": true,
+        "productionApproved": false
+      }
+    },
+    {
+      "key": "union-gettysburg-v5-march-se",
+      "retainedFromV6": true,
+      "assetURLs": {
+        "image": "images/units/gettysburg-v5/union-a-march-se.png",
+        "json": "images/units/gettysburg-v5/union-a-march-se.json"
+      },
+      "files": {
+        "nativeSourcePNG": {
+          "path": "docs/art-pass/candidates/gettysburg-v5/union-se-march-padded-candidate.png",
+          "bytes": 609955,
+          "sha256": "90a124967a778789bcdbaf5b83fc0cba689f145486450ba775798ec106bfc103"
+        },
+        "publicPNG": {
+          "path": "public/images/units/gettysburg-v5/union-a-march-se.png",
+          "bytes": 609955,
+          "sha256": "90a124967a778789bcdbaf5b83fc0cba689f145486450ba775798ec106bfc103"
+        },
+        "builtPNG": {
+          "path": "dist/images/units/gettysburg-v5/union-a-march-se.png",
+          "bytes": 609955,
+          "sha256": "90a124967a778789bcdbaf5b83fc0cba689f145486450ba775798ec106bfc103"
+        },
+        "publicJSON": {
+          "path": "public/images/units/gettysburg-v5/union-a-march-se.json",
+          "bytes": 3237,
+          "sha256": "0cfce543040bd6e9e44c699aec9ead6a7e3284df77b4099c469444454056d56d"
+        },
+        "builtJSON": {
+          "path": "dist/images/units/gettysburg-v5/union-a-march-se.json",
+          "bytes": 3237,
+          "sha256": "0cfce543040bd6e9e44c699aec9ead6a7e3284df77b4099c469444454056d56d"
+        }
+      },
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cellDimensions": [
+        [
+          627,
+          627
+        ]
+      ],
+      "atlasFrameCount": 4,
+      "pngBytes": 609955,
+      "jsonBytes": 3237,
+      "candidateFileBytes": 613192,
+      "nominalDecodedRGBABytes": 6290064,
+      "nominalDecodedRGBAMethod": "width * height * 4; theoretical single RGBA8 image, not measured runtime/CPU/GPU/peak memory",
+      "checks": {
+        "sourcePublicPNGIdentical": true,
+        "publicBuiltPNGIdentical": true,
+        "publicBuiltJSONIdentical": true,
+        "declaredPNGHashMatches": true,
+        "allClipSourceHashesMatch": true,
+        "declaredDimensionsMatch": true,
+        "sourcePublicBuiltDimensionsMatch": true,
+        "sourcePublicBuiltModeRGBA": true,
+        "fourCompleteNativeGridCellsUntrimmed": true
+      },
+      "clips": [
+        {
+          "side": "union",
+          "identity": "a",
+          "direction": 1,
+          "action": "march",
+          "frameCount": 4,
+          "referenceHeight": 490,
+          "key": "union-gettysburg-v5-march-se"
+        }
+      ],
+      "approval": {
+        "candidate": true,
+        "productionApproved": false
+      }
+    },
+    {
+      "key": "union-gettysburg-v6-actions-se",
+      "retainedFromV6": true,
+      "assetURLs": {
+        "image": "images/units/gettysburg-v6/union-a-actions-se.png",
+        "json": "images/units/gettysburg-v6/union-a-actions-se.json"
+      },
+      "files": {
+        "nativeSourcePNG": {
+          "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-padded-candidate.png",
+          "bytes": 768245,
+          "sha256": "bd4650f0d15bf5abf612ebfd01edecf9560c7a459b96e2643ad76ca5d023b61e"
+        },
+        "publicPNG": {
+          "path": "public/images/units/gettysburg-v6/union-a-actions-se.png",
+          "bytes": 768245,
+          "sha256": "bd4650f0d15bf5abf612ebfd01edecf9560c7a459b96e2643ad76ca5d023b61e"
+        },
+        "builtPNG": {
+          "path": "dist/images/units/gettysburg-v6/union-a-actions-se.png",
+          "bytes": 768245,
+          "sha256": "bd4650f0d15bf5abf612ebfd01edecf9560c7a459b96e2643ad76ca5d023b61e"
+        },
+        "publicJSON": {
+          "path": "public/images/units/gettysburg-v6/union-a-actions-se.json",
+          "bytes": 4455,
+          "sha256": "a6bc23ebb20ddaf3910de0b50019834126d3886c48518504fd79be2ea7ce1a9f"
+        },
+        "builtJSON": {
+          "path": "dist/images/units/gettysburg-v6/union-a-actions-se.json",
+          "bytes": 4455,
+          "sha256": "a6bc23ebb20ddaf3910de0b50019834126d3886c48518504fd79be2ea7ce1a9f"
+        }
+      },
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cellDimensions": [
+        [
+          627,
+          627
+        ]
+      ],
+      "atlasFrameCount": 4,
+      "pngBytes": 768245,
+      "jsonBytes": 4455,
+      "candidateFileBytes": 772700,
+      "nominalDecodedRGBABytes": 6290064,
+      "nominalDecodedRGBAMethod": "width * height * 4; theoretical single RGBA8 image, not measured runtime/CPU/GPU/peak memory",
+      "checks": {
+        "sourcePublicPNGIdentical": true,
+        "publicBuiltPNGIdentical": true,
+        "publicBuiltJSONIdentical": true,
+        "declaredPNGHashMatches": true,
+        "allClipSourceHashesMatch": true,
+        "declaredDimensionsMatch": true,
+        "sourcePublicBuiltDimensionsMatch": true,
+        "sourcePublicBuiltModeRGBA": true,
+        "fourCompleteNativeGridCellsUntrimmed": true
+      },
+      "clips": [
+        {
+          "side": "union",
+          "identity": "a",
+          "direction": 1,
+          "action": "ready",
+          "frameCount": 1,
+          "referenceHeight": 495,
+          "key": "union-gettysburg-v6-actions-se"
+        },
+        {
+          "side": "union",
+          "identity": "a",
+          "direction": 1,
+          "action": "fire",
+          "frameCount": 1,
+          "referenceHeight": 495,
+          "key": "union-gettysburg-v6-actions-se"
+        },
+        {
+          "side": "union",
+          "identity": "a",
+          "direction": 1,
+          "action": "reload",
+          "frameCount": 2,
+          "referenceHeight": 495,
+          "key": "union-gettysburg-v6-actions-se"
+        }
+      ],
+      "approval": {
+        "candidate": true,
+        "productionApproved": false
+      }
+    },
+    {
+      "key": "union-gettysburg-v7-a-march-s",
+      "retainedFromV6": false,
+      "assetURLs": {
+        "image": "images/units/gettysburg-v7/union-a-march-s.png",
+        "json": "images/units/gettysburg-v7/union-a-march-s.json"
+      },
+      "files": {
+        "nativeSourcePNG": {
+          "path": "docs/art-pass/candidates/gettysburg-v7/union-a-s-march-candidate.png",
+          "bytes": 490022,
+          "sha256": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000"
+        },
+        "publicPNG": {
+          "path": "public/images/units/gettysburg-v7/union-a-march-s.png",
+          "bytes": 490022,
+          "sha256": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000"
+        },
+        "builtPNG": {
+          "path": "dist/images/units/gettysburg-v7/union-a-march-s.png",
+          "bytes": 490022,
+          "sha256": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000"
+        },
+        "publicJSON": {
+          "path": "public/images/units/gettysburg-v7/union-a-march-s.json",
+          "bytes": 3255,
+          "sha256": "a3e1ae063aa5ac954d4b4286cd7069c0482f67de692f6b4c339c5551b51945e7"
+        },
+        "builtJSON": {
+          "path": "dist/images/units/gettysburg-v7/union-a-march-s.json",
+          "bytes": 3255,
+          "sha256": "a3e1ae063aa5ac954d4b4286cd7069c0482f67de692f6b4c339c5551b51945e7"
+        }
+      },
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cellDimensions": [
+        [
+          627,
+          627
+        ]
+      ],
+      "atlasFrameCount": 4,
+      "pngBytes": 490022,
+      "jsonBytes": 3255,
+      "candidateFileBytes": 493277,
+      "nominalDecodedRGBABytes": 6290064,
+      "nominalDecodedRGBAMethod": "width * height * 4; theoretical single RGBA8 image, not measured runtime/CPU/GPU/peak memory",
+      "checks": {
+        "sourcePublicPNGIdentical": true,
+        "publicBuiltPNGIdentical": true,
+        "publicBuiltJSONIdentical": true,
+        "declaredPNGHashMatches": true,
+        "allClipSourceHashesMatch": true,
+        "declaredDimensionsMatch": true,
+        "sourcePublicBuiltDimensionsMatch": true,
+        "sourcePublicBuiltModeRGBA": true,
+        "fourCompleteNativeGridCellsUntrimmed": true
+      },
+      "clips": [
+        {
+          "side": "union",
+          "identity": "a",
+          "direction": 2,
+          "action": "march",
+          "frameCount": 4,
+          "referenceHeight": 440,
+          "key": "union-gettysburg-v7-a-march-s"
+        }
+      ],
+      "approval": {
+        "candidate": true,
+        "productionApproved": false
+      }
+    },
+    {
+      "key": "union-gettysburg-v7-a-actions-s",
+      "retainedFromV6": false,
+      "assetURLs": {
+        "image": "images/units/gettysburg-v7/union-a-actions-s.png",
+        "json": "images/units/gettysburg-v7/union-a-actions-s.json"
+      },
+      "files": {
+        "nativeSourcePNG": {
+          "path": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-spaced-candidate.png",
+          "bytes": 582088,
+          "sha256": "fe4b4a0a531f6e4e6709fa747393d4fa6cc6e5e13ced71fd287c4cd440d1e1c2"
+        },
+        "publicPNG": {
+          "path": "public/images/units/gettysburg-v7/union-a-actions-s.png",
+          "bytes": 582088,
+          "sha256": "fe4b4a0a531f6e4e6709fa747393d4fa6cc6e5e13ced71fd287c4cd440d1e1c2"
+        },
+        "builtPNG": {
+          "path": "dist/images/units/gettysburg-v7/union-a-actions-s.png",
+          "bytes": 582088,
+          "sha256": "fe4b4a0a531f6e4e6709fa747393d4fa6cc6e5e13ced71fd287c4cd440d1e1c2"
+        },
+        "publicJSON": {
+          "path": "public/images/units/gettysburg-v7/union-a-actions-s.json",
+          "bytes": 4453,
+          "sha256": "f8b54ff60597eb1e233416791b4ec5ebaf673b105afd46b4654982b2f0e3d7b5"
+        },
+        "builtJSON": {
+          "path": "dist/images/units/gettysburg-v7/union-a-actions-s.json",
+          "bytes": 4453,
+          "sha256": "f8b54ff60597eb1e233416791b4ec5ebaf673b105afd46b4654982b2f0e3d7b5"
+        }
+      },
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cellDimensions": [
+        [
+          627,
+          627
+        ]
+      ],
+      "atlasFrameCount": 4,
+      "pngBytes": 582088,
+      "jsonBytes": 4453,
+      "candidateFileBytes": 586541,
+      "nominalDecodedRGBABytes": 6290064,
+      "nominalDecodedRGBAMethod": "width * height * 4; theoretical single RGBA8 image, not measured runtime/CPU/GPU/peak memory",
+      "checks": {
+        "sourcePublicPNGIdentical": true,
+        "publicBuiltPNGIdentical": true,
+        "publicBuiltJSONIdentical": true,
+        "declaredPNGHashMatches": true,
+        "allClipSourceHashesMatch": true,
+        "declaredDimensionsMatch": true,
+        "sourcePublicBuiltDimensionsMatch": true,
+        "sourcePublicBuiltModeRGBA": true,
+        "fourCompleteNativeGridCellsUntrimmed": true
+      },
+      "clips": [
+        {
+          "side": "union",
+          "identity": "a",
+          "direction": 2,
+          "action": "ready",
+          "frameCount": 1,
+          "referenceHeight": 460,
+          "key": "union-gettysburg-v7-a-actions-s"
+        },
+        {
+          "side": "union",
+          "identity": "a",
+          "direction": 2,
+          "action": "fire",
+          "frameCount": 1,
+          "referenceHeight": 460,
+          "key": "union-gettysburg-v7-a-actions-s"
+        },
+        {
+          "side": "union",
+          "identity": "a",
+          "direction": 2,
+          "action": "reload",
+          "frameCount": 2,
+          "referenceHeight": 460,
+          "key": "union-gettysburg-v7-a-actions-s"
+        }
+      ],
+      "approval": {
+        "candidate": true,
+        "productionApproved": false
+      }
+    },
+    {
+      "key": "union-gettysburg-v7-b-march-s",
+      "retainedFromV6": false,
+      "assetURLs": {
+        "image": "images/units/gettysburg-v7/union-b-march-s.png",
+        "json": "images/units/gettysburg-v7/union-b-march-s.json"
+      },
+      "files": {
+        "nativeSourcePNG": {
+          "path": "docs/art-pass/candidates/gettysburg-v7/union-b-s-march-candidate.png",
+          "bytes": 494241,
+          "sha256": "544dd143918b18af8807e34a406affe7c83b23378a554d5f88a12586cc16ef68"
+        },
+        "publicPNG": {
+          "path": "public/images/units/gettysburg-v7/union-b-march-s.png",
+          "bytes": 494241,
+          "sha256": "544dd143918b18af8807e34a406affe7c83b23378a554d5f88a12586cc16ef68"
+        },
+        "builtPNG": {
+          "path": "dist/images/units/gettysburg-v7/union-b-march-s.png",
+          "bytes": 494241,
+          "sha256": "544dd143918b18af8807e34a406affe7c83b23378a554d5f88a12586cc16ef68"
+        },
+        "publicJSON": {
+          "path": "public/images/units/gettysburg-v7/union-b-march-s.json",
+          "bytes": 3255,
+          "sha256": "4422c81a318865e49fc76883c3c2366bfe565019b7aab4cb91bb6adf08026bd9"
+        },
+        "builtJSON": {
+          "path": "dist/images/units/gettysburg-v7/union-b-march-s.json",
+          "bytes": 3255,
+          "sha256": "4422c81a318865e49fc76883c3c2366bfe565019b7aab4cb91bb6adf08026bd9"
+        }
+      },
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cellDimensions": [
+        [
+          627,
+          627
+        ]
+      ],
+      "atlasFrameCount": 4,
+      "pngBytes": 494241,
+      "jsonBytes": 3255,
+      "candidateFileBytes": 497496,
+      "nominalDecodedRGBABytes": 6290064,
+      "nominalDecodedRGBAMethod": "width * height * 4; theoretical single RGBA8 image, not measured runtime/CPU/GPU/peak memory",
+      "checks": {
+        "sourcePublicPNGIdentical": true,
+        "publicBuiltPNGIdentical": true,
+        "publicBuiltJSONIdentical": true,
+        "declaredPNGHashMatches": true,
+        "allClipSourceHashesMatch": true,
+        "declaredDimensionsMatch": true,
+        "sourcePublicBuiltDimensionsMatch": true,
+        "sourcePublicBuiltModeRGBA": true,
+        "fourCompleteNativeGridCellsUntrimmed": true
+      },
+      "clips": [
+        {
+          "side": "union",
+          "identity": "b",
+          "direction": 2,
+          "action": "march",
+          "frameCount": 4,
+          "referenceHeight": 440,
+          "key": "union-gettysburg-v7-b-march-s"
+        }
+      ],
+      "approval": {
+        "candidate": true,
+        "productionApproved": false
+      }
+    },
+    {
+      "key": "union-gettysburg-v7-b-actions-s",
+      "retainedFromV6": false,
+      "assetURLs": {
+        "image": "images/units/gettysburg-v7/union-b-actions-s.png",
+        "json": "images/units/gettysburg-v7/union-b-actions-s.json"
+      },
+      "files": {
+        "nativeSourcePNG": {
+          "path": "docs/art-pass/candidates/gettysburg-v7/union-b-s-actions-candidate.png",
+          "bytes": 601577,
+          "sha256": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c"
+        },
+        "publicPNG": {
+          "path": "public/images/units/gettysburg-v7/union-b-actions-s.png",
+          "bytes": 601577,
+          "sha256": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c"
+        },
+        "builtPNG": {
+          "path": "dist/images/units/gettysburg-v7/union-b-actions-s.png",
+          "bytes": 601577,
+          "sha256": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c"
+        },
+        "publicJSON": {
+          "path": "public/images/units/gettysburg-v7/union-b-actions-s.json",
+          "bytes": 4443,
+          "sha256": "ac4f24a5d8b4a7e67416c3c196dd4e76ae7e225c55c6b8a9eb6c19baa1c122d6"
+        },
+        "builtJSON": {
+          "path": "dist/images/units/gettysburg-v7/union-b-actions-s.json",
+          "bytes": 4443,
+          "sha256": "ac4f24a5d8b4a7e67416c3c196dd4e76ae7e225c55c6b8a9eb6c19baa1c122d6"
+        }
+      },
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cellDimensions": [
+        [
+          627,
+          627
+        ]
+      ],
+      "atlasFrameCount": 4,
+      "pngBytes": 601577,
+      "jsonBytes": 4443,
+      "candidateFileBytes": 606020,
+      "nominalDecodedRGBABytes": 6290064,
+      "nominalDecodedRGBAMethod": "width * height * 4; theoretical single RGBA8 image, not measured runtime/CPU/GPU/peak memory",
+      "checks": {
+        "sourcePublicPNGIdentical": true,
+        "publicBuiltPNGIdentical": true,
+        "publicBuiltJSONIdentical": true,
+        "declaredPNGHashMatches": true,
+        "allClipSourceHashesMatch": true,
+        "declaredDimensionsMatch": true,
+        "sourcePublicBuiltDimensionsMatch": true,
+        "sourcePublicBuiltModeRGBA": true,
+        "fourCompleteNativeGridCellsUntrimmed": true
+      },
+      "clips": [
+        {
+          "side": "union",
+          "identity": "b",
+          "direction": 2,
+          "action": "ready",
+          "frameCount": 1,
+          "referenceHeight": 460,
+          "key": "union-gettysburg-v7-b-actions-s"
+        },
+        {
+          "side": "union",
+          "identity": "b",
+          "direction": 2,
+          "action": "fire",
+          "frameCount": 1,
+          "referenceHeight": 460,
+          "key": "union-gettysburg-v7-b-actions-s"
+        },
+        {
+          "side": "union",
+          "identity": "b",
+          "direction": 2,
+          "action": "reload",
+          "frameCount": 2,
+          "referenceHeight": 460,
+          "key": "union-gettysburg-v7-b-actions-s"
+        }
+      ],
+      "approval": {
+        "candidate": true,
+        "productionApproved": false
+      }
+    },
+    {
+      "key": "confederate-gettysburg-v7-a-march-n",
+      "retainedFromV6": false,
+      "assetURLs": {
+        "image": "images/units/gettysburg-v7/confederate-a-march-n.png",
+        "json": "images/units/gettysburg-v7/confederate-a-march-n.json"
+      },
+      "files": {
+        "nativeSourcePNG": {
+          "path": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-spaced-candidate.png",
+          "bytes": 516307,
+          "sha256": "cf9e0535f7dd581b815940c32a35d51b4ec573d92c6a3cdfbaf4bb74ccc10e64"
+        },
+        "publicPNG": {
+          "path": "public/images/units/gettysburg-v7/confederate-a-march-n.png",
+          "bytes": 516307,
+          "sha256": "cf9e0535f7dd581b815940c32a35d51b4ec573d92c6a3cdfbaf4bb74ccc10e64"
+        },
+        "builtPNG": {
+          "path": "dist/images/units/gettysburg-v7/confederate-a-march-n.png",
+          "bytes": 516307,
+          "sha256": "cf9e0535f7dd581b815940c32a35d51b4ec573d92c6a3cdfbaf4bb74ccc10e64"
+        },
+        "publicJSON": {
+          "path": "public/images/units/gettysburg-v7/confederate-a-march-n.json",
+          "bytes": 3298,
+          "sha256": "5ad3e3547f43780b233efa07c659b4f8491666c5cca928826acaca7ecc4b83a5"
+        },
+        "builtJSON": {
+          "path": "dist/images/units/gettysburg-v7/confederate-a-march-n.json",
+          "bytes": 3298,
+          "sha256": "5ad3e3547f43780b233efa07c659b4f8491666c5cca928826acaca7ecc4b83a5"
+        }
+      },
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cellDimensions": [
+        [
+          627,
+          627
+        ]
+      ],
+      "atlasFrameCount": 4,
+      "pngBytes": 516307,
+      "jsonBytes": 3298,
+      "candidateFileBytes": 519605,
+      "nominalDecodedRGBABytes": 6290064,
+      "nominalDecodedRGBAMethod": "width * height * 4; theoretical single RGBA8 image, not measured runtime/CPU/GPU/peak memory",
+      "checks": {
+        "sourcePublicPNGIdentical": true,
+        "publicBuiltPNGIdentical": true,
+        "publicBuiltJSONIdentical": true,
+        "declaredPNGHashMatches": true,
+        "allClipSourceHashesMatch": true,
+        "declaredDimensionsMatch": true,
+        "sourcePublicBuiltDimensionsMatch": true,
+        "sourcePublicBuiltModeRGBA": true,
+        "fourCompleteNativeGridCellsUntrimmed": true
+      },
+      "clips": [
+        {
+          "side": "confederate",
+          "identity": "a",
+          "direction": 6,
+          "action": "march",
+          "frameCount": 4,
+          "referenceHeight": 440,
+          "key": "confederate-gettysburg-v7-a-march-n"
+        }
+      ],
+      "approval": {
+        "candidate": true,
+        "productionApproved": false
+      }
+    },
+    {
+      "key": "confederate-gettysburg-v7-a-actions-n",
+      "retainedFromV6": false,
+      "assetURLs": {
+        "image": "images/units/gettysburg-v7/confederate-a-actions-n.png",
+        "json": "images/units/gettysburg-v7/confederate-a-actions-n.json"
+      },
+      "files": {
+        "nativeSourcePNG": {
+          "path": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-actions-padded-candidate.png",
+          "bytes": 468067,
+          "sha256": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0"
+        },
+        "publicPNG": {
+          "path": "public/images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "bytes": 468067,
+          "sha256": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0"
+        },
+        "builtPNG": {
+          "path": "dist/images/units/gettysburg-v7/confederate-a-actions-n.png",
+          "bytes": 468067,
+          "sha256": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0"
+        },
+        "publicJSON": {
+          "path": "public/images/units/gettysburg-v7/confederate-a-actions-n.json",
+          "bytes": 4525,
+          "sha256": "0052a95fcb51150470b7c7d9b86690fcf3f7ef82178bb22ce5c78c49fb821653"
+        },
+        "builtJSON": {
+          "path": "dist/images/units/gettysburg-v7/confederate-a-actions-n.json",
+          "bytes": 4525,
+          "sha256": "0052a95fcb51150470b7c7d9b86690fcf3f7ef82178bb22ce5c78c49fb821653"
+        }
+      },
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cellDimensions": [
+        [
+          627,
+          627
+        ]
+      ],
+      "atlasFrameCount": 4,
+      "pngBytes": 468067,
+      "jsonBytes": 4525,
+      "candidateFileBytes": 472592,
+      "nominalDecodedRGBABytes": 6290064,
+      "nominalDecodedRGBAMethod": "width * height * 4; theoretical single RGBA8 image, not measured runtime/CPU/GPU/peak memory",
+      "checks": {
+        "sourcePublicPNGIdentical": true,
+        "publicBuiltPNGIdentical": true,
+        "publicBuiltJSONIdentical": true,
+        "declaredPNGHashMatches": true,
+        "allClipSourceHashesMatch": true,
+        "declaredDimensionsMatch": true,
+        "sourcePublicBuiltDimensionsMatch": true,
+        "sourcePublicBuiltModeRGBA": true,
+        "fourCompleteNativeGridCellsUntrimmed": true
+      },
+      "clips": [
+        {
+          "side": "confederate",
+          "identity": "a",
+          "direction": 6,
+          "action": "ready",
+          "frameCount": 1,
+          "referenceHeight": 375,
+          "key": "confederate-gettysburg-v7-a-actions-n"
+        },
+        {
+          "side": "confederate",
+          "identity": "a",
+          "direction": 6,
+          "action": "fire",
+          "frameCount": 1,
+          "referenceHeight": 375,
+          "key": "confederate-gettysburg-v7-a-actions-n"
+        },
+        {
+          "side": "confederate",
+          "identity": "a",
+          "direction": 6,
+          "action": "reload",
+          "frameCount": 2,
+          "referenceHeight": 375,
+          "key": "confederate-gettysburg-v7-a-actions-n"
+        }
+      ],
+      "approval": {
+        "candidate": true,
+        "productionApproved": false
+      }
+    }
+  ],
+  "annotations": [
+    {
+      "path": "docs/art-pass/manifests/gettysburg-v6-source-annotations.json",
+      "bytes": 1925,
+      "sha256": "c8c2e1dcf0bb3c28e83eb3564c73c621a034d4fa08290addfbc13d35a9a895b1"
+    },
+    {
+      "path": "docs/art-pass/manifests/gettysburg-v7-source-annotations.json",
+      "bytes": 13522,
+      "sha256": "222c9cc7429b46b2277e556a033216d68284e2fb7bc2c4f1ef9ba2ab40e52d9d"
+    }
+  ],
+  "provenance": {
+    "generationLedger": {
+      "path": "docs/art-pass/manifests/gettysburg-v6-v7-generation-ledger.json",
+      "bytes": 91685,
+      "sha256": "7dd7069fe23a97e34d02786ec4745f802714b7cec09d50556572ea98cbc4dc33"
+    },
+    "ledgerCurrentPathHashBindingsVerified": 59,
+    "preloadBudget": {
+      "path": "docs/art-pass/manifests/gettysburg-v7-preload-budget.json",
+      "bytes": 37271,
+      "sha256": "e5b8fe35d551b60495d5bfac63de109dad939ea15a2d529672476e301df0d355"
+    },
+    "sourceReview": {
+      "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-source-review.md",
+      "bytes": 36437,
+      "sha256": "bd8a8511b01d7a7a1851a6fb02e58c3011e7b17067c4d4ed853aa2d0f532d3b5"
+    },
+    "poseReview": {
+      "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-pose-review.md",
+      "bytes": 25159,
+      "sha256": "cb1b75e4d14406f0293f5f39f8fd8172df0699054a94bf8a01e2ab9aef5d49a6"
+    },
+    "v6SourceReview": {
+      "path": "docs/art-pass/reviews/gettysburg-v6-independent-source-review.md",
+      "bytes": 18889,
+      "sha256": "ae55d00878304761a892f0c6a958609c93d55bfa63a3129acf7367f17d6dca50"
+    }
+  },
+  "validation": [
+    {
+      "command": "npm run validate:gettysburg-native",
+      "exitCode": 0,
+      "log": {
+        "path": "docs/art-pass/validation/gettysburg-v6-v7/native.log",
+        "bytes": 1845,
+        "sha256": "172239b5249c83df7022075a5528709b2985316256d2dd43f679643d38023ec3"
+      },
+      "nodeTestCounts": {
+        "tests": 0,
+        "pass": 0,
+        "fail": 0,
+        "skipped": 0
+      },
+      "countsBoundary": "TAP/spec results in this command only; asset suite includes focused checks, not an independent count."
+    },
+    {
+      "command": "npm run validate-assets",
+      "exitCode": 0,
+      "log": {
+        "path": "docs/art-pass/validation/gettysburg-v6-v7/assets.log",
+        "bytes": 41958,
+        "sha256": "bfd1f9644582661e546c29b6aa2178a69eb10ca66c4cdf4590498e1fa6a0b50e"
+      },
+      "nodeTestCounts": {
+        "tests": 178,
+        "pass": 178,
+        "fail": 0,
+        "skipped": 0
+      },
+      "countsBoundary": "TAP/spec results in this command only; asset suite includes focused checks, not an independent count."
+    },
+    {
+      "command": "npm run test:gettysburg",
+      "exitCode": 0,
+      "log": {
+        "path": "docs/art-pass/validation/gettysburg-v6-v7/gettysburg.log",
+        "bytes": 19613,
+        "sha256": "3d34dd0fb12dccba6847512773873d9fc95bce1b8e51179527ac0fb3fa3426e1"
+      },
+      "nodeTestCounts": {
+        "tests": 81,
+        "pass": 81,
+        "fail": 0,
+        "skipped": 0
+      },
+      "countsBoundary": "TAP/spec results in this command only; asset suite includes focused checks, not an independent count."
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "log": {
+        "path": "docs/art-pass/validation/gettysburg-v6-v7/build.log",
+        "bytes": 1932,
+        "sha256": "b79728e7c2ce8b4e7d7f77764d51fb239d1a5c8e7a6f2ae0f130dce7a1248589"
+      },
+      "nodeTestCounts": {
+        "tests": 0,
+        "pass": 0,
+        "fail": 0,
+        "skipped": 0
+      },
+      "countsBoundary": "TAP/spec results in this command only; asset suite includes focused checks, not an independent count."
+    },
+    {
+      "command": "npm run test:gettysburg-art-current",
+      "exitCode": 0,
+      "nodeTestCounts": {
+        "tests": 44,
+        "pass": 44,
+        "fail": 0,
+        "skipped": 0
+      },
+      "log": {
+        "path": "docs/art-pass/validation/gettysburg-v6-v7/focused.log",
+        "bytes": 5120,
+        "sha256": "24e5534e30039eccc84e89bf0256f459a65ca82caf76bed3daa6e26c663a3c0f"
+      },
+      "separateWorkerRerun": {
+        "pass": 44,
+        "fail": 0,
+        "skipped": 0,
+        "boundary": "Model-assisted code review, not human or live-play validation."
+      },
+      "methodBoundary": "Actual source data, extracted preload, clip-initialization prefix of create, and syncFormation paths; not the full Phaser scene lifecycle. Live browser QA separately recorded."
+    }
+  ],
+  "buildBoundary": {
+    "distDocsAbsent": true,
+    "rejectedSourcePathsAbsent": true,
+    "reviewerUIMarkersAbsent": {
+      "Inspect the movement.": [],
+      "Development tool \u00b7 Gettysburg infantry": [],
+      "Root and cell guides": []
+    },
+    "candidateRuntimeAssetsPresent": true,
+    "largeJavaScriptChunkWarning": true,
+    "boundary": "Specific files and UI markers inspected. Candidate metadata is statically imported and may enter normal JS bundles."
+  },
+  "browserQA": {
+    "surface": "One reused Chrome tab on this Mac; development server port5173.",
+    "reviewer": {
+      "desktopWidth": 1688,
+      "narrowViewport": [
+        390,
+        844
+      ],
+      "narrowClientAndScrollWidth": [
+        375,
+        375
+      ],
+      "viewportRestored": true,
+      "automaticDisabledManualStepping": true,
+      "OSReducedMotionChanged": false,
+      "boundary": "Source review and manual playback; OS reduced-motion behavior separately covered by real-renderer/playback tests."
+    },
+    "gameplay": {
+      "completedEncounters": 1,
+      "scenario": "gettysburg",
+      "openingStrategy": "Charge Pickett's Division straight up the center.",
+      "ammunition": "Full",
+      "commands": "Three divisions assault; selected fallback; remaining support/artillery withdraw.",
+      "observedCloseCombatAtFieldTime": 44,
+      "observedRetreatAtFieldTime": 65,
+      "departedFormations": {
+        "escapedInDisorder": 3,
+        "withdrawnInOrder": 2
+      },
+      "result": {
+        "label": "Confederate line routed",
+        "commandAssessment": 21,
+        "confederateLossesPercent": 18,
+        "unionLossesPercent": 10
+      },
+      "freshSecondOpening": "Decline charge withdrawal strategy; paused S/N formation detail and focus/objective/zoom inspected, not completed.",
+      "documentClientAndScrollWidth": [
+        1688,
+        1688
+      ],
+      "canvasClientAndNativeSize": [
+        1442,
+        550
+      ],
+      "campaignUI": "Turn1, campaign unchanged per practice result; no campaign decision committed.",
+      "boundary": "One authored render/control encounter, not winning tactic, human playtest, independent balance, named-PC performance or campaign playthrough. Every new source firing phase not isolated live."
+    }
+  },
+  "captures": [
+    {
+      "path": "docs/art-pass/captures/gettysburg-v7/gettysburg-close-combat.jpg",
+      "bytes": 222709,
+      "sha256": "7328772cae6ac1bbec6bd32dbe5ca0ab17c5366107920c9c394260be7cc4cab6"
+    },
+    {
+      "path": "docs/art-pass/captures/gettysburg-v7/gettysburg-confederate-ready.jpg",
+      "bytes": 198818,
+      "sha256": "77357be74101fc5439ff7bd5fcf8d05c5d969f485eeef5d969c682f693562d26"
+    },
+    {
+      "path": "docs/art-pass/captures/gettysburg-v7/gettysburg-opening.jpg",
+      "bytes": 205807,
+      "sha256": "e04c471408e25275cca29ee10b2f83dd4f00382bb2e9492aa72a89a0860ccd2f"
+    },
+    {
+      "path": "docs/art-pass/captures/gettysburg-v7/gettysburg-practice-result.jpg",
+      "bytes": 118140,
+      "sha256": "5545b7607293f6a9373d4d0b9ee0058c5adcd499847a85df3e5d648696f08bd5"
+    },
+    {
+      "path": "docs/art-pass/captures/gettysburg-v7/gettysburg-retreat.jpg",
+      "bytes": 222267,
+      "sha256": "2c3383dcef64665f7c38f1550a2747f9b19aa5f7ad0533f2e4d27f362b907f6a"
+    },
+    {
+      "path": "docs/art-pass/captures/gettysburg-v7/gettysburg-union-ready.jpg",
+      "bytes": 200480,
+      "sha256": "e01b771526008ed2d9d14b7cfc80ef4f71c069c97a54f70bb75c34b4265aa158"
+    },
+    {
+      "path": "docs/art-pass/captures/gettysburg-v7/mobile-review.jpg",
+      "bytes": 40029,
+      "sha256": "fc836a55f854554d71a8a55fb4c2ce16b8a68a812af22901732c7f022f938cfc"
+    },
+    {
+      "path": "docs/art-pass/captures/gettysburg-v7/n-fire.jpg",
+      "bytes": 125556,
+      "sha256": "3f1b6f8ad6e305231ef66899e4426e23a522f448c7562a886b1621f809d733f7"
+    },
+    {
+      "path": "docs/art-pass/captures/gettysburg-v7/n-loading.jpg",
+      "bytes": 125927,
+      "sha256": "dc44cc030e67f61ed8487bc29c3583f17f7da6085e01307a2fadc0f824cc27a1"
+    },
+    {
+      "path": "docs/art-pass/captures/gettysburg-v7/s-a-b-fire.jpg",
+      "bytes": 124727,
+      "sha256": "94e47ad6fecca4eaef227f7a1a1c32fbf0432fe17438e0c9dd6a1b8032ce755b"
+    },
+    {
+      "path": "docs/art-pass/captures/gettysburg-v7/s-a-b-left-passing.jpg",
+      "bytes": 123531,
+      "sha256": "4d279cc76603725573f5ea25f156ecb720ce280c2ffc721e0b34856a9307ba93"
+    },
+    {
+      "path": "docs/art-pass/captures/gettysburg-v7/s-a-b-ramrod.jpg",
+      "bytes": 125548,
+      "sha256": "b96d2b319ac285cacbc769ee2bb844f6eeaed2b2323fe39e83e4c0bdb83eeca6"
+    }
+  ],
+  "implementationSnapshot": [
+    {
+      "path": "package.json",
+      "bytes": 7026,
+      "sha256": "fd650109cd80051222862a907f140d35b3dbe4d569790409985cffb33c72441a"
+    },
+    {
+      "path": "src/battle/gettysburgInfantryClips.js",
+      "bytes": 8335,
+      "sha256": "2fe20e8820ca94729b86cbcfb7c55d55e0cec303fe80be3d24782412b57a76db"
+    },
+    {
+      "path": "src/battle/gettysburgInfantryClipAssets.js",
+      "bytes": 3642,
+      "sha256": "8e47534ab6a4d9f1fcb3b5aa9288b218b166da20c9ecd2157a127aefad84b0ad"
+    },
+    {
+      "path": "src/battle/gettysburgMotionPlayback.js",
+      "bytes": 10577,
+      "sha256": "3aa91692a82bfa37e8ac8a6525d85e7086d27e65caae60957b2766d610e8a89b"
+    },
+    {
+      "path": "src/battle/gettysburgMotionStudies.js",
+      "bytes": 15857,
+      "sha256": "8d1d684e3325fedfbd2a39049493dd05cfc1fc489d100f6920e6eb94c4a15de4"
+    },
+    {
+      "path": "src/battle/CivilWarBattlefield.jsx",
+      "bytes": 53904,
+      "sha256": "c7711a4b2e01f7b2307e08e2df74ce9483965cecfa9953e35bbe1e2bae0f5492"
+    },
+    {
+      "path": "src/components/InfantryMotionReview.jsx",
+      "bytes": 15164,
+      "sha256": "1ef55eb9217648c59d004d15e741cd2cc83fb2eb3e83cd2b4a3389dc2fb214b7"
+    },
+    {
+      "path": "scripts/author-gettysburg-v5-clips.py",
+      "bytes": 7376,
+      "sha256": "7a9f5300a58f85f5d5cf9b25018a4806d3da746be21b70734efc5719e3808e0d"
+    },
+    {
+      "path": "scripts/author-gettysburg-v6-clips.py",
+      "bytes": 789,
+      "sha256": "daa5561c6b5013dd87558d90b8a0b8e17d2167949495b11c9f25878e406d5240"
+    },
+    {
+      "path": "scripts/author-gettysburg-v7-clips.py",
+      "bytes": 780,
+      "sha256": "bafc16714577b1f0f17e0397d3ad95103100dcb205d4934f42ce913f6b30d894"
+    },
+    {
+      "path": "scripts/test-gettysburg-v6-pilot.mjs",
+      "bytes": 21605,
+      "sha256": "1c7f3d4dc6035be1bd6cfab1948ecec31e06c203323f230f8b47070f5104412c"
+    },
+    {
+      "path": "scripts/test-gettysburg-v7-identity.mjs",
+      "bytes": 34219,
+      "sha256": "55a00a7cb666ad2f108fccbe892316b5549bde60aae0c691c1effc9135951ae2"
+    },
+    {
+      "path": "scripts/test-gettysburg-motion-playback.mjs",
+      "bytes": 19517,
+      "sha256": "96e8b47c7af8770323940cc27629a0053efd81fbd5b52ddab6262c60027dd93e"
+    }
+  ],
+  "review": {
+    "path": "docs/art-pass/reviews/gettysburg-v6-v7-board-facing-review.md",
+    "bytes": 12218,
+    "sha256": "de8d50aa5069aa5659353bbe742360d840f2f9f884da02b686597830b35e3963"
+  },
+  "remaining": [
+    "Union SW/W and Confederate NE/NW, complete matching identity clips",
+    "Melee/casualty/recoil/settling and staff-gripping bearers",
+    "Texture/bundle optimization and informed human visual/drill review",
+    "Named ordinary-PC performance and independent complete-encounter testing before default rollout"
+  ]
+}

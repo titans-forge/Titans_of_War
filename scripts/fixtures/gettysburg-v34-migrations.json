@@ -1,0 +1,46 @@
+{
+  "schema": "gettysburg-v34-historical-byte-migration-v1",
+  "status": "frozen-approved-runtime-pins",
+  "baselineSHA256": "6b1a15053d54150ddbbc3145f962383bfef452a7f25ca20b9fce74a76b396f6a",
+  "baselineFiles": 1562,
+  "fixture": {
+    "path": "scripts/fixtures/gettysburg-v34-preservation.json",
+    "sha256": "2541d91c4b1a055a00ba60a0563e003c86d11b4d22dbc36d791a7793414543cc"
+  },
+  "capture": {
+    "path": "scripts/capture-gettysburg-v34-preservation.mjs",
+    "sha256": "3e8dcfa3960328aafc438ba1c01b2fd83ad4177df3292b23ed540df2739074cc"
+  },
+  "oldFixturesRefreshed": false,
+  "oldMigrationLedgersEdited": false,
+  "behavioralAssertionsChanged": false,
+  "mandatoryRegistration": "package.json",
+  "mandatorySuite": "scripts/test-gettysburg-v34-standard-continuity.mjs",
+  "migrations": [
+    {
+      "path": "package.json",
+      "archive": "scripts/test-support/gettysburg-v34-before/package.json",
+      "beforeSHA256": "d9a09499b9ff24ab5eca6ec852f230eb706d29971aadec2fb1d137fb79bb7e1e",
+      "currentSHA256": "db71d1598d7a233dee94c817410bbdc736cf558c910115149623b3cc18b91259",
+      "reason": "Only four mandatory v34 script registrations; version, dependencies and lockfile unchanged."
+    },
+    {
+      "path": "src/battle/CivilWarBattlefield.jsx",
+      "archive": "scripts/test-support/gettysburg-v34-before/src/battle/CivilWarBattlefield.jsx",
+      "beforeSHA256": "005e7cebd723eb3ec399c117b8e47e5ba588c107dfb0d77cb0c049b5ecb885bd",
+      "currentSHA256": "6cb8988dcac1dbf2296ea5101950211ff7a52dcda336b9eb6b6cfa46084a700e",
+      "reason": "Root-approved renderer-only standard carrier checkpoint and cold restore; independently gated canonical v34 sidecar with authentic legacy witnesses and unchanged raw combat."
+    },
+    {
+      "path": "scripts/test-support/gettysburgV33Preservation.mjs",
+      "archive": "scripts/test-support/gettysburg-v34-before/scripts/test-support/gettysburgV33Preservation.mjs",
+      "beforeSHA256": "9643734692916b11864674c793ade745da885cf8c1c0c137e6d2bc12a85134d7",
+      "currentSHA256": "c8a95cf590ce866f1d5bd810251bb8e0299de0e57ee2e6a95bfd1ea9a0525ae8",
+      "reason": "Only metadata directRead import and V34 historical reader call; original V33 ledger and every behavioral assertion remain byte exact."
+    }
+  ],
+  "productionHelper": {
+    "path": "src/battle/gettysburgStandardCheckpoint.js",
+    "sha256": "22f7d361b8636344cff577fd8779ab1d1b089b44229100b3830ca0907709ea6e"
+  }
+}

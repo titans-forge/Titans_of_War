@@ -1,0 +1,29 @@
+{
+  "schema": "gettysburg-v29-authentic-baseline-supplement-v1",
+  "createdUTC": "2026-10-05T17:58:19.940019+00:00",
+  "capturedFrom": "/Users/titansforge/Vault/Titans_of_War",
+  "originalFixture": {
+    "path": "scripts/fixtures/gettysburg-v29-preservation.json",
+    "sha256": "e76989be5369db4a97f85d83ed852e59b28708f708493fac3efa58f2b06224db"
+  },
+  "rootBaseline": {
+    "path": "baseline-hashes.json",
+    "sha256": "3b596ed1657aa7e38f4bbc18251f26a83f39fbebbbc31827c34f3e2e5f3aedc3",
+    "files": 1409
+  },
+  "snapshotReceipt": {
+    "path": "snapshot-receipt.json",
+    "sha256": "35659f678ba8627d46de6aba18559e6b7e1729e4c3bb2f4de3edd81d5672970c"
+  },
+  "sourceFiles": [
+    {
+      "path": "scripts/test-gettysburg-v18-policy.mjs",
+      "sha256": "b54627871b9e5b0d1ae205fce7df218680b58f49501e702c1b78f45f827078e9",
+      "archive": "scripts/test-support/gettysburg-v29-before/scripts/test-gettysburg-v18-policy.mjs",
+      "rootBaselineEntrySHA256": "b54627871b9e5b0d1ae205fce7df218680b58f49501e702c1b78f45f827078e9"
+    }
+  ],
+  "reason": "The real root art gate exposed v18 Scene protection; add only its authentic live before-image and narrow hash assertion migration without recapturing or refreshing any fixture.",
+  "historicalFixtureRefresh": false,
+  "liveWrites": false
+}

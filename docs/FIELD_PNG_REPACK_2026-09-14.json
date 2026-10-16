@@ -1,0 +1,623 @@
+{
+  "applied": true,
+  "invariant": "Decoded native pixel bytes and all non-IDAT PNG chunks identical",
+  "beforeBytes": 97773054,
+  "afterBytes": 92565139,
+  "files": [
+    {
+      "file": "public/images/battles/gettysburg-terrain-v3.png",
+      "beforeBytes": 2515236,
+      "afterBytes": 2511799,
+      "beforeSha256": "f41796c1fd77bd75cef4c1503c861e8b3aa3f4ec08d225169702cf9628afd6d3",
+      "afterSha256": "4b82798c9d15b75010cc96cc9b352488fa4a2e5ba58465525dd98dd0764c2ba1",
+      "pixelSha256": "51fb447c21fdef58b5bd0fc562a6a05086d8e27418397838c001a7a3a851dec6",
+      "mode": "RGB",
+      "size": [
+        1724,
+        912
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "4159161dd7889e2af9d403a82cf7b18cdc17d3e71cb7a872a1772d00bacef043"
+    },
+    {
+      "file": "public/images/battles/landmarks-v1/belle-grove.png",
+      "beforeBytes": 1538929,
+      "afterBytes": 1530857,
+      "beforeSha256": "e2b908c17f8817423910fa38f55c5619063df89e6167913aaa42bd8a119c7a7a",
+      "afterSha256": "3424dc5b1b2ec61ff6a37aeef5b5be0fd9e1608269d142df5d6c0fad635c219d",
+      "pixelSha256": "377c3d65396a846e42037f2ec9937a66ee187aad165877c094fc53364088531d",
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "64ec3c29505bfae3cd8fb9c149a54500b4f988d5b20fa4aeeee808764a653f79"
+    },
+    {
+      "file": "public/images/battles/landmarks-v1/hackwood.png",
+      "beforeBytes": 1546036,
+      "afterBytes": 1541711,
+      "beforeSha256": "39cc41ed9889f23380b9bd3196c9677ad1c9a922aab941401818b5823ee86e6d",
+      "afterSha256": "3c1edac7613b6e1a11894042d1ff0a1094a086ce4020a7c9fe82656d878a0b58",
+      "pixelSha256": "1141b57a7bee8448b2408c309478cb6f8ddb6b9e52e9d0e3a11327e1bc7b3b4a",
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "290d1f6584ed4e1287309f9720844f591d51546c42b8553565c631c243e32d57"
+    },
+    {
+      "file": "public/images/battles/landmarks-v1/henry-house.png",
+      "beforeBytes": 2216378,
+      "afterBytes": 2171203,
+      "beforeSha256": "ac36381dc298136c0576f352ed0ea49874f68fc0f383b93c5c85ef094e407de8",
+      "afterSha256": "2a581cccc7851277aed2b27ce799bb165672a2e4f504aae21c3753d514db4a5a",
+      "pixelSha256": "a0294698db3aa927ad88fb313f31bc312ac55887cae6e21db8f60d5da61d905b",
+      "mode": "RGBA",
+      "size": [
+        1431,
+        1099
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "a87f75638ade4cb9f79ccd37ef3d07ac1c27297f3c488f2c7169faae68ab2d44"
+    },
+    {
+      "file": "public/images/battles/landmarks-v2/brotherton-cabin.png",
+      "beforeBytes": 2700575,
+      "afterBytes": 2655432,
+      "beforeSha256": "4fc253e5c08292e2ca96b0802aa3c8067a70bf89f33d5f700d2fb55c43061dc7",
+      "afterSha256": "2d086e15649eca6fa4782791fb9f0ad2416acb6965f7234ea818e3e0c7b4bb4c",
+      "pixelSha256": "4906b8108b41e9ecb4ce71c27b6def1ab9951698cc3387cc2cfbed83a36f4060",
+      "mode": "RGBA",
+      "size": [
+        1312,
+        1199
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "df432e132410dcc55b483d3780b3c8dd8fff018c54695c7b8df6deef4251ee62"
+    },
+    {
+      "file": "public/images/battles/landmarks-v2/chancellor-house.png",
+      "beforeBytes": 1957830,
+      "afterBytes": 1955284,
+      "beforeSha256": "40cef206fa124cd0ff098a1b189437a75871e00498da897153247689af8cb785",
+      "afterSha256": "8081a12e20be40057307eab88ad25ab234c98ceb0bf5169c8701fcff7773fc5d",
+      "pixelSha256": "f252683f909f29aa88e77d67c895bd068c42d9db1ca891ab08a1d729c43d7935",
+      "mode": "RGBA",
+      "size": [
+        1484,
+        1060
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "ba3d0700b23ed5584120332d7a7987a277885464296000f337ec69a2ad79d448"
+    },
+    {
+      "file": "public/images/battles/landmarks-v2/shiloh-church.png",
+      "beforeBytes": 2218369,
+      "afterBytes": 2144004,
+      "beforeSha256": "b65fba3cc03cba6f85407bc57bf4a3827d55f9d18c7306a827ac49308bbbbce4",
+      "afterSha256": "605aa65df6a0a4b17f30bde8aff447320bbf089bc2b1356a7cd57b991780df09",
+      "pixelSha256": "971bf77e6f0bd8e169540ab169e190e6c28f889a8879408d1414dc82465fc669",
+      "mode": "RGBA",
+      "size": [
+        1374,
+        1145
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "7f3742864586f4e32c85952e4e100f39f011590c94084d1a6033559d780cc989"
+    },
+    {
+      "file": "public/images/battles/landmarks-v3/evergreen-gatehouse.png",
+      "beforeBytes": 1909849,
+      "afterBytes": 1906663,
+      "beforeSha256": "466d0bf7be2f5c8839a305d66e6d3262b8a52fbf654aeec41b172a8a5060b7ee",
+      "afterSha256": "5593bce239db7c8c3447d04ad8cf16ab145f3f5a45c05f721b550d3aefd17601",
+      "pixelSha256": "4cf7c7ef3c606c2d0fffa58ef0eba23c2895a3d91127f038d952b9df36826157",
+      "mode": "RGBA",
+      "size": [
+        1374,
+        1145
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "72a834a15c85ee8366d1aaa5230d43cd479625ba73da29ab0016330d3a7bfd5c"
+    },
+    {
+      "file": "public/images/battles/landmarks-v3/leister-house.png",
+      "beforeBytes": 2340361,
+      "afterBytes": 2281704,
+      "beforeSha256": "53baed793249ff4713283e3653481d06ad158abb072c57a9fca475d9b6bae2f0",
+      "afterSha256": "128ca8bfdf4004326507b327e4584352b3e72289eef7b4651189d978df3f1bc0",
+      "pixelSha256": "ae3ba153630734d4e58943e3b5af18c4d0a37850f0da2a2b6bf2b8b7bd4fef27",
+      "mode": "RGBA",
+      "size": [
+        1374,
+        1145
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "5385879aa7d453652aa32d47d6d2a6f0b9a2cca2335d26479bb9e45665a3fab2"
+    },
+    {
+      "file": "public/images/battles/landmarks-v4/garthright-house.png",
+      "beforeBytes": 2816328,
+      "afterBytes": 2732669,
+      "beforeSha256": "9dfd4b10642cbb0c72bff925992448f0eff58c775c39eee08767b75c0cceae13",
+      "afterSha256": "8e6e5ef93707286c52d6b60a7f41455066e9a72de8e281c39ad1c0c491fcbc4e",
+      "pixelSha256": "ad826da1a2611686aab1d5a71be1ec67c8a1f17125d28ad2ce7e1517e09c20dd",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "398b7579a3d69aa768f171aaa048f1aa2b0ed775a430197802e580f90d2cbdcd"
+    },
+    {
+      "file": "public/images/battles/landmarks-v4/widow-tapp-house.png",
+      "beforeBytes": 2647938,
+      "afterBytes": 2573547,
+      "beforeSha256": "6e5f0d59d33dcd953d22f95cb8e2847377f536a51ead9356916f7a0cb75933e5",
+      "afterSha256": "3cf9fb798566329a8812b3cbe9ead28427f1453f8b128c5fdbeab8e78ecb53e4",
+      "pixelSha256": "d036ae99d636e20ed9319de4bfa04da798f8e9c78e66b34a30871c4e74f3ee2d",
+      "mode": "RGBA",
+      "size": [
+        1374,
+        1145
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "39d563fc78db7aa6a69c46bbda2ad98562225edccfeb8426e49f84998b91c67e"
+    },
+    {
+      "file": "public/images/battles/landmarks-v5/snodgrass-house.png",
+      "beforeBytes": 2812917,
+      "afterBytes": 2739568,
+      "beforeSha256": "49ccb9f2a78b587493831024b2d830d587a70402c1bd03febde3b208c616595d",
+      "afterSha256": "e3b343e19b19f4b74bb5dd7eed2dcf7b5a86b0e28e5d6a72d13b5b6da2d92151",
+      "pixelSha256": "396b2017df2ff5ef8579959e42cb35fd513c9585ab7421ae3e279f62e558f6ae",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "c182db19eb9f30988e48cfdaac5b886cce57afe7ff60ee0b7343bb578cf39e61"
+    },
+    {
+      "file": "public/images/battles/landmarks-v5/stone-house.png",
+      "beforeBytes": 2585531,
+      "afterBytes": 2557451,
+      "beforeSha256": "aadb0152e64682146454d2c3d1025a483fc93bbe6f30768ae736042e6ed96471",
+      "afterSha256": "02e240f4c28091fd567b5e15748fef53ca9492d10b168a5e9116b8ac715e98fa",
+      "pixelSha256": "40f7fa09dfb06d0b3c19df4813f6de9095c6bf5f588d0f38fd9d76628fe16744",
+      "mode": "RGBA",
+      "size": [
+        1312,
+        1199
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "3e69a4f633868d03c107b95127a4902f44fb72d1f17c692f51cf9147c61a0b66"
+    },
+    {
+      "file": "public/images/battles/landmarks-v6/catharine-furnace.png",
+      "beforeBytes": 2331132,
+      "afterBytes": 2241724,
+      "beforeSha256": "60d006b568c527014b482280a4b14b4340e6fd30dff83d9e34524428f47d856b",
+      "afterSha256": "5b7a2cf163a15bcb79d89b73567f45f8cbcb61ef17ced6d0100186fbe53941e0",
+      "pixelSha256": "d3d27c0c5aae0a7941964c5a4f25fdf5b98a622839f7e8f3b3d3c0b74e4f7408",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "e83701d512151e7b16eba5b6eac9d87f7e997603b6550a0376d566a246c8aecc"
+    },
+    {
+      "file": "public/images/battles/landmarks-v6/heater-house.png",
+      "beforeBytes": 2649361,
+      "afterBytes": 2584536,
+      "beforeSha256": "a2fdea7b78238b73dff4d48dcd4618c67f116c8109d20d6a02af773503988175",
+      "afterSha256": "e34eddd09da4bc101ff4a82289fcda3dd9112aa285d2f23c4a27b56aa6bc6d0f",
+      "pixelSha256": "494b9310cd8b75901b320e6c3848a03f6d31d16c24d49a5e09746014682442c2",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "3922ae316b5c51bd3767f175513bf13554e443769be2940a2fe3a71bbcffc138"
+    },
+    {
+      "file": "public/images/battles/landmarks-v7/brian-house.png",
+      "beforeBytes": 3106284,
+      "afterBytes": 3045224,
+      "beforeSha256": "d4fec3d6f5aa921afdfcf312316a2d840b9a3ef6a9a70d47051c043eedff5078",
+      "afterSha256": "6062dfbc85fd2340acb65536586f8d1e25e7af7c8713d64f597ce1c3a42b056c",
+      "pixelSha256": "22e003e9e8bd71f06d573705582a1fb2e34aa97d4a9d89ab5fc5e6fa6dd1dfa9",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "fde77483220037587f65e894015fc21e4143d4f3e1f4c194b69f3a4d9b9daff6"
+    },
+    {
+      "file": "public/images/battles/manassas-ground-v3.png",
+      "beforeBytes": 3169938,
+      "afterBytes": 3111512,
+      "beforeSha256": "c7aba1364bb252d0627803e521f02a5f30c6774a313a6b79476c6bdcb2b14cca",
+      "afterSha256": "a6baaf36683493f532ee47984fdc5e3a30d58f3fea35b6369f29fedcff0a224a",
+      "pixelSha256": "875b0bf2ba84a6c42888d51b6cc3424ae02ddcff328b50f57fa5460ae859fc9e",
+      "mode": "RGB",
+      "size": [
+        1613,
+        975
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "4a0f339bccabea46972524902d68a4844dbdde5a13477c2507491be2ba05f47a"
+    },
+    {
+      "file": "public/images/battles/realistic-v2/bunting.png",
+      "beforeBytes": 3128696,
+      "afterBytes": 3092715,
+      "beforeSha256": "de0103fb0977f8d92e523bf00adec0b6d15565680698502ac5c8b5bd6a585016",
+      "afterSha256": "df7c37b6e53ea4f667339e24be3babd3292b5fd8cb0702d28ed4789526895e3f",
+      "pixelSha256": "c596f06236a3c88fdca5570c0dfd46528c4e31af11d1afdb18746db88b96f05a",
+      "mode": "RGB",
+      "size": [
+        1254,
+        1254
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "5ee49d3352d3b185763d26a260322c571ae8381363531c237488f6770d73bd94"
+    },
+    {
+      "file": "public/images/battles/realistic-v2/earthworks.png",
+      "beforeBytes": 2550592,
+      "afterBytes": 2145673,
+      "beforeSha256": "c7bbeedbbd1eb4616894b661c78ead1fc294231d7ecc7ffb5b8869e0c18643bf",
+      "afterSha256": "75892748bd9d5141649abb7d71711c7c044b45261afad5466f2352243e72255c",
+      "pixelSha256": "8b4fef9b22dcf0616f2431cf27b671c400674c53e9199f2688bae261c82b575c",
+      "mode": "RGB",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "32e7350a48be8684771666fbff1352fefbd814aab9fb9fe41ba5c3a3d85eccee"
+    },
+    {
+      "file": "public/images/battles/realistic-v2/foliage.png",
+      "beforeBytes": 2645532,
+      "afterBytes": 2266302,
+      "beforeSha256": "423773dcdf42ca98921ac3e16071f868dc9fe8035576264e58bbb726bfb668e3",
+      "afterSha256": "2e06aea3eeb3723aa7f8824343aa9a13a3b1ea0efb4351b24ceaa8aa775d64ac",
+      "pixelSha256": "078314b0cbacb54dbbb0c993b6494bad85a5e2554f173750bb955a9aafc0f729",
+      "mode": "RGB",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "6fcf61f6cd2c96744ea6e6ef4a32591dadadfeec141f1ac6dfd0386fd10ceec7"
+    },
+    {
+      "file": "public/images/battles/realistic-v2/pasture.png",
+      "beforeBytes": 4146715,
+      "afterBytes": 3488867,
+      "beforeSha256": "95a8932f4e8113a586490e14eac8a499fb5aca3ca9ac0718ef6aba9a859fa6cb",
+      "afterSha256": "7cc83591ed85d43529c740d461535331439771f5b348eed3ab8731a0680a4405",
+      "pixelSha256": "964d3078e766d06a8bca8f4b934a28a966cb53cf28d3a606d86b0d827d27271c",
+      "mode": "RGB",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "9d6cd3ae649c9455f23cca72b400778c2bb9b7cc65c32e81fe9b8bb9380d892c"
+    },
+    {
+      "file": "public/images/battles/siege-targets-v1/eastern-engineer-depot-damaged.png",
+      "beforeBytes": 2888635,
+      "afterBytes": 2804150,
+      "beforeSha256": "6031b746350c396833f094af7fa4dc54c87134b45cc19536a084365902f77226",
+      "afterSha256": "6ea4a631f0d5a14aa8c7bf75db1ec736a1908c06012e57c73965b229dba3b7af",
+      "pixelSha256": "27694eb836de01f8178b0c098ef4587069dadc250b3de0e7aea866ee6801b3d2",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "7d5ff3432bd547e40f891041359161642ff7826ef724d9a7af6b45be85999495"
+    },
+    {
+      "file": "public/images/battles/siege-targets-v1/eastern-engineer-depot.png",
+      "beforeBytes": 2889789,
+      "afterBytes": 2799283,
+      "beforeSha256": "f2e9107e647a591206fbd09dc0084db2ebb6967a710a007ae377fa2321940ebb",
+      "afterSha256": "980017ea27a70f8c0d7c2d8962ad126b4c368266bb7264c54a77332de6a90d53",
+      "pixelSha256": "aa8973527f75c6e3d8bcae5da354d984daa35f67940120a80cdb4daa6653eaf9",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "ba4bd982f0823906ac22e8785ddd001dfae218f82b8ed0d6aede09f703a7d2f4"
+    },
+    {
+      "file": "public/images/battles/siege-targets-v1/western-siege-train-damaged.png",
+      "beforeBytes": 3088231,
+      "afterBytes": 2995778,
+      "beforeSha256": "0e07ba3cc322a66d195b790aef55bdf44d799bae802131ef33bbc56ba90227d9",
+      "afterSha256": "962166b69c815fe93eac13fb6d2c0069f6c15a8c22cf6a2d2cf670b16a031c35",
+      "pixelSha256": "222173b37e0b0a6098070b6569839c96a050bdc72fde223a8920ff2860a6a9fd",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "f6e241051dc887a9a1aa90c84e0d53efbaac3d6a699b57b784544becea0bc31a"
+    },
+    {
+      "file": "public/images/battles/siege-targets-v1/western-siege-train.png",
+      "beforeBytes": 3021734,
+      "afterBytes": 2898820,
+      "beforeSha256": "966faffeb5c59a108d7fee6202114115bd100cae32ff7f619164ef36592d9db4",
+      "afterSha256": "2a67ea945754dfa6e25979718eb708daa03f6b875e8991a6439a1a9652b91c6a",
+      "pixelSha256": "43e4fe32849528d62b9f86b47dfb88588af00532a30cbce6f80ff6ba93b99ba9",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "fe4ef4145ef31ce7dc87317391eb4d59d7c78f1bd0bcf8792a5eb80f9c67ccc3"
+    },
+    {
+      "file": "public/images/battles/siege-v1/crater.png",
+      "beforeBytes": 2907805,
+      "afterBytes": 2834375,
+      "beforeSha256": "44f89ff6a31cf09381bbe881916e5bda8bef135e28836b7ffe42d272a6fccdbf",
+      "afterSha256": "710f3bcdf4df0a2351ab6a5da1e000d17bf16f220464c488f86031c36a8b25b2",
+      "pixelSha256": "f1ba4f6bcabde4d3f9eae13ec822701a2bf008095fabe8f3b76ec78d96b529e5",
+      "mode": "RGBA",
+      "size": [
+        1774,
+        887
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "dc08721891a307121a9178fce88f8703f1eb09e6d001e21901a576ba75b54190"
+    },
+    {
+      "file": "public/images/battles/siege-v1/earthwork.png",
+      "beforeBytes": 2659553,
+      "afterBytes": 2633727,
+      "beforeSha256": "71bc57f14ba977b2f93a0a984a32ee87f757b9c3e4f6d51507527a9a2ab18f6f",
+      "afterSha256": "7945ffad6f1be37a39d2840a6f3f964a64708fa2997a1f430b2e8a2f8cb65cd6",
+      "pixelSha256": "8c48728b91c5470ce3aa115b6ec2c81993bd49cd7b1e75cab0234c3c5a969882",
+      "mode": "RGBA",
+      "size": [
+        2087,
+        754
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "4aff6fe89860739cd79e20de7900ff71604460e35425b4c1fb3c3f9804b5b010"
+    },
+    {
+      "file": "public/images/battles/siege-v1/ravine.png",
+      "beforeBytes": 3210146,
+      "afterBytes": 3129222,
+      "beforeSha256": "33b7e99bf527fbda2ee99916eb7624af1e170aeeb8907318edb50fd0ed6417e3",
+      "afterSha256": "4900b0601126b7814dba64c4a75b762ea795ab3e7137e69ebe2d3f73c94c6bed",
+      "pixelSha256": "4f7fb7830f3070646b5a9569998a2260bbb87249bd679a8480a0528bd6570b02",
+      "mode": "RGBA",
+      "size": [
+        1983,
+        793
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "4db6c404b2f114b200cca29f72476e90bc4aa88a0093d2452c718cfaf697bf47"
+    },
+    {
+      "file": "public/images/units/detailed-v2/confederate-aim.png",
+      "beforeBytes": 1804624,
+      "afterBytes": 1553757,
+      "beforeSha256": "74b3bae87a390fecba187fd2e3d91a125ce1607e4c920b21625ec0ab4c8a21ec",
+      "afterSha256": "354f5f090be54dbb310939c8c9e69375e4ad0da9beea682863f60fa5f3353500",
+      "pixelSha256": "5f48a1790098ed775ee3e4b29162f1e07c74dc0ec415bd00a2f215ec54745d91",
+      "mode": "RGB",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "9f4ca346f8384a5864f6b4e9a1ef697d0f33200cba73fdbc2cd630c2252512c0"
+    },
+    {
+      "file": "public/images/units/detailed-v2/confederate-crew.png",
+      "beforeBytes": 1734167,
+      "afterBytes": 1484016,
+      "beforeSha256": "6bdebe535b7c384b09852c1492ecec052b410c473b4ed1e2b57a62d35d28828a",
+      "afterSha256": "0fac66f929307da0497e8672ff1599ca2e7ef03bb3563c93cea566258841b4a1",
+      "pixelSha256": "87b923502f6311cbd2702ec5513a401b673606c2859b2f382595d2104744cb0f",
+      "mode": "RGB",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "e0870249536dc9348a2e6bd93c8ab8e4a3bd4372b930f29731dc6605f5666f40"
+    },
+    {
+      "file": "public/images/units/detailed-v2/confederate-ready.png",
+      "beforeBytes": 1889708,
+      "afterBytes": 1630823,
+      "beforeSha256": "6980e0bd8a8bd49eb7ae64839a90056e2ed6ce68773b5b099747621a42918b5f",
+      "afterSha256": "a245bac6766655de6142fe75250642e488ac7ae33d1df327c442be67160773fe",
+      "pixelSha256": "efce2bbeccd44671b0b697adb18ee574459dd8c5a54c83cd868a108c6d44a89d",
+      "mode": "RGB",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "07832cb94327ea07d55d906deca98d8ea41440e11ba3ced82cc86579d69cf9dc"
+    },
+    {
+      "file": "public/images/units/detailed-v2/confederate-walk.png",
+      "beforeBytes": 1848862,
+      "afterBytes": 1597978,
+      "beforeSha256": "60ecc35c857bee968e7af851505b0b35dcbb4f2ee2e91f3dccddec2b1900de34",
+      "afterSha256": "72bcd09a3e5de364c83e545caf64e421516de2dc8fc52b63997daad096308c47",
+      "pixelSha256": "fe2785e6d75534d0ad167fb60152bc9dc8989c3b8e6d9af43aa5ade5e4fa930f",
+      "mode": "RGB",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "ac6ccde353952ad3aca94bd65220f279e003f9627af5f31fe554a97bb99c2b00"
+    },
+    {
+      "file": "public/images/units/detailed-v2/union-aim.png",
+      "beforeBytes": 1693669,
+      "afterBytes": 1451167,
+      "beforeSha256": "d06e058977c36583330304d80e583a1f54f6a2ccf0e792c0b880fa4d5222a3b4",
+      "afterSha256": "093cd17c3ef757c86c98b1c2e8aec5d9d74341ef9a475d30cc1445a35e400288",
+      "pixelSha256": "5eb50f9feb6bbf9d5e0b476c37bd4ef5e7010edafca098c396e3687ee6e869a8",
+      "mode": "RGB",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "27c3ce128658e8dc22984f26031192e98a4d1ddaf50b79574b6507d80f127b34"
+    },
+    {
+      "file": "public/images/units/detailed-v2/union-crew.png",
+      "beforeBytes": 1731115,
+      "afterBytes": 1485353,
+      "beforeSha256": "f67ad92320d992ad15b91d9e759326d514fdbe708ecd71be3574f5738be6305b",
+      "afterSha256": "b5263432b17de6fac93b2be38859f55e2b2a0d2956f6e755ff0794c70ec60fea",
+      "pixelSha256": "607ccfbfd8bc590dee51635274ee5771d6531c1d3a1c2e4ac982eb2b53e2cdda",
+      "mode": "RGB",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "67d0e4aadaa2640494738b4694f34c05dfc2c148747d9c5b8befab22357faaf4"
+    },
+    {
+      "file": "public/images/units/detailed-v2/union-ready.png",
+      "beforeBytes": 1730617,
+      "afterBytes": 1507548,
+      "beforeSha256": "98d5bec5a0000ddbee38d0fe26977280ab7328764e9fc524535c94b7d8e338af",
+      "afterSha256": "75160c7f8168a69f9dbddc0460c4fd6406708798cbea1f3c3965b4c3e4c3f0cc",
+      "pixelSha256": "88848d58f2ed188be9baf46ea9a3c426df8a490c717cac510ef5aa990dcc976b",
+      "mode": "RGB",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "b0e70f23bf49ff28204027c727f628e2b11aaf317ec8006ba17bd03ba73cf701"
+    },
+    {
+      "file": "public/images/units/detailed-v2/union-walk.png",
+      "beforeBytes": 1734588,
+      "afterBytes": 1506765,
+      "beforeSha256": "5a5362a5fec34126613e3f1e335c951dd43cbabbb480f607ffc22252d2d0479d",
+      "afterSha256": "ad8559c5f1da1d46b2ab465d63ff78f8779ae11c8439eb8f68cb954778dda5d0",
+      "pixelSha256": "cf54e28dbb34731a0960a8010716b61caffdc7b4208547f95b1e626de248588d",
+      "mode": "RGB",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "779766dfcb5b8a242e555af84518cbf40d27c40ce760df0cfdd2c03168a73f4d"
+    },
+    {
+      "file": "public/images/units/realistic-v1/artillery-crew.png",
+      "beforeBytes": 2211067,
+      "afterBytes": 2104502,
+      "beforeSha256": "1d6051e67dc320fe139a57726ec5abbdd7ea349f8c69b84a5bf107087818016f",
+      "afterSha256": "e30f759575388b83e02d6bbd1327bc6e1f41d80dcdb573d1be3ec7a68c4f40c4",
+      "pixelSha256": "337ffd16294d3ef8d04ec98eef70f3dea47dfe04f382b213c02457fac8f44aed",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "394ac5af76d97d355322ff531786ee5b6ea537ef7b21aca2bec086ca75da064f"
+    },
+    {
+      "file": "public/images/units/realistic-v1/axial-aim.png",
+      "beforeBytes": 829940,
+      "afterBytes": 827255,
+      "beforeSha256": "6a9a1b1ff4116bce9b04bfd7232be93e3b43e10a4905fd7b3b0be36647ea02cb",
+      "afterSha256": "9f31ea9adeb6eabb147a99e1f3348d37f3bdee9445d7ceeb90fb4853eeab047d",
+      "pixelSha256": "bab36cdc9be983f3582bb964480c0b8c328326f75c550b1b67f3e7f8c2bd7151",
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "3ccaa3c88fae1ea3863b886c3fdafe900742dbf5a3bfd9923a9fa2a05dbbf068"
+    },
+    {
+      "file": "public/images/units/realistic-v1/confederate-infantry.png",
+      "beforeBytes": 2290260,
+      "afterBytes": 2181294,
+      "beforeSha256": "fc57db83394465a69ac90bf136c5116bd323c17b8885c8a3dd248e1a36503eab",
+      "afterSha256": "1db31c1c37d4b175e5d36dad45e1292ab616be71df85b3a609f3d9be55e6c4ba",
+      "pixelSha256": "e6a57cd4a27f8249e107ae4ee93cd6444d775d3399be2184919d1d69161836b1",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "503052e489317b85d92f9540d0c54cd146397da85afc39ba683c8b2d9ee354ba"
+    },
+    {
+      "file": "public/images/units/realistic-v1/union-infantry.png",
+      "beforeBytes": 2209116,
+      "afterBytes": 2093508,
+      "beforeSha256": "dc5e7b341f0b0107d3d47d844f7bf99d3a93d88bc204a25d2b31d6eaaa49ee49",
+      "afterSha256": "83e7b3d82802f29ad4614e3d82130df4e6571e192ae560f91dd23992a66d02ba",
+      "pixelSha256": "ca346349f98928fe54ee7758b36d859e13f02571e0b2a674707391bca7c8b3b1",
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "d1cf35ab336bea0ea9efa794cefc83dd07d44f337df3350d8ea65f5560c61e57"
+    },
+    {
+      "file": "public/images/units/union-artillery-v2.png",
+      "beforeBytes": 1864901,
+      "afterBytes": 1767373,
+      "beforeSha256": "b938af167bbcd271b0f7a212437d603558b2c549593777e18fc1bf29a1621af9",
+      "afterSha256": "85531bada0588b58f62a0a4f9eea4caae645550538d32979367c7d5fcb89fffa",
+      "pixelSha256": "80dfbf577c58fdd00f52c8abfbb195a985607479b292b4b572d7037af1f159f4",
+      "mode": "RGBA",
+      "size": [
+        1421,
+        1107
+      ],
+      "reason": "lossless repack",
+      "nonIdatSha256": "2fc31d36a088ad456435766587afab01a390a864b2528407082d128fbfd63a1f"
+    }
+  ]
+}

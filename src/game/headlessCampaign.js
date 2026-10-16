@@ -1,5 +1,8 @@
 import { createFreshCampaignState } from './campaignStorage.js';
-import { CAMPAIGN_FINAL_TURN, calculateCampaignScore, resolveNextScenario, tickMetrics } from './simulationEngine.js';
+import { getCampaignScenarioContext } from './campaignScenarioContext.js';
+import { HISTORY_SCORE_CARD_VERSION, calculateCampaignScore, resolveChoiceScoreCard, resolveNextScenario, tickMetrics } from './simulationEngine.js';
+
+export const DEFAULT_MAX_DECISIONS = 80;
 
 function clone(value) {
   return JSON.parse(JSON.stringify(value));
@@ -45,6 +48,8 @@ export function buildHistoryEntry(state, activeScenario, choice, ticked) {
   const crisisFor = activeScenario?.crisisFor || null;
   const crisisAlignmentBefore = crisisFor ? state?.shards?.[crisisFor]?.alignment ?? null : null;
   const crisisAlignmentAfter = crisisFor ? ticked?.shards?.[crisisFor]?.alignment ?? null : null;
+  const battleResult = state?.battleCampaign?.results?.[activeScenario?.id] || null;
+  const scoreCard = resolveChoiceScoreCard(activeScenario.id, choice, battleResult);
 
   return {
     turn: state.currentTurn,
@@ -52,11 +57,15 @@ export function buildHistoryEntry(state, activeScenario, choice, ticked) {
     date: activeScenario.date,
     scenarioTitle: activeScenario.title,
     scenarioRoleLabel: activeScenario.roleLabel,
+    scenarioActor: activeScenario.actor,
     choiceId: choice.id,
     choiceText: choice.text,
     choiceProposer: choice.proposer,
-    scoreCard: choice.scoreCard || null,
+    scoreCard,
+    scoreCardVersion: HISTORY_SCORE_CARD_VERSION,
+    battleResult,
     metricEffects: { ...(ticked.appliedEffects?.metrics || {}) },
+    resourceTransitions: ticked.resourceTransitions ? clone(ticked.resourceTransitions) : null,
     choiceSucceeded: ticked.choiceSucceeded,
     consequence: ticked.resolvedConsequence,
     divergence: ticked.divergenceIndex,
@@ -64,7 +73,8 @@ export function buildHistoryEntry(state, activeScenario, choice, ticked) {
     crisisLabel: crisisFor ? (CRISIS_LABELS[crisisFor] || `${crisisFor} Crisis`) : null,
     crisisAlignmentBefore,
     crisisAlignmentAfter,
-    crisisResolved: crisisFor ? crisisAlignmentAfter !== null && crisisAlignmentAfter >= 30 : false
+    crisisResolved: crisisFor ? crisisAlignmentAfter !== null && crisisAlignmentAfter >= 30 : false,
+    ...(ticked.supplyReport ? { supplyReport: clone(ticked.supplyReport) } : {})
   };
 }
 
@@ -84,6 +94,8 @@ function resolveDirectorRoute(activeScenario, choice, nextScenario, ticked) {
 }
 
 export function advanceCampaignTurn(state, activeScenario, choiceInput, scenarios, successModifier = 0) {
+  if (state?.gameOver) throw new Error('The campaign has concluded; no further decision can be committed.');
+  activeScenario = getCampaignScenarioContext(state, activeScenario);
   const choice = resolveChoiceInput(activeScenario, choiceInput);
   if (!choice) {
     throw new Error(`Choice not found for scenario ${activeScenario?.id || 'unknown'}`);
@@ -138,6 +150,7 @@ export function advanceCampaignTurn(state, activeScenario, choiceInput, scenario
     scenarioId: canonicalNextScenario?.id || state.scenarioId || null,
     nextScenarioId,
     metrics: ticked.metrics,
+    ...(state.rulesVersion === 2 ? { campaignEconomy: ticked.campaignEconomy, supplyPlan: ticked.supplyPlan } : {}),
     shards: ticked.shards,
     divergenceIndex: ticked.divergenceIndex,
     gameOver: ticked.gameOver,
@@ -147,7 +160,7 @@ export function advanceCampaignTurn(state, activeScenario, choiceInput, scenario
 
   return {
     state: nextState,
-    nextScenario: canonicalNextScenario,
+    nextScenario: getCampaignScenarioContext(nextState, canonicalNextScenario),
     historyEntry,
     choice,
     ticked,
@@ -155,7 +168,30 @@ export function advanceCampaignTurn(state, activeScenario, choiceInput, scenario
   };
 }
 
-export function runHeadlessCampaign({ scenarios, initialState = null, chooseChoice = null, maxTurns = CAMPAIGN_FINAL_TURN }) {
+function validateDecisionCap(maxTurns) {
+  if (!Number.isSafeInteger(maxTurns) || maxTurns < 1) {
+    throw new Error('maxTurns must be a positive integer decision cap');
+  }
+}
+
+function summarizeRun(state, scenario, turns, maxTurns) {
+  const endingReached = !!state.gameOver;
+  const capped = !endingReached && !!scenario && turns.length >= maxTurns;
+  return {
+    finalState: state,
+    finalScenario: scenario,
+    turns,
+    decisionsMade: turns.length,
+    chronologicalStage: state.currentTurn,
+    endingReached,
+    capped,
+    stopReason: endingReached ? 'ending-reached' : capped ? 'decision-cap' : scenario ? 'no-choice' : 'no-scenario',
+    campaignScore: calculateCampaignScore(state),
+  };
+}
+
+export function runHeadlessCampaign({ scenarios, initialState = null, chooseChoice = null, maxTurns = DEFAULT_MAX_DECISIONS }) {
+  validateDecisionCap(maxTurns);
   if (!Array.isArray(scenarios) || !scenarios.length) {
     throw new Error('runHeadlessCampaign requires a non-empty scenario array');
   }
@@ -187,15 +223,11 @@ export function runHeadlessCampaign({ scenarios, initialState = null, chooseChoi
     scenario = result.nextScenario;
   }
 
-  return {
-    finalState: state,
-    finalScenario: scenario,
-    turns,
-    campaignScore: calculateCampaignScore(state)
-  };
+  return summarizeRun(state, scenario, turns, maxTurns);
 }
 
-export async function runHeadlessCampaignAsync({ scenarios, initialState = null, chooseChoice = null, maxTurns = CAMPAIGN_FINAL_TURN }) {
+export async function runHeadlessCampaignAsync({ scenarios, initialState = null, chooseChoice = null, maxTurns = DEFAULT_MAX_DECISIONS }) {
+  validateDecisionCap(maxTurns);
   if (!Array.isArray(scenarios) || !scenarios.length) {
     throw new Error('runHeadlessCampaignAsync requires a non-empty scenario array');
   }
@@ -227,10 +259,5 @@ export async function runHeadlessCampaignAsync({ scenarios, initialState = null,
     scenario = result.nextScenario;
   }
 
-  return {
-    finalState: state,
-    finalScenario: scenario,
-    turns,
-    campaignScore: calculateCampaignScore(state)
-  };
+  return summarizeRun(state, scenario, turns, maxTurns);
 }

@@ -1,0 +1,67 @@
+{
+  "generator": "Built-in OpenAI image_gen tool",
+  "exactModelIdentifier": "not reported",
+  "processing": "Selected originals copied unchanged. Runtime scales and composites sprites.",
+  "assets": [
+    {
+      "path": "public/images/battles/landmarks-v3/leister-house.png",
+      "dimensions": [
+        1374,
+        1145
+      ],
+      "mode": "RGBA",
+      "bytes": 2340361,
+      "sha256": "53baed793249ff4713283e3653481d06ad158abb072c57a9fca475d9b6bae2f0",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "public/images/battles/landmarks-v3/evergreen-gatehouse.png",
+      "dimensions": [
+        1374,
+        1145
+      ],
+      "mode": "RGBA",
+      "bytes": 1909849,
+      "sha256": "466d0bf7be2f5c8839a305d66e6d3262b8a52fbf654aeec41b172a8a5060b7ee",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "public/images/battles/gettysburg-terrain-v3.png",
+      "dimensions": [
+        1724,
+        912
+      ],
+      "mode": "RGB",
+      "bytes": 2515236,
+      "sha256": "f41796c1fd77bd75cef4c1503c861e8b3aa3f4ec08d225169702cf9628afd6d3"
+    }
+  ],
+  "references": {
+    "leister-house": [
+      "https://www.nps.gov/places/lydia-leister-farm.htm",
+      "https://www.nps.gov/gett/learn/photosmultimedia/buildings-and-farms-then-and-now.htm",
+      "https://www.loc.gov/item/2011660054/"
+    ],
+    "evergreen-gatehouse": [
+      "https://www.nps.gov/places/gettysburg-then-now-gatehouse.htm",
+      "https://www.nps.gov/gett/learn/photosmultimedia/buildings-and-farms-then-and-now.htm",
+      "https://www.loc.gov/item/2006692500/"
+    ]
+  },
+  "limitations": [
+    "Illustrative architecture with inferred unseen surfaces and small details, not a measured restoration.",
+    "Wartime images were inspected in NPS then-and-now composites; direct LOC image downloads returned 403. Modern additions, memorials and road markings are excluded.",
+    "Leister house shown standing, with porch intact. July 3 bombardment damage and headquarters evacuation are not simulated.",
+    "Evergreen original gateway is used in an explicitly alternate-history July 1-2 battle. Later residential addition is excluded.",
+    "The full-formation movement and direct-fire model treats the narrow gatehouse passage as occupied ground; it is not a playable passage or firing portal.",
+    "Generated terrain edit removes two generic buildings. It preserves image dimensions and major terrain layout, but is not byte-identical outside edited ground.",
+    "Locations and dimensions are representative placements on compressed game boards.",
+    "No garrison, healing, new cover bonuses or building destruction."
+  ]
+}

@@ -20,22 +20,22 @@ export const STATIC_SCENARIOS = [
 {
     id: "fort_sumter",
     turn: 1,
-    date: "April 12, 1861",
+    date: "April 13, 1861",
     actor: "Major Robert Anderson",
     roleLabel: "Union Fort Commander",
     image: fortSumterCard,
-    title: "The Crisis of Fort Sumter — Opening Shots",
-    description: "Your supplies are almost gone. For 34 hours the secessionist batteries have poured shot and shell into the tiny masonry fort in Charleston Harbor. The relief fleet promised by Lincoln is still over the horizon. General Beauregard has sent a final demand: surrender or face annihilation. The eyes of Europe are watching. One wrong move and the war that has not yet officially begun will ignite in blood and fire.",
+    title: "The Crisis of Fort Sumter — Surrender Decision",
+    description: "Your supplies are almost gone. After 34 hours of bombardment by secessionist batteries, fires and damaged defenses have made Fort Sumter increasingly untenable. The relief expedition has not supplied the garrison. Surrender terms are being discussed with Beauregard's representatives. The war has begun; you must decide whether to accept evacuation, prolong resistance, or attempt an escape.",
     letterTarget: "your wife Eba",
     sourceNotes: "OR ser. 1 vol. 1 pp. 12-30 (Anderson-Beauregard correspondence); Channing, A History of the United States vol. VI; Nevins, The War for the Union vol. I ch. 2; Foote, The Civil War vol. I pp. 40-49.",
-    period_voice: "Anderson to Adjutant General Cooper, April 11 1861: \"I shall await the first shot, and if you do not batter the fort to pieces about us, we shall be starved out in a few days.\" (OR ser. 1 vol. 1 p. 14)",
+    period_voice: "Paraphrase of Anderson's oral remark to Beauregard's three emissaries, April 11, 1861: without relief, the garrison would soon face starvation even if the bombardment did not destroy the fort. This was an oral communication, not a letter to Adjutant General Cooper. (National Park Service, Battle of Fort Sumter, April 1861: https://home.nps.gov/articles/battle-of-fort-sumter-april-1861.htm)",
     primerTags: ["upper_south_secession_crisis", "border_state_bargain", "women_in_the_war"],
     choices: [
       {
         id: "option_a",
         text: "Refuse surrender and return fire aggressively. Hold the masonry.",
         proposer: "hotspur",
-        costDescription: "Consumes 20 Military Strength, sparks total war.",
+        costDescription: "Consumes 20 Military Strength, prolongs the bombardment.",
         successRate: 0.5,
         next: "manassas_battlefield",
         successEffects: {
@@ -47,23 +47,23 @@ export const STATIC_SCENARIOS = [
           metrics: { militaryStrength: -30, munitions: -30, publicMorale: +10 },
           shards: { hotspur: +15, fox: -15 }
         },
-        failureConsequence: "The masonry crumbled under a 34-hour bombardment. Fort Sumter fell, but the Union was galvanized into action. The first shots of the war have been fired."
+        failureConsequence: "Further resistance could not save the battered fort. Fort Sumter fell, and the bombardment galvanized the Union into action."
       },
       {
         id: "option_b",
         text: "Negotiate evacuation terms under protest. Preserve your garrison.",
         proposer: "fox",
-        costDescription: "Saves military lives, but drops initial Public Morale.",
+        costDescription: "Preserves the garrison; the game model applies an initial Public Morale penalty.",
         next: "radical_republican_crisis",
         effects: {
           metrics: { militaryStrength: -5, publicMorale: -25, treasury: +10 },
           shards: { hotspur: -20, fox: +25, wolf: +10 }
         },
-        consequence: "The garrison marched out with honors of war. Lives were saved, but Northern crowds are furious at the surrender. The war begins with a perceived humiliation."
+        consequence: "Anderson accepts evacuation with honors. Historically, the garrison left the fort on April 14, and the attack rallied Northern support for the Union. The Public Morale penalty and following cabinet crisis are modeled political pressures, not a record of public anger at Anderson's surrender."
       },
       {
         id: "option_c",
-        text: "Delay action by claiming technical valve failures, waiting for the relief fleet.",
+        text: "Prolong surrender negotiations while awaiting help from the relief expedition.",
         proposer: "wolf",
         costDescription: "Saves munitions, moderate risk of battery containment.",
         next: "manassas_battlefield",
@@ -75,7 +75,7 @@ export const STATIC_SCENARIOS = [
       },
       {
         id: "option_d",
-        text: "Spike the heavy columbiad guns and execute a pre-dawn barge escape.",
+        text: "Spike the heavy columbiad guns and prepare a barge escape before the next dawn.",
         proposer: "sovereign",
         costDescription: "Destroys munitions, high tactical divergence.",
         next: "charleston_harbor_escape",
@@ -95,21 +95,21 @@ export const STATIC_SCENARIOS = [
     actor: "President Abraham Lincoln",
     roleLabel: "Union Civil Executive",
     image: "/images/cw_pictures/Lincoln Cabinet.jpeg",
-    title: "Radical Republicans Revolt — The Price of Restraint",
-    description: "Sumter has been evacuated rather than turned into the clean martyrdom Northern crowds expected. Lives were saved, but the political result is unstable: Radical Republicans, abolitionist editors, hard-war governors, and angry recruiting crowds now accuse the administration of giving rebellion its first victory. Lincoln's cabinet must decide whether restraint remains useful, whether to answer with immediate mobilization, or whether to turn the humiliation into a larger coalition strategy before the border states and Europe decide what the war means.",
+    title: "Mobilizing the Union — The Coalition After Sumter",
+    description: "The attack on Sumter has rallied Northern support for the Union. Lincoln must turn that response into troops, funds, and a workable coalition while weighing the reactions of the Upper South, the border states, and Europe. This branch imagines an intensified cabinet dispute over the pace and language of mobilization. Its political penalties and factional responses are game assumptions, not measured consequences of the historical evacuation.",
     primerTags: ["upper_south_secession_crisis", "border_state_bargain", "copperhead_politics"],
     letterTarget: "the cabinet and Congressional leaders",
     choices: [
       {
         id: "option_a",
-        text: "Call Congress into emergency session and answer restraint with overwhelming mobilization.",
+        text: "Call Congress into emergency session and answer the attack with overwhelming mobilization.",
         proposer: "hotspur",
         costDescription: "High treasury and munitions cost, restores Northern resolve.",
         effects: {
           metrics: { treasury: -18, munitions: -10, militaryStrength: +18, publicMorale: +18, divergenceIndex: +0.06 },
           shards: { hotspur: +28, fox: -10 }
         },
-        consequence: "The administration absorbs the criticism by moving faster than its critics expected. The Union war effort begins with less romance than Sumter martyrdom, but with harder administrative muscle."
+        consequence: "Rapid mobilization turns public resolve into recruiting and administrative work. In this modeled branch, the cabinet gains political support by committing resources quickly, while increasing the strain on its treasury and supplies."
       },
       {
         id: "option_b",
@@ -124,7 +124,7 @@ export const STATIC_SCENARIOS = [
       },
       {
         id: "option_c",
-        text: "Turn Radical outrage into a press offensive about rebellion, restraint, and lawful Union.",
+        text: "Channel Radical demands for action into a press offensive about rebellion, restraint, and lawful Union.",
         proposer: "wolf",
         costDescription: "Treasury cost, political recovery, diplomatic narrative gain.",
         effects: {
@@ -154,7 +154,7 @@ export const STATIC_SCENARIOS = [
     actor: "Brig. Gen. Thomas J. Jackson",
     roleLabel: "Confederate Brigade Commander",
     image: manassasBattlefieldCard,
-    title: "First Battle of Manassas — Henry Hill Test Run",
+    title: "First Battle of Manassas — Henry Hill",
     description: "The Virginia sun beats down on Henry Hill. Union columns under McDowell are swinging wide around Sudley Springs, threatening to roll up the Confederate left. General Bee's brigade is already breaking on Matthews Hill. The day is young, but the fate of the infant Confederacy may be decided in the next few hours. If the line collapses here, Richmond is open. If it holds, the South gains a legend.",
     letterTarget: "your wife Anna",
     sourceNotes: "OR ser. 1 vol. 2 pp. 313-571 (reports of McDowell, Beauregard, J.E. Johnston, Jackson); Henderson, Stonewall Jackson and the American Civil War vol. I ch. 9; Freeman, R.E. Lee vol. I ch. 33; Battles and Leaders of the Civil War vol. I pp. 167-261.",
@@ -287,7 +287,7 @@ export const STATIC_SCENARIOS = [
     roleLabel: "Confederate Navy Secretary",
     // image will be loaded from SCENARIO_ASSET_MAP → hunley_submarine
     title: "Naval Technology — The Blockade & Experimental Warfare",
-    description: "The Union blockade has tightened its iron grip on our ports, strangling commerce and isolating the Confederacy from Europe. In Richmond, the war cabinet debates how to break the naval stranglehold. Faction advisors urge vastly different technological solutions. Hotspur demands placing all available treasury into armored ironclads to challenge the Union navy directly in Hampton Roads. Fox advocates building heavy steam-propelled river ironclads and naval mines to defend the Mississippi. Wolf urges backing Singer's Secret Service corps to develop the H.L. Hunley, an experimental stealth submarine, to execute night raids on the blockade.",
+    description: "The Union blockade threatens Confederate commerce and access to European supplies. In Richmond, the cabinet weighs ironclads, river defenses, and experimental submarine research. Wolf proposes funding precursor work such as the Pioneer experiments of early 1862. The later H.L. Hunley reference in the archive belongs to 1863, not this March 1862 decision. An early operational submarine and its immediate results here are explicitly hypothetical accelerated development, not the recorded Hunley mission.",
     letterTarget: "your daughter Ruby",
     primerTags: ["naval_technology", "cotton_diplomacy", "wartime_industry"],
     choices: [
@@ -321,7 +321,7 @@ export const STATIC_SCENARIOS = [
       },
       {
         id: "option_c",
-        text: "Quietly fund the H.L. Hunley submarine project for stealth torpedo operations.",
+        text: "Fund precursor submarine research for hypothetical early torpedo operations.",
         proposer: "wolf",
         costDescription: "Consumes 25 Treasury, high strategic risk and divergence.",
         successRate: 0.4,
@@ -329,12 +329,12 @@ export const STATIC_SCENARIOS = [
           metrics: { treasury: -25, militaryStrength: +10, publicMorale: +25, divergenceIndex: +0.15 },
           shards: { wolf: +30, hotspur: -5 }
         },
-        successConsequence: "Historical stealth raid! The submarine H.L. Hunley successfully sinks the USS Housatonic with a spar torpedo in Charleston Harbor, inaugurating the age of submarine warfare!",
+        successConsequence: "Hypothetical accelerated development: an experimental submarine sinks a blockading warship with a torpedo. This imagined early success is not the H.L. Hunley's historical attack on USS Housatonic in February 1864.",
         failureEffects: {
           metrics: { treasury: -25, militaryStrength: -15, publicMorale: -15, divergenceIndex: +0.05 },
           shards: { wolf: +10, hotspur: -10 }
         },
-        failureConsequence: "Tragedy in the harbor. The experimental submarine Hunley sank during a training run, claiming the lives of its crew, including its inventor Horace Hunley."
+        failureConsequence: "Hypothetical research setback: an experimental submarine sinks during trials, killing its crew and consuming scarce funds. This outcome does not reenact the later Hunley's 1863 training losses."
       },
       {
         id: "option_d",
@@ -1200,7 +1200,7 @@ export const STATIC_SCENARIOS = [
         endsCampaign: true,
         text: "Accept British and French recognition with the mediated armistice. Take independence now.",
         proposer: "wolf",
-        costDescription: "Ends non-AI campaign play with recognized Confederate independence.",
+        costDescription: "Concludes the campaign with recognized Confederate independence.",
         effects: {
           metrics: { treasury: +24, publicMorale: +35, divergenceIndex: +0.30 },
           shards: { wolf: +35, fox: +18, hotspur: -8 }
@@ -1964,7 +1964,8 @@ export const STATIC_SCENARIOS = [
     roleLabel: "Valley District Commander",
     image: thirdWinchesterCard,
     title: "Third Winchester — The Valley Campaign",
-  description: "Autumn light washes the Shenandoah in gold: apple orchards, harvested fields, white farm roads, and the long blue wall of the Valley mountains. Sheridan's massive Union army of 40,000 has cornered your force of 12,000 near Winchester. Your lines are stretched thin across Opequon Creek, and the lower Valley's mills, barns, and wagon roads lie exposed behind you. The Shenandoah has been the breadbasket of the Confederacy; if it is broken here, Richmond will feel the loss in bread as surely as in blood.",
+  description: "Sheridan's army has crossed Opequon Creek and pushed through the crowded Berryville approach. West of the creek, your reunited divisions face a much larger force across the Middle Field and along Red Bud Run, east and northeast of Winchester. A counterattack may exploit gaps between the Union corps, but fresh infantry and cavalry threaten your northern flank. Behind you lie Winchester, the Valley Pike, and the farms and mills that help feed Confederate armies. Hold too long, and a hard-fought defense may become a trapped army.",
+    sourceNotes: "National Park Service, Third Battle of Winchester; Shenandoah Valley Battlefields Foundation, Brandon H. Beck, The Third Battle of Winchester. The playable field is a compressed representative sector, not a survey or a literal order of battle.",
     letterTarget: "General Lee",
     primerTags: ["shenandoah_valley_campaign", "election_of_1864"],
     choices: [
@@ -1999,11 +2000,11 @@ export const STATIC_SCENARIOS = [
           metrics: { treasury: -15, publicMorale: +10, foodSupply: -8 },
           shards: { wolf: +25, hotspur: -5 }
         },
-        consequence: "The rumors caused panic in Washington, delaying Sheridan's advance for 3 crucial days. But rumor cannot haul back grain or livestock already flowing out of the lower Valley."
+        consequence: "In this alternate political choice, favorable reports bolster supporters at home, but they do not stop Sheridan's troops. Your field commanders must still face his advance, and publicity cannot recover the grain or livestock lost with the lower Valley."
       },
       {
         id: "option_d",
-        text: "Execute a rapid tactical flank march through the Shenandoah caverns.",
+        text: "Use local farm roads to withdraw south toward the Valley Pike under a cavalry screen.",
         proposer: "sovereign",
         minDivergence: 0.12,
         costDescription: "High divergence, escape the trap cleanly. Unlocked on Drifting timelines.",
@@ -2011,7 +2012,7 @@ export const STATIC_SCENARIOS = [
           metrics: { militaryStrength: -5, munitions: -5, foodSupply: -6, divergenceIndex: +0.2 },
           shards: { fox: +15, wolf: +10 }
         },
-        consequence: "Brilliant maneuver. The caverns allowed your force to slip away, evading Sheridan's cavalry trap. The escape preserves the army, though not the full stores of the lower Valley it leaves behind."
+        consequence: "The screened columns slip south along farm roads and rejoin the Valley Pike before Sheridan's cavalry can close the route. This alternate withdrawal preserves the army, though not the full stores of the lower Valley it leaves behind."
       }
     ]
   },
@@ -2032,16 +2033,16 @@ export const STATIC_SCENARIOS = [
       lincolnScenarioId: "election_1864_lincoln",
       mcclellanScenarioId: "election_1864_mcclellan",
       // Hard preconditions for the McClellan branch. The structural
-      // argument: Atlanta delayed past September and Cedar Creek ending as
-      // a Confederate victory are the two events that together break the
+      // argument: Atlanta delayed past September and Cedar Creek yielding
+      // a field victory or an orderly early withdrawal are the events that break the
       // Northern coalition. Without both, even a high pressure score
       // returns to the Lincoln branch.
       mcclellanRequiredAll: [
         { scenarioId: "atlanta_election_pressure", choiceId: "option_b", label: "Atlanta delayed (Keep Johnston)" }
       ],
       mcclellanRequiredAnyOf: [
-        { scenarioId: "cedar_creek", choiceId: "option_a", label: "Cedar Creek — decisive Confederate victory" },
-        { scenarioId: "cedar_creek", choiceId: "option_c", label: "Cedar Creek — narrow Confederate withdrawal with prisoners and supply" }
+        { scenarioId: "cedar_creek", choiceId: "option_a", fieldResultRequirement: "field-victory", label: "Cedar Creek — Confederate field victory" },
+        { scenarioId: "cedar_creek", choiceId: "option_c", fieldResultRequirement: "ordered-supply-withdrawal", label: "Cedar Creek — organized withdrawal with prisoners and supply" }
       ]
     },
     choices: [
@@ -2218,12 +2219,12 @@ export const STATIC_SCENARIOS = [
         endsCampaign: true,
         text: "Propose reunion through a Concurrent Majority amendment that McClellan will submit to Congress and the states.",
         proposer: "sovereign",
-        costDescription: "Ends non-AI campaign play in conditional reunion; ratification remains uncertain.",
+        costDescription: "Concludes the campaign in conditional reunion; ratification remains uncertain.",
         effects: {
           metrics: { treasury: -8, publicMorale: +20, divergenceIndex: +0.16 },
           shards: { wolf: +22, fox: +14, hotspur: -8 }
         },
-        consequence: "CAMPAIGN CONCLUDED — The Confederate government accepts reunion under a McClellan presidency in exchange for his promise to submit a Concurrent Majority amendment to Congress and the states. McClellan can promise advocacy and submission, not ratification. The armies stand down while the constitutional struggle moves beyond the non-AI campaign."
+        consequence: "CAMPAIGN CONCLUDED — The Confederate government accepts reunion under a McClellan presidency in exchange for his promise to submit a Concurrent Majority amendment to Congress and the states. McClellan can promise advocacy and submission, not ratification. The armies stand down while the constitutional struggle moves beyond this campaign."
       }
     ]
   },
@@ -2298,7 +2299,7 @@ export const STATIC_SCENARIOS = [
     roleLabel: "Army Commander",
     image: "/images/cw_pictures/battle of petersburg.jpeg",
     title: "The Siege of Petersburg — The Crater",
-    description: "Your army is locked in a massive 30-mile network of cold, muddy trenches around Petersburg. For months the siege has ground on, turning the once-thriving rail hub into a charnel house of disease and despair. The Union has detonated an enormous gunpowder mine under your lines, creating a massive crater in your sector. Union forces are pouring into the breach like a flood. This is the moment when the entire defensive line could collapse — or when a desperate counterattack could buy the Confederacy a few more months of life.",
+    description: "For six weeks the armies have extended a growing network of trenches around Petersburg, the rail hub protecting Richmond's southern approaches. In the humid predawn darkness, the Union has detonated an enormous gunpowder mine beneath Elliott's Salient, tearing a crater and a wide breach through your sector. Burnside's divisions are moving into the broken works. This is the moment when the defensive line could collapse — or when a disciplined counterattack through the covered approaches could buy the Confederacy several more months of life.",
     letterTarget: "your wife Mary",
     sourceNotes: "OR ser. 1 vol. 40 pt. 1 pp. 524-792 (Crater reports of Mahone, Beauregard, and Burnside); Freeman, Lee's Lieutenants vol. III ch. 22; Battles and Leaders vol. IV pp. 545-560; Mahone's manuscript account in the Mahone Papers, Duke University.",
     period_voice: "Mahone after closing the Crater, July 30 1864: \"The men went into the work as if they meant to end it then and there.\" (Battles and Leaders vol. IV p. 558)",
@@ -2528,6 +2529,9 @@ export const STATIC_SCENARIOS = [
 {
     id: "appomattox_decision",
   turn: 28,
+    // Explicit branches can reach this settlement before the numeric final
+    // turn. Every choice here settles the campaign without repeating surrender.
+    endsCampaign: true,
     date: "April 9, 1865",
     actor: "General Robert E. Lee",
     roleLabel: "Army Commander",
@@ -2560,7 +2564,7 @@ export const STATIC_SCENARIOS = [
           metrics: { militaryStrength: -5, publicMorale: +25, treasury: +20 },
           shards: { fox: +30, hotspur: -30, wolf: +20 }
         },
-        consequence: "Lee signed the surrender at McLean House. Paroled soldiers returned home to rebuild, closing the war with solemn dignity. A model of reconciliation that will echo through the ages."
+        consequence: "Lee accepts Grant’s terms for the Army of Northern Virginia at the McLean House. Paroles allow men to return home under the agreed conditions. Other Confederate forces have yet to surrender, and the political work of Reconstruction remains ahead."
       },
       {
         id: "option_c",
@@ -2982,7 +2986,7 @@ export const HISTORIC_ADVISORS = {
   naval_technology: {
     hotspur: "Steel and fire! Armored ironclads are the future of naval warfare. Build the CSS Virginia and smash their wooden fleet at Hampton Roads!",
     fox: "Our rivers are our lifelines. Fortify the Mississippi with river ironclads and defensive mine barriers to deny them inland passage.",
-    wolf: "The blockade is too vast to fight directly. Fund Singer's Secret Service corps and the Hunley's stealth submarine. One silent blow in the dark will shatter their resolve."
+    wolf: "Fund early submarine research to explore another way of attacking the blockade. An operational boat this soon would be a hypothetical acceleration, not the later Hunley already ready for service."
   },
   shiloh_army_of_tennessee: {
     hotspur: "Grant is exposed at Pittsburg Landing. Drive Johnston forward, finish the collapse, and turn surprise into the decisive Western victory the Confederacy has been waiting for.",
@@ -2997,7 +3001,7 @@ export const HISTORIC_ADVISORS = {
   fort_sumter: {
     hotspur: "The secessionist batteries have dared block our supply! Return their fire and maintain the honor of the flag, whatever the cost in masonry!",
     fox: "Our men are starving, and the fort cannot withstand a prolonged siege. Negotiate a disciplined evacuation so we can fight again under better skies.",
-    wolf: "The border states are watching. Delay action to show the world we are not the aggressors. Let the South fire the first shots and carry the blame in Europe."
+    wolf: "The bombardment has already begun the war. Prolong negotiations to buy the relief expedition time, while making clear that our garrison is holding under fire."
   },
   radical_republican_crisis: {
     hotspur: "Restraint has made us look weak. Call Congress, raise the men, fund the army, and answer rebellion with overwhelming national force.",
@@ -3012,7 +3016,7 @@ export const HISTORIC_ADVISORS = {
   manassas_battlefield: {
     hotspur: "Jackson holds Henry Hill like a stone wall! Charge their batteries on the flank and sweep the blue columns back across Bull Run in panic!",
     fox: "Hold our ground. Draw their forces onto our defensive lines and preserve our infantry reserves. Logistics wins this day, not wild charges.",
-    wolf: "The retreat has begun! Send secret cavalry scouts to clear the roads, and prepare a diplomatic dispatch highlighting our victory to London."
+    wolf: "Keep a withdrawal route open before the field is lost. Preserving the army may offer more political leverage than a last stand on Henry Hill."
   },
   seven_days: {
     hotspur: "Drive McClellan back to the James River! Aggressive frontal pressure will break their morale and free Richmond from the siege!",
@@ -3122,7 +3126,7 @@ export const HISTORIC_ADVISORS = {
   third_winchester: {
     hotspur: "Charge through the Berryville Canyon approach toward Sheridan's center! We must show them the spirit of the Valley is not yet broken!",
     fox: "Fall back to the stone walls south of Winchester. Form tight defensive rings and save the core of the army.",
-    wolf: "Spread rumors of Sheridan's defeat through copperhead networks to delay their advance and buy crucial time."
+    wolf: "Spread favorable reports through Northern peace networks to sustain political hope. But the army must buy its own time; a rumor will not halt Sheridan's columns."
   },
   cedar_creek: {
     hotspur: "The dawn surprise is our last real chance to take Belle Grove, the wagons, and the grain back in one blow. Press before Sheridan turns panic into counterattack.",
@@ -3172,7 +3176,7 @@ export const HISTORIC_ADVISORS = {
 };
 
 for (const scenario of STATIC_SCENARIOS) {
-  scenario.historicalImage = HISTORIC_MAPS[scenario.id] || '/images/cw_pictures/Unknown.jpg';
+  scenario.historicalImage = HISTORIC_MAPS[scenario.id] || '/images/cw_pictures/unknown.svg';
   if (!scenario.advisors && HISTORIC_ADVISORS[scenario.id]) {
     scenario.advisors = HISTORIC_ADVISORS[scenario.id];
   }

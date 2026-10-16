@@ -35,6 +35,7 @@ if (checkpoint.schema !== 'forge_game_license_checkpoint_v2' ||
   throw new Error('Invalid licensing checkpoint');
 }
 const copies = [
+  ['NATIVE_THIRD_PARTY_NOTICES.txt', 'NATIVE_THIRD_PARTY_NOTICES.txt'],
   ['LICENSE', 'LICENSE'],
   ['LICENSE-LEGACY-MIT.txt', 'LICENSE-LEGACY-MIT.txt'],
   ['LICENSING.md', 'LICENSING.txt'],

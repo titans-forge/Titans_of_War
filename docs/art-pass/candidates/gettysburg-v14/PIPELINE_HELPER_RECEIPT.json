@@ -1,0 +1,591 @@
+{
+  "artPass": "gettysburg-v14",
+  "recordedAtUTC": "2026-10-04T00:48:49.894551+00:00",
+  "stage": "Native guides/helper contracts and final real-source read-only --check complete. Two exact byte-copy atlases, four action clips/eight native cells verified.",
+  "scope": "New Confederate A SOUTH native guide/strict author helpers only. Existing helper bytes unchanged.",
+  "helpers": {
+    "scripts/author-gettysburg-v14-clips.py": "9961f99b33ad6f12d93f99d02d1e37a1b710769405f3628c23cd3c28a63ce50c",
+    "scripts/render-gettysburg-confederate-south-guides.py": "8853f8fba0687a6519ce2a7b2abb68f268cfbdaca372b100283f71db993cb57f"
+  },
+  "unchangedV5AuthorSha256": "7a9f5300a58f85f5d5cf9b25018a4806d3da746be21b70734efc5719e3808e0d",
+  "unchangedV7BoardFacingSha256": "62f6492e74a9cc5c5da9f179885c34b3ca7a7efdb73b10b9f3a63894d045e0bd",
+  "priorHelperPreservation": {
+    "checkedCount": 24,
+    "allUnchanged": true,
+    "sha256": {
+      "scripts/author-gettysburg-action-clips.py": "e3f232e6c377086404d15990da7ffd2480260e67ef81cbe515f4ce862884394b",
+      "scripts/author-gettysburg-family-atlases.py": "d3264c9726145dfec77dd7bcc0c1a02f75be8e3ad5e23f427ec92668a5d77780",
+      "scripts/author-gettysburg-gait-clip.py": "ee09827b45fd468a072290e37886148490a863754df1a2f6f8f30f0569094588",
+      "scripts/author-gettysburg-v10-clips.py": "d9873a2602ae48fd1df644b4393fe8cf93ef076b817d5eff8bc33b7b29af0dd9",
+      "scripts/author-gettysburg-v11-clips.py": "996df45a56b83746609204496fd422c073ceeb992204743071dae1953e925de7",
+      "scripts/author-gettysburg-v13-clips.py": "7a5c5322690864d39dfd95b147d03bf2833455db3fcb1ac8ab538fa870f9f220",
+      "scripts/author-gettysburg-v5-clips.py": "7a9f5300a58f85f5d5cf9b25018a4806d3da746be21b70734efc5719e3808e0d",
+      "scripts/author-gettysburg-v6-clips.py": "daa5561c6b5013dd87558d90b8a0b8e17d2167949495b11c9f25878e406d5240",
+      "scripts/author-gettysburg-v7-clips.py": "bafc16714577b1f0f17e0397d3ad95103100dcb205d4934f42ce913f6b30d894",
+      "scripts/author-gettysburg-v8-clips.py": "8cf1375a358446f7327b2fc769b354ae720504a74c0469101eda553fb32d3317",
+      "scripts/author-gettysburg-v9-clips.py": "9276996199744a4931fa17ab4bc59cb468ba4d602cf83756d0029eb269464b9a",
+      "scripts/render-civil-war-infantry-v2.py": "14ed68fd8ca42dd66641db73dac437d9219a9a715bd18c14e06be2e6558b1877",
+      "scripts/render-gettysburg-action-guide.py": "7d0b3e93b958bbf9f03184b6f8e54987c578e540b3052d2efa73bada68d5257a",
+      "scripts/render-gettysburg-board-facing-guides.py": "62f6492e74a9cc5c5da9f179885c34b3ca7a7efdb73b10b9f3a63894d045e0bd",
+      "scripts/render-gettysburg-confederate-diagonal-guides.py": "f44eb326fbcdecec043685048111ea6e0ff5ff801c19a2dedca6b98648e5735c",
+      "scripts/render-gettysburg-confederate-east-west-guides.py": "d83d025c6de6c3713ec1ff5c655436dfbac83b2d7fe67738d034dcff3a8235af",
+      "scripts/render-gettysburg-diagonal-action-guide.py": "e7fd86507a9ddbfb09d3ebf65408cbcf03b5b431ceb19f29902fbc7c2a3727ba",
+      "scripts/render-gettysburg-diagonal-guide.py": "89748380613a939dc2cbc3f58e6f433b9baef867e4f23d2acc25ea1378079955",
+      "scripts/render-gettysburg-diagonal-leg-diagnostics.py": "fac14d033431f9674001962982526fc69e925c789f551b5aac369a2715753e2d",
+      "scripts/render-gettysburg-flanking-guides.py": "47b1e7ccb09983fcb3cdeef7bd4eb1ff2379248fe8d8d4fdd565f656c0e850f4",
+      "scripts/render-gettysburg-gait-guide.py": "afe5d54cb9a00a7da06839e9455f74f02e09f306f5ed0e6a118db25170182708",
+      "scripts/render-gettysburg-union-b-east-guides.py": "f92ac6e7353d28b894078349bf912bb08c759afefae56087afaa9c211b3483d6",
+      "scripts/render-gettysburg-v13-west-leg-diagnostic.py": "e59cebc77502a8f288fc3a89bcba45ab0a21ec0d773f88cda2ff9558ae23cf5a",
+      "scripts/render-gettysburg-west-guides.py": "5f5ed2afada1f220c3d14250bff94bac3815f56314f28366dd4366a9ec278165"
+    }
+  },
+  "nativeGuideRender": {
+    "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python scripts/render-gettysburg-confederate-south-guides.py",
+    "log": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/work/v14-native-s-guides-render.log",
+    "logSha256": "4aa348911d3e27de0d7755bbdb8bc7a2cd2d81dceb7239b8953d83f6c108f5b0",
+    "exitCode": 0,
+    "renderedBy": "Blender 5.2.1 LTS",
+    "jobs": 2,
+    "execution": "Sequential; scene reset between jobs",
+    "engine": "Cycles",
+    "device": "CPU",
+    "threads": 8,
+    "samples": 16,
+    "orthographicScale": 6,
+    "cameraElevationDegrees": 35,
+    "supersample": 1
+  },
+  "guides": [
+    {
+      "kind": "march",
+      "image": "docs/art-pass/candidates/gettysburg-v14/confederate-a-s-march-guide.png",
+      "imageSha256": "d8041aecf2ba513afb99a40894351eaf190284cc9ac3a08e693f600e816dfb5b",
+      "receipt": "docs/art-pass/candidates/gettysburg-v14/confederate-a-s-march-guide.json",
+      "receiptSha256": "061a93c0caf9c9e573f4be35788dae9922856af2a44c521396f0696453cbe34a",
+      "nativeSize": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "cell": [
+        512,
+        512
+      ],
+      "side": "confederate",
+      "directionIndex": 2,
+      "alpha64BoundsExclusive": [
+        [
+          125,
+          175,
+          245,
+          484
+        ],
+        [
+          125,
+          168,
+          245,
+          458
+        ],
+        [
+          125,
+          175,
+          245,
+          484
+        ],
+        [
+          125,
+          168,
+          245,
+          458
+        ]
+      ],
+      "paddingLTRB": [
+        [
+          125,
+          175,
+          267,
+          28
+        ],
+        [
+          125,
+          168,
+          267,
+          54
+        ],
+        [
+          125,
+          175,
+          267,
+          28
+        ],
+        [
+          125,
+          168,
+          267,
+          54
+        ]
+      ],
+      "minimumPaddingPixels": 28,
+      "independentRasterBoundsCheck": "Separate read-only Pillow RGBA pixel scan matched all four Blender receipt alpha64 bounds.",
+      "groundRootPixels": [
+        192,
+        440
+      ],
+      "rootTolerancePixels": 0.01,
+      "nativeRasterPostprocessing": false,
+      "modelAssistedGuideImageInspection": true,
+      "acceptance": "Structural reference only; final kit/anatomy/history not certified."
+    },
+    {
+      "kind": "actions",
+      "image": "docs/art-pass/candidates/gettysburg-v14/confederate-a-s-actions-guide.png",
+      "imageSha256": "dfb6ae116af02c73b6d91e236bb802a15b72540070afc18f6ff8fbcce5a6730b",
+      "receipt": "docs/art-pass/candidates/gettysburg-v14/confederate-a-s-actions-guide.json",
+      "receiptSha256": "64deefaa0193a9d68dffb4b3e5350558652412eeee43bf2e763d0622fad644aa",
+      "nativeSize": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "cell": [
+        512,
+        512
+      ],
+      "side": "confederate",
+      "directionIndex": 2,
+      "alpha64BoundsExclusive": [
+        [
+          125,
+          167,
+          245,
+          458
+        ],
+        [
+          119,
+          167,
+          245,
+          458
+        ],
+        [
+          122,
+          167,
+          245,
+          466
+        ],
+        [
+          122,
+          167,
+          245,
+          466
+        ]
+      ],
+      "paddingLTRB": [
+        [
+          125,
+          167,
+          267,
+          54
+        ],
+        [
+          119,
+          167,
+          267,
+          54
+        ],
+        [
+          122,
+          167,
+          267,
+          46
+        ],
+        [
+          122,
+          167,
+          267,
+          46
+        ]
+      ],
+      "minimumPaddingPixels": 46,
+      "independentRasterBoundsCheck": "Separate read-only Pillow RGBA pixel scan matched all four Blender receipt alpha64 bounds.",
+      "groundRootPixels": [
+        192,
+        440
+      ],
+      "rootTolerancePixels": 0.01,
+      "nativeRasterPostprocessing": false,
+      "modelAssistedGuideImageInspection": true,
+      "acceptance": "Structural reference only; final kit/anatomy/history not certified."
+    }
+  ],
+  "selfTests": [
+    {
+      "helper": "scripts/author-gettysburg-v14-clips.py",
+      "exitCode": 0,
+      "result": {
+        "status": "V14_NATIVE_AUTHOR_CONTRACT_PASSED",
+        "rejectionCases": 17,
+        "checkedV5Sha256": "7a9f5300a58f85f5d5cf9b25018a4806d3da746be21b70734efc5719e3808e0d",
+        "realV14ManifestPresent": true,
+        "writes": false
+      },
+      "log": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/work/author-gettysburg-v14-clips-self-test.log",
+      "logSha256": "20fdf38eb9adae128fa5cd68dbd680ef7894a4a8496d0147887fb998e53adac8"
+    },
+    {
+      "helper": "scripts/render-gettysburg-confederate-south-guides.py",
+      "exitCode": 0,
+      "result": {
+        "status": "CONFEDERATE_S_GUIDE_CONTRACT_PASSED",
+        "checkedOriginalCount": 5,
+        "rejectionCases": 6,
+        "originalV7MeasurementAndSPredicate": "unchanged",
+        "direction": 2,
+        "projectionContract": {
+          "directionIndex": 2,
+          "yawRadians": -3.141592653589793,
+          "expectedAxisDeltaPixels": {
+            "x": 2.884288141351846e-14,
+            "y": 135.08872228939833
+          },
+          "idealAxisTolerancePixels": 0.009138020833333333,
+          "toleranceFormula": "4*2^-23*max(1,cameraDistance,weaponLength)*pixelsPerWorldUnit+0.001",
+          "derivation": "Body-local stationary fire axis(0,length,0), native Rz(-pi), fixed 35deg camera image-up; float32 transform bound and endpoint rounding; independent of measured pixels"
+        }
+      },
+      "log": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/work/render-gettysburg-confederate-south-guides-self-test.log",
+      "logSha256": "dd8585cc58ec3afeb002dde89a23554cc8f6a7735bb2e3f28d58ab45101dc1a1"
+    }
+  ],
+  "authorBoundary": {
+    "finalManifestPresent": true,
+    "finalSourcesMeasuredOrAuthoredByPipelineWorker": false,
+    "nativeSourceCheckPassed": true,
+    "reason": "Root supplied final selected native PNGs/manifest/public exports and independent fresh measurements; pipeline worker ran real-manifest rejection tests and read-only unchanged-core verification only. No placeholder or fabricated source/measurement output.",
+    "unchangedFinalSourcePaddingFloor": {
+      "alphaThreshold": 64,
+      "pixels": 16
+    },
+    "manifest": "docs/art-pass/manifests/gettysburg-v14-source-annotations.json",
+    "manifestSha256": "3ed5a95d56d8e552df944636a143232e782f0f6feebbb0643da3de3d600561f0"
+  },
+  "productionApproved": false,
+  "familyComplete": false,
+  "anatomicalCertification": false,
+  "historicalCertification": false,
+  "limits": [
+    "Native geometry and pixel-bound checks establish structural composition only.",
+    "Reduced Confederate gray/brown kit does not certify complete Confederate A kit or face.",
+    "Original stylized gait and cheek/stock registration remain unvalidated as human anatomy or historical drill.",
+    "Exact fresh source reviews and native-copy metadata are verified for local opt-in only; helper checks do not establish human/anatomical/historical certification or runtime/browser/residency/performance results."
+  ],
+  "finalAuthorChecks": [
+    {
+      "command": "python3 scripts/author-gettysburg-v14-clips.py --self-test",
+      "exitCode": 0,
+      "results": [
+        {
+          "status": "V14_NATIVE_AUTHOR_CONTRACT_PASSED",
+          "rejectionCases": 17,
+          "checkedV5Sha256": "7a9f5300a58f85f5d5cf9b25018a4806d3da746be21b70734efc5719e3808e0d",
+          "realV14ManifestPresent": true,
+          "writes": false
+        }
+      ],
+      "writes": false,
+      "log": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/work/author-gettysburg-v14-clips-self-test.log",
+      "logSha256": "20fdf38eb9adae128fa5cd68dbd680ef7894a4a8496d0147887fb998e53adac8"
+    },
+    {
+      "command": "python3 scripts/author-gettysburg-v14-clips.py --check",
+      "exitCode": 0,
+      "results": [
+        {
+          "verified": true,
+          "sourceHash": "a41a75bfa5874661e9c8f333f5bc9d2aecce9cf7cedc8e7add940dcc3678f26c",
+          "name": "march-s",
+          "clips": [
+            "march"
+          ],
+          "productionApproved": false
+        },
+        {
+          "verified": true,
+          "sourceHash": "cbc0c38d83a73b934ea3e69cbf4ed7a0b4da23a3c5d27d5af002ac2610faf2b1",
+          "name": "actions-s",
+          "clips": [
+            "ready",
+            "fire",
+            "reload"
+          ],
+          "productionApproved": false
+        }
+      ],
+      "writes": false,
+      "log": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/work/v14-native-author-final-check.log",
+      "logSha256": "483c9371cdf687004d1dff530b9becb9bbab795c1efc968021c3012461950a79"
+    }
+  ],
+  "finalNativeSources": [
+    {
+      "name": "march-s",
+      "source": "docs/art-pass/candidates/gettysburg-v14/confederate-a-s-march-candidate.png",
+      "sourceSha256": "a41a75bfa5874661e9c8f333f5bc9d2aecce9cf7cedc8e7add940dcc3678f26c",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "sourceReview": "docs/art-pass/reviews/gettysburg-v14-independent-s-march-source-review.json",
+      "sourceReviewSha256": "9da16dde0f75845f4a4fab451eb0cd0b8a24a47ca7d72ba853f4b2360d08a6c0",
+      "publicPNG": "public/images/units/gettysburg-v14/confederate-a-march-s.png",
+      "publicSha256": "a41a75bfa5874661e9c8f333f5bc9d2aecce9cf7cedc8e7add940dcc3678f26c",
+      "publicBytesEqualSource": true,
+      "atlas": "public/images/units/gettysburg-v14/confederate-a-march-s.json",
+      "atlasSha256": "ffb41bb5da9375e1b16999ac19e15252fa4e18b1d14dc7b9623bfd7f9cb8dd04",
+      "measurementReceipt": "docs/art-pass/reviews/gettysburg-v14-confederate-a-march-s-measurement.json",
+      "measurementReceiptSha256": "7650add43ffc33e27081c6f58f5ba1baaf25dfc7660e51981b3cbac7f61890d0",
+      "clipActions": [
+        "march"
+      ],
+      "clipFrameCounts": [
+        4
+      ],
+      "nativeFrameCount": 4,
+      "roots": [
+        [
+          315,
+          564
+        ],
+        [
+          316,
+          564
+        ],
+        [
+          314,
+          544
+        ],
+        [
+          315,
+          544
+        ]
+      ],
+      "capTop": [
+        230,
+        230,
+        220,
+        220
+      ],
+      "bodySpans": [
+        334,
+        334,
+        324,
+        324
+      ],
+      "referenceHeight": 329,
+      "sourceWideBodyHeightVerified": true,
+      "muzzle": null,
+      "alpha64BoundsExclusive": [
+        [
+          242,
+          159,
+          373,
+          564
+        ],
+        [
+          242,
+          159,
+          374,
+          564
+        ],
+        [
+          242,
+          141,
+          374,
+          544
+        ],
+        [
+          242,
+          142,
+          374,
+          544
+        ]
+      ],
+      "alpha64PaddingLTRB": [
+        [
+          242,
+          159,
+          254,
+          63
+        ],
+        [
+          242,
+          159,
+          253,
+          63
+        ],
+        [
+          242,
+          141,
+          253,
+          83
+        ],
+        [
+          242,
+          142,
+          253,
+          83
+        ]
+      ],
+      "minimumAlpha64PaddingPixels": 63,
+      "localOptInIndependentModelAssistedReviewBound": true,
+      "productionApproved": false
+    },
+    {
+      "name": "actions-s",
+      "source": "docs/art-pass/candidates/gettysburg-v14/confederate-a-s-actions-candidate.png",
+      "sourceSha256": "cbc0c38d83a73b934ea3e69cbf4ed7a0b4da23a3c5d27d5af002ac2610faf2b1",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "sourceReview": "docs/art-pass/reviews/gettysburg-v14-independent-s-actions-source-review.json",
+      "sourceReviewSha256": "f0cf226516672235c12c25fdf7629521bb4cdb851974b35b601d01ad3bcc0497",
+      "publicPNG": "public/images/units/gettysburg-v14/confederate-a-actions-s.png",
+      "publicSha256": "cbc0c38d83a73b934ea3e69cbf4ed7a0b4da23a3c5d27d5af002ac2610faf2b1",
+      "publicBytesEqualSource": true,
+      "atlas": "public/images/units/gettysburg-v14/confederate-a-actions-s.json",
+      "atlasSha256": "dea42c89d6b1b2b8e54c3872122c2e030fe10ddf9c9060d5f155fc25f1152bd7",
+      "measurementReceipt": "docs/art-pass/reviews/gettysburg-v14-confederate-a-actions-s-measurement.json",
+      "measurementReceiptSha256": "4421d788b787f2674b0714ea3807cc8e1a86f7c34389ab7b73923c95279d3ced",
+      "clipActions": [
+        "ready",
+        "fire",
+        "reload"
+      ],
+      "clipFrameCounts": [
+        1,
+        1,
+        2
+      ],
+      "nativeFrameCount": 4,
+      "roots": [
+        [
+          337,
+          582
+        ],
+        [
+          327,
+          582
+        ],
+        [
+          337,
+          566
+        ],
+        [
+          324,
+          568
+        ]
+      ],
+      "capTop": [
+        71,
+        90,
+        65,
+        65
+      ],
+      "bodySpans": [
+        511,
+        492,
+        501,
+        503
+      ],
+      "referenceHeight": 502,
+      "sourceWideBodyHeightVerified": true,
+      "muzzle": [
+        242,
+        343
+      ],
+      "alpha64BoundsExclusive": [
+        [
+          228,
+          31,
+          429,
+          583
+        ],
+        [
+          195,
+          90,
+          424,
+          582
+        ],
+        [
+          208,
+          65,
+          430,
+          568
+        ],
+        [
+          198,
+          24,
+          418,
+          568
+        ]
+      ],
+      "alpha64PaddingLTRB": [
+        [
+          228,
+          31,
+          198,
+          44
+        ],
+        [
+          195,
+          90,
+          203,
+          45
+        ],
+        [
+          208,
+          65,
+          197,
+          59
+        ],
+        [
+          198,
+          24,
+          209,
+          59
+        ]
+      ],
+      "minimumAlpha64PaddingPixels": 24,
+      "localOptInIndependentModelAssistedReviewBound": true,
+      "productionApproved": false
+    }
+  ],
+  "actualV14OutputCounts": {
+    "sourcePNGs": 2,
+    "publicPNGs": 2,
+    "publicAtlasJSONs": 2,
+    "measurementJSONs": 2,
+    "clips": 4,
+    "nativeCells": 8,
+    "sourceWideReferenceHeights": [
+      329,
+      502
+    ]
+  },
+  "finalInputPreservation": {
+    "beforeAfterSha256CheckedCount": 37,
+    "allUnchanged": true,
+    "includes": "Both helper scripts,24priorhelpers,finalmanifest,bothselectedsources,bothfreshindependentreviews,bothpublicPNG/atlas pairs,bothmeasurementreceipts",
+    "checkModeWasReadOnly": true
+  },
+  "generationOnlyExternalDiagnostic": {
+    "image": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/attempts/guidescoloredlegs/confederate-a-s-march-colored-leg-native-guide.png",
+    "imageSha256": "d19d1aa42bccac716ca6126d70c6994003ca22583715f1c2e516005e3836b31e",
+    "projectionReceipt": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v14-20261003/attempts/guidescoloredlegs/confederate-a-s-march-colored-leg-native-guide.json",
+    "projectionReceiptSha256": "4e92cd0466bc4eda5af33560d63795ec655b14f67b92029b522d609cb3524a5c",
+    "installedWithCandidate": false,
+    "purpose": "Root-owned generation reference only; native color-coded support-chain geometry, not final kit/anatomy/drill acceptance."
+  }
+}

@@ -1,0 +1,1132 @@
+{
+  "schema": "gettysburg-v26-independent-contact-casualty-source-review-v1",
+  "artPass": "gettysburg-v26",
+  "timeUTC": "2026-10-05T06:26:29.830151+00:00",
+  "reviewer": "Independent Astra Max native source and anatomical registration reviewer",
+  "reviewerModel": "gpt-6-astra",
+  "reasoningEffort": "max",
+  "independentReview": true,
+  "modelAssisted": true,
+  "acceptedForOptIn": true,
+  "acceptedForLocalInstall": false,
+  "sourceOnly": true,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false,
+  "familyApproved": false,
+  "completeFamilyApproved": false,
+  "scope": "Four exact whole native Union A northeast direction 7 and Confederate A southwest direction 3 contact/casualty sources, sixteen cells and their independently selected registrations. Integration, playback and exact installation acceptance remain separate.",
+  "sourceNativeDimensions": [
+    1254,
+    1254
+  ],
+  "sourceMode": "RGBA",
+  "cell": 627,
+  "frameOrder": "Equal native cells in row-major order: upper-left, upper-right, lower-left, lower-right.",
+  "nativePixelsEdited": false,
+  "perPhaseHeightNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "referenceHeights": {
+    "union": 435,
+    "confederate": 415
+  },
+  "referenceMethod": "For each army, manually select cap-crown-only and nearer-support-sole-only ROIs on its actual contact source. At alpha>=64, capTop is the minimum occupied Y and referenceSoleGroundY is the exclusive maximum occupied Y. BodySpan is their difference. The half-up median of four contact spans gives one reference height, shared unchanged only with that army's casualty partner. Crouch, thrust and fall projection changes are not normalized.",
+  "rootMethod": "Choose native integer projected pelvis/torso X from anatomy, independently of the support ROI X. Root Y is the exclusive alpha>=64 bottom of the manually isolated near sole, knee, hand, elbow or torso/hip support patch. Exclude raised boot soles and weapon bounds from casualty ground measurements.",
+  "rootPlacementUncertaintyNativePixels": "Approximately 8-12 pixels in anatomical projection/support interpretation. The recorded ROI extrema are exactly reproducible; their semantic support meaning is a model-assisted visual judgment.",
+  "inspectionMethod": "Viewed all four whole native sheets and all sixteen cells. Compared first contact/casualty cells at unchanged native pixel scale, inspected selected support overlays and recomputed cap/sole/ground alpha extrema. Original, archived and selected candidate whole PNG bytes independently match for all four selected sources.",
+  "referenceFilesInspected": [
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v23/union-a-contact-n-candidate.png",
+      "sha256": "db3cf93fc162470857028cb0164284ba7ea2e9e504a977d7de21f0e6b52a365d"
+    },
+    {
+      "path": "public/images/units/gettysburg-v15/confederate-a-actions-sw.png",
+      "sha256": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d"
+    }
+  ],
+  "wholeSourceIdentityProof": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v26/union-a-contact-ne-candidate.png",
+      "sha256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc",
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-89a2bd6d-9c7a-43fe-963b-fbf4a20ea279.png",
+      "archive": "generation-attempts/union-contact-1-generated.png",
+      "attempt": 1,
+      "side": "union",
+      "role": "contact",
+      "wholeNativeBytesEqual": true
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v26/union-a-casualty-ne-candidate.png",
+      "sha256": "22ef7b1ecbfd71538a638d2721d74ad0de7d2f2393d68702ac4812fc9cccb875",
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-5d88a6e5-02b6-4a5a-a67e-4f55af97ef69.png",
+      "archive": "generation-attempts/union-casualty-5-generated.png",
+      "attempt": 5,
+      "side": "union",
+      "role": "casualty",
+      "wholeNativeBytesEqual": true
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v26/confederate-a-contact-sw-candidate.png",
+      "sha256": "1eb2930b3c90c9db5dedf5f0278c80947173d4b5f568d16282d5c1c5b8caffeb",
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-1d3b9cd4-be49-47c2-94cc-3ecc21539f02.png",
+      "archive": "generation-attempts/confederate-contact-1-generated.png",
+      "attempt": 1,
+      "side": "confederate",
+      "role": "contact",
+      "wholeNativeBytesEqual": true
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v26/confederate-a-casualty-sw-candidate.png",
+      "sha256": "df22288282945e4491707b94f092872837bd261850d2ca243a3873764d1d423c",
+      "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-ad2b93ab-0d9f-4d0b-80ff-7568ebc95613.png",
+      "archive": "generation-attempts/confederate-casualty-3-generated.png",
+      "attempt": 3,
+      "side": "confederate",
+      "role": "casualty",
+      "wholeNativeBytesEqual": true
+    }
+  ],
+  "sources": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v26/union-a-contact-ne-candidate.png",
+      "sha256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc",
+      "side": "union",
+      "identity": "a",
+      "direction": 7,
+      "role": "contact",
+      "action": "melee",
+      "sourceNativeDimensions": [
+        1254,
+        1254
+      ],
+      "sourceMode": "RGBA",
+      "acceptedForOptIn": true,
+      "measurements": {
+        "side": "union",
+        "identity": "a",
+        "direction": 7,
+        "role": "contact",
+        "action": "melee",
+        "source": "docs/art-pass/candidates/gettysburg-v26/union-a-contact-ne-candidate.png",
+        "sha256": "c5cc73f65f9a7076cc3711b7be94315b9dc5985988c452e0864e048399ecbbdc",
+        "cell": 627,
+        "referenceHeight": 435,
+        "roots": [
+          [
+            315,
+            589
+          ],
+          [
+            261,
+            591
+          ],
+          [
+            323,
+            530
+          ],
+          [
+            277,
+            526
+          ]
+        ],
+        "groundROIs": [
+          [
+            215,
+            535,
+            327,
+            600
+          ],
+          [
+            91,
+            531,
+            198,
+            606
+          ],
+          [
+            187,
+            480,
+            286,
+            543
+          ],
+          [
+            120,
+            481,
+            218,
+            540
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X is independent of the support-foot X. Ground Y is the alpha>=64 exclusive bottom of the nearer viewer-left/rear boot, isolated below its trouser cuff.",
+          "Projected pelvis X follows the hips behind the extended torso and forearm. Ground Y comes from the nearer viewer-left/rear supporting boot sole, without weapon pixels.",
+          "Projected pelvis X follows the withdrawn torso/hips. Ground Y comes from the nearer viewer-left boot sole under the rear supporting leg.",
+          "Projected pelvis X follows the hips in the widened low guard. Ground Y comes from the nearer viewer-left/rear boot sole; it is separate from weapon and farther-foot bounds."
+        ],
+        "capROIs": [
+          [
+            311,
+            124,
+            354,
+            160
+          ],
+          [
+            252,
+            149,
+            291,
+            183
+          ],
+          [
+            327,
+            88,
+            372,
+            122
+          ],
+          [
+            285,
+            97,
+            321,
+            128
+          ]
+        ],
+        "capTop": [
+          131,
+          156,
+          96,
+          104
+        ],
+        "bodySpans": [
+          458,
+          435,
+          434,
+          422
+        ],
+        "referenceSoleROIs": [
+          [
+            227,
+            577,
+            320,
+            596
+          ],
+          [
+            99,
+            577,
+            189,
+            600
+          ],
+          [
+            196,
+            517,
+            275,
+            538
+          ],
+          [
+            130,
+            513,
+            204,
+            536
+          ]
+        ],
+        "referenceSoleGroundY": [
+          589,
+          591,
+          530,
+          526
+        ]
+      },
+      "minimumSolidPadding": 36,
+      "alpha1Through4Pixels": 20783,
+      "brightRedPixelsAlpha64": 1,
+      "brightRedDefinition": "R>180 G<90 B<100 A>=64",
+      "cellObservations": [
+        {
+          "cell": 0,
+          "rgbaSHA256": "fd879085ba302cd6cddebcd1291dcfef19247f104d181e2eb05b4667ff3a096d",
+          "solidBounds": [
+            202,
+            131,
+            536,
+            589
+          ],
+          "solidPadding": [
+            202,
+            131,
+            91,
+            38
+          ],
+          "minimumSolidPadding": 38,
+          "nonzeroAlphaBounds": [
+            101,
+            23,
+            627,
+            611
+          ],
+          "groundROIAlpha64Bounds": [
+            229,
+            535,
+            317,
+            589
+          ],
+          "groundY": 589,
+          "capTop": 131,
+          "referenceSoleGroundY": 589,
+          "bodySpan": 458,
+          "phase": "guard",
+          "observation": "Rear three-quarter NE body, navy cap/coat, pale blue trousers, tan roll and dark pack agree with the stated Union kit. The stock stays low and the rifle is held in a raised guard; the rear grip is partly hidden."
+        },
+        {
+          "cell": 1,
+          "rgbaSHA256": "749f9c6d7c193c9fc6a29357f47c0f623c79ea42a842d51cfbb3921fbd5dfdbd",
+          "solidBounds": [
+            100,
+            156,
+            578,
+            591
+          ],
+          "solidPadding": [
+            100,
+            156,
+            49,
+            36
+          ],
+          "minimumSolidPadding": 36,
+          "nonzeroAlphaBounds": [
+            11,
+            9,
+            601,
+            595
+          ],
+          "groundROIAlpha64Bounds": [
+            100,
+            531,
+            187,
+            591
+          ],
+          "groundY": 591,
+          "capTop": 156,
+          "referenceSoleGroundY": 591,
+          "bodySpan": 435,
+          "phase": "short thrust",
+          "observation": "The forward arm extends toward NE while the stock remains below the shoulder and the supporting stance opens. This reads as contact extension rather than a cheek-level firing pose; the stock/grip transition remains partly occluded."
+        },
+        {
+          "cell": 2,
+          "rgbaSHA256": "5a956cde24f97ac58b420c4f35cb896dc0d02bcbace274e7b3bac6a365e3f77e",
+          "solidBounds": [
+            198,
+            96,
+            571,
+            530
+          ],
+          "solidPadding": [
+            198,
+            96,
+            56,
+            97
+          ],
+          "minimumSolidPadding": 56,
+          "nonzeroAlphaBounds": [
+            39,
+            7,
+            627,
+            605
+          ],
+          "groundROIAlpha64Bounds": [
+            198,
+            480,
+            272,
+            530
+          ],
+          "groundY": 530,
+          "capTop": 96,
+          "referenceSoleGroundY": 530,
+          "bodySpan": 434,
+          "phase": "low recovery",
+          "observation": "The forearms and weapon withdraw/lower while the back, cap, toes and kit retain the NE bearing. Physical head and limb scale remains coherent despite the shorter projected span."
+        },
+        {
+          "cell": 3,
+          "rgbaSHA256": "948429b72eb78d02296649b58a1a34a6fe4d050e89ef793465e86c074e89fa40",
+          "solidBounds": [
+            132,
+            104,
+            559,
+            526
+          ],
+          "solidPadding": [
+            132,
+            104,
+            68,
+            101
+          ],
+          "minimumSolidPadding": 68,
+          "nonzeroAlphaBounds": [
+            1,
+            1,
+            573,
+            611
+          ],
+          "groundROIAlpha64Bounds": [
+            132,
+            481,
+            201,
+            526
+          ],
+          "groundY": 526,
+          "capTop": 104,
+          "referenceSoleGroundY": 526,
+          "bodySpan": 422,
+          "phase": "low guard/parry",
+          "observation": "A wider stance and changed hip/arm placement make a separate low guard. Its silhouette is close to the preceding recovery, so four distinct still cells do not by themselves certify strong playback readability."
+        }
+      ]
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v26/union-a-casualty-ne-candidate.png",
+      "sha256": "22ef7b1ecbfd71538a638d2721d74ad0de7d2f2393d68702ac4812fc9cccb875",
+      "side": "union",
+      "identity": "a",
+      "direction": 7,
+      "role": "casualty",
+      "action": "fall",
+      "sourceNativeDimensions": [
+        1254,
+        1254
+      ],
+      "sourceMode": "RGBA",
+      "acceptedForOptIn": true,
+      "measurements": {
+        "side": "union",
+        "identity": "a",
+        "direction": 7,
+        "role": "casualty",
+        "action": "fall",
+        "source": "docs/art-pass/candidates/gettysburg-v26/union-a-casualty-ne-candidate.png",
+        "sha256": "22ef7b1ecbfd71538a638d2721d74ad0de7d2f2393d68702ac4812fc9cccb875",
+        "cell": 627,
+        "referenceHeight": 435,
+        "roots": [
+          [
+            326,
+            581
+          ],
+          [
+            285,
+            565
+          ],
+          [
+            305,
+            436
+          ],
+          [
+            318,
+            398
+          ]
+        ],
+        "groundROIs": [
+          [
+            312,
+            537,
+            421,
+            596
+          ],
+          [
+            263,
+            540,
+            306,
+            578
+          ],
+          [
+            351,
+            406,
+            379,
+            448
+          ],
+          [
+            320,
+            372,
+            347,
+            408
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X follows the initial backward hit/stumble. Ground Y is the nearer viewer-right boot sole, isolated from the loosely held rifle and other foot.",
+          "Projected lower-torso/hip X is independent of the planted foot. Ground Y is the near planted sole segment below the bent leg; the raised rear boot and released rifle stock are excluded.",
+          "Projected lower-torso/hip X follows the forward collapse. Ground Y is the lowered blue-trouser knee support edge. The backward-facing raised boot soles and separate rifle are excluded.",
+          "Projected torso/hip X represents the resting body. Ground Y is the lower navy coat/hip edge touching the implied ground, isolated from the separate rifle and the far-forward arms."
+        ]
+      },
+      "minimumSolidPadding": 19,
+      "alpha1Through4Pixels": 26640,
+      "brightRedPixelsAlpha64": 1,
+      "brightRedDefinition": "R>180 G<90 B<100 A>=64",
+      "cellObservations": [
+        {
+          "cell": 0,
+          "rgbaSHA256": "659d915e123954c3a9c457f5038b2cc74fb3796d8cfd41d1188aa2f272e2b200",
+          "solidBounds": [
+            191,
+            137,
+            539,
+            581
+          ],
+          "solidPadding": [
+            191,
+            137,
+            88,
+            46
+          ],
+          "minimumSolidPadding": 46,
+          "nonzeroAlphaBounds": [
+            73,
+            41,
+            627,
+            603
+          ],
+          "groundROIAlpha64Bounds": [
+            318,
+            537,
+            407,
+            581
+          ],
+          "groundY": 581,
+          "phase": "hit/stumble",
+          "observation": "Backward reaction, loose reaching hand and lowered one-handed musket read as a hit. Head, boots and roll remain coherent in native scale beside the actual contact source."
+        },
+        {
+          "cell": 1,
+          "rgbaSHA256": "d2cd6a187b277d63992b74c4e69d5a1de2b0384e0265de66583719f7738f8ab1",
+          "solidBounds": [
+            113,
+            265,
+            571,
+            600
+          ],
+          "solidPadding": [
+            113,
+            265,
+            56,
+            27
+          ],
+          "minimumSolidPadding": 27,
+          "nonzeroAlphaBounds": [
+            7,
+            21,
+            603,
+            627
+          ],
+          "groundROIAlpha64Bounds": [
+            267,
+            540,
+            306,
+            565
+          ],
+          "groundY": 565,
+          "phase": "knee-down",
+          "observation": "One knee lowers, the other foot plants and a forward palm reaches for support. The complete musket lies released beside the body, away from the shoulder and hands."
+        },
+        {
+          "cell": 2,
+          "rgbaSHA256": "c99facfce14b99e82df70a02e2233815fd74a6c35b6e8330f0e5f4b54e2fb00c",
+          "solidBounds": [
+            128,
+            212,
+            608,
+            502
+          ],
+          "solidPadding": [
+            128,
+            212,
+            19,
+            125
+          ],
+          "minimumSolidPadding": 19,
+          "nonzeroAlphaBounds": [
+            69,
+            13,
+            627,
+            603
+          ],
+          "groundROIAlpha64Bounds": [
+            351,
+            406,
+            374,
+            436
+          ],
+          "groundY": 436,
+          "phase": "collapse",
+          "observation": "The torso lowers onto knees/forearms with the weapon still separate. The chosen support is the lowered trouser-knee edge; backward-facing boot soles are raised and are not used as ground."
+        },
+        {
+          "cell": 3,
+          "rgbaSHA256": "5cdf572d9dd5a41a982ad60b78fc3c85582101e3044baab3ff3320552486af03",
+          "solidBounds": [
+            65,
+            233,
+            550,
+            510
+          ],
+          "solidPadding": [
+            65,
+            233,
+            77,
+            117
+          ],
+          "minimumSolidPadding": 65,
+          "nonzeroAlphaBounds": [
+            1,
+            0,
+            603,
+            603
+          ],
+          "groundROIAlpha64Bounds": [
+            320,
+            372,
+            347,
+            398
+          ],
+          "groundY": 398,
+          "phase": "ground rest",
+          "observation": "The head rests on folded forearms and the complete rifle is separate on the ground. This resolves the rejected predecessor's active prone aiming posture. Small occluded brown waist/kit detail remains visually ambiguous rather than anatomically certified."
+        }
+      ]
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v26/confederate-a-contact-sw-candidate.png",
+      "sha256": "1eb2930b3c90c9db5dedf5f0278c80947173d4b5f568d16282d5c1c5b8caffeb",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 3,
+      "role": "contact",
+      "action": "melee",
+      "sourceNativeDimensions": [
+        1254,
+        1254
+      ],
+      "sourceMode": "RGBA",
+      "acceptedForOptIn": true,
+      "measurements": {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 3,
+        "role": "contact",
+        "action": "melee",
+        "source": "docs/art-pass/candidates/gettysburg-v26/confederate-a-contact-sw-candidate.png",
+        "sha256": "1eb2930b3c90c9db5dedf5f0278c80947173d4b5f568d16282d5c1c5b8caffeb",
+        "cell": 627,
+        "referenceHeight": 415,
+        "roots": [
+          [
+            371,
+            558
+          ],
+          [
+            367,
+            562
+          ],
+          [
+            389,
+            519
+          ],
+          [
+            389,
+            508
+          ]
+        ],
+        "groundROIs": [
+          [
+            420,
+            490,
+            488,
+            570
+          ],
+          [
+            277,
+            505,
+            368,
+            574
+          ],
+          [
+            435,
+            459,
+            504,
+            531
+          ],
+          [
+            454,
+            454,
+            517,
+            520
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X is chosen between the anatomical hips rather than from the rifle-inclusive bounds. Ground Y is the nearer viewer-right planted boot sole, isolated below the trouser cuff.",
+          "Projected pelvis X follows the hips behind the SW extension. Ground Y is the forward viewer-left planted boot sole; the lifted/farther opposite foot is excluded.",
+          "Projected pelvis X follows the hips during withdrawal. Ground Y is the nearer viewer-right boot sole, independent of the low rifle.",
+          "Projected pelvis X follows the torso/hips under the across-body block. Ground Y is the nearer viewer-right boot sole; the other boot and bayonet are excluded."
+        ],
+        "capROIs": [
+          [
+            307,
+            136,
+            350,
+            173
+          ],
+          [
+            325,
+            137,
+            358,
+            177
+          ],
+          [
+            335,
+            90,
+            377,
+            128
+          ],
+          [
+            327,
+            88,
+            369,
+            128
+          ]
+        ],
+        "capTop": [
+          143,
+          147,
+          97,
+          95
+        ],
+        "bodySpans": [
+          415,
+          415,
+          422,
+          413
+        ],
+        "referenceSoleROIs": [
+          [
+            428,
+            546,
+            482,
+            567
+          ],
+          [
+            281,
+            550,
+            360,
+            571
+          ],
+          [
+            445,
+            507,
+            497,
+            528
+          ],
+          [
+            458,
+            496,
+            507,
+            517
+          ]
+        ],
+        "referenceSoleGroundY": [
+          558,
+          562,
+          519,
+          508
+        ]
+      },
+      "minimumSolidPadding": 65,
+      "alpha1Through4Pixels": 24064,
+      "brightRedPixelsAlpha64": 0,
+      "brightRedDefinition": "R>180 G<90 B<100 A>=64",
+      "cellObservations": [
+        {
+          "cell": 0,
+          "rgbaSHA256": "6b350517f2a65321981974a3a48806609323343fd9dbbbc57d6f7605a2f2f61b",
+          "solidBounds": [
+            96,
+            143,
+            478,
+            558
+          ],
+          "solidPadding": [
+            96,
+            143,
+            149,
+            69
+          ],
+          "minimumSolidPadding": 69,
+          "nonzeroAlphaBounds": [
+            59,
+            101,
+            627,
+            596
+          ],
+          "groundROIAlpha64Bounds": [
+            429,
+            490,
+            478,
+            558
+          ],
+          "groundY": 558,
+          "capTop": 143,
+          "referenceSoleGroundY": 558,
+          "bodySpan": 415,
+          "phase": "low guard",
+          "observation": "Front three-quarter SW body, gray cap/coat, beige trousers, tan roll/canteen and dark pouches agree with the actual v15 SW reference. Both hands hold the rifle below the sighting position."
+        },
+        {
+          "cell": 1,
+          "rgbaSHA256": "ce999ac4146799f27cc19c04af609a66487cbfb1e433c9f7a39136e56090f2a8",
+          "solidBounds": [
+            78,
+            147,
+            490,
+            562
+          ],
+          "solidPadding": [
+            78,
+            147,
+            137,
+            65
+          ],
+          "minimumSolidPadding": 65,
+          "nonzeroAlphaBounds": [
+            13,
+            48,
+            601,
+            627
+          ],
+          "groundROIAlpha64Bounds": [
+            283,
+            505,
+            357,
+            562
+          ],
+          "groundY": 562,
+          "capTop": 147,
+          "referenceSoleGroundY": 562,
+          "bodySpan": 415,
+          "phase": "short thrust",
+          "observation": "The forward arm and weight shift extend the bayonet into the SW bearing while the rear hand keeps the stock low. The two-arm action is clearly differentiated from the firing reference."
+        },
+        {
+          "cell": 2,
+          "rgbaSHA256": "a0a11f81849a38691fc63c38f0f30aa6cff1daf9d26bb8026c80f26b9c2a1312",
+          "solidBounds": [
+            113,
+            97,
+            493,
+            519
+          ],
+          "solidPadding": [
+            113,
+            97,
+            134,
+            108
+          ],
+          "minimumSolidPadding": 97,
+          "nonzeroAlphaBounds": [
+            89,
+            1,
+            607,
+            595
+          ],
+          "groundROIAlpha64Bounds": [
+            446,
+            459,
+            493,
+            519
+          ],
+          "groundY": 519,
+          "capTop": 97,
+          "referenceSoleGroundY": 519,
+          "bodySpan": 422,
+          "phase": "recovery",
+          "observation": "The hands draw closer to the torso and the weapon lowers while the knees/hips retain the same body and kit scale. The source is a distinct withdrawal pose."
+        },
+        {
+          "cell": 3,
+          "rgbaSHA256": "6b7765d17adb91b65a3d08733c1fad71d08c361ae1c982ce8afeb2b70350cf6b",
+          "solidBounds": [
+            181,
+            95,
+            532,
+            508
+          ],
+          "solidPadding": [
+            181,
+            95,
+            95,
+            119
+          ],
+          "minimumSolidPadding": 95,
+          "nonzeroAlphaBounds": [
+            33,
+            5,
+            593,
+            627
+          ],
+          "groundROIAlpha64Bounds": [
+            455,
+            454,
+            503,
+            508
+          ],
+          "groundY": 508,
+          "capTop": 95,
+          "referenceSoleGroundY": 508,
+          "bodySpan": 413,
+          "phase": "across-body block",
+          "observation": "The musket crosses the body with separated forearms and raised stock away from the face. The head/body remain SW and the wider stance reads as a defensive contact phase."
+        }
+      ]
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v26/confederate-a-casualty-sw-candidate.png",
+      "sha256": "df22288282945e4491707b94f092872837bd261850d2ca243a3873764d1d423c",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 3,
+      "role": "casualty",
+      "action": "fall",
+      "sourceNativeDimensions": [
+        1254,
+        1254
+      ],
+      "sourceMode": "RGBA",
+      "acceptedForOptIn": true,
+      "measurements": {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 3,
+        "role": "casualty",
+        "action": "fall",
+        "source": "docs/art-pass/candidates/gettysburg-v26/confederate-a-casualty-sw-candidate.png",
+        "sha256": "df22288282945e4491707b94f092872837bd261850d2ca243a3873764d1d423c",
+        "cell": 627,
+        "referenceHeight": 415,
+        "roots": [
+          [
+            381,
+            571
+          ],
+          [
+            401,
+            605
+          ],
+          [
+            405,
+            450
+          ],
+          [
+            369,
+            429
+          ]
+        ],
+        "groundROIs": [
+          [
+            465,
+            525,
+            527,
+            584
+          ],
+          [
+            323,
+            571,
+            382,
+            618
+          ],
+          [
+            319,
+            427,
+            384,
+            458
+          ],
+          [
+            363,
+            414,
+            370,
+            433
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X follows the hips during the initial hit/stumble. Ground Y is the nearer viewer-right boot sole, separated from the bayonet that reaches farther down the cell.",
+          "Projected lower-torso/hip X is independent of the forward support hand. Ground Y is the near palm/fingertip contact during knee-down, excluding rifle and farther boot.",
+          "Projected lower-torso/hip X follows the collapsing body. Ground Y is the forward near-hand knuckle contact; the rifle and tucked knee are excluded.",
+          "Projected torso/hip X represents the resting body. Ground Y is a narrow visible gray elbow/forearm support edge behind the rifle, with a transparent gap below inside the ROI; brown stock pixels are excluded."
+        ]
+      },
+      "minimumSolidPadding": 22,
+      "alpha1Through4Pixels": 25788,
+      "brightRedPixelsAlpha64": 0,
+      "brightRedDefinition": "R>180 G<90 B<100 A>=64",
+      "cellObservations": [
+        {
+          "cell": 0,
+          "rgbaSHA256": "9cfb4c2f5f0e8fec0622bb444ac869fcfbf3f518981850f3609ac29e5c3e9c9e",
+          "solidBounds": [
+            119,
+            146,
+            516,
+            581
+          ],
+          "solidPadding": [
+            119,
+            146,
+            111,
+            46
+          ],
+          "minimumSolidPadding": 46,
+          "nonzeroAlphaBounds": [
+            33,
+            15,
+            623,
+            589
+          ],
+          "groundROIAlpha64Bounds": [
+            475,
+            525,
+            516,
+            571
+          ],
+          "groundY": 571,
+          "phase": "hit/stumble",
+          "observation": "One hand reacts at the chest while the rifle lowers. The replacement's head, boots and kit are coherent with its actual contact partner; the rejected earlier sheet's material enlargement is absent."
+        },
+        {
+          "cell": 1,
+          "rgbaSHA256": "4d5c55979566e530bd1f364a837aafe7b2d54bf54f7e699269eb27ec05aef10e",
+          "solidBounds": [
+            64,
+            312,
+            527,
+            605
+          ],
+          "solidPadding": [
+            64,
+            312,
+            100,
+            22
+          ],
+          "minimumSolidPadding": 22,
+          "nonzeroAlphaBounds": [
+            25,
+            21,
+            589,
+            625
+          ],
+          "groundROIAlpha64Bounds": [
+            323,
+            571,
+            376,
+            605
+          ],
+          "groundY": 605,
+          "phase": "knee-down",
+          "observation": "A knee lowers and the near hand supports the body. Cap, roll, canteen and trouser proportions remain coherent; the palm/finger ground patch is distinct from the weapon."
+        },
+        {
+          "cell": 2,
+          "rgbaSHA256": "29236e2be8d989a479163562d76d4df23eea68e1de1b85abf70a11ffe9b617eb",
+          "solidBounds": [
+            57,
+            232,
+            605,
+            458
+          ],
+          "solidPadding": [
+            57,
+            232,
+            22,
+            169
+          ],
+          "minimumSolidPadding": 22,
+          "nonzeroAlphaBounds": [
+            19,
+            20,
+            621,
+            627
+          ],
+          "groundROIAlpha64Bounds": [
+            325,
+            427,
+            384,
+            450
+          ],
+          "groundY": 450,
+          "phase": "collapse",
+          "observation": "The body lowers onto a near knuckle/hand with a tucked knee and an extended leg. The weapon is low beside the body; natural foreshortening does not change the shared physical scale."
+        },
+        {
+          "cell": 3,
+          "rgbaSHA256": "0487335b86f1108e9f21b2ab9141219ae20f0a089558f6bd46339e3f8bcde566",
+          "solidBounds": [
+            59,
+            297,
+            579,
+            463
+          ],
+          "solidPadding": [
+            59,
+            297,
+            48,
+            164
+          ],
+          "minimumSolidPadding": 48,
+          "nonzeroAlphaBounds": [
+            9,
+            3,
+            585,
+            627
+          ],
+          "groundROIAlpha64Bounds": [
+            363,
+            414,
+            370,
+            429
+          ],
+          "groundY": 429,
+          "phase": "ground rest",
+          "observation": "The body lies prone with lowered head and relaxed forearm support beside the grounded rifle, without a sighting posture. A narrow gray elbow edge is isolated for ground measurement so brown stock pixels do not set the pivot."
+        }
+      ]
+    }
+  ],
+  "pairScaleDecision": {
+    "union": "Accepted: the selected casualty5 head, boots, roll and limbs remain coherent with contact1 at the shared 435-pixel contact reference. Different projected height and lowered poses do not require independent phase scaling.",
+    "confederate": "Accepted: casualty3 resolves the material scale increase found in casualty1. Head/boots/kit match contact1 at the common 415-pixel reference while the reaction, kneel and prone poses shorten naturally."
+  },
+  "sourceCorrectionsReviewed": [
+    {
+      "sourceSHA256": "dbc8f909508118da0dd450d6ddc6ba3fc8f8c9b15ae3da6af5181cb8223d73af",
+      "role": "confederate casualty1",
+      "acceptedForOptIn": false,
+      "reason": "Material head/boot/kit enlargement against the selected contact source; replaced by a whole native redraw.",
+      "replacementSHA256": "df22288282945e4491707b94f092872837bd261850d2ca243a3873764d1d423c"
+    },
+    {
+      "sourceSHA256": "959ff206b9c42275a6e18ef7e19bcfbde6e228d9b53c9501a05b26c7b7b13b59",
+      "role": "union casualty4",
+      "acceptedForOptIn": false,
+      "reason": "Lower cells read as supported aiming, including a shoulder/cheek-held prone firing rest; replaced by a whole native sheet with released musket and resting head.",
+      "replacementSHA256": "22ef7b1ecbfd71538a638d2721d74ad0de7d2f2393d68702ac4812fc9cccb875"
+    }
+  ],
+  "limitations": [
+    "Nonzero alpha noise reaches some cell edges and many colored fringe pixels have alpha 1-4. Alpha>=64 margins pass, but edge/fringe-free rendering is not certified.",
+    "Union recovery and low-guard silhouettes are relatively similar; rear grip/stock geometry and some waist kit details are occluded. Native stills do not certify physical anatomy, historical drill or every transition.",
+    "Ground patches and projected X positions are model-assisted visual selections. Their exact pixel reproduction is not proof of physical contact mechanics.",
+    "Union A and B still lack native N, NE and NW march/ready/fire/reload coverage (directions 6, 7 and 5). These rearward actions retain fallback; the new Union NE contact/casualty sources do not fill those gaps.",
+    "The other contact diagonal groups and Union B contact/fall partners remain incomplete. No complete-family, default, production or human approval is granted.",
+    "Crowded opposing ranks limited fine motion readability in the previously reviewed v25 production play evidence. This source review does not establish v26 browser readability, integration correctness, hardware performance or human usability."
+  ],
+  "nextWorkJudgment": {
+    "overallVisibleGain": "A separately scoped contact-readability pass is likely to expose more of the already-authored motion, based on the dense-rank limitation visible in prior production play. This is a design judgment, not a new v26 browser result.",
+    "sourceOnlyPriority": "Within subsequent source authoring, fill Union A/B N/NE/NW native march, ready, fire and reload gaps first, so ordinary movement and volleys retain a coherent art treatment across rearward bearings. SE/NW contact/casualty coverage and every Union B contact/fall partner remain unfinished; contact crowding remains a separate presentation issue."
+  },
+  "blockersForTheseExactSources": [],
+  "decision": "Accepted for bounded opt-in native authoring of these four exact sources and registrations, with the listed limits. No local installation acceptance is issued by this source-only review."
+}

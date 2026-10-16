@@ -1,0 +1,320 @@
+{
+  "artPass": "gettysburg-v27",
+  "familyComplete": false,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v27-independent-union-ne-source-review.json",
+  "sourceReviewSHA256": "64b91110340012ce73c307718157302953420196a5082798859962e13e190df3",
+  "referenceHeights": {
+    "a": 396,
+    "b": 439
+  },
+  "referenceCellIndices": [
+    0,
+    2,
+    3
+  ],
+  "referenceMethod": "Independent cap-to-near-support-sole spans from fixed upright ready/load/ram cells0/2/3, own-identity integer median; fire cell1 measured only as corroboration. One shared reference per stationary sheet; no phase-height normalization.",
+  "annotationMethod": "Independent Astra Max manual native-pixel anatomy/cap/sole/barrel-end interpretation; alpha>=64 ROI extrema recomputed read-only. Anatomical projected rootX remains independent from groundROI X, groundY is exclusive maxY. Source bytes unchanged.",
+  "sources": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 7,
+      "role": "actions",
+      "source": "docs/art-pass/candidates/gettysburg-v27/union-a-actions-ne-candidate.png",
+      "sha256": "0d612aa1d2a13ac5d35184caf14009391ff903e55318833db2a14b7c35dd9462",
+      "cell": 627,
+      "referenceHeight": 396,
+      "roots": [
+        [
+          320,
+          577
+        ],
+        [
+          272,
+          587
+        ],
+        [
+          331,
+          508
+        ],
+        [
+          282,
+          525
+        ]
+      ],
+      "groundROIs": [
+        [
+          215,
+          529,
+          292,
+          590
+        ],
+        [
+          195,
+          540,
+          283,
+          600
+        ],
+        [
+          229,
+          466,
+          308,
+          520
+        ],
+        [
+          190,
+          482,
+          270,
+          539
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X320 is selected from the trouser fork/hip axis. Ground Y577 is alpha>=64 maxYExclusive of the nearer screen-left planted boot sole; separate from the forward boot and rifle silhouette.",
+        "Projected pelvis X272 follows the firing stance's hip axis. Ground Y587 is alpha>=64 maxYExclusive of the nearer screen-left boot sole; not the higher forward boot.",
+        "Projected pelvis X331 follows the upright loading stance. Ground Y508 is alpha>=64 maxYExclusive of the nearer screen-left boot sole; excludes the far boot and rifle butt at screen-right.",
+        "Projected pelvis X282 follows the upright ram stance. Ground Y525 is alpha>=64 maxYExclusive of the nearer screen-left boot sole; excludes rifle stock and far sole."
+      ],
+      "frameOrder": [
+        "a-ready-7-0",
+        "a-fire-7-0",
+        "a-reload-7-0",
+        "a-reload-7-1"
+      ],
+      "capROIs": [
+        [
+          325,
+          162,
+          373,
+          194
+        ],
+        [
+          276,
+          178,
+          331,
+          213
+        ],
+        [
+          331,
+          104,
+          377,
+          138
+        ],
+        [
+          282,
+          117,
+          326,
+          150
+        ]
+      ],
+      "capTop": [
+        171,
+        185,
+        116,
+        129
+      ],
+      "referenceSoleROIs": [
+        [
+          224,
+          558,
+          283,
+          584
+        ],
+        [
+          204,
+          573,
+          274,
+          595
+        ],
+        [
+          236,
+          498,
+          303,
+          520
+        ],
+        [
+          198,
+          510,
+          265,
+          535
+        ]
+      ],
+      "referenceSoleGroundY": [
+        577,
+        587,
+        508,
+        525
+      ],
+      "bodySpans": [
+        406,
+        402,
+        392,
+        396
+      ],
+      "muzzle": [
+        486,
+        197
+      ],
+      "muzzleROI": [
+        479,
+        188,
+        495,
+        204
+      ],
+      "muzzleMethod": "Fire cell1 only: independently selected native projected barrel-end rim at [486,197], immediately before the long bayonet blade at the short steel/socket junction. The rear three-quarter view partly hides the aperture; the point is an estimated solid rim anchor, not a claim that the bore interior is visible. It is not the bayonet tip or full weapon bound. Alpha>=64 at the selected point is recomputed; expected native placement uncertainty approximately +/-4px.",
+      "nativeUnionNortheastSequence": "gettysburg-v27-union-a-ne"
+    },
+    {
+      "side": "union",
+      "identity": "b",
+      "direction": 7,
+      "role": "actions",
+      "source": "docs/art-pass/candidates/gettysburg-v27/union-b-actions-ne-candidate.png",
+      "sha256": "6cd48eb4f9ba31b5ed07deb2a5c0ddc5376f8855248eb44e2a172068daae1b55",
+      "cell": 627,
+      "referenceHeight": 439,
+      "roots": [
+        [
+          335,
+          610
+        ],
+        [
+          245,
+          611
+        ],
+        [
+          344,
+          568
+        ],
+        [
+          270,
+          569
+        ]
+      ],
+      "groundROIs": [
+        [
+          250,
+          557,
+          351,
+          622
+        ],
+        [
+          176,
+          559,
+          275,
+          624
+        ],
+        [
+          312,
+          526,
+          417,
+          580
+        ],
+        [
+          235,
+          530,
+          342,
+          580
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X335 follows the hip/trouser axis. Ground Y610 is alpha>=64 maxYExclusive of the nearer screen-left boot sole; the higher forward boot and rifle stock are excluded.",
+        "Projected pelvis X245 follows the firing stance's hip axis. Ground Y611 is alpha>=64 maxYExclusive of the nearer screen-left boot sole, independently of the muzzle and forward boot.",
+        "Projected pelvis X344 follows the upright loading hip axis. Ground Y568 is alpha>=64 maxYExclusive of the nearer screen-right boot sole; excludes the higher far boot and rifle butt.",
+        "Projected pelvis X270 follows the upright ram stance's hip axis. Ground Y569 is alpha>=64 maxYExclusive of the nearer screen-right boot sole; excludes the far boot and rifle butt."
+      ],
+      "frameOrder": [
+        "b-ready-7-0",
+        "b-fire-7-0",
+        "b-reload-7-0",
+        "b-reload-7-1"
+      ],
+      "capROIs": [
+        [
+          335,
+          158,
+          380,
+          194
+        ],
+        [
+          240,
+          156,
+          289,
+          191
+        ],
+        [
+          342,
+          118,
+          389,
+          151
+        ],
+        [
+          267,
+          119,
+          313,
+          152
+        ]
+      ],
+      "capTop": [
+        168,
+        167,
+        129,
+        131
+      ],
+      "referenceSoleROIs": [
+        [
+          259,
+          597,
+          347,
+          622
+        ],
+        [
+          184,
+          594,
+          269,
+          623
+        ],
+        [
+          321,
+          554,
+          410,
+          577
+        ],
+        [
+          244,
+          556,
+          335,
+          577
+        ]
+      ],
+      "referenceSoleGroundY": [
+        610,
+        611,
+        568,
+        569
+      ],
+      "bodySpans": [
+        442,
+        444,
+        439,
+        438
+      ],
+      "muzzle": [
+        466,
+        145
+      ],
+      "muzzleROI": [
+        456,
+        134,
+        474,
+        151
+      ],
+      "muzzleMethod": "Fire cell1 only: independently selected native projected barrel-end rim at [466,145], immediately before the long bayonet blade at the short steel/socket junction. The rear three-quarter view partly hides the aperture; the point is an estimated solid rim anchor, not a claim that the bore interior is visible. It is not the bayonet tip or full weapon bound. Alpha>=64 at the selected point is recomputed; expected native placement uncertainty approximately +/-4px.",
+      "nativeUnionNortheastSequence": "gettysburg-v27-union-b-ne"
+    }
+  ]
+}

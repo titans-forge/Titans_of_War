@@ -8,7 +8,8 @@ GitHub remains the source-code home for Titans of War. itch.io is the player-fac
 - Project type: HTML / browser-playable game
 - Pricing: free or pay-what-you-want
 - Visibility while testing: restricted or draft
-- Embed size: start with `1280 x 720`; allow fullscreen if available
+- Embed size: start with `1280 x 1000`; enable scrollbars and the fullscreen button
+- Enable mobile-friendly; leave automatic start and SharedArrayBuffer support off
 - Description: include the GitHub repository link and the short media/license note from `MEDIA_RIGHTS.md`
 
 Suggested page text:
@@ -27,7 +28,7 @@ https://github.com/JCapone83/Titans_of_War
 From the repository root:
 
 ```bash
-npm install
+npm ci
 npm run validate
 npm run build:itch
 ```
@@ -46,6 +47,7 @@ If `npm run build:itch` fails because `zip` is unavailable:
 
 ```bash
 npm run build
+node scripts/prune-release-assets.mjs
 ```
 
 Then manually compress the contents of `dist/`. Do not compress the `dist` folder itself. The ZIP root must contain:
@@ -63,8 +65,8 @@ images/
 After the itch.io project exists, install and authenticate `butler`, then run:
 
 ```bash
-npm run build
-butler push dist titans-forge/titans-of-war:web
+npm run build:itch
+butler push dist titans-forge/titans-of-war-civil-war:web
 ```
 
 If the project slug is different, replace `titans-of-war` with the slug from the itch.io project URL.
@@ -89,4 +91,8 @@ Then test the uploaded itch page in a clean browser:
 - One choice can be selected and executed.
 - Historical context opens if present.
 - Audio fallback does not block gameplay.
+- Quick battle opens Third Winchester with its terrain and soldiers visible.
+- Selecting open ground pauses for move confirmation; after resuming, units move under fire.
+- Dragging pans without issuing an order; mobile controls remain reachable.
+- Leaving a practice battle does not change the campaign or its saves.
 - GitHub link works.

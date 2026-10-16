@@ -1,0 +1,457 @@
+.cw-tactical, .cw-tactical * { letter-spacing: 0; }
+.cw-tactical button:focus-visible, .cw-tactical select:focus-visible, .cw-tactical input:focus-visible, .cw-tactical summary:focus-visible { outline: 3px solid #83d7df; outline-offset: -3px; }
+.cw-tactical button[aria-pressed="true"] { box-shadow: inset 0 -3px #e5c05c; color: #ffe5a0; background: #30372d; }
+.cw-tactical .cw-battle-header h2 { font-size: 1.25rem; }
+.cw-tactical .cw-formation-inspector h3 { font-size: 1rem; margin: 0.7rem 0 0.3rem; overflow-wrap: anywhere; }
+.cw-tactical .cw-formation-stat { padding: 0.35rem 0; }
+.cw-roster { display: grid; gap: 0.3rem; font-size: 0.75rem; }
+.cw-roster select { width: 100%; min-width: 0; height: 44px; color: #f5ecd6; background: #171d22; border: 1px solid #737a72; font: inherit; }
+.cw-unit-state, .cw-unit-target { font-size: 0.75rem; line-height: 1.4; overflow-wrap: anywhere; }
+.cw-unit-state { color: #a7e0db; text-transform: capitalize; }
+.cw-unit-target { margin-top: 0.5rem; }
+.cw-tactical .cw-battle-zoom { left: 0.5rem; right: auto; top: 0.5rem; flex-wrap: wrap; max-width: calc(100% - 1rem); align-items: center; background: #11171c; }
+.cw-tactical .cw-battle-zoom button { min-width: 44px; height: 44px; display: flex; justify-content: center; gap: 3px; }
+.cw-range-toggle { display: flex; align-items: center; min-height: 44px; gap: 3px; padding-right: 6px; font-size: 0.75rem; }
+.cw-range-toggle input { width: 18px; height: 18px; }
+.cw-tactical .cw-field-status { top: auto; bottom: 0.5rem; left: 0.5rem; max-width: calc(100% - 1rem); max-height: 30%; overflow-y: auto; font-size: 0.7rem; display: block; }
+.cw-tactical .cw-field-status summary { cursor: pointer; color: #ffe5a0; }
+.cw-tactical .cw-field-status span { display: block; margin-top: 0.4rem; }
+.cw-tactical .cw-battlefield-host { top: 60px; touch-action: none; }
+.cw-coordinate-order { margin-top: 0.6rem; font-size: 0.75rem; }
+.cw-coordinate-order summary { min-height: 36px; padding-top: 8px; cursor: pointer; }
+.cw-coordinate-inputs { display: flex; gap: 0.5rem; }
+.cw-coordinate-inputs label { flex: 1; min-width: 0; }
+.cw-coordinate-inputs input { width: 100%; min-width: 0; min-height: 44px; background: #171d22; color: #f5ecd6; border: 1px solid #737a72; }
+.cw-coordinate-order button, .cw-destination-confirm button, .cw-leave-dialog button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 8px; background: #25352f; color: #f5ecd6; border: 1px solid #849c91; cursor: pointer; }
+.cw-coordinate-order button svg, .cw-destination-confirm svg { width: 18px; height: 18px; }
+.cw-destination-confirm { position: absolute; z-index: 3; left: 0.5rem; right: 0.5rem; bottom: 3rem; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 6px; background: #11171c; font-size: 0.75rem; }
+.cw-field-overlays { position: absolute; z-index: 3; left: 0.5rem; right: 0.5rem; bottom: 0.5rem; display: flex; flex-direction: column; align-items: flex-start; gap: 0.4rem; pointer-events: none; }
+.cw-field-overlays > * { pointer-events: auto; }
+.cw-tactical .cw-field-overlays .cw-field-status { position: static; max-width: 100%; max-height: 8rem; margin: 0; overflow-wrap: anywhere; }
+.cw-tactical .cw-field-overlays .cw-begin-battle { position: static; transform: none; align-self: center; min-height: 44px; }
+.cw-field-overlays .cw-destination-confirm { position: static; max-width: 100%; }
+.cw-leave-dialog { max-width: min(420px, calc(100% - 32px)); padding: 24px; background: #171d22; color: #f5ecd6; border: 1px solid #849c91; }
+.cw-leave-backdrop { position: absolute; inset: 0; z-index: 10; display: grid; place-items: center; overflow-y: auto; padding: 16px; background: rgb(0 0 0 / 75%); }
+.cw-leave-dialog h3 { margin-top: 0; }
+.cw-leave-dialog div { display: flex; gap: 12px; flex-wrap: wrap; }
+.cw-tactical .cw-battle-header-actions { flex-wrap: wrap; }
+.cw-battle-guide { border-bottom: 1px solid #849c91; padding-bottom: 12px; margin-bottom: 12px; }
+.cw-guide-heading { display: flex; align-items: center; justify-content: space-between; gap: 6px; color: #a7e0db; font-size: 0.75rem; }
+.cw-tactical .cw-formation-inspector .cw-battle-guide h3 { display: block; margin: 0.4rem 0; font-size: 1rem; }
+.cw-battle-guide p { margin: 0.5rem 0; font-size: 0.8rem; line-height: 1.5; overflow-wrap: anywhere; }
+.cw-guide-reserve { color: #a7e0db; }
+.cw-battle-guide nav { display: flex; justify-content: space-between; gap: 8px; }
+.cw-battle-guide button { display: inline-flex; flex-shrink: 0; align-items: center; justify-content: center; gap: 6px; min-width: 44px; min-height: 44px; padding: 8px; background: #25352f; color: #f5ecd6; border: 1px solid #849c91; cursor: pointer; }
+.cw-battle-guide button:disabled { opacity: 0.4; cursor: not-allowed; }
+.cw-battle-guide svg { width: 18px; height: 18px; }
+@media (max-width: 700px) {
+  .cw-tactical .cw-battle-header { grid-template-columns: minmax(0, 1fr); }
+  .cw-tactical .cw-battle-header h2 { font-size: 1rem; }
+  .cw-tactical .cw-battle-header-actions { grid-row: 2; }
+  .cw-tactical .cw-battle-header-actions button { min-width: 44px; height: 44px; }
+  .cw-tactical .cw-battle-objective { grid-row: 3; }
+  .cw-tactical .cw-battle-stage { overflow-y: auto; }
+  .cw-tactical .cw-formation-inspector { display: block; max-height: 200px; overflow-y: auto; flex: 0 0 auto; }
+  .cw-tactical .cw-formation-inspector h3 { display: none; }
+  .cw-tactical .cw-formation-stat { display: flex; width: 50%; float: left; gap: 4px; padding: 5px 8px 5px 0; font-size: 0.6rem; min-width: 0; box-sizing: border-box; }
+  .cw-tactical .cw-formation-stat strong { font-size: 0.65rem; }
+  .cw-tactical .cw-unit-target { clear: both; }
+  .cw-tactical .cw-formation-modes button { min-height: 44px; }
+  .cw-tactical .cw-formation-inspector .cw-field-orders { display: block; }
+  .cw-tactical .cw-battlefield-frame { min-height: 240px; }
+  .cw-tactical .cw-battle-command-bar > button { font-size: 0.6rem; }
+  .cw-tactical .cw-battle-clock { min-height: 28px; }
+}
+
+/* Command names must remain readable at overview zoom and on phones. */
+.cw-tactical .cw-battle-command-bar > button { font-size: 13px; text-transform: capitalize; }
+.cw-tactical .cw-formation-modes button { font-size: 12px; text-transform: capitalize; }
+.cw-tactical .cw-formation-stat, .cw-tactical .cw-formation-stat strong { font-size: 12px; }
+@media (max-width: 700px) {
+  .cw-tactical .cw-battle-command-bar > button { font-size: 12px; }
+  .cw-tactical .cw-formation-stat, .cw-tactical .cw-formation-stat strong { font-size: 11px; }
+}
+
+/* Keep a readable command surface while formation details are optional on phones. */
+.cw-inspector-toggle, .cw-mobile-unit-summary { display: none; }
+.cw-command-explainer { padding: 10px; background: #202b2c; border-left: 3px solid #a7e0db; color: #e8eee7; font-size: 13px; line-height: 1.5; }
+.cw-fire-control { margin: 12px 0; border-top: 1px solid #596861; padding-top: 8px; font-size: 13px; line-height: 1.45; }
+.cw-fire-control h4 { margin: 4px 0; }
+.cw-fire-control label { display: grid; gap: 4px; }
+.cw-fire-control select { width: 100%; min-width: 0; height: 44px; background: #171d22; color: #f5ecd6; border: 1px solid #849c91; font: inherit; }
+.cw-fire-control button { min-height: 44px; padding: 6px 8px; background: #25352f; color: #f5ecd6; border: 1px solid #849c91; font: inherit; cursor: pointer; }
+.cw-fire-control button:disabled, .cw-fire-control select:disabled { opacity: 0.45; cursor: not-allowed; }
+.cw-facing-buttons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-bottom: 8px; }
+.cw-facing-buttons button:nth-child(5) { grid-column: 3; }
+.cw-tactical .cw-battlefield-frame { display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.cw-tactical .cw-battle-zoom { position: relative; top: auto; left: auto; right: auto; max-width: none; padding: 6px 8px; background: #11171c; grid-row: 1; }
+.cw-tactical .cw-battlefield-host { position: relative; inset: auto; min-height: 0; grid-row: 2; }
+.cw-tactical .cw-battle-header span, .cw-tactical .cw-battle-objective small { font-size: 12px; }
+.cw-tactical .cw-field-orders ol, .cw-tactical .cw-field-orders summary { font-size: 13px; line-height: 1.5; }
+.cw-tactical .cw-unit-state { font-size: 14px; }
+@media (max-width: 700px) {
+  .cw-tactical .cw-battle-header { grid-template-columns: 1fr; gap: 6px; }
+  .cw-tactical .cw-battle-header h2 { font-size: 16px; }
+  .cw-tactical .cw-battle-header .cw-battle-eyebrow { display: none; }
+  .cw-tactical .cw-battle-objective strong { font-size: 13px; line-height: 1.4; }
+  .cw-tactical .cw-battle-objective small { display: none; }
+  .cw-tactical .cw-battle-stage { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); overflow: hidden; }
+  .cw-tactical .cw-formation-inspector { overflow: visible; max-height: none; padding: 8px; border: 0; border-bottom: 1px solid #434b45; }
+  .cw-inspector-summary { display: grid; grid-template-columns: minmax(0, 1fr) 100px; gap: 8px; align-items: end; }
+  .cw-roster { font-size: 12px; }
+  .cw-roster select { font-size: 14px; text-overflow: ellipsis; }
+  .cw-inspector-toggle { display: block; background: #25352f; color: #f5ecd6; border: 1px solid #849c91; min-height: 44px; padding: 4px; font-size: 13px; }
+  .cw-mobile-unit-summary { display: block; margin: 6px 0 0; color: #a7e0db; font-size: 13px; text-transform: capitalize; }
+  .cw-tactical .cw-inspector-details { display: none; position: absolute; z-index: 8; inset: 104px 0 0; overflow: auto; padding: 12px 16px 24px; background: #11171c; border-top: 1px solid #849c91; overscroll-behavior: contain; }
+  .cw-tactical .cw-formation-inspector[data-expanded="true"] .cw-inspector-details { display: block; }
+  .cw-tactical .cw-formation-inspector h3 { display: block; }
+  .cw-tactical .cw-formation-stat { font-size: 13px; float: none; width: 100%; padding: 7px 0; }
+  .cw-tactical .cw-formation-stat strong { font-size: 13px; }
+  .cw-tactical .cw-battlefield-frame { min-height: 0; }
+  .cw-tactical .cw-battle-zoom { gap: 2px; padding: 4px; }
+  .cw-tactical .cw-battle-zoom button { min-width: 40px; padding: 3px; }
+  .cw-tactical .cw-field-overlays .cw-field-status { max-height: 64px; font-size: 12px; }
+  .cw-tactical .cw-battle-command-bar > button { min-height: 48px; font-size: 12px; }
+  .cw-tactical .cw-battle-clock { font-size: 12px; }
+}
+@media (max-height: 550px) and (max-width: 700px) {
+  .cw-tactical .cw-battle-header { max-height: 130px; overflow: auto; }
+}
+@media (max-width: 700px) {
+  .cw-tactical .cw-battle-header > div:first-child > span { display: inline; }
+}
+
+.cw-ridge-progress { position: absolute; top: 52px; left: 10px; right: 10px; display: grid; gap: 3px; padding: 8px 12px; background: #101c20ed; color: #ede5cb; border: 1px solid #b69c60; border-radius: 5px; font-size: 12px; pointer-events: none; }
+.cw-ridge-progress strong { color: #f4d992; }
+.cw-gettysburg-detail { border-top: 1px solid #8a754a; margin-top: 10px; padding-top: 8px; font-size: 12px; }
+.cw-historical-landmarks summary, .cw-historical-ground summary { cursor: pointer; color: #f0d99a; padding: 6px 0; line-height: 1.5; }
+.cw-historical-landmarks p, .cw-historical-ground p { line-height: 1.55; color: #d5ddda; }
+.cw-historical-landmarks a, .cw-historical-ground a { color: #ead295; text-underline-offset: 3px; }
+.cw-historical-landmarks a:focus-visible, .cw-historical-ground a:focus-visible { outline: 2px solid #ead295; outline-offset: 3px; }
+@media (max-width:700px) { .cw-ridge-progress { top: 48px; padding: 5px 7px; font-size: 10px; } }
+
+/* Reserve space for Gettysburg information so it never obscures units or rear exits. */
+.cw-tactical .cw-gettysburg-frame { grid-template-rows: auto auto minmax(0, 1fr); }
+.cw-tactical .cw-gettysburg-frame .cw-battlefield-host { grid-row: 3; }
+.cw-gettysburg-frame .cw-ridge-progress { position: relative; inset: auto; grid-row: 2; margin: 0 8px 4px; font-size: 12px; padding: 5px 8px; }
+@media (max-width: 700px) {
+  .cw-gettysburg-frame .cw-ridge-progress { font-size: 11px; margin: 0 4px 3px; }
+}
+.cw-tactical .cw-gettysburg-frame { grid-template-columns: minmax(0, 1fr); }
+.cw-gettysburg-frame > * { min-width: 0; }
+
+/* Gettysburg field desk: only the immediate decision stays expanded. */
+.cw-gettysburg-command .cw-battle-stage { grid-template-columns: 278px minmax(0, 1fr); }
+.cw-gettysburg-command .cw-formation-inspector { padding: 14px 12px; background: linear-gradient(160deg, #172126, #11191d); }
+.cw-unit-vitals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin: 10px 0; }
+.cw-tactical .cw-unit-vitals .cw-formation-stat { display: grid; gap: 4px; padding: 9px; border: 1px solid #364a48; background: #10191c; text-transform: none; }
+.cw-tactical .cw-unit-vitals .cw-formation-stat span { font-size: 11px; color: #aabdb8; }
+.cw-tactical .cw-unit-vitals .cw-formation-stat strong { font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.cw-secondary-stats, .cw-command-brief, .cw-fire-control { border: 1px solid #3c514d; border-radius: 5px; overflow: hidden; }
+.cw-secondary-stats summary, .cw-command-brief summary, .cw-fire-control summary { min-height: 44px; padding: 11px 9px; box-sizing: border-box; color: #e4d9b9; cursor: pointer; font-size: 12px; line-height: 1.5; }
+.cw-secondary-stats > .cw-formation-stat { margin: 0 9px; }
+.cw-command-brief { margin: 10px 0 12px; background: #1a2727; border-color: #748265; }
+.cw-command-brief summary { font-weight: 600; color: #e9d397; }
+.cw-command-brief summary span, .cw-fire-control summary span { display: block; font-size: 11px; font-weight: 400; color: #a7bbb6; }
+.cw-command-brief p { font-size: 12px; line-height: 1.55; padding: 0 10px; color: #d3dcd4; }
+.cw-command-brief ol { margin: 8px 0; padding: 0 12px 0 28px; }
+.cw-command-brief li { padding-left: 2px; margin: 12px 0; font-size: 12px; line-height: 1.5; color: #b5c4bb; }
+.cw-command-brief li::marker { color: #d7bf7b; font-weight: 600; }
+.cw-command-brief li strong, .cw-command-brief li span { display: block; }
+.cw-command-brief li strong { color: #eee3c4; margin-bottom: 2px; }
+.cw-command-brief .cw-brief-reminder { padding: 10px; margin-bottom: 0; border-top: 1px solid #3c514d; background: #111c20; }
+.cw-fire-control { padding: 0; }
+.cw-fire-control > :not(summary) { margin-left: 9px; margin-right: 9px; }
+.cw-fire-control > button { margin-bottom: 8px; }
+.cw-readiness-card { display: grid; gap: 5px; margin: 8px 0; padding: 10px; border-left: 3px solid #87aaa0; background: #1c2a2b; line-height: 1.5; }
+.cw-readiness-card > strong { color: #c4e0ce; text-transform: capitalize; font-size: 14px; }
+.cw-readiness-card > span { color: #b5c6bd; }
+.cw-readiness-card[data-condition="wavering"], .cw-readiness-card[data-condition="routing"] { border-color: #e09272; background: #302424; }
+.cw-readiness-card[data-condition="wavering"] > strong, .cw-readiness-card[data-condition="routing"] > strong { color: #ffc3a1; }
+.cw-readiness-card label { display: grid; grid-template-columns: 1fr auto; margin-top: 5px; }
+.cw-readiness-card meter { grid-column: 1 / -1; width: 100%; height: 9px; accent-color: #d8b46b; }
+.cw-readiness-card p { padding-top: 6px; margin: 2px 0 0; border-top: 1px solid #52665c; color: #eee4c9; }
+.cw-gettysburg-frame .cw-ridge-progress { pointer-events: auto; border: 0; border-top: 1px solid #455651; border-bottom: 1px solid #455651; border-radius: 0; background: linear-gradient(100deg, #1b2a2c, #182124); padding: 6px 10px; margin: 0; gap: 5px; }
+.cw-objective-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.cw-objective-heading > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 5px 14px; }
+.cw-command-phase { font-size: 11px; font-weight: 600; color: #aac8bd; }
+.cw-objective-heading strong { font-size: 13px; font-variant-numeric: tabular-nums; }
+.cw-objective-heading button { display: inline-flex; flex-shrink: 0; align-items: center; justify-content: center; gap: 5px; min-height: 44px; padding: 5px 10px; border: 1px solid #637767; border-radius: 4px; background: #253732; color: #ede0b6; cursor: pointer; font: inherit; }
+.cw-objective-heading svg { width: 15px; height: 15px; }
+.cw-ridge-progress progress { width: 100%; height: 4px; appearance: none; border: 0; background: #38443c; accent-color: #d8bf73; }
+.cw-ridge-progress progress::-webkit-progress-bar { background: #38443c; border-radius: 3px; }
+.cw-ridge-progress progress::-webkit-progress-value { background: #d8bf73; border-radius: 3px; }
+.cw-sector-strip { display: flex; gap: 6px; }
+.cw-sector-strip > button { display: flex; flex: 1; flex-wrap: wrap; align-items: center; gap: 3px 8px; padding: 4px 7px; background: #263443; border-left: 2px solid #7194b6; color: #c3d4df; font-size: 11px; }
+.cw-sector-strip > button strong { font-size: 10px; color: #b2c9dd; font-weight: 600; text-transform: capitalize; }
+.cw-sector-strip > button[data-control="confederate"] { background: #3e302d; border-color: #c78772; color: #ead1bb; }
+.cw-sector-strip > button[data-control="confederate"] strong { color: #ecc2aa; }
+.cw-sector-strip > button[data-control="contested"] { background: #423d25; border-color: #e3cc79; }
+.cw-sector-strip > button[data-control="contested"] strong { color: #ffdd81; }
+.cw-sector-strip > button[data-control="vacant"] { background: #2c3530; border-color: #8b9991; }
+.cw-phase-advice { margin: 0; color: #c1d3ca; font-size: 12px; line-height: 1.4; }
+.cw-objective-intelligence { font-size: 11px; color: #acc0b8; }
+.cw-objective-intelligence summary { cursor: pointer; }
+.cw-objective-intelligence p { margin: 5px 0; line-height: 1.45; }
+.cw-tactical .cw-gettysburg-command-bar { grid-template-columns: repeat(6, minmax(72px, 108px)) minmax(120px, 1fr); }
+.cw-command-receipt { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(140px, 175px); gap: 16px; align-items: center; padding: 7px 12px; background: #1a2728; border-bottom: 1px solid #47554a; }
+.cw-command-receipt-copy { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; min-width: 0; }
+.cw-command-receipt-copy > strong { font-size: 13px; color: #ebddba; }
+.cw-command-receipt-copy > span { font-size: 12px; color: #b3c6bc; text-transform: capitalize; }
+.cw-command-receipt-copy > small { flex-basis: 100%; font-size: 11px; color: #a9bcb5; overflow-wrap: anywhere; }
+.cw-pending-label { color: #edcf82; }
+.cw-tactical .cw-battle-command-bar > button[data-pending="true"] { box-shadow: inset 0 -3px #d8c38a; border-bottom: 1px dashed #e7ce88; }
+.cw-quick-sector { display: grid; gap: 2px; font-size: 10px; color: #b5c9c0; }
+.cw-quick-sector select { min-height: 34px; width: 100%; border: 1px solid #75836e; border-radius: 3px; padding: 3px 5px; background: #111c20; color: #f0ddb3; font-size: 12px; }
+.cw-quick-sector select:disabled { opacity: 0.45; }
+.cw-battle-debrief { color: #c6d6c9; border-top: 1px solid #657354; padding-top: 6px; }
+.cw-battle-debrief > summary { font-weight: 600; color: #efdeb0; cursor: pointer; line-height: 1.4; }
+.cw-debrief-body { max-height: 180px; overflow: auto; overscroll-behavior: contain; padding-right: 5px; font-size: 12px; line-height: 1.5; }
+.cw-debrief-body p { margin: 8px 0; }
+.cw-force-breakdown { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; margin: 8px 0; }
+.cw-force-breakdown > div { padding: 7px; border: 1px solid #48564a; background: #101c1d; }
+.cw-force-breakdown dt { color: #afc1b8; font-size: 10px; }
+.cw-force-breakdown dd { margin: 2px 0 0; color: #f0e1b9; font-size: 14px; font-variant-numeric: tabular-nums; }
+.cw-force-breakdown dd span { font-size: 10px; color: #a8b9b0; }
+.cw-force-breakdown > div[data-state="disordered"], .cw-force-breakdown > div[data-state="captured"] { border-color: #936d52; }
+.cw-break-evidence ol { margin: 4px 0; padding-left: 17px; font-size: 11px; }
+@media (max-width: 1050px) and (min-width: 701px) {
+  .cw-gettysburg-command .cw-battle-stage { grid-template-columns: 235px minmax(0, 1fr); }
+  .cw-tactical .cw-gettysburg-command-bar { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .cw-gettysburg-command-bar .cw-battle-clock { grid-column: 1 / -1; min-height: 26px; }
+}
+@media (max-width: 700px) {
+  .cw-gettysburg-command .cw-battle-stage { grid-template-columns: minmax(0, 1fr); }
+  .cw-gettysburg-command .cw-formation-inspector { padding: 6px 8px; }
+  .cw-tactical .cw-inspector-details { top: 100px; }
+  .cw-unit-vitals { gap: 7px; }
+  .cw-tactical .cw-unit-vitals .cw-formation-stat { padding: 10px; }
+  .cw-gettysburg-frame .cw-ridge-progress { padding: 3px 5px 4px; gap: 3px; }
+  .cw-objective-heading { gap: 4px; }
+  .cw-objective-heading > div { display: grid; gap: 0; }
+  .cw-objective-heading strong { font-size: 12px; }
+  .cw-command-phase { font-size: 10px; }
+  .cw-objective-heading button { min-width: 44px; padding: 4px; }
+  .cw-objective-heading button span { display: none; }
+  .cw-sector-strip { gap: 3px; }
+  .cw-sector-strip > button { display: grid; gap: 0; padding: 3px 4px; font-size: 10px; }
+  .cw-sector-strip > button strong { font-size: 9px; }
+  .cw-phase-advice { display: none; }
+  .cw-objective-intelligence { font-size: 10px; }
+  .cw-objective-intelligence summary { min-height: 20px; }
+  .cw-tactical .cw-gettysburg-command-bar { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .cw-tactical .cw-gettysburg-command-bar > button { font-size: 11px; min-height: 48px; }
+  .cw-command-receipt { grid-template-columns: minmax(0, 1fr) 118px; gap: 6px; padding: 4px 7px; }
+  .cw-command-receipt-copy { display: grid; gap: 2px; }
+  .cw-command-receipt-copy > strong { font-size: 12px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  .cw-command-receipt-copy > span { font-size: 10px; }
+  .cw-command-receipt-copy > small { display: none; }
+  .cw-quick-sector { font-size: 9px; }
+  .cw-quick-sector select { font-size: 11px; min-height: 36px; }
+  .cw-gettysburg-command-bar .cw-battle-clock { grid-column: 1 / -1; min-height: 24px; font-size: 10px; }
+  .cw-gettysburg-command-bar .cw-battle-clock strong { font-size: 12px; }
+  .cw-force-breakdown { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cw-debrief-body { max-height: 145px; }
+}
+.cw-staging-reference { border-top: 1px solid #53694f; margin: 8px 0; padding-top: 6px; }
+.cw-staging-reference h4 { font-size: 13px; color: #edda9e; margin: 8px 10px; }
+.cw-staging-list { display: grid; gap: 4px; margin: 8px 9px; }
+.cw-staging-list button { display: grid; gap: 3px; min-height: 44px; padding: 6px 8px; border: 1px solid #56695b; border-radius: 3px; background: #132124; color: #c8d8c7; text-align: left; cursor: pointer; }
+.cw-staging-list button strong { font-size: 12px; }
+.cw-staging-list button span { font-size: 10px; color: #a9bfae; }
+.cw-preview-staging { display: flex; align-items: center; gap: 6px; min-height: 44px; margin: 7px 9px; padding: 7px; border: 1px solid #a4996c; background: #304439; color: #eedfaf; border-radius: 3px; cursor: pointer; font-size: 12px; }
+.cw-preview-staging:disabled { opacity: 0.45; cursor: not-allowed; }
+.cw-preview-staging svg { width: 15px; height: 15px; }
+
+/* The map gets the space: the live objective is a compact two-row instrument. */
+.cw-gettysburg-frame .cw-ridge-progress { gap: 3px; padding: 3px 8px 4px; }
+.cw-objective-heading button { min-height: 28px; padding: 3px 8px; }
+.cw-objective-heading > div { gap: 3px 12px; }
+.cw-objective-heading strong { font-size: 12px; }
+.cw-sector-strip > button { flex-wrap: nowrap; padding: 3px 6px; line-height: 1.2; }
+.cw-ridge-progress progress { height: 3px; }
+.cw-command-receipt { grid-template-columns: minmax(0, 1fr) 238px; gap: 10px; min-height: 36px; box-sizing: border-box; padding: 3px 10px; }
+.cw-command-receipt-copy { flex-wrap: nowrap; }
+.cw-command-receipt-copy > strong { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 1; }
+.cw-command-receipt-copy > span { flex-shrink: 0; }
+.cw-command-receipt-copy > small { display: none; }
+.cw-quick-sector { grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 6px; }
+.cw-quick-sector select { min-height: 30px; }
+.cw-tactical .cw-gettysburg-command-bar > button { min-height: 50px; }
+@media (max-width: 700px) {
+  .cw-gettysburg-frame .cw-ridge-progress { padding: 2px 5px 4px; }
+  .cw-objective-heading button { min-height: 44px; }
+  .cw-sector-strip > button { display: flex; gap: 3px; flex-wrap: wrap; padding: 2px 3px; }
+  .cw-command-receipt { grid-template-columns: minmax(0, 1fr) 119px; min-height: 44px; padding: 3px 6px; }
+  .cw-command-receipt-copy { display: grid; gap: 1px; }
+  .cw-command-receipt-copy > span { font-size: 10px; line-height: 1.3; }
+  .cw-quick-sector { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .cw-quick-sector select { min-height: 32px; }
+  .cw-tactical .cw-gettysburg-command-bar > button { min-height: 48px; }
+}
+@media (max-width: 700px) {
+  .cw-quick-sector { font-size: 0; }
+  .cw-quick-sector select { min-height: 44px; font-size: 11px; }
+}
+
+.cw-recovery-checks, .cw-objective-conditions { color: #dfebdd; font-size: 12px; line-height: 1.55; }
+.cw-recovery-checks ul { padding-left: 0; list-style: none; }
+.cw-recovery-checks li { padding: 3px 0; }
+.cw-recovery-checks [data-met="true"] { color: #a5d6af; }
+.cw-objective-conditions section { border-top: 1px solid #526052; padding: 5px 0; }
+.cw-objective-conditions h4 { margin: 4px 0; color: #eedba6; }
+.cw-objective-conditions p { margin: 5px 0; }
+.cw-command-receipt-copy > small { display: block; color: #e0e8d7; flex-basis: 100%; font-size: 11px; }
+.cw-command-receipt-copy { flex-wrap: wrap; }
+.cw-after-action { line-height: 1.6; }
+.cw-after-action li { margin-bottom: .65em; }
+@media (max-width: 700px) {
+  .cw-command-receipt-copy > small { font-size: 10px; line-height: 1.25; max-height: 2.5em; overflow: hidden; }
+  .cw-tactical .cw-inspector-details { bottom: 0; }
+}
+
+@media (max-width: 700px) {
+  .cw-map-options { margin-left: auto; font-size: 11px; }
+  .cw-map-options > summary { display: flex; align-items: center; min-height: 44px; padding: 0 8px; border: 1px solid #849c91; color: #f5ecd6; background: #25352f; cursor: pointer; }
+  .cw-map-options > div { position: absolute; right: 4px; top: 50px; z-index: 12; min-width: 175px; padding: 8px; background: #15201f; border: 1px solid #849c91; box-shadow: 0 5px 18px #0009; }
+  .cw-map-options .cw-range-toggle { min-height: 44px; font-size: 13px; }
+}
+
+@media (max-width: 700px) {
+  .cw-field-progress > .cw-command-explainer { margin: 2px 0; padding: 4px 6px; font-size: 11px; line-height: 1.35; }
+}
+
+.cw-group-panel { margin: 12px 0; border-top: 1px solid #758778; padding-top: 8px; }
+.cw-group-orders { font-size: 12px; line-height: 1.5; color: #e2ecdf; }
+.cw-group-orders fieldset { border: 1px solid #69786c; padding: 6px; margin: 8px 0; }
+.cw-group-orders fieldset label { display: flex; align-items: center; min-height: 40px; gap: 7px; }
+.cw-group-orders input[type="checkbox"] { width: 18px; height: 18px; flex: 0 0 18px; }
+.cw-group-orders > label { display: grid; margin: 8px 0; gap: 4px; }
+.cw-group-orders select,.cw-group-orders input[type="number"] { min-width: 0; width: 100%; box-sizing: border-box; min-height: 44px; background: #182322; color: #f5ecd6; border: 1px solid #83917d; }
+.cw-group-orders button { min-height: 44px; padding: 7px; margin: 4px 4px 4px 0; color: #f5ecd6; background: #2b3e35; border: 1px solid #8d9877; cursor: pointer; }
+.cw-group-orders button:disabled { opacity: .45; cursor: not-allowed; }
+.cw-group-preview { padding: 8px; border: 1px solid #c5ad6c; margin-top: 8px; }
+.cw-training-overlay { position: fixed; inset: 0; z-index: 1500; background: #111b19; color: #eaf0e2; display: grid; grid-template-rows: auto minmax(0,1fr) auto; font-family: Outfit,sans-serif; }
+.cw-training-overlay > header { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid #71816c; }
+.cw-training-overlay h2 { margin: 3px 0; font-size: 23px; }
+.cw-training-overlay header p { color: #dec480; font-size: 13px; margin: 0; }
+.cw-training-overlay button { min-height: 44px; color: #f7edce; background: #263b31; border: 1px solid #87967a; padding: 6px 10px; cursor: pointer; }
+.cw-training-overlay button:disabled { opacity: .45; cursor: not-allowed; }
+.cw-training-stage { display: grid; grid-template-columns: 330px minmax(0,1fr); min-height: 0; }
+.cw-training-stage > aside { overflow: auto; padding: 12px 18px; font-size: 13px; line-height: 1.55; }
+.cw-training-stage aside > label { display: grid; gap: 4px; margin-top: 12px; }
+.cw-training-stage select { width: 100%; min-height: 44px; background: #182722; color: #f7edce; border: 1px solid #83917d; }
+.cw-training-state { padding: 8px; background: #253d32; border-left: 3px solid #d4b96e; }
+.cw-training-orders { display: flex; flex-wrap: wrap; gap: 4px; margin: 10px 0; }
+.cw-training-checks { padding: 10px 0; border-top: 1px solid #65765f; }
+.cw-training-checks h3 { color: #decb88; }
+.cw-training-checks ul { list-style: none; padding: 0; }
+.cw-training-checks li { margin: 8px 0; }
+.cw-training-map { position: relative; min-height: 0; }
+.cw-training-map > .cw-battlefield-host { position: absolute; inset: 0; }
+.cw-training-camera { position: absolute; top: 8px; left: 8px; display: flex; gap: 4px; }
+.cw-training-overlay > footer { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 8px 16px; border-top: 1px solid #71816c; }
+.cw-training-next { margin-left: auto; }
+@media(max-width:700px) {
+  .cw-training-overlay > header { padding: 8px; }
+  .cw-training-overlay h2 { font-size: 17px; }
+  .cw-training-stage { grid-template-columns: minmax(0,1fr); grid-template-rows: minmax(160px,.9fr) minmax(200px,1fr); }
+  .cw-training-stage > aside { padding: 8px 12px; }
+  .cw-training-overlay > footer { padding: 6px; gap: 4px; }
+  .cw-training-overlay > footer button { font-size: 11px; }
+  .cw-training-overlay > footer span { font-size: 11px; }
+}
+
+.cw-group-placement { position:absolute; top:56px; left:8px; right:8px; z-index:20; padding:10px; color:#fff4d9; background:#172b24ee; border:1px solid #b8ab78; font-size:13px; }
+.cw-group-placement button { min-height:44px; padding:6px; margin-left:8px; }
+.cw-army-attention { margin:8px 0; border:1px solid #ac9770; padding:8px; font-size:12px; }
+.cw-army-attention button { display:block; width:100%; text-align:left; min-height:44px; padding:8px; margin:6px 0; color:#f2e5c8; background:#293a30; border:1px solid #77836b; cursor:pointer; }
+.cw-army-attention span { display:block; margin-top:4px; line-height:1.4; }
+
+/* A quieter command desk and an optional full-width field, with the roster and
+   all immediate orders still reachable. Detail/guide requests reopen the desk. */
+@media (min-width: 701px) {
+  .cw-tactical .cw-battle-header { padding: 7px 12px; gap: 14px; }
+  .cw-tactical .cw-battle-header h2 { font-size: 18px; }
+  .cw-tactical .cw-battle-eyebrow { display: none; }
+  .cw-tactical .cw-battle-header-actions button { min-width: 40px; height: 40px; }
+  .cw-tactical .cw-battle-stage { grid-template-columns: 246px minmax(0, 1fr); }
+  .cw-tactical .cw-formation-inspector { padding: 10px; }
+  .cw-tactical .cw-battle-stage[data-wide="true"] { grid-template-columns: minmax(0, 1fr); }
+  .cw-tactical .cw-battle-stage[data-wide="true"] > .cw-formation-inspector { display: none; }
+  .cw-tactical .cw-battle-zoom { padding: 3px 6px; gap: 3px; }
+  .cw-tactical .cw-battle-zoom button { height: 40px; min-width: 40px; }
+  .cw-tactical .cw-field-progress > .cw-command-explainer { margin: 2px 0; padding: 3px 6px; font-size: 12px; border-left-width: 2px; }
+  .cw-tactical .cw-gettysburg-command-bar > button { min-height: 44px; }
+}
+.cw-wide-roster { display: grid; gap: 1px; font-size: 10px; min-width: 0; width: clamp(120px, 17vw, 240px); }
+.cw-wide-roster select { width: 100%; min-width: 0; height: 28px; background: #172420; color: #f3ead2; border: 1px solid #82917c; font: 12px Outfit, sans-serif; }
+.cw-wide-field-toggle span { font-size: 12px; }
+
+/* Mission evidence stays readable without relying on color or live announcements. */
+.cw-mission-checklist { list-style:none; margin:8px 0 0; padding:0; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:6px; }
+.cw-mission-checklist li { display:flex; align-items:flex-start; gap:6px; padding:7px 8px; border:1px solid #b79a5e50; border-radius:5px; background:#171e1b; color:#eddbb9; }
+.cw-mission-checklist li[data-met="true"] { border-color:#83ae8055; }
+.cw-mission-checklist li>span { font-size:15px; line-height:1.2; color:#e5ce93; }
+.cw-mission-checklist strong { display:block; font-size:11px; line-height:1.3; }
+.cw-mission-checklist small { display:block; margin-top:3px; font-size:10px; line-height:1.3; color:#c8c8b8; }
+.cw-debrief-next { margin:12px 0; padding:10px; background:#19251c; border-left:2px solid #b69b64; }
+.cw-debrief-next ul { padding-left:18px; margin:6px 0 0; }
+.cw-debrief-next li+li { margin-top:6px; }
+@media(max-width:1000px) { .cw-mission-checklist { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:700px) { .cw-mission-checklist { gap:4px; } .cw-mission-checklist li { padding:5px 6px; } }
+
+.cw-mission-conditions summary { cursor:pointer; font-size:11px; line-height:1.4; color:#e8d7ac; padding:2px 0; }
+.cw-mission-conditions summary span { margin-left:12px; font-weight:400; color:#c8d1c8; }
+.cw-mission-note { margin:6px 0; font-size:11px; line-height:1.4; color:#d4d7cb; }
+@media(max-width:700px) { .cw-mission-conditions summary span { display:block; margin-left:13px; font-size:10px; } }
+
+/* Keep the six primary camera tools in one labeled, thumb-sized row. */
+@media (max-width: 700px) {
+  .cw-tactical .cw-battle-zoom { display:flex; flex-wrap:wrap; gap:3px; padding:4px; }
+  .cw-tactical .cw-battle-zoom > button { flex:1 0 44px; min-width:44px; height:44px; padding:2px; flex-direction:column; gap:0; }
+  .cw-tactical .cw-battle-zoom > button span { display:block; font-size:10px; line-height:12px; }
+  .cw-tactical .cw-battle-zoom > button svg { width:18px; height:18px; }
+  .cw-tactical .cw-map-options { margin-left:auto; }
+  .cw-tactical .cw-roster select { min-height:44px; }
+  .cw-mobile-unit-summary { font-size:12px; line-height:16px; }
+  .cw-battlefield-host canvas { touch-action:none; }
+}
+@media (max-width: 380px) {
+  .cw-tactical .cw-battle-zoom { gap:0; }
+  .cw-tactical .cw-map-options { flex:0 0 44px; }
+  .cw-tactical .cw-map-options > summary { box-sizing:border-box; width:44px; padding:0 2px; text-align:center; justify-content:center; line-height:12px; }
+}
+
+.cw-landmark-locate { display:block; min-height:44px; margin:6px 0; padding:8px 12px; border:1px solid #849c91; background:#25352f; color:#f5ecd6; font:inherit; cursor:pointer; }
+
+.cw-reserve-progress { display: grid; gap: .3rem; padding: .45rem .6rem; font-size: .78rem; line-height: 1.4; color: #e5dbbe; }
+.cw-reserve-progress progress { width: 100%; height: .45rem; accent-color: #c6ae64; }
+
+.cw-sector-strip > button { min-height: 44px; cursor: pointer; text-align: left; border-top: 0; border-right: 0; border-bottom: 0; font-family: inherit; }
+.cw-sector-strip > button:hover { outline: 1px solid #ffe6a1; }
+.cw-sector-strip > button:focus-visible, .cw-field-locator summary:focus-visible { outline: 2px solid #ffe6a1; outline-offset: 2px; }
+.cw-field-locator { position: relative; font-size: 12px; color: #f5ecd6; }
+.cw-field-locator summary { display: flex; align-items: center; min-height: 44px; padding: 0 8px; cursor: pointer; border: 1px solid #849c91; border-radius: 4px; }
+.cw-field-locator form { position: absolute; top: 100%; right: 0; z-index: 30; width: 290px; max-width: calc(100vw - 40px); padding: 12px; border: 1px solid #849c91; background: #18231f; box-shadow: 0 6px 20px #0008; }
+.cw-field-locator label { display: grid; gap: 6px; }
+.cw-field-locator select { width: 100%; min-width: 0; min-height: 44px; background: #11171c; color: #f5ecd6; font: inherit; }
+.cw-field-locator p { line-height: 1.4; margin: 8px 0; }
+.cw-location-receipt { flex-basis: 100%; color: #ffe6a1; font-size: 12px; padding: 3px; }
+@media (max-width: 700px) {
+  .cw-field-locator { position: static; }
+  .cw-field-locator form { left: 6px; right: auto; }
+}
+
+.cw-locator-zoom { display: flex; gap: 6px; }
+
+/* Deliberate clearance recovery stays inside the existing overlay stack. */
+.cw-saved-attack { max-width: 100%; max-height: 150px; overflow: auto; padding: 8px 10px; border: 1px solid #849c91; background: #11171cf2; color: #f5ecd6; font-size: 13px; line-height: 1.35; }
+.cw-saved-attack p { margin: 0 0 6px; }
+.cw-saved-attack button { min-height: 44px; margin: 0 6px 4px 0; padding: 6px 10px; color: #f5ecd6; background: #25352f; border: 1px solid #849c91; font: inherit; }
+.cw-saved-attack button:disabled { opacity: .45; }
+.cw-saved-attack small { display: block; }
+
+/* Keep mission details inside their own scroll area so field controls and sectors stay reachable. */
+.cw-mission-scroll { max-height: min(150px, 20dvh); overflow-y: auto; overscroll-behavior: contain; padding-right: 5px; }
+.cw-mission-scroll:focus-visible { outline: 3px solid #83d7df; outline-offset: -3px; }

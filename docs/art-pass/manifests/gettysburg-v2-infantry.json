@@ -1,0 +1,102 @@
+{
+  "artPass": "gettysburg-v2",
+  "date": "2026-09-30",
+  "scope": "Historical Gettysburg ready/march infantry pilot; query opt-in only",
+  "status": "Movement study, not default; incomplete action family and opposing-leg source defects remain",
+  "tool": "OpenAI built-in imagegen",
+  "model": "not reported by tool",
+  "assets": [
+    {
+      "side": "union",
+      "page": "ready",
+      "png": "public/images/units/gettysburg-v2/union-ready.png",
+      "atlas": "public/images/units/gettysburg-v2/union-ready.json",
+      "bytes": 1849384,
+      "sha256": "205ce94b6968d3f8a6cb56631f9a7ac0934131c28f19ff859e1435e2b4bae065",
+      "width": 1536,
+      "height": 1024,
+      "frames": 16,
+      "identityReferenceHeights": {
+        "a": 239,
+        "b": 242
+      }
+    },
+    {
+      "side": "union",
+      "page": "march",
+      "png": "public/images/units/gettysburg-v2/union-march.png",
+      "atlas": "public/images/units/gettysburg-v2/union-march.json",
+      "bytes": 2380067,
+      "sha256": "104a1edebe66e66b8e6196a2bc2867453e83d57c80fbc5e40c5a911e418cea85",
+      "width": 1536,
+      "height": 1024,
+      "frames": 32,
+      "identityReferenceHeights": {
+        "a": 232,
+        "b": 233
+      }
+    },
+    {
+      "side": "confederate",
+      "page": "ready",
+      "png": "public/images/units/gettysburg-v2/confederate-ready.png",
+      "atlas": "public/images/units/gettysburg-v2/confederate-ready.json",
+      "bytes": 1861683,
+      "sha256": "a5f837f49675440bba1e500b348fdbd3759a2238f6f10bf39a449d92709a9aa3",
+      "width": 1536,
+      "height": 1024,
+      "frames": 16,
+      "identityReferenceHeights": {
+        "a": 240,
+        "b": 243
+      }
+    },
+    {
+      "side": "confederate",
+      "page": "march",
+      "png": "public/images/units/gettysburg-v2/confederate-march.png",
+      "atlas": "public/images/units/gettysburg-v2/confederate-march.json",
+      "bytes": 2362232,
+      "sha256": "2a82304117752f45228cc4bd0f289d4dfda101e17a96c4b3110a0364cac31500",
+      "width": 1536,
+      "height": 1024,
+      "frames": 32,
+      "identityReferenceHeights": {
+        "a": 220,
+        "b": 224
+      }
+    }
+  ],
+  "preload": {
+    "stable": {
+      "entries": 45,
+      "unique": 43,
+      "bytes": 36646749
+    },
+    "variants": [
+      {
+        "artPass": "?artPass=gettysburg-v1",
+        "entries": 45,
+        "unique": 43,
+        "bytes": 37532034
+      },
+      {
+        "artPass": "?artPass=gettysburg-v2",
+        "entries": 53,
+        "unique": 51,
+        "bytes": 45173570
+      }
+    ]
+  },
+  "sourcePixelChanges": "None. Original alpha/pixels retained; only atlas rectangles/pivots/reference heights authored.",
+  "rejectedCorrections": [
+    {
+      "png": "docs/art-pass/candidates/gettysburg-v2/union-march-correction-rejected.png",
+      "reason": "Did not reliably swap the anatomical leading legs"
+    },
+    {
+      "png": "docs/art-pass/candidates/gettysburg-v2/confederate-march-correction-rejected.png",
+      "reason": "Did not reliably swap the anatomical leading legs"
+    }
+  ]
+}

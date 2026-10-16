@@ -1,0 +1,229 @@
+{
+  "reviewType": "Independent fresh all-cell native-source visual review",
+  "scope": "Union B E march only, candidate v11; bounded opt-in visual-preview acceptance",
+  "source": {
+    "path": "candidate/docs/art-pass/candidates/gettysburg-v11/union-b-e-march-candidate.png",
+    "sha256": "5f15de11f707a965564bbddae925a302ab7e8119276408e29f0a177783e5290a",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "cell": [
+      627,
+      627
+    ],
+    "columns": 2,
+    "rows": 2
+  },
+  "verdict": "PASS for limited visual preview of the four distinct contact/passing roles",
+  "productionApproved": false,
+  "defaultApproved": false,
+  "completeFamilyApproved": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "references": [
+    {
+      "path": "candidate/docs/art-pass/candidates/gettysburg-v11/union-b-e-march-colored-diagnostic.png",
+      "sha256": "7f968a8a10323f2d22e5d0a65c751184bd433c2f68e2b96f29ff5a91ffa10126",
+      "use": "Anatomical left/right chain differentiation; not final artwork"
+    },
+    {
+      "path": "candidate/docs/art-pass/candidates/gettysburg-v11/union-b-e-march-anatomical-guide.png",
+      "sha256": "182da10809f36ce40e93cdd669f805b02de4fc1b9ca6f821e4d63db9b7da5d84",
+      "use": "Checked native Blender poses/camera and explicit support/swing contract"
+    },
+    {
+      "path": "candidate/docs/art-pass/candidates/gettysburg-v11/union-b-e-actions-candidate.png",
+      "sha256": "5aebc319115ad65a7bc23089e5962ae4975a6a1a9db11a5fcce8a9c13c1780e1",
+      "use": "B identity, uniform and body-relative equipment"
+    }
+  ],
+  "cells": [
+    {
+      "cell": "TL",
+      "sourceIndex": 0,
+      "phase": "left-forward-contact",
+      "nativeGuideSourceFrame": 1,
+      "anatomicalLeft": "Far chain leads forward/right to boot.",
+      "anatomicalRight": "Near chain extends rearward/left to boot.",
+      "assessment": "Split contact is readable and matches the colored diagnostic role."
+    },
+    {
+      "cell": "TR",
+      "sourceIndex": 1,
+      "phase": "left-support-right-swing",
+      "nativeGuideSourceFrame": 2,
+      "anatomicalLeft": "Supporting chain runs to lower planted boot.",
+      "anatomicalRight": "Forward thigh/knee flexion continues to clearly elevated boot.",
+      "assessment": "Distinct passing role; visible lifted right chain retains diagnostic contrast."
+    },
+    {
+      "cell": "BL",
+      "sourceIndex": 2,
+      "phase": "right-forward-contact",
+      "nativeGuideSourceFrame": 3,
+      "anatomicalLeft": "Rearward chain extends left/back.",
+      "anatomicalRight": "Forward chain extends right/front.",
+      "assessment": "Fresh visible chain contour agrees with diagnostic opposite contact to TL."
+    },
+    {
+      "cell": "BR",
+      "sourceIndex": 3,
+      "phase": "right-support-left-swing",
+      "nativeGuideSourceFrame": 0,
+      "anatomicalLeft": "Bent rearward chain ends at clearly elevated boot.",
+      "anatomicalRight": "Supporting chain runs to lower planted boot.",
+      "assessment": "Opposite support/swing role to TR is retained."
+    }
+  ],
+  "playback": {
+    "cellOrder": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "completeFourPhaseVisualLoop": true,
+    "nativeGuideFrames": [
+      1,
+      2,
+      3,
+      0
+    ],
+    "phaseSemantics": "Contact labels name the leading anatomical leg. Passing labels explicitly name support and swing.",
+    "mechanicalTimingChanged": false,
+    "metadataUsedToInventMissingPhase": false
+  },
+  "appearance": {
+    "uniform": "All four retain navy cap/short coat, pale blue trousers, brown boots and light cross straps. Diagnostic leg and boot colors are absent.",
+    "kit": "Dark rear backpack and gray roll remain coherent. Dark rectangular anatomical-right pouch is visible on the near hip in all four.",
+    "canteen": "Large near-side silver disks from the diagnostic are absent. Anatomical-left canteen is hidden on the far side; precise hidden attachment is not independently observable.",
+    "identity": "B brown hair and moustache/profile, body and kit remain coherent with the accepted E stationary and S/SW/W references; exact facial/skeletal identity not certified.",
+    "weapon": "Consistent east-facing two-hand diagonal upright carry, plausible stock and fore-end grip, bayonet present; no visible flash/smoke.",
+    "bearing": "E0 appearance consistent with checked native guide camera. Generated source does not certify mathematically exact 35-degree projection."
+  },
+  "measurementContract": {
+    "coordinateSpace": "Fresh native per-cell pixels from each 627x627 cell top-left, TL/TR/BL/BR.",
+    "roots": [
+      [
+        280,
+        594
+      ],
+      [
+        280,
+        594
+      ],
+      [
+        290,
+        554
+      ],
+      [
+        290,
+        554
+      ]
+    ],
+    "rootMeaning": "Estimated pelvis-centered horizontal registration projected to shared visible boot-ground row. Generated 2D occluded pelvis does not expose an exact physical joint or world-ground point.",
+    "rootXUncertaintyPixels": 6,
+    "rootYUncertaintyPixels": 2,
+    "sharedRowGroundY": [
+      594,
+      554
+    ],
+    "capTop": [
+      137,
+      138,
+      108,
+      108
+    ],
+    "capMeasurement": "Fresh alpha>=64 cap-only region bounds; weapon excluded.",
+    "capToRegisteredGroundSpans": [
+      457,
+      456,
+      446,
+      446
+    ],
+    "commonBodyReferenceHeight": 450,
+    "commonReferenceRule": "Use one whole-source scale/reference for all four frames; preserve visible cap/ground span variation. No per-frame normalization.",
+    "capSpanRangePixels": 11,
+    "rangeAsPercentOfCommonReference": 2.44,
+    "physicalGroundOrPelvisCertified": false,
+    "muzzleAnchorAssigned": false,
+    "muzzleReason": "March contains no firing pose; no stationary muzzle or coordinate borrowed."
+  },
+  "nativePixelEvidence": {
+    "alphaThreshold": 64,
+    "boundsExclusive": [
+      [
+        161,
+        75,
+        443,
+        594
+      ],
+      [
+        189,
+        74,
+        422,
+        594
+      ],
+      [
+        162,
+        48,
+        448,
+        550
+      ],
+      [
+        195,
+        43,
+        422,
+        554
+      ]
+    ],
+    "paddingLTRB": [
+      [
+        161,
+        75,
+        184,
+        33
+      ],
+      [
+        189,
+        74,
+        205,
+        33
+      ],
+      [
+        162,
+        48,
+        179,
+        77
+      ],
+      [
+        195,
+        43,
+        205,
+        73
+      ]
+    ],
+    "minimumPaddingByCell": [
+      33,
+      33,
+      48,
+      43
+    ],
+    "floor24Pass": true,
+    "requested32GoalPass": true,
+    "clippingVisible": false,
+    "rasterCleanupPerformed": false,
+    "sourceChangedDuringReview": false,
+    "exactUntargetedPixelPreservationClaim": false
+  },
+  "blockers": [],
+  "limits": [
+    "Acceptance applies only to exact final SHA and the four cells reviewed, not earlier failed attempts.",
+    "Fresh final contours were reviewed independently; material-only instructions do not prove unchanged pixels or geometry.",
+    "Anatomical roles are visually supported against the colored diagnostic; hidden pelvis and generated pose geometry do not certify physical anatomy or ground contact.",
+    "Far-side canteen attachment remains occluded.",
+    "This is source preview evidence, not runtime renderer, complete live-playthrough, default or full-family approval."
+  ]
+}

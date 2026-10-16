@@ -1,0 +1,47 @@
+[
+  {
+    "id": "sumter-command-v3",
+    "tool": "built-in image_gen",
+    "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-a8da95bf-e2cd-41c3-901e-4b5dd97cdb6a.png",
+    "master": "sumter-command-v3.png",
+    "runtime": "/images/presentation/sumter-command-v3.webp",
+    "width": 1672,
+    "height": 941,
+    "masterBytes": 2495461,
+    "runtimeBytes": 266226,
+    "masterSha256": "dd1dbdb303bfd4c853812cd2d52ebe5b5a28b1b558e8e716eb506c09b1fb21c0",
+    "runtimeSha256": "ce0635d374f147251bb0c67402dc2833504bd579981646bd3713788d43dd1c23",
+    "processing": "WebP encoding only; no resize, crop or painted edits",
+    "historicalStatus": "New interpretive illustration; not documentary evidence; specialist review still pending"
+  },
+  {
+    "id": "hampton-roads-v3",
+    "tool": "built-in image_gen",
+    "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-4f2e01e4-1291-4ef5-b238-9e1056758d5d.png",
+    "master": "hampton-roads-v3.png",
+    "runtime": "/images/presentation/hampton-roads-v3.webp",
+    "width": 1672,
+    "height": 941,
+    "masterBytes": 2269072,
+    "runtimeBytes": 210596,
+    "masterSha256": "2eea348049904705ffc03db2550a154e17ff1767956caa47103b1d3c4af4f773",
+    "runtimeSha256": "2af715e0448a38ef8af0e0c319d5f9e8ebe6b36cf1fd93efff555fbc5dcf6bad",
+    "processing": "WebP encoding only; no resize, crop or painted edits",
+    "historicalStatus": "New interpretive illustration; not documentary evidence; specialist review still pending"
+  },
+  {
+    "id": "appomattox-paroles-v3",
+    "tool": "built-in image_gen",
+    "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-8130a36a-e14b-45f6-8e9c-47b2049df0c9.png",
+    "master": "appomattox-paroles-v3.png",
+    "runtime": "/images/presentation/appomattox-paroles-v3.webp",
+    "width": 1672,
+    "height": 941,
+    "masterBytes": 2639589,
+    "runtimeBytes": 307622,
+    "masterSha256": "0426db06a9cb7cf8fc48d82fa1aaf4094941cc78a08060e265e1360c9777bf9b",
+    "runtimeSha256": "da6538f30f20dd2253458c9618f6c9f6fd1080c03629172ef7c2744e4fec8f22",
+    "processing": "WebP encoding only; no resize, crop or painted edits",
+    "historicalStatus": "New interpretive illustration; not documentary evidence; specialist review still pending"
+  }
+]

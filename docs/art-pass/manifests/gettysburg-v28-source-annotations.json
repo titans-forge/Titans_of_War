@@ -1,0 +1,608 @@
+{
+  "artPass": "gettysburg-v28",
+  "referenceHeights": {
+    "a-n": 375,
+    "a-nw": 259,
+    "b-n": 378,
+    "b-nw": 255
+  },
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v28-independent-union-northern-source-review.json",
+  "sourceReviewSHA256": "d02158dc16c249ed9fd6d0c6361c7a6b178d8d4c9e361d8f14aa986b1ce05686",
+  "registrationMethod": "Independent native projected pelvis X with nearer support sole alpha>=64 maxYExclusive; fresh own-sheet ready/load/ram visible-cap-to-sole median shared by all stationary phases. Muzzles use independently inspected fire-cell steel lips before the bayonet. No individual phase normalization.",
+  "sources": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 6,
+      "role": "actions",
+      "source": "docs/art-pass/candidates/gettysburg-v28/union-a-actions-n-candidate.png",
+      "sha256": "6701db1baf08dd551b3de92b97670235675c42c22cd68c3934493adb7ee49880",
+      "cell": 627,
+      "referenceHeight": 375,
+      "roots": [
+        [
+          340,
+          602
+        ],
+        [
+          267,
+          597
+        ],
+        [
+          348,
+          537
+        ],
+        [
+          271,
+          537
+        ]
+      ],
+      "groundROIs": [
+        [
+          287,
+          558,
+          337,
+          610
+        ],
+        [
+          273,
+          557,
+          327,
+          607
+        ],
+        [
+          288,
+          493,
+          341,
+          547
+        ],
+        [
+          209,
+          493,
+          264,
+          547
+        ]
+      ],
+      "groundMethods": [
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from screen-left supporting boot sole, away from musket.",
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the slightly nearer screen-right supporting boot sole.",
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from screen-left supporting boot sole, excluding the grounded musket stock on the right.",
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from screen-left supporting boot sole, excluding the musket."
+      ],
+      "frameOrder": [
+        "a-ready-6-0",
+        "a-fire-6-0",
+        "a-reload-6-0",
+        "a-reload-6-1"
+      ],
+      "capROIs": [
+        [
+          312,
+          219,
+          368,
+          260
+        ],
+        [
+          240,
+          228,
+          280,
+          264
+        ],
+        [
+          312,
+          150,
+          337,
+          183
+        ],
+        [
+          240,
+          151,
+          291,
+          190
+        ]
+      ],
+      "capTop": [
+        230,
+        235,
+        161,
+        162
+      ],
+      "referenceSoleROIs": [
+        [
+          288,
+          585,
+          337,
+          610
+        ],
+        [
+          276,
+          583,
+          325,
+          607
+        ],
+        [
+          291,
+          522,
+          338,
+          547
+        ],
+        [
+          211,
+          524,
+          261,
+          547
+        ]
+      ],
+      "referenceSoleGroundY": [
+        602,
+        597,
+        537,
+        537
+      ],
+      "bodySpans": [
+        372,
+        362,
+        376,
+        375
+      ],
+      "muzzle": [
+        286,
+        187
+      ],
+      "muzzleROI": [
+        281,
+        179,
+        302,
+        197
+      ],
+      "muzzleMethod": "Independent native projected left steel lip of the north-facing barrel mouth, beneath the farther bayonet blade, on solid alpha>=64 pixels in firing cell1. The rear view partly hides the aperture; this is a bounded rim estimate (approximately +/-4 native pixels), not the blade tip or a bounding-box extreme."
+    },
+    {
+      "groundROIs": [
+        [
+          284,
+          474,
+          338,
+          512
+        ],
+        [
+          313,
+          474,
+          368,
+          513
+        ],
+        [
+          286,
+          472,
+          342,
+          505
+        ],
+        [
+          303,
+          471,
+          361,
+          507
+        ]
+      ],
+      "capROIs": [
+        [
+          291,
+          237,
+          335,
+          266
+        ],
+        [
+          328,
+          239,
+          368,
+          269
+        ],
+        [
+          296,
+          233,
+          304,
+          259
+        ],
+        [
+          321,
+          231,
+          333,
+          262
+        ]
+      ],
+      "referenceSoleROIs": [
+        [
+          285,
+          488,
+          336,
+          511
+        ],
+        [
+          314,
+          488,
+          365,
+          512
+        ],
+        [
+          287,
+          483,
+          340,
+          504
+        ],
+        [
+          304,
+          486,
+          360,
+          506
+        ]
+      ],
+      "muzzle": [
+        235,
+        233
+      ],
+      "muzzleROI": [
+        229,
+        227,
+        241,
+        238
+      ],
+      "side": "union",
+      "identity": "a",
+      "direction": 5,
+      "role": "actions",
+      "source": "docs/art-pass/candidates/gettysburg-v28/union-a-actions-nw-candidate.png",
+      "sha256": "68e08f3b24bae78461e77cacc56dc495bf992f24ce1b5fc51596d9bef2082157",
+      "cell": 627,
+      "roots": [
+        [
+          334,
+          504
+        ],
+        [
+          366,
+          504
+        ],
+        [
+          336,
+          497
+        ],
+        [
+          354,
+          500
+        ]
+      ],
+      "groundMethods": [
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot."
+      ],
+      "capTop": [
+        242,
+        247,
+        242,
+        241
+      ],
+      "referenceSoleGroundY": [
+        504,
+        504,
+        497,
+        500
+      ],
+      "bodySpans": [
+        262,
+        257,
+        255,
+        259
+      ],
+      "frameOrder": [
+        "a-ready-5-0",
+        "a-fire-5-0",
+        "a-reload-5-0",
+        "a-reload-5-1"
+      ],
+      "muzzleMethod": "Independent native near-left steel rim of the muzzle at the end of the thick barrel segment in fire cell1, below the narrower projecting bayonet blade. The small rear three-quarter opening is partly obscured; approximately +/-3 native pixels of interpretation uncertainty, not the farther blade tip.",
+      "referenceHeight": 259
+    },
+    {
+      "groundROIs": [
+        [
+          287,
+          558,
+          339,
+          613
+        ],
+        [
+          273,
+          556,
+          327,
+          610
+        ],
+        [
+          288,
+          493,
+          341,
+          548
+        ],
+        [
+          209,
+          493,
+          266,
+          548
+        ]
+      ],
+      "capROIs": [
+        [
+          312,
+          219,
+          368,
+          260
+        ],
+        [
+          240,
+          228,
+          280,
+          264
+        ],
+        [
+          312,
+          150,
+          337,
+          183
+        ],
+        [
+          240,
+          151,
+          291,
+          190
+        ]
+      ],
+      "referenceSoleROIs": [
+        [
+          288,
+          585,
+          338,
+          613
+        ],
+        [
+          276,
+          583,
+          325,
+          610
+        ],
+        [
+          291,
+          523,
+          339,
+          548
+        ],
+        [
+          211,
+          524,
+          265,
+          548
+        ]
+      ],
+      "muzzle": [
+        286,
+        188
+      ],
+      "muzzleROI": [
+        281,
+        179,
+        302,
+        198
+      ],
+      "side": "union",
+      "identity": "b",
+      "direction": 6,
+      "role": "actions",
+      "source": "docs/art-pass/candidates/gettysburg-v28/union-b-actions-n-candidate.png",
+      "sha256": "3bee9ead8bb0654da27d87639957a8f38b20e17d96832e8fad8d09a4e41ac17c",
+      "cell": 627,
+      "roots": [
+        [
+          341,
+          603
+        ],
+        [
+          267,
+          598
+        ],
+        [
+          344,
+          538
+        ],
+        [
+          273,
+          539
+        ]
+      ],
+      "groundMethods": [
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the slightly nearer screen-right supporting boot sole, excluding the weapon.",
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot."
+      ],
+      "capTop": [
+        228,
+        235,
+        160,
+        161
+      ],
+      "referenceSoleGroundY": [
+        603,
+        598,
+        538,
+        539
+      ],
+      "bodySpans": [
+        375,
+        363,
+        378,
+        378
+      ],
+      "frameOrder": [
+        "b-ready-6-0",
+        "b-fire-6-0",
+        "b-reload-6-0",
+        "b-reload-6-1"
+      ],
+      "muzzleMethod": "Independent native projected left steel lip of the north-facing barrel mouth below the farther bayonet blade, at alpha>=64 in fire cell1; rear aperture is partly hidden, so this is a bounded rim estimate approximately +/-4 native pixels, not the blade tip.",
+      "referenceHeight": 378
+    },
+    {
+      "groundROIs": [
+        [
+          307,
+          455,
+          361,
+          495
+        ],
+        [
+          319,
+          455,
+          374,
+          495
+        ],
+        [
+          303,
+          466,
+          359,
+          505
+        ],
+        [
+          328,
+          466,
+          384,
+          506
+        ]
+      ],
+      "capROIs": [
+        [
+          313,
+          227,
+          351,
+          255
+        ],
+        [
+          329,
+          231,
+          364,
+          258
+        ],
+        [
+          320,
+          232,
+          329,
+          265
+        ],
+        [
+          344,
+          231,
+          352,
+          265
+        ]
+      ],
+      "referenceSoleROIs": [
+        [
+          309,
+          475,
+          360,
+          495
+        ],
+        [
+          321,
+          475,
+          373,
+          495
+        ],
+        [
+          305,
+          485,
+          358,
+          505
+        ],
+        [
+          330,
+          486,
+          383,
+          506
+        ]
+      ],
+      "muzzle": [
+        232,
+        226
+      ],
+      "muzzleROI": [
+        228,
+        220,
+        240,
+        231
+      ],
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "role": "actions",
+      "source": "docs/art-pass/candidates/gettysburg-v28/union-b-actions-nw-candidate.png",
+      "sha256": "258268c64969c4c68318ca64147f8cecfa309e950a53440fe0730bb786a1fc67",
+      "cell": 627,
+      "roots": [
+        [
+          350,
+          487
+        ],
+        [
+          365,
+          487
+        ],
+        [
+          347,
+          499
+        ],
+        [
+          376,
+          498
+        ]
+      ],
+      "groundMethods": [
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot.",
+        "Independent projected pelvis X; alpha>=64 exclusive ground Y from the screen-left nearer supporting boot sole, excluding the weapon and farther boot."
+      ],
+      "capTop": [
+        233,
+        237,
+        244,
+        241
+      ],
+      "referenceSoleGroundY": [
+        487,
+        487,
+        499,
+        498
+      ],
+      "bodySpans": [
+        254,
+        250,
+        255,
+        257
+      ],
+      "frameOrder": [
+        "b-ready-5-0",
+        "b-fire-5-0",
+        "b-reload-5-0",
+        "b-reload-5-1"
+      ],
+      "muzzleMethod": "Independent native near-left steel rim of the muzzle at the end of the thick barrel segment in fire cell1, below the narrower projecting bayonet blade. The small rear three-quarter opening is partly obscured; approximately +/-3 native pixels of interpretation uncertainty, not the farther blade tip.",
+      "referenceHeight": 255
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false
+}

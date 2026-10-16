@@ -1,10 +1,11 @@
 import { mkdirSync } from 'node:fs';
 import { writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { createServer } from 'vite';
 import { createFreshCampaignState } from '../src/game/campaignStorage.js';
 import { buildCampaignChronicle } from '../src/game/chronicleExporter.js';
-import { runHeadlessCampaignAsync } from '../src/game/headlessCampaign.js';
+import { DEFAULT_MAX_DECISIONS, runHeadlessCampaignAsync } from '../src/game/headlessCampaign.js';
 import { CAMPAIGN_FINAL_TURN, summarizePoliticalEconomy } from '../src/game/simulationEngine.js';
 
 const OLLAMA_BASE = 'http://localhost:11434';
@@ -19,7 +20,7 @@ Choose the single option that best maximizes the campaign's long-run report card
 - Tactical Smarts: sound battlefield decisions, preservation of armies, and correct operational timing
 - Strategic Brilliance: political, logistical, diplomatic, food, treasury, and cabinet judgment
 - Timeline Fidelity: staying closer to the historical chronology unless divergence is worth the cost
-- survival through ${CAMPAIGN_FINAL_TURN} turns
+- survival to an actual campaign ending (${CAMPAIGN_FINAL_TURN} chronological stages, with additional interlude decisions)
 
 Return ONLY valid JSON matching this schema:
 {"choiceId":"option_a","rationale":"One concise sentence."}
@@ -43,14 +44,14 @@ function parseNumberList(value) {
     .filter((entry) => Number.isFinite(entry));
 }
 
-function parseArgs(argv) {
+export function parseArgs(argv) {
   const options = {
     help: false,
     policies: [...DEFAULT_POLICIES],
     models: [],
     useInstalledModels: false,
     seeds: [...DEFAULT_SEEDS],
-    maxTurns: CAMPAIGN_FINAL_TURN,
+    maxTurns: DEFAULT_MAX_DECISIONS,
     outputPath: '',
     markdownOutputPath: '',
     markdown: false,
@@ -84,7 +85,8 @@ function parseArgs(argv) {
         index += 1;
         break;
       case '--max-turns':
-        options.maxTurns = Number.parseInt(argv[index + 1], 10) || options.maxTurns;
+      case '--max-decisions':
+        options.maxTurns = Number(argv[index + 1]);
         index += 1;
         break;
       case '--out':
@@ -114,8 +116,8 @@ function parseArgs(argv) {
     options.seeds = [...DEFAULT_SEEDS];
   }
 
-  if (options.maxTurns < 1) {
-    throw new Error('--max-turns must be at least 1');
+  if (!Number.isSafeInteger(options.maxTurns) || options.maxTurns < 1) {
+    throw new Error('--max-decisions / --max-turns must be a positive integer');
   }
 
   return options;
@@ -132,7 +134,8 @@ Options:
   --models gemma4:12b-it,qwen2.5:7b      Local Ollama models to benchmark as decision selectors
   --models installed                     Benchmark every installed local Ollama chat model
   --seeds 1861,1862,1863                 Campaign seeds to evaluate
-  --max-turns ${CAMPAIGN_FINAL_TURN}                         Turn cap for each run
+  --max-decisions ${DEFAULT_MAX_DECISIONS}                    Decision cap per run (default ${DEFAULT_MAX_DECISIONS})
+  --max-turns N                          Compatibility alias for --max-decisions
   --out benchmark/latest.json            Save full benchmark payload to disk
   --out-md benchmark/latest.md           Save a markdown leaderboard to disk
   --markdown                             Print markdown instead of the console table
@@ -340,7 +343,7 @@ async function chooseWithModel(model, state, scenario) {
   }
 }
 
-function createContestants(options, models) {
+export function createContestants(options, models = []) {
   const policyContestants = options.policies.map((policy) => ({
     label: `policy:${policy}`,
     type: 'policy',
@@ -356,7 +359,7 @@ function createContestants(options, models) {
   return [...policyContestants, ...modelContestants];
 }
 
-async function benchmarkContestant(contestant, scenarios, seeds, maxTurns) {
+export async function benchmarkContestant(contestant, scenarios, seeds, maxTurns = DEFAULT_MAX_DECISIONS) {
   const runs = [];
 
   for (const seed of seeds) {
@@ -373,7 +376,17 @@ async function benchmarkContestant(contestant, scenarios, seeds, maxTurns) {
       turnsPlayed: result.turns.length,
       total: result.campaignScore.total,
       grade: result.campaignScore.grade,
+      commandScore: result.campaignScore.commandScore,
+      commandGrade: result.campaignScore.commandGrade,
       survived: result.campaignScore.survived,
+      decisionsMade: result.decisionsMade,
+      chronologicalStage: result.chronologicalStage,
+      endingReached: result.endingReached,
+      capped: result.capped,
+      stopReason: result.stopReason,
+      outcome: result.endingReached
+        ? result.campaignScore.survived ? 'survived' : 'defeat'
+        : result.capped ? 'capped' : 'incomplete',
       completedRequestedTurns: result.turns.length >= maxTurns,
       endingClass: result.campaignScore.endingClass,
       divergence: Number((result.campaignScore.divergence || 0).toFixed(3)),
@@ -399,14 +412,26 @@ async function benchmarkContestant(contestant, scenarios, seeds, maxTurns) {
   const representativePoliticalEconomy = bestRun
     ? summarizePoliticalEconomy(bestRun.finalState)
     : null;
+  const endedRuns = runs.filter((run) => run.endingReached);
+  const outcomeCounts = Object.fromEntries(['survived', 'defeat', 'capped', 'incomplete'].map(
+    (outcome) => [outcome, runs.filter((run) => run.outcome === outcome).length],
+  ));
 
   return {
     label: contestant.label,
     type: contestant.type,
     runs: runs.map(({ finalState, ...run }) => run),
     averageScore: Math.round(runs.reduce((sum, run) => sum + run.total, 0) / runs.length),
+    averageCommandScore: Math.round(runs.reduce((sum, run) => sum + run.commandScore, 0) / runs.length),
     averageDivergence: +(runs.reduce((sum, run) => sum + run.divergence, 0) / runs.length).toFixed(3),
-    survivalRate: +(runs.filter((run) => run.survived).length / runs.length).toFixed(2),
+    outcomeCounts,
+    survivalRate: endedRuns.length ? +(outcomeCounts.survived / endedRuns.length).toFixed(2) : null,
+    survivalRateDenominator: 'ended-runs',
+    endingRate: +(endedRuns.length / runs.length).toFixed(2),
+    defeatRate: +(outcomeCounts.defeat / runs.length).toFixed(2),
+    cappedRate: +(outcomeCounts.capped / runs.length).toFixed(2),
+    incompleteRate: +(outcomeCounts.incomplete / runs.length).toFixed(2),
+    // Compatibility only: reaching a requested cap is not a campaign completion.
     capCompletionRate: +(runs.filter((run) => run.completedRequestedTurns).length / runs.length).toFixed(2),
     averageCrisesFaced: +(runs.reduce((sum, run) => sum + run.crisesFaced, 0) / runs.length).toFixed(2),
     averageCrisesResolved: +(runs.reduce((sum, run) => sum + run.crisesResolved, 0) / runs.length).toFixed(2),
@@ -415,6 +440,10 @@ async function benchmarkContestant(contestant, scenarios, seeds, maxTurns) {
           seed: bestRun.seed,
           total: bestRun.total,
           grade: bestRun.grade,
+          commandScore: bestRun.commandScore,
+          commandGrade: bestRun.commandGrade,
+          outcome: bestRun.outcome,
+          stopReason: bestRun.stopReason,
           endingClass: bestRun.endingClass,
           divergence: bestRun.divergence,
           turnsPlayed: bestRun.turnsPlayed,
@@ -430,20 +459,24 @@ async function benchmarkContestant(contestant, scenarios, seeds, maxTurns) {
 }
 
 function formatPercent(value) {
-  return `${Math.round(value * 100)}%`;
+  return value === null ? 'n/a' : `${Math.round(value * 100)}%`;
 }
 
 function pad(value, width) {
   return String(value).padEnd(width, ' ');
 }
 
-function formatTable(results, options) {
-  const runColumnLabel = options.maxTurns >= CAMPAIGN_FINAL_TURN ? 'Survival' : 'Cap Done';
+export function formatTable(results, options) {
   const header = [
     pad('Contestant', 28),
     pad('Type', 8),
-    pad('Avg Score', 10),
-    pad(runColumnLabel, 10),
+    pad('Composite', 10),
+    pad('Command', 8),
+    pad('Survival*', 10),
+    pad('Ended', 8),
+    pad('Defeat', 8),
+    pad('Capped', 8),
+    pad('Incomplete', 10),
     pad('Avg Div', 9),
     pad('Crises', 12)
   ].join(' ');
@@ -452,14 +485,21 @@ function formatTable(results, options) {
     pad(result.label, 28),
     pad(result.type, 8),
     pad(result.averageScore, 10),
-    pad(formatPercent(options.maxTurns >= CAMPAIGN_FINAL_TURN ? result.survivalRate : result.capCompletionRate), 10),
+    pad(result.averageCommandScore, 8),
+    pad(formatPercent(result.survivalRate), 10),
+    pad(formatPercent(result.endingRate), 8),
+    pad(formatPercent(result.defeatRate), 8),
+    pad(formatPercent(result.cappedRate), 8),
+    pad(formatPercent(result.incompleteRate), 10),
     pad(result.averageDivergence.toFixed(3), 9),
     pad(`${result.averageCrisesResolved}/${result.averageCrisesFaced}`, 12)
   ].join(' '));
 
   return [
     'Titans of War benchmark results',
-    `Seeds: ${options.seeds.join(', ')} · max turns: ${options.maxTurns}`,
+    `Seeds: ${options.seeds.join(', ')} | decision cap: ${options.maxTurns}`,
+    '* Survival is among ended runs only (n/a when none ended). Other rates use all runs.',
+    'Composite /1000 and Command /100 include provisional scores for unfinished runs; ranked by composite.',
     '',
     header,
     separator,
@@ -483,21 +523,21 @@ function formatDecisionExcerpt(history, preferSuccess) {
   return `Turn ${chosen.turn} — ${chosen.scenarioTitle}: "${chosen.choiceText}" (${outcome}). ${chosen.consequence}`;
 }
 
-function formatMarkdown(results, options, generatedAt) {
-  const runColumnLabel = options.maxTurns >= CAMPAIGN_FINAL_TURN ? 'Survival' : 'Cap Done';
+export function formatMarkdown(results, options, generatedAt) {
   const lines = [
     '# Titans of War Benchmark League',
     '',
     `*Generated:* ${generatedAt}`,
-    `*Seeds:* ${options.seeds.join(', ')} | *Max turns:* ${options.maxTurns}`,
+    `*Seeds:* ${options.seeds.join(', ')} | *Decision cap:* ${options.maxTurns}`,
+    'Survival is among ended runs only (n/a when none ended). Other rates use all runs.',
+    'Composite /1000 and Command /100 include provisional scores for unfinished runs; ranked by composite.',
     '',
-    `| Rank | Contestant | Type | Avg Score | ${runColumnLabel} | Avg Div | Crises |`,
-    '| --- | --- | --- | ---: | ---: | ---: | --- |',
+    '| Rank | Contestant | Type | Composite | Command | Survival | Ended | Defeat | Capped | Incomplete | Avg Div | Crises |',
+    '| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |',
   ];
 
   results.forEach((result, index) => {
-    const runRate = options.maxTurns >= CAMPAIGN_FINAL_TURN ? result.survivalRate : result.capCompletionRate;
-    lines.push(`| ${index + 1} | ${result.label} | ${result.type} | ${result.averageScore} | ${formatPercent(runRate)} | ${result.averageDivergence.toFixed(3)} | ${result.averageCrisesResolved}/${result.averageCrisesFaced} |`);
+    lines.push(`| ${index + 1} | ${result.label} | ${result.type} | ${result.averageScore} | ${result.averageCommandScore} | ${formatPercent(result.survivalRate)} | ${formatPercent(result.endingRate)} | ${formatPercent(result.defeatRate)} | ${formatPercent(result.cappedRate)} | ${formatPercent(result.incompleteRate)} | ${result.averageDivergence.toFixed(3)} | ${result.averageCrisesResolved}/${result.averageCrisesFaced} |`);
   });
 
   lines.push('');
@@ -515,6 +555,7 @@ function formatMarkdown(results, options, generatedAt) {
     lines.push(representative.summary);
     lines.push('');
     lines.push(`- Representative seed: ${representative.seed}`);
+    lines.push(`- Run outcome: ${representative.outcome} (${representative.stopReason})`);
     lines.push(`- Political economy: ${representative.politicalEconomyOverview}`);
     lines.push(`- Dominant liabilities: ${representative.dominantPoliticalRisks.join(', ') || 'none'}`);
     lines.push(`- Strongest decision excerpt: ${representative.strongestDecisionExcerpt}`);
@@ -572,6 +613,8 @@ async function main() {
     generatedAt,
     seeds: options.seeds,
     maxTurns: options.maxTurns,
+    maxDecisions: options.maxTurns,
+    survivalRateDenominator: 'ended-runs',
     contestants: results
   };
 
@@ -608,7 +651,9 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error(`[benchmark] ${error.message}`);
-  process.exitCode = 1;
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  main().catch((error) => {
+    console.error(`[benchmark] ${error.message}`);
+    process.exitCode = 1;
+  });
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "gettysburg-v32-historical-byte-migration-v1",
+  "baselineSHA256": "10512b3980c230d393534020499a92ccd56042c04993ee8926e2c6b2bd937f87",
+  "baselineFiles": 1507,
+  "fixture": {
+    "path": "scripts/fixtures/gettysburg-v32-preservation.json",
+    "sha256": "6d8f7a518291d8acbeddadaa1f0fe145fc4d35e9821d248d153441172f7a89e2"
+  },
+  "oldFixturesRefreshed": false,
+  "oldMigrationLedgersEdited": false,
+  "mandatoryRegistration": "package.json",
+  "mandatorySuite": "scripts/test-gettysburg-v32-contact.mjs",
+  "migrations": [
+    {
+      "path": "package.json",
+      "archive": "scripts/test-support/gettysburg-v32-before/package.json",
+      "beforeSHA256": "cf20efa26f7d799db5aff324d42098a40fde6456b54280e4205ad30d4b727ffc",
+      "currentSHA256": "a79baf25996a54c90397e606ba821eb494b3554d992d26b82cd7a9df6b41b0c0",
+      "reason": "Only mandatory v32 art, native and UI gate registrations; package version and dependencies unchanged."
+    },
+    {
+      "path": "src/battle/gettysburgInfantryClipPolicy.js",
+      "archive": "scripts/test-support/gettysburg-v32-before/src/battle/gettysburgInfantryClipPolicy.js",
+      "beforeSHA256": "4e8db4cd5a9a758e39fd871f3004a1af709fffcdc3d8dde454bcd274ce0e211f",
+      "currentSHA256": "bf5ad6bdaa5c87c59c0ffc39f01945480cc7bd063ea97d24d2f53ddc2ca464c3",
+      "reason": "Only additive optional v32 Union B SE/NW atlases atop exact v31 profiles."
+    },
+    {
+      "path": "src/battle/gettysburgInfantryClips.js",
+      "archive": "scripts/test-support/gettysburg-v32-before/src/battle/gettysburgInfantryClips.js",
+      "beforeSHA256": "51eed59a0737e5a6b10d8453d49b52dc72eeae68416f210011c7440e569b47d3",
+      "currentSHA256": "8383e1685be3b9415a7921d87ec229fbf99a0b2e87ab2cdcdfcb301ef2436bf5",
+      "reason": "Only strict v32 Union B validation and dispatch; all older addresses remain current and unchanged."
+    },
+    {
+      "path": "src/components/CivilWarBattleEncounter.jsx",
+      "archive": "scripts/test-support/gettysburg-v32-before/src/components/CivilWarBattleEncounter.jsx",
+      "beforeSHA256": "919e6ee7a566286b13a0c068550b82bc2711b90291b19edd238aea515a3bf6c6",
+      "currentSHA256": "0eb74307c7e1d697c1c2523e3921f53d6bb318bd296a35d94d34a96527140273",
+      "reason": "Restore pending/received assault target presentation with per-formation explicit drafts, no order or checkpoint changes."
+    },
+    {
+      "path": "scripts/test-support/gettysburgV31Preservation.mjs",
+      "archive": "scripts/test-support/gettysburg-v32-before/scripts/test-support/gettysburgV31Preservation.mjs",
+      "beforeSHA256": "e71ddc00748d32584c79d344dade342b1fbff7c600593b87f3311968f024f374",
+      "currentSHA256": "d957ecaf9c015808302adde35ba8413202e66549c470cedb4b68f565ec367b7a",
+      "reason": "Only fixed v32 historical-byte reader adapter; original v31 ledger and every behavior assertion preserved."
+    },
+    {
+      "path": "scripts/test-support/checkpointRepairPreservation.mjs",
+      "archive": "scripts/test-support/gettysburg-v32-before/scripts/test-support/checkpointRepairPreservation.mjs",
+      "beforeSHA256": "0385d6c1fca48b3887368a1abdf85697c1e31dc62dd0186a17a5f3301db3699b",
+      "currentSHA256": "08be5117e5b5639a93eaabf57e4e216debbf8e8f88bbec77f29188db39b5d32c",
+      "reason": "Only fixed v32 historical-byte reader adapter; owner-v2 repair, original ledger and current save behavior preserved."
+    },
+    {
+      "path": "scripts/test-gettysburg-v31-contact.mjs",
+      "archive": "scripts/test-support/gettysburg-v32-before/scripts/test-gettysburg-v31-contact.mjs",
+      "beforeSHA256": "8c11f87b7862989e6abbfb8c512ed38cbbe60476d0036ac0c146b1cb1e9b1bd0",
+      "currentSHA256": "92520cf4f6e3be2da56d441465581d69464f5efea294ca37357045f8235d715c",
+      "reason": "Only migration import and protected historical-byte reader; current Scene/selector and all 25 v31 behavior cases remain active."
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "frames": {
+    "b-melee-5-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.625199,
+        "y": 0.944179
+      },
+      "bodyHeight": 382
+    },
+    "b-melee-5-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.610845,
+        "y": 0.945774
+      },
+      "bodyHeight": 382
+    },
+    "b-melee-5-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.617225,
+        "y": 0.856459
+      },
+      "bodyHeight": 382
+    },
+    "b-melee-5-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.623604,
+        "y": 0.869219
+      },
+      "bodyHeight": 382
+    }
+  },
+  "meta": {
+    "image": "union-b-contact-nw.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+    "source": "docs/art-pass/candidates/gettysburg-v32/union-b-contact-nw-candidate.png",
+    "artPass": "gettysburg-v32",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "union",
+        "identity": "b",
+        "direction": 5,
+        "action": "melee",
+        "key": "union-gettysburg-v32-b-contact-nw",
+        "frames": [
+          "b-melee-5-0",
+          "b-melee-5-1",
+          "b-melee-5-2",
+          "b-melee-5-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.625199,
+            "y": 0.944179
+          },
+          {
+            "x": 0.610845,
+            "y": 0.945774
+          },
+          {
+            "x": 0.617225,
+            "y": 0.856459
+          },
+          {
+            "x": 0.623604,
+            "y": 0.869219
+          }
+        ],
+        "referenceHeight": 382,
+        "sourceHash": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeContactSequence": "gettysburg-v32-union-b-nw-contact",
+        "scope": "Exact source-reviewed union B NW local opt-in only; incomplete family",
+        "familyComplete": false,
+        "productionApproved": false,
+        "defaultApproved": false,
+        "humanCertified": false,
+        "physicalAnatomyCertified": false,
+        "historicalDrillCertified": false
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v32-independent-union-b-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "9f620c6a789171be3cff65f68a2babbf0d7077b21b51a6415f39ef6b10a117cd",
+    "referenceHeight": 382,
+    "familyComplete": false,
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

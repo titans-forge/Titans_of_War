@@ -1,0 +1,61 @@
+{
+  "schema": "gettysburg-v39-historical-byte-migration-v1",
+  "status": "frozen-approved-runtime-pins",
+  "baselineSHA256": "937207353e1f0f69b014090874ff3fec96c1b92231a11dcef753fffe043af923",
+  "baselineFiles": 1615,
+  "baselineBytes": 558140095,
+  "fixture": {
+    "path": "scripts/fixtures/gettysburg-v39-preservation.json",
+    "sha256": "b24e039932f67e3225e09120446ebf4683c49d467a84c1eb872c45d90739d450"
+  },
+  "capture": {
+    "path": "scripts/capture-gettysburg-v39-preservation.mjs",
+    "sha256": "e94a23c3b15c21ad28fb5501c9801db2f45e9a125d95d95bad31918c2295f936"
+  },
+  "oldFixturesRefreshed": false,
+  "oldMigrationLedgersEdited": false,
+  "behavioralAssertionsChanged": false,
+  "mandatoryRegistration": "package.json",
+  "mandatorySuite": "scripts/test-gettysburg-v39-view-continuity.mjs",
+  "migrations": [
+    {
+      "path": "package.json",
+      "archive": "scripts/test-support/gettysburg-v39-before/package.json",
+      "beforeSHA256": "6bf787c05a5d5d394ed8d5eec65278389c713ad1d6b8db216e12d4d98a8ff174",
+      "currentSHA256": "51da7f70d11dc36f11ab4a842b2dbbcf18579414fb2d65afe45e3de8266196e2",
+      "reason": "Only four mandatory v39 view-continuity script registrations; version, dependencies and lockfile unchanged."
+    },
+    {
+      "path": "src/battle/CivilWarBattlefield.jsx",
+      "archive": "scripts/test-support/gettysburg-v39-before/src/battle/CivilWarBattlefield.jsx",
+      "beforeSHA256": "6eafd829c159bc3afe99ed784862dcfae59e4ef40b7210d64b4e02257451b6f8",
+      "currentSHA256": "bd4c4a5d4c38332e94769b0cacd6b01406993521b2772d8c7861091c1391bee8",
+      "reason": "Optional Gettysburg camera framing checkpoint and restore only; disabled Scene, combat, raw feet, artwork, shots and existing gates remain exact."
+    },
+    {
+      "path": "scripts/test-support/gettysburgV38Preservation.mjs",
+      "archive": "scripts/test-support/gettysburg-v39-before/scripts/test-support/gettysburgV38Preservation.mjs",
+      "beforeSHA256": "72bb3ca8ee05a638ae28826e40e0815b11509b7e5e66dad94e26e55134601c8f",
+      "currentSHA256": "315037b4fd7280d3a99f8305c3600a0f2da44083bedadc696aac86ae380eec38",
+      "reason": "Only V39 historical-source import and metadata directRead return; every original V38 fixture, ledger and assertion remains byte exact."
+    }
+  ],
+  "newSourcePins": [
+    {
+      "path": "src/battle/fieldViewCheckpoint.js",
+      "sha256": "0535f77a62a6dd421cd4d786a9bb67435976240d1883200a94afb4bc85a54864"
+    },
+    {
+      "path": "scripts/test-gettysburg-v39-view-continuity.mjs",
+      "sha256": "8587ef3382d8e1cffd3e66d52c3ac175d7fc95222eb0e31081d7eec42eee23ec"
+    },
+    {
+      "path": "docs/CIVIL_WAR_V39_VIEW_CONTINUITY.md",
+      "sha256": "8f425a844e25b9e2bb3a25baf9bcd12535f0d72f69c7c53dd2a451cca637684c"
+    },
+    {
+      "path": "scripts/test-support/gettysburgV39Regression.mjs",
+      "sha256": "2c498c061942a0f44fced4ec91cac7007f7cee54382e461189d1c617a4598ff7"
+    }
+  ]
+}

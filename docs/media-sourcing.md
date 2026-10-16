@@ -29,12 +29,17 @@ Recommended track set:
 - The Bonnie Blue Flag
 - When Johnny Comes Marching Home
 - Battle Hymn of the Republic
-- Tenting Tonight on the Old Camp Ground
 - Aura Lea
 - Home, Sweet Home
 - Somber Appomattox or campaign-end classical elegy
 - Campfire ambience
 - Distant artillery ambience
+
+The current playlist is defined by `src/game/audioCatalog.js`. Do not restore
+Tenting Tonight on the Old Camp Ground or Just Before the Battle, Mother: both
+were removed at the user's request. Retain the accepted instrumental Bonnie
+Blue Flag arrangement, including its repeated stanzas and final ending, while
+reviewing any future replacement recording.
 
 Add metadata in `src/game/audioCatalog.js` before or alongside each file:
 

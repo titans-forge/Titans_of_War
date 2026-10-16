@@ -1,0 +1,200 @@
+{
+  "frames": {
+    "a-ready-3-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.562998,
+        "y": 0.848485
+      },
+      "bodyHeight": 372
+    },
+    "a-fire-3-0": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.539075,
+        "y": 0.85327
+      },
+      "bodyHeight": 372
+    },
+    "a-reload-3-0": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.577352,
+        "y": 0.795853
+      },
+      "bodyHeight": 372
+    },
+    "a-reload-3-1": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.547049,
+        "y": 0.795853
+      },
+      "bodyHeight": 372
+    }
+  },
+  "meta": {
+    "image": "confederate-a-actions-sw.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d",
+    "source": "docs/art-pass/candidates/gettysburg-v15/confederate-a-sw-actions-candidate.png",
+    "artPass": "gettysburg-v15",
+    "candidate": true,
+    "productionApproved": false,
+    "pixelTreatment": "none; byte-for-byte native PNG copy, full equal cells",
+    "clips": [
+      {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 3,
+        "action": "ready",
+        "key": "confederate-gettysburg-v15-a-actions-sw",
+        "frames": [
+          "a-ready-3-0"
+        ],
+        "sourceHash": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d",
+        "referenceHeight": 372,
+        "pivots": [
+          {
+            "x": 0.562998,
+            "y": 0.848485
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "Exact historical Gettysburg v15 local opt-in only; default, production, complete family, human, physical anatomy and historical drill approval remain false."
+      },
+      {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 3,
+        "action": "fire",
+        "key": "confederate-gettysburg-v15-a-actions-sw",
+        "frames": [
+          "a-fire-3-0"
+        ],
+        "sourceHash": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d",
+        "referenceHeight": 372,
+        "pivots": [
+          {
+            "x": 0.539075,
+            "y": 0.85327
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "Exact historical Gettysburg v15 local opt-in only; default, production, complete family, human, physical anatomy and historical drill approval remain false.",
+        "muzzles": [
+          {
+            "x": 0.266348,
+            "y": 0.478469
+          }
+        ]
+      },
+      {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 3,
+        "action": "reload",
+        "key": "confederate-gettysburg-v15-a-actions-sw",
+        "frames": [
+          "a-reload-3-0",
+          "a-reload-3-1"
+        ],
+        "sourceHash": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d",
+        "referenceHeight": 372,
+        "pivots": [
+          {
+            "x": 0.577352,
+            "y": 0.795853
+          },
+          {
+            "x": 0.547049,
+            "y": 0.795853
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "Exact historical Gettysburg v15 local opt-in only; default, production, complete family, human, physical anatomy and historical drill approval remain false."
+      }
+    ],
+    "measurementReview": "docs/art-pass/reviews/gettysburg-v15-confederate-a-actions-sw-measurement.json"
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "artPass": "gettysburg-v32",
+  "side": "union",
+  "identity": "b",
+  "direction": 5,
+  "cardinal": "nw",
+  "role": "contact",
+  "source": "docs/art-pass/candidates/gettysburg-v32/union-b-contact-nw-candidate.png",
+  "sourceSHA256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v32-independent-union-b-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "9f620c6a789171be3cff65f68a2babbf0d7077b21b51a6415f39ef6b10a117cd",
+  "referenceHeight": 382,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh union B NW contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "d9778a909f35b1321458737e6aff4363a930138670392d710de65a79f196ca62",
+      "ground": [
+        392,
+        592
+      ],
+      "groundROI": [
+        299,
+        542,
+        405,
+        606
+      ],
+      "groundMethod": "Projected pelvis X follows the rear belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the nearer screen-left supporting boot ROI.",
+      "solidBounds": [
+        136,
+        188,
+        470,
+        592
+      ],
+      "solidPadding": [
+        136,
+        188,
+        157,
+        35
+      ],
+      "nonzeroBounds": [
+        33,
+        35,
+        625,
+        613
+      ],
+      "capROI": [
+        312,
+        180,
+        372,
+        226
+      ],
+      "capTop": 188,
+      "referenceSoleROI": [
+        314,
+        579,
+        397,
+        599
+      ],
+      "referenceSoleGroundY": 592,
+      "bodySpan": 404
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "4547222beb592670185257dca5a18ad05362a4de6d68d2ec08c66ee4965ad89a",
+      "ground": [
+        383,
+        593
+      ],
+      "groundROI": [
+        487,
+        554,
+        552,
+        605
+      ],
+      "groundMethod": "Projected pelvis X follows the bent-lunge pelvis independently of the rear boot; Y is alpha>=64 maximum exclusive Y in the screen-right rear forefoot/toe support ROI.",
+      "solidBounds": [
+        37,
+        212,
+        553,
+        593
+      ],
+      "solidPadding": [
+        37,
+        212,
+        74,
+        34
+      ],
+      "nonzeroBounds": [
+        11,
+        21,
+        556,
+        596
+      ],
+      "capROI": [
+        289,
+        205,
+        346,
+        247
+      ],
+      "capTop": 212,
+      "referenceSoleROI": [
+        493,
+        580,
+        533,
+        600
+      ],
+      "referenceSoleGroundY": 593,
+      "bodySpan": 381
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "715755db4aa22f8302dc95a6b9d420dc75ccc69bd71505eda524367f2735a94d",
+      "ground": [
+        387,
+        537
+      ],
+      "groundROI": [
+        290,
+        484,
+        395,
+        547
+      ],
+      "groundMethod": "Projected pelvis X follows the rear belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the lower screen-left support boot ROI.",
+      "solidBounds": [
+        160,
+        134,
+        500,
+        537
+      ],
+      "solidPadding": [
+        160,
+        134,
+        127,
+        90
+      ],
+      "nonzeroBounds": [
+        57,
+        15,
+        623,
+        571
+      ],
+      "capROI": [
+        323,
+        155,
+        379,
+        200
+      ],
+      "capTop": 164,
+      "referenceSoleROI": [
+        305,
+        526,
+        385,
+        542
+      ],
+      "referenceSoleGroundY": 537,
+      "bodySpan": 373
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "73a6e25e0aa94bafea6b54e4686b8854d1f467611862bd84b9c23ba493fe2770",
+      "ground": [
+        391,
+        545
+      ],
+      "groundROI": [
+        272,
+        491,
+        377,
+        556
+      ],
+      "groundMethod": "Projected pelvis X follows the rear belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the lower screen-left support boot ROI; overhead rifle and grips are excluded.",
+      "solidBounds": [
+        135,
+        47,
+        515,
+        545
+      ],
+      "solidPadding": [
+        135,
+        47,
+        112,
+        82
+      ],
+      "nonzeroBounds": [
+        9,
+        3,
+        595,
+        587
+      ],
+      "capROI": [
+        333,
+        161,
+        365,
+        201
+      ],
+      "capTop": 162,
+      "referenceSoleROI": [
+        288,
+        533,
+        367,
+        550
+      ],
+      "referenceSoleGroundY": 545,
+      "bodySpan": 383
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "action": "melee",
+      "key": "union-gettysburg-v32-b-contact-nw",
+      "frames": [
+        "b-melee-5-0",
+        "b-melee-5-1",
+        "b-melee-5-2",
+        "b-melee-5-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.625199,
+          "y": 0.944179
+        },
+        {
+          "x": 0.610845,
+          "y": 0.945774
+        },
+        {
+          "x": 0.617225,
+          "y": 0.856459
+        },
+        {
+          "x": 0.623604,
+          "y": 0.869219
+        }
+      ],
+      "referenceHeight": 382,
+      "sourceHash": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeContactSequence": "gettysburg-v32-union-b-nw-contact",
+      "scope": "Exact source-reviewed union B NW local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

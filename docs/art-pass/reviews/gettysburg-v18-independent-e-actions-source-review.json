@@ -1,0 +1,1003 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent Codex Astra Max model-assisted reviewer",
+  "reviewedAtUTC": "2026-10-04T05:16:59.047494Z",
+  "modelAssisted": true,
+  "independentReview": true,
+  "acceptedForOptIn": true,
+  "kitAccepted": true,
+  "allSixCellsReviewed": true,
+  "completeNativeSheetInspected": true,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "completeFamilyApproved": false,
+  "identityKit": "confederate-a",
+  "selectedSource": "docs/art-pass/candidates/gettysburg-v18/confederate-a-e-actions-candidate.png",
+  "selectedSourceSha256": "0430ceb12a9b7e5198cb590a1582b80cf8036057e70562ea5ee52cb2a59ca4cd",
+  "source": {
+    "path": "docs/art-pass/candidates/gettysburg-v18/confederate-a-e-actions-candidate.png",
+    "sha256": "0430ceb12a9b7e5198cb590a1582b80cf8036057e70562ea5ee52cb2a59ca4cd",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "cell": [
+      512,
+      512
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "generatedOriginal": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-09a1aaff-3725-42d1-b5a5-2e09c74c834e.png",
+    "generatedOriginalAndCandidateByteIdentical": true,
+    "pixelTreatment": "none; complete native PNG remains byte-for-byte unchanged"
+  },
+  "scope": "Source-only acceptance of one opt-in Confederate A east stationary illustration pilot. The complete native sheet supplies ready, fire and four ordered loading/return poses. Renderer playback, installation, default promotion, the complete infantry family and historical drill are outside this source approval.",
+  "decision": "Accepted only under the explicitly amended source-specific 6% posture limit. The original 5% target is failed and remains reported. A common 349-pixel height reference and independent ground/pelvis pivots must preserve the native posture differences without per-phase scaling.",
+  "postureException": {
+    "originalLimit": 0.05,
+    "measuredSpread": 0.05738880918220947,
+    "amendedLimit": 0.06,
+    "originalLimitPassed": false,
+    "amendedLimitPassed": true,
+    "basis": "The two aimed poses are 341/340 pixels; upright ready/cartridge are 354/360; charge and raised ram are 352/345. The spread follows the illustrated posture pattern and the complete sheet shows no obvious torso/limb family scale substitution. Cap-to-sole extent is pose-sensitive, so this narrow exception is defensible for an opt-in illustration pilot. It does not relax older sources or certify anatomy.",
+    "contract": "../WORK_CONTRACT.md, Explicit v18 source-specific posture review amendment",
+    "normalAndCloseZoomGroundRegisteredPlaybackRequiredBeforeInstallation": true,
+    "gameplayPlaybackInspectedByThisReviewer": false
+  },
+  "bearingAndGrip": {
+    "direction": "E",
+    "directionIndex": 0,
+    "actualFacingAccepted": true,
+    "bearing": "All six visible profiles face image right. Both shouldered barrels point right; upright loading poses retain the same screen-side body bearing.",
+    "kit": "Gray cap and jacket, pale buff trousers, brown boots and straps, dark pack/pouch and tan blanket roll remain a coherent Confederate A illustration identity.",
+    "grip": "Ready, aimed, cartridge, charge and ram hands have plausible visible support/handling roles. Concealed contacts and fingers are not certified.",
+    "equipmentContinuity": "Charge/ram omit or obscure the projecting bayonet visible in ready/cartridge/aim, and small weapon details differ between phases. Close-zoom playback must judge the transition; the sequence is not a complete or mechanically certified musket drill."
+  },
+  "cells": [
+    {
+      "cell": 0,
+      "phaseRole": "ready",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "completeLegChainsAccepted": true,
+      "supportRoleAccepted": true,
+      "observation": "Upright ready profile faces image right. One hand supports the upright long arm and the lower hand rests beside the stock; the complete weapon and both leg-to-boot chains remain inside the cell. The nearer planted boot supplies the ground measurement.",
+      "supportingSole": "nearer planted boot; farther boot retained at its projected depth",
+      "capTopY": 104,
+      "supportingSoleGroundY": 458,
+      "bodySpan": 354,
+      "solidAlphaPadding": [
+        157,
+        38,
+        207,
+        54
+      ]
+    },
+    {
+      "cell": 1,
+      "phaseRole": "fire",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "completeLegChainsAccepted": true,
+      "supportRoleAccepted": true,
+      "observation": "Shouldered aimed profile faces right. Butt-to-shoulder placement, rear hand near the trigger/lock and forward hand beneath the fore-end are visually plausible. Both legs and boots are complete. This single pose contains no baked flash; the engine must provide the firing cue.",
+      "supportingSole": "nearer planted boot; farther boot retained at its projected depth",
+      "capTopY": 117,
+      "supportingSoleGroundY": 458,
+      "bodySpan": 341,
+      "solidAlphaPadding": [
+        114,
+        117,
+        45,
+        54
+      ]
+    },
+    {
+      "cell": 2,
+      "phaseRole": "cartridge",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "completeLegChainsAccepted": true,
+      "supportRoleAccepted": true,
+      "observation": "Upright cartridge-opening illustration faces right, with the raised hand and small paper form at the mouth while the other hand stabilizes the upright weapon. Both leg chains are complete. Concealed fingers and actual tearing mechanics are not certified.",
+      "supportingSole": "nearer planted boot; farther boot retained at its projected depth",
+      "capTopY": 81,
+      "supportingSoleGroundY": 441,
+      "bodySpan": 360,
+      "solidAlphaPadding": [
+        149,
+        81,
+        191,
+        71
+      ]
+    },
+    {
+      "cell": 3,
+      "phaseRole": "charge",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "completeLegChainsAccepted": true,
+      "supportRoleAccepted": true,
+      "observation": "Muzzle-charging illustration faces right. The upper hand holds the paper form over the upward barrel while the lower hand stabilizes the weapon. Both supporting legs are complete; the nearer sole is unobstructed. Projecting bayonet details are absent or obscured relative to the aimed poses.",
+      "supportingSole": "nearer planted boot; farther boot retained at its projected depth",
+      "capTopY": 89,
+      "supportingSoleGroundY": 441,
+      "bodySpan": 352,
+      "solidAlphaPadding": [
+        129,
+        89,
+        183,
+        71
+      ]
+    },
+    {
+      "cell": 4,
+      "phaseRole": "ram",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "completeLegChainsAccepted": true,
+      "supportRoleAccepted": true,
+      "observation": "Raised ramming illustration faces right. A thin rod, raised insertion hand and separate lower stabilizing hand are visible; the rod is not clipped and solid padding above it is 28 pixels. Both complete leg chains and supporting boots are visible. Exact rod/barrel mechanics and continuity remain illustrative.",
+      "supportingSole": "nearer planted boot; farther boot retained at its projected depth",
+      "capTopY": 95,
+      "supportingSoleGroundY": 440,
+      "bodySpan": 345,
+      "solidAlphaPadding": [
+        159,
+        28,
+        190,
+        72
+      ]
+    },
+    {
+      "cell": 5,
+      "phaseRole": "return-to-shouldered-aim",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "completeLegChainsAccepted": true,
+      "supportRoleAccepted": true,
+      "observation": "Return to shouldered aim faces right, with a plausible rear grip, supporting fore-end grip and shoulder contact. Both complete legs and planted boots are visible. Its 340-pixel body span closely matches the fire cell at 341 pixels; returning to this aimed pose is readable, but missing intermediate drill operations are not supplied.",
+      "supportingSole": "nearer planted boot; farther boot retained at its projected depth",
+      "capTopY": 100,
+      "supportingSoleGroundY": 440,
+      "bodySpan": 340,
+      "solidAlphaPadding": [
+        111,
+        100,
+        42,
+        72
+      ]
+    }
+  ],
+  "measurementContract": {
+    "cell": 512,
+    "roots": [
+      [
+        231,
+        458
+      ],
+      [
+        181,
+        458
+      ],
+      [
+        228,
+        441
+      ],
+      [
+        212,
+        441
+      ],
+      [
+        235,
+        440
+      ],
+      [
+        179,
+        440
+      ]
+    ],
+    "capTop": [
+      104,
+      117,
+      81,
+      89,
+      95,
+      100
+    ],
+    "bodySpans": [
+      354,
+      341,
+      360,
+      352,
+      345,
+      340
+    ],
+    "referenceHeight": 349,
+    "capROIs": [
+      [
+        206,
+        98,
+        269,
+        126
+      ],
+      [
+        168,
+        110,
+        230,
+        144
+      ],
+      [
+        202,
+        74,
+        274,
+        111
+      ],
+      [
+        178,
+        83,
+        250,
+        116
+      ],
+      [
+        200,
+        88,
+        278,
+        125
+      ],
+      [
+        172,
+        94,
+        232,
+        128
+      ]
+    ],
+    "supportingSoleROIs": [
+      [
+        181,
+        448,
+        249,
+        463
+      ],
+      [
+        127,
+        446,
+        199,
+        463
+      ],
+      [
+        179,
+        430,
+        249,
+        447
+      ],
+      [
+        157,
+        430,
+        228,
+        448
+      ],
+      [
+        187,
+        429,
+        260,
+        447
+      ],
+      [
+        120,
+        429,
+        199,
+        447
+      ]
+    ],
+    "pelvisCenterX": [
+      231,
+      181,
+      228,
+      212,
+      235,
+      179
+    ],
+    "measurementThreshold": 64,
+    "muzzle": [
+      394,
+      161
+    ],
+    "muzzleROI": [
+      388,
+      154,
+      401,
+      168
+    ],
+    "measuredSourceSha256": "0430ceb12a9b7e5198cb590a1582b80cf8036057e70562ea5ee52cb2a59ca4cd",
+    "measurementsFresh": true,
+    "muzzleApplicable": true,
+    "firingBarrelMouth": [
+      394,
+      161
+    ],
+    "firingMuzzleAccepted": true,
+    "firingCell": 1,
+    "perCellSupportingSoleGroundY": [
+      458,
+      458,
+      441,
+      441,
+      440,
+      440
+    ],
+    "rootMeaning": "Each X is the independently interpreted projected pelvic center of that native pose, excluding the pack, blanket, pouch and weapon. Each Y is the exclusive lower edge of alpha>=64 pixels in the nearer visibly supporting boot sole. X is a manual illustration registration, not a physical anatomy measurement.",
+    "groundMethod": "Inspect both complete leg-to-boot chains in each native cell, select a narrow sole-only ROI on the nearer weight-bearing boot, and compute maxYExclusive at alpha>=64. The farther boot is higher in the oblique projection and does not replace the nearer sole. Gun butt, shadow and sheet bounds are excluded.",
+    "referenceMethod": "Subtract the independently selected cap-crown alpha>=64 minimum Y from the supporting-sole ground Y in each cell. Use the six-span median 348.5, rounded half upward to one source-wide referenceHeight of 349. No phase-specific size normalization is permitted.",
+    "roiMethod": "The reviewer selected six cap-crown-only rectangles and six narrow supporting-sole rectangles by inspecting the complete native sheet and each cell. Temporary in-memory cell views and neutral-field composites clarified alpha and anatomy; no diagnostic raster was saved and no source or exported pixel was changed. ROIs were recomputed against the exact copied candidate SHA-256.",
+    "muzzleMethod": "The fire cell was inspected at native resolution and with a temporary nearest-neighbor pixel enlargement. [394,161] marks the visible end of the upper dark barrel before the thinner projecting bayonet; the reviewed point has native alpha 113. The bounded ROI includes the barrel-end metal. This is a visual effects anchor, not a certified physical barrel aperture.",
+    "medianBodySpan": 348.5,
+    "spanRange": 20,
+    "spanRangeFractionOfMedian": 0.05738880918220947,
+    "maximumSpanRangeFractionOfMedian": 0.06,
+    "originalTargetFractionOfMedian": 0.05,
+    "originalTargetMet": false,
+    "sourceSpecificPostureException": true,
+    "phaseScaleNormalization": false,
+    "physicalBarrelApertureCertified": false,
+    "fullSpanRangeAt32PixelReference": 1.836441893830703,
+    "fullSpanRangeAt58TimesPoint82Reference": 2.729411764705882
+  },
+  "nativePixelMeasurements": [
+    {
+      "cell": 0,
+      "phaseRole": "ready",
+      "cap": {
+        "roi": [
+          206,
+          98,
+          269,
+          126
+        ],
+        "solidPixels": 976,
+        "minY": 104,
+        "maxYExclusive": 126
+      },
+      "supportingSole": {
+        "roi": [
+          181,
+          448,
+          249,
+          463
+        ],
+        "solidPixels": 432,
+        "minY": 448,
+        "maxYExclusive": 458
+      },
+      "alpha": {
+        "1": {
+          "pixels": 39871,
+          "bounds": [
+            0,
+            34,
+            504,
+            508
+          ],
+          "padding": [
+            0,
+            34,
+            8,
+            4
+          ]
+        },
+        "8": {
+          "pixels": 33750,
+          "bounds": [
+            157,
+            37,
+            306,
+            458
+          ],
+          "padding": [
+            157,
+            37,
+            206,
+            54
+          ]
+        },
+        "64": {
+          "pixels": 32818,
+          "bounds": [
+            157,
+            38,
+            305,
+            458
+          ],
+          "padding": [
+            157,
+            38,
+            207,
+            54
+          ]
+        },
+        "128": {
+          "pixels": 32207,
+          "bounds": [
+            157,
+            41,
+            305,
+            458
+          ],
+          "padding": [
+            157,
+            41,
+            207,
+            54
+          ]
+        },
+        "240": {
+          "pixels": 30560,
+          "bounds": [
+            158,
+            55,
+            304,
+            457
+          ],
+          "padding": [
+            158,
+            55,
+            208,
+            55
+          ]
+        }
+      }
+    },
+    {
+      "cell": 1,
+      "phaseRole": "fire",
+      "cap": {
+        "roi": [
+          168,
+          110,
+          230,
+          144
+        ],
+        "solidPixels": 1171,
+        "minY": 117,
+        "maxYExclusive": 144
+      },
+      "supportingSole": {
+        "roi": [
+          127,
+          446,
+          199,
+          463
+        ],
+        "solidPixels": 544,
+        "minY": 446,
+        "maxYExclusive": 458
+      },
+      "alpha": {
+        "1": {
+          "pixels": 37119,
+          "bounds": [
+            107,
+            89,
+            469,
+            462
+          ],
+          "padding": [
+            107,
+            89,
+            43,
+            50
+          ]
+        },
+        "8": {
+          "pixels": 31808,
+          "bounds": [
+            114,
+            117,
+            469,
+            458
+          ],
+          "padding": [
+            114,
+            117,
+            43,
+            54
+          ]
+        },
+        "64": {
+          "pixels": 30973,
+          "bounds": [
+            114,
+            117,
+            467,
+            458
+          ],
+          "padding": [
+            114,
+            117,
+            45,
+            54
+          ]
+        },
+        "128": {
+          "pixels": 30469,
+          "bounds": [
+            115,
+            117,
+            466,
+            457
+          ],
+          "padding": [
+            115,
+            117,
+            46,
+            55
+          ]
+        },
+        "240": {
+          "pixels": 28932,
+          "bounds": [
+            115,
+            118,
+            460,
+            457
+          ],
+          "padding": [
+            115,
+            118,
+            52,
+            55
+          ]
+        }
+      }
+    },
+    {
+      "cell": 2,
+      "phaseRole": "cartridge",
+      "cap": {
+        "roi": [
+          202,
+          74,
+          274,
+          111
+        ],
+        "solidPixels": 1469,
+        "minY": 81,
+        "maxYExclusive": 111
+      },
+      "supportingSole": {
+        "roi": [
+          179,
+          430,
+          249,
+          447
+        ],
+        "solidPixels": 526,
+        "minY": 430,
+        "maxYExclusive": 441
+      },
+      "alpha": {
+        "1": {
+          "pixels": 44518,
+          "bounds": [
+            143,
+            53,
+            482,
+            448
+          ],
+          "padding": [
+            143,
+            53,
+            30,
+            64
+          ]
+        },
+        "8": {
+          "pixels": 37200,
+          "bounds": [
+            147,
+            79,
+            321,
+            441
+          ],
+          "padding": [
+            147,
+            79,
+            191,
+            71
+          ]
+        },
+        "64": {
+          "pixels": 36175,
+          "bounds": [
+            149,
+            81,
+            321,
+            441
+          ],
+          "padding": [
+            149,
+            81,
+            191,
+            71
+          ]
+        },
+        "128": {
+          "pixels": 35567,
+          "bounds": [
+            149,
+            82,
+            321,
+            441
+          ],
+          "padding": [
+            149,
+            82,
+            191,
+            71
+          ]
+        },
+        "240": {
+          "pixels": 33914,
+          "bounds": [
+            150,
+            82,
+            320,
+            440
+          ],
+          "padding": [
+            150,
+            82,
+            192,
+            72
+          ]
+        }
+      }
+    },
+    {
+      "cell": 3,
+      "phaseRole": "charge",
+      "cap": {
+        "roi": [
+          178,
+          83,
+          250,
+          116
+        ],
+        "solidPixels": 1298,
+        "minY": 89,
+        "maxYExclusive": 116
+      },
+      "supportingSole": {
+        "roi": [
+          157,
+          430,
+          228,
+          448
+        ],
+        "solidPixels": 543,
+        "minY": 430,
+        "maxYExclusive": 441
+      },
+      "alpha": {
+        "1": {
+          "pixels": 45797,
+          "bounds": [
+            31,
+            3,
+            496,
+            512
+          ],
+          "padding": [
+            31,
+            3,
+            16,
+            0
+          ]
+        },
+        "8": {
+          "pixels": 38765,
+          "bounds": [
+            129,
+            88,
+            330,
+            442
+          ],
+          "padding": [
+            129,
+            88,
+            182,
+            70
+          ]
+        },
+        "64": {
+          "pixels": 37636,
+          "bounds": [
+            129,
+            89,
+            329,
+            441
+          ],
+          "padding": [
+            129,
+            89,
+            183,
+            71
+          ]
+        },
+        "128": {
+          "pixels": 37035,
+          "bounds": [
+            129,
+            89,
+            329,
+            441
+          ],
+          "padding": [
+            129,
+            89,
+            183,
+            71
+          ]
+        },
+        "240": {
+          "pixels": 35279,
+          "bounds": [
+            130,
+            90,
+            328,
+            440
+          ],
+          "padding": [
+            130,
+            90,
+            184,
+            72
+          ]
+        }
+      }
+    },
+    {
+      "cell": 4,
+      "phaseRole": "ram",
+      "cap": {
+        "roi": [
+          200,
+          88,
+          278,
+          125
+        ],
+        "solidPixels": 1493,
+        "minY": 95,
+        "maxYExclusive": 125
+      },
+      "supportingSole": {
+        "roi": [
+          187,
+          429,
+          260,
+          447
+        ],
+        "solidPixels": 464,
+        "minY": 429,
+        "maxYExclusive": 440
+      },
+      "alpha": {
+        "1": {
+          "pixels": 42125,
+          "bounds": [
+            137,
+            23,
+            481,
+            464
+          ],
+          "padding": [
+            137,
+            23,
+            31,
+            48
+          ]
+        },
+        "8": {
+          "pixels": 35904,
+          "bounds": [
+            159,
+            27,
+            322,
+            440
+          ],
+          "padding": [
+            159,
+            27,
+            190,
+            72
+          ]
+        },
+        "64": {
+          "pixels": 34897,
+          "bounds": [
+            159,
+            28,
+            322,
+            440
+          ],
+          "padding": [
+            159,
+            28,
+            190,
+            72
+          ]
+        },
+        "128": {
+          "pixels": 34285,
+          "bounds": [
+            159,
+            28,
+            322,
+            440
+          ],
+          "padding": [
+            159,
+            28,
+            190,
+            72
+          ]
+        },
+        "240": {
+          "pixels": 32637,
+          "bounds": [
+            160,
+            32,
+            321,
+            439
+          ],
+          "padding": [
+            160,
+            32,
+            191,
+            73
+          ]
+        }
+      }
+    },
+    {
+      "cell": 5,
+      "phaseRole": "return-to-shouldered-aim",
+      "cap": {
+        "roi": [
+          172,
+          94,
+          232,
+          128
+        ],
+        "solidPixels": 1148,
+        "minY": 100,
+        "maxYExclusive": 128
+      },
+      "supportingSole": {
+        "roi": [
+          120,
+          429,
+          199,
+          447
+        ],
+        "solidPixels": 454,
+        "minY": 429,
+        "maxYExclusive": 440
+      },
+      "alpha": {
+        "1": {
+          "pixels": 37945,
+          "bounds": [
+            1,
+            1,
+            476,
+            512
+          ],
+          "padding": [
+            1,
+            1,
+            36,
+            0
+          ]
+        },
+        "8": {
+          "pixels": 32315,
+          "bounds": [
+            110,
+            100,
+            472,
+            440
+          ],
+          "padding": [
+            110,
+            100,
+            40,
+            72
+          ]
+        },
+        "64": {
+          "pixels": 31501,
+          "bounds": [
+            111,
+            100,
+            470,
+            440
+          ],
+          "padding": [
+            111,
+            100,
+            42,
+            72
+          ]
+        },
+        "128": {
+          "pixels": 30904,
+          "bounds": [
+            111,
+            101,
+            468,
+            439
+          ],
+          "padding": [
+            111,
+            101,
+            44,
+            73
+          ]
+        },
+        "240": {
+          "pixels": 29467,
+          "bounds": [
+            112,
+            101,
+            420,
+            438
+          ],
+          "padding": [
+            112,
+            101,
+            92,
+            74
+          ]
+        }
+      }
+    }
+  ],
+  "solidAlphaPaddingVerified": true,
+  "alpha8PaddingVerified": true,
+  "nonzeroAlphaPaddingVerified": false,
+  "edgeOrFringeFreeCertified": false,
+  "remainingGates": [
+    "Inspect native ready/fire/cartridge/charge/ram/aim playback using the actual renderer at normal and close zoom, with one common reference height and these ground/pelvis registrations.",
+    "Check normal game terrain for low-alpha fringes and cell-edge sampling artifacts; alpha>=1 edge padding does not pass for every cell.",
+    "Verify exact source/review hashes, native author validation, missing-phase fallback, pause/reduced-motion/cold-resume behavior and the complete texture budget before installation."
+  ],
+  "limitations": [
+    "This is a genuinely separate model-assisted source inspection, not human art, anatomy, historical or usability certification.",
+    "The original 5% cap-to-sole gate failed: 20/348.5 = 5.738880918220947%. Acceptance uses the explicit source-specific 6% amendment only.",
+    "Manual pelvis centers and ROI selection are interpreted from a painted illustration; they are not physical joint or bone measurements.",
+    "All six broad action roles and complete visible leg chains are readable, but concealed fingers, true weapon internals, bayonet continuity, intermediate ramrod handling and full historical drill chronology remain unverified.",
+    "Fire and final aim are static shouldered poses. Firing, recoil, shot emission and time continuity require renderer evidence.",
+    "The full cap-to-sole range is about 1.84 pixels at a 32-pixel reference height and 2.73 pixels at 58 times 0.82 before camera zoom. This is a calculated extent difference, not a measured animation-jitter result.",
+    "Very faint alpha values reach some cell edges. Solid alpha padding passes, but complete edge/fringe freedom is not certified.",
+    "This approval covers exactly this complete unresampled native source and does not approve default art, the remaining identities/bearings, melee, casualties or the whole game."
+  ]
+}

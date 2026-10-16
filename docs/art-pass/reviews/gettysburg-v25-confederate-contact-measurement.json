@@ -1,0 +1,267 @@
+{
+  "artPass": "gettysburg-v25",
+  "side": "confederate",
+  "identity": "a",
+  "direction": 7,
+  "role": "contact",
+  "source": "docs/art-pass/candidates/gettysburg-v25/confederate-a-contact-ne-candidate.png",
+  "sourceSHA256": "ccb226c49fd8d5aecec1c8ca1e5deac6400f9371eab9b7aa797b3a17648045de",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v25-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "2560f481e547caadea34fe7da54229b6508540ac735a5895ea2489aa9354f558",
+  "referenceHeight": 364,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh confederate contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "24f0dc708d6c2cc8ae6323b289c1b97c90e68a14eced619b325b06740ac0c2d9",
+      "ground": [
+        314,
+        591
+      ],
+      "groundROI": [
+        303,
+        556,
+        388,
+        603
+      ],
+      "groundMethod": "Projected pelvis X at the rear-view hips. Ground Y is the nearer viewer-right/front boot sole, separate from the rear boot and rifle.",
+      "solidBounds": [
+        233,
+        221,
+        536,
+        591
+      ],
+      "solidPadding": [
+        233,
+        221,
+        91,
+        36
+      ],
+      "nonzeroBounds": [
+        59,
+        87,
+        621,
+        595
+      ],
+      "capROI": [
+        290,
+        211,
+        355,
+        251
+      ],
+      "capTop": 221,
+      "referenceSoleROI": [
+        303,
+        556,
+        388,
+        603
+      ],
+      "referenceSoleGroundY": 591,
+      "bodySpan": 370
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "7186e59e3e0d321f12cb535671950394777ae80cb1b3100e538242ddb61f85ab",
+      "ground": [
+        277,
+        592
+      ],
+      "groundROI": [
+        164,
+        550,
+        231,
+        604
+      ],
+      "groundMethod": "Projected pelvis X follows the forward-reaching hips. Ground Y is the nearer trailing viewer-left boot sole; the forehand extension and hip-level stock do not define the root.",
+      "solidBounds": [
+        170,
+        199,
+        557,
+        592
+      ],
+      "solidPadding": [
+        170,
+        199,
+        70,
+        35
+      ],
+      "nonzeroBounds": [
+        41,
+        52,
+        596,
+        595
+      ],
+      "capROI": [
+        273,
+        218,
+        336,
+        251
+      ],
+      "capTop": 226,
+      "referenceSoleROI": [
+        164,
+        550,
+        231,
+        604
+      ],
+      "referenceSoleGroundY": 592,
+      "bodySpan": 366
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "0eb1961657848418dfdb1037b6d77be99c78e0919f4b0149ad2fa2596fb4b571",
+      "ground": [
+        311,
+        513
+      ],
+      "groundROI": [
+        303,
+        480,
+        389,
+        525
+      ],
+      "groundMethod": "Projected pelvis X follows the withdrawn hips. Ground Y is the nearer viewer-right boot sole during the low recovery.",
+      "solidBounds": [
+        225,
+        152,
+        517,
+        513
+      ],
+      "solidPadding": [
+        225,
+        152,
+        110,
+        114
+      ],
+      "nonzeroBounds": [
+        89,
+        23,
+        615,
+        577
+      ],
+      "capROI": [
+        300,
+        142,
+        361,
+        177
+      ],
+      "capTop": 152,
+      "referenceSoleROI": [
+        303,
+        480,
+        389,
+        525
+      ],
+      "referenceSoleGroundY": 513,
+      "bodySpan": 361
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "e159dc373a59fce95e8345e540426652956c9688251a64de7502770ccb9b5321",
+      "ground": [
+        274,
+        505
+      ],
+      "groundROI": [
+        281,
+        468,
+        370,
+        517
+      ],
+      "groundMethod": "Projected pelvis X follows the braced guard hips. Ground Y is the nearer viewer-right boot sole under the flexed leg, independently of the projecting rifle.",
+      "solidBounds": [
+        174,
+        158,
+        571,
+        505
+      ],
+      "solidPadding": [
+        174,
+        158,
+        56,
+        122
+      ],
+      "nonzeroBounds": [
+        47,
+        25,
+        577,
+        539
+      ],
+      "capROI": [
+        279,
+        148,
+        340,
+        182
+      ],
+      "capTop": 158,
+      "referenceSoleROI": [
+        281,
+        468,
+        370,
+        517
+      ],
+      "referenceSoleGroundY": 505,
+      "bodySpan": 347
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 7,
+      "action": "melee",
+      "key": "confederate-gettysburg-v25-a-contact-ne",
+      "frames": [
+        "a-melee-7-0",
+        "a-melee-7-1",
+        "a-melee-7-2",
+        "a-melee-7-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.500797,
+          "y": 0.942584
+        },
+        {
+          "x": 0.441786,
+          "y": 0.944179
+        },
+        {
+          "x": 0.496013,
+          "y": 0.818182
+        },
+        {
+          "x": 0.437002,
+          "y": 0.805423
+        }
+      ],
+      "referenceHeight": 364,
+      "sourceHash": "ccb226c49fd8d5aecec1c8ca1e5deac6400f9371eab9b7aa797b3a17648045de",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeContactSequence": "gettysburg-v25-confederate-a-ne-contact",
+      "scope": "Exact source-reviewed confederate A NE local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

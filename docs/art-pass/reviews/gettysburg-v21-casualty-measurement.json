@@ -1,0 +1,194 @@
+{
+  "artPass": "gettysburg-v21",
+  "source": "docs/art-pass/candidates/gettysburg-v21/union-a-casualty-w-candidate.png",
+  "sourceSHA256": "a950d5ccbd5e6672125e07bc863170f235cb9c07d3a2fbc63653b0ff2df01b7a",
+  "referenceHeight": 365,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One contact median shared across all eight natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "c1c4fc4ea2c7603d0e56ea545584d9a2ab90d96fb993b3eebdf00d6b5aa32a15",
+      "ground": [
+        422,
+        553
+      ],
+      "groundROI": [
+        428,
+        537,
+        502,
+        561
+      ],
+      "groundMethod": "X=422 is the manually interpreted projected pelvis center of the reeling, bent-knee figure. Y is the exclusive alpha>=64 lower edge of the nearer rear/right boot sole in a sole-only ROI; the lowered rifle and farther boot are excluded.",
+      "solidBounds": [
+        150,
+        202,
+        496,
+        553
+      ],
+      "solidPadding": [
+        150,
+        202,
+        131,
+        74
+      ],
+      "nonzeroBounds": [
+        39,
+        103,
+        621,
+        585
+      ]
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "4bc82cb76afc409586f23f3b541883fb88bc29fa36f10e168dc5246f13fa7481",
+      "ground": [
+        354,
+        544
+      ],
+      "groundROI": [
+        334,
+        529,
+        384,
+        553
+      ],
+      "groundMethod": "X=354 marks the interpreted center of support of the lowered nearer knee. Y is the exclusive alpha>=64 lower edge of that blue trouser/knee patch in its bounded ROI; the front boot, rear boot and musket do not determine it.",
+      "solidBounds": [
+        82,
+        306,
+        459,
+        544
+      ],
+      "solidPadding": [
+        82,
+        306,
+        168,
+        83
+      ],
+      "nonzeroBounds": [
+        55,
+        21,
+        523,
+        627
+      ]
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "cc860b8639356dda6b1cd3dd41843a2f1a136776eba2fc0f2f91046367dbb17b",
+      "ground": [
+        409,
+        401
+      ],
+      "groundROI": [
+        399,
+        388,
+        431,
+        410
+      ],
+      "groundMethod": "X=409 marks the interpreted tucked-knee/body support center beneath the forward-falling hip. Y is the exclusive alpha>=64 lower edge of the blue folded trouser support patch immediately to the right of the rifle stock. The ROI excludes the lower weapon and the projecting farther boot.",
+      "solidBounds": [
+        126,
+        244,
+        557,
+        422
+      ],
+      "solidPadding": [
+        126,
+        244,
+        70,
+        205
+      ],
+      "nonzeroBounds": [
+        63,
+        23,
+        621,
+        603
+      ]
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "3e093dd06aba2a670188ced30e20d250fbd31554ed3e21af7ed5dfd9d7332eca",
+      "ground": [
+        325,
+        427
+      ],
+      "groundROI": [
+        362,
+        416,
+        439,
+        441
+      ],
+      "groundMethod": "X=325 marks the interpreted hip/side-body support center in ground rest. Y is the exclusive alpha>=64 lower edge of the nearer thigh/trouser support patch to the right of the rifle butt. The gun extending below and left of the body is excluded. This registers an illustrated support plane, not a measured physical center of mass.",
+      "solidBounds": [
+        56,
+        321,
+        530,
+        437
+      ],
+      "solidPadding": [
+        56,
+        321,
+        97,
+        190
+      ],
+      "nonzeroBounds": [
+        7,
+        0,
+        589,
+        627
+      ]
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 4,
+      "action": "fall",
+      "key": "union-gettysburg-v21-a-casualty-w",
+      "frames": [
+        "a-fall-4-0",
+        "a-fall-4-1",
+        "a-fall-4-2",
+        "a-fall-4-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.673046,
+          "y": 0.881978
+        },
+        {
+          "x": 0.564593,
+          "y": 0.867624
+        },
+        {
+          "x": 0.652313,
+          "y": 0.639553
+        },
+        {
+          "x": 0.518341,
+          "y": 0.681021
+        }
+      ],
+      "referenceHeight": 365,
+      "sourceHash": "a950d5ccbd5e6672125e07bc863170f235cb9c07d3a2fbc63653b0ff2df01b7a",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeCasualtySequence": "gettysburg-v21-union-a-w-casualty",
+      "scope": "Exact source-reviewed Union A W local opt-in only; incomplete family"
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

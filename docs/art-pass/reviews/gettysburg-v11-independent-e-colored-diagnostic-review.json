@@ -1,0 +1,132 @@
+{
+  "source": {
+    "path": "candidate/docs/art-pass/candidates/gettysburg-v11/union-b-e-march-colored-diagnostic.png",
+    "sha256": "7f968a8a10323f2d22e5d0a65c751184bd433c2f68e2b96f29ff5a91ffa10126",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA"
+  },
+  "reviewScope": "Generated realistic diagnostic only; fresh all-four-cell anatomical color-chain inspection against the native Blender reference",
+  "verdict": "PASS diagnostic four-phase visual contract; WITHHOLD as final game artwork pending uniform and canteen correction",
+  "gameArtworkApproved": false,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "completeFamilyApproved": false,
+  "registrationApproved": false,
+  "colorContract": {
+    "anatomicalLeft": "blue",
+    "anatomicalRight": "red",
+    "warning": "Diagnostic colors and colored boots must not enter final art"
+  },
+  "cells": [
+    {
+      "cell": "TL",
+      "role": "Left-forward contact",
+      "left": "Blue hip→knee→boot chain leads forward/right",
+      "right": "Red chain extends rearward/left",
+      "contact": "Opposite split chains are clear; visual contact only"
+    },
+    {
+      "cell": "TR",
+      "role": "Left support, right swing",
+      "left": "Blue chain approximately straight to the lower planted boot",
+      "right": "Red thigh and knee bend forward, red boot clearly lifted above supporting boot",
+      "supportContrast": "Clear relative lift, not inferred from image-side boot alone"
+    },
+    {
+      "cell": "BL",
+      "role": "Right-forward contact",
+      "left": "Blue chain extends rearward/left",
+      "right": "Red chain leads forward/right",
+      "contact": "Genuinely opposite to TL in explicit anatomical colors"
+    },
+    {
+      "cell": "BR",
+      "role": "Right support, left swing",
+      "left": "Blue knee bends and blue boot lifts rearward",
+      "right": "Red chain straight to planted boot",
+      "supportContrast": "Genuinely opposite to TR in explicit anatomical colors"
+    }
+  ],
+  "geometryLimits": "Color coding demonstrates intended joint-chain alternation. It does not certify exact physical ground contact, anatomical joint placement, period drill or identical 3D projection.",
+  "appearance": {
+    "coherent": "All four keep B brown hair/moustache profile, navy cap/short coat, light cross straps, dark rear pack/gray blanket roll and visible rectangular near/right pouch.",
+    "bearing": "Fixed E-facing profile and consistent two-hand upright diagonal carry appear coherent; no mirrored-art inference.",
+    "blocker": "Large silver circular canteen is exposed on the visible near/rear hip in TR/BL/BR while hidden in TL. Similar fixed camera/carry pose does not justify this change.",
+    "exactAttachmentLimit": "Concealed far hip prevents locating a correct left canteen anchor exactly."
+  },
+  "finalEditContract": [
+    "Preserve all four explicit anatomical hip→knee→boot paths and support/swing roles from this exact diagnostic source.",
+    "Convert every red/blue thigh, knee and shin fabric to accepted B pale blue trousers, with brown boots; do not alter silhouettes or straighten/reassign limbs.",
+    "Keep the dark rectangular pouch on anatomical RIGHT, visible near side in all four E cells.",
+    "Keep canteen on anatomical LEFT/far hip, naturally hidden behind body and near pouch; at most a narrow silver edge matching accepted E stationary action source 5aebc319115ad65a7bc23089e5962ae4975a6a1a9db11a5fcce8a9c13c1780e1.",
+    "Remove the exposed large near silver disk in TR/BL/BR without replacing or deleting the near/right pouch.",
+    "Preserve native canvas and margins, B appearance, camera, hand/weapon attachments and transparency as generation instructions; no actual pixel preservation is assumed."
+  ],
+  "alpha64": {
+    "boundsExclusive": [
+      [
+        160,
+        78,
+        440,
+        594
+      ],
+      [
+        190,
+        74,
+        419,
+        594
+      ],
+      [
+        161,
+        51,
+        446,
+        550
+      ],
+      [
+        194,
+        44,
+        420,
+        552
+      ]
+    ],
+    "paddingLTRB": [
+      [
+        160,
+        78,
+        187,
+        33
+      ],
+      [
+        190,
+        74,
+        208,
+        33
+      ],
+      [
+        161,
+        51,
+        181,
+        77
+      ],
+      [
+        194,
+        44,
+        207,
+        75
+      ]
+    ],
+    "minimumPaddingByCell": [
+      33,
+      33,
+      51,
+      44
+    ],
+    "floor24Pass": true
+  },
+  "finalSourceRequirement": "Uniform/kit conversion creates a new source SHA and may change any pixel. Fresh all-four-cell gait/kit/bearing/margin review is required before any limited-preview acceptance or registration.",
+  "coordinatesAssigned": false,
+  "rasterEditingPerformed": false
+}

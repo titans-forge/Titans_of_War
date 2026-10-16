@@ -1,0 +1,1202 @@
+{
+  "schema": "gettysburg-v25-independent-contact-casualty-source-review-v1",
+  "artPass": "gettysburg-v25",
+  "timeUTC": "2026-10-05T03:42:38.411Z",
+  "reviewer": "Independent Astra Max native source and anatomical registration reviewer",
+  "reviewerModel": "gpt-6-astra",
+  "reasoningEffort": "max",
+  "independentReview": true,
+  "modelAssisted": true,
+  "acceptedForOptIn": true,
+  "acceptedForLocalInstall": false,
+  "sourceOnly": true,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false,
+  "familyApproved": false,
+  "completeFamilyApproved": false,
+  "scope": "Four exact native Union A southwest direction 3 and Confederate A northeast direction 7 contact/casualty sources and their sixteen independently reviewed registrations. Integration, playback and exact installation acceptance remain separate.",
+  "sourceNativeDimensions": [
+    1254,
+    1254
+  ],
+  "sourceMode": "RGBA",
+  "cell": 627,
+  "frameOrder": "Equal native cells in row-major order: upper-left, upper-right, lower-left, lower-right.",
+  "nativePixelsEdited": false,
+  "perPhaseHeightNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "referenceHeights": {
+    "union": 403,
+    "confederate": 364
+  },
+  "referenceMethod": "For each army, independently select four cap-crown-only and nearer-support-sole-only ROIs on its actual contact source. At alpha>=64 take capTop as minimum occupied Y and soleGroundY as exclusive maximum occupied Y. BodySpan=soleGroundY-capTop; use the half-up median of four contact spans. Share that single army reference unchanged with its casualty source. Natural crouch, thrust and fall projection changes are not normalized.",
+  "rootMethod": "Select native integer root X from projected pelvis/torso anatomy independently of ground ROI X. Root Y is the exclusive alpha>=64 maximum in the bounded near boot, palm, knee, forearm or upper-leg support ROI. Whole silhouette and weapon bounds are not the selection method.",
+  "rootPlacementUncertaintyNativePixels": "Approximately 6–10 pixels for anatomical projection and support interpretation. Recorded ROI extrema are reproducible; semantic body support remains a model-assisted visual judgment.",
+  "sources": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v25/union-a-contact-sw-candidate.png",
+      "sha256": "351d98d1c87cc0c405a3e0eeca3b3193b2937395e38db837597228817c5ba463",
+      "side": "union",
+      "identity": "a",
+      "direction": 3,
+      "role": "contact",
+      "action": "melee",
+      "sourceNativeDimensions": [
+        1254,
+        1254
+      ],
+      "sourceMode": "RGBA",
+      "acceptedForOptIn": true,
+      "measurements": {
+        "side": "union",
+        "identity": "a",
+        "direction": 3,
+        "role": "contact",
+        "action": "melee",
+        "source": "docs/art-pass/candidates/gettysburg-v25/union-a-contact-sw-candidate.png",
+        "sha256": "351d98d1c87cc0c405a3e0eeca3b3193b2937395e38db837597228817c5ba463",
+        "cell": 627,
+        "referenceHeight": 403,
+        "roots": [
+          [
+            361,
+            581
+          ],
+          [
+            366,
+            586
+          ],
+          [
+            369,
+            552
+          ],
+          [
+            356,
+            534
+          ]
+        ],
+        "groundROIs": [
+          [
+            310,
+            536,
+            396,
+            590
+          ],
+          [
+            299,
+            541,
+            375,
+            596
+          ],
+          [
+            312,
+            505,
+            395,
+            560
+          ],
+          [
+            248,
+            493,
+            345,
+            543
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X selected independently. Ground Y is the alpha>=64 exclusive bottom of the nearer viewer-left/front boot sole, isolated below the trouser cuff; no rifle pixels.",
+          "Projected pelvis X follows the hips behind the forward lean. Ground Y comes from the nearer forward boot sole during the short SW extension, independently of the other boot and weapon.",
+          "Projected pelvis X follows the withdrawn torso/hips. Ground Y comes from the nearer viewer-left boot sole under the recovering leg.",
+          "Projected pelvis X follows the wide guard hips. Ground Y comes from the nearer viewer-left planted boot sole; the wider stance lowers projected body height naturally."
+        ],
+        "capROIs": [
+          [
+            298,
+            153,
+            369,
+            194
+          ],
+          [
+            298,
+            171,
+            367,
+            212
+          ],
+          [
+            301,
+            145,
+            369,
+            180
+          ],
+          [
+            280,
+            156,
+            343,
+            193
+          ]
+        ],
+        "capTop": [
+          163,
+          179,
+          153,
+          167
+        ],
+        "bodySpans": [
+          418,
+          407,
+          399,
+          367
+        ],
+        "referenceSoleROIs": [
+          [
+            310,
+            536,
+            396,
+            590
+          ],
+          [
+            299,
+            541,
+            375,
+            596
+          ],
+          [
+            312,
+            505,
+            395,
+            560
+          ],
+          [
+            248,
+            493,
+            345,
+            543
+          ]
+        ],
+        "referenceSoleGroundY": [
+          581,
+          586,
+          552,
+          534
+        ]
+      },
+      "cellObservations": [
+        {
+          "index": 0,
+          "rgbaSHA256": "755e673b3355da4ee73a663ec41e159df00c2b7ebba20c72b6844bc1695d133a",
+          "solidBounds": [
+            148,
+            163,
+            443,
+            581
+          ],
+          "solidPadding": [
+            148,
+            163,
+            184,
+            46
+          ],
+          "nonzeroBounds": [
+            39,
+            69,
+            627,
+            585
+          ],
+          "root": [
+            361,
+            581
+          ],
+          "groundROI": [
+            310,
+            536,
+            396,
+            590
+          ],
+          "groundY": 581,
+          "bottomClearance": 9,
+          "capROI": [
+            298,
+            153,
+            369,
+            194
+          ],
+          "capTop": 163,
+          "referenceSoleGroundY": 581,
+          "bodySpan": 418,
+          "observation": "Compact two-hand guard, front three-quarter SW body/face; navy cap/coat, sky-blue trousers, gray roll, straps and canteen agree with identity A. Raised guard is distinct from the extension.",
+          "rootMeaning": "Projected pelvis X selected independently. Ground Y is the alpha>=64 exclusive bottom of the nearer viewer-left/front boot sole, isolated below the trouser cuff; no rifle pixels."
+        },
+        {
+          "index": 1,
+          "rgbaSHA256": "8c103e7cb141a02a245479c441d238672222e26e5e2c4afe214ba3c091d6cf01",
+          "solidBounds": [
+            52,
+            179,
+            448,
+            586
+          ],
+          "solidPadding": [
+            52,
+            179,
+            179,
+            41
+          ],
+          "nonzeroBounds": [
+            1,
+            23,
+            468,
+            595
+          ],
+          "root": [
+            366,
+            586
+          ],
+          "groundROI": [
+            299,
+            541,
+            375,
+            596
+          ],
+          "groundY": 586,
+          "bottomClearance": 10,
+          "capROI": [
+            298,
+            171,
+            367,
+            212
+          ],
+          "capTop": 179,
+          "referenceSoleGroundY": 586,
+          "bodySpan": 407,
+          "observation": "Low SW extension with two hands separated along a straight weapon, forward lean and knee response. Stock stays below cheek/shoulder; head and kit proportions remain coherent.",
+          "rootMeaning": "Projected pelvis X follows the hips behind the forward lean. Ground Y comes from the nearer forward boot sole during the short SW extension, independently of the other boot and weapon."
+        },
+        {
+          "index": 2,
+          "rgbaSHA256": "9d900e7893a82bc2b5603b612b2a468a573a9833be61b7f71b614cca7abc5083",
+          "solidBounds": [
+            125,
+            153,
+            451,
+            552
+          ],
+          "solidPadding": [
+            125,
+            153,
+            176,
+            75
+          ],
+          "nonzeroBounds": [
+            73,
+            39,
+            627,
+            593
+          ],
+          "root": [
+            369,
+            552
+          ],
+          "groundROI": [
+            312,
+            505,
+            395,
+            560
+          ],
+          "groundY": 552,
+          "bottomClearance": 8,
+          "capROI": [
+            301,
+            145,
+            369,
+            180
+          ],
+          "capTop": 153,
+          "referenceSoleGroundY": 552,
+          "bodySpan": 399,
+          "observation": "Lower withdrawn recovery, hands closer to torso and barrel lowered SW. Coherent cap/roll/limb scale; shorter projection follows posture without per-frame scaling.",
+          "rootMeaning": "Projected pelvis X follows the withdrawn torso/hips. Ground Y comes from the nearer viewer-left boot sole under the recovering leg."
+        },
+        {
+          "index": 3,
+          "rgbaSHA256": "fc4c827fc936974686ef1d6b54186c57b4af434014e88ca5d39f8905487fada8",
+          "solidBounds": [
+            111,
+            167,
+            468,
+            534
+          ],
+          "solidPadding": [
+            111,
+            167,
+            159,
+            93
+          ],
+          "nonzeroBounds": [
+            1,
+            146,
+            581,
+            601
+          ],
+          "root": [
+            356,
+            534
+          ],
+          "groundROI": [
+            248,
+            493,
+            345,
+            543
+          ],
+          "groundY": 534,
+          "bottomClearance": 9,
+          "capROI": [
+            280,
+            156,
+            343,
+            193
+          ],
+          "capTop": 167,
+          "referenceSoleGroundY": 534,
+          "bodySpan": 367,
+          "observation": "Wide low guard/parry with separated legs and a lower center of mass. Both hands remain connected to the rifle; stance explains the lower cap-to-sole projection.",
+          "rootMeaning": "Projected pelvis X follows the wide guard hips. Ground Y comes from the nearer viewer-left planted boot sole; the wider stance lowers projected body height naturally."
+        }
+      ],
+      "alphaDiagnostic": {
+        "nonzeroAlphaPixels": 206140,
+        "alpha1Through4Pixels": 19379,
+        "brightRedAlpha64Pixels": 7,
+        "note": "Descriptive thresholds only, not an exhaustive colored fringe detector or fringe-free certification."
+      }
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v25/union-a-casualty-sw-candidate.png",
+      "sha256": "ad45e9eb0b9fcc2170958bafadd90077e4c59364103f8e8be5c49478840c1f02",
+      "side": "union",
+      "identity": "a",
+      "direction": 3,
+      "role": "casualty",
+      "action": "fall",
+      "sourceNativeDimensions": [
+        1254,
+        1254
+      ],
+      "sourceMode": "RGBA",
+      "acceptedForOptIn": true,
+      "measurements": {
+        "side": "union",
+        "identity": "a",
+        "direction": 3,
+        "role": "casualty",
+        "action": "fall",
+        "source": "docs/art-pass/candidates/gettysburg-v25/union-a-casualty-sw-candidate.png",
+        "sha256": "ad45e9eb0b9fcc2170958bafadd90077e4c59364103f8e8be5c49478840c1f02",
+        "cell": 627,
+        "referenceHeight": 403,
+        "roots": [
+          [
+            387,
+            590
+          ],
+          [
+            343,
+            603
+          ],
+          [
+            405,
+            464
+          ],
+          [
+            354,
+            466
+          ]
+        ],
+        "groundROIs": [
+          [
+            389,
+            545,
+            474,
+            598
+          ],
+          [
+            295,
+            578,
+            339,
+            613
+          ],
+          [
+            295,
+            443,
+            345,
+            476
+          ],
+          [
+            221,
+            451,
+            242,
+            477
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X at the hips in the initial recoil. Ground Y is the lower nearer viewer-right boot sole, isolated from the SW-pointing rifle.",
+          "Projected pelvis X at the hips above the lowering knee. Ground Y is the underside of the nearer bracing palm/fingertips; the ROI excludes the rifle and other boot.",
+          "Projected pelvis X at the collapsing hips. Ground Y is the lower edge of the nearer supporting palm/fingertips, isolated from the rifle held by the other hand.",
+          "Projected pelvis/torso X at prone rest. Ground Y is the underside of the nearer resting hand/knuckles below the forearm; the selected narrow ROI excludes the adjacent rifle stock as the determining edge."
+        ]
+      },
+      "cellObservations": [
+        {
+          "index": 0,
+          "rgbaSHA256": "6c205aaa9034156d650516d95561f43f494415f52d4d41a84b53095008825983",
+          "solidBounds": [
+            111,
+            168,
+            470,
+            590
+          ],
+          "solidPadding": [
+            111,
+            168,
+            157,
+            37
+          ],
+          "nonzeroBounds": [
+            108,
+            0,
+            627,
+            627
+          ],
+          "root": [
+            387,
+            590
+          ],
+          "groundROI": [
+            389,
+            545,
+            474,
+            598
+          ],
+          "groundY": 590,
+          "bottomClearance": 8,
+          "observation": "Upright hit/recoil, free hand toward chest and other hand retaining lowered rifle. Head/roll/boots agree with contact; SW facing retained.",
+          "rootMeaning": "Projected pelvis X at the hips in the initial recoil. Ground Y is the lower nearer viewer-right boot sole, isolated from the SW-pointing rifle."
+        },
+        {
+          "index": 1,
+          "rgbaSHA256": "07874e5095772afb64749813e5c5de041678d1f91d7ccb249b6be2c111ac0a18",
+          "solidBounds": [
+            48,
+            327,
+            496,
+            603
+          ],
+          "solidPadding": [
+            48,
+            327,
+            131,
+            24
+          ],
+          "nonzeroBounds": [
+            1,
+            21,
+            565,
+            613
+          ],
+          "root": [
+            343,
+            603
+          ],
+          "groundROI": [
+            295,
+            578,
+            339,
+            613
+          ],
+          "groundY": 603,
+          "bottomClearance": 10,
+          "observation": "Knee-down transition with one boot forward and nearer palm bracing on the ground. Same head/kit scale; distinct knee/palm silhouette.",
+          "rootMeaning": "Projected pelvis X at the hips above the lowering knee. Ground Y is the underside of the nearer bracing palm/fingertips; the ROI excludes the rifle and other boot."
+        },
+        {
+          "index": 2,
+          "rgbaSHA256": "c42fdc1ad1853cd9bdcdfb3d7a047f676d0a3860c12749c52015b60a2df36938",
+          "solidBounds": [
+            82,
+            244,
+            580,
+            464
+          ],
+          "solidPadding": [
+            82,
+            244,
+            47,
+            163
+          ],
+          "nonzeroBounds": [
+            0,
+            0,
+            627,
+            563
+          ],
+          "root": [
+            405,
+            464
+          ],
+          "groundROI": [
+            295,
+            443,
+            345,
+            476
+          ],
+          "groundY": 464,
+          "bottomClearance": 12,
+          "observation": "Further collapse with nearer supporting palm and rear legs extended; rifle across front. Coherent torso/limbs; overlaps limit wrist interpretation.",
+          "rootMeaning": "Projected pelvis X at the collapsing hips. Ground Y is the lower edge of the nearer supporting palm/fingertips, isolated from the rifle held by the other hand."
+        },
+        {
+          "index": 3,
+          "rgbaSHA256": "277d4509432245daeaf4c6e3dd1966965ad3ba8f9bebb031bdc5bef29105f81a",
+          "solidBounds": [
+            62,
+            326,
+            559,
+            466
+          ],
+          "solidPadding": [
+            62,
+            326,
+            68,
+            161
+          ],
+          "nonzeroBounds": [
+            1,
+            5,
+            589,
+            627
+          ],
+          "root": [
+            354,
+            466
+          ],
+          "groundROI": [
+            221,
+            451,
+            242,
+            477
+          ],
+          "groundY": 466,
+          "bottomClearance": 11,
+          "observation": "Prone rest with head/forearms toward SW and legs behind. Coherent head/roll/limbs; rifle/hand overlap and low-alpha color remain limitations.",
+          "rootMeaning": "Projected pelvis/torso X at prone rest. Ground Y is the underside of the nearer resting hand/knuckles below the forearm; the selected narrow ROI excludes the adjacent rifle stock as the determining edge."
+        }
+      ],
+      "alphaDiagnostic": {
+        "nonzeroAlphaPixels": 204980,
+        "alpha1Through4Pixels": 23683,
+        "brightRedAlpha64Pixels": 9,
+        "note": "Descriptive thresholds only, not an exhaustive colored fringe detector or fringe-free certification."
+      }
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v25/confederate-a-contact-ne-candidate.png",
+      "sha256": "ccb226c49fd8d5aecec1c8ca1e5deac6400f9371eab9b7aa797b3a17648045de",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 7,
+      "role": "contact",
+      "action": "melee",
+      "sourceNativeDimensions": [
+        1254,
+        1254
+      ],
+      "sourceMode": "RGBA",
+      "acceptedForOptIn": true,
+      "measurements": {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 7,
+        "role": "contact",
+        "action": "melee",
+        "source": "docs/art-pass/candidates/gettysburg-v25/confederate-a-contact-ne-candidate.png",
+        "sha256": "ccb226c49fd8d5aecec1c8ca1e5deac6400f9371eab9b7aa797b3a17648045de",
+        "cell": 627,
+        "referenceHeight": 364,
+        "roots": [
+          [
+            314,
+            591
+          ],
+          [
+            277,
+            592
+          ],
+          [
+            311,
+            513
+          ],
+          [
+            274,
+            505
+          ]
+        ],
+        "groundROIs": [
+          [
+            303,
+            556,
+            388,
+            603
+          ],
+          [
+            164,
+            550,
+            231,
+            604
+          ],
+          [
+            303,
+            480,
+            389,
+            525
+          ],
+          [
+            281,
+            468,
+            370,
+            517
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X at the rear-view hips. Ground Y is the nearer viewer-right/front boot sole, separate from the rear boot and rifle.",
+          "Projected pelvis X follows the forward-reaching hips. Ground Y is the nearer trailing viewer-left boot sole; the forehand extension and hip-level stock do not define the root.",
+          "Projected pelvis X follows the withdrawn hips. Ground Y is the nearer viewer-right boot sole during the low recovery.",
+          "Projected pelvis X follows the braced guard hips. Ground Y is the nearer viewer-right boot sole under the flexed leg, independently of the projecting rifle."
+        ],
+        "capROIs": [
+          [
+            290,
+            211,
+            355,
+            251
+          ],
+          [
+            273,
+            218,
+            336,
+            251
+          ],
+          [
+            300,
+            142,
+            361,
+            177
+          ],
+          [
+            279,
+            148,
+            340,
+            182
+          ]
+        ],
+        "capTop": [
+          221,
+          226,
+          152,
+          158
+        ],
+        "bodySpans": [
+          370,
+          366,
+          361,
+          347
+        ],
+        "referenceSoleROIs": [
+          [
+            303,
+            556,
+            388,
+            603
+          ],
+          [
+            164,
+            550,
+            231,
+            604
+          ],
+          [
+            303,
+            480,
+            389,
+            525
+          ],
+          [
+            281,
+            468,
+            370,
+            517
+          ]
+        ],
+        "referenceSoleGroundY": [
+          591,
+          592,
+          513,
+          505
+        ]
+      },
+      "cellObservations": [
+        {
+          "index": 0,
+          "rgbaSHA256": "24f0dc708d6c2cc8ae6323b289c1b97c90e68a14eced619b325b06740ac0c2d9",
+          "solidBounds": [
+            233,
+            221,
+            536,
+            591
+          ],
+          "solidPadding": [
+            233,
+            221,
+            91,
+            36
+          ],
+          "nonzeroBounds": [
+            59,
+            87,
+            621,
+            595
+          ],
+          "root": [
+            314,
+            591
+          ],
+          "groundROI": [
+            303,
+            556,
+            388,
+            603
+          ],
+          "groundY": 591,
+          "bottomClearance": 12,
+          "capROI": [
+            290,
+            211,
+            355,
+            251
+          ],
+          "capTop": 221,
+          "referenceSoleGroundY": 591,
+          "bodySpan": 370,
+          "observation": "Low ready/guard in rear three-quarter NE camera. Gray cap/coat, cream trousers, tan roll/canteen and black pouches match identity A and the reinstated casualty's smaller kit.",
+          "rootMeaning": "Projected pelvis X at the rear-view hips. Ground Y is the nearer viewer-right/front boot sole, separate from the rear boot and rifle."
+        },
+        {
+          "index": 1,
+          "rgbaSHA256": "7186e59e3e0d321f12cb535671950394777ae80cb1b3100e538242ddb61f85ab",
+          "solidBounds": [
+            170,
+            199,
+            557,
+            592
+          ],
+          "solidPadding": [
+            170,
+            199,
+            70,
+            35
+          ],
+          "nonzeroBounds": [
+            41,
+            52,
+            596,
+            595
+          ],
+          "root": [
+            277,
+            592
+          ],
+          "groundROI": [
+            164,
+            550,
+            231,
+            604
+          ],
+          "groundY": 592,
+          "bottomClearance": 12,
+          "capROI": [
+            273,
+            218,
+            336,
+            251
+          ],
+          "capTop": 226,
+          "referenceSoleGroundY": 592,
+          "bodySpan": 366,
+          "observation": "Distinct NE extension: forehand reaches away from torso, rear hand at hip-level stock, visible forward weight transfer and clear attack line. Stock continuity behind torso remains partly occluded.",
+          "rootMeaning": "Projected pelvis X follows the forward-reaching hips. Ground Y is the nearer trailing viewer-left boot sole; the forehand extension and hip-level stock do not define the root."
+        },
+        {
+          "index": 2,
+          "rgbaSHA256": "0eb1961657848418dfdb1037b6d77be99c78e0919f4b0149ad2fa2596fb4b571",
+          "solidBounds": [
+            225,
+            152,
+            517,
+            513
+          ],
+          "solidPadding": [
+            225,
+            152,
+            110,
+            114
+          ],
+          "nonzeroBounds": [
+            89,
+            23,
+            615,
+            577
+          ],
+          "root": [
+            311,
+            513
+          ],
+          "groundROI": [
+            303,
+            480,
+            389,
+            525
+          ],
+          "groundY": 513,
+          "bottomClearance": 12,
+          "capROI": [
+            300,
+            142,
+            361,
+            177
+          ],
+          "capTop": 152,
+          "referenceSoleGroundY": 513,
+          "bodySpan": 361,
+          "observation": "Low withdrawn recovery with hands closer and bent stance; visibly separates from extension. Head, roll and boots retain coherent scale.",
+          "rootMeaning": "Projected pelvis X follows the withdrawn hips. Ground Y is the nearer viewer-right boot sole during the low recovery."
+        },
+        {
+          "index": 3,
+          "rgbaSHA256": "e159dc373a59fce95e8345e540426652956c9688251a64de7502770ccb9b5321",
+          "solidBounds": [
+            174,
+            158,
+            571,
+            505
+          ],
+          "solidPadding": [
+            174,
+            158,
+            56,
+            122
+          ],
+          "nonzeroBounds": [
+            47,
+            25,
+            577,
+            539
+          ],
+          "root": [
+            274,
+            505
+          ],
+          "groundROI": [
+            281,
+            468,
+            370,
+            517
+          ],
+          "groundY": 505,
+          "bottomClearance": 12,
+          "capROI": [
+            279,
+            148,
+            340,
+            182
+          ],
+          "capTop": 158,
+          "referenceSoleGroundY": 505,
+          "bodySpan": 347,
+          "observation": "Braced guard/parry in wider stance, rifle forward across body. Rear NE orientation retained; guarded reset does not establish a verified historical drill.",
+          "rootMeaning": "Projected pelvis X follows the braced guard hips. Ground Y is the nearer viewer-right boot sole under the flexed leg, independently of the projecting rifle."
+        }
+      ],
+      "alphaDiagnostic": {
+        "nonzeroAlphaPixels": 175172,
+        "alpha1Through4Pixels": 22384,
+        "brightRedAlpha64Pixels": 0,
+        "note": "Descriptive thresholds only, not an exhaustive colored fringe detector or fringe-free certification."
+      }
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v25/confederate-a-casualty-ne-candidate.png",
+      "sha256": "4f67e2dfc24fb206c1271885e47a86e8ce176d4f774b5351efcf18ad2d6075ea",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 7,
+      "role": "casualty",
+      "action": "fall",
+      "sourceNativeDimensions": [
+        1254,
+        1254
+      ],
+      "sourceMode": "RGBA",
+      "acceptedForOptIn": true,
+      "measurements": {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 7,
+        "role": "casualty",
+        "action": "fall",
+        "source": "docs/art-pass/candidates/gettysburg-v25/confederate-a-casualty-ne-candidate.png",
+        "sha256": "4f67e2dfc24fb206c1271885e47a86e8ce176d4f774b5351efcf18ad2d6075ea",
+        "cell": 627,
+        "referenceHeight": 364,
+        "roots": [
+          [
+            311,
+            588
+          ],
+          [
+            279,
+            566
+          ],
+          [
+            337,
+            386
+          ],
+          [
+            312,
+            429
+          ]
+        ],
+        "groundROIs": [
+          [
+            297,
+            554,
+            373,
+            600
+          ],
+          [
+            261,
+            550,
+            308,
+            580
+          ],
+          [
+            414,
+            374,
+            436,
+            399
+          ],
+          [
+            261,
+            414,
+            286,
+            440
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X follows the initial unsettled stance. Ground Y is the nearer viewer-right boot sole, isolated below the trouser cuff.",
+          "Projected pelvis X at the lowered hips. Ground Y is the underside of the lowered cream-trouser knee; the ROI excludes the rear vertical boot sole and outstretched palm.",
+          "Projected pelvis X at the collapsing hips. Ground Y is the underside of the nearer gray-sleeved bracing forearm/elbow, in a bounded ROI separated from the rifle stock below and to the left.",
+          "Projected pelvis/torso X at prone rest. Ground Y is the underside of the near cream-trouser upper leg/thigh left of the rifle stock; weapon and boot bounds are excluded."
+        ]
+      },
+      "cellObservations": [
+        {
+          "index": 0,
+          "rgbaSHA256": "4cbb419ea6f5560b6f3c18a02224df6378d437d5c78a3adde9fdf2a84a8d37e5",
+          "solidBounds": [
+            224,
+            130,
+            456,
+            588
+          ],
+          "solidPadding": [
+            224,
+            130,
+            171,
+            39
+          ],
+          "nonzeroBounds": [
+            105,
+            103,
+            621,
+            595
+          ],
+          "root": [
+            311,
+            588
+          ],
+          "groundROI": [
+            297,
+            554,
+            373,
+            600
+          ],
+          "groundY": 588,
+          "bottomClearance": 12,
+          "observation": "Restrained initial recoil/unsettled upright pose with rifle rising while retained. Rear NE bearing and head/roll/boot scale fit new ccb contact; impact is subtle in this isolated cell.",
+          "rootMeaning": "Projected pelvis X follows the initial unsettled stance. Ground Y is the nearer viewer-right boot sole, isolated below the trouser cuff."
+        },
+        {
+          "index": 1,
+          "rgbaSHA256": "59c41e8acd441d3813080f5c65701be9a2636958c51605b45db34cac428e018f",
+          "solidBounds": [
+            198,
+            317,
+            472,
+            586
+          ],
+          "solidPadding": [
+            198,
+            317,
+            155,
+            41
+          ],
+          "nonzeroBounds": [
+            33,
+            21,
+            567,
+            627
+          ],
+          "root": [
+            279,
+            566
+          ],
+          "groundROI": [
+            261,
+            550,
+            308,
+            580
+          ],
+          "groundY": 566,
+          "bottomClearance": 14,
+          "observation": "Knee-down transition with lowered cream-trouser knee and bracing free hand. Back/roll remain dominant and NE-facing.",
+          "rootMeaning": "Projected pelvis X at the lowered hips. Ground Y is the underside of the lowered cream-trouser knee; the ROI excludes the rear vertical boot sole and outstretched palm."
+        },
+        {
+          "index": 2,
+          "rgbaSHA256": "16c6f2855ea8894eb038b855ce29d89bccb431377aff188705967a986fb01bc4",
+          "solidBounds": [
+            169,
+            243,
+            560,
+            471
+          ],
+          "solidPadding": [
+            169,
+            243,
+            67,
+            156
+          ],
+          "nonzeroBounds": [
+            19,
+            3,
+            623,
+            627
+          ],
+          "root": [
+            337,
+            386
+          ],
+          "groundROI": [
+            414,
+            374,
+            436,
+            399
+          ],
+          "groundY": 386,
+          "bottomClearance": 13,
+          "observation": "Collapse toward forearm-supported prone posture, legs trailing SW and head NE. Coherent kit/limbs; rifle/forearm overlap limits skeletal interpretation.",
+          "rootMeaning": "Projected pelvis X at the collapsing hips. Ground Y is the underside of the nearer gray-sleeved bracing forearm/elbow, in a bounded ROI separated from the rifle stock below and to the left."
+        },
+        {
+          "index": 3,
+          "rgbaSHA256": "1a90d50aa4bee6c6e5dd4492954d1793c595b8efe7fc70ca38785e7633038ceb",
+          "solidBounds": [
+            105,
+            278,
+            562,
+            473
+          ],
+          "solidPadding": [
+            105,
+            278,
+            65,
+            154
+          ],
+          "nonzeroBounds": [
+            7,
+            3,
+            591,
+            587
+          ],
+          "root": [
+            312,
+            429
+          ],
+          "groundROI": [
+            261,
+            414,
+            286,
+            440
+          ],
+          "groundY": 429,
+          "bottomClearance": 11,
+          "observation": "Prone rest with lowered torso and legs trailing SW. NE projection and kit retained; registration uses nearer thigh support separately from the rifle.",
+          "rootMeaning": "Projected pelvis/torso X at prone rest. Ground Y is the underside of the near cream-trouser upper leg/thigh left of the rifle stock; weapon and boot bounds are excluded."
+        }
+      ],
+      "alphaDiagnostic": {
+        "nonzeroAlphaPixels": 136805,
+        "alpha1Through4Pixels": 17748,
+        "brightRedAlpha64Pixels": 0,
+        "note": "Descriptive thresholds only, not an exhaustive colored fringe detector or fringe-free certification."
+      }
+    }
+  ],
+  "referenceImages": [
+    {
+      "source": "public/images/units/gettysburg-v8/union-a-actions-sw.png",
+      "sha256": "485b13ee60360562d3ee5d0e93311f223971880622735ecdb5b6dd4d9e7f5a16",
+      "use": "Actual accepted renderer kit and above/front three-quarter SW camera; firing/reload reference is not contact-action approval."
+    },
+    {
+      "source": "public/images/units/gettysburg-v10/confederate-a-actions-ne.png",
+      "sha256": "3036c2de71157958023a82c7034ace597bba02d7b8bad6d09fa7b8e289e98a85",
+      "use": "Actual accepted renderer kit and above/rear three-quarter NE camera; shouldered firing is not the requested thrust."
+    }
+  ],
+  "pairAssessment": {
+    "union": "Exact contact/casualty sources keep coherent head, roll, coat, boot and limb proportions across eight cells. Contact spans 418/407/399/367 yield reference 403. Lower wide-guard and fallen projections are intentional.",
+    "confederate": "New ccb contact and reinstated 4f67 casualty are coherent in head/roll/torso/boot scale. Contact spans 370/366/361/347 yield reference 364. Casualty first-pose projection is similar; knee/prone changes are natural. No separate casualty scaling or older contact median.",
+    "relativeGameScale": "Body-relative head/kit/limb proportions are coherent with actual renderer references and reviewed cardinal style. Each army uses its own fresh contact median. This is source judgment, not actual v25 browser validation."
+  },
+  "conditionalReassessment": {
+    "casualtySHA256": "4f67e2dfc24fb206c1271885e47a86e8ce176d4f774b5351efcf18ad2d6075ea",
+    "priorDecision": "Previously rejected as too small against larger fdefe5699c72a8ed9c54b0f8b458924fbdd3eaffc14ba736bec571d8d199280a contact.",
+    "currentDecision": "Accepted only with ccb226c49fd8d5aecec1c8ca1e5deac6400f9371eab9b7aa797b3a17648045de, after all four cells and current head/roll/limb scale were reassessed. Casualty bytes did not change.",
+    "excludedContactHashes": [
+      "8133378838615e60b54cbc9e4fb3449ae60fbe09ed3b9a11db2e79de8a048939",
+      "fdefe5699c72a8ed9c54b0f8b458924fbdd3eaffc14ba736bec571d8d199280a"
+    ],
+    "excludedOversizedCasualtySHA256": "9d054604429fd49c26d7222fe71acb2269fcba9a5601d1dbcf2d1cb9f6805bc7",
+    "earlierFindings": "External independent-source-inspection/pair-scale-redraw-findings.json retains preliminary decisions; it is not current acceptance."
+  },
+  "limitations": [
+    "Native RGBA bytes remain unchanged. Low-alpha colored fringe/noise persists and some nonzero-alpha bounds reach cell edges. Alpha>=64 padding passes but does not certify fringe-free pixels.",
+    "Rear Confederate grip/rifle continuity is partly hidden. Revised thrust is a distinct contact extension, but hidden joints/fingers and exact historical drill are not certified.",
+    "Initial Confederate casualty reaction is restrained alone. Four still phases do not establish smooth motion, continuous planted-foot trajectories or every transition.",
+    "Natural pose projection varies without individual resizing. Roots/support semantics are visual judgments rather than physical skeletal reconstruction.",
+    "V25 browser/gameplay integration, compact readability, dense-rank occlusion and device/GPU behavior are outside this source-only decision.",
+    "Other diagonal bearings, Union B contact/casualty, contact spacing and the complete family remain unfinished. No default, production, human, anatomy or historical certification."
+  ],
+  "blockers": []
+}

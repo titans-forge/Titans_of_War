@@ -1,0 +1,208 @@
+{
+  "artPass": "gettysburg-v32",
+  "side": "union",
+  "identity": "b",
+  "direction": 5,
+  "cardinal": "nw",
+  "role": "casualty",
+  "source": "docs/art-pass/candidates/gettysburg-v32/union-b-casualty-nw-candidate.png",
+  "sourceSHA256": "0d4f98691c07f66507953ceca0a1b545b1ad5a35cf17b5111891a1e4dca0dd61",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v32-independent-union-b-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "9f620c6a789171be3cff65f68a2babbf0d7077b21b51a6415f39ef6b10a117cd",
+  "referenceHeight": 382,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh union B NW contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "e2a7f7e45d50c0e5061b3f723e227732fc97d32cf7bec9e11d047437960e08ab",
+      "ground": [
+        400,
+        565
+      ],
+      "groundROI": [
+        339,
+        526,
+        424,
+        568
+      ],
+      "groundMethod": "Projected pelvis X follows the rear belt/crotch axis of the stumble; Y is the alpha>=64 maximum exclusive Y of the planted screen-left boot outsole. The lifted rear boot and released rifle are excluded.",
+      "solidBounds": [
+        132,
+        205,
+        533,
+        609
+      ],
+      "solidPadding": [
+        132,
+        205,
+        94,
+        18
+      ],
+      "nonzeroBounds": [
+        33,
+        23,
+        621,
+        612
+      ]
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "ae824b7a2e18c3564dafddcb0a311a49c0b956b131c1609423d30a2149554cef",
+      "ground": [
+        386,
+        546
+      ],
+      "groundROI": [
+        277,
+        510,
+        353,
+        550
+      ],
+      "groundMethod": "Projected pelvis X follows the rear hip beneath the belt; Y is the alpha>=64 maximum exclusive Y of the folded supporting knee region. Both upturned boot soles and the low rifle are excluded.",
+      "solidBounds": [
+        75,
+        292,
+        507,
+        590
+      ],
+      "solidPadding": [
+        75,
+        292,
+        120,
+        37
+      ],
+      "nonzeroBounds": [
+        7,
+        19,
+        513,
+        595
+      ]
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "e8c25b1a3f8bc88c7bed104010b7a76fc74dae6b178d151430ad460193099b04",
+      "ground": [
+        446,
+        440
+      ],
+      "groundROI": [
+        364,
+        405,
+        444,
+        449
+      ],
+      "groundMethod": "Projected pelvis X follows the side/rear hip under the belt and pouch; Y is the alpha>=64 maximum exclusive Y of the load-bearing folded knee/hip region. Raised boot soles, forearms and rifle do not set this ground.",
+      "solidBounds": [
+        135,
+        214,
+        596,
+        494
+      ],
+      "solidPadding": [
+        135,
+        214,
+        31,
+        133
+      ],
+      "nonzeroBounds": [
+        25,
+        63,
+        627,
+        603
+      ]
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "cd2260a84e94bc1ea7318ce6585e6a0eab8e21b9bc7bea6d5165683b3200db01",
+      "ground": [
+        458,
+        446
+      ],
+      "groundROI": [
+        378,
+        414,
+        448,
+        451
+      ],
+      "groundMethod": "Projected hip X follows the side-rest pelvis beneath the rear pouch; Y is the alpha>=64 maximum exclusive Y of the resting folded thigh/knee region. Upturned soles and the separate dropped rifle are excluded.",
+      "solidBounds": [
+        92,
+        275,
+        572,
+        494
+      ],
+      "solidPadding": [
+        92,
+        275,
+        55,
+        133
+      ],
+      "nonzeroBounds": [
+        1,
+        39,
+        599,
+        603
+      ]
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "action": "fall",
+      "key": "union-gettysburg-v32-b-casualty-nw",
+      "frames": [
+        "b-fall-5-0",
+        "b-fall-5-1",
+        "b-fall-5-2",
+        "b-fall-5-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.637959,
+          "y": 0.901116
+        },
+        {
+          "x": 0.61563,
+          "y": 0.870813
+        },
+        {
+          "x": 0.711324,
+          "y": 0.701754
+        },
+        {
+          "x": 0.730463,
+          "y": 0.711324
+        }
+      ],
+      "referenceHeight": 382,
+      "sourceHash": "0d4f98691c07f66507953ceca0a1b545b1ad5a35cf17b5111891a1e4dca0dd61",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeCasualtySequence": "gettysburg-v32-union-b-nw-casualty",
+      "scope": "Exact source-reviewed union B NW local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

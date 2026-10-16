@@ -1,0 +1,100 @@
+{
+  "date": "2026-09-09",
+  "generation": "OpenAI built-in image_gen",
+  "model": "Not reported by tool",
+  "sourcePixels": "Native PNGs copied without re-encoding. Magenta scenery is composited once in the Canvas renderer.",
+  "flags": "Existing period patterns and star counts preserved; generated wool material, sewn hems, wooden poles and a 32-frame shaded cloth cycle. Reduced motion is static; paused field time freezes each formation phase.",
+  "scenery": "Four varied foliage cutouts, split-rail fences, dry stone wall, timber-revetted earthworks, crater, and pasture. Scenery placement uses existing terrain zones, road bands and fence crossings. Roads and creeks use softly layered texture.",
+  "limits": [
+    "Representative game scenery, not surveyed reconstructions or exact regimental flags.",
+    "Flag motion is a pre-rendered 2D cloth approximation, not cloth physics.",
+    "First earthworks generation had the wrong background and was rejected; corrected magenta cutouts used.",
+    "Approved Manassas, Shiloh and Gettysburg ground plates retained; common field pasture upgraded."
+  ],
+  "assets": {
+    "bunting": {
+      "source": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-7aff2633-9c7b-4499-8efa-2c021c4e84f7.png",
+      "sha256": "de0103fb0977f8d92e523bf00adec0b6d15565680698502ac5c8b5bd6a585016",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    "foliage": {
+      "source": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-50c42310-e5d8-41a4-9e26-115c25ee27e8.png",
+      "sha256": "423773dcdf42ca98921ac3e16071f868dc9fe8035576264e58bbb726bfb668e3",
+      "size": [
+        1536,
+        1024
+      ],
+      "frames": {
+        "oak": {
+          "x": 81,
+          "y": 16,
+          "w": 648,
+          "h": 548
+        },
+        "poplar": {
+          "x": 898,
+          "y": 11,
+          "w": 466,
+          "h": 594
+        },
+        "cedar": {
+          "x": 184,
+          "y": 610,
+          "w": 435,
+          "h": 380
+        },
+        "scrub": {
+          "x": 806,
+          "y": 631,
+          "w": 628,
+          "h": 375
+        }
+      }
+    },
+    "earthworks": {
+      "source": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-f9597c01-80a4-4f43-8a34-97e8e6efaae1.png",
+      "sha256": "c7bbeedbbd1eb4616894b661c78ead1fc294231d7ecc7ffb5b8869e0c18643bf",
+      "size": [
+        1536,
+        1024
+      ],
+      "frames": {
+        "fence": {
+          "x": 26,
+          "y": 121,
+          "w": 727,
+          "h": 245
+        },
+        "wall": {
+          "x": 779,
+          "y": 182,
+          "w": 738,
+          "h": 192
+        },
+        "trench": {
+          "x": 18,
+          "y": 540,
+          "w": 740,
+          "h": 355
+        },
+        "crater": {
+          "x": 789,
+          "y": 493,
+          "w": 725,
+          "h": 460
+        }
+      }
+    },
+    "pasture": {
+      "source": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-e7aa296f-46eb-4206-998e-9317d7101a54.png",
+      "sha256": "95a8932f4e8113a586490e14eac8a499fb5aca3ca9ac0718ef6aba9a859fa6cb",
+      "size": [
+        1536,
+        1024
+      ]
+    }
+  }
+}

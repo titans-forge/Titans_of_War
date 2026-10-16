@@ -1,0 +1,409 @@
+{
+  "reviewType": "Independent native-source visual review",
+  "reviewedAtUTC": "2026-10-03T23:07:27.209119+00:00",
+  "reviewer": "v13_source_review model agent",
+  "scope": "Confederate A E stationary actions only, exact v13 source; limited local opt-in preview acceptance",
+  "source": {
+    "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v13-20261003/attempts/confederate-a-e-actions-attempt-2.png",
+    "sha256": "6aa46680436709a13d502c2bbbb3b1202377ef10575ed7155e77d7208124d861",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "cell": [
+      627,
+      627
+    ]
+  },
+  "imagePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v13-20261003/attempts/confederate-a-e-actions-attempt-2.png",
+  "sha256": "6aa46680436709a13d502c2bbbb3b1202377ef10575ed7155e77d7208124d861",
+  "acceptedForOptIn": true,
+  "modelAssisted": true,
+  "identityKit": "confederate-a",
+  "kitAccepted": true,
+  "allFourCellsReviewed": true,
+  "completeNativeSheetInspected": true,
+  "humanReviewed": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "completeFamilyApproved": false,
+  "verdict": "PASS for exact-source local opt-in preview with body scale and occlusion limits recorded",
+  "appearance": {
+    "kit": "Gray kepi-like cap/jacket, tan trousers, brown boots, compact beige roll across upper back, brown straps, dark hip pouches and round tan canteen appear coherently in all four cells.",
+    "referenceContinuity": "Recognizable broad ConfA kit against retained NE/NW sources; compact roll and cap shape differ in cardinal view. Exact face and skeleton identity are not certified."
+  },
+  "bearingAndGrip": {
+    "direction": "E",
+    "directionIndex": 0,
+    "actualFacingAccepted": true,
+    "bearing": "All four native profiles face image right.",
+    "ready": "Two plausible hand contacts on upright diagonal rifle; butt remains low beside boots.",
+    "fire": "Horizontal barrel points right; stock at shoulder, rear hand at trigger/stock, forward hand beneath fore-end. No baked flash or smoke.",
+    "load": "Upright grounded rifle has lower supporting grip and upper loading grip.",
+    "ram": "Upright grounded rifle with raised insertion hand and a separate thin rod aligned over the barrel.",
+    "limits": "Concealed hand and shoulder contacts, exact finger mechanics and historical drill remain uncertified."
+  },
+  "cells": [
+    {
+      "cell": 0,
+      "name": "TL ready",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true
+    },
+    {
+      "cell": 1,
+      "name": "TR fire",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true
+    },
+    {
+      "cell": 2,
+      "name": "BL load",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true
+    },
+    {
+      "cell": 3,
+      "name": "BR ram",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true
+    }
+  ],
+  "measurementContract": {
+    "coordinateSpace": "Native per-cell pixels from cell top-left; TL/TR/BL/BR order.",
+    "rootMeaning": "Manual concealed pelvis-center X projected to the independently visible supporting boot sole in each cell. This is a 2D registration pivot, not a certified anatomical pelvis or recovered physical ground.",
+    "roots": [
+      [
+        278,
+        583
+      ],
+      [
+        178,
+        589
+      ],
+      [
+        294,
+        525
+      ],
+      [
+        226,
+        528
+      ]
+    ],
+    "pelvisX": [
+      278,
+      178,
+      294,
+      226
+    ],
+    "rootXUncertaintyPixels": 7,
+    "rootYUncertaintyPixels": 3,
+    "capTopY": [
+      175,
+      190,
+      96,
+      97
+    ],
+    "capTop": [
+      175,
+      190,
+      96,
+      97
+    ],
+    "capROIs": [
+      [
+        245,
+        140,
+        335,
+        240
+      ],
+      [
+        145,
+        160,
+        245,
+        260
+      ],
+      [
+        255,
+        75,
+        355,
+        165
+      ],
+      [
+        175,
+        75,
+        275,
+        165
+      ]
+    ],
+    "capMethod": "Fresh alpha>=64 minimum Y within manually chosen cap ROIs excluding rifles/raised ramrod hand.",
+    "capTopUncertaintyPixels": 2,
+    "bodySpans": [
+      408,
+      399,
+      429,
+      431
+    ],
+    "capToRegisteredGroundSpans": [
+      408,
+      399,
+      429,
+      431
+    ],
+    "referenceHeight": 419,
+    "commonBodyReferenceHeight": 419,
+    "referenceMethod": "Rounded median of four freshly measured cap-to-individual-supporting-sole spans; one whole-source scale, no per-phase scaling.",
+    "bodySpanRangePixels": 32,
+    "rangeAsPercentOfCommonReference": 7.64,
+    "sizeLimit": "Preserve measured per-cell cap-to-supporting-sole span variation with one whole-source reference height; individual ground registration removes row-layout hover without rescaling phases.",
+    "firingBarrelMouth": [
+      450,
+      247
+    ],
+    "firingBarrelMouthUncertaintyPixels": 3,
+    "firingBarrelMouthConfidence": "Moderate: upper metal tube ends at local x449 through y245..249. Thin lower bayonet continues to x546,y251. Visible bore opening is too small to certify physically.",
+    "firingTubeTerminalAlphaEvidence": {
+      "alphaThreshold": 64,
+      "rowsY": [
+        245,
+        246,
+        247,
+        248,
+        249
+      ],
+      "rightmostTubeX": [
+        449,
+        449,
+        449,
+        449,
+        449
+      ]
+    },
+    "firingAnchorIsBayonetTip": false,
+    "firingBayonetApproximateTip": [
+      546,
+      251
+    ],
+    "muzzleApplicable": true,
+    "previousSharedRowRegistrationDiagnostic": {
+      "rootMeaning": "Fresh manual pelvis-center X projected to maximum visible alpha64 boot-ground Y shared by each sheet row. Concealed anatomy is estimated.",
+      "roots": [
+        [
+          278,
+          589
+        ],
+        [
+          178,
+          589
+        ],
+        [
+          294,
+          528
+        ],
+        [
+          226,
+          528
+        ]
+      ],
+      "sharedRowGroundY": [
+        589,
+        528
+      ],
+      "bodySpans": [
+        414,
+        399,
+        432,
+        431
+      ],
+      "referenceHeight": 423,
+      "commonBodyReferenceHeight": 423,
+      "referenceMethod": "Rounded median of four cap-to-row-ground spans; one source-wide scale, no per-frame normalization."
+    },
+    "sharedRowGroundYDiagnostic": [
+      589,
+      528
+    ],
+    "perCellSupportingSoleGroundY": [
+      583,
+      589,
+      525,
+      528
+    ],
+    "supportingSoleRegions": [
+      {
+        "cell": 0,
+        "soleROI": [
+          220,
+          500,
+          355,
+          605
+        ],
+        "boundsInROI": [
+          11,
+          0,
+          128,
+          83
+        ],
+        "groundY": 583
+      },
+      {
+        "cell": 1,
+        "soleROI": [
+          115,
+          500,
+          260,
+          605
+        ],
+        "boundsInROI": [
+          5,
+          0,
+          140,
+          89
+        ],
+        "groundY": 589
+      },
+      {
+        "cell": 2,
+        "soleROI": [
+          230,
+          450,
+          370,
+          550
+        ],
+        "boundsInROI": [
+          13,
+          0,
+          140,
+          75
+        ],
+        "groundY": 525
+      },
+      {
+        "cell": 3,
+        "soleROI": [
+          165,
+          450,
+          295,
+          550
+        ],
+        "boundsInROI": [
+          8,
+          0,
+          130,
+          78
+        ],
+        "groundY": 528
+      }
+    ],
+    "groundMethod": "Fresh manually selected supporting-boot-only regions, alpha>=64 bottom-exclusive Y in each cell. Individual sole Y replaces prior shared row maximum; pixels and pelvis-X estimates unchanged.",
+    "registrationMethodChangedAtUTC": "2026-10-03T23:07:27.209115+00:00"
+  },
+  "nativePixelEvidence": {
+    "alphaThreshold": 64,
+    "boundsExclusive": [
+      [
+        202,
+        126,
+        379,
+        583
+      ],
+      [
+        104,
+        190,
+        547,
+        589
+      ],
+      [
+        212,
+        96,
+        401,
+        525
+      ],
+      [
+        142,
+        52,
+        321,
+        528
+      ]
+    ],
+    "paddingLTRB": [
+      [
+        202,
+        126,
+        248,
+        44
+      ],
+      [
+        104,
+        190,
+        80,
+        38
+      ],
+      [
+        212,
+        96,
+        226,
+        102
+      ],
+      [
+        142,
+        52,
+        306,
+        99
+      ]
+    ],
+    "minimumPaddingByCell": [
+      44,
+      38,
+      96,
+      52
+    ],
+    "minimumRequiredPadding": 16,
+    "strictPaddingPassed": true,
+    "nativeSquareRGBA2x2": true,
+    "redYellowCriterion": "R>180,B<80,and(G<90 or G>170)",
+    "redYellowAlphaDistribution": {
+      "1": 2056,
+      "4": 15,
+      "2": 5
+    },
+    "redYellowAtAlpha64": 0,
+    "coloredRGBAssessment": "Residual saturated red/yellow RGB exists only at alpha1/2/4 under stated criterion. Native viewer overemphasizes it; no conspicuous opaque contour is established.",
+    "rasterCleanupPerformed": false,
+    "sourceChangedDuringReview": false
+  },
+  "nativeReview": {
+    "exactSHAInspected": "6aa46680436709a13d502c2bbbb3b1202377ef10575ed7155e77d7208124d861",
+    "completeNativeSheetInspected": true,
+    "allFourCellsReviewed": true,
+    "kitAccepted": true,
+    "acceptedForOptIn": true,
+    "modelAssisted": true,
+    "humanReviewed": false,
+    "anatomyCertified": false,
+    "historyCertified": false,
+    "actualFacingAccepted": true,
+    "poseAccepted": true,
+    "manualRootsMeasured": true,
+    "manualMuzzleMeasured": true,
+    "oneSourceReferenceHeight": 419
+  },
+  "blockers": [],
+  "limits": [
+    "This acceptance applies only to the four cells and exact SHA reviewed.",
+    "Model-assisted 2D visual assessment, not human/anatomy/history certification.",
+    "Concealed pelvis, far-side straps and fingers leave measurement/attachment uncertainty.",
+    "No complete-family/default/production approval; no runtime temporal, cold-resume, texture residency or performance proof."
+  ],
+  "registrationAssessment": "Individual supporting-sole registration is visually better for foot contact than the previous shared-row estimate. Sole silhouette identification has about 3 native pixels of uncertainty; no physical-ground or temporal-gait certification is implied.",
+  "selectedSource": "docs/art-pass/candidates/gettysburg-v13/confederate-a-e-actions-candidate.png",
+  "selectedSourceSha256": "6aa46680436709a13d502c2bbbb3b1202377ef10575ed7155e77d7208124d861"
+}

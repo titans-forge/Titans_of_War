@@ -1,0 +1,174 @@
+{
+  "frames": {
+    "a-melee-5-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.655502,
+        "y": 0.940989
+      },
+      "bodyHeight": 370
+    },
+    "a-melee-5-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.633174,
+        "y": 0.931419
+      },
+      "bodyHeight": 370
+    },
+    "a-melee-5-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.658692,
+        "y": 0.861244
+      },
+      "bodyHeight": 370
+    },
+    "a-melee-5-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.61882,
+        "y": 0.875598
+      },
+      "bodyHeight": 370
+    }
+  },
+  "meta": {
+    "image": "union-a-contact-nw.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "8ef7a8b577e52bb884679c47c3c028a2a5b24b1753c8ebc5d26b72ec0428e85e",
+    "source": "docs/art-pass/candidates/gettysburg-v31/union-a-contact-nw-candidate.png",
+    "artPass": "gettysburg-v31",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "union",
+        "identity": "a",
+        "direction": 5,
+        "action": "melee",
+        "key": "union-gettysburg-v31-a-contact-nw",
+        "frames": [
+          "a-melee-5-0",
+          "a-melee-5-1",
+          "a-melee-5-2",
+          "a-melee-5-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.655502,
+            "y": 0.940989
+          },
+          {
+            "x": 0.633174,
+            "y": 0.931419
+          },
+          {
+            "x": 0.658692,
+            "y": 0.861244
+          },
+          {
+            "x": 0.61882,
+            "y": 0.875598
+          }
+        ],
+        "referenceHeight": 370,
+        "sourceHash": "8ef7a8b577e52bb884679c47c3c028a2a5b24b1753c8ebc5d26b72ec0428e85e",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeContactSequence": "gettysburg-v31-union-a-nw-contact",
+        "scope": "Exact source-reviewed union A NW local opt-in only; incomplete family",
+        "familyComplete": false,
+        "productionApproved": false,
+        "defaultApproved": false,
+        "humanCertified": false,
+        "physicalAnatomyCertified": false,
+        "historicalDrillCertified": false
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v31-independent-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "a0b324df31af6be2523f8a5796476225a3f39d9862688e75a5dae8be01beac32",
+    "referenceHeight": 370,
+    "familyComplete": false,
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

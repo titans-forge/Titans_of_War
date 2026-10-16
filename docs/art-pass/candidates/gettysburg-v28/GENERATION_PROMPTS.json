@@ -1,0 +1,1519 @@
+{
+  "artPass": "gettysburg-v28",
+  "generationMode": "built-in imagegen",
+  "underlyingModelIdentity": "not exposed by tool",
+  "actualImagegenCalls": 13,
+  "selectedWholeOriginals": 4,
+  "rejectedWholeOriginals": 9,
+  "sourceReviewPending": false,
+  "sourceReviewSHA256": "d02158dc16c249ed9fd6d0c6361c7a6b178d8d4c9e361d8f14aa986b1ce05686",
+  "annotationsSHA256": "50a5da0cdd179d0dc23ff36f301f4cd572e08a10dfb9df9224ef5583167e6d1e",
+  "geometryOnlyIsNotVisualApproval": true,
+  "hostSideRasterWarpMirrorResampleAlphaEditing": false,
+  "perPhaseScaleNormalization": false,
+  "compositionGuide": {
+    "purpose": "Deterministic blank composition diagram only, no soldier/source pixels and no anatomical claims",
+    "guide": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v28-20261005/generation-attempts/layout-only-guide.png",
+    "sha256": "7e599608b38c8da600645a720388e23ef033c27d731ae5888e22a1c721bc08e4",
+    "size": [
+      1254,
+      1254
+    ],
+    "cells": 4,
+    "cellSize": 627,
+    "allowedArtworkRectangles": [
+      [
+        88,
+        88,
+        539,
+        539
+      ],
+      [
+        715,
+        88,
+        1166,
+        539
+      ],
+      [
+        88,
+        715,
+        539,
+        1166
+      ],
+      [
+        715,
+        715,
+        1166,
+        1166
+      ]
+    ],
+    "sourceArtEdited": false,
+    "process": "Pillow created blank canvas and four inset rectangles; no image assets read"
+  },
+  "attempts": [
+    {
+      "key": "a-n-1",
+      "generationRecord": {
+        "identity": "a",
+        "bearing": "n",
+        "attempt": 1,
+        "mode": "RGBA",
+        "useCase": "historical-scene",
+        "prompt": "Use case: historical-scene.\nAsset type: a production transparent 2x2 stationary infantry sprite sheet for Titans of War Civil War.\nCreate one brand-new native square RGBA sheet, exactly four equal cells arranged in a 2x2 grid, no printed labels or visible grid. One realistically proportioned adult Union infantryman in each cell, all the same soldier at the same physical body scale. Preserve generous transparent negative space of at least 32 native pixels around every COMPLETE silhouette, including rifle, bayonet, raised arm and boots; no edge or cell crossing, no cast floor shadows, no terrain.\nStyle: match the established detailed game-sprite family in Image1, with believable worn cloth, leather seams, wooden musket and restrained realistic human proportions. No cartoon outline, no anime head, no plastic toy shine.\nFour distinct actions in EXACT reading order: top-left relaxed READY with grounded feet and rifle carried upright near right shoulder; top-right shouldered AIMED FIRE with stock properly seated at right shoulder, left hand supporting fore-end, muzzle and bayonet aimed into the given bearing; bottom-left LOAD a paper cartridge into the muzzle of the vertical rifle with butt resting on ground; bottom-right RAM with ramrod hand raised and the other hand holding the vertical rifle, butt resting on ground. Proper hands attached to arms, one rifle per pose, loading and ram poses visibly different, no duplicated aimed or ready poses. No muzzle flash, smoke, extra weapon, captions, insignia badges, flags or additional people.\nCamera and proportions remain coherent in all four cells. Boots, cap, head, shoulders, blanket roll, torso and legs do not grow between cells. Do not stretch, mirror or simply rotate an existing 2D image. Render the actual requested direction in three dimensions. Whole transparent artwork output only.\nInput images: Image1 is the ONLY soldier identity/material/Union-uniform reference. Image2 supplies ONLY the target camera bearing and weapon/body orientation; its gray Confederate uniform is NOT the requested identity. Match the blue Union outfit and equipment in Image1.\nIdentity A: black leather ammunition pouches and black knapsack, rolled beige blanket strapped across upper back, brown hair, navy Union kepi and sack coat, sky-blue trousers, worn brown boots, metal canteen on left hip.\nNORTH / N6: directly viewed from behind with elevated camera, the soldier's chest, toes and aimed rifle point straight toward the TOP of its cell, directly away from the viewer. Both back straps visible, no frontal face view. Top-right rifle is genuinely shouldered horizontally toward the distant north and appears foreshortened, NOT held vertically at ready.\nImprove small cloth and gear detail while staying consistent with Image1. Maintain full musket and bayonet in each relevant pose, distinct cartridge-loading and ramming hand positions, consistent adult anatomy and natural weight-bearing feet.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v27/union-a-actions-ne-candidate.png",
+            "sha256": "0d612aa1d2a13ac5d35184caf14009391ff903e55318833db2a14b7c35dd9462"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v7/confederate-a-actions-n.png",
+            "sha256": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0"
+          }
+        ],
+        "transparentBackground": true,
+        "timeUTC": "2026-10-05T16:23:20.227649+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-b8987ebd-39f4-46a0-b16e-12b79349ace2.png",
+        "archive": "generation-attempts/a-n-1-generated.png",
+        "sourceSHA256": "bdb6d0f873ec226c41482e0918c52715c14abe7298207421f3f7fc51e3349c33",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": false,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              245,
+              52,
+              429,
+              619
+            ],
+            "solidPadding": [
+              245,
+              52,
+              198,
+              8
+            ],
+            "rgbaSHA256": "3ab9f61938d6a36bf11ada85e6666107a0472aa42d06cefb109b8c939d395252"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              205,
+              84,
+              389,
+              619
+            ],
+            "solidPadding": [
+              205,
+              84,
+              238,
+              8
+            ],
+            "rgbaSHA256": "b671e4e441df4216d7cbdb7d9c0ede6853d8efedf3c45837af6824e645a8bb52"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              258,
+              98,
+              443,
+              544
+            ],
+            "solidPadding": [
+              258,
+              98,
+              184,
+              83
+            ],
+            "rgbaSHA256": "b4fce13341cd11da128e0b2ad98e654262b1c45bbeebd5318ee4527aee5345fd"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              210,
+              59,
+              386,
+              549
+            ],
+            "solidPadding": [
+              210,
+              59,
+              241,
+              78
+            ],
+            "rgbaSHA256": "d7b42d5af1ca4341b5714a884cd5fcda87fcc2e14f25b4273117825727e11058"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Independent camera/kit/source review pending"
+      },
+      "generationRecordSHA256": "471149c06ff2d81d6ad5190fa206902851cfa452a28458bfebf4348d7a406311",
+      "selectedAfterIndependentSourceReview": false,
+      "candidateRelativePath": null,
+      "rejectionReasons": [
+        "Solid alpha64 clearance below the unchanged16px gate"
+      ],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    },
+    {
+      "key": "a-n-2",
+      "generationRecord": {
+        "identity": "a",
+        "bearing": "n",
+        "attempt": 2,
+        "mode": "built-in imagegen",
+        "useCase": "historical-scene",
+        "prompt": "Use case: historical-scene. New whole transparent Union infantry sprite sheet.\nPRIORITY1 CAMERA: Image1 supplies the exact requested NORTH straight-rear body/feet/weapon bearing IN EVERY CELL. Keep that bearing in ready, firing, loading AND ramming. Do not borrow the northeast pose/camera from Image2. Image2 supplies only UnionA identity, blue uniform and black leather kit. You are rendering new actual 3D poses, not flipping/mirroring the soldier.\nPRIORITY2 PADDING: native square1254x1254 RGBA with exact2x2 equal627x627cells. Each FULL silhouette including head, bayonet, ramrod hand and boots must lie well inside its cell, within local x72..555 and y72..555. Draw each entire pose about425px tall at most INCLUDING weapons, not just body. Keep the soldier's actual cap-to-sole body height consistent at about300..330pixels across all4cells. There must be at least72nativepixels of completely transparent empty space on all four cell borders, no protruding bayonet or boot. Deliberately leave a large transparent moat around each SMALLER complete figure, allcells samephysicalscale. No ground/cast shadow.\nPRIORITY3 EXACT ACTIONS: top-left ready with upright rifle; top-right aimed fire with stock at anatomicalRIGHT shoulder and left hand supporting fore-end, the musket genuinely aimed away toward TOP center with natural foreshortening, NOT held vertically at attention; bottom-left cartridge LOAD at vertical muzzle, rifle butt grounded; bottom-right RAM with one hand raised on ramrod and the other supporting grounded vertical musket. The soldier's torso, foot stance and face direction stay directly away toward TOP in allfour cells. Ready and both loading actions must not face upperright. Four distinct actions with plausible elbows/wrists and a clear supporting foot.\nAdult realistically proportioned UnionA: navy kepi and sack coat, sky-blue trousers, brown boots, brown hair, BLACK leather pouches/knapsack, beige blanket roll, silvercanteen on his ANATOMICALLEFT hip, musket carried/shouldered on ANATOMICALRIGHT. Fixed anatomical gear placement: do not swap canteen/pouch/rifle sides just to imitate a mirror. Blue Union outfit only; Image1's grayConfederate clothes are camera-reference only.\nDetailed restrained realism, worn cloth/leather/wood/steel matching Image2 artfamily, no anime/toy proportions or cartoon outlines, no enlarged head/hands/feet. No extra figures, labels, grid, flags, smoke or muzzleflash. Render a complete new native transparent sheet with these four clean full-body poses.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v7/confederate-a-actions-n.png",
+            "sha256": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v27/union-a-actions-ne-candidate.png",
+            "sha256": "0d612aa1d2a13ac5d35184caf14009391ff903e55318833db2a14b7c35dd9462"
+          }
+        ],
+        "transparentBackground": true,
+        "targetedChanges": [
+          "consistent camera bearing in all four phases",
+          "total-silhouette padding including long weapons",
+          "fixed anatomical kit handedness"
+        ],
+        "timeUTC": "2026-10-05T16:28:29.596151+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-9965b439-13c3-40a4-ab2c-724d5f585670.png",
+        "archive": "generation-attempts/a-n-2-generated.png",
+        "sourceSHA256": "29ecd2c8353e8d3f014bbfc754310a9dd50bf6b59294fe1a3f648b770a3a9c84",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": false,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              260,
+              67,
+              427,
+              627
+            ],
+            "solidPadding": [
+              260,
+              67,
+              200,
+              0
+            ],
+            "rgbaSHA256": "35518e322b7b0fdf1ed5ebb7fe0ee9ffb542badacab4767cfa75b5d1aab4e98d"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              201,
+              167,
+              367,
+              627
+            ],
+            "solidPadding": [
+              201,
+              167,
+              260,
+              0
+            ],
+            "rgbaSHA256": "4e791e0c1d7aeabb9fe17faee52a030ef04759d134886e245a6834f665b1478c"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              276,
+              0,
+              447,
+              549
+            ],
+            "solidPadding": [
+              276,
+              0,
+              180,
+              78
+            ],
+            "rgbaSHA256": "51e752a84e7f8d79571eca60f52e301c1c98bbd7c5968e14effe1d2f549c8cc0"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              207,
+              0,
+              381,
+              549
+            ],
+            "solidPadding": [
+              207,
+              0,
+              246,
+              78
+            ],
+            "rgbaSHA256": "346eeda02101aa8e62e1f25201658b73531c20c65817138432c2e54dcc6715b7"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Independent camera/kit/source review pending"
+      },
+      "generationRecordSHA256": "b5572bc61a6ff852eb072b3ce4ec8a92addb6824715d2f530da497f097e17215",
+      "selectedAfterIndependentSourceReview": false,
+      "candidateRelativePath": null,
+      "rejectionReasons": [
+        "Solid alpha64 clearance below the unchanged16px gate"
+      ],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    },
+    {
+      "key": "a-n-3",
+      "generationRecord": {
+        "identity": "a",
+        "bearing": "n",
+        "attempt": 3,
+        "mode": "built-in imagegen",
+        "useCase": "historical-scene",
+        "prompt": "Use case: historical-scene. Create a new native transparent2x2 UnionA stationary sprite sheet.\nImage1 is the REQUIRED LAYOUT diagram, not art. Each of the four entire figures (including musket/bayonet/raisedhand/boots) must be contained INSIDE its inset light-blue square. Keep the enormous empty gutters and inset margins from Image1. Remove all white/blue guide panels in final output: only four soldier silhouettes on genuine alpha transparency. Do NOT enlarge figures to fill their627pxcells; redraw four small complete poses inside the four451pxsquare allowed regions. Toprow boots must end ABOVE the central empty horizontal gutter. The same cap-to-sole body size across all4frames, about300px.\nImage2 supplies straight-NORTH camera/action bearing ONLY. Image3 supplies UnionA identity/materials ONLY. Allfour bodies face directly away toward imageTOP, no northeast turn. NavyUnionkepi/sackcoat, skyblue trousers, brown boots/hair, beige blanketroll, BLACKleatherpouches/knapsack, left-hipcanteen, rifle on anatomicalright. Correct fixed right-handed gear placement, natural adult proportions.\nEXACT readingorder: ready/uprightmusket; shoulderedfire genuinely aimed north away fromcamera with foreshortenedbarrel and shoulderstock contact; cartridge-load at muzzle of grounded verticalmusket; raisedhand ramming grounded verticalmusket. Four distinct poses, believable wrists/elbows, constanthead/torso/leg/equipment scale, same rear camera. No muzzleflash/smoke, extrafigures, labels, frameborders, shadows or scenery.\nMatch the detailed worncloth/leather/wood/steel gameart of Image3. Native square1254RGBA, equal2x2cells, allpixels and silhouettes within Image1allowed boxes, no crop or crossing cells. Render new poses rather than mirroring or warping a source.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v28-20261005/generation-attempts/layout-only-guide.png",
+            "sha256": "7e599608b38c8da600645a720388e23ef033c27d731ae5888e22a1c721bc08e4"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v7/confederate-a-actions-n.png",
+            "sha256": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v27/union-a-actions-ne-candidate.png",
+            "sha256": "0d612aa1d2a13ac5d35184caf14009391ff903e55318833db2a14b7c35dd9462"
+          }
+        ],
+        "transparentBackground": true,
+        "targetedChanges": [
+          "deterministic inset composition guide",
+          "no upper-row foot leak",
+          "foreshortened shoulder-fired north musket"
+        ],
+        "timeUTC": "2026-10-05T16:31:37.519533+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-a83a42b2-6c18-4112-8716-f6701d733a80.png",
+        "archive": "generation-attempts/a-n-3-generated.png",
+        "sourceSHA256": "6701db1baf08dd551b3de92b97670235675c42c22cd68c3934493adb7ee49880",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": true,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              263,
+              72,
+              420,
+              602
+            ],
+            "solidPadding": [
+              263,
+              72,
+              207,
+              25
+            ],
+            "rgbaSHA256": "0e9064f132370357dd0ad2b62127d3055e6095721405993f924395346457215d"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              202,
+              153,
+              363,
+              597
+            ],
+            "solidPadding": [
+              202,
+              153,
+              264,
+              30
+            ],
+            "rgbaSHA256": "15fcfed3e41dfa65ef3e1f58f05c31994baeb38ddb27db280389f4ec9437dffc"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              277,
+              135,
+              445,
+              537
+            ],
+            "solidPadding": [
+              277,
+              135,
+              182,
+              90
+            ],
+            "rgbaSHA256": "db8c80ace35ce2fec1ea041e58610b6a9e403713200192964d9c8ac2866b9494"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              203,
+              64,
+              364,
+              537
+            ],
+            "solidPadding": [
+              203,
+              64,
+              263,
+              90
+            ],
+            "rgbaSHA256": "b47b6b63f4c8603516b8951622f7aada6a71fb016e3e2933a98c925dc464f434"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Independent camera/kit/source review pending"
+      },
+      "generationRecordSHA256": "80be98da2e7227543e4a2c7b60349c673e409f5488bec3f080978696df6a18fb",
+      "selectedAfterIndependentSourceReview": true,
+      "candidateRelativePath": "docs/art-pass/candidates/gettysburg-v28/union-a-actions-n-candidate.png",
+      "rejectionReasons": [],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    },
+    {
+      "key": "a-nw-1",
+      "generationRecord": {
+        "identity": "a",
+        "bearing": "nw",
+        "attempt": 1,
+        "mode": "RGBA",
+        "useCase": "historical-scene",
+        "prompt": "Use case: historical-scene.\nAsset type: a production transparent 2x2 stationary infantry sprite sheet for Titans of War Civil War.\nCreate one brand-new native square RGBA sheet, exactly four equal cells arranged in a 2x2 grid, no printed labels or visible grid. One realistically proportioned adult Union infantryman in each cell, all the same soldier at the same physical body scale. Preserve generous transparent negative space of at least 32 native pixels around every COMPLETE silhouette, including rifle, bayonet, raised arm and boots; no edge or cell crossing, no cast floor shadows, no terrain.\nStyle: match the established detailed game-sprite family in Image1, with believable worn cloth, leather seams, wooden musket and restrained realistic human proportions. No cartoon outline, no anime head, no plastic toy shine.\nFour distinct actions in EXACT reading order: top-left relaxed READY with grounded feet and rifle carried upright near right shoulder; top-right shouldered AIMED FIRE with stock properly seated at right shoulder, left hand supporting fore-end, muzzle and bayonet aimed into the given bearing; bottom-left LOAD a paper cartridge into the muzzle of the vertical rifle with butt resting on ground; bottom-right RAM with ramrod hand raised and the other hand holding the vertical rifle, butt resting on ground. Proper hands attached to arms, one rifle per pose, loading and ram poses visibly different, no duplicated aimed or ready poses. No muzzle flash, smoke, extra weapon, captions, insignia badges, flags or additional people.\nCamera and proportions remain coherent in all four cells. Boots, cap, head, shoulders, blanket roll, torso and legs do not grow between cells. Do not stretch, mirror or simply rotate an existing 2D image. Render the actual requested direction in three dimensions. Whole transparent artwork output only.\nInput images: Image1 is the ONLY soldier identity/material/Union-uniform reference. Image2 supplies ONLY the target camera bearing and weapon/body orientation; its gray Confederate uniform is NOT the requested identity. Match the blue Union outfit and equipment in Image1.\nIdentity A: black leather ammunition pouches and black knapsack, rolled beige blanket strapped across upper back, brown hair, navy Union kepi and sack coat, sky-blue trousers, worn brown boots, metal canteen on left hip.\nNORTHWEST / NW5: elevated rear-left three-quarter view, soldier's chest, toes and aimed rifle point toward the TOP LEFT of its cell, away and to the viewer's left. The soldier turns his whole stance into northwest, no front view and no northeast aim. Top-right musket is shouldered aimed toward upper left with a coherent wrist and shoulder.\nImprove small cloth and gear detail while staying consistent with Image1. Maintain full musket and bayonet in each relevant pose, distinct cartridge-loading and ramming hand positions, consistent adult anatomy and natural weight-bearing feet.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v27/union-a-actions-ne-candidate.png",
+            "sha256": "0d612aa1d2a13ac5d35184caf14009391ff903e55318833db2a14b7c35dd9462"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v10/confederate-a-actions-nw.png",
+            "sha256": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0"
+          }
+        ],
+        "transparentBackground": true,
+        "timeUTC": "2026-10-05T16:23:20.256206+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-92cb9710-db7b-44e9-8e45-bed54fd1645d.png",
+        "archive": "generation-attempts/a-nw-1-generated.png",
+        "sourceSHA256": "44f09eefc3cc8cd24e939014956326cc43afc809c9722b4aa5249683ffc032fb",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": false,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              213,
+              13,
+              430,
+              620
+            ],
+            "solidPadding": [
+              213,
+              13,
+              197,
+              7
+            ],
+            "rgbaSHA256": "3712e2f34fca37894a6b2ee19c4ca8602ac886d884cf271e1058f6c097a8f54b"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              101,
+              123,
+              464,
+              627
+            ],
+            "solidPadding": [
+              101,
+              123,
+              163,
+              0
+            ],
+            "rgbaSHA256": "4a005557a50c7e3625b343bc12d6c5f6e4ce36cf5438979d490bbc662e633bae"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              217,
+              82,
+              430,
+              555
+            ],
+            "solidPadding": [
+              217,
+              82,
+              197,
+              72
+            ],
+            "rgbaSHA256": "6205202c0a74c422e53bc5153e8110391f3a097cfe04d9ab12362fcc06e09f05"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              209,
+              0,
+              426,
+              547
+            ],
+            "solidPadding": [
+              209,
+              0,
+              201,
+              80
+            ],
+            "rgbaSHA256": "f9b07dc52122bdb439bb42a6be986068b7721386841f6b54af920d0b018400f2"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Reject: ready/load/ram remain northeast while fire points northwest"
+      },
+      "generationRecordSHA256": "37c649248a3986db9668a28d402fc19295e431478db49f4c551a77c90d408fe9",
+      "selectedAfterIndependentSourceReview": false,
+      "candidateRelativePath": null,
+      "rejectionReasons": [
+        "Solid alpha64 clearance below the unchanged16px gate",
+        "Independent visual review found mixed NE/NW camera bearings"
+      ],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    },
+    {
+      "key": "a-nw-2",
+      "generationRecord": {
+        "identity": "a",
+        "bearing": "nw",
+        "attempt": 2,
+        "mode": "built-in imagegen",
+        "useCase": "historical-scene",
+        "prompt": "Use case: historical-scene. New whole transparent Union infantry sprite sheet.\nPRIORITY1 CAMERA: Image1 supplies the exact requested NORTHWEST rear three-quarter facing UPPER LEFT body/feet/weapon bearing IN EVERY CELL. Keep that bearing in ready, firing, loading AND ramming. Do not borrow the northeast pose/camera from Image2. Image2 supplies only UnionA identity, blue uniform and black leather kit. You are rendering new actual 3D poses, not flipping/mirroring the soldier.\nPRIORITY2 PADDING: native square1254x1254 RGBA with exact2x2 equal627x627cells. Each FULL silhouette including head, bayonet, ramrod hand and boots must lie well inside its cell, within local x72..555 and y72..555. Draw each entire pose about425px tall at most INCLUDING weapons, not just body. Keep the soldier's actual cap-to-sole body height consistent at about300..330pixels across all4cells. There must be at least72nativepixels of completely transparent empty space on all four cell borders, no protruding bayonet or boot. Deliberately leave a large transparent moat around each SMALLER complete figure, allcells samephysicalscale. No ground/cast shadow.\nPRIORITY3 EXACT ACTIONS: top-left ready with upright rifle; top-right aimed fire with stock at anatomicalRIGHT shoulder and left hand supporting fore-end, the musket genuinely aimed toward UPPER LEFT; bottom-left cartridge LOAD at vertical muzzle, rifle butt grounded; bottom-right RAM with one hand raised on ramrod and the other supporting grounded vertical musket. The soldier's torso, foot stance and face direction stay toward UPPER LEFT in allfour cells. Ready and both loading actions must not face upperright. Four distinct actions with plausible elbows/wrists and a clear supporting foot.\nAdult realistically proportioned UnionA: navy kepi and sack coat, sky-blue trousers, brown boots, brown hair, BLACK leather pouches/knapsack, beige blanket roll, silvercanteen on his ANATOMICALLEFT hip, musket carried/shouldered on ANATOMICALRIGHT. Fixed anatomical gear placement: do not swap canteen/pouch/rifle sides just to imitate a mirror. Blue Union outfit only; Image1's grayConfederate clothes are camera-reference only.\nDetailed restrained realism, worn cloth/leather/wood/steel matching Image2 artfamily, no anime/toy proportions or cartoon outlines, no enlarged head/hands/feet. No extra figures, labels, grid, flags, smoke or muzzleflash. Render a complete new native transparent sheet with these four clean full-body poses.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v10/confederate-a-actions-nw.png",
+            "sha256": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v27/union-a-actions-ne-candidate.png",
+            "sha256": "0d612aa1d2a13ac5d35184caf14009391ff903e55318833db2a14b7c35dd9462"
+          }
+        ],
+        "transparentBackground": true,
+        "targetedChanges": [
+          "consistent camera bearing in all four phases",
+          "total-silhouette padding including long weapons",
+          "fixed anatomical kit handedness"
+        ],
+        "timeUTC": "2026-10-05T16:28:29.596599+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-4fd6ce17-3a0e-4928-8628-5ebb04512c09.png",
+        "archive": "generation-attempts/a-nw-2-generated.png",
+        "sourceSHA256": "419470e47edc360cda6895534bb83ed9437257d4e5292d6d024c65a8a7743559",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": false,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              258,
+              55,
+              442,
+              627
+            ],
+            "solidPadding": [
+              258,
+              55,
+              185,
+              0
+            ],
+            "rgbaSHA256": "07cc4fda263e4a625fa9d43e80e58de609e2b5a908bfcfd9ba6f2afc07821dea"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              129,
+              160,
+              454,
+              627
+            ],
+            "solidPadding": [
+              129,
+              160,
+              173,
+              0
+            ],
+            "rgbaSHA256": "a84ec5bb9f88b91fa1da90315e2fbe89340b0df119c938676b4e84fbfdd4a87b"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              289,
+              0,
+              451,
+              573
+            ],
+            "solidPadding": [
+              289,
+              0,
+              176,
+              54
+            ],
+            "rgbaSHA256": "3280e4468c02d5e5061eed10976e91140f74bc8564cec0ad4c4fc4f306345123"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              302,
+              0,
+              459,
+              580
+            ],
+            "solidPadding": [
+              302,
+              0,
+              168,
+              47
+            ],
+            "rgbaSHA256": "2090bea0c284b6ce0cd7144fa12430368806c10f80914d4cdfb15ed0ecdf5c50"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Independent camera/kit/source review pending"
+      },
+      "generationRecordSHA256": "49c4bb4acd23818a5cf2f7370eca8cef358fbf453400d11eef6738f9a40ab806",
+      "selectedAfterIndependentSourceReview": false,
+      "candidateRelativePath": null,
+      "rejectionReasons": [
+        "Solid alpha64 clearance below the unchanged16px gate"
+      ],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    },
+    {
+      "key": "a-nw-3",
+      "generationRecord": {
+        "identity": "a",
+        "bearing": "nw",
+        "attempt": 3,
+        "mode": "built-in imagegen",
+        "useCase": "historical-scene",
+        "prompt": "Use case: historical-scene. Create a new native transparent2x2 UnionA stationary sprite sheet.\nImage1 is the REQUIRED LAYOUT diagram, not art. Each of four ENTIRE silhouettes including musket/bayonet/raisedhand/boots must fit INSIDE its inset light-blue square. Preserve generous empty margins and wide horizontal/vertical gutters. Remove all white/blue diagram panels in output: four soldier silhouettes only on genuine alpha transparency. Do not enlarge to fill627pxcells. Redraw complete poses inside four451pxallowed regions. Toprow boots end ABOVE the central empty horizontal gutter. Same cap-to-sole body size across4frames, about300px.\nImage2 supplies EXACT NORTHWEST elevated rear three-quarter, facingUPPERLEFT camera/action bearing ONLY for ALL4cells. Image3 supplies UnionA identity/materials ONLY; never copy its northeast camera. Render the same actual equipped adult rotated towardUPPERLEFT in every action, rather than mirror or flip. NavyUnion kepi/sackcoat, skyblue trousers, brown boots/hair, beige blanketroll, blackknapsack and BLACK leather ammunition pouch. Canteen stays on ANATOMICALLEFT hip. Right-handed musket stays at anatomicalRIGHT shoulder, left hand supports fore-end. Gear must stay on the same physical hip even if camera partly hides it; do not place canteen on oppositehip to imitate a mirror.\nEXACT readingorder: ready/uprightmusket; shoulderedfire genuinely aimedUPPERLEFT with shoulderstock contact; cartridge-load into muzzle of grounded verticalmusket; raisedhand ramming grounded verticalmusket. Four distinct poses and believable wrists/elbows; constant head/torso/leg/blanketroll/kit scale and same camera. Ready/load/ram ALL faceUPPERLEFT, neverupperright. Rifle/bayonet complete, fullboots included.\nDetailed worncloth/leather/wood/steel family fromImage3, realistic adultproportions, no anime/toy shine or cartoon outline. No extrapeople, labels, visible grid/frameborders, smoke/flash, shadows or scenery. Native square1254RGBA, equal2x2cells, no crop/crossing. Render new actualposes rather than warping sourcepixels.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v28-20261005/generation-attempts/layout-only-guide.png",
+            "sha256": "7e599608b38c8da600645a720388e23ef033c27d731ae5888e22a1c721bc08e4"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v10/confederate-a-actions-nw.png",
+            "sha256": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v27/union-a-actions-ne-candidate.png",
+            "sha256": "0d612aa1d2a13ac5d35184caf14009391ff903e55318833db2a14b7c35dd9462"
+          }
+        ],
+        "transparentBackground": true,
+        "targetedChanges": [
+          "deterministic inset composition guide",
+          "consistent target bearing in all phases",
+          "preserve anatomical equipment sides"
+        ],
+        "timeUTC": "2026-10-05T16:36:38.659087+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-5c195d99-5ada-4e9e-a658-1ac40d35e820.png",
+        "archive": "generation-attempts/a-nw-3-generated.png",
+        "sourceSHA256": "e63dab491d2dc9a20744365f412384f56cad0a81a8a99c910a384f17ec6c8152",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": false,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              237,
+              40,
+              451,
+              626
+            ],
+            "solidPadding": [
+              237,
+              40,
+              176,
+              1
+            ],
+            "rgbaSHA256": "52e1f75e50254cbab89889d0280fed1cb05eade47b0d1e6f46f6c249c1638054"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              121,
+              156,
+              440,
+              626
+            ],
+            "solidPadding": [
+              121,
+              156,
+              187,
+              1
+            ],
+            "rgbaSHA256": "1f57485f1a773fece3af0bb6305b591e8e2b2e170fe090393d10030977bc91ea"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              307,
+              104,
+              475,
+              575
+            ],
+            "solidPadding": [
+              307,
+              104,
+              152,
+              52
+            ],
+            "rgbaSHA256": "7f71280cfb12c0a7ad23ee83b459865ea790fcd2988cb58216891dc6d66c0083"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              289,
+              53,
+              451,
+              575
+            ],
+            "solidPadding": [
+              289,
+              53,
+              176,
+              52
+            ],
+            "rgbaSHA256": "f1d8960aaf049ec1e8f47657f8b10dac3898a01ab73b1984ab4e568a17b93a0f"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Independent camera/kit/source review pending"
+      },
+      "generationRecordSHA256": "f66690eff56cc7a629c060ca9695d1e767fd4a7e318cf17df0eae0e84aa02bff",
+      "selectedAfterIndependentSourceReview": false,
+      "candidateRelativePath": null,
+      "rejectionReasons": [
+        "Solid alpha64 clearance below the unchanged16px gate"
+      ],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    },
+    {
+      "key": "a-nw-4",
+      "generationRecord": {
+        "identity": "a",
+        "bearing": "nw",
+        "attempt": 4,
+        "mode": "built-in imagegen",
+        "intent": "whole-sheet edit",
+        "useCase": "precise-object-edit",
+        "prompt": "Use case: precise-object-edit. Edit this whole transparent 2x2 sprite sheet to FIX ONLY THE LAYOUT/PADDING. Redraw ALL FOUR complete figures noticeably SMALLER, about70percent of their current apparent size, keeping identical relative physical body scale and all existing NORTHWEST rear-three-quarter ready/fire/cartridge-load/ram poses. Keep each entire silhouette including longbayonet/ramrod/boots centered in its ownquadrant, with VERY LARGE transparent margins on all sides. Toprow soles MUST be well above the sheetmidline, not touch/crossit. Leave a fullwidth empty transparent horizontal band from y540to714 and similarly wide centralverticalgutter. No portion of ANY silhouette is in those centralbands. Keep native1254x1254RGBA equal2x2cells. Repaint clean worncloth/leather/steel details at smaller wholeposescale; do not distortbody or phases individually. Preserve navyuniform/skybluepants/blackpouches/blackknapsack/beigeroll/brownboots and the anatomicalleftcanteen/right-handedmusket. Allfourfaces/feetpointUPPERLEFT; no mirror/newbearing/actionchange. Transparentbackground only, no grid/text/shadows/scenery.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v28-20261005/generation-attempts/a-nw-3-generated.png",
+            "sha256": "e63dab491d2dc9a20744365f412384f56cad0a81a8a99c910a384f17ec6c8152"
+          }
+        ],
+        "transparentBackground": true,
+        "targetedChanges": [
+          "increase padding through whole-source imagegen, preserve camera/kit/actions"
+        ],
+        "timeUTC": "2026-10-05T16:42:49.960229+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-0df8b50d-65ad-48a5-896d-56a41c091168.png",
+        "archive": "generation-attempts/a-nw-4-generated.png",
+        "sourceSHA256": "68e08f3b24bae78461e77cacc56dc495bf992f24ce1b5fc51596d9bef2082157",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": true,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              235,
+              144,
+              374,
+              504
+            ],
+            "solidPadding": [
+              235,
+              144,
+              253,
+              123
+            ],
+            "rgbaSHA256": "f4d07e49bb7d37b6cb9b944f972bc38d10082f50c4beed9b6a5e6c7989a47e0c"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              206,
+              214,
+              410,
+              504
+            ],
+            "solidPadding": [
+              206,
+              214,
+              217,
+              123
+            ],
+            "rgbaSHA256": "c208f353ffd76e9478c7fa19a5f431f86c42b295bf6e5b0139a6146763f041b5"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              266,
+              202,
+              378,
+              497
+            ],
+            "solidPadding": [
+              266,
+              202,
+              249,
+              130
+            ],
+            "rgbaSHA256": "94e18b6cbc313547ac01cdc469498d3d9fc30f30c3c955218b20cf7a8015c50a"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              290,
+              170,
+              401,
+              500
+            ],
+            "solidPadding": [
+              290,
+              170,
+              226,
+              127
+            ],
+            "rgbaSHA256": "8fa9276b9f258b472b7902247e12e5bd201316a1c8e32e4a86da20f8a55bf96b"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Independent camera/kit/source review pending"
+      },
+      "generationRecordSHA256": "b073c96457d3a969792b54e98830f89ef207e46673a401836c4f83643c2ba614",
+      "selectedAfterIndependentSourceReview": true,
+      "candidateRelativePath": "docs/art-pass/candidates/gettysburg-v28/union-a-actions-nw-candidate.png",
+      "rejectionReasons": [],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    },
+    {
+      "key": "b-n-1",
+      "generationRecord": {
+        "identity": "b",
+        "bearing": "n",
+        "attempt": 1,
+        "mode": "RGBA",
+        "useCase": "historical-scene",
+        "prompt": "Use case: historical-scene.\nAsset type: a production transparent 2x2 stationary infantry sprite sheet for Titans of War Civil War.\nCreate one brand-new native square RGBA sheet, exactly four equal cells arranged in a 2x2 grid, no printed labels or visible grid. One realistically proportioned adult Union infantryman in each cell, all the same soldier at the same physical body scale. Preserve generous transparent negative space of at least 32 native pixels around every COMPLETE silhouette, including rifle, bayonet, raised arm and boots; no edge or cell crossing, no cast floor shadows, no terrain.\nStyle: match the established detailed game-sprite family in Image1, with believable worn cloth, leather seams, wooden musket and restrained realistic human proportions. No cartoon outline, no anime head, no plastic toy shine.\nFour distinct actions in EXACT reading order: top-left relaxed READY with grounded feet and rifle carried upright near right shoulder; top-right shouldered AIMED FIRE with stock properly seated at right shoulder, left hand supporting fore-end, muzzle and bayonet aimed into the given bearing; bottom-left LOAD a paper cartridge into the muzzle of the vertical rifle with butt resting on ground; bottom-right RAM with ramrod hand raised and the other hand holding the vertical rifle, butt resting on ground. Proper hands attached to arms, one rifle per pose, loading and ram poses visibly different, no duplicated aimed or ready poses. No muzzle flash, smoke, extra weapon, captions, insignia badges, flags or additional people.\nCamera and proportions remain coherent in all four cells. Boots, cap, head, shoulders, blanket roll, torso and legs do not grow between cells. Do not stretch, mirror or simply rotate an existing 2D image. Render the actual requested direction in three dimensions. Whole transparent artwork output only.\nInput images: Image1 is the ONLY soldier identity/material/Union-uniform reference. Image2 supplies ONLY the target camera bearing and weapon/body orientation; its gray Confederate uniform is NOT the requested identity. Match the blue Union outfit and equipment in Image1.\nIdentity B: visibly brown leather ammunition pouch against black knapsack, rolled beige blanket strapped across upper back, brown hair, navy Union kepi and sack coat, sky-blue trousers, worn brown boots, metal canteen on left hip. Preserve B's kit identity and proportions from Image1.\nNORTH / N6: directly viewed from behind with elevated camera, the soldier's chest, toes and aimed rifle point straight toward the TOP of its cell, directly away from the viewer. Both back straps visible, no frontal face view. Top-right rifle is genuinely shouldered horizontally toward the distant north and appears foreshortened, NOT held vertically at ready.\nImprove small cloth and gear detail while staying consistent with Image1. Maintain full musket and bayonet in each relevant pose, distinct cartridge-loading and ramming hand positions, consistent adult anatomy and natural weight-bearing feet.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v27/union-b-actions-ne-candidate.png",
+            "sha256": "6cd48eb4f9ba31b5ed07deb2a5c0ddc5376f8855248eb44e2a172068daae1b55"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v7/confederate-a-actions-n.png",
+            "sha256": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0"
+          }
+        ],
+        "transparentBackground": true,
+        "timeUTC": "2026-10-05T16:23:20.283109+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-7480babb-836b-44ef-9003-bc09191fc0a9.png",
+        "archive": "generation-attempts/b-n-1-generated.png",
+        "sourceSHA256": "1880709fa89db07083841058600af43bda78fbfb44238143ef1bbc270ddb237d",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": false,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              254,
+              53,
+              438,
+              627
+            ],
+            "solidPadding": [
+              254,
+              53,
+              189,
+              0
+            ],
+            "rgbaSHA256": "e425d57805acf7a13fbd814e6768542f09671a3a4728288ed060fd957d5a6278"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              195,
+              74,
+              376,
+              627
+            ],
+            "solidPadding": [
+              195,
+              74,
+              251,
+              0
+            ],
+            "rgbaSHA256": "215bfdb62900510ab9621767ae3a0306d809fe377ff8ae364b23252aaaee9ef4"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              268,
+              0,
+              482,
+              576
+            ],
+            "solidPadding": [
+              268,
+              0,
+              145,
+              51
+            ],
+            "rgbaSHA256": "3779fbfa6a88e785b42aa6f0045d5a55af75a342a4922918df11f3869e17dd04"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              198,
+              0,
+              387,
+              580
+            ],
+            "solidPadding": [
+              198,
+              0,
+              240,
+              47
+            ],
+            "rgbaSHA256": "04d3d9aced41c9260ee02e9fb25d816b14788695913b03212c8438b791e676fd"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Independent camera/kit/source review pending"
+      },
+      "generationRecordSHA256": "93559400b083bfee32f160cda58fede5c08fa08fd202b5c986ebde4c5cca2655",
+      "selectedAfterIndependentSourceReview": false,
+      "candidateRelativePath": null,
+      "rejectionReasons": [
+        "Solid alpha64 clearance below the unchanged16px gate"
+      ],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    },
+    {
+      "key": "b-n-2",
+      "generationRecord": {
+        "identity": "b",
+        "bearing": "n",
+        "attempt": 2,
+        "mode": "built-in imagegen",
+        "useCase": "historical-scene",
+        "prompt": "Use case: historical-scene. Create a new native transparent2x2 UnionB stationary sprite sheet.\nImage1 is the REQUIRED LAYOUT diagram, not art. Each of four ENTIRE silhouettes including musket/bayonet/raisedhand/boots must fit INSIDE its inset light-blue square. Preserve generous empty margins and wide horizontal/vertical gutters. Remove all white/blue diagram panels in output: four soldier silhouettes only on genuine alpha transparency. Do not enlarge to fill627pxcells. Redraw complete poses inside four451pxallowed regions. Toprow boots end ABOVE the central empty horizontal gutter. Same cap-to-sole body size across4frames, about300px.\nImage2 supplies EXACT straight-NORTH viewed directly from behind, facingTOP camera/action bearing ONLY for ALL4cells. Image3 supplies UnionB identity/materials ONLY; never copy its northeast camera. Render the same actual equipped adult rotated towardTOP in every action, rather than mirror or flip. NavyUnion kepi/sackcoat, skyblue trousers, brown boots/hair, beige blanketroll, blackknapsack and BROWN leather ammunition pouch. Canteen stays on ANATOMICALLEFT hip. Right-handed musket stays at anatomicalRIGHT shoulder, left hand supports fore-end. Gear must stay on the same physical hip even if camera partly hides it; do not place canteen on oppositehip to imitate a mirror.\nEXACT readingorder: ready/uprightmusket; shoulderedfire genuinely aimednorth away fromcamera with foreshortenedbarrel with shoulderstock contact; cartridge-load into muzzle of grounded verticalmusket; raisedhand ramming grounded verticalmusket. Four distinct poses and believable wrists/elbows; constant head/torso/leg/blanketroll/kit scale and same camera. Ready/load/ram ALL faceTOP, neverupperright. Rifle/bayonet complete, fullboots included.\nDetailed worncloth/leather/wood/steel family fromImage3, realistic adultproportions, no anime/toy shine or cartoon outline. No extrapeople, labels, visible grid/frameborders, smoke/flash, shadows or scenery. Native square1254RGBA, equal2x2cells, no crop/crossing. Render new actualposes rather than warping sourcepixels.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v28-20261005/generation-attempts/layout-only-guide.png",
+            "sha256": "7e599608b38c8da600645a720388e23ef033c27d731ae5888e22a1c721bc08e4"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v7/confederate-a-actions-n.png",
+            "sha256": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v27/union-b-actions-ne-candidate.png",
+            "sha256": "6cd48eb4f9ba31b5ed07deb2a5c0ddc5376f8855248eb44e2a172068daae1b55"
+          }
+        ],
+        "transparentBackground": true,
+        "targetedChanges": [
+          "deterministic inset composition guide",
+          "consistent target bearing in all phases",
+          "preserve anatomical equipment sides"
+        ],
+        "timeUTC": "2026-10-05T16:36:38.657491+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-8cf76757-4084-4d6c-869b-0ca5b95f20ce.png",
+        "archive": "generation-attempts/b-n-2-generated.png",
+        "sourceSHA256": "d87c0454a3e792b88caf8c0095575a309fbdb1f046dd8931acbd74f19492d093",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": false,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              262,
+              72,
+              434,
+              617
+            ],
+            "solidPadding": [
+              262,
+              72,
+              193,
+              10
+            ],
+            "rgbaSHA256": "0d40e7388f4069e35d86e4f6ccd83be4b0937cf52f3d24faa4666f3b36012e4e"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              189,
+              164,
+              359,
+              617
+            ],
+            "solidPadding": [
+              189,
+              164,
+              268,
+              10
+            ],
+            "rgbaSHA256": "0282c67e7f6b8306d00624bda4ef77e3bae85251089fc816f7a6bcd68ef60efb"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              276,
+              130,
+              466,
+              546
+            ],
+            "solidPadding": [
+              276,
+              130,
+              161,
+              81
+            ],
+            "rgbaSHA256": "de7d6c50bbd14a6b4ebddc82ac416f33b2b308d88ae1ba27f62ff37198417846"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              197,
+              43,
+              371,
+              547
+            ],
+            "solidPadding": [
+              197,
+              43,
+              256,
+              80
+            ],
+            "rgbaSHA256": "e502ae2c877a86c5cd8ff80bc8b3341109c506dcd4489768f234f85dcb621925"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Independent camera/kit/source review pending"
+      },
+      "generationRecordSHA256": "5d41c4bddb5875ef45da8429f86657fe07789d590164e955155847ee22653bf2",
+      "selectedAfterIndependentSourceReview": false,
+      "candidateRelativePath": null,
+      "rejectionReasons": [
+        "Solid alpha64 clearance below the unchanged16px gate"
+      ],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    },
+    {
+      "key": "b-n-3",
+      "generationRecord": {
+        "identity": "b",
+        "bearing": "n",
+        "attempt": 3,
+        "mode": "built-in imagegen",
+        "intent": "whole-sheet edit",
+        "useCase": "precise-object-edit",
+        "prompt": "Use case: precise-object-edit. Edit Image1 as a whole transparent 2x2 sheet. Change ONLY the Union identityA ammunition pouch to identityB's warmdarkBROWN leather from Image2; keep knapsackblack. Preserve Image1's NORTH straightrear camera in every pose, allfourready/fire/load/ram actions, their exactfigureplacement, anatomy/physicalscale, boots/weaponextent and transparent gutters. Image2 is only brownpouch/material reference, NOT camera. Do not move or enlarge any silhouette toward cell edges. Keep genuinealpha, native1254square/equal2x2cells, no background/shadow/text. No mirror, newfacing or alteredaction. Maintain right-handed rifle/left-hipcanteen. This is a matched native whole Bnorth version with Image1's already safe layout.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v28-20261005/generation-attempts/a-n-3-generated.png",
+            "sha256": "6701db1baf08dd551b3de92b97670235675c42c22cd68c3934493adb7ee49880"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v27/union-b-actions-ne-candidate.png",
+            "sha256": "6cd48eb4f9ba31b5ed07deb2a5c0ddc5376f8855248eb44e2a172068daae1b55"
+          }
+        ],
+        "transparentBackground": true,
+        "targetedChanges": [
+          "brownpouch identityB only preserve acceptedA-north camera and spacing"
+        ],
+        "timeUTC": "2026-10-05T16:42:49.964675+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-7edc01ad-a61a-42a9-b55f-580cc0a4ae80.png",
+        "archive": "generation-attempts/b-n-3-generated.png",
+        "sourceSHA256": "3bee9ead8bb0654da27d87639957a8f38b20e17d96832e8fad8d09a4e41ac17c",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": true,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              262,
+              74,
+              420,
+              603
+            ],
+            "solidPadding": [
+              262,
+              74,
+              207,
+              24
+            ],
+            "rgbaSHA256": "79b80cd0997be7e1d9f789bdcc88c924f1614d670edf903c302b0b40c7b60dde"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              199,
+              153,
+              364,
+              598
+            ],
+            "solidPadding": [
+              199,
+              153,
+              263,
+              29
+            ],
+            "rgbaSHA256": "425b11ea3b3ff2a211981df737f220d42bcb58f64cfb6d9041de17c3afbfc0d9"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              273,
+              134,
+              446,
+              538
+            ],
+            "solidPadding": [
+              273,
+              134,
+              181,
+              89
+            ],
+            "rgbaSHA256": "92075d2816208a7299cb2dcd6cc3ac0e65afff6603bc47fb71f3a2b9b3770d50"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              202,
+              66,
+              366,
+              539
+            ],
+            "solidPadding": [
+              202,
+              66,
+              261,
+              88
+            ],
+            "rgbaSHA256": "f4f64699efaaa477b4bcae6619555a43706aecd28ada73c2b60802a37298785e"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Independent camera/kit/source review pending"
+      },
+      "generationRecordSHA256": "393c5ce5d17086febeebeb9bc969b878429f4ccca644682642bdfab796ef2b0b",
+      "selectedAfterIndependentSourceReview": true,
+      "candidateRelativePath": "docs/art-pass/candidates/gettysburg-v28/union-b-actions-n-candidate.png",
+      "rejectionReasons": [],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    },
+    {
+      "key": "b-nw-1",
+      "generationRecord": {
+        "identity": "b",
+        "bearing": "nw",
+        "attempt": 1,
+        "mode": "RGBA",
+        "useCase": "historical-scene",
+        "prompt": "Use case: historical-scene.\nAsset type: a production transparent 2x2 stationary infantry sprite sheet for Titans of War Civil War.\nCreate one brand-new native square RGBA sheet, exactly four equal cells arranged in a 2x2 grid, no printed labels or visible grid. One realistically proportioned adult Union infantryman in each cell, all the same soldier at the same physical body scale. Preserve generous transparent negative space of at least 32 native pixels around every COMPLETE silhouette, including rifle, bayonet, raised arm and boots; no edge or cell crossing, no cast floor shadows, no terrain.\nStyle: match the established detailed game-sprite family in Image1, with believable worn cloth, leather seams, wooden musket and restrained realistic human proportions. No cartoon outline, no anime head, no plastic toy shine.\nFour distinct actions in EXACT reading order: top-left relaxed READY with grounded feet and rifle carried upright near right shoulder; top-right shouldered AIMED FIRE with stock properly seated at right shoulder, left hand supporting fore-end, muzzle and bayonet aimed into the given bearing; bottom-left LOAD a paper cartridge into the muzzle of the vertical rifle with butt resting on ground; bottom-right RAM with ramrod hand raised and the other hand holding the vertical rifle, butt resting on ground. Proper hands attached to arms, one rifle per pose, loading and ram poses visibly different, no duplicated aimed or ready poses. No muzzle flash, smoke, extra weapon, captions, insignia badges, flags or additional people.\nCamera and proportions remain coherent in all four cells. Boots, cap, head, shoulders, blanket roll, torso and legs do not grow between cells. Do not stretch, mirror or simply rotate an existing 2D image. Render the actual requested direction in three dimensions. Whole transparent artwork output only.\nInput images: Image1 is the ONLY soldier identity/material/Union-uniform reference. Image2 supplies ONLY the target camera bearing and weapon/body orientation; its gray Confederate uniform is NOT the requested identity. Match the blue Union outfit and equipment in Image1.\nIdentity B: visibly brown leather ammunition pouch against black knapsack, rolled beige blanket strapped across upper back, brown hair, navy Union kepi and sack coat, sky-blue trousers, worn brown boots, metal canteen on left hip. Preserve B's kit identity and proportions from Image1.\nNORTHWEST / NW5: elevated rear-left three-quarter view, soldier's chest, toes and aimed rifle point toward the TOP LEFT of its cell, away and to the viewer's left. The soldier turns his whole stance into northwest, no front view and no northeast aim. Top-right musket is shouldered aimed toward upper left with a coherent wrist and shoulder.\nImprove small cloth and gear detail while staying consistent with Image1. Maintain full musket and bayonet in each relevant pose, distinct cartridge-loading and ramming hand positions, consistent adult anatomy and natural weight-bearing feet.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v27/union-b-actions-ne-candidate.png",
+            "sha256": "6cd48eb4f9ba31b5ed07deb2a5c0ddc5376f8855248eb44e2a172068daae1b55"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v10/confederate-a-actions-nw.png",
+            "sha256": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0"
+          }
+        ],
+        "transparentBackground": true,
+        "timeUTC": "2026-10-05T16:23:20.310785+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-0d801681-313d-43a1-981a-84dd2e588222.png",
+        "archive": "generation-attempts/b-nw-1-generated.png",
+        "sourceSHA256": "8de468a8c1bbc8b9e51e4f133a7b1d82a5bf7292d81ee34aa3902c4715a85bea",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": false,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              259,
+              35,
+              468,
+              622
+            ],
+            "solidPadding": [
+              259,
+              35,
+              159,
+              5
+            ],
+            "rgbaSHA256": "9aeebbdf9addc260eee569e5115fb75426757474840c689857b2b86b460cd59c"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              85,
+              101,
+              467,
+              626
+            ],
+            "solidPadding": [
+              85,
+              101,
+              160,
+              1
+            ],
+            "rgbaSHA256": "b8caf44d864cd25b3760c75053e6c1826ed879b5fd2913aa1916f1f76055ad8e"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              305,
+              84,
+              502,
+              576
+            ],
+            "solidPadding": [
+              305,
+              84,
+              125,
+              51
+            ],
+            "rgbaSHA256": "d9e340dbc38975eae458d87040bac560ed9fc8a7796abad50e0a110a03e5b5fd"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              268,
+              19,
+              465,
+              578
+            ],
+            "solidPadding": [
+              268,
+              19,
+              162,
+              49
+            ],
+            "rgbaSHA256": "09405948dd1ab46bef9f076bf9bae5061d37254580184b57355ede4709d33f52"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Independent camera/kit/source review pending"
+      },
+      "generationRecordSHA256": "9e22a37066a5773b65d6cca5681d30f4be9690b2117219da94f5ceb2d7d1fbfa",
+      "selectedAfterIndependentSourceReview": false,
+      "candidateRelativePath": null,
+      "rejectionReasons": [
+        "Solid alpha64 clearance below the unchanged16px gate",
+        "Independent visual review found likely reflected physical kit placement"
+      ],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    },
+    {
+      "key": "b-nw-2",
+      "generationRecord": {
+        "identity": "b",
+        "bearing": "nw",
+        "attempt": 2,
+        "mode": "built-in imagegen",
+        "useCase": "historical-scene",
+        "prompt": "Use case: historical-scene. Create a new native transparent2x2 UnionB stationary sprite sheet.\nImage1 is the REQUIRED LAYOUT diagram, not art. Each of four ENTIRE silhouettes including musket/bayonet/raisedhand/boots must fit INSIDE its inset light-blue square. Preserve generous empty margins and wide horizontal/vertical gutters. Remove all white/blue diagram panels in output: four soldier silhouettes only on genuine alpha transparency. Do not enlarge to fill627pxcells. Redraw complete poses inside four451pxallowed regions. Toprow boots end ABOVE the central empty horizontal gutter. Same cap-to-sole body size across4frames, about300px.\nImage2 supplies EXACT NORTHWEST elevated rear three-quarter, facingUPPERLEFT camera/action bearing ONLY for ALL4cells. Image3 supplies UnionB identity/materials ONLY; never copy its northeast camera. Render the same actual equipped adult rotated towardUPPERLEFT in every action, rather than mirror or flip. NavyUnion kepi/sackcoat, skyblue trousers, brown boots/hair, beige blanketroll, blackknapsack and BROWN leather ammunition pouch. Canteen stays on ANATOMICALLEFT hip. Right-handed musket stays at anatomicalRIGHT shoulder, left hand supports fore-end. Gear must stay on the same physical hip even if camera partly hides it; do not place canteen on oppositehip to imitate a mirror.\nEXACT readingorder: ready/uprightmusket; shoulderedfire genuinely aimedUPPERLEFT with shoulderstock contact; cartridge-load into muzzle of grounded verticalmusket; raisedhand ramming grounded verticalmusket. Four distinct poses and believable wrists/elbows; constant head/torso/leg/blanketroll/kit scale and same camera. Ready/load/ram ALL faceUPPERLEFT, neverupperright. Rifle/bayonet complete, fullboots included.\nDetailed worncloth/leather/wood/steel family fromImage3, realistic adultproportions, no anime/toy shine or cartoon outline. No extrapeople, labels, visible grid/frameborders, smoke/flash, shadows or scenery. Native square1254RGBA, equal2x2cells, no crop/crossing. Render new actualposes rather than warping sourcepixels.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v28-20261005/generation-attempts/layout-only-guide.png",
+            "sha256": "7e599608b38c8da600645a720388e23ef033c27d731ae5888e22a1c721bc08e4"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/public/images/units/gettysburg-v10/confederate-a-actions-nw.png",
+            "sha256": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0"
+          },
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v27/union-b-actions-ne-candidate.png",
+            "sha256": "6cd48eb4f9ba31b5ed07deb2a5c0ddc5376f8855248eb44e2a172068daae1b55"
+          }
+        ],
+        "transparentBackground": true,
+        "targetedChanges": [
+          "deterministic inset composition guide",
+          "consistent target bearing in all phases",
+          "preserve anatomical equipment sides"
+        ],
+        "timeUTC": "2026-10-05T16:36:38.659414+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-8e5f47b3-ab84-4995-82e2-07a7bb2a6a43.png",
+        "archive": "generation-attempts/b-nw-2-generated.png",
+        "sourceSHA256": "dd624baa4138a160d4682fe9a188f9416086662c6eece13bbdcf5afc14f9742a",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": false,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              203,
+              26,
+              440,
+              612
+            ],
+            "solidPadding": [
+              203,
+              26,
+              187,
+              15
+            ],
+            "rgbaSHA256": "db8c32178f540bedfabb33348e97ace61633050c68c59c485d883478914f78e0"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              89,
+              126,
+              446,
+              609
+            ],
+            "solidPadding": [
+              89,
+              126,
+              181,
+              18
+            ],
+            "rgbaSHA256": "14764d5436a4acfdd1e315cf857a13fb4364e89192073e8e350d144d831869db"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              275,
+              89,
+              449,
+              579
+            ],
+            "solidPadding": [
+              275,
+              89,
+              178,
+              48
+            ],
+            "rgbaSHA256": "f43f33f91fee32dcdfb9d8b0240d86786d20e9a6c43620f1b0bd59e57a9d1b22"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              285,
+              34,
+              460,
+              581
+            ],
+            "solidPadding": [
+              285,
+              34,
+              167,
+              46
+            ],
+            "rgbaSHA256": "eda03c9dd53c323bdb0590870595b16efa84b1ad2dd8a13fca0ef76c37a3e0a0"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Independent camera/kit/source review pending"
+      },
+      "generationRecordSHA256": "fdfcd1ac7d23dfc9b8a8892385c99f017d1be3a339d15b6139080e660af9598b",
+      "selectedAfterIndependentSourceReview": false,
+      "candidateRelativePath": null,
+      "rejectionReasons": [
+        "Solid alpha64 clearance below the unchanged16px gate"
+      ],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    },
+    {
+      "key": "b-nw-3",
+      "generationRecord": {
+        "identity": "b",
+        "bearing": "nw",
+        "attempt": 3,
+        "mode": "built-in imagegen",
+        "intent": "whole-sheet edit",
+        "useCase": "precise-object-edit",
+        "prompt": "Use case: precise-object-edit. Edit this whole transparent 2x2 sprite sheet to FIX ONLY THE LAYOUT/PADDING. Redraw ALL FOUR complete figures noticeably SMALLER, about70percent of their current apparent size, keeping identical relative physical body scale and all existing NORTHWEST rear-three-quarter ready/fire/cartridge-load/ram poses. Keep each entire silhouette including longbayonet/ramrod/boots centered in its ownquadrant, with VERY LARGE transparent margins on all sides. Toprow soles MUST be well above the sheetmidline, not touch/crossit. Leave a fullwidth empty transparent horizontal band from y540to714 and similarly wide centralverticalgutter. No portion of ANY silhouette is in those centralbands. Keep native1254x1254RGBA equal2x2cells. Repaint clean worncloth/leather/steel details at smaller wholeposescale; do not distortbody or phases individually. Preserve navyuniform/skybluepants/BROWNpouches/blackknapsack/beigeroll/brownboots and anatomicalleftcanteen/right-handedmusket. Allfourfaces/feetpointUPPERLEFT; no mirror/newbearing/actionchange. Transparentbackground only, no grid/text/shadows/scenery.",
+        "references": [
+          {
+            "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v28-20261005/generation-attempts/b-nw-2-generated.png",
+            "sha256": "dd624baa4138a160d4682fe9a188f9416086662c6eece13bbdcf5afc14f9742a"
+          }
+        ],
+        "transparentBackground": true,
+        "targetedChanges": [
+          "increase padding through whole-source imagegen, preserve camera/kit/actions"
+        ],
+        "timeUTC": "2026-10-05T16:42:49.960228+00:00",
+        "original": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-9b75ada6-dd90-41bc-a71c-e51a010d56ed.png",
+        "archive": "generation-attempts/b-nw-3-generated.png",
+        "sourceSHA256": "258268c64969c4c68318ca64147f8cecfa309e950a53440fe0730bb786a1fc67",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "nativeMode": "RGBA",
+        "generationMode": "built-in imagegen",
+        "nativePixelsEdited": false,
+        "geometryAndSolidClearancePassed": true,
+        "cells": [
+          {
+            "cell": 0,
+            "solidBounds": [
+              252,
+              148,
+              396,
+              487
+            ],
+            "solidPadding": [
+              252,
+              148,
+              231,
+              140
+            ],
+            "rgbaSHA256": "ffa940eecca4587f4e52ab829fcc4037fd9af37bbf61125509f04a6e41491a0e"
+          },
+          {
+            "cell": 1,
+            "solidBounds": [
+              198,
+              205,
+              410,
+              487
+            ],
+            "solidPadding": [
+              198,
+              205,
+              217,
+              140
+            ],
+            "rgbaSHA256": "0b9da8200faab4ab4644d8da3ed16ea5d1f3fc4bac1a66e0ff292530dce4d850"
+          },
+          {
+            "cell": 2,
+            "solidBounds": [
+              287,
+              202,
+              397,
+              499
+            ],
+            "solidPadding": [
+              287,
+              202,
+              230,
+              128
+            ],
+            "rgbaSHA256": "9ae7e7eb810a6107c6e423b127923208ec3683209b656510236bb076f9fbe44c"
+          },
+          {
+            "cell": 3,
+            "solidBounds": [
+              314,
+              164,
+              423,
+              498
+            ],
+            "solidPadding": [
+              314,
+              164,
+              204,
+              129
+            ],
+            "rgbaSHA256": "98d1984febc33787ef321cc7ea0dd804cd5f2317c716c7d7d32da1d6a22e7150"
+          }
+        ],
+        "selected": false,
+        "rootVisualObservation": "Independent camera/kit/source review pending"
+      },
+      "generationRecordSHA256": "b139ca499f91f203982a542d13d61fe25d470c6e628ee6d4fb05ad94cf68fc03",
+      "selectedAfterIndependentSourceReview": true,
+      "candidateRelativePath": "docs/art-pass/candidates/gettysburg-v28/union-b-actions-nw-candidate.png",
+      "rejectionReasons": [],
+      "originalAsAtGenerationSelectedFieldPreserved": false
+    }
+  ],
+  "acceptedForLocalInstall": false,
+  "defaultApproved": false,
+  "productionApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false
+}

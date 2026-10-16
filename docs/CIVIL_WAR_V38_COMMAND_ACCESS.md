@@ -1,0 +1,13 @@
+# Civil War v38: reachable formation commands
+
+The formation-mode controls now lead the details panel instead of following the briefing, history and readiness sections. Line, Column and Skirmish retain their existing selected-unit dispatch, ARIA state and disabled policy. Their sticky row stays available while that panel scrolls, and each button has a 44-pixel minimum click target.
+
+The change applies to battlefield encounters generally. On desktop the controls appear directly below the formation roster. On phones, opening Formation details exposes them at the start; Close details still returns to the battlefield. Existing guide, formation selection, artillery restrictions and finished-battle restrictions remain in effect.
+
+This pass followed an actual desktop playthrough finding: the controls initially began at y1149 on a 1440x1000 viewport. The separate v38 column study rejected five spacing/reformation candidates after individual visibility regressions. Those art candidates are not installed. Their CPU alpha measurements do not establish native image quality or human usability; natural rank overlap is allowed. The next art decision should compare formation identity, facing, rank structure and motion at ordinary play zoom, rather than require every representative soldier to be visible.
+
+Production scope is the encounter component and usability CSS. The package registrations, authentic source archives and strict preservation reader support current physical-source regression checks. Combat, formation visuals, native art, cached shots, save schemas, assets, Scene and other gameplay code remain byte exact. Existing fixtures, migration ledgers and behavioral assertions were not refreshed.
+
+Verification records are in `/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v38-command-access-20261007`: focused/current-component handler checks, retained UI/art/save/continuity/gameplay checks, build receipts, public desktop/short-desktop/phone command-access captures, exact scoped source and served-build hashes, independent acceptance and rollback receipts. Overlapping composite test executions are not unique tests. The source/component recorder omits effects and Phaser; browser testing covers presentation separately. Neither establishes a human ten-out-of-ten grade.
+
+Local installation and a working local preview are separate from public release. No itch.io upload or default art promotion is part of this pass. The earlier v36 screenshot anomaly remains unresolved; baseline v38 column screenshot differences also involved different camera framing and are not proof of a save defect. The tested v37 compact infantry option is retained.

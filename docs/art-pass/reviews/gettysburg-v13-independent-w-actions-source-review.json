@@ -1,0 +1,328 @@
+{
+  "reviewType": "Independent native-source visual review",
+  "reviewedAtUTC": "2026-10-03T23:24:32.264797+00:00",
+  "reviewer": "v13_source_review model agent",
+  "scope": "Confederate A W stationary actions, exact v13 source; local opt-in preview only",
+  "source": {
+    "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v13-20261003/attempts/confederate-a-w-actions-attempt-4.png",
+    "sha256": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "cell": [
+      627,
+      627
+    ]
+  },
+  "imagePath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v13-20261003/attempts/confederate-a-w-actions-attempt-4.png",
+  "sha256": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b",
+  "acceptedForOptIn": true,
+  "modelAssisted": true,
+  "identityKit": "confederate-a",
+  "kitAccepted": true,
+  "allFourCellsReviewed": true,
+  "completeNativeSheetInspected": true,
+  "humanReviewed": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "completeFamilyApproved": false,
+  "verdict": "PASS for exact-source local opt-in preview with occlusion and barrel-mouth uncertainty recorded",
+  "appearance": {
+    "kit": "All four show gray kepi-like cap/jacket, tan trousers, brown boots, compact beige upper-back roll, brown straps, dark hip pouches and round tan canteen.",
+    "material": "Readable stylized rough gray cloth, tan cloth/canvas and brown leather/wood/metal material separation; historical manufacture or drill not certified.",
+    "continuity": "Broad ConfA kit continuity against retained NE/NW and accepted E source; precise face/skeleton continuity uncertified."
+  },
+  "bearingAndGrip": {
+    "direction": "W",
+    "directionIndex": 4,
+    "actualFacingAccepted": true,
+    "bearing": "All four native profiles face image left.",
+    "ready": "Upright diagonal rifle, two plausible hand contacts.",
+    "fire": "Horizontal left-pointing weapon entirely within TR; stock at shoulder, rear trigger/stock grip and fore-end support. No baked flash or smoke.",
+    "load": "Grounded upright rifle with lower support and upper loading grip.",
+    "ram": "Same upright rifle with raised insertion hand and thin rod aligned above barrel; distinct arm height from BL.",
+    "limits": "Exact bore insertion, fingers, concealed hand/shoulder contacts and historical choreography unverified."
+  },
+  "cells": [
+    {
+      "cell": 0,
+      "name": "TL ready",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true
+    },
+    {
+      "cell": 1,
+      "name": "TR fire",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true
+    },
+    {
+      "cell": 2,
+      "name": "BL load",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true
+    },
+    {
+      "cell": 3,
+      "name": "BR ram",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true
+    }
+  ],
+  "measurementContract": {
+    "coordinateSpace": "Native per-cell pixels from top-left; TL/TR/BL/BR.",
+    "rootMeaning": "Fresh manual concealed pelvis-center X projected to individually visible supporting boot sole; 2D registration, not anatomical or physical-ground certification.",
+    "roots": [
+      [
+        421,
+        591
+      ],
+      [
+        481,
+        604
+      ],
+      [
+        437,
+        572
+      ],
+      [
+        384,
+        567
+      ]
+    ],
+    "pelvisX": [
+      421,
+      481,
+      437,
+      384
+    ],
+    "perCellSupportingSoleGroundY": [
+      591,
+      604,
+      572,
+      567
+    ],
+    "supportingSoleROIs": [
+      [
+        350,
+        510,
+        490,
+        620
+      ],
+      [
+        395,
+        525,
+        560,
+        620
+      ],
+      [
+        355,
+        480,
+        490,
+        590
+      ],
+      [
+        300,
+        480,
+        455,
+        590
+      ]
+    ],
+    "groundMethod": "Fresh alpha>=64 bottom-exclusive Y within manually selected sole-only regions in each cell.",
+    "rootXUncertaintyPixels": 8,
+    "rootYUncertaintyPixels": 3,
+    "capTopY": [
+      130,
+      154,
+      115,
+      120
+    ],
+    "capTop": [
+      130,
+      154,
+      115,
+      120
+    ],
+    "capROIs": [
+      [
+        340,
+        100,
+        445,
+        205
+      ],
+      [
+        395,
+        125,
+        500,
+        235
+      ],
+      [
+        345,
+        90,
+        455,
+        200
+      ],
+      [
+        335,
+        100,
+        425,
+        195
+      ]
+    ],
+    "capMethod": "Fresh alpha>=64 min Y in selected cap regions; BR excludes raised arm/rod.",
+    "capTopUncertaintyPixels": 2,
+    "bodySpans": [
+      461,
+      450,
+      457,
+      447
+    ],
+    "capToRegisteredGroundSpans": [
+      461,
+      450,
+      457,
+      447
+    ],
+    "referenceHeight": 454,
+    "commonBodyReferenceHeight": 454,
+    "referenceMethod": "Rounded median of all four cap-to-individual-supporting-sole spans, one source-wide scale, no per-frame normalization.",
+    "bodySpanRangePixels": 14,
+    "rangeAsPercentOfCommonReference": 3.08,
+    "firingBarrelMouth": [
+      192,
+      214
+    ],
+    "firingBarrelMouthUncertaintyPixels": 4,
+    "firingBarrelMouthConfidence": "Moderate: upper tube terminal at local x193/192/191 for y211/212/213; bayonet blade continues much farther left at lower rows to x99,y218. Small dark bore cannot be physically certified.",
+    "firingTubeTerminalAlphaEvidence": {
+      "alphaThreshold": 64,
+      "rowsY": [
+        211,
+        212,
+        213
+      ],
+      "leftmostUpperTubeX": [
+        193,
+        192,
+        191
+      ]
+    },
+    "firingAnchorIsBayonetTip": false,
+    "firingBayonetApproximateTip": [
+      99,
+      218
+    ],
+    "muzzleApplicable": true
+  },
+  "nativePixelEvidence": {
+    "alphaThreshold": 64,
+    "boundsExclusive": [
+      [
+        252,
+        23,
+        497,
+        591
+      ],
+      [
+        99,
+        154,
+        571,
+        604
+      ],
+      [
+        317,
+        115,
+        516,
+        572
+      ],
+      [
+        248,
+        54,
+        468,
+        567
+      ]
+    ],
+    "paddingLTRB": [
+      [
+        252,
+        23,
+        130,
+        36
+      ],
+      [
+        99,
+        154,
+        56,
+        23
+      ],
+      [
+        317,
+        115,
+        111,
+        55
+      ],
+      [
+        248,
+        54,
+        159,
+        60
+      ]
+    ],
+    "minimumPaddingByCell": [
+      23,
+      23,
+      55,
+      54
+    ],
+    "minimumRequiredPadding": 16,
+    "strictPaddingPassed": true,
+    "nativeSquareRGBA2x2": true,
+    "requestedGenerationPaddingGoal": 32,
+    "paddingAssessment": "Both top cells have minimum23 pixels, below generation goal32 but above strict floor16. No clipping or cell crossing found.",
+    "redYellowCriterion": "R>180,B<80,and(G<90 or G>170)",
+    "redYellowAlphaDistribution": {
+      "1": 1302,
+      "2": 34,
+      "4": 9,
+      "253": 1
+    },
+    "redYellowAtAlpha64": 1,
+    "coloredRGBAssessment": "One saturated colored alpha253 pixel under stated criterion; remaining saturated RGB is neartransparent. No conspicuous broad opaque outline established.",
+    "rasterCleanupPerformed": false,
+    "sourceChangedDuringReview": false
+  },
+  "nativeReview": {
+    "exactSHAInspected": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b",
+    "completeNativeSheetInspected": true,
+    "allFourCellsReviewed": true,
+    "kitAccepted": true,
+    "acceptedForOptIn": true,
+    "modelAssisted": true,
+    "humanReviewed": false,
+    "anatomyCertified": false,
+    "historyCertified": false,
+    "actualFacingAccepted": true,
+    "poseAccepted": true,
+    "manualRootsMeasured": true,
+    "manualMuzzleMeasured": true,
+    "oneSourceReferenceHeight": 454
+  },
+  "blockers": [],
+  "limits": [
+    "Exact-SHA four-cell source acceptance only, not human/anatomy/history certification.",
+    "Concealed pelvis and far-side attachments are estimated; supporting sole has about3-pixel native uncertainty.",
+    "Visible stylization does not establish historical equipment manufacture or drill.",
+    "No default/production/full-family approval or runtime temporal/cold-resume/residency/performance proof."
+  ],
+  "selectedSource": "docs/art-pass/candidates/gettysburg-v13/confederate-a-w-actions-candidate.png",
+  "selectedSourceSha256": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b"
+}

@@ -1,0 +1,18 @@
+{
+  "source": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-93775474-d2dc-46f4-9a99-bc0c8cc8c7b1.png",
+  "asset": "public/images/battles/landmarks-v7/brian-house.png",
+  "sha256": "d4fec3d6f5aa921afdfcf312316a2d840b9a3ef6a9a70d47051c043eedff5078",
+  "bytes": 3106284,
+  "size": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "unchangedNativeBytes": true,
+  "historicalSource": "https://www.nps.gov/places/abraham-brian-farm.htm",
+  "interpretation": "Restored farmhouse proportions; roof and siding finishes illustrative, not verified 1863 details."
+}

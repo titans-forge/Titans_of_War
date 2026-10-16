@@ -1,0 +1,207 @@
+{
+  "artPass": "gettysburg-v22",
+  "side": "union",
+  "identity": "a",
+  "direction": 2,
+  "role": "casualty",
+  "source": "docs/art-pass/candidates/gettysburg-v22/union-a-casualty-s-candidate.png",
+  "sourceSHA256": "9e772954efa04dfbd29020c59f1f7d53916fb3bec878ef5735e22ada3565d10f",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v22-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "66ef816943a6b21cf9aa2954124145a8b7182a7ad35d9bb229afbc250397ed7f",
+  "referenceHeight": 371,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh union contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "26a410eb34608628730f9d0039780ad6534637477b4a2624a454047c4dbb6aa6",
+      "ground": [
+        375,
+        566
+      ],
+      "groundROI": [
+        314,
+        539,
+        369,
+        574
+      ],
+      "groundMethod": "Projected pelvis X; nearer screen-left boot sole during stumble, not bayonet bounds.",
+      "solidBounds": [
+        159,
+        150,
+        491,
+        566
+      ],
+      "solidPadding": [
+        159,
+        150,
+        136,
+        61
+      ],
+      "nonzeroBounds": [
+        105,
+        73,
+        627,
+        603
+      ]
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "a0ae6e25b304914503e49fa172d8de0b30286300bf9ff2a44971c49a7ad650c9",
+      "ground": [
+        343,
+        540
+      ],
+      "groundROI": [
+        248,
+        519,
+        307,
+        550
+      ],
+      "groundMethod": "Projected pelvis X; planted forward boot sole supporting the kneeling drop; palm and weapon are excluded.",
+      "solidBounds": [
+        92,
+        228,
+        440,
+        572
+      ],
+      "solidPadding": [
+        92,
+        228,
+        187,
+        55
+      ],
+      "nonzeroBounds": [
+        7,
+        51,
+        541,
+        577
+      ]
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "8c8650c90a890910dddda54857032d5b9bd5974472b9499f634a7c395b01673a",
+      "ground": [
+        392,
+        389
+      ],
+      "groundROI": [
+        398,
+        367,
+        438,
+        404
+      ],
+      "groundMethod": "Projected lower-torso/hip X; lower body cloth edge during supported collapse, excluding supporting hand and musket below it.",
+      "solidBounds": [
+        111,
+        195,
+        516,
+        468
+      ],
+      "solidPadding": [
+        111,
+        195,
+        111,
+        159
+      ],
+      "nonzeroBounds": [
+        0,
+        23,
+        627,
+        571
+      ]
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "56801aad0ff795bb30bcd75c5ce7fe987762e35a143cf1983dec3bf91a50bf1b",
+      "ground": [
+        346,
+        426
+      ],
+      "groundROI": [
+        211,
+        394,
+        230,
+        438
+      ],
+      "groundMethod": "Projected torso X; underside of the near screen-left supporting forearm sleeve, excluding rifle and fingers.",
+      "solidBounds": [
+        92,
+        144,
+        484,
+        508
+      ],
+      "solidPadding": [
+        92,
+        144,
+        143,
+        119
+      ],
+      "nonzeroBounds": [
+        1,
+        7,
+        545,
+        627
+      ]
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 2,
+      "action": "fall",
+      "key": "union-gettysburg-v22-a-casualty-s",
+      "frames": [
+        "a-fall-2-0",
+        "a-fall-2-1",
+        "a-fall-2-2",
+        "a-fall-2-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.598086,
+          "y": 0.902711
+        },
+        {
+          "x": 0.547049,
+          "y": 0.861244
+        },
+        {
+          "x": 0.625199,
+          "y": 0.620415
+        },
+        {
+          "x": 0.551834,
+          "y": 0.679426
+        }
+      ],
+      "referenceHeight": 371,
+      "sourceHash": "9e772954efa04dfbd29020c59f1f7d53916fb3bec878ef5735e22ada3565d10f",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeCasualtySequence": "gettysburg-v22-union-a-s-casualty",
+      "scope": "Exact source-reviewed union A S local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

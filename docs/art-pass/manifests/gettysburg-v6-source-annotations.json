@@ -1,0 +1,31 @@
+{
+  "artPass": "gettysburg-v6",
+  "productionApproved": false,
+  "sources": [
+    {
+      "name": "actions-se",
+      "source": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-padded-candidate.png",
+      "sha256": "bd4650f0d15bf5abf612ebfd01edecf9560c7a459b96e2643ad76ca5d023b61e",
+      "side": "union",
+      "identity": "a",
+      "direction": 1,
+      "cell": 627,
+      "roots": [[270, 590], [238, 590], [310, 587], [265, 587]],
+      "capTop": [104, 119, 92, 95],
+      "bodySpans": [483, 461, 491, 488],
+      "referenceHeight": 495,
+      "actions": [["ready", [0]], ["fire", [1]], ["reload", [2, 3]]],
+      "muzzle": [488, 365],
+      "scope": "opt-in Union A SE stationary actions; exact historical Gettysburg v6/v7 only",
+      "annotationMethod": "Separate model-assisted source review; manual torso/pelvis X and row-shared ground Y approximately +/-5 to 8 native pixels, muzzle +/-3 to 4. One 495px stationary reference across all actions; cap/sole spans are diagnostics, never per-frame normalization.",
+      "limitations": [
+        "Representative simplified two-state loading, not a verified full historical drill or exact weapon model.",
+        "Firing barrel axis is approximately31degrees down-right under the SE camera; geometry and cheek/grips are visually plausible, not human-anatomical or rig certification.",
+        "Native imagegen corrections changed details outside requested translation. No exact12px translation or source identity preservation is claimed.",
+        "Very faint colored RGB and alpha1 boundary residue remain; measured blue residue is below alpha8. Padding gate is alpha64, not every nonzero alpha.",
+        "Single held fire pose does not provide recoil/settling; melee, casualties and dedicated color bearers remain accepted-art fallback.",
+        "Production/full-family approval and independent human/historical validation remain false."
+      ]
+    }
+  ]
+}

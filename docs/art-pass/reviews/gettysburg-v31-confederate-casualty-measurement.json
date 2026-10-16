@@ -1,0 +1,207 @@
+{
+  "artPass": "gettysburg-v31",
+  "side": "confederate",
+  "identity": "a",
+  "direction": 1,
+  "role": "casualty",
+  "source": "docs/art-pass/candidates/gettysburg-v31/confederate-a-casualty-se-candidate.png",
+  "sourceSHA256": "060d927523c3a6977aae9f03fb7e59d5b0c77054fa65231f094b517696e39855",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v31-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "a0b324df31af6be2523f8a5796476225a3f39d9862688e75a5dae8be01beac32",
+  "referenceHeight": 403,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh confederate contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "39a292e2afa53893649281600f639847fee330c212851545f0b4cdb4745ece09",
+      "ground": [
+        229,
+        514
+      ],
+      "groundROI": [
+        248,
+        451,
+        325,
+        524
+      ],
+      "groundMethod": "Projected pelvis X under the leaning belt line; support Y uses the lower screen-left boot sole during the stumble, excluding the detached rifle extending farther down/right.",
+      "solidBounds": [
+        70,
+        94,
+        588,
+        553
+      ],
+      "solidPadding": [
+        70,
+        94,
+        39,
+        74
+      ],
+      "nonzeroBounds": [
+        31,
+        34,
+        627,
+        627
+      ]
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "f50e3ce8b35b4e728729160d2abc7f9c59e310b88f706c82ac3a68fca0690944",
+      "ground": [
+        213,
+        518
+      ],
+      "groundROI": [
+        204,
+        469,
+        288,
+        531
+      ],
+      "groundMethod": "Projected pelvis X above the kneeling hips; support Y is the exclusive alpha>=64 lower edge of the nearer lowered knee. Reaching fingers, rear boot and released musket are excluded.",
+      "solidBounds": [
+        84,
+        239,
+        601,
+        602
+      ],
+      "solidPadding": [
+        84,
+        239,
+        26,
+        25
+      ],
+      "nonzeroBounds": [
+        1,
+        21,
+        605,
+        623
+      ]
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "cdfc819d084d29303d330d6d7bb049cd157e2e133e3d869b5c30bf94f3964f9f",
+      "ground": [
+        210,
+        393
+      ],
+      "groundROI": [
+        170,
+        340,
+        253,
+        401
+      ],
+      "groundMethod": "Projected pelvis X at the tilted hip center; support Y uses the visibly lowered near knee as the torso collapses onto its arm. The detached rifle and free hand are outside this support ROI.",
+      "solidBounds": [
+        36,
+        163,
+        581,
+        554
+      ],
+      "solidPadding": [
+        36,
+        163,
+        46,
+        73
+      ],
+      "nonzeroBounds": [
+        33,
+        1,
+        605,
+        609
+      ]
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "22e2137a64a7618d3cf64208f1f9a74dbce5f306714ac512e07a567627e8230c",
+      "ground": [
+        252,
+        397
+      ],
+      "groundROI": [
+        286,
+        356,
+        412,
+        406
+      ],
+      "groundMethod": "Projected pelvis X at the prone hip/trunk junction; support Y uses the folded foreground forearm/elbow below the resting head. The detached rifle extends much farther down and is excluded.",
+      "solidBounds": [
+        41,
+        219,
+        552,
+        565
+      ],
+      "solidPadding": [
+        41,
+        219,
+        75,
+        62
+      ],
+      "nonzeroBounds": [
+        19,
+        7,
+        589,
+        627
+      ]
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 1,
+      "action": "fall",
+      "key": "confederate-gettysburg-v31-a-casualty-se",
+      "frames": [
+        "a-fall-1-0",
+        "a-fall-1-1",
+        "a-fall-1-2",
+        "a-fall-1-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.365231,
+          "y": 0.819777
+        },
+        {
+          "x": 0.339713,
+          "y": 0.826156
+        },
+        {
+          "x": 0.334928,
+          "y": 0.626794
+        },
+        {
+          "x": 0.401914,
+          "y": 0.633174
+        }
+      ],
+      "referenceHeight": 403,
+      "sourceHash": "060d927523c3a6977aae9f03fb7e59d5b0c77054fa65231f094b517696e39855",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeCasualtySequence": "gettysburg-v31-confederate-a-se-casualty",
+      "scope": "Exact source-reviewed confederate A SE local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

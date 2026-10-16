@@ -1,0 +1,49 @@
+{
+  "tool": "built-in image_gen",
+  "model": "not reported",
+  "assets": [
+    {
+      "id": "stone-house",
+      "path": "public/images/battles/landmarks-v5/stone-house.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-55a9084d-eb50-4b30-90ca-c62ebd253cc8.png",
+      "sha256": "aadb0152e64682146454d2c3d1025a483fc93bbe6f30768ae736042e6ed96471",
+      "size": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 595509,
+      "nearlyOpaquePixels": 944076,
+      "pixelEdits": false
+    },
+    {
+      "id": "snodgrass-house",
+      "path": "public/images/battles/landmarks-v5/snodgrass-house.png",
+      "original": "/Users/titansforge/.codex/generated_images/01a093ad-d067-7481-bf0c-1f772cdacb79/exec-c82666e4-4803-4e9e-bdd4-cb8ff6f96399.png",
+      "sha256": "49ccb9f2a78b587493831024b2d830d587a70402c1bd03febde3b208c616595d",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 742462,
+      "nearlyOpaquePixels": 804680,
+      "pixelEdits": false
+    }
+  ],
+  "historicalAccuracy": "Illustrative reconstructions and representative board positions. Site identities are historical; farm tracks and cultivation are artistic context, not surveyed roads or new terrain rules.",
+  "sources": [
+    {
+      "url": "https://www.nps.gov/mana/learn/historyculture/the-stone-house.htm",
+      "supports": "Wartime Stone House, crossroads, hospital use and 1862 LOC photograph. Photograph viewed."
+    },
+    {
+      "url": "https://www.loc.gov/pictures/item/2004660147/",
+      "supports": "Waud drawing of Snodgrass House, viewed. Catalog warns its date may be after the battle or after the war."
+    },
+    {
+      "url": "https://www.nps.gov/parkhistory/online_books/chch/hrs/appendixb.pdf",
+      "supports": "NPS resource inventory dates surviving smaller Snodgrass cabin to 1867, rebuilt using logs of a larger building."
+    }
+  ]
+}

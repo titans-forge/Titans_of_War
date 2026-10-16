@@ -1,0 +1,406 @@
+{
+  "artPass": "gettysburg-v22",
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false,
+  "familyApproved": false,
+  "completeFamilyApproved": false,
+  "referenceHeights": {
+    "union": 371,
+    "confederate": 316
+  },
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v22-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "66ef816943a6b21cf9aa2954124145a8b7182a7ad35d9bb229afbc250397ed7f",
+  "method": "Independent native anatomical/support registration with one fresh contact median per army shared across contact and casualty; no pixel edits or phase normalization.",
+  "coordinateSystem": "Cell-local native integer pixels; [x0,y0,x1,y1] ROIs have exclusive upper bounds; groundY is alpha>=64 maxYExclusive inside reviewed support ROI.",
+  "rootSelection": "Manual model interpretation of projected pelvis/body support X separate from source alpha ground ROI Y; never weapon/full-bounds centering.",
+  "sources": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 2,
+      "role": "contact",
+      "action": "melee",
+      "source": "docs/art-pass/candidates/gettysburg-v22/union-a-contact-s-candidate.png",
+      "sha256": "5f2d97fcf8957daa12c3c8d12efd0bd44a06983bfd1d2b2106a8e03f432b4cfa",
+      "cell": 627,
+      "referenceHeight": 371,
+      "roots": [
+        [
+          364,
+          559
+        ],
+        [
+          308,
+          565
+        ],
+        [
+          365,
+          490
+        ],
+        [
+          337,
+          500
+        ]
+      ],
+      "groundROIs": [
+        [
+          301,
+          531,
+          362,
+          566
+        ],
+        [
+          263,
+          541,
+          313,
+          576
+        ],
+        [
+          422,
+          472,
+          475,
+          505
+        ],
+        [
+          399,
+          479,
+          455,
+          509
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X; nearer screen-left front boot sole ground Y, excluding bayonet.",
+        "Projected pelvis X; nearer forward boot sole, excluding the adjacent bayonet point.",
+        "Projected pelvis X; nearer screen-right planted boot sole in wide low recovery.",
+        "Projected pelvis X; nearer screen-right planted sole during raised cross-body guard."
+      ],
+      "capROIs": [
+        [
+          315,
+          160,
+          381,
+          194
+        ],
+        [
+          270,
+          174,
+          336,
+          208
+        ],
+        [
+          314,
+          132,
+          382,
+          163
+        ],
+        [
+          302,
+          130,
+          370,
+          164
+        ]
+      ],
+      "capTop": [
+        169,
+        183,
+        143,
+        140
+      ],
+      "referenceSoleROIs": [
+        [
+          301,
+          531,
+          362,
+          566
+        ],
+        [
+          263,
+          541,
+          313,
+          576
+        ],
+        [
+          422,
+          472,
+          475,
+          505
+        ],
+        [
+          399,
+          479,
+          455,
+          509
+        ]
+      ],
+      "referenceSoleGroundY": [
+        559,
+        565,
+        490,
+        500
+      ],
+      "bodySpans": [
+        390,
+        382,
+        347,
+        360
+      ]
+    },
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 2,
+      "role": "casualty",
+      "action": "fall",
+      "source": "docs/art-pass/candidates/gettysburg-v22/union-a-casualty-s-candidate.png",
+      "sha256": "9e772954efa04dfbd29020c59f1f7d53916fb3bec878ef5735e22ada3565d10f",
+      "cell": 627,
+      "referenceHeight": 371,
+      "roots": [
+        [
+          375,
+          566
+        ],
+        [
+          343,
+          540
+        ],
+        [
+          392,
+          389
+        ],
+        [
+          346,
+          426
+        ]
+      ],
+      "groundROIs": [
+        [
+          314,
+          539,
+          369,
+          574
+        ],
+        [
+          248,
+          519,
+          307,
+          550
+        ],
+        [
+          398,
+          367,
+          438,
+          404
+        ],
+        [
+          211,
+          394,
+          230,
+          438
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X; nearer screen-left boot sole during stumble, not bayonet bounds.",
+        "Projected pelvis X; planted forward boot sole supporting the kneeling drop; palm and weapon are excluded.",
+        "Projected lower-torso/hip X; lower body cloth edge during supported collapse, excluding supporting hand and musket below it.",
+        "Projected torso X; underside of the near screen-left supporting forearm sleeve, excluding rifle and fingers."
+      ]
+    },
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 6,
+      "role": "contact",
+      "action": "melee",
+      "source": "docs/art-pass/candidates/gettysburg-v22/confederate-a-contact-n-candidate.png",
+      "sha256": "56e05a772097a187f372df1be8dd77594e3150efe1459975a956d77919817363",
+      "cell": 627,
+      "referenceHeight": 316,
+      "roots": [
+        [
+          356,
+          597
+        ],
+        [
+          335,
+          604
+        ],
+        [
+          356,
+          503
+        ],
+        [
+          365,
+          506
+        ]
+      ],
+      "groundROIs": [
+        [
+          388,
+          576,
+          438,
+          608
+        ],
+        [
+          361,
+          581,
+          418,
+          619
+        ],
+        [
+          402,
+          481,
+          463,
+          519
+        ],
+        [
+          406,
+          482,
+          467,
+          521
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X; nearer rear screen-right boot sole in compact north guard, excluding rifle bounds.",
+        "Projected pelvis X; nearer trailing screen-right boot sole under the braced forward extension.",
+        "Projected pelvis X; nearer rear screen-right boot sole during low recovery.",
+        "Projected pelvis X; nearer rear screen-right boot sole under raised guard."
+      ],
+      "capROIs": [
+        [
+          357,
+          263,
+          374,
+          292
+        ],
+        [
+          327,
+          283,
+          350,
+          311
+        ],
+        [
+          322,
+          178,
+          379,
+          210
+        ],
+        [
+          320,
+          185,
+          364,
+          219
+        ]
+      ],
+      "capTop": [
+        266,
+        293,
+        185,
+        193
+      ],
+      "referenceSoleROIs": [
+        [
+          388,
+          576,
+          438,
+          608
+        ],
+        [
+          361,
+          581,
+          418,
+          619
+        ],
+        [
+          402,
+          481,
+          463,
+          519
+        ],
+        [
+          406,
+          482,
+          467,
+          521
+        ]
+      ],
+      "referenceSoleGroundY": [
+        597,
+        604,
+        503,
+        506
+      ],
+      "bodySpans": [
+        331,
+        311,
+        318,
+        313
+      ]
+    },
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 6,
+      "role": "casualty",
+      "action": "fall",
+      "source": "docs/art-pass/candidates/gettysburg-v22/confederate-a-casualty-n-candidate.png",
+      "sha256": "3eb0fcb2c6870d927bb83b47718476e1c51ddc5553b3818e1832a577fcdf55b9",
+      "cell": 627,
+      "referenceHeight": 316,
+      "roots": [
+        [
+          384,
+          593
+        ],
+        [
+          405,
+          563
+        ],
+        [
+          380,
+          418
+        ],
+        [
+          341,
+          390
+        ]
+      ],
+      "groundROIs": [
+        [
+          428,
+          573,
+          491,
+          605
+        ],
+        [
+          394,
+          540,
+          437,
+          579
+        ],
+        [
+          332,
+          387,
+          369,
+          432
+        ],
+        [
+          339,
+          354,
+          343,
+          423
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X; nearer rear screen-right boot sole during stumble, excluding weapon.",
+        "Lowered knee support X; screen-right knee/trouser underside during knee-down; raised rear sole is excluded.",
+        "Projected lower-torso/hip X; folded near knee/trouser support edge, excluding trailing boots and musket.",
+        "Prone projected pelvis X; lower pelvis cloth edge at the central inter-leg gap, excluding trailing soles and the weapon."
+      ]
+    }
+  ]
+}

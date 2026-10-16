@@ -352,7 +352,7 @@ function drawManeuver(ctx, selectedChoiceId, troopLayout, maneuvers, progress, h
   ctx.restore();
 }
 
-function MapInspectorModal({ mapSrc, pins, onClose }) {
+function MapInspectorModal({ mapSrc, pins, media, onClose }) {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [drawColor, setDrawColor] = useState('rgba(239, 68, 68, 0.85)'); // default red
@@ -446,7 +446,7 @@ function MapInspectorModal({ mapSrc, pins, onClose }) {
         {/* Header */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(212,175,55,0.15)', paddingBottom: '0.6rem' }}>
           <h3 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem', color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '1px', margin: 0 }}>
-            📜 THE CARTOGRAPHER'S LOUPE // HISTORICAL ATLAS INSPECTOR
+            Historical map · {media.mapScopeLabel}
           </h3>
           
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
@@ -508,7 +508,7 @@ function MapInspectorModal({ mapSrc, pins, onClose }) {
 
         {/* Map view wrapper with pins & sketch overlay */}
         <div style={{ position: 'relative', width: '100%', height: '380px', overflow: 'hidden', borderRadius: '4px', border: '1px solid rgba(212,175,55,0.1)', background: '#090c10' }}>
-          <img src={mapSrc} style={{ width: '100%', height: '100%', objectFit: 'contain', pointerEvents: 'none' }} alt="High-Res Historical Map" />
+          <img src={mapSrc} style={{ width: '100%', height: '100%', objectFit: 'contain', pointerEvents: 'none' }} alt={media.title} />
           
           {/* Sketching Canvas Overlay */}
           <canvas
@@ -589,8 +589,8 @@ function MapInspectorModal({ mapSrc, pins, onClose }) {
         {/* Footer plate caption */}
         <div style={{ fontSize: '0.65rem', color: 'var(--text-secondary)', fontStyle: 'italic', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '0.5rem' }}>
           {drawModeActive 
-            ? '✍️ Click and drag to sketch tactical movements (flanks, arrows, defense rings). Select colors above.' 
-            : '📌 Critical tactical structures are highlighted above. Hover over the question markers to inspect landmarks. Toggle DRAW PLAN to sketch.'}
+            ? 'Your sketch is a personal annotation, not part of the historical source. Click and drag to draw.'
+            : `${media.caption} Game positions and landmark pins are omitted because their coordinates have not been matched to this source.`}
         </div>
       </div>
     </div>
@@ -604,6 +604,7 @@ export default function BattlefieldMap({ scenarioId, selectedChoiceId }) {
   const annotation = getMapAnnotation(scenarioId);
   const mapSrc = publicAssetUrl(media.src || '');
   const hasHistoricalMap = Boolean(mapSrc);
+  const showGameOverlay = media.showGameOverlay !== false;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -717,6 +718,7 @@ export default function BattlefieldMap({ scenarioId, selectedChoiceId }) {
     media.overlayOpacity,
     mapSrc,
     hasHistoricalMap,
+    showGameOverlay,
     media.tacticalView?.focus?.x,
     media.tacticalView?.focus?.y,
     media.tacticalView?.zoom,
@@ -726,14 +728,18 @@ export default function BattlefieldMap({ scenarioId, selectedChoiceId }) {
     <div style={{ marginBottom: '1.25rem' }}>
       <div style={{ position: 'relative', width: '100%', height: '320px', borderRadius: '6px', overflow: 'hidden', border: '1px solid var(--border-color)' }}>
 
-        <canvas 
+        {showGameOverlay ? <canvas
           ref={canvasRef} 
           role="img"
-          aria-label={`Tactical battlefield map: ${annotation.plateCaption}`}
+          aria-label={`${media.mapScopeLabel}. ${annotation.plateCaption}`}
           style={{ width: '100%', height: '100%', display: 'block' }}
-        />
-        <div style={{ position: 'absolute', top: '10px', left: '10px', fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'rgba(212, 175, 55, 0.4)', background: 'rgba(9, 12, 16, 0.8)', padding: '2px 6px', border: '1px solid rgba(212, 175, 55, 0.1)', borderRadius: '3px', pointerEvents: 'none' }}>
-          {hasHistoricalMap ? 'HISTORICAL MAP UNDERLAY // TACTICAL SCHEMATIC' : 'PROCEDURAL TERRAIN // TACTICAL SCHEMATIC'}
+        /> : <img
+          src={mapSrc}
+          alt={`${media.title}. ${media.mapScopeLabel}. Printed historical positions do not represent the current game.`}
+          style={{ width: '100%', height: '100%', display: 'block', objectFit: 'contain', background: '#11161d' }}
+        />}
+        <div style={{ position: 'absolute', bottom: '10px', left: '10px', right: '10px', fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-primary)', background: 'rgba(9, 12, 16, 0.92)', padding: '4px 6px', border: '1px solid rgba(212, 175, 55, 0.2)', borderRadius: '3px', pointerEvents: 'none' }}>
+          {hasHistoricalMap ? 'HISTORICAL REFERENCE · NO GAME OVERLAY' : 'ILLUSTRATIVE GAME SCHEMATIC · NOT TO SCALE'}
         </div>
 
         {/* Fullscreen Loupe Inspect button */}
@@ -749,13 +755,15 @@ export default function BattlefieldMap({ scenarioId, selectedChoiceId }) {
       </div>
 
       {/* Styled historic plate caption */}
-      <div style={{ fontSize: '0.65rem', fontStyle: 'italic', color: 'var(--text-secondary)', textAlign: 'center', marginTop: '0.4rem', fontFamily: 'var(--font-display)', opacity: 0.8 }}>
-        {annotation.plateCaption}
+      <div style={{ fontSize: '0.8rem', lineHeight: 1.5, color: 'var(--text-secondary)', textAlign: 'center', marginTop: '0.65rem', fontFamily: 'var(--font-display)' }}>
+        <strong>{media.mapScopeLabel}</strong><br />
+        {hasHistoricalMap ? media.caption : `${media.caption} ${annotation.plateCaption}`}
+        {hasHistoricalMap && media.sourceUrl && <><br /><a href={media.sourceUrl} target="_blank" rel="noreferrer">Source · {media.sourceInstitution}</a></>}
       </div>
 
       {/* Fullscreen Loupe Modal */}
       {showLoupe && hasHistoricalMap && (
-        <MapInspectorModal mapSrc={mapSrc} pins={annotation.inspectorPins} onClose={() => setShowLoupe(false)} />
+        <MapInspectorModal mapSrc={mapSrc} pins={showGameOverlay ? annotation.inspectorPins : []} media={media} onClose={() => setShowLoupe(false)} />
       )}
     </div>
   );

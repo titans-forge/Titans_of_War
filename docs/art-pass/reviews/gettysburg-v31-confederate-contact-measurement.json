@@ -1,0 +1,267 @@
+{
+  "artPass": "gettysburg-v31",
+  "side": "confederate",
+  "identity": "a",
+  "direction": 1,
+  "role": "contact",
+  "source": "docs/art-pass/candidates/gettysburg-v31/confederate-a-contact-se-candidate.png",
+  "sourceSHA256": "6a26a5227548516f39a72892cd026a98d3ef25decdbce4366dc796fb447888b0",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v31-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "a0b324df31af6be2523f8a5796476225a3f39d9862688e75a5dae8be01beac32",
+  "referenceHeight": 403,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh confederate contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "84a33702c83f5a2457feebd2f1c837782582b4f78df68dbd65f07b4149999c03",
+      "ground": [
+        309,
+        588
+      ],
+      "groundROI": [
+        334,
+        538,
+        434,
+        604
+      ],
+      "groundMethod": "Projected pelvis X chosen at the anatomical center below the belt; ground Y is the exclusive alpha>=64 maximum of the nearer screen-right boot sole, bounded separately from rifle and far foot.",
+      "solidBounds": [
+        205,
+        161,
+        580,
+        588
+      ],
+      "solidPadding": [
+        205,
+        161,
+        47,
+        39
+      ],
+      "nonzeroBounds": [
+        101,
+        43,
+        607,
+        625
+      ],
+      "capROI": [
+        293,
+        150,
+        364,
+        196
+      ],
+      "capTop": 161,
+      "referenceSoleROI": [
+        334,
+        538,
+        434,
+        604
+      ],
+      "referenceSoleGroundY": 588,
+      "bodySpan": 427
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "3765acf4bd6fb790f04d2ba18fe1aa28a2aa51b707de8ab959eae170f1763b31",
+      "ground": [
+        250,
+        590
+      ],
+      "groundROI": [
+        280,
+        538,
+        377,
+        605
+      ],
+      "groundMethod": "Projected pelvis X at the hip center behind the extension, independent of the forward boot X; ground Y uses the front/near screen-right support boot sole and excludes the trailing lifted foot.",
+      "solidBounds": [
+        117,
+        192,
+        585,
+        590
+      ],
+      "solidPadding": [
+        117,
+        192,
+        42,
+        37
+      ],
+      "nonzeroBounds": [
+        11,
+        21,
+        589,
+        627
+      ],
+      "capROI": [
+        252,
+        181,
+        316,
+        229
+      ],
+      "capTop": 192,
+      "referenceSoleROI": [
+        280,
+        538,
+        377,
+        605
+      ],
+      "referenceSoleGroundY": 590,
+      "bodySpan": 398
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "3247002ebb5dcfd804f5baf0b63b32e72d63b61e801a180fc3fd6b87c60e3c22",
+      "ground": [
+        329,
+        530
+      ],
+      "groundROI": [
+        366,
+        470,
+        466,
+        543
+      ],
+      "groundMethod": "Projected pelvis X below the belt between the withdrawn thighs; ground Y uses the nearer screen-right boot sole, excluding rifle/bayonet and the higher far foot.",
+      "solidBounds": [
+        204,
+        122,
+        561,
+        530
+      ],
+      "solidPadding": [
+        204,
+        122,
+        66,
+        97
+      ],
+      "nonzeroBounds": [
+        0,
+        31,
+        625,
+        619
+      ],
+      "capROI": [
+        321,
+        110,
+        386,
+        154
+      ],
+      "capTop": 122,
+      "referenceSoleROI": [
+        366,
+        470,
+        466,
+        543
+      ],
+      "referenceSoleGroundY": 530,
+      "bodySpan": 408
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "07b9dcf0e2fc9d78e298d37185982ff772f2a5ec3a706eb4b6c9b69c314935d4",
+      "ground": [
+        265,
+        537
+      ],
+      "groundROI": [
+        315,
+        477,
+        414,
+        548
+      ],
+      "groundMethod": "Projected pelvis X centered below the belt under the braced trunk; ground Y uses the nearer screen-right planted boot sole while weapon/hands remain outside the ROI.",
+      "solidBounds": [
+        173,
+        27,
+        584,
+        537
+      ],
+      "solidPadding": [
+        173,
+        27,
+        43,
+        90
+      ],
+      "nonzeroBounds": [
+        11,
+        3,
+        587,
+        549
+      ],
+      "capROI": [
+        244,
+        137,
+        303,
+        179
+      ],
+      "capTop": 148,
+      "referenceSoleROI": [
+        315,
+        477,
+        414,
+        548
+      ],
+      "referenceSoleGroundY": 537,
+      "bodySpan": 389
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 1,
+      "action": "melee",
+      "key": "confederate-gettysburg-v31-a-contact-se",
+      "frames": [
+        "a-melee-1-0",
+        "a-melee-1-1",
+        "a-melee-1-2",
+        "a-melee-1-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.492823,
+          "y": 0.937799
+        },
+        {
+          "x": 0.398724,
+          "y": 0.940989
+        },
+        {
+          "x": 0.524721,
+          "y": 0.845295
+        },
+        {
+          "x": 0.422648,
+          "y": 0.856459
+        }
+      ],
+      "referenceHeight": 403,
+      "sourceHash": "6a26a5227548516f39a72892cd026a98d3ef25decdbce4366dc796fb447888b0",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeContactSequence": "gettysburg-v31-confederate-a-se-contact",
+      "scope": "Exact source-reviewed confederate A SE local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

@@ -1,17 +1,7 @@
-/**
- * Titans of War — Strategy Audio Manager
- *
- * Implements a dual-layer audio engine for the immersive war cabinet.
- * 1. Primary: HTML5 Audio Player pointing to historical archive recordings in /audio/.
- * 2. Fallback: Native Web Audio procedural synthesizer. If files are not present in the public folder,
- *    the engine procedurally synthesizes:
- *      - An ambient, crackling campfire loop (white noise bursts + bandpass filters).
- *      - Haunting solo fife/trumpet instrumentals of "Lorena" or "Battle Cry of Freedom".
- *
- * This guarantees immersive audio out-of-the-box with zero bandwidth/download requirements.
- */
+/** Local instrumental score player with optional historical archive playback. */
 import { AUDIO_TRACK_LIBRARY } from '../game/audioCatalog.js';
 import { publicAssetUrl } from '../game/publicPath.js';
+import { InstrumentalPlayer, instrumentalScore, nextInstrumentalKey } from './InstrumentalPlayer.js';
 
 // Note frequencies (C4 to B5)
 const NOTES = {
@@ -19,56 +9,6 @@ const NOTES = {
   C4: 261.63, D4: 293.66, E4: 329.63, F4: 349.23, G4: 392.00, A4: 440.00, B4: 493.88,
   C5: 523.25, D5: 587.33, E5: 659.25, F5: 698.46, G5: 783.99, A5: 880.00, B5: 987.77,
   C6: 1046.50
-};
-
-// Melodies sheet data: [Frequency, Duration in beats]
-const MELODIES = {
-  // "Lorena" (Haunting, slow classical fife)
-  lorena: [
-    [NOTES.G4, 1], [NOTES.C5, 1], [NOTES.E5, 1], [NOTES.D5, 1.5], [NOTES.C5, 0.5], [NOTES.E5, 1],
-    [NOTES.G5, 2], [NOTES.E5, 1], [NOTES.C5, 1.5], [NOTES.D5, 0.5], [NOTES.E5, 1], [NOTES.C5, 2],
-    [NOTES.A4, 1], [NOTES.G4, 2], [NOTES.REST, 1],
-    [NOTES.G4, 1], [NOTES.C5, 1], [NOTES.E5, 1], [NOTES.D5, 1.5], [NOTES.C5, 0.5], [NOTES.E5, 1],
-    [NOTES.G5, 2], [NOTES.E5, 1], [NOTES.C5, 1.5], [NOTES.D5, 0.5], [NOTES.E5, 1], [NOTES.D5, 3]
-  ],
-  // "Battle Cry of Freedom" (Aggressive, upbeat brass)
-  battle_cry: [
-    [NOTES.C5, 1], [NOTES.E5, 1], [NOTES.G5, 1], [NOTES.G5, 1.5], [NOTES.F5, 0.5], [NOTES.E5, 1],
-    [NOTES.D5, 2], [NOTES.E5, 1], [NOTES.F5, 2], [NOTES.E5, 1], [NOTES.D5, 1.5], [NOTES.C5, 0.5],
-    [NOTES.D5, 1], [NOTES.E5, 3],
-    [NOTES.C5, 1], [NOTES.E5, 1], [NOTES.G5, 1], [NOTES.G5, 1.5], [NOTES.F5, 0.5], [NOTES.E5, 1],
-    [NOTES.D5, 2], [NOTES.E5, 1], [NOTES.C5, 2], [NOTES.REST, 1]
-  ],
-  // "When Johnny Comes Marching Home" (Standard fife march)
-  march: [
-    [NOTES.E4, 1], [NOTES.G4, 1], [NOTES.A4, 1], [NOTES.A4, 1.5], [NOTES.B4, 0.5], [NOTES.A4, 1],
-    [NOTES.G4, 1.5], [NOTES.F4, 0.5], [NOTES.G4, 1], [NOTES.A4, 2], [NOTES.REST, 1],
-    [NOTES.E4, 1], [NOTES.G4, 1], [NOTES.A4, 1], [NOTES.A4, 1.5], [NOTES.B4, 0.5], [NOTES.A4, 1],
-    [NOTES.C5, 1.5], [NOTES.B4, 0.5], [NOTES.C5, 1], [NOTES.D5, 3]
-  ],
-
-  // "Battle Hymn of the Republic" (measured, triumphant)
-  battle_hymn: [
-    [NOTES.G4, 1], [NOTES.G4, 1], [NOTES.G4, 1], [NOTES.C5, 1], [NOTES.E5, 1.5], [NOTES.D5, 0.5],
-    [NOTES.C5, 1], [NOTES.G4, 1], [NOTES.C5, 1], [NOTES.D5, 1], [NOTES.E5, 2], [NOTES.REST, 0.5],
-    [NOTES.E5, 1], [NOTES.E5, 1], [NOTES.F5, 1], [NOTES.G5, 1], [NOTES.E5, 1], [NOTES.D5, 1],
-    [NOTES.C5, 1], [NOTES.G4, 2]
-  ],
-  // "The Bonnie Blue Flag" (lilting parade tempo)
-  bonnie_blue_flag: [
-    [NOTES.E4, 1], [NOTES.G4, 1], [NOTES.A4, 1], [NOTES.B4, 1], [NOTES.C5, 1], [NOTES.B4, 1],
-    [NOTES.A4, 1], [NOTES.G4, 1], [NOTES.E4, 2], [NOTES.REST, 0.5],
-    [NOTES.A4, 1], [NOTES.B4, 1], [NOTES.C5, 1], [NOTES.D5, 1], [NOTES.C5, 1], [NOTES.B4, 1],
-    [NOTES.A4, 1], [NOTES.G4, 1], [NOTES.E4, 2]
-  ]
-};
-
-const PROCEDURAL_TRACK_INFO = {
-  lorena: { title: 'Lorena', tempoBpm: 65 },
-  battle_cry: { title: 'Battle Cry of Freedom', tempoBpm: 100 },
-  march: { title: 'When Johnny Comes Marching Home', tempoBpm: 80 },
-  battle_hymn: { title: 'Battle Hymn of the Republic', tempoBpm: 84 },
-  bonnie_blue_flag: { title: 'The Bonnie Blue Flag', tempoBpm: 92 },
 };
 
 const FILE_TRACK_LIBRARY = AUDIO_TRACK_LIBRARY.map((track) => ({
@@ -114,6 +54,12 @@ const DUCK_PRESETS = {
 
 export class StrategyAudioManager {
   constructor() {
+    this.disposed = false;
+    this.probeController = new AbortController();
+    this.pendingTracks = new Set();
+    this.trackPlayOwners = new WeakMap();
+    this.playbackEpoch = 0;
+    this.trackRequestId = 0;
     this.audioContext = null;
     this.campfireNode = null;
     this.sequencerInterval = null;
@@ -125,6 +71,7 @@ export class StrategyAudioManager {
     this.musicTrack = null;
     this.ambientCampfire = null;
     this.useProcedural = false;
+    this.instrumentalPlayer = null;
     this.hasFileLibrary = false;
     this.availableFileTracks = [];
     this.availableFileTrackMap = new Map();
@@ -162,10 +109,10 @@ export class StrategyAudioManager {
   }
 
   init() {
-    if (this.initialized) return;
+    if (this.initialized || this.disposed) return;
     this.initialized = true;
     this.attachLifecycleHandlers();
-    this.probeFileLibrary();
+    this.libraryProbePromise = this.probeFileLibrary();
   }
 
   attachLifecycleHandlers() {
@@ -191,7 +138,7 @@ export class StrategyAudioManager {
   }
 
   emitStatus() {
-    if (typeof this.statusListener === 'function') {
+    if (!this.disposed && typeof this.statusListener === 'function') {
       this.statusListener(this.getStatusSnapshot());
     }
   }
@@ -423,7 +370,7 @@ export class StrategyAudioManager {
   }
 
   async probeTrack(track) {
-    if (!this.isTrackAllowed(track)) {
+    if (this.disposed || !this.isTrackAllowed(track)) {
       return null;
     }
 
@@ -445,6 +392,7 @@ export class StrategyAudioManager {
     try {
       const headResponse = await fetch(track.src, {
         method: 'HEAD',
+        signal: this.probeController.signal,
         headers: { Accept: 'audio/*' },
       });
 
@@ -456,9 +404,11 @@ export class StrategyAudioManager {
       // Fall through to a range GET probe.
     }
 
+    if (this.disposed) return null;
     try {
       const rangeResponse = await fetch(track.src, {
         method: 'GET',
+        signal: this.probeController.signal,
         headers: {
           Accept: 'audio/*',
           Range: 'bytes=0-0',
@@ -479,6 +429,7 @@ export class StrategyAudioManager {
 
     const checks = await Promise.all(FILE_TRACK_LIBRARY.map((track) => this.probeTrack(track)));
 
+    if (this.disposed) return;
     this.availableFileTracks = checks.filter(Boolean);
     this.availableFileTrackMap = new Map(this.availableFileTracks.map((track) => [track.key, track]));
     this.hasFileLibrary = this.availableFileTracks.some((track) => track.type === 'music');
@@ -497,17 +448,18 @@ export class StrategyAudioManager {
   }
 
   pickContextualTrackKey(gameState) {
-    const morale = gameState.metrics.publicMorale;
-    const hotspur = gameState.shards.hotspur.alignment;
-    const wolf = gameState.shards.wolf.alignment;
+    gameState = gameState || {};
+    const morale = gameState.metrics?.publicMorale ?? 60;
+    const hotspur = gameState.shards?.hotspur?.alignment ?? 50;
+    const wolf = gameState.shards?.wolf?.alignment ?? 50;
     const divergence = gameState.divergenceIndex || 0;
 
     if (gameState.gameOver && gameState.currentTurn >= 12) return 'elegy_final';
     if (gameState.gameOver) return 'lorena_alt';
     if (morale < 35) return 'lorena';
-    if (morale < 50 && gameState.currentTurn >= 6) return 'tenting_tonight';
+    if (morale < 50 && gameState.currentTurn >= 6) return 'lorena';
     if (divergence >= 0.55 || hotspur > 72) return 'dixie';
-    if (wolf > 68 && gameState.metrics.treasury > 55) return 'bonnie_blue_flag';
+    if (wolf > 68 && (gameState.metrics?.treasury ?? 50) > 55) return 'bonnie_blue_flag';
     if (morale > 72 && divergence < 0.2) return 'battle_hymn';
     if (gameState.currentTurn >= 9) return 'home_sweet_home';
     if (gameState.currentTurn <= 2) return 'march';
@@ -521,9 +473,21 @@ export class StrategyAudioManager {
   }
 
   start(gameState) {
-    if (this.isPlaying) return;
+    if (this.isPlaying || this.disposed) return;
     this.isPlaying = true;
     this.lastGameState = gameState;
+
+    // An early Play click must not select the experimental synth while archives are probing.
+    if (!this.useProcedural && this.libraryProbePromise && !this.hasFileLibrary) {
+      const epoch = this.playbackEpoch;
+      void this.libraryProbePromise.then(() => {
+        if (this.disposed || !this.isPlaying || epoch !== this.playbackEpoch) return;
+        if (this.useProcedural || !this.hasFileLibrary) void this.startProceduralPlayback(this.lastGameState);
+        else void this.startFilePlayback(this.lastGameState);
+      });
+      this.emitStatus();
+      return;
+    }
 
     if (this.useProcedural || !this.hasFileLibrary) {
       void this.startProceduralPlayback(gameState);
@@ -534,7 +498,10 @@ export class StrategyAudioManager {
   }
 
   stop() {
+    this.playbackEpoch += 1;
+    this.trackRequestId += 1;
     this.isPlaying = false;
+    for (const track of this.pendingTracks) track.pause();
     this.clearFileCrossfade();
     this.clearPendingEffectTimeouts();
     this.clearBusDuckProfiles();
@@ -568,6 +535,32 @@ export class StrategyAudioManager {
     this.currentSourceMode = 'silent';
     this.currentTrackMeta = null;
     this.emitStatus();
+  }
+
+  dispose() {
+    if (this.disposed) return;
+    this.statusListener = null;
+    const tracks = new Set([this.musicTrack, this.ambientCampfire, this.fadingOutTrack, ...this.pendingTracks]);
+    this.stop();
+    this.disposed = true;
+    this.probeController.abort();
+    if (this.boundVisibilityHandler) document.removeEventListener('visibilitychange', this.boundVisibilityHandler);
+    if (this.boundPageShowHandler) window.removeEventListener('pageshow', this.boundPageShowHandler);
+    this.boundVisibilityHandler = null;
+    this.boundPageShowHandler = null;
+    for (const track of tracks) {
+      if (!track) continue;
+      track.pause();
+      track.removeAttribute('src');
+      track.load();
+    }
+    this.pendingTracks.clear();
+    this.musicTrack = this.ambientCampfire = this.fadingOutTrack = null;
+    for (const node of [this.masterGainNode, this.musicBusGainNode, this.ambienceBusGainNode, this.stingerBusGainNode]) node?.disconnect();
+    const context = this.audioContext;
+    this.audioContext = null;
+    this.masterGainNode = this.musicBusGainNode = this.ambienceBusGainNode = this.stingerBusGainNode = null;
+    if (context && context.state !== 'closed') void context.close().catch(() => {});
   }
 
   setVolume(val) {
@@ -674,35 +667,42 @@ export class StrategyAudioManager {
   }
 
   async ensureAudioContextRunning() {
-    if (!this.audioContext) return false;
+    const context = this.audioContext;
+    if (!context || this.disposed) return false;
 
-    if (this.audioContext.state === 'suspended') {
+    if (context.state === 'suspended') {
       try {
-        await this.audioContext.resume();
+        await context.resume();
       } catch {
         return false;
       }
     }
 
-    return this.audioContext.state === 'running';
+    return !this.disposed && this.audioContext === context && context.state === 'running';
   }
 
   async startFilePlayback(gameState) {
+    const epoch = this.playbackEpoch;
+    if (this.disposed || !this.isPlaying) return;
     this.lastGameState = gameState || this.lastGameState;
     this.initWebAudio();
     await this.ensureAudioContextRunning();
+    if (this.disposed || !this.isPlaying || epoch !== this.playbackEpoch) return;
     this.applyBusLevels();
     await this.startAmbientFileTrack();
+    if (this.disposed || !this.isPlaying || epoch !== this.playbackEpoch) return;
     await this.playContextualFileTrack(this.lastGameState || gameState);
   }
 
   async startProceduralPlayback(gameState) {
+    if (this.disposed || !this.isPlaying) return;
+    const epoch = this.playbackEpoch;
     this.lastGameState = gameState || this.lastGameState;
     this.useProcedural = true;
     this.initWebAudio();
 
     const ready = await this.ensureAudioContextRunning();
-    if (!ready || !this.isPlaying) return;
+    if (!ready || !this.isPlaying || epoch !== this.playbackEpoch) return;
 
     this.applyBusLevels();
     if (!this.campfireNode) {
@@ -713,6 +713,7 @@ export class StrategyAudioManager {
   }
 
   async fallbackToProcedural(gameState, reason) {
+    if (this.disposed) return;
     if (reason) {
       console.warn(`[Strategy Audio] ${reason}. Falling back to procedural music.`);
     }
@@ -755,6 +756,7 @@ export class StrategyAudioManager {
   }
 
   async startAmbientFileTrack() {
+    if (this.disposed || !this.isPlaying) return;
     const ambientTrack = this.availableFileTrackMap.get('ambient_campfire');
     if (!ambientTrack) return;
 
@@ -767,8 +769,13 @@ export class StrategyAudioManager {
     this.attachMediaElementToBus(this.ambientCampfire, 'ambience');
     this.ambientTrackMixLevel = 1;
     this.applyElementMixLevel(this.ambientCampfire, 'ambience', this.ambientTrackMixLevel);
+    const track = this.ambientCampfire;
+    const epoch = this.playbackEpoch;
+    const owner = {};
+    this.trackPlayOwners.set(track, owner);
     try {
-      await this.ambientCampfire.play();
+      await track.play();
+      if (this.disposed || !this.isPlaying || (epoch !== this.playbackEpoch && this.trackPlayOwners.get(track) === owner)) track.pause();
     } catch {
       // Ambient bed is optional; keep the main music path authoritative.
     }
@@ -776,6 +783,10 @@ export class StrategyAudioManager {
 
   // --- HTML5 Audio Track Switchers ---
   async playContextualFileTrack(gameState) {
+    if (this.disposed || !this.isPlaying) return;
+    const request = ++this.trackRequestId;
+    const epoch = this.playbackEpoch;
+    const stale = () => this.disposed || !this.isPlaying || epoch !== this.playbackEpoch || request !== this.trackRequestId;
     this.lastGameState = gameState || this.lastGameState;
     const targetKey = this.manualTrackOverrideKey || this.pickContextualTrackKey(gameState);
     const targetTrack = this.availableFileTrackMap.get(targetKey)
@@ -789,10 +800,18 @@ export class StrategyAudioManager {
 
     const targetSrc = targetTrack.src;
     if (this.musicTrack && this.musicTrack.src.endsWith(targetSrc)) {
-      if (this.musicTrack.paused && this.isPlaying) {
+      const track = this.musicTrack;
+      const owner = {};
+      this.trackPlayOwners.set(track, owner);
+      if (track.paused && this.isPlaying) {
         try {
-          await this.musicTrack.play();
+          await track.play();
+          if (stale()) {
+            if (this.disposed || !this.isPlaying || this.trackPlayOwners.get(track) === owner) track.pause();
+            return;
+          }
         } catch (err) {
+          if (stale()) return;
           await this.fallbackToProcedural(
             gameState,
             `Archive playback restart failed for ${targetTrack.key} (${err?.message || 'unknown error'})`,
@@ -810,7 +829,11 @@ export class StrategyAudioManager {
     const previousTrack = this.musicTrack;
 
     const nextTrack = new Audio(targetSrc);
-    nextTrack.loop = true;
+    this.pendingTracks.add(nextTrack);
+    nextTrack.loop = false;
+    nextTrack.addEventListener('ended', () => {
+      if (this.musicTrack === nextTrack && this.isPlaying && !this.useProcedural && !this.disposed) this.playNextTrack(this.lastGameState);
+    });
     nextTrack.preload = 'auto';
     this.attachMediaElementToBus(nextTrack, 'music');
     this.musicTrackMixLevel = previousTrack ? 0 : 1;
@@ -824,6 +847,9 @@ export class StrategyAudioManager {
     try {
       await nextTrack.play();
     } catch (err) {
+      this.pendingTracks.delete(nextTrack);
+      nextTrack.pause();
+      if (stale()) return;
       await this.fallbackToProcedural(
         gameState,
         `Archive playback was blocked for ${targetTrack.key} (${err?.message || 'unknown error'})`,
@@ -831,6 +857,8 @@ export class StrategyAudioManager {
       return;
     }
 
+    this.pendingTracks.delete(nextTrack);
+    if (stale()) { nextTrack.pause(); return; }
     this.musicTrack = nextTrack;
     this.crossfadeFileTracks(nextTrack, previousTrack);
     this.currentTrackTitle = `${targetTrack.title} (Historical Recording)`;
@@ -841,7 +869,7 @@ export class StrategyAudioManager {
 
   // --- Procedural Synthesis Engine ---
   initWebAudio() {
-    if (this.audioContext) return;
+    if (this.audioContext || this.disposed) return;
     const AudioContextClass = window.AudioContext || window.webkitAudioContext;
     this.audioContext = new AudioContextClass();
 
@@ -892,66 +920,25 @@ export class StrategyAudioManager {
   }
 
   playContextualProceduralTrack(gameState) {
-    if (!this.audioContext) return;
-    let targetMelody = this.manualTrackOverrideKey || this.pickContextualTrackKey(gameState);
-    if (targetMelody === 'dixie') {
-      targetMelody = 'march';
-    }
-    this.tempoBpm = PROCEDURAL_TRACK_INFO[targetMelody]?.tempoBpm || 80;
-
-    if (this.activeMelodyKey === targetMelody) return;
-    this.activeMelodyKey = targetMelody;
-
+    if (!this.audioContext || !this.isPlaying || this.disposed) return;
+    this.lastGameState = gameState || this.lastGameState;
+    // Campaign updates never interrupt a phrase or reset a finished-track playlist.
+    if (this.instrumentalPlayer?.playing) return;
+    const preferred = this.manualTrackOverrideKey || this.pickContextualTrackKey(gameState);
+    const score = instrumentalScore(preferred);
+    this.activeMelodyKey = score.key;
     this.stopProceduralMelody();
-    this.startProceduralMelodySequence(MELODIES[targetMelody]);
-    this.currentTrackTitle = `${PROCEDURAL_TRACK_INFO[targetMelody]?.title || targetMelody} (Synthesized Fallback)`;
+    this.instrumentalPlayer = new InstrumentalPlayer(
+      this.audioContext, this.getBusGainNode('music') || this.masterGainNode,
+      () => {
+        if (this.isPlaying && !this.disposed && this.useProcedural) this.playNextTrack(this.lastGameState);
+      },
+    );
+    this.instrumentalPlayer.play(score);
+    this.currentTrackTitle = `${score.title} (Instrumental)`;
     this.currentSourceMode = 'procedural';
-    this.currentTrackMeta = null;
+    this.currentTrackMeta = { sourceInstitution: 'Score-derived instrumental · Titans Forge synthesizer', licenseStatus: 'Public-domain score; original synthesized performance' };
     this.emitStatus();
-  }
-
-  startProceduralMelodySequence(notes) {
-    let noteIndex = 0;
-    const beatDuration = 60 / this.tempoBpm; // duration of 1 beat in seconds
-
-    const playNextNote = () => {
-      if (!this.isPlaying || !this.audioContext || !this.activeMelodyKey) return;
-
-      const [freq, duration] = notes[noteIndex];
-      const noteTime = duration * beatDuration;
-
-      if (freq > 0) {
-        // Create fife oscillator node
-        const osc = this.audioContext.createOscillator();
-        const gainNode = this.audioContext.createGain();
-
-        // Fife timbre: Triangle oscillator with soft lowpass filter
-        osc.type = 'triangle';
-        osc.frequency.value = freq;
-
-        // Envelope: soft attack, gentle decay
-        gainNode.gain.setValueAtTime(0, this.audioContext.currentTime);
-        gainNode.gain.linearRampToValueAtTime(0.35, this.audioContext.currentTime + 0.08); // attack
-        gainNode.gain.setValueAtTime(0.35, this.audioContext.currentTime + noteTime - 0.05);
-        gainNode.gain.exponentialRampToValueAtTime(0.001, this.audioContext.currentTime + noteTime); // decay
-
-        const filter = this.audioContext.createBiquadFilter();
-        filter.type = 'lowpass';
-        filter.frequency.value = 1200; // Warm fife cut
-
-        osc.connect(gainNode);
-        gainNode.connect(filter);
-        filter.connect(this.getBusGainNode('music') || this.masterGainNode);
-
-        osc.start(0);
-        osc.stop(this.audioContext.currentTime + noteTime);
-      }
-
-      noteIndex = (noteIndex + 1) % notes.length;
-      this.sequencerInterval = setTimeout(playNextNote, noteTime * 1000);
-    };
-
-    playNextNote();
   }
 
   playDistantArtilleryBarrage() {
@@ -1062,11 +1049,13 @@ export class StrategyAudioManager {
     let currentKey = null;
 
     if (this.useProcedural || !this.hasFileLibrary) {
-      tracks = Object.keys(PROCEDURAL_TRACK_INFO);
-      currentKey = this.activeMelodyKey;
+      this.manualTrackOverrideKey = nextInstrumentalKey(this.activeMelodyKey);
+      this.stopProceduralMelody();
+      this.playContextualProceduralTrack(gameState);
+      return;
     } else {
       tracks = this.availableFileTracks.filter((t) => t.type === 'music').map((t) => t.key);
-      currentKey = this.manualTrackOverrideKey || this.pickContextualTrackKey(gameState);
+      currentKey = this.currentTrackMeta?.key || this.manualTrackOverrideKey || this.pickContextualTrackKey(gameState);
     }
 
     if (tracks.length === 0) return;
@@ -1091,6 +1080,8 @@ export class StrategyAudioManager {
   }
 
   stopProceduralMelody() {
+    this.instrumentalPlayer?.stop();
+    this.instrumentalPlayer = null;
     if (this.sequencerInterval) {
       clearTimeout(this.sequencerInterval);
       this.sequencerInterval = null;

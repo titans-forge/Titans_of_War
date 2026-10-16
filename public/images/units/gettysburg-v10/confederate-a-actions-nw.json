@@ -1,0 +1,200 @@
+{
+  "frames": {
+    "a-ready-5-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.550239,
+        "y": 0.966507
+      },
+      "bodyHeight": 360
+    },
+    "a-fire-5-0": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.566188,
+        "y": 0.966507
+      },
+      "bodyHeight": 360
+    },
+    "a-reload-5-0": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.567783,
+        "y": 0.869219
+      },
+      "bodyHeight": 360
+    },
+    "a-reload-5-1": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.574163,
+        "y": 0.869219
+      },
+      "bodyHeight": 360
+    }
+  },
+  "meta": {
+    "image": "confederate-a-actions-nw.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0",
+    "source": "docs/art-pass/candidates/gettysburg-v10/confederate-a-nw-actions-candidate.png",
+    "artPass": "gettysburg-v10",
+    "candidate": true,
+    "productionApproved": false,
+    "pixelTreatment": "none; byte-for-byte native PNG copy, full equal cells",
+    "clips": [
+      {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 5,
+        "action": "ready",
+        "key": "confederate-gettysburg-v10-a-actions-nw",
+        "frames": [
+          "a-ready-5-0"
+        ],
+        "sourceHash": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0",
+        "referenceHeight": 360,
+        "pivots": [
+          {
+            "x": 0.550239,
+            "y": 0.966507
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "Opt-in Confederate A NW stationary actions; exact historical Gettysburg v10 only."
+      },
+      {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 5,
+        "action": "fire",
+        "key": "confederate-gettysburg-v10-a-actions-nw",
+        "frames": [
+          "a-fire-5-0"
+        ],
+        "sourceHash": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0",
+        "referenceHeight": 360,
+        "pivots": [
+          {
+            "x": 0.566188,
+            "y": 0.966507
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "Opt-in Confederate A NW stationary actions; exact historical Gettysburg v10 only.",
+        "muzzles": [
+          {
+            "x": 0.295056,
+            "y": 0.363636
+          }
+        ]
+      },
+      {
+        "side": "confederate",
+        "identity": "a",
+        "direction": 5,
+        "action": "reload",
+        "key": "confederate-gettysburg-v10-a-actions-nw",
+        "frames": [
+          "a-reload-5-0",
+          "a-reload-5-1"
+        ],
+        "sourceHash": "a84512cd372b714d41913b849b97aceb4d99daf4d02f175130a0190a16329bd0",
+        "referenceHeight": 360,
+        "pivots": [
+          {
+            "x": 0.567783,
+            "y": 0.869219
+          },
+          {
+            "x": 0.574163,
+            "y": 0.869219
+          }
+        ],
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "scope": "Opt-in Confederate A NW stationary actions; exact historical Gettysburg v10 only."
+      }
+    ],
+    "measurementReview": "docs/art-pass/reviews/gettysburg-v10-confederate-a-actions-nw-measurement.json"
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "artPass": "gettysburg-v13",
+  "productionApproved": false,
+  "familyComplete": false,
+  "reviewStatus": "Exact-SHA model-assisted source acceptance for local opt-in preview only; no human or default promotion.",
+  "sources": [
+    {
+      "name": "march-e",
+      "key": "confederate-gettysburg-v13-a-march-e",
+      "measurementName": "confederate-a-march-e",
+      "source": "docs/art-pass/candidates/gettysburg-v13/confederate-a-e-march-candidate.png",
+      "sha256": "2e7f6b41f065f01a813db6cb57c3146ab514957ee49232f3004b0d60788dcd99",
+      "side": "confederate",
+      "identity": "a",
+      "identityKit": "confederate-a",
+      "direction": 0,
+      "cell": 627,
+      "roots": [
+        [
+          315,
+          603
+        ],
+        [
+          306,
+          598
+        ],
+        [
+          332,
+          556
+        ],
+        [
+          311,
+          571
+        ]
+      ],
+      "capTop": [
+        138,
+        130,
+        117,
+        116
+      ],
+      "bodySpans": [
+        465,
+        468,
+        439,
+        455
+      ],
+      "referenceHeight": 460,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "nativeReview": {
+        "sourceHash": "2e7f6b41f065f01a813db6cb57c3146ab514957ee49232f3004b0d60788dcd99",
+        "identity": "confederate-a",
+        "kitAccepted": true,
+        "allFourCellsReviewed": true,
+        "independentReview": true,
+        "modelAssisted": true
+      },
+      "sourceReview": "docs/art-pass/reviews/gettysburg-v13-independent-e-march-source-review.json",
+      "sourceReviewSHA256": "e1cbf45560dcbdf39b115785be5dc837a4f8e66346bee4d3557447df388bb55c",
+      "annotationMethod": "Fresh independent model-assisted exact-SHA all-four-cell inspection. Concealed pelvis X +/-10 native pixels projected to individual supporting-sole Y +/-3 pixels; cap top +/-2 pixels. One source-wide rounded median cap-to-sole height, no phase scaling. Detailed alpha-threshold ROIs and evidence in the linked source review.",
+      "scope": "Exact historical Gettysburg v13 local opt-in preview only; incomplete unapproved art family.",
+      "limitations": [
+        "Acceptance applies only to exact SHA and four cells inspected.",
+        "TR high knee is expressive; this does not establish historically accurate march/drill.",
+        "Contact leg-depth assignment is inferred from 2D overlap and remains less certain than passing poses.",
+        "Model-assisted review, not human/anatomy/history certification.",
+        "No default/production/full-family approval or temporal renderer, turn/cold-resume, residency/performance proof.",
+        "Model-assisted inspection is not independent human, physical anatomy, historical drill or exact skeleton/face continuity certification.",
+        "Native cap-to-supporting-sole spans vary by 29 pixels; one whole-source body reference retains this variation.",
+        "Entire native RGBA source and each full equal cell are copied byte-for-byte without raster mirroring, recoloring, trimming, resampling or alpha cleanup.",
+        "Low-alpha colored RGB residue remains; targeted alpha diagnostics do not prove perfectly clean transparency or exhaustive absence of fringe.",
+        "Missing Confederate identities/bearings, aim transitions, authored recoil, melee, casualties, bearer grips and crews remain unfinished."
+      ]
+    },
+    {
+      "name": "actions-e",
+      "key": "confederate-gettysburg-v13-a-actions-e",
+      "measurementName": "confederate-a-actions-e",
+      "source": "docs/art-pass/candidates/gettysburg-v13/confederate-a-e-actions-candidate.png",
+      "sha256": "6aa46680436709a13d502c2bbbb3b1202377ef10575ed7155e77d7208124d861",
+      "side": "confederate",
+      "identity": "a",
+      "identityKit": "confederate-a",
+      "direction": 0,
+      "cell": 627,
+      "roots": [
+        [
+          278,
+          583
+        ],
+        [
+          178,
+          589
+        ],
+        [
+          294,
+          525
+        ],
+        [
+          226,
+          528
+        ]
+      ],
+      "capTop": [
+        175,
+        190,
+        96,
+        97
+      ],
+      "bodySpans": [
+        408,
+        399,
+        429,
+        431
+      ],
+      "referenceHeight": 419,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "nativeReview": {
+        "sourceHash": "6aa46680436709a13d502c2bbbb3b1202377ef10575ed7155e77d7208124d861",
+        "identity": "confederate-a",
+        "kitAccepted": true,
+        "allFourCellsReviewed": true,
+        "independentReview": true,
+        "modelAssisted": true
+      },
+      "sourceReview": "docs/art-pass/reviews/gettysburg-v13-independent-e-actions-source-review.json",
+      "sourceReviewSHA256": "823c78e13c0bf8dbff84edaa7ad65488e354f506adda4fdc8127353e20bec99c",
+      "annotationMethod": "Fresh independent model-assisted exact-SHA all-four-cell inspection. Concealed pelvis X +/-7 native pixels projected to individual supporting-sole Y +/-3 pixels; cap top +/-2 pixels. One source-wide rounded median cap-to-sole height, no phase scaling. Detailed alpha-threshold ROIs and evidence in the linked source review. Neutral firing mouth +/-3 pixels, independently distinguished from bayonet tip.",
+      "scope": "Exact historical Gettysburg v13 local opt-in preview only; incomplete unapproved art family.",
+      "limitations": [
+        "This acceptance applies only to the four cells and exact SHA reviewed.",
+        "Model-assisted 2D visual assessment, not human/anatomy/history certification.",
+        "Concealed pelvis, far-side straps and fingers leave measurement/attachment uncertainty.",
+        "No complete-family/default/production approval; no runtime temporal, cold-resume, texture residency or performance proof.",
+        "Model-assisted inspection is not independent human, physical anatomy, historical drill or exact skeleton/face continuity certification.",
+        "Native cap-to-supporting-sole spans vary by 32 pixels; one whole-source body reference retains this variation.",
+        "Entire native RGBA source and each full equal cell are copied byte-for-byte without raster mirroring, recoloring, trimming, resampling or alpha cleanup.",
+        "Low-alpha colored RGB residue remains; targeted alpha diagnostics do not prove perfectly clean transparency or exhaustive absence of fringe.",
+        "Missing Confederate identities/bearings, aim transitions, authored recoil, melee, casualties, bearer grips and crews remain unfinished."
+      ],
+      "muzzle": [
+        450,
+        247
+      ]
+    },
+    {
+      "name": "march-w",
+      "key": "confederate-gettysburg-v13-a-march-w",
+      "measurementName": "confederate-a-march-w",
+      "source": "docs/art-pass/candidates/gettysburg-v13/confederate-a-w-march-candidate.png",
+      "sha256": "ab28e7c28ee6be3b17a833cbc3b627f3961dfbb8d9efef93c4ecc07482ed9981",
+      "side": "confederate",
+      "identity": "a",
+      "identityKit": "confederate-a",
+      "direction": 4,
+      "cell": 627,
+      "roots": [
+        [
+          344,
+          596
+        ],
+        [
+          361,
+          609
+        ],
+        [
+          343,
+          561
+        ],
+        [
+          368,
+          577
+        ]
+      ],
+      "capTop": [
+        118,
+        119,
+        110,
+        113
+      ],
+      "bodySpans": [
+        478,
+        490,
+        451,
+        464
+      ],
+      "referenceHeight": 471,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "nativeReview": {
+        "sourceHash": "ab28e7c28ee6be3b17a833cbc3b627f3961dfbb8d9efef93c4ecc07482ed9981",
+        "identity": "confederate-a",
+        "kitAccepted": true,
+        "allFourCellsReviewed": true,
+        "independentReview": true,
+        "modelAssisted": true
+      },
+      "sourceReview": "docs/art-pass/reviews/gettysburg-v13-independent-w-march-source-review.json",
+      "sourceReviewSHA256": "1330ee02b1455f7cc9755bd28f2375a5448eea8217b0ccad8e38a02a16e21b3e",
+      "annotationMethod": "Fresh independent model-assisted exact-SHA all-four-cell inspection. Concealed pelvis X +/-8 native pixels projected to individual supporting-sole Y +/-3 pixels; cap top +/-2 pixels. One source-wide rounded median cap-to-sole height, no phase scaling. Detailed alpha-threshold ROIs and evidence in the linked source review.",
+      "scope": "Exact historical Gettysburg v13 local opt-in preview only; incomplete unapproved art family.",
+      "limitations": [
+        "Exact-SHA four-cell local opt-in acceptance only.",
+        "BR high knee is expressive and does not establish historical drill.",
+        "Measured 8.28-percent span range remains; hidden anatomy and supporting sole measurement uncertainty recorded.",
+        "Model-assisted review, not human/anatomy/history certification.",
+        "No default/production/full-family approval or runtime temporal/turn/cold-resume/residency/performance proof.",
+        "Model-assisted inspection is not independent human, physical anatomy, historical drill or exact skeleton/face continuity certification.",
+        "Native cap-to-supporting-sole spans vary by 39 pixels; one whole-source body reference retains this variation.",
+        "Entire native RGBA source and each full equal cell are copied byte-for-byte without raster mirroring, recoloring, trimming, resampling or alpha cleanup.",
+        "Low-alpha colored RGB residue remains; targeted alpha diagnostics do not prove perfectly clean transparency or exhaustive absence of fringe.",
+        "Missing Confederate identities/bearings, aim transitions, authored recoil, melee, casualties, bearer grips and crews remain unfinished."
+      ]
+    },
+    {
+      "name": "actions-w",
+      "key": "confederate-gettysburg-v13-a-actions-w",
+      "measurementName": "confederate-a-actions-w",
+      "source": "docs/art-pass/candidates/gettysburg-v13/confederate-a-w-actions-candidate.png",
+      "sha256": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b",
+      "side": "confederate",
+      "identity": "a",
+      "identityKit": "confederate-a",
+      "direction": 4,
+      "cell": 627,
+      "roots": [
+        [
+          421,
+          591
+        ],
+        [
+          481,
+          604
+        ],
+        [
+          437,
+          572
+        ],
+        [
+          384,
+          567
+        ]
+      ],
+      "capTop": [
+        130,
+        154,
+        115,
+        120
+      ],
+      "bodySpans": [
+        461,
+        450,
+        457,
+        447
+      ],
+      "referenceHeight": 454,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "nativeReview": {
+        "sourceHash": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b",
+        "identity": "confederate-a",
+        "kitAccepted": true,
+        "allFourCellsReviewed": true,
+        "independentReview": true,
+        "modelAssisted": true
+      },
+      "sourceReview": "docs/art-pass/reviews/gettysburg-v13-independent-w-actions-source-review.json",
+      "sourceReviewSHA256": "78f994223116f524d518c49a01682892b6138262551663559de1d110db791134",
+      "annotationMethod": "Fresh independent model-assisted exact-SHA all-four-cell inspection. Concealed pelvis X +/-8 native pixels projected to individual supporting-sole Y +/-3 pixels; cap top +/-2 pixels. One source-wide rounded median cap-to-sole height, no phase scaling. Detailed alpha-threshold ROIs and evidence in the linked source review. Neutral firing mouth +/-4 pixels, independently distinguished from bayonet tip.",
+      "scope": "Exact historical Gettysburg v13 local opt-in preview only; incomplete unapproved art family.",
+      "limitations": [
+        "Exact-SHA four-cell source acceptance only, not human/anatomy/history certification.",
+        "Concealed pelvis and far-side attachments are estimated; supporting sole has about3-pixel native uncertainty.",
+        "Visible stylization does not establish historical equipment manufacture or drill.",
+        "No default/production/full-family approval or runtime temporal/cold-resume/residency/performance proof.",
+        "Model-assisted inspection is not independent human, physical anatomy, historical drill or exact skeleton/face continuity certification.",
+        "Native cap-to-supporting-sole spans vary by 14 pixels; one whole-source body reference retains this variation.",
+        "Entire native RGBA source and each full equal cell are copied byte-for-byte without raster mirroring, recoloring, trimming, resampling or alpha cleanup.",
+        "Low-alpha colored RGB residue remains; targeted alpha diagnostics do not prove perfectly clean transparency or exhaustive absence of fringe.",
+        "Missing Confederate identities/bearings, aim transitions, authored recoil, melee, casualties, bearer grips and crews remain unfinished."
+      ],
+      "muzzle": [
+        192,
+        214
+      ]
+    }
+  ]
+}

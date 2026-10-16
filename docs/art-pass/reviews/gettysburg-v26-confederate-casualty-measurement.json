@@ -1,0 +1,207 @@
+{
+  "artPass": "gettysburg-v26",
+  "side": "confederate",
+  "identity": "a",
+  "direction": 3,
+  "role": "casualty",
+  "source": "docs/art-pass/candidates/gettysburg-v26/confederate-a-casualty-sw-candidate.png",
+  "sourceSHA256": "df22288282945e4491707b94f092872837bd261850d2ca243a3873764d1d423c",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v26-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "8f6cc672b119b13f7659b58c72bafce3d8396abe0798499874070c27b88b8171",
+  "referenceHeight": 415,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh confederate contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "9cfb4c2f5f0e8fec0622bb444ac869fcfbf3f518981850f3609ac29e5c3e9c9e",
+      "ground": [
+        381,
+        571
+      ],
+      "groundROI": [
+        465,
+        525,
+        527,
+        584
+      ],
+      "groundMethod": "Projected pelvis X follows the hips during the initial hit/stumble. Ground Y is the nearer viewer-right boot sole, separated from the bayonet that reaches farther down the cell.",
+      "solidBounds": [
+        119,
+        146,
+        516,
+        581
+      ],
+      "solidPadding": [
+        119,
+        146,
+        111,
+        46
+      ],
+      "nonzeroBounds": [
+        33,
+        15,
+        623,
+        589
+      ]
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "4d5c55979566e530bd1f364a837aafe7b2d54bf54f7e699269eb27ec05aef10e",
+      "ground": [
+        401,
+        605
+      ],
+      "groundROI": [
+        323,
+        571,
+        382,
+        618
+      ],
+      "groundMethod": "Projected lower-torso/hip X is independent of the forward support hand. Ground Y is the near palm/fingertip contact during knee-down, excluding rifle and farther boot.",
+      "solidBounds": [
+        64,
+        312,
+        527,
+        605
+      ],
+      "solidPadding": [
+        64,
+        312,
+        100,
+        22
+      ],
+      "nonzeroBounds": [
+        25,
+        21,
+        589,
+        625
+      ]
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "29236e2be8d989a479163562d76d4df23eea68e1de1b85abf70a11ffe9b617eb",
+      "ground": [
+        405,
+        450
+      ],
+      "groundROI": [
+        319,
+        427,
+        384,
+        458
+      ],
+      "groundMethod": "Projected lower-torso/hip X follows the collapsing body. Ground Y is the forward near-hand knuckle contact; the rifle and tucked knee are excluded.",
+      "solidBounds": [
+        57,
+        232,
+        605,
+        458
+      ],
+      "solidPadding": [
+        57,
+        232,
+        22,
+        169
+      ],
+      "nonzeroBounds": [
+        19,
+        20,
+        621,
+        627
+      ]
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "0487335b86f1108e9f21b2ab9141219ae20f0a089558f6bd46339e3f8bcde566",
+      "ground": [
+        369,
+        429
+      ],
+      "groundROI": [
+        363,
+        414,
+        370,
+        433
+      ],
+      "groundMethod": "Projected torso/hip X represents the resting body. Ground Y is a narrow visible gray elbow/forearm support edge behind the rifle, with a transparent gap below inside the ROI; brown stock pixels are excluded.",
+      "solidBounds": [
+        59,
+        297,
+        579,
+        463
+      ],
+      "solidPadding": [
+        59,
+        297,
+        48,
+        164
+      ],
+      "nonzeroBounds": [
+        9,
+        3,
+        585,
+        627
+      ]
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 3,
+      "action": "fall",
+      "key": "confederate-gettysburg-v26-a-casualty-sw",
+      "frames": [
+        "a-fall-3-0",
+        "a-fall-3-1",
+        "a-fall-3-2",
+        "a-fall-3-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.607656,
+          "y": 0.910686
+        },
+        {
+          "x": 0.639553,
+          "y": 0.964912
+        },
+        {
+          "x": 0.645933,
+          "y": 0.717703
+        },
+        {
+          "x": 0.588517,
+          "y": 0.684211
+        }
+      ],
+      "referenceHeight": 415,
+      "sourceHash": "df22288282945e4491707b94f092872837bd261850d2ca243a3873764d1d423c",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeCasualtySequence": "gettysburg-v26-confederate-a-sw-casualty",
+      "scope": "Exact source-reviewed confederate A SW local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

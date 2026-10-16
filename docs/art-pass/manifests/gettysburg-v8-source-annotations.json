@@ -1,0 +1,296 @@
+{
+  "artPass": "gettysburg-v8",
+  "productionApproved": false,
+  "sources": [
+    {
+      "name": "march-sw",
+      "key": "union-gettysburg-v8-a-march-sw",
+      "measurementName": "union-a-march-sw",
+      "source": "docs/art-pass/candidates/gettysburg-v8/union-a-sw-march-padded-candidate.png",
+      "sha256": "94f87dfa8bd853789be2459f5f5405507421f1447ccf553f4723293c2a29fe6b",
+      "side": "union",
+      "identity": "a",
+      "direction": 3,
+      "cell": 627,
+      "roots": [
+        [
+          330,
+          566
+        ],
+        [
+          297,
+          566
+        ],
+        [
+          329,
+          545
+        ],
+        [
+          297,
+          545
+        ]
+      ],
+      "capTop": [
+        209,
+        211,
+        188,
+        191
+      ],
+      "bodySpans": [
+        353,
+        342,
+        351,
+        350
+      ],
+      "referenceHeight": 360,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            3,
+            2,
+            1
+          ]
+        ]
+      ],
+      "scope": "opt-in Union A SW march; exact historical Gettysburg v8 only",
+      "annotationMethod": "Separate model-assisted fresh native image review. Manual pelvis X and row-shared ground Y uncertain by approximately \u00b15\u20138 native pixels; cap tops \u00b12px. One shared body reference per source; cap/sole spans remain diagnostics.",
+      "limitations": [
+        "Separate model-assisted all-cell review supports limited native SW preview; not independent human, anatomical or historical certification.",
+        "Requested size and isolated edits were not exactly achieved. Final native sources were freshly reviewed and measured; no percent transformation or unchanged untargeted pixel claim.",
+        "One common source reference preserves natural posture and source variation; no action or phase-dependent size correction.",
+        "Native RGBA pixels remain unchanged. Low-alpha RGB residue is retained; the blue diagnostic is not an exhaustive fringe detector.",
+        "Other missing directions/identities, melee, casualties, recoil/settling, true bearers and complete family/production approval remain unfinished.",
+        "Actual chronological native-cell order is [0,3,2,1], with opposite contacts and alternating passing supports traced from hips through knees. The requested row-major order was not achieved.",
+        "Visible two-handed viewer-right carry is plausible. Four poses do not establish continuous planted-foot trajectories or exact historical drill.",
+        "Minimum solid padding is 64px at alpha64."
+      ]
+    },
+    {
+      "name": "march-sw",
+      "key": "union-gettysburg-v8-b-march-sw",
+      "measurementName": "union-b-march-sw",
+      "source": "docs/art-pass/candidates/gettysburg-v8/union-b-sw-march-candidate.png",
+      "sha256": "fbe92c00f29cdd11bf79970601a7668b1c17050a6b8952a514bcff8c14a02452",
+      "side": "union",
+      "identity": "b",
+      "direction": 3,
+      "cell": 627,
+      "roots": [
+        [
+          330,
+          568
+        ],
+        [
+          298,
+          568
+        ],
+        [
+          330,
+          546
+        ],
+        [
+          298,
+          546
+        ]
+      ],
+      "capTop": [
+        208,
+        209,
+        188,
+        191
+      ],
+      "bodySpans": [
+        355,
+        345,
+        352,
+        351
+      ],
+      "referenceHeight": 360,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            3,
+            2,
+            1
+          ]
+        ]
+      ],
+      "scope": "opt-in Union B SW march; exact historical Gettysburg v8 only",
+      "annotationMethod": "Separate model-assisted fresh native image review. Manual pelvis X and row-shared ground Y uncertain by approximately \u00b15\u20138 native pixels; cap tops \u00b12px. One shared body reference per source; cap/sole spans remain diagnostics.",
+      "limitations": [
+        "Separate model-assisted all-cell review supports limited native SW preview; not independent human, anatomical or historical certification.",
+        "Requested size and isolated edits were not exactly achieved. Final native sources were freshly reviewed and measured; no percent transformation or unchanged untargeted pixel claim.",
+        "One common source reference preserves natural posture and source variation; no action or phase-dependent size correction.",
+        "Native RGBA pixels remain unchanged. Low-alpha RGB residue is retained; the blue diagnostic is not an exhaustive fringe detector.",
+        "Other missing directions/identities, melee, casualties, recoil/settling, true bearers and complete family/production approval remain unfinished.",
+        "Actual chronological native-cell order is [0,3,2,1], with opposite contacts and alternating passing supports traced from hips through knees. The requested row-major order was not achieved.",
+        "Visible two-handed viewer-right carry is plausible. Four poses do not establish continuous planted-foot trajectories or exact historical drill.",
+        "Identity variation is subtle; exact face-only isolation, named likeness and game-scale individuality are not certified. Tiny alpha1 boundary residue remains.",
+        "Minimum solid padding is 63px at alpha64."
+      ]
+    },
+    {
+      "name": "actions-sw",
+      "key": "union-gettysburg-v8-a-actions-sw",
+      "measurementName": "union-a-actions-sw",
+      "source": "docs/art-pass/candidates/gettysburg-v8/union-a-sw-actions-single-candidate.png",
+      "sha256": "485b13ee60360562d3ee5d0e93311f223971880622735ecdb5b6dd4d9e7f5a16",
+      "side": "union",
+      "identity": "a",
+      "direction": 3,
+      "cell": 627,
+      "roots": [
+        [
+          338,
+          578
+        ],
+        [
+          358,
+          578
+        ],
+        [
+          351,
+          527
+        ],
+        [
+          342,
+          527
+        ]
+      ],
+      "capTop": [
+        263,
+        269,
+        217,
+        229
+      ],
+      "bodySpans": [
+        307,
+        304,
+        301,
+        293
+      ],
+      "referenceHeight": 315,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "scope": "opt-in Union A SW actions; exact historical Gettysburg v8 only",
+      "annotationMethod": "Separate model-assisted fresh native image review. Manual pelvis X and row-shared ground Y uncertain by approximately \u00b15\u20138 native pixels; cap tops \u00b12px. One shared body reference per source; cap/sole spans remain diagnostics. Actual tube mouth distinct from blade tip, uncertain by approximately \u00b14\u20135 native pixels.",
+      "limitations": [
+        "Separate model-assisted all-cell review supports limited native SW preview; not independent human, anatomical or historical certification.",
+        "Requested size and isolated edits were not exactly achieved. Final native sources were freshly reviewed and measured; no percent transformation or unchanged untargeted pixel claim.",
+        "One common source reference preserves natural posture and source variation; no action or phase-dependent size correction.",
+        "Native RGBA pixels remain unchanged. Low-alpha RGB residue is retained; the blue diagnostic is not an exhaustive fringe detector.",
+        "Other missing directions/identities, melee, casualties, recoil/settling, true bearers and complete family/production approval remain unfinished.",
+        "Viewer-right ready carry agrees with the matching march. Shouldered fire projects southwest near153 degrees from screen-right, with tube mouth distinct from blade tip.",
+        "One held firing pose and two representative loading states do not establish recoil, settling or a complete verified period drill. Hidden bore/socket/grip relationships remain unverified.",
+        "Minimum solid padding is 53px at alpha64."
+      ],
+      "muzzle": [
+        181,
+        391
+      ]
+    },
+    {
+      "name": "actions-sw",
+      "key": "union-gettysburg-v8-b-actions-sw",
+      "measurementName": "union-b-actions-sw",
+      "source": "docs/art-pass/candidates/gettysburg-v8/union-b-sw-actions-candidate.png",
+      "sha256": "e98918507e6eadc38fe828814782c95a51f132ab918fdacfa185d8660e15d8af",
+      "side": "union",
+      "identity": "b",
+      "direction": 3,
+      "cell": 627,
+      "roots": [
+        [
+          361,
+          613
+        ],
+        [
+          365,
+          613
+        ],
+        [
+          363,
+          536
+        ],
+        [
+          352,
+          536
+        ]
+      ],
+      "capTop": [
+        210,
+        217,
+        148,
+        163
+      ],
+      "bodySpans": [
+        395,
+        391,
+        379,
+        369
+      ],
+      "referenceHeight": 400,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "scope": "opt-in Union B SW actions; exact historical Gettysburg v8 only",
+      "annotationMethod": "Separate model-assisted fresh native image review. Manual pelvis X and row-shared ground Y uncertain by approximately \u00b15\u20138 native pixels; cap tops \u00b12px. One shared body reference per source; cap/sole spans remain diagnostics. Actual tube mouth distinct from blade tip, uncertain by approximately \u00b14\u20135 native pixels.",
+      "limitations": [
+        "Separate model-assisted all-cell review supports limited native SW preview; not independent human, anatomical or historical certification.",
+        "Requested size and isolated edits were not exactly achieved. Final native sources were freshly reviewed and measured; no percent transformation or unchanged untargeted pixel claim.",
+        "One common source reference preserves natural posture and source variation; no action or phase-dependent size correction.",
+        "Native RGBA pixels remain unchanged. Low-alpha RGB residue is retained; the blue diagnostic is not an exhaustive fringe detector.",
+        "Other missing directions/identities, melee, casualties, recoil/settling, true bearers and complete family/production approval remain unfinished.",
+        "Viewer-right ready carry agrees with the matching march. Shouldered fire projects southwest near153 degrees from screen-right, with tube mouth distinct from blade tip.",
+        "One held firing pose and two representative loading states do not establish recoil, settling or a complete verified period drill. Hidden bore/socket/grip relationships remain unverified.",
+        "Identity variation is subtle; exact face-only isolation, named likeness and game-scale individuality are not certified. Tiny alpha1 boundary residue remains.",
+        "Minimum solid padding18px passes the unchanged16px gate but does not meet the requested32-40px target. Native source enlarged beyond requested identity edit; all cells were remeasured."
+      ],
+      "muzzle": [
+        143,
+        376
+      ]
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "reviewer": "v15_art_integration independent model agent (separate from source generator and native author)",
+  "reviewedAtUTC": "2026-10-04T02:40:27.080326+00:00",
+  "source": {
+    "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/confederate-a-sw-actions-attempt-2.png",
+    "sha256": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d",
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "cell": [
+      627,
+      627
+    ]
+  },
+  "acceptedForOptIn": true,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "completeFamilyApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "modelAssisted": true,
+  "independentReview": true,
+  "kitAccepted": true,
+  "allFourCellsReviewed": true,
+  "completeNativeSheetInspected": true,
+  "identityKit": "confederate-a",
+  "kitContinuity": {
+    "acceptedForOptIn": true,
+    "observedKit": "Gray kepi and worn gray jacket, tan trousers, dark ankle boots, brown cross-body straps, black pouches/pack, tan cylindrical back roll and upright rifle/bayonet remain in all four cells.",
+    "referenceContinuity": "Broad kit/palette compared directly with independently viewed retained v14 Confederate A S actions. Exact face, skeleton and manufactured equipment identity are not established.",
+    "comparisonSources": [
+      {
+        "path": "docs/art-pass/candidates/gettysburg-v14/confederate-a-s-actions-candidate.png",
+        "sha256": "cbc0c38d83a73b934ea3e69cbf4ed7a0b4da23a3c5d27d5af002ac2610faf2b1"
+      }
+    ]
+  },
+  "bearingAndGrip": {
+    "direction": "SW",
+    "directionIndex": 3,
+    "actualFacingAccepted": true,
+    "bearing": "All four cells retain elevated native front-left oblique head/chest/toe presentation. Fire projects toward screen-down-left; no row switches to rear or pure lateral bearing.",
+    "grip": "Ready has two separated upright grips; fire has plausible right shoulder/cheek stock, trigger-region hand and fore-end support; loading and raised rod have distinct upper action hand and lower steadying hand.",
+    "limits": "2D hidden shoulder/stock, fingers, exact camera and historical drill remain uncertified; native barrel projection is oblique rather than a recovered canonical ballistic axis."
+  },
+  "cells": [
+    {
+      "cell": 0,
+      "name": "TL ready",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "observation": "Two separated hands hold upright rifle. Head/chest/toes face front-left, with retained gray cap/jacket, tan trousers, dark boots, brown straps, black kit and tan back roll."
+    },
+    {
+      "cell": 1,
+      "name": "TR fire",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "observation": "Fire stock plausibly meets anatomical right shoulder/cheek. Rear trigger hand and separate supporting fore-end hand are visible; rifle projects down-left. Actual dark barrel-mouth opening is around [167,300], separately above/right of the longer bayonet tip near [100,336]."
+    },
+    {
+      "cell": 2,
+      "name": "BL loading",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "observation": "Light cartridge-like item is held above upright mouth with opposite hand stabilizing stock; front-left chest/head/feet retained."
+    },
+    {
+      "cell": 3,
+      "name": "BR ramming",
+      "poseAccepted": true,
+      "bearingAccepted": true,
+      "kitAccepted": true,
+      "gripAccepted": true,
+      "observation": "Raised hand holds a separate slender rod toward upright mouth while lower hand steadies stock; front-left body and planted boots retained."
+    }
+  ],
+  "measurementContract": {
+    "coordinateSpace": "Native cell-local pixels from top-left, TL/TR/BL/BR row-major; bounds and sole Y are exclusive.",
+    "rootMeaning": "Fresh manually estimated concealed pelvis-center X projected to a separately measured visible supporting boot sole Y in each native cell; a 2D registration pivot, not reconstructed anatomical pelvis or physical ground.",
+    "roots": [
+      [
+        353,
+        532
+      ],
+      [
+        338,
+        535
+      ],
+      [
+        362,
+        499
+      ],
+      [
+        343,
+        499
+      ]
+    ],
+    "capTop": [
+      164,
+      165,
+      125,
+      122
+    ],
+    "bodySpans": [
+      368,
+      370,
+      374,
+      377
+    ],
+    "referenceHeight": 372,
+    "supportingSoleRegions": [
+      {
+        "cell": 0,
+        "soleROI": [
+          330,
+          480,
+          396,
+          552
+        ],
+        "boundsInROI": [
+          0,
+          0,
+          60,
+          52
+        ],
+        "groundY": 532
+      },
+      {
+        "cell": 1,
+        "soleROI": [
+          318,
+          489,
+          381,
+          550
+        ],
+        "boundsInROI": [
+          4,
+          0,
+          55,
+          46
+        ],
+        "groundY": 535
+      },
+      {
+        "cell": 2,
+        "soleROI": [
+          365,
+          448,
+          418,
+          520
+        ],
+        "boundsInROI": [
+          5,
+          0,
+          47,
+          51
+        ],
+        "groundY": 499
+      },
+      {
+        "cell": 3,
+        "soleROI": [
+          349,
+          447,
+          403,
+          521
+        ],
+        "boundsInROI": [
+          3,
+          0,
+          48,
+          52
+        ],
+        "groundY": 499
+      }
+    ],
+    "capROIs": [
+      [
+        319,
+        153,
+        386,
+        228
+      ],
+      [
+        297,
+        153,
+        361,
+        227
+      ],
+      [
+        329,
+        113,
+        397,
+        189
+      ],
+      [
+        313,
+        108,
+        378,
+        183
+      ]
+    ],
+    "perCellSupportingSoleGroundY": [
+      532,
+      535,
+      499,
+      499
+    ],
+    "pelvisX": [
+      353,
+      338,
+      362,
+      343
+    ],
+    "bodySpanRangePixels": 9,
+    "firingBarrelMouth": [
+      167,
+      300
+    ],
+    "rootXUncertaintyPixels": 8,
+    "rootYUncertaintyPixels": 3,
+    "groundMethod": "Fresh visually chosen boot-only ROIs at alpha>=64; each exclusive bottom Y is measured separately. The selected foreground planted boot excludes rifle butt, opposite depth boot, and torso pixels. No row-shared ground or prior-source coordinates are inherited.",
+    "capMethod": "Fresh alpha>=64 minimum Y in visually selected cap-only ROIs; excludes upright rifle, raised hand, and ramrod.",
+    "capTopUncertaintyPixels": 2,
+    "referenceMethod": "Median of four fresh cap-top to individual supporting-sole spans, rounded to nearest native pixel with half upward; one source-wide scale across all actions, no per-cell or per-phase rescaling.",
+    "firingMouthUncertaintyPixels": 3,
+    "firingMouthROI": [
+      164,
+      298,
+      171,
+      304
+    ],
+    "firingMouthMethod": "Fresh close native crop and dark opening inspection distinguished from bayonet tip; alpha64 dark-pixel mask supports the mouth region but does not reconstruct a physical bore center.",
+    "bayonetTipApproximate": [
+      100,
+      336
+    ],
+    "firingAnchorIsBayonetTip": false,
+    "muzzleApplicable": true,
+    "measurementValuesInheritedFromGuideOrPriorSource": false
+  },
+  "nativePixelEvidence": {
+    "alphaThreshold": 64,
+    "boundsExclusive": [
+      [
+        265,
+        104,
+        431,
+        532
+      ],
+      [
+        100,
+        165,
+        408,
+        535
+      ],
+      [
+        267,
+        125,
+        446,
+        500
+      ],
+      [
+        240,
+        73,
+        425,
+        499
+      ]
+    ],
+    "paddingLTRB": [
+      [
+        265,
+        104,
+        196,
+        95
+      ],
+      [
+        100,
+        165,
+        219,
+        92
+      ],
+      [
+        267,
+        125,
+        181,
+        127
+      ],
+      [
+        240,
+        73,
+        202,
+        128
+      ]
+    ],
+    "minimumPaddingByCell": [
+      95,
+      92,
+      125,
+      73
+    ],
+    "minimumRequiredPadding": 16,
+    "strictPaddingPassed": true,
+    "nativeSquareRGBA2x2": true,
+    "redYellowCriterion": "R>180,B<80,and(G<90 or G>170), alpha>0",
+    "redYellowAlphaDistributionByCell": [
+      {
+        "1": 93,
+        "4": 1
+      },
+      {
+        "1": 76,
+        "4": 2
+      },
+      {
+        "1": 55,
+        "4": 1
+      },
+      {
+        "1": 229,
+        "2": 1,
+        "4": 6
+      }
+    ],
+    "redYellowAtAlpha64": 0,
+    "rasterCleanupPerformed": false,
+    "sourceChangedDuringReview": false,
+    "coloredRGBAssessment": "Targeted red/yellow pixels are absent at alpha64; near-transparent residue remains untouched. This is not exhaustive alpha/fringe certification."
+  },
+  "nativeReview": {
+    "exactSHAInspected": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d",
+    "completeNativeSheetInspected": true,
+    "allFourCellsReviewed": true,
+    "kitAccepted": true,
+    "acceptedForOptIn": true,
+    "modelAssisted": true,
+    "independentReview": true,
+    "humanReviewed": false,
+    "anatomyCertified": false,
+    "historyCertified": false,
+    "actualFacingAccepted": true,
+    "poseAccepted": true,
+    "manualRootsMeasured": true,
+    "manualMuzzleMeasured": true,
+    "oneSourceReferenceHeight": 372
+  },
+  "blockers": [],
+  "limits": [
+    "Acceptance binds to this exact native SHA and all four inspected cells for local Gettysburg v15 opt-in preview.",
+    "Ready, fire, loading and raised-rod drawings are four discrete representative states; they do not certify continuous animation or historically verified loading/ramming drill.",
+    "Concealed pelvis center, small fingers, cheek/stock and shoulder attachment remain estimated from 2D overlap; physical anatomy and supporting-foot depth are not certified.",
+    "Cap-to-individual-sole spans are [368, 370, 374, 377] native pixels; one source reference height 372 preserves their 9-pixel variation and lower firing head as source posture.",
+    "Native SE/SW front diagonal interpretation is accepted by head, chest, feet and rifle bearing; exact camera calibration and a canonical 45-degree ballistic axis are not established.",
+    "Near-transparent red/yellow RGB residue persists below alpha64; targeted solid-padding and color tests do not prove exhaustive fringe removal or perfect transparency.",
+    "Model-assisted independent inspection; human, physical anatomy, historical equipment/drill, default, production and complete-family certification remain false.",
+    "Final renderer continuity, pauses/checkpoints, decoded/GPU/process residency, device performance and human usability remain separate checks."
+  ],
+  "registrationAssessment": "Four fresh boot-only sole measurements and manually estimated pelvis X, one median-based native body reference and separately inspected actual firing mouth; native pixels/layout unchanged.",
+  "selectedSource": "docs/art-pass/candidates/gettysburg-v15/confederate-a-sw-actions-candidate.png",
+  "selectedSourceSha256": "9aadf31b7e2a883c491ac8a29379a88c3f917a59fd2efa03c5902bf9d469c92d"
+}

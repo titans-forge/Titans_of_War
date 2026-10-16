@@ -1,0 +1,174 @@
+{
+  "frames": {
+    "a-fall-6-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.607656,
+        "y": 0.952153
+      },
+      "bodyHeight": 330
+    },
+    "a-fall-6-1": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.523126,
+        "y": 0.91866
+      },
+      "bodyHeight": 330
+    },
+    "a-fall-6-2": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.665072,
+        "y": 0.601276
+      },
+      "bodyHeight": 330
+    },
+    "a-fall-6-3": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "pivot": {
+        "x": 0.529506,
+        "y": 0.688995
+      },
+      "bodyHeight": 330
+    }
+  },
+  "meta": {
+    "image": "union-a-casualty-n.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "sha256": "ff8b68d8dad15ad420b40b583d9aef79cac9d4c2c8d2bf3aefd0734458f01a97",
+    "source": "docs/art-pass/candidates/gettysburg-v23/union-a-casualty-n-candidate.png",
+    "artPass": "gettysburg-v23",
+    "candidate": true,
+    "clips": [
+      {
+        "side": "union",
+        "identity": "a",
+        "direction": 6,
+        "action": "fall",
+        "key": "union-gettysburg-v23-a-casualty-n",
+        "frames": [
+          "a-fall-6-0",
+          "a-fall-6-1",
+          "a-fall-6-2",
+          "a-fall-6-3"
+        ],
+        "pivots": [
+          {
+            "x": 0.607656,
+            "y": 0.952153
+          },
+          {
+            "x": 0.523126,
+            "y": 0.91866
+          },
+          {
+            "x": 0.665072,
+            "y": 0.601276
+          },
+          {
+            "x": 0.529506,
+            "y": 0.688995
+          }
+        ],
+        "referenceHeight": 330,
+        "sourceHash": "ff8b68d8dad15ad420b40b583d9aef79cac9d4c2c8d2bf3aefd0734458f01a97",
+        "approval": {
+          "reviewed": true,
+          "rejected": false
+        },
+        "nativeCasualtySequence": "gettysburg-v23-union-a-n-casualty",
+        "scope": "Exact source-reviewed union A N local opt-in only; incomplete family",
+        "familyComplete": false,
+        "productionApproved": false,
+        "defaultApproved": false,
+        "humanCertified": false,
+        "physicalAnatomyCertified": false,
+        "historicalDrillCertified": false
+      }
+    ],
+    "sourceReview": "docs/art-pass/reviews/gettysburg-v23-independent-contact-casualty-source-review.json",
+    "sourceReviewSHA256": "27c41c71d82f9fbef3ae7831e585ac714fe0e15ac81948636c5299ee3aa8c877",
+    "referenceHeight": 330,
+    "familyComplete": false,
+    "familyApproved": false,
+    "completeFamilyApproved": false,
+    "pixelTreatment": "none; complete native PNG copied byte-identically",
+    "productionApproved": false,
+    "defaultApproved": false,
+    "humanCertified": false,
+    "physicalAnatomyCertified": false,
+    "historicalDrillCertified": false
+  }
+}

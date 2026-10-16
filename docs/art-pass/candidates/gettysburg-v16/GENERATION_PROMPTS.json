@@ -1,0 +1,109 @@
+{
+  "mode": "builtin imagegen with native pose/appearance references and diagnostic/material edits",
+  "modelIdExposed": false,
+  "wholeNativeCopyOnly": true,
+  "selectedAttempt": 6,
+  "selectedSourceSha256": "cbd83756f656a82abf57d9b00eebdb2ad02447a8365144d3ac11d6e79d2a603c",
+  "attempts": [
+    {
+      "id": "sw-march-attempt-1",
+      "prompt": "Use case: historical-scene. Create a NEW photorealistic native transparent RGBA game sprite sheet of one Confederate infantryman walking SW, diagonally toward camera and IMAGE LEFT.\n\nImage 1 is the AUTHORITATIVE 3D walking-pose and camera guide. BLUE is the complete anatomical LEFT hip/thigh/knee/shin/boot chain; RED is RIGHT. Use its actual four DIFFERENT leg poses. Image 2 is ONLY the worn wool/leather/face/equipment appearance reference; it has BAD shrinking legs across cells, do NOT copy its proportions or framing.\n\nExactly FOUR complete figures, clean equal 2x2 square cells. One fixed elevated orthographic camera, same adult anatomy, identical stature, torso/head/limb lengths, camera magnification, chest angle, hands and musket placement throughout. All cap tops stay at approximately the same local cell Y. The distance from cap top to the supporting planted boot sole must remain within a narrow 3 percent range in every cell. The man must NOT get progressively shorter TL to BR. Do not crouch or compress the supporting leg.\n\nTL LEFT contact forward, RIGHT trailing; TR LEFT planted straight support, RIGHT gently bent and lifted passing under hip; BL RIGHT contact forward, LEFT trailing; BR RIGHT planted straight support, LEFT gently bent and lifted passing under hip. Track anatomical legs from hips to boots through the guide, not screen-side labels. Natural modest gait, believable boot depth. Supporting soles planted at almost the same local screen-ground height; lifted boot visibly clears ground. Opposite contact and opposite support phases, not four repeats.\n\nSame broad Confederate A kit from image2: bearded adult, battered gray kepi and gray wool jacket, tan trousers, dark brown boots, crossed worn leather straps and pouches, tan blanket roll and canteen. Both hands naturally hold ONE complete upright wooden musket with its entire steel bayonet. High detail wool seams, leather, wood, realistic fingers and face. Photorealistic, not cartoon.\n\nPreserve small figure framing of image1: ENTIRE figure including bayonet occupies about 55 percent cell height, generous true-alpha transparent margins of at least 65 native pixels on every side at a 1254px square canvas. No crops, touching neighboring cells, shadows, ground, grid, captions or colored diagnostic remnants. No mirrored pose. Generate real transparent alpha, not a painted checkerboard. Fixed uniform source scale, no camera zoom or phase-dependent framing.",
+      "refs": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-sw/confederate-a-sw-march-colored-leg-native-guide.png",
+        "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v15/confederate-a-sw-march-candidate.png"
+      ],
+      "generatedPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-3552e852-336e-49e3-a87c-e17f31132d32.png",
+      "attemptPath": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-1.png",
+      "mode": "built-in image_gen",
+      "transparent_background": true,
+      "sha256": "93546c3749cef950e9b3fbca19b9d965d1a366232ad4f6e28e0f3fd6f1710c03",
+      "referenceHashes": {
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-sw/confederate-a-sw-march-colored-leg-native-guide.png": "4af93ad9dcb1756aee3419fd25a83851ac3329f84a134579b0a40bd2167dc833",
+        "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v15/confederate-a-sw-march-candidate.png": "e75aa92762f09338f9d5d577a010d1025eed81ff36321d2fb275e0663db32f43"
+      }
+    },
+    {
+      "attempt": 2,
+      "status": "diagnostic-awaiting-independent-review",
+      "prompt": "Use case: historical-scene. Development pose diagnostic, NOT final game art. Create a new transparent RGBA 2x2 sheet of the same realistic Confederate infantryman with clearly COLOR-CODED COMPLETE LEGS.\n\nImage1 is AUTHORITATIVE for exact camera and all four different anatomical leg chains. Image2 supplies ONLY head, gray wool jacket, leather kit, blanket/canteen and musket appearance. Ignore image2's legs and cell framing entirely.\n\nEvery anatomical LEFT trouser leg AND left boot must be vivid BLUE from its hip to its sole. Every anatomical RIGHT trouser leg AND right boot must be vivid RED from hip to sole. These colors are deliberate diagnostic material, not lighting. Keep the jacket/head/kit realistic gray/brown.\n\nTrace image1 hip\u2192thigh\u2192knee\u2192shin\u2192boot in each cell and reproduce those four distinct poses. TL blue LEFT leg contacts forward, red RIGHT trails. TR blue LEFT is straight planted support, red RIGHT flexes/lifts through passing under hip. BL red RIGHT leg contacts forward, blue LEFT trails; this MUST be a different COMPLETE forward leg chain from TL. BR red RIGHT is straight planted support, blue LEFT bends/lifts through passing; opposite support from TR. Do not merely recolor a repeated pose. All four body/head/rifle face the SAME SW front diagonal toward camera and IMAGE LEFT, never mirrored.\n\nOne same person and consistent body proportions. Common orthographic camera, no changing magnification. Fix the head/torso stature across all cells; cap-top to planted support sole must be about420 native pixels with no more than12 pixels total variation at1254px canvas. The bottom row must not be shorter. Natural adult thighs/shins of the same lengths, modest knee bend and clearly lifted passing boot.\n\nIdentical realistic adult bearded face, gray kepi/jacket, crossed worn leather straps/pouches, tan blanket roll/canteen, two natural hands holding ONE complete upright wooden musket and full bayonet in exactly matching carry. Actual wool/leather/steel textures and plausible human anatomy, not cartoon.\n\nExactly four full figures in equal627px cells on a1254x1254 square native sheet. Entire boots, fingers, musket and bayonet stay inside each cell, minimum30px transparent margins on every side. Truly transparent alpha outside cutouts, no ground, shadows, text, grid or checkerboard. No geometrical warping, no progressiveshrink, no extra limbs/rifles.",
+      "referenced_image_paths": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-sw/confederate-a-sw-march-colored-leg-native-guide.png",
+        "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v15/confederate-a-sw-march-candidate.png"
+      ],
+      "generated_path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-3a21708f-5378-453a-9da8-cc636e679f12.png",
+      "attempt_path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-2-colored.png",
+      "transparent_background": true,
+      "builtin": true,
+      "modelIdExposed": false,
+      "sha256": "b7704a55c99c3cf39afc5522222094d3d0b45b3943239acc288eeeee212d1d24",
+      "referenceHashes": {
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v15-20261003/attempts/guides-sw/confederate-a-sw-march-colored-leg-native-guide.png": "4af93ad9dcb1756aee3419fd25a83851ac3329f84a134579b0a40bd2167dc833",
+        "/Users/titansforge/Vault/Titans_of_War/docs/art-pass/candidates/gettysburg-v15/confederate-a-sw-march-candidate.png": "e75aa92762f09338f9d5d577a010d1025eed81ff36321d2fb275e0663db32f43"
+      }
+    },
+    {
+      "attempt": 3,
+      "prompt": "Edit this diagnostic 2x2 native RGBA soldier sheet. Preserve the four distinct full leg chains and LEFT BLUE/RIGHT RED hip-to-sole colors, same gray Confederate kit and same SW camera. Correct the STATURE and PADDING. In each 627x627 cell the cap top should be at local Y94 and the PLANTED supporting boot's sole should be at local Y580, giving about486px consistent stature. The current bottom row is too short: BL span466px and BR460px versus TL493/TR491. Redraw the bottom-row human anatomy with a more upright extended support leg, matching the top row's adult head/torso/leg proportions, so BL and BR span486\u00b15. Top row should also span486\u00b15. Do not merely enlarge the whole bottom figures; preserve common body/head/musket magnification and correctly redraw anatomically consistent hip/knee/shin/boot chains with natural leg extension. All four cap-to-planted-sole spans must be within10px range. Complete musket bayonet MUST have at least28 transparent pixels above its tip in each cell. Entire character and weapon have >=24px transparent padding all sides of its own cell.\n\nKeep TL blue LEFT forward contacting/red RIGHT behind; TR blue LEFT straight planted support/red RIGHT flexed lifted passing under hip; BL red RIGHT forward contacting/blue LEFT behind; BR red RIGHT straight planted support/blue LEFT lifted passing. Preserve four different poses, no swapped colors, no repeated pose. One same adult realistic wool/leather Confederate infantryman on true transparent background, exact equal cells and square native layout, no ground/shadow/text/grid. Only improve consistent stature, complete anatomical leg sequences, and internal padding; leave all other appearance/camera/lighting/kit fixed.",
+      "referenced_image_paths": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-2-colored.png"
+      ],
+      "generated_path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-2ec34249-6214-475b-b6d0-473581aba1eb.png",
+      "attempt_path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-3-colored.png",
+      "transparent_background": true,
+      "builtin": true,
+      "modelIdExposed": false,
+      "sha256": "272f1b90a92a913e06f33fa7e4978bf1175dd0b06a689a075e604ef07ab7083d",
+      "referenceHashes": {
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-2-colored.png": "b7704a55c99c3cf39afc5522222094d3d0b45b3943239acc288eeeee212d1d24"
+      }
+    },
+    {
+      "attempt": 4,
+      "prompt": "Edit this transparent 2x2 Confederate soldier sheet into FINAL GAME ART. The top two figures' body geometry/stature already works. PRESERVE TOP ROW GEOMETRY. Bottom two figures' planted support leg is TOO SHORT by about ONE BOOT LENGTH. REDRAW ONLY BOTTOM LEGS with 35-40px extra vertical support-leg extension at this native scale, with realistic same-person thigh/shin proportions and a more upright pelvis. Make the bottom figures slightly TALLER than the top figures, not shorter. Bottom left red leading leg must extend down one boot length; bottom right red planted leg must extend down one boot length; lifted BLUE legs keep anatomically connected hip/knee/shin/boot chains. The full cap-top to planted-sole height of all four figures must be around510 pixels, with less than20px range. Top spans already511/508; bottom spans485/480 and must increase30-35px. Do not increase top figures. No per-cell resizing or mirroring.\n\nREMOVE DIAGNOSTIC COLOR: replace all blue/red trouser materials with SAME pale tan/butternut wool trousers and all blue/red boot materials with realistic worn dark brown leather. Preserve which complete anatomical leg is where: TL LEFT contacts forward/RIGHT trails; TR LEFT supports planted/RIGHT bends lifted passing; BL RIGHT contacts forward/LEFT trails; BR RIGHT supports planted/LEFT bends lifted passing. Never repeat TL chain in BL or TR chain in BR. Preserve gray wool jacket, gray kepi, adult bearded face, brown crossed straps and pouches, blanket roll/canteen, natural paired hands carrying ONE complete upright musket/bayonet. All four face same SW diagonal toward camera and imageLEFT.\n\nCreate generous INTERNAL PADDING around each whole figure: at least30px transparent pixels ABOVE FULL BAYONET TIP and at least24px at soles/left/right. Bottom-right tip was at14px: move complete musket/carry down20px within that cell, preserving natural two-handed grip; entire weapon still present. Keep all four full figures inside equal square cells, same native2x2 canvas1254x1254, true RGBA transparency. NO ground shadows, colored fringe, text, grid, checkerboard, additional limbs/weapons. Photorealistic grown-man wool/leather/steel with coherent same lighting and fixed camera, not illustration/anime. Main task: extend both bottom support-leg anatomies visibly by one boot length, leave top stature fixed, correct padding, then restore final tan/darkbrown leg materials.",
+      "referenced_image_paths": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-3-colored.png"
+      ],
+      "generated_path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-88df106d-64f5-407b-bc22-1c2a58a1f0fe.png",
+      "attempt_path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-4-final.png",
+      "transparent_background": true,
+      "builtin": true,
+      "modelIdExposed": false,
+      "sha256": "31b6a8d1f7fb61d42cd181600d578847b53cd55db11029a36e70e70aa808cc83",
+      "referenceHashes": {
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-3-colored.png": "272f1b90a92a913e06f33fa7e4978bf1175dd0b06a689a075e604ef07ab7083d"
+      }
+    },
+    {
+      "attempt": 5,
+      "prompt": "Correct the padding and cutout edges of this FINAL 2x2 soldier sheet. Keep four same-person poses and tan wool/darkbrown leather materials EXACTLY recognizable. Use ONE common camera zoom-out of about20% for ALL FOUR figures relative to their own cell centers, not separate per-cell scale corrections: preserve the current relative body heights and full anatomical poses. All four figures should be a little smaller within their four equal627pxcells so every entire figure AND COMPLETE musket/bayonet lies at least35 transparent pixels inside its cell on ALL SIDES. The current bottom bayonet extends upward into the top-rowcells: each bottom-row COMPLETE weapon must be inside the bottom cell, its tip below localY35. Keep full-length same musket, bayonet, pair of gripping hands and natural carry; do not cut the weapon or hands. All four cap-to-plantedsole spans should be around410-425 nativepixels with<=5% total span variation. Bottom figures must retain their newly extended leg stature, don't shrink bottom row relative to top. Equal magnification for whole source.\n\nRemove all red/blue/yellow colored diagnostic contamination and fringes at trouser/musket/skin cutout edges. Alpha edge antialiasing should match adjacent natural tan wool/brown leather/gray jacket/steel material, no colored dots or red halos. Truly transparent RGBA outside figures, NO shadows/background/floor/text/grid/checkerboard. Do not add anything.\n\nPreserve distinct COMPLETE leg chains and support: TL LEFT leading planted, RIGHT bent behind; TR LEFT supports straight planted, RIGHT lifted flexing under hip; BL RIGHT leading planted, LEFT lifted behind; BR RIGHT supports straight planted, LEFT lifted flexing under hip. Same SW head/torso/weapon direction toward camera and imageleft, no mirror, no four repeated poses. Keep photorealistic face/wool/leather/kit, one light/camera. Only a common source-wide20% camera zoom-out to create generouscellpadding and natural-color edge cleanup, no unequal cell rescaling, no anatomy or stance changes.",
+      "referenced_image_paths": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-4-final.png"
+      ],
+      "generated_path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-e28e111f-4953-4d48-b784-e0fb41f003be.png",
+      "attempt_path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-5-final.png",
+      "transparent_background": true,
+      "builtin": true,
+      "modelIdExposed": false,
+      "sha256": "d7f1276dd8d7f7c3a908e115ff45283f78d5f4a0ad15f055ca3b9d6db87bbcd9",
+      "referenceHashes": {
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-4-final.png": "31b6a8d1f7fb61d42cd181600d578847b53cd55db11029a36e70e70aa808cc83"
+      }
+    },
+    {
+      "attempt": 6,
+      "prompt": "Final cutout cleanup only. This reference contains four realistic Confederate soldiers in tan wool trousers with darkbrown boots. Re-render the native2x2 transparent sprite sheet with exactly this commoncamera, same4fullbodyposes, matchingbodyheights, placement, celllayout and generouspadding. DO NOT change stature, stance, weapon length or bounding boxes. REMOVE EVERY bright RED/YELLOW/BLUE stray pixel, speck, triangle and halo anywhere at trouser/boot/musket/face cutout borders: these are leftovers from a diagnostic color mask and MUST NOT survive. In particular the brightyellow strips down outside edge of the bottom-left trouser and bottom-right trouser, red around innerknees/boots and rifle edges must become truly TRANSPARENT where outside silhouette, or natural TAN WOOL/BROWN LEATHER/GRAY WOOL/STEEL where inside silhouette. Don't just change saturated red to saturated yellow. Reconstruct clean natural-color antialiasing of each outer edge and between both legs with neighboring true material color, without a background, mattehalo, castshadow or glow. Whole figure silhouette remains recognizable and uncut.\n\nFour complete different leg chains TLLEFTcontact, TRLEFTsupport/RIGHTpassing, BLRIGHTcontact, BRRIGHTsupport/LEFTpassing, allSWfacingsame, no mirror. Tan trousers on BOTH legs, same worn leather boots, gray jacket/cap, brown straps, blanket/canteen, face and2hands pluscompleteuprightmusket/bayonet. Same realistic human/camera/lighting/scale and1254pxsquare4equalcells. Minimum30pxtransparentmarginoneachcell, no text/grid. Final nativeRGBAcutouts. The requested change is ONLY natural-material edge cleanliness: erase the vivid diagnostic RED/YELLOW/BLUE contamination entirely.",
+      "referenced_image_paths": [
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-5-final.png"
+      ],
+      "generated_path": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-5169589f-95ee-4f47-a70a-f85483b2d86e.png",
+      "attempt_path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-6-final.png",
+      "transparent_background": true,
+      "builtin": true,
+      "modelIdExposed": false,
+      "sha256": "cbd83756f656a82abf57d9b00eebdb2ad02447a8365144d3ac11d6e79d2a603c",
+      "referenceHashes": {
+        "/Users/titansforge/Vault/Titans_of_War_Art_Work/gettysburg-v16-20261003/attempts/confederate-a-sw-march-attempt-5-final.png": "d7f1276dd8d7f7c3a908e115ff45283f78d5f4a0ad15f055ca3b9d6db87bbcd9"
+      }
+    }
+  ]
+}

@@ -7,7 +7,8 @@
 // then power_analysis (structural framing), then complexity_note, then the
 // historical outcome summary, then sourceNotes. No modern academic vocabulary.
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { useDialogFocus } from './useDialogFocus';
 import { resolvePrimersForScenario } from '../game/historicalPrimers.js';
 
 const overlayStyle = {
@@ -127,6 +128,8 @@ function primerTabLabel(primer) {
 }
 
 export default function HistoricalPrimerPanel({ scenario, open, onClose, onPrimerConsulted }) {
+  const dialogRef = useRef(null);
+  useDialogFocus(dialogRef, open, onClose);
   const primers = resolvePrimersForScenario(scenario);
   const [activeId, setActiveId] = useState(primers[0]?.id || null);
 
@@ -157,7 +160,7 @@ export default function HistoricalPrimerPanel({ scenario, open, onClose, onPrime
   const active = primers.find((primer) => primer.id === activeId) || primers[0];
 
   return (
-    <div style={overlayStyle} onClick={onClose} role="dialog" aria-modal="true" aria-label="Historical context primers">
+    <div ref={dialogRef} tabIndex={-1} style={overlayStyle} onClick={onClose} role="dialog" aria-modal="true" aria-label="Historical context primers">
       <aside style={panelStyle} onClick={(event) => event.stopPropagation()}>
         <header style={headerStyle}>
           <div>
@@ -191,7 +194,7 @@ export default function HistoricalPrimerPanel({ scenario, open, onClose, onPrime
             {active.topic}
           </h3>
 
-          <span style={sectionLabelStyle}>Period Voice</span>
+          <span style={sectionLabelStyle}>{active.periodVoiceLabel || 'Period Voice'}</span>
           <blockquote style={periodVoiceStyle}>{active.period_voice}</blockquote>
 
           <span style={sectionLabelStyle}>Strategic Context</span>
@@ -209,7 +212,7 @@ export default function HistoricalPrimerPanel({ scenario, open, onClose, onPrime
         </div>
 
         <div style={footerNoteStyle}>
-          Reviewed under the Titans Forge Social Science Rubric: zero presentism, real sources first, structural framing, period-appropriate language, and competing legitimate interests shown.
+          Editorial approach: period sources, institutional incentives, and competing perspectives. Historical records, later interpretations, and simulated outcomes should be read separately. Sources are listed above.
         </div>
       </aside>
     </div>

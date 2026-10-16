@@ -1,0 +1,33 @@
+# Gettysburg v23: reverse north/south contact and casualty partners
+
+This bounded opt-in adds Union A north and Confederate A south close-contact and fall sequences. It extends the exact v22 family under `?artPass=gettysburg-v23` for normal Gettysburg only. Four whole native transparent sources supply sixteen poses. The accepted primary north/south and east/west pairs remain available, along with movement, firing/reload art and v18 saved shot presentation.
+
+## What changes
+
+Contact progresses through guard, short forward extension, recovery and parry; casualties progress through loss of balance, supported drop and ground rest. Native sources are copied whole and byte-identically. Each army uses one fresh contact reference, shared with its casualty partner. The independently reviewed pivots register anatomical projected root X separately from near-support ground Y. No mirroring, warping, resampling, per-phase height normalization or alpha cleanup is used.
+
+Stable Union A/B selection remains unchanged: A receives these north partners, while B retains accepted fallback. Confederate south poses have separate strict addresses and sequence markers. Ambiguous, unavailable or malformed registrations withhold the complete action. Simulation-supplied contact phases, bearings and saved fall ages stay authoritative. Combat rules 18 and checkpoint 22 remain unchanged.
+
+## Review and verification
+
+Astra Max independently accepted the four exact native sources for this bounded preview and inspected the game screenshots. Fresh contact medians are Union **330** and Confederate **454** native pixels, each shared with its own casualty partner. All sources are 1254×1254 with 627-pixel cells. Minimum solid-alpha cell padding is 20/25/25/34 pixels for Union contact/casualty and Confederate contact/casualty. Seven complete generation attempts include three rejected sheets: a Union weapon too near its cell edge, an oversized Confederate casualty crossing a boundary, and a Union casualty with a visibly broader cap/bedroll. Whole native redraws resolved these issues; no source pixels were edited or normalized afterward.
+
+Rear Union grips and forward-extension timing are partly obscured by the camera and dense ranks. A still can read as a raised guard. Inspected playback has coherent game-scale size and ground placement, but it does not certify fine anatomy or historical drill. Low-alpha colored fringes are retained and are not certified absent. Family completeness, default/production promotion and human certification remain false.
+
+Final mandatory results are **29/29 targeted**, **336/336 current art**, **470/470 asset-suite** and **1,495/1,495 gameplay** checks, with no failures, skips, cancellations or todo cases. All native authors and the production build pass. The new author verifies all twelve exports plus **227 rejection cases** on this Mac's Python 3.9.6; the optional integer-digit-limit case applies only on newer runtimes. Authentic pre-edit evidence retains 19 old policies, 48 prior source pairs, 1,193,472 prior poses and 38,912 contact/casualty outputs. Protected runtime, fixtures, earlier sources, helper contracts and old gates remain byte-exact.
+
+The first mandatory run found an incorrect new volley oracle: reverse Union north firing intentionally retains legacy rear barrel coordinates and has 0/11 native shots, while Confederate south has 11/11. Primary N/S and E/W both have 11/11 native shots per army. The corrected new test compares exact v22/v23 records on all three axes, supported native mouths, smoke, first cold draw and v18 checkpoint identity. Earlier new-harness setup/outcome assumptions were also corrected. Original failed outputs and prior test bytes remain external; no runtime was altered to satisfy these new oracles.
+
+Public production play uses normal confirmed Move orders to (220,620), (220,170), (470,170), then Assault Southern ridge. Pickett faces south and enters close combat with Gibbon: strength 5,321 at field time 50, 5,046 at 61, and 4,887 at 65. Public Save→fresh-page Resume returns paused at 65 with the same 4,887/5,404 strength, 54% cohesion, 79% morale, 41/42 ammunition, south facing and close-combat/shaken status. Paused canvas RGB pixels are exactly equal across two captures; cold camera reset is expected and cold screenshot equality is not claimed. Retained primary N/S play reaches contact at 25 with strength 5,114, and E/W at 43 with strength 5,144. Close, normal and overview images were inspected. All six footer commands fit inside the 375×844 compact DOM viewport; the captured bitmap is 375×812, so this is not native-device or exact screenshot-coordinate certification. No browser warnings/errors were captured. All owned practices, the tab, viewport and QA server were cleaned up. The visible campaign count remains twelve decisions and the same Chancellorsville aftermath; the existing 5174 preview remains running.
+
+Fresh v22/v23 diagnostics reproduce the inherited pre-first-draw re-save edge: reverse **13** WALK changes, primary and E/W **25** each, identical between versions. All 32 fallen bodies remain exact in every case. Reverse v22 has zero native/32 fallback bodies; v23 has 24 native/eight fallback. Retained axes both have 24 native/eight fallback. Ordinary first draw→re-save phase fixtures remain exact. The full-roster public routes have the same seven expired invisible stale-attribute differences in both versions; every visibility bit, visible attribute, saved presentation and combat checkpoint remain exact. Thirty ordinary fall-phase, 24 resolution-cold and six simultaneous resolver-loss cases also pass. This art pass does not repair or certify broader runtime/save behavior.
+
+The exact scoped candidate, browser build inventory, independent final review, rollback installation and installed comparison are recorded externally in `civil-war-v23-20261004`. The build contains **326 files / 247,757,097 bytes**; scoped installation must retain the **1,264 unrelated baseline files**. No human usability, OS/GPU reduced-motion or GPU performance certification is inferred from these local checks.
+
+## Remaining priorities
+
+1. Complete the remaining reverse east/west contact and casualty partners, then diagonal bearings, with independent review for each complete group.
+2. Add Union B contact/fall partners after independent kit and stable identity review.
+3. Compare complete movement/contact/fall transitions across terrain and obtain fresh human play and historical uniform/drill review before default promotion or expansion beyond Gettysburg.
+
+This narrow increment does not establish a new whole-game grade. No default promotion or upload is included.

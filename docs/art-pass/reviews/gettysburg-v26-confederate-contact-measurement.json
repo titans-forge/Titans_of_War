@@ -1,0 +1,267 @@
+{
+  "artPass": "gettysburg-v26",
+  "side": "confederate",
+  "identity": "a",
+  "direction": 3,
+  "role": "contact",
+  "source": "docs/art-pass/candidates/gettysburg-v26/confederate-a-contact-sw-candidate.png",
+  "sourceSHA256": "1eb2930b3c90c9db5dedf5f0278c80947173d4b5f568d16282d5c1c5b8caffeb",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v26-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "8f6cc672b119b13f7659b58c72bafce3d8396abe0798499874070c27b88b8171",
+  "referenceHeight": 415,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh confederate contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "6b350517f2a65321981974a3a48806609323343fd9dbbbc57d6f7605a2f2f61b",
+      "ground": [
+        371,
+        558
+      ],
+      "groundROI": [
+        420,
+        490,
+        488,
+        570
+      ],
+      "groundMethod": "Projected pelvis X is chosen between the anatomical hips rather than from the rifle-inclusive bounds. Ground Y is the nearer viewer-right planted boot sole, isolated below the trouser cuff.",
+      "solidBounds": [
+        96,
+        143,
+        478,
+        558
+      ],
+      "solidPadding": [
+        96,
+        143,
+        149,
+        69
+      ],
+      "nonzeroBounds": [
+        59,
+        101,
+        627,
+        596
+      ],
+      "capROI": [
+        307,
+        136,
+        350,
+        173
+      ],
+      "capTop": 143,
+      "referenceSoleROI": [
+        428,
+        546,
+        482,
+        567
+      ],
+      "referenceSoleGroundY": 558,
+      "bodySpan": 415
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "ce999ac4146799f27cc19c04af609a66487cbfb1e433c9f7a39136e56090f2a8",
+      "ground": [
+        367,
+        562
+      ],
+      "groundROI": [
+        277,
+        505,
+        368,
+        574
+      ],
+      "groundMethod": "Projected pelvis X follows the hips behind the SW extension. Ground Y is the forward viewer-left planted boot sole; the lifted/farther opposite foot is excluded.",
+      "solidBounds": [
+        78,
+        147,
+        490,
+        562
+      ],
+      "solidPadding": [
+        78,
+        147,
+        137,
+        65
+      ],
+      "nonzeroBounds": [
+        13,
+        48,
+        601,
+        627
+      ],
+      "capROI": [
+        325,
+        137,
+        358,
+        177
+      ],
+      "capTop": 147,
+      "referenceSoleROI": [
+        281,
+        550,
+        360,
+        571
+      ],
+      "referenceSoleGroundY": 562,
+      "bodySpan": 415
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "a0a11f81849a38691fc63c38f0f30aa6cff1daf9d26bb8026c80f26b9c2a1312",
+      "ground": [
+        389,
+        519
+      ],
+      "groundROI": [
+        435,
+        459,
+        504,
+        531
+      ],
+      "groundMethod": "Projected pelvis X follows the hips during withdrawal. Ground Y is the nearer viewer-right boot sole, independent of the low rifle.",
+      "solidBounds": [
+        113,
+        97,
+        493,
+        519
+      ],
+      "solidPadding": [
+        113,
+        97,
+        134,
+        108
+      ],
+      "nonzeroBounds": [
+        89,
+        1,
+        607,
+        595
+      ],
+      "capROI": [
+        335,
+        90,
+        377,
+        128
+      ],
+      "capTop": 97,
+      "referenceSoleROI": [
+        445,
+        507,
+        497,
+        528
+      ],
+      "referenceSoleGroundY": 519,
+      "bodySpan": 422
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "6b7765d17adb91b65a3d08733c1fad71d08c361ae1c982ce8afeb2b70350cf6b",
+      "ground": [
+        389,
+        508
+      ],
+      "groundROI": [
+        454,
+        454,
+        517,
+        520
+      ],
+      "groundMethod": "Projected pelvis X follows the torso/hips under the across-body block. Ground Y is the nearer viewer-right boot sole; the other boot and bayonet are excluded.",
+      "solidBounds": [
+        181,
+        95,
+        532,
+        508
+      ],
+      "solidPadding": [
+        181,
+        95,
+        95,
+        119
+      ],
+      "nonzeroBounds": [
+        33,
+        5,
+        593,
+        627
+      ],
+      "capROI": [
+        327,
+        88,
+        369,
+        128
+      ],
+      "capTop": 95,
+      "referenceSoleROI": [
+        458,
+        496,
+        507,
+        517
+      ],
+      "referenceSoleGroundY": 508,
+      "bodySpan": 413
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 3,
+      "action": "melee",
+      "key": "confederate-gettysburg-v26-a-contact-sw",
+      "frames": [
+        "a-melee-3-0",
+        "a-melee-3-1",
+        "a-melee-3-2",
+        "a-melee-3-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.591707,
+          "y": 0.889952
+        },
+        {
+          "x": 0.585327,
+          "y": 0.896332
+        },
+        {
+          "x": 0.620415,
+          "y": 0.827751
+        },
+        {
+          "x": 0.620415,
+          "y": 0.810207
+        }
+      ],
+      "referenceHeight": 415,
+      "sourceHash": "1eb2930b3c90c9db5dedf5f0278c80947173d4b5f568d16282d5c1c5b8caffeb",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeContactSequence": "gettysburg-v26-confederate-a-sw-contact",
+      "scope": "Exact source-reviewed confederate A SW local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

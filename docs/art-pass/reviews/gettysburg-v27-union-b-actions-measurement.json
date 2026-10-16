@@ -1,0 +1,345 @@
+{
+  "artPass": "gettysburg-v27",
+  "side": "union",
+  "identity": "b",
+  "direction": 7,
+  "role": "actions",
+  "source": "docs/art-pass/candidates/gettysburg-v27/union-b-actions-ne-candidate.png",
+  "sourceSHA256": "6cd48eb4f9ba31b5ed07deb2a5c0ddc5376f8855248eb44e2a172068daae1b55",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v27-independent-union-ne-source-review.json",
+  "sourceReviewSHA256": "64b91110340012ce73c307718157302953420196a5082798859962e13e190df3",
+  "referenceHeight": 439,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh own-identity ready/load/ram median shared across independently accepted stationary phases; fire span corroborates only, no phase normalization",
+  "referenceCellIndices": [
+    0,
+    2,
+    3
+  ],
+  "frameOrder": [
+    "b-ready-7-0",
+    "b-fire-7-0",
+    "b-reload-7-0",
+    "b-reload-7-1"
+  ],
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "0bd084624cbc1cd9028a6a5a4f00fcbf3a862b1d493ba8cb57247e0b92b865cb",
+      "ground": [
+        335,
+        610
+      ],
+      "groundROI": [
+        250,
+        557,
+        351,
+        622
+      ],
+      "groundMethod": "Projected pelvis X335 follows the hip/trouser axis. Ground Y610 is alpha>=64 maxYExclusive of the nearer screen-left boot sole; the higher forward boot and rifle stock are excluded.",
+      "solidBounds": [
+        247,
+        68,
+        479,
+        610
+      ],
+      "solidPadding": [
+        247,
+        68,
+        148,
+        17
+      ],
+      "nonzeroBounds": [
+        112,
+        64,
+        627,
+        627
+      ],
+      "capROI": [
+        335,
+        158,
+        380,
+        194
+      ],
+      "capTop": 168,
+      "referenceSoleROI": [
+        259,
+        597,
+        347,
+        622
+      ],
+      "referenceSoleGroundY": 610,
+      "bodySpan": 442
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "f5d32899804ae23fae51771efed65764236619eb2bc731f1d901bfe912a12aa2",
+      "ground": [
+        245,
+        611
+      ],
+      "groundROI": [
+        176,
+        559,
+        275,
+        624
+      ],
+      "groundMethod": "Projected pelvis X245 follows the firing stance's hip axis. Ground Y611 is alpha>=64 maxYExclusive of the nearer screen-left boot sole, independently of the muzzle and forward boot.",
+      "solidBounds": [
+        154,
+        109,
+        536,
+        611
+      ],
+      "solidPadding": [
+        154,
+        109,
+        91,
+        16
+      ],
+      "nonzeroBounds": [
+        1,
+        51,
+        543,
+        627
+      ],
+      "capROI": [
+        240,
+        156,
+        289,
+        191
+      ],
+      "capTop": 167,
+      "referenceSoleROI": [
+        184,
+        594,
+        269,
+        623
+      ],
+      "referenceSoleGroundY": 611,
+      "bodySpan": 444,
+      "muzzle": [
+        466,
+        145
+      ],
+      "muzzleROI": [
+        456,
+        134,
+        474,
+        151
+      ],
+      "muzzleMethod": "Fire cell1 only: independently selected native projected barrel-end rim at [466,145], immediately before the long bayonet blade at the short steel/socket junction. The rear three-quarter view partly hides the aperture; the point is an estimated solid rim anchor, not a claim that the bore interior is visible. It is not the bayonet tip or full weapon bound. Alpha>=64 at the selected point is recomputed; expected native placement uncertainty approximately +/-4px."
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "5c23abd125f0d2dfbd0ede4f61bc49788ef404f5e129b2c9884e0a4e7e012e46",
+      "ground": [
+        344,
+        568
+      ],
+      "groundROI": [
+        312,
+        526,
+        417,
+        580
+      ],
+      "groundMethod": "Projected pelvis X344 follows the upright loading hip axis. Ground Y568 is alpha>=64 maxYExclusive of the nearer screen-right boot sole; excludes the higher far boot and rifle butt.",
+      "solidBounds": [
+        258,
+        124,
+        466,
+        568
+      ],
+      "solidPadding": [
+        258,
+        124,
+        161,
+        59
+      ],
+      "nonzeroBounds": [
+        17,
+        7,
+        627,
+        570
+      ],
+      "capROI": [
+        342,
+        118,
+        389,
+        151
+      ],
+      "capTop": 129,
+      "referenceSoleROI": [
+        321,
+        554,
+        410,
+        577
+      ],
+      "referenceSoleGroundY": 568,
+      "bodySpan": 439
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "40f66a6182114aef1894523550f793b38bcf0904b5d3c397f634065ce956a30a",
+      "ground": [
+        270,
+        569
+      ],
+      "groundROI": [
+        235,
+        530,
+        342,
+        580
+      ],
+      "groundMethod": "Projected pelvis X270 follows the upright ram stance's hip axis. Ground Y569 is alpha>=64 maxYExclusive of the nearer screen-right boot sole; excludes the far boot and rifle butt.",
+      "solidBounds": [
+        188,
+        69,
+        390,
+        569
+      ],
+      "solidPadding": [
+        188,
+        69,
+        237,
+        58
+      ],
+      "nonzeroBounds": [
+        1,
+        0,
+        549,
+        587
+      ],
+      "capROI": [
+        267,
+        119,
+        313,
+        152
+      ],
+      "capTop": 131,
+      "referenceSoleROI": [
+        244,
+        556,
+        335,
+        577
+      ],
+      "referenceSoleGroundY": 569,
+      "bodySpan": 438
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "b",
+      "direction": 7,
+      "action": "ready",
+      "key": "union-gettysburg-v27-b-actions-ne",
+      "frames": [
+        "b-ready-7-0"
+      ],
+      "pivots": [
+        {
+          "x": 0.53429,
+          "y": 0.972887
+        }
+      ],
+      "referenceHeight": 439,
+      "sourceHash": "6cd48eb4f9ba31b5ed07deb2a5c0ddc5376f8855248eb44e2a172068daae1b55",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeUnionNortheastSequence": "gettysburg-v27-union-b-ne",
+      "scope": "Exact source-reviewed Union B northeast opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    },
+    {
+      "side": "union",
+      "identity": "b",
+      "direction": 7,
+      "action": "fire",
+      "key": "union-gettysburg-v27-b-actions-ne",
+      "frames": [
+        "b-fire-7-0"
+      ],
+      "pivots": [
+        {
+          "x": 0.39075,
+          "y": 0.974482
+        }
+      ],
+      "referenceHeight": 439,
+      "sourceHash": "6cd48eb4f9ba31b5ed07deb2a5c0ddc5376f8855248eb44e2a172068daae1b55",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeUnionNortheastSequence": "gettysburg-v27-union-b-ne",
+      "scope": "Exact source-reviewed Union B northeast opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false,
+      "muzzles": [
+        {
+          "x": 0.743222,
+          "y": 0.23126
+        }
+      ]
+    },
+    {
+      "side": "union",
+      "identity": "b",
+      "direction": 7,
+      "action": "reload",
+      "key": "union-gettysburg-v27-b-actions-ne",
+      "frames": [
+        "b-reload-7-0",
+        "b-reload-7-1"
+      ],
+      "pivots": [
+        {
+          "x": 0.548644,
+          "y": 0.905901
+        },
+        {
+          "x": 0.430622,
+          "y": 0.907496
+        }
+      ],
+      "referenceHeight": 439,
+      "sourceHash": "6cd48eb4f9ba31b5ed07deb2a5c0ddc5376f8855248eb44e2a172068daae1b55",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeUnionNortheastSequence": "gettysburg-v27-union-b-ne",
+      "scope": "Exact source-reviewed Union B northeast opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

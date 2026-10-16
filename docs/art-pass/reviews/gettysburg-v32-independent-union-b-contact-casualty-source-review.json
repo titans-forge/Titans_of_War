@@ -1,0 +1,653 @@
+{
+  "artPass": "gettysburg-v32",
+  "reviewer": "Independent source reviewer /root/v19_astra_review",
+  "reviewerModel": "gpt-6-astra",
+  "reasoningEffort": "max",
+  "reviewedAt": "2026-10-06T04:35:24.255942+00:00",
+  "independentReview": true,
+  "modelAssisted": true,
+  "sourceOnly": true,
+  "localInstall": false,
+  "acceptedForLocalInstall": false,
+  "acceptedForOptIn": true,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "familyComplete": false,
+  "pairScaleAccepted": {
+    "se": true,
+    "nw": true
+  },
+  "referenceHeights": {
+    "se": 412,
+    "nw": 382
+  },
+  "referenceHeightMethod": "For each bearing independently, take the exact half-up median of all four contact cap-to-nearer-support-sole alpha>=64 native spans. Apply that one reference unchanged to both contact and casualty sources. SE [435,391,420,404] gives412; NW [404,381,373,383] gives382. No phase-specific, casualty-specific or borrowed normalization.",
+  "rootMethod": "Native rounded integer projected pelvis/hip X is selected from anatomy and need not lie inside the support ROI. Ground Y is the exclusive alpha>=64 maximum Y of the explicitly named supporting sole, knee/hip or forearm/hand region; lifted soles, overhead arms and released weapons are excluded.",
+  "inspectionEvidence": {
+    "path": "source-inspection/final-selected-sources-native-inspection.json",
+    "sha256": "3477098e8f460f60e5ef757a34398c6ffe8bd4746a3549060b9fc973905ed616"
+  },
+  "sourceWideDecisions": {
+    "se": "Contact guard/low thrust/recovery/high parry and casualty hit/knee/collapse/ground-rest preserve B front-three-quarter SE kit. Head, pack, limbs and boots are sufficiently coherent for one shared reference despite natural projection differences. Final rest is non-aiming.",
+    "nw": "Rear NW contact and attempt8 casualty retain B left canteen, brown pouch, strapped pack/roll and coherent head/limb/boot proportions. Attempt8 cap79px and planted boot75px compare with83px each in contact phase0; multi-part visual inspection resolves the material enlargement from attempt6. The final pose lowers head/forearms and leaves the rifle separately grounded."
+  },
+  "sources": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v32/union-b-contact-se-candidate.png",
+      "sha256": "788a57247efd2cc871e686efbbfd422bc604b491ffc702575af78e140a44dcac",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "cardinal": "se",
+      "role": "contact",
+      "acceptedForOptIn": true,
+      "sourceNativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cell": 627,
+      "wholeOriginalBindings": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-b804aede-0d64-4859-9d38-f16f1cc0aa6f.png",
+          "sha256": "788a57247efd2cc871e686efbbfd422bc604b491ffc702575af78e140a44dcac",
+          "bytes": 668383
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-contact-se-attempt2.png",
+          "sha256": "788a57247efd2cc871e686efbbfd422bc604b491ffc702575af78e140a44dcac",
+          "bytes": 668383
+        }
+      ],
+      "measurements": {
+        "side": "union",
+        "identity": "b",
+        "direction": 1,
+        "role": "contact",
+        "cell": 627,
+        "referenceHeight": 412,
+        "roots": [
+          [
+            275,
+            587
+          ],
+          [
+            242,
+            567
+          ],
+          [
+            303,
+            540
+          ],
+          [
+            287,
+            544
+          ]
+        ],
+        "groundROIs": [
+          [
+            171,
+            530,
+            243,
+            599
+          ],
+          [
+            80,
+            511,
+            155,
+            579
+          ],
+          [
+            188,
+            480,
+            259,
+            548
+          ],
+          [
+            145,
+            490,
+            218,
+            551
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X selected at belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the nearer screen-left supporting boot outsole ROI.",
+          "Projected pelvis X follows the bent lunge trunk/pelvis; Y is alpha>=64 maximum exclusive Y in the rear screen-left braced support boot ROI, not the extended rifle.",
+          "Projected pelvis X selected at belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the lower screen-left support boot ROI.",
+          "Projected pelvis X selected below the buckle/crotch; Y is alpha>=64 maximum exclusive Y in the lower screen-left support boot ROI; raised hands and weapon do not affect registration."
+        ],
+        "capROIs": [
+          [
+            261,
+            145,
+            321,
+            191
+          ],
+          [
+            254,
+            169,
+            316,
+            218
+          ],
+          [
+            291,
+            113,
+            352,
+            165
+          ],
+          [
+            265,
+            140,
+            306,
+            178
+          ]
+        ],
+        "capTop": [
+          152,
+          176,
+          120,
+          140
+        ],
+        "referenceSoleROIs": [
+          [
+            180,
+            572,
+            237,
+            594
+          ],
+          [
+            95,
+            553,
+            147,
+            574
+          ],
+          [
+            197,
+            526,
+            256,
+            547
+          ],
+          [
+            154,
+            531,
+            216,
+            550
+          ]
+        ],
+        "referenceSoleGroundY": [
+          587,
+          567,
+          540,
+          544
+        ],
+        "bodySpans": [
+          435,
+          391,
+          420,
+          404
+        ],
+        "cardinal": "se"
+      },
+      "cellObservations": [
+        {
+          "phase": 0,
+          "observation": "SE front-three-quarter low guard. Both hands meet the rifle at plausible separated grip points; brown pouches/boots, navy coat, light blue trousers and rolled blanket preserve B identity."
+        },
+        {
+          "phase": 1,
+          "observation": "Distinct two-handed low extension and weight transfer into a bent forward leg. Stock stays below shoulder/cheek; this reads as contact rather than shouldered shooting."
+        },
+        {
+          "phase": 2,
+          "observation": "Withdrawal/recovery brings the stock and hands toward the belt; stance and weapon angle differ from guard and thrust without apparent head/boot scale change."
+        },
+        {
+          "phase": 3,
+          "observation": "Horizontal high parry above the cap with two separated grips and two visible arms. The elevated weapon does not establish facing; head, trunk and feet retain SE bearing."
+        }
+      ],
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false,
+      "familyComplete": false
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v32/union-b-casualty-se-candidate.png",
+      "sha256": "5567d9ba6fce923b07671672d330e40b95bb91644348cc725717d3ab544b5068",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "cardinal": "se",
+      "role": "casualty",
+      "acceptedForOptIn": true,
+      "sourceNativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cell": 627,
+      "wholeOriginalBindings": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-09b987a5-7bee-43b5-bb25-5da2fe3e5b4e.png",
+          "sha256": "5567d9ba6fce923b07671672d330e40b95bb91644348cc725717d3ab544b5068",
+          "bytes": 678385
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-se-attempt3.png",
+          "sha256": "5567d9ba6fce923b07671672d330e40b95bb91644348cc725717d3ab544b5068",
+          "bytes": 678385
+        }
+      ],
+      "measurements": {
+        "side": "union",
+        "identity": "b",
+        "direction": 1,
+        "cardinal": "se",
+        "role": "casualty",
+        "cell": 627,
+        "referenceHeight": 412,
+        "roots": [
+          [
+            294,
+            606
+          ],
+          [
+            257,
+            595
+          ],
+          [
+            322,
+            445
+          ],
+          [
+            286,
+            434
+          ]
+        ],
+        "groundROIs": [
+          [
+            196,
+            552,
+            280,
+            614
+          ],
+          [
+            296,
+            558,
+            397,
+            609
+          ],
+          [
+            276,
+            405,
+            373,
+            455
+          ],
+          [
+            440,
+            410,
+            461,
+            439
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X follows the belt/crotch axis in the stumble; ground Y is max exclusive alpha>=64 Y of the nearer planted screen-left boot, excluding the lifted rear boot.",
+          "Projected pelvis X follows the lowered hip; ground Y is max exclusive alpha>=64 Y of the planted screen-right front boot outsole, independent of lower knee and weapon.",
+          "Projected hip X follows the fallen pelvis; ground Y is max exclusive alpha>=64 Y of the folded weight-bearing knee/hip region. The raised rear boot and rifle bounds are excluded.",
+          "Projected hip X follows the side-rest pelvis; ground Y is max exclusive alpha>=64 Y of the resting wrist/hand at the end of the forearm. The separate lower rifle is excluded from the bounded ROI."
+        ]
+      },
+      "cellObservations": [
+        {
+          "phase": 0,
+          "observation": "SE hit/stumble with open balancing hand, slanted lowered stock and one main planted boot. Head/roll/boot proportions remain coherent with the contact kit; projected span is naturally longer than the crouched contact phases."
+        },
+        {
+          "phase": 1,
+          "observation": "Knee-down with one open hand descending toward ground and the other holding a lowering rifle. The cheek is not set into a firing sight line."
+        },
+        {
+          "phase": 2,
+          "observation": "Collapse is supported at the folded knee/hip and bracing hand, rifle falling across the body; raised rear boot does not define ground."
+        },
+        {
+          "phase": 3,
+          "observation": "Final side/prone rest has head settled onto forearms and a released lowered rifle in front. Hands are relaxed and do not form an aiming support."
+        }
+      ],
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false,
+      "familyComplete": false
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v32/union-b-contact-nw-candidate.png",
+      "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "cardinal": "nw",
+      "role": "contact",
+      "acceptedForOptIn": true,
+      "sourceNativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cell": 627,
+      "wholeOriginalBindings": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-b08147a7-294b-4f52-862c-f987009c356d.png",
+          "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+          "bytes": 627865
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-contact-nw-attempt1.png",
+          "sha256": "29297b09ed1e3acdd5db3e1abab0e4102d91fc7ae685a60ade8e923e66fef290",
+          "bytes": 627865
+        }
+      ],
+      "measurements": {
+        "side": "union",
+        "identity": "b",
+        "direction": 5,
+        "role": "contact",
+        "cell": 627,
+        "referenceHeight": 382,
+        "roots": [
+          [
+            392,
+            592
+          ],
+          [
+            383,
+            593
+          ],
+          [
+            387,
+            537
+          ],
+          [
+            391,
+            545
+          ]
+        ],
+        "groundROIs": [
+          [
+            299,
+            542,
+            405,
+            606
+          ],
+          [
+            487,
+            554,
+            552,
+            605
+          ],
+          [
+            290,
+            484,
+            395,
+            547
+          ],
+          [
+            272,
+            491,
+            377,
+            556
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X follows the rear belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the nearer screen-left supporting boot ROI.",
+          "Projected pelvis X follows the bent-lunge pelvis independently of the rear boot; Y is alpha>=64 maximum exclusive Y in the screen-right rear forefoot/toe support ROI.",
+          "Projected pelvis X follows the rear belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the lower screen-left support boot ROI.",
+          "Projected pelvis X follows the rear belt/crotch axis; Y is alpha>=64 maximum exclusive Y in the lower screen-left support boot ROI; overhead rifle and grips are excluded."
+        ],
+        "capROIs": [
+          [
+            312,
+            180,
+            372,
+            226
+          ],
+          [
+            289,
+            205,
+            346,
+            247
+          ],
+          [
+            323,
+            155,
+            379,
+            200
+          ],
+          [
+            333,
+            161,
+            365,
+            201
+          ]
+        ],
+        "capTop": [
+          188,
+          212,
+          164,
+          162
+        ],
+        "referenceSoleROIs": [
+          [
+            314,
+            579,
+            397,
+            599
+          ],
+          [
+            493,
+            580,
+            533,
+            600
+          ],
+          [
+            305,
+            526,
+            385,
+            542
+          ],
+          [
+            288,
+            533,
+            367,
+            550
+          ]
+        ],
+        "referenceSoleGroundY": [
+          592,
+          593,
+          537,
+          545
+        ],
+        "bodySpans": [
+          404,
+          381,
+          373,
+          383
+        ],
+        "cardinal": "nw"
+      },
+      "cellObservations": [
+        {
+          "phase": 0,
+          "observation": "Rear NW three-quarter guard with lowered rifle. Left canteen, brown rear pouch and strapped blanket/pack preserve the actual B NW kit arrangement."
+        },
+        {
+          "phase": 1,
+          "observation": "Low-stock lunge with bent lead knee, rear toe support and separated hand grips. Weapon is clear of cheek and shoulder; extension and body weight distinguish it from the firing reference."
+        },
+        {
+          "phase": 2,
+          "observation": "Recovery draws the rifle upward across the chest and hands closer to the body. An isolated still has ready-like ambiguity, but it is visibly distinct from the low lunge and high block; no sustained firing pose is asserted."
+        },
+        {
+          "phase": 3,
+          "observation": "Raised two-hand parry with clear arm separation and NW-facing head/back/feet. Rifle is diagonally high rather than a literal horizontal bar; the frame reads as a block rather than aim."
+        }
+      ],
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false,
+      "familyComplete": false
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v32/union-b-casualty-nw-candidate.png",
+      "sha256": "0d4f98691c07f66507953ceca0a1b545b1ad5a35cf17b5111891a1e4dca0dd61",
+      "side": "union",
+      "identity": "b",
+      "direction": 5,
+      "cardinal": "nw",
+      "role": "casualty",
+      "acceptedForOptIn": true,
+      "sourceNativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "cell": 627,
+      "wholeOriginalBindings": [
+        {
+          "path": "/Users/titansforge/.codex/generated_images/01a108a1-7a24-7fa0-abda-33d21137b464/exec-46fb6fb0-0660-4361-9ba1-a7c119c9115b.png",
+          "sha256": "0d4f98691c07f66507953ceca0a1b545b1ad5a35cf17b5111891a1e4dca0dd61",
+          "bytes": 559683
+        },
+        {
+          "path": "/Users/titansforge/Vault/Titans_of_War_Art_Work/civil-war-v32-20261005/generation/native-originals/union-b-casualty-nw-attempt8.png",
+          "sha256": "0d4f98691c07f66507953ceca0a1b545b1ad5a35cf17b5111891a1e4dca0dd61",
+          "bytes": 559683
+        }
+      ],
+      "measurements": {
+        "side": "union",
+        "identity": "b",
+        "direction": 5,
+        "cardinal": "nw",
+        "role": "casualty",
+        "cell": 627,
+        "referenceHeight": 382,
+        "roots": [
+          [
+            400,
+            565
+          ],
+          [
+            386,
+            546
+          ],
+          [
+            446,
+            440
+          ],
+          [
+            458,
+            446
+          ]
+        ],
+        "groundROIs": [
+          [
+            339,
+            526,
+            424,
+            568
+          ],
+          [
+            277,
+            510,
+            353,
+            550
+          ],
+          [
+            364,
+            405,
+            444,
+            449
+          ],
+          [
+            378,
+            414,
+            448,
+            451
+          ]
+        ],
+        "groundMethods": [
+          "Projected pelvis X follows the rear belt/crotch axis of the stumble; Y is the alpha>=64 maximum exclusive Y of the planted screen-left boot outsole. The lifted rear boot and released rifle are excluded.",
+          "Projected pelvis X follows the rear hip beneath the belt; Y is the alpha>=64 maximum exclusive Y of the folded supporting knee region. Both upturned boot soles and the low rifle are excluded.",
+          "Projected pelvis X follows the side/rear hip under the belt and pouch; Y is the alpha>=64 maximum exclusive Y of the load-bearing folded knee/hip region. Raised boot soles, forearms and rifle do not set this ground.",
+          "Projected hip X follows the side-rest pelvis beneath the rear pouch; Y is the alpha>=64 maximum exclusive Y of the resting folded thigh/knee region. Upturned soles and the separate dropped rifle are excluded."
+        ]
+      },
+      "cellObservations": [
+        {
+          "phase": 0,
+          "observation": "NW hit/stumble releases the musket and opens the hands; the nearer boot remains planted while the rear foot lifts. Cap, roll/pack and boot scale now match the contact partner sufficiently for this opt-in pair."
+        },
+        {
+          "phase": 1,
+          "observation": "Knee-down lowers the body onto folded knees, with both boot soles lifted toward the viewer. The low rifle is clear of the cheek; the nearer wrist is partly occluded near its stock, so no finger/grip certification is made."
+        },
+        {
+          "phase": 2,
+          "observation": "Collapse lowers the trunk with bent elbows and tucked legs, the musket separately down beside the body. Head/pack proportions remain coherent with the other source cells."
+        },
+        {
+          "phase": 3,
+          "observation": "Final rest lowers the head toward the forearms with the rifle separate on the ground. No cheek-supported stock or raised aiming barrel remains; hips/knees support the body while soles remain upturned."
+        }
+      ],
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false,
+      "familyComplete": false
+    }
+  ],
+  "rejectedSourceRelationships": [
+    {
+      "attempt": "union-b-casualty-nw-attempt2",
+      "sha256": "c1f327f721158b05117be556d616e1980718b5bcbfb3fc4b4ecb231dc86a63af",
+      "reason": "Raised cheek-supported weapon and head retained prone aiming.",
+      "reviewEvidence": "source-inspection/nw-casualty-attempt2-independent-rejection.json",
+      "reviewEvidenceSHA256": "9333f06a0f07f23e3f05436aa34c9517f391a3628a77151bf1a0dc6beae5314a"
+    },
+    {
+      "attempt": "union-b-casualty-nw-attempt6",
+      "sha256": "c64b4a3e258e84b26026d52719dfaeef870bcaf5cc99032e7500cbb49365093b",
+      "reason": "Aiming resolved but cap/boot/pack materially enlarged versus contact.",
+      "reviewEvidence": "source-inspection/nw-casualty-attempt6-independent-rejection.json",
+      "reviewEvidenceSHA256": "d184fd20c8f9e7296493455cf9488e550ef2d901a776f68898e1d333b0b2c6e4"
+    },
+    {
+      "attempt": "union-b-casualty-nw-attempt7",
+      "sha256": "c049554a76ae4876642b51096b7e1e32b4e57a74bc56ed7ffd643a2e145afba7",
+      "reason": "Improved scale/rest remained rejected for3px upper-right rifle clearance.",
+      "reviewEvidence": "source-inspection/nw-casualty-attempt7-provisional-scale-review.json",
+      "reviewEvidenceSHA256": "4c9d6d4cfbb649f0401a9dbb05381bbd86c08acbeab318febe45df79af7a2ece"
+    }
+  ],
+  "limitations": [
+    "This accepts only the exact four source PNGs and independently bound registrations for the opt-in candidate. Public exports, runtime installation, default art, upload and final browser acceptance are separate.",
+    "Model-assisted source inspection is not human, anatomical or historical-drill certification. Fingers, rear grips and the knee-down NW wrist are partly obscured; each still cannot prove mechanical force or a complete real-world drill.",
+    "Contact lunges/parries and falling poses have intentionally different projected spans. Part comparisons support a bounded visual judgment, not physical scale metrology. Narrow parry cap ROIs exclude adjacent weapon/hand silhouettes, with ordinary one-pixel semantic boundary uncertainty.",
+    "Colored low-alpha fringes and nonzero edge noise remain. No fringe-free claim is made; actual terrain/zoom/crowding checks remain necessary.",
+    "This adds only Union B SE/NW contact/casualty. Other B bearings and existing movement coverage gaps remain; the family is incomplete. No whole-game grade, full-motion or GPU/device certification."
+  ]
+}

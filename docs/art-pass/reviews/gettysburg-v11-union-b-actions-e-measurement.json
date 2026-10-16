@@ -1,0 +1,481 @@
+{
+  "source": "docs/art-pass/candidates/gettysburg-v11/union-b-e-actions-candidate.png",
+  "sourceHash": "5aebc319115ad65a7bc23089e5962ae4975a6a1a9db11a5fcce8a9c13c1780e1",
+  "publicPNG": "public/images/units/gettysburg-v11/union-b-actions-e.png",
+  "atlas": "public/images/units/gettysburg-v11/union-b-actions-e.json",
+  "nativeSize": {
+    "w": 1254,
+    "h": 1254
+  },
+  "nativeMode": "RGBA",
+  "pixelTreatment": "none; byte-for-byte native PNG copy, full equal cells",
+  "annotationMethod": "Fresh separate model-assisted entire native source inspection; manual registration with one shared source-wide body reference. Pelvis X +/-5px, row-ground Y +/-4px, cap tops +/-3px.",
+  "referenceHeight": 430,
+  "scaleMethod": "One uniform body reference for the entire source; no action or phase size correction.",
+  "solidPaddingVerified": true,
+  "nonzeroAlphaPaddingVerified": false,
+  "cells": [
+    {
+      "index": 0,
+      "alpha": {
+        "1": {
+          "pixels": 43254,
+          "bounds": [
+            0,
+            25,
+            627,
+            589
+          ],
+          "padding": [
+            0,
+            25,
+            0,
+            38
+          ]
+        },
+        "8": {
+          "pixels": 38227,
+          "bounds": [
+            159,
+            26,
+            421,
+            584
+          ],
+          "padding": [
+            159,
+            26,
+            206,
+            43
+          ]
+        },
+        "64": {
+          "pixels": 37180,
+          "bounds": [
+            160,
+            29,
+            419,
+            584
+          ],
+          "padding": [
+            160,
+            29,
+            208,
+            43
+          ]
+        },
+        "128": {
+          "pixels": 36530,
+          "bounds": [
+            160,
+            33,
+            417,
+            583
+          ],
+          "padding": [
+            160,
+            33,
+            210,
+            44
+          ]
+        },
+        "240": {
+          "pixels": 34842,
+          "bounds": [
+            161,
+            43,
+            411,
+            582
+          ],
+          "padding": [
+            161,
+            43,
+            216,
+            45
+          ]
+        }
+      },
+      "diagnosticBluePixels": {
+        "1": 202,
+        "8": 0,
+        "64": 0,
+        "128": 0
+      },
+      "rootPixels": [
+        232,
+        584
+      ],
+      "capTopY": 166,
+      "bodySpanDiagnostic": 418
+    },
+    {
+      "index": 1,
+      "alpha": {
+        "1": {
+          "pixels": 49360,
+          "bounds": [
+            9,
+            9,
+            607,
+            627
+          ],
+          "padding": [
+            9,
+            9,
+            20,
+            0
+          ]
+        },
+        "8": {
+          "pixels": 42687,
+          "bounds": [
+            99,
+            171,
+            600,
+            584
+          ],
+          "padding": [
+            99,
+            171,
+            27,
+            43
+          ]
+        },
+        "64": {
+          "pixels": 41537,
+          "bounds": [
+            101,
+            172,
+            598,
+            584
+          ],
+          "padding": [
+            101,
+            172,
+            29,
+            43
+          ]
+        },
+        "128": {
+          "pixels": 40742,
+          "bounds": [
+            102,
+            172,
+            595,
+            583
+          ],
+          "padding": [
+            102,
+            172,
+            32,
+            44
+          ]
+        },
+        "240": {
+          "pixels": 38806,
+          "bounds": [
+            102,
+            173,
+            567,
+            582
+          ],
+          "padding": [
+            102,
+            173,
+            60,
+            45
+          ]
+        }
+      },
+      "diagnosticBluePixels": {
+        "1": 127,
+        "8": 0,
+        "64": 0,
+        "128": 0
+      },
+      "rootPixels": [
+        177,
+        584
+      ],
+      "capTopY": 172,
+      "bodySpanDiagnostic": 412
+    },
+    {
+      "index": 2,
+      "alpha": {
+        "1": {
+          "pixels": 51614,
+          "bounds": [
+            0,
+            19,
+            607,
+            595
+          ],
+          "padding": [
+            0,
+            19,
+            20,
+            32
+          ]
+        },
+        "8": {
+          "pixels": 43941,
+          "bounds": [
+            178,
+            96,
+            352,
+            541
+          ],
+          "padding": [
+            178,
+            96,
+            275,
+            86
+          ]
+        },
+        "64": {
+          "pixels": 42756,
+          "bounds": [
+            178,
+            97,
+            352,
+            540
+          ],
+          "padding": [
+            178,
+            97,
+            275,
+            87
+          ]
+        },
+        "128": {
+          "pixels": 41994,
+          "bounds": [
+            179,
+            97,
+            352,
+            540
+          ],
+          "padding": [
+            179,
+            97,
+            275,
+            87
+          ]
+        },
+        "240": {
+          "pixels": 40033,
+          "bounds": [
+            179,
+            98,
+            351,
+            539
+          ],
+          "padding": [
+            179,
+            98,
+            276,
+            88
+          ]
+        }
+      },
+      "diagnosticBluePixels": {
+        "1": 309,
+        "8": 0,
+        "64": 0,
+        "128": 0
+      },
+      "rootPixels": [
+        251,
+        541
+      ],
+      "capTopY": 97,
+      "bodySpanDiagnostic": 444
+    },
+    {
+      "index": 3,
+      "alpha": {
+        "1": {
+          "pixels": 52266,
+          "bounds": [
+            35,
+            7,
+            595,
+            595
+          ],
+          "padding": [
+            35,
+            7,
+            32,
+            32
+          ]
+        },
+        "8": {
+          "pixels": 45420,
+          "bounds": [
+            168,
+            56,
+            343,
+            542
+          ],
+          "padding": [
+            168,
+            56,
+            284,
+            85
+          ]
+        },
+        "64": {
+          "pixels": 44168,
+          "bounds": [
+            168,
+            57,
+            343,
+            541
+          ],
+          "padding": [
+            168,
+            57,
+            284,
+            86
+          ]
+        },
+        "128": {
+          "pixels": 43316,
+          "bounds": [
+            169,
+            57,
+            343,
+            541
+          ],
+          "padding": [
+            169,
+            57,
+            284,
+            86
+          ]
+        },
+        "240": {
+          "pixels": 41254,
+          "bounds": [
+            169,
+            58,
+            342,
+            540
+          ],
+          "padding": [
+            169,
+            58,
+            285,
+            87
+          ]
+        }
+      },
+      "diagnosticBluePixels": {
+        "1": 206,
+        "8": 0,
+        "64": 0,
+        "128": 0
+      },
+      "rootPixels": [
+        242,
+        541
+      ],
+      "capTopY": 112,
+      "bodySpanDiagnostic": 429
+    }
+  ],
+  "clips": [
+    {
+      "side": "union",
+      "identity": "b",
+      "direction": 0,
+      "action": "ready",
+      "key": "union-gettysburg-v11-b-actions-e",
+      "frames": [
+        "b-ready-0-0"
+      ],
+      "sourceHash": "5aebc319115ad65a7bc23089e5962ae4975a6a1a9db11a5fcce8a9c13c1780e1",
+      "referenceHeight": 430,
+      "pivots": [
+        {
+          "x": 0.370016,
+          "y": 0.931419
+        }
+      ],
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "scope": "Local opt-in Union B E actions preview, exact historical Gettysburg v11 only."
+    },
+    {
+      "side": "union",
+      "identity": "b",
+      "direction": 0,
+      "action": "fire",
+      "key": "union-gettysburg-v11-b-actions-e",
+      "frames": [
+        "b-fire-0-0"
+      ],
+      "sourceHash": "5aebc319115ad65a7bc23089e5962ae4975a6a1a9db11a5fcce8a9c13c1780e1",
+      "referenceHeight": 430,
+      "pivots": [
+        {
+          "x": 0.282297,
+          "y": 0.931419
+        }
+      ],
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "scope": "Local opt-in Union B E actions preview, exact historical Gettysburg v11 only.",
+      "muzzles": [
+        {
+          "x": 0.787879,
+          "y": 0.382775
+        }
+      ]
+    },
+    {
+      "side": "union",
+      "identity": "b",
+      "direction": 0,
+      "action": "reload",
+      "key": "union-gettysburg-v11-b-actions-e",
+      "frames": [
+        "b-reload-0-0",
+        "b-reload-0-1"
+      ],
+      "sourceHash": "5aebc319115ad65a7bc23089e5962ae4975a6a1a9db11a5fcce8a9c13c1780e1",
+      "referenceHeight": 430,
+      "pivots": [
+        {
+          "x": 0.400319,
+          "y": 0.862839
+        },
+        {
+          "x": 0.385965,
+          "y": 0.862839
+        }
+      ],
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "scope": "Local opt-in Union B E actions preview, exact historical Gettysburg v11 only."
+    }
+  ],
+  "limitations": [
+    "Limited visual preview only; no human, physical anatomy, exact skeletal identity, 3D yaw or historical drill certification.",
+    "All native RGBA pixels and four complete equal cells copied byte-for-byte, no raster mirroring, recoloring, cropping, resampling or alpha cleanup.",
+    "Whole source inspected afresh after image changes; requested exact preservation and translation were not established.",
+    "One source-wide reference retains observed body-span variation without per-frame scale normalization. Manual roots, cap and firing-mouth measurements carry the stated uncertainty.",
+    "Low-alpha colored RGB remnants remain; selected alpha diagnostics do not establish perfectly clean transparency or exhaustive fringe absence.",
+    "Missing identity/bearing combinations, recoil and settling, transitions, melee, casualties and true standard bearers remain unfinished.",
+    "One held firing pose and two representative loading states do not establish recoil, exact finger/bore contact or a complete period loading drill.",
+    "Loading is 6.22 percent taller than ready in native cap-to-ground span; the measured variation is preserved."
+  ],
+  "productionApproved": false,
+  "familyApproved": false
+}

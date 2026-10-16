@@ -1,0 +1,207 @@
+{
+  "artPass": "gettysburg-v26",
+  "side": "union",
+  "identity": "a",
+  "direction": 7,
+  "role": "casualty",
+  "source": "docs/art-pass/candidates/gettysburg-v26/union-a-casualty-ne-candidate.png",
+  "sourceSHA256": "22ef7b1ecbfd71538a638d2721d74ad0de7d2f2393d68702ac4812fc9cccb875",
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v26-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "8f6cc672b119b13f7659b58c72bafce3d8396abe0798499874070c27b88b8171",
+  "referenceHeight": 435,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "scaleMethod": "One fresh union contact median shared across contact/casualty natural postures; no phase normalization",
+  "cells": [
+    {
+      "cell": 0,
+      "rgbaSHA256": "659d915e123954c3a9c457f5038b2cc74fb3796d8cfd41d1188aa2f272e2b200",
+      "ground": [
+        326,
+        581
+      ],
+      "groundROI": [
+        312,
+        537,
+        421,
+        596
+      ],
+      "groundMethod": "Projected pelvis X follows the initial backward hit/stumble. Ground Y is the nearer viewer-right boot sole, isolated from the loosely held rifle and other foot.",
+      "solidBounds": [
+        191,
+        137,
+        539,
+        581
+      ],
+      "solidPadding": [
+        191,
+        137,
+        88,
+        46
+      ],
+      "nonzeroBounds": [
+        73,
+        41,
+        627,
+        603
+      ]
+    },
+    {
+      "cell": 1,
+      "rgbaSHA256": "d2cd6a187b277d63992b74c4e69d5a1de2b0384e0265de66583719f7738f8ab1",
+      "ground": [
+        285,
+        565
+      ],
+      "groundROI": [
+        263,
+        540,
+        306,
+        578
+      ],
+      "groundMethod": "Projected lower-torso/hip X is independent of the planted foot. Ground Y is the near planted sole segment below the bent leg; the raised rear boot and released rifle stock are excluded.",
+      "solidBounds": [
+        113,
+        265,
+        571,
+        600
+      ],
+      "solidPadding": [
+        113,
+        265,
+        56,
+        27
+      ],
+      "nonzeroBounds": [
+        7,
+        21,
+        603,
+        627
+      ]
+    },
+    {
+      "cell": 2,
+      "rgbaSHA256": "c99facfce14b99e82df70a02e2233815fd74a6c35b6e8330f0e5f4b54e2fb00c",
+      "ground": [
+        305,
+        436
+      ],
+      "groundROI": [
+        351,
+        406,
+        379,
+        448
+      ],
+      "groundMethod": "Projected lower-torso/hip X follows the forward collapse. Ground Y is the lowered blue-trouser knee support edge. The backward-facing raised boot soles and separate rifle are excluded.",
+      "solidBounds": [
+        128,
+        212,
+        608,
+        502
+      ],
+      "solidPadding": [
+        128,
+        212,
+        19,
+        125
+      ],
+      "nonzeroBounds": [
+        69,
+        13,
+        627,
+        603
+      ]
+    },
+    {
+      "cell": 3,
+      "rgbaSHA256": "5cdf572d9dd5a41a982ad60b78fc3c85582101e3044baab3ff3320552486af03",
+      "ground": [
+        318,
+        398
+      ],
+      "groundROI": [
+        320,
+        372,
+        347,
+        408
+      ],
+      "groundMethod": "Projected torso/hip X represents the resting body. Ground Y is the lower navy coat/hip edge touching the implied ground, isolated from the separate rifle and the far-forward arms.",
+      "solidBounds": [
+        65,
+        233,
+        550,
+        510
+      ],
+      "solidPadding": [
+        65,
+        233,
+        77,
+        117
+      ],
+      "nonzeroBounds": [
+        1,
+        0,
+        603,
+        603
+      ]
+    }
+  ],
+  "nativePixelChanges": false,
+  "phaseScaleNormalization": false,
+  "edgeOrFringeFreeCertified": false,
+  "familyComplete": false,
+  "clips": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 7,
+      "action": "fall",
+      "key": "union-gettysburg-v26-a-casualty-ne",
+      "frames": [
+        "a-fall-7-0",
+        "a-fall-7-1",
+        "a-fall-7-2",
+        "a-fall-7-3"
+      ],
+      "pivots": [
+        {
+          "x": 0.519936,
+          "y": 0.926635
+        },
+        {
+          "x": 0.454545,
+          "y": 0.901116
+        },
+        {
+          "x": 0.486443,
+          "y": 0.695375
+        },
+        {
+          "x": 0.507177,
+          "y": 0.634769
+        }
+      ],
+      "referenceHeight": 435,
+      "sourceHash": "22ef7b1ecbfd71538a638d2721d74ad0de7d2f2393d68702ac4812fc9cccb875",
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "nativeCasualtySequence": "gettysburg-v26-union-a-ne-casualty",
+      "scope": "Exact source-reviewed union A NE local opt-in only; incomplete family",
+      "familyComplete": false,
+      "productionApproved": false,
+      "defaultApproved": false,
+      "humanCertified": false,
+      "physicalAnatomyCertified": false,
+      "historicalDrillCertified": false
+    }
+  ],
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false
+}

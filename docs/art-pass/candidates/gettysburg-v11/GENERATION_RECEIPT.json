@@ -1,0 +1,75 @@
+{
+  "artPass": "gettysburg-v11",
+  "createdUTC": "2026-10-03T17:51:05.428852+00:00",
+  "mode": "builtin image generation",
+  "modelIdentifier": "not exposed by tool",
+  "prompts": "PROMPTS.md",
+  "nativeCopies": [
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-e-march-candidate.png",
+      "builtinOutput": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-1978ac94-af6a-40f0-86e9-5ed1134d0c11.png",
+      "sha256": "5f15de11f707a965564bbddae925a302ab7e8119276408e29f0a177783e5290a",
+      "bytes": 585830,
+      "nativeCopyIdentical": true,
+      "purpose": "final native source, independent registration review required"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-e-actions-candidate.png",
+      "builtinOutput": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-24820a7d-5179-4464-8a44-a08b67cfcbd1.png",
+      "sha256": "5aebc319115ad65a7bc23089e5962ae4975a6a1a9db11a5fcce8a9c13c1780e1",
+      "bytes": 478428,
+      "nativeCopyIdentical": true,
+      "purpose": "final native source, independent registration review required"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-march-candidate.png",
+      "builtinOutput": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-5aed9694-3cfd-44c9-9fdf-4315d8a23899.png",
+      "sha256": "9efcc748a6d6860f6248c72b3384d62220db6e76a7e60f7efb35e36a811052b7",
+      "bytes": 581633,
+      "nativeCopyIdentical": true,
+      "purpose": "final native source, independent registration review required"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-actions-candidate.png",
+      "builtinOutput": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-38e81e8c-7fc0-4495-82c9-f498309157a4.png",
+      "sha256": "050b030e38c031a10dd4bf12061f4f3cd5e2722daa137a0e91d1ffd338d42be6",
+      "bytes": 652733,
+      "nativeCopyIdentical": true,
+      "purpose": "final native source, independent registration review required"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-e-march-colored-diagnostic.png",
+      "builtinOutput": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-75dea4d3-576b-4b95-984d-7d4128c86496.png",
+      "sha256": "7f968a8a10323f2d22e5d0a65c751184bd433c2f68e2b96f29ff5a91ffa10126",
+      "bytes": 563834,
+      "nativeCopyIdentical": true,
+      "purpose": "diagnostic only"
+    },
+    {
+      "source": "docs/art-pass/candidates/gettysburg-v11/union-b-se-march-colored-yaw-attempt-1.png",
+      "builtinOutput": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-5748d391-e4fa-4104-950b-52f631d7eea4.png",
+      "sha256": "480af36f7e7564d20a070839265decd013c31bb6ad8658a084e055a90b94ede5",
+      "bytes": 668403,
+      "nativeCopyIdentical": true,
+      "purpose": "diagnostic only"
+    }
+  ],
+  "rasterPixelManipulationApplied": false,
+  "rejectedNativeAttemptsInstalled": false,
+  "localOptInOnly": true,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "completeFamilyApproved": false,
+  "limitations": [
+    "Generated color conversion and composition changes required fresh whole-source visual review; requested exact edit isolation and uniform scaling were not established.",
+    "Read-only alpha bounds and native Blender guide geometry do not establish physical skeleton, exact anatomical joints, historical drill or human quality acceptance."
+  ],
+  "finalSourcesAcceptedForLimitedPreview": true,
+  "independentFinalSourceReviews": [
+    "docs/art-pass/reviews/gettysburg-v11-independent-e-march-source-review.json",
+    "docs/art-pass/reviews/gettysburg-v11-independent-e-actions-source-review.json",
+    "docs/art-pass/reviews/gettysburg-v11-independent-se-march-source-review.json",
+    "docs/art-pass/reviews/gettysburg-v11-independent-se-actions-source-review.json"
+  ],
+  "finalSEMarchSpacing": "Fresh smaller generated native composition passed16px solid gate; requested exact scaling/translation not established."
+}

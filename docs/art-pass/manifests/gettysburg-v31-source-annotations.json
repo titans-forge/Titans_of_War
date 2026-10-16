@@ -1,0 +1,401 @@
+{
+  "artPass": "gettysburg-v31",
+  "familyComplete": false,
+  "productionApproved": false,
+  "defaultApproved": false,
+  "humanCertified": false,
+  "physicalAnatomyCertified": false,
+  "historicalDrillCertified": false,
+  "sourceReview": "docs/art-pass/reviews/gettysburg-v31-independent-contact-casualty-source-review.json",
+  "sourceReviewSHA256": "a0b324df31af6be2523f8a5796476225a3f39d9862688e75a5dae8be01beac32",
+  "referenceHeights": {
+    "union": 370,
+    "confederate": 403
+  },
+  "sources": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 5,
+      "role": "contact",
+      "action": "melee",
+      "source": "docs/art-pass/candidates/gettysburg-v31/union-a-contact-nw-candidate.png",
+      "sha256": "8ef7a8b577e52bb884679c47c3c028a2a5b24b1753c8ebc5d26b72ec0428e85e",
+      "cell": 627,
+      "referenceHeight": 370,
+      "roots": [
+        [
+          411,
+          590
+        ],
+        [
+          397,
+          584
+        ],
+        [
+          413,
+          540
+        ],
+        [
+          388,
+          549
+        ]
+      ],
+      "groundROIs": [
+        [
+          316,
+          543,
+          424,
+          607
+        ],
+        [
+          512,
+          538,
+          596,
+          596
+        ],
+        [
+          480,
+          500,
+          560,
+          552
+        ],
+        [
+          280,
+          503,
+          390,
+          564
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X at the rear anatomical hip center beneath the belt/pouches; ground Y is the exclusive alpha>=64 maximum of the nearer screen-left planted boot sole, separate from weapon bounds.",
+        "Projected pelvis X at the hip center behind the bent forward thigh; ground Y follows the nearer trailing screen-right boot toe/sole contact with heel raised. The forward boot projects higher in the rear three-quarter view; weapon and clothing bounds are excluded.",
+        "Projected pelvis X at the rear hip center between the braced thighs; ground Y uses the lower screen-right planted boot sole, independently from the other boot and withdrawn rifle.",
+        "Projected pelvis X below the trunk between the braced legs; ground Y uses the nearer screen-left boot sole, excluding the overhead weapon and the other boot."
+      ],
+      "capROIs": [
+        [
+          337,
+          165,
+          397,
+          213
+        ],
+        [
+          304,
+          204,
+          371,
+          251
+        ],
+        [
+          341,
+          161,
+          401,
+          207
+        ],
+        [
+          351,
+          179,
+          361,
+          196
+        ]
+      ],
+      "capTop": [
+        177,
+        215,
+        171,
+        179
+      ],
+      "referenceSoleROIs": [
+        [
+          316,
+          543,
+          424,
+          607
+        ],
+        [
+          512,
+          538,
+          596,
+          596
+        ],
+        [
+          480,
+          500,
+          560,
+          552
+        ],
+        [
+          280,
+          503,
+          390,
+          564
+        ]
+      ],
+      "referenceSoleGroundY": [
+        590,
+        584,
+        540,
+        549
+      ],
+      "bodySpans": [
+        413,
+        369,
+        369,
+        370
+      ]
+    },
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 5,
+      "role": "casualty",
+      "action": "fall",
+      "source": "docs/art-pass/candidates/gettysburg-v31/union-a-casualty-nw-candidate.png",
+      "sha256": "9c03405991c9171c70411336641ea82b92db7f9bb1c9f70138d7e113029c9e85",
+      "cell": 627,
+      "referenceHeight": 370,
+      "roots": [
+        [
+          388,
+          594
+        ],
+        [
+          371,
+          529
+        ],
+        [
+          354,
+          395
+        ],
+        [
+          381,
+          410
+        ]
+      ],
+      "groundROIs": [
+        [
+          330,
+          544,
+          436,
+          605
+        ],
+        [
+          295,
+          480,
+          397,
+          540
+        ],
+        [
+          212,
+          352,
+          268,
+          416
+        ],
+        [
+          225,
+          365,
+          280,
+          431
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X below the rear belt; support Y uses the nearer screen-left planted boot sole during the hit/stumble, excluding the higher swinging boot and fully released musket.",
+        "Projected pelvis X over the lowered hip/knee; support Y uses the still-planted screen-left boot sole. The rear boot presents its raised tread and is excluded from the ground measurement.",
+        "Projected pelvis X under the rear hip as the body collapses forward; support Y uses the lower visible forearm/elbow contact, excluding the lifted treaded boot faces and detached rifle.",
+        "Projected pelvis X at the prone hip center; support Y uses the folded forearm/elbow beneath the resting head. The released rifle and raised/trailing boot soles do not define this body support."
+      ]
+    },
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 1,
+      "role": "contact",
+      "action": "melee",
+      "source": "docs/art-pass/candidates/gettysburg-v31/confederate-a-contact-se-candidate.png",
+      "sha256": "6a26a5227548516f39a72892cd026a98d3ef25decdbce4366dc796fb447888b0",
+      "cell": 627,
+      "referenceHeight": 403,
+      "roots": [
+        [
+          309,
+          588
+        ],
+        [
+          250,
+          590
+        ],
+        [
+          329,
+          530
+        ],
+        [
+          265,
+          537
+        ]
+      ],
+      "groundROIs": [
+        [
+          334,
+          538,
+          434,
+          604
+        ],
+        [
+          280,
+          538,
+          377,
+          605
+        ],
+        [
+          366,
+          470,
+          466,
+          543
+        ],
+        [
+          315,
+          477,
+          414,
+          548
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X chosen at the anatomical center below the belt; ground Y is the exclusive alpha>=64 maximum of the nearer screen-right boot sole, bounded separately from rifle and far foot.",
+        "Projected pelvis X at the hip center behind the extension, independent of the forward boot X; ground Y uses the front/near screen-right support boot sole and excludes the trailing lifted foot.",
+        "Projected pelvis X below the belt between the withdrawn thighs; ground Y uses the nearer screen-right boot sole, excluding rifle/bayonet and the higher far foot.",
+        "Projected pelvis X centered below the belt under the braced trunk; ground Y uses the nearer screen-right planted boot sole while weapon/hands remain outside the ROI."
+      ],
+      "capROIs": [
+        [
+          293,
+          150,
+          364,
+          196
+        ],
+        [
+          252,
+          181,
+          316,
+          229
+        ],
+        [
+          321,
+          110,
+          386,
+          154
+        ],
+        [
+          244,
+          137,
+          303,
+          179
+        ]
+      ],
+      "capTop": [
+        161,
+        192,
+        122,
+        148
+      ],
+      "referenceSoleROIs": [
+        [
+          334,
+          538,
+          434,
+          604
+        ],
+        [
+          280,
+          538,
+          377,
+          605
+        ],
+        [
+          366,
+          470,
+          466,
+          543
+        ],
+        [
+          315,
+          477,
+          414,
+          548
+        ]
+      ],
+      "referenceSoleGroundY": [
+        588,
+        590,
+        530,
+        537
+      ],
+      "bodySpans": [
+        427,
+        398,
+        408,
+        389
+      ]
+    },
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 1,
+      "role": "casualty",
+      "action": "fall",
+      "source": "docs/art-pass/candidates/gettysburg-v31/confederate-a-casualty-se-candidate.png",
+      "sha256": "060d927523c3a6977aae9f03fb7e59d5b0c77054fa65231f094b517696e39855",
+      "cell": 627,
+      "referenceHeight": 403,
+      "roots": [
+        [
+          229,
+          514
+        ],
+        [
+          213,
+          518
+        ],
+        [
+          210,
+          393
+        ],
+        [
+          252,
+          397
+        ]
+      ],
+      "groundROIs": [
+        [
+          248,
+          451,
+          325,
+          524
+        ],
+        [
+          204,
+          469,
+          288,
+          531
+        ],
+        [
+          170,
+          340,
+          253,
+          401
+        ],
+        [
+          286,
+          356,
+          412,
+          406
+        ]
+      ],
+      "groundMethods": [
+        "Projected pelvis X under the leaning belt line; support Y uses the lower screen-left boot sole during the stumble, excluding the detached rifle extending farther down/right.",
+        "Projected pelvis X above the kneeling hips; support Y is the exclusive alpha>=64 lower edge of the nearer lowered knee. Reaching fingers, rear boot and released musket are excluded.",
+        "Projected pelvis X at the tilted hip center; support Y uses the visibly lowered near knee as the torso collapses onto its arm. The detached rifle and free hand are outside this support ROI.",
+        "Projected pelvis X at the prone hip/trunk junction; support Y uses the folded foreground forearm/elbow below the resting head. The detached rifle extends much farther down and is excluded."
+      ]
+    }
+  ]
+}

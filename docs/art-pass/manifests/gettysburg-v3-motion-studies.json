@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-01",
+  "scope": "Gettysburg Union A E gait study",
+  "productionApproved": false,
+  "generation": "Three OpenAI built-in imagegen attempts; model identifier not reported. Native Blender structural render as guide.",
+  "publicPilot": "public/images/units/gettysburg-v3/union-a-march-e.png",
+  "gameQuery": "?artPass=gettysburg-v3",
+  "reviewerQuery": "?artReview=gettysburg-motion",
+  "sourceNotes": "docs/art-pass/reviews/gettysburg-v3-gait-and-depth-review.md",
+  "sources": [
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v3/union-e-strip-rejected.png",
+      "status": "rejected",
+      "note": "Repeated leading-leg contacts",
+      "sha256": "33fc0ef92824c39d136c81e2ef99681da1396a05ae9dc3b03b72e754477fb1e1",
+      "bytes": 1154069,
+      "width": 1983,
+      "height": 793,
+      "nativeRGBA": true,
+      "rasterPixelEdits": false
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v3/union-e-single-rejected.png",
+      "status": "rejected",
+      "note": "Opposite-contact correction repeated the same leading leg",
+      "sha256": "80b5f935a5bd1a03be6f50c2e0fdc1bc9d201ea3918c54c669aefef7733296ab",
+      "bytes": 1803920,
+      "width": 1024,
+      "height": 1536,
+      "nativeRGBA": true,
+      "rasterPixelEdits": false
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v3/union-e-rig-guide.png",
+      "status": "structural-reference",
+      "note": "Native articulated rig; stylized guide, not accepted artwork",
+      "sha256": "b54219ff63d9905f22c389cce26ee8f0edea82fda60c5143a6e04360a8ac97da",
+      "bytes": 360289,
+      "width": 1536,
+      "height": 512,
+      "nativeRGBA": true,
+      "rasterPixelEdits": false
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v3/union-e-rig-guided-candidate.png",
+      "status": "limited-opt-in-pilot",
+      "note": "Opposing contacts; equipment, ground contact and action-family defects remain",
+      "sha256": "fe564b8374e48e3d1732e2d6e40d3809c950003c063762a123944759bcef8bca",
+      "bytes": 757228,
+      "width": 2172,
+      "height": 724,
+      "nativeRGBA": true,
+      "rasterPixelEdits": false
+    }
+  ]
+}

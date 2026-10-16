@@ -1,0 +1,300 @@
+{
+  "artPass": "gettysburg-v9",
+  "productionApproved": false,
+  "familyComplete": false,
+  "reviewStatus": "model-assisted opt-in preview accepted; human and complete family review pending",
+  "sources": [
+    {
+      "name": "march-w",
+      "key": "union-gettysburg-v9-a-march-w",
+      "measurementName": "union-a-march-w",
+      "source": "docs/art-pass/candidates/gettysburg-v9/union-a-w-march-candidate.png",
+      "sha256": "8548f147d8021126f8bc4ce3069983dd7bf5eb29429a1fbafb1401e0f0d5acbb",
+      "side": "union",
+      "identity": "a",
+      "direction": 4,
+      "cell": 627,
+      "roots": [
+        [
+          324,
+          545
+        ],
+        [
+          345,
+          545
+        ],
+        [
+          328,
+          519
+        ],
+        [
+          349,
+          519
+        ]
+      ],
+      "capTop": [
+        214,
+        214,
+        184,
+        186
+      ],
+      "bodySpans": [
+        331,
+        331,
+        335,
+        333
+      ],
+      "referenceHeight": 335,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "scope": "Opt-in Union A W four-sample contact/passing preview; exact historical Gettysburg v9 only.",
+      "annotationMethod": "Fresh separate model-assisted native image inspection. Manual pelvis X and row-shared grounded-sole Y uncertain by approximately +/-8 native pixels; cap tops +/-3px, No anatomical or historical certification.",
+      "limitations": [
+        "Separate model-assisted all-cell review supports an opt-in native W march preview; this is not independent human, anatomical or historical certification.",
+        "Opposite contact-leg chains are readable. Passing support identity remains partly occluded; chronology is a proposed contact/passing sequence for playback review, not a certified gait.",
+        "Native RGBA pixels are copied unchanged. Low-alpha RGB remnants are retained; zero diagnostic bright-blue pixels at alpha>=8 does not establish exhaustive fringe absence.",
+        "Manual pelvis X and row-shared grounded-sole Y are approximate; one335px source reference applies to all four frames, without per-frame size correction.",
+        "Image generation did not precisely preserve requested layout translations. Every final native cell was reviewed and measured afresh; no percent-transformation or unchanged-untargeted-pixels claim.",
+        "Minimum solid alpha64 padding is78px; whole weapons and boots remain inside each627px cell.",
+        "Complete drill, melee, casualties, recoil/settling, true bearers, all other missing views and full family/default approval remain unfinished.",
+        "Alpha1-only residual pixels sometimes approach a cell edge. Alpha8/64 margins are safe; this is not a claim of perfectly empty transparent borders."
+      ]
+    },
+    {
+      "name": "actions-w",
+      "key": "union-gettysburg-v9-a-actions-w",
+      "measurementName": "union-a-actions-w",
+      "source": "docs/art-pass/candidates/gettysburg-v9/union-a-w-actions-candidate.png",
+      "sha256": "3676bb60c6c4373cd1176e30b4079ad68cebb94de26fe7bea582dd675b936d96",
+      "side": "union",
+      "identity": "a",
+      "direction": 4,
+      "cell": 627,
+      "roots": [
+        [
+          438,
+          555
+        ],
+        [
+          420,
+          555
+        ],
+        [
+          446,
+          559
+        ],
+        [
+          431,
+          559
+        ]
+      ],
+      "capTop": [
+        139,
+        149,
+        158,
+        155
+      ],
+      "bodySpans": [
+        416,
+        406,
+        401,
+        404
+      ],
+      "referenceHeight": 415,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "muzzle": [
+        151,
+        201
+      ],
+      "scope": "Opt-in Union A W stationary actions; exact historical Gettysburg v9 only.",
+      "annotationMethod": "Fresh separate model-assisted native image inspection. Manual pelvis X and row-shared grounded-sole Y uncertain by approximately +/-8 native pixels; cap tops +/-3px, actual tube mouth +/-5px. No anatomical or historical certification.",
+      "limitations": [
+        "Separate model-assisted all-cell review supports an opt-in native W preview; this is not independent human, anatomical or historical certification.",
+        "Native RGBA pixels are copied unchanged. Low-alpha RGB remnants are preserved; the blue diagnostic is not an exhaustive fringe detector.",
+        "Roots and cap-to-sole spans are approximate manual measurements; one shared source reference is used across phases, not an action-dependent size correction.",
+        "One held firing pose and two representative loading states do not establish recoil, settling or a complete verified period drill.",
+        "The stock/cheek/support/trigger silhouette is readable. Hidden bore/socket/grip and detailed finger relationships remain unverified.",
+        "Other missing directions and identities, melee, casualties, recoil, true bearers and complete family/default approval remain unfinished.",
+        "Firing bore mouth is approximately (151,201), distinct from bayonet tip (65,199); weapon projects screen-left near horizontal.",
+        "Minimum solid alpha64 padding is30px. Requested layout edits did not precisely preserve untargeted pixels; final full sheet was reviewed again.",
+        "Alpha1-only residual pixels sometimes approach a cell edge. Alpha8/64 margins are safe; this is not a claim of perfectly empty transparent borders."
+      ]
+    },
+    {
+      "name": "march-w",
+      "key": "union-gettysburg-v9-b-march-w",
+      "measurementName": "union-b-march-w",
+      "source": "docs/art-pass/candidates/gettysburg-v9/union-b-w-march-candidate.png",
+      "sha256": "7842f97c0ea99f1683b8f138bd6411744cbed1e9326b2d061c2b40c7696e7aaf",
+      "side": "union",
+      "identity": "b",
+      "direction": 4,
+      "cell": 627,
+      "roots": [
+        [
+          325,
+          545
+        ],
+        [
+          345,
+          545
+        ],
+        [
+          329,
+          519
+        ],
+        [
+          350,
+          519
+        ]
+      ],
+      "capTop": [
+        212,
+        212,
+        183,
+        183
+      ],
+      "bodySpans": [
+        333,
+        333,
+        336,
+        336
+      ],
+      "referenceHeight": 335,
+      "actions": [
+        [
+          "march",
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "scope": "Opt-in Union B W four-sample contact/passing preview; exact historical Gettysburg v9 only.",
+      "annotationMethod": "Fresh separate model-assisted native image inspection. Manual pelvis X and row-shared grounded-sole Y uncertain by approximately +/-8 native pixels; cap tops +/-3px, No anatomical or historical certification.",
+      "limitations": [
+        "Separate model-assisted all-cell review supports an opt-in native W march preview; this is not independent human, anatomical or historical certification.",
+        "Opposite contact-leg chains are readable. Passing support identity remains partly occluded; chronology is a proposed contact/passing sequence for playback review, not a certified gait.",
+        "Native RGBA pixels are copied unchanged. Low-alpha RGB remnants are retained; zero diagnostic bright-blue pixels at alpha>=8 does not establish exhaustive fringe absence.",
+        "Manual pelvis X and row-shared grounded-sole Y are approximate; one335px source reference applies to all four frames, without per-frame size correction.",
+        "Image generation did not precisely preserve requested layout translations. Every final native cell was reviewed and measured afresh; no percent-transformation or unchanged-untargeted-pixels claim.",
+        "Minimum solid alpha64 padding is78px; whole weapons and boots remain inside each627px cell.",
+        "Complete drill, melee, casualties, recoil/settling, true bearers, all other missing views and full family/default approval remain unfinished.",
+        "B is a native identity variant with some visible head/body variation; no face-only preservation claim.",
+        "Alpha1-only residual pixels sometimes approach a cell edge. Alpha8/64 margins are safe; this is not a claim of perfectly empty transparent borders."
+      ]
+    },
+    {
+      "name": "actions-w",
+      "key": "union-gettysburg-v9-b-actions-w",
+      "measurementName": "union-b-actions-w",
+      "source": "docs/art-pass/candidates/gettysburg-v9/union-b-w-actions-candidate.png",
+      "sha256": "81b66db974e4f026083fe60abe6670461afd7853ea33a845dd7f39aac0d7d35f",
+      "side": "union",
+      "identity": "b",
+      "direction": 4,
+      "cell": 627,
+      "roots": [
+        [
+          439,
+          571
+        ],
+        [
+          419,
+          571
+        ],
+        [
+          447,
+          567
+        ],
+        [
+          431,
+          567
+        ]
+      ],
+      "capTop": [
+        154,
+        162,
+        165,
+        163
+      ],
+      "bodySpans": [
+        417,
+        409,
+        402,
+        404
+      ],
+      "referenceHeight": 415,
+      "actions": [
+        [
+          "ready",
+          [
+            0
+          ]
+        ],
+        [
+          "fire",
+          [
+            1
+          ]
+        ],
+        [
+          "reload",
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "muzzle": [
+        151,
+        217
+      ],
+      "scope": "Opt-in Union B W stationary actions; exact historical Gettysburg v9 only.",
+      "annotationMethod": "Fresh separate model-assisted native image inspection. Manual pelvis X and row-shared grounded-sole Y uncertain by approximately +/-8 native pixels; cap tops +/-3px, actual tube mouth +/-5px. No anatomical or historical certification.",
+      "limitations": [
+        "Separate model-assisted all-cell review supports an opt-in native W preview; this is not independent human, anatomical or historical certification.",
+        "Native RGBA pixels are copied unchanged. Low-alpha RGB remnants are preserved; the blue diagnostic is not an exhaustive fringe detector.",
+        "Roots and cap-to-sole spans are approximate manual measurements; one shared source reference is used across phases, not an action-dependent size correction.",
+        "One held firing pose and two representative loading states do not establish recoil, settling or a complete verified period drill.",
+        "The stock/cheek/support/trigger silhouette is readable. Hidden bore/socket/grip and detailed finger relationships remain unverified.",
+        "Other missing directions and identities, melee, casualties, recoil, true bearers and complete family/default approval remain unfinished.",
+        "B is a native identity variant, with some head/body variation; no face-only pixel-preservation claim.",
+        "Firing bore mouth is approximately (151,217), distinct from bayonet tip (64,215); weapon projects screen-left near horizontal.",
+        "Minimum solid alpha64 padding is53px.",
+        "Alpha1-only residual pixels sometimes approach a cell edge. Alpha8/64 margins are safe; this is not a claim of perfectly empty transparent borders."
+      ]
+    }
+  ]
+}

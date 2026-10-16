@@ -1,0 +1,2886 @@
+{
+  "scope": "Current-rule option A preload assets only. Uncompressed file bytes, not transferred bytes, decoded memory, startup timing or total app payload. Shared image URLs counted once per encounter.",
+  "results": [
+    {
+      "battle": "first_manassas",
+      "artPass": null,
+      "loadEntries": 48,
+      "uniqueAssets": 46,
+      "bytes": 39601946,
+      "assets": [
+        {
+          "src": "images/battles/landmarks-v5/stone-house.png",
+          "bytes": 2557451
+        },
+        {
+          "src": "images/battles/landmarks-v1/henry-house.png",
+          "bytes": 2171203
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.png",
+          "bytes": 2266302
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.json",
+          "bytes": 290
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/manassas-ground-v3.png",
+          "bytes": 3111512
+        },
+        {
+          "src": "images/battles/oak-canopy-v1.webp",
+          "bytes": 687166
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "shiloh",
+      "artPass": null,
+      "loadEntries": 47,
+      "uniqueAssets": 45,
+      "bytes": 34507644,
+      "assets": [
+        {
+          "src": "images/battles/landmarks-v2/shiloh-church.png",
+          "bytes": 2144004
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.png",
+          "bytes": 2266302
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.json",
+          "bytes": 290
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/shiloh-ground-v2.webp",
+          "bytes": 601860
+        },
+        {
+          "src": "images/battles/oak-canopy-v1.webp",
+          "bytes": 687166
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "chancellorsville",
+      "artPass": null,
+      "loadEntries": 48,
+      "uniqueAssets": 46,
+      "bytes": 39447655,
+      "assets": [
+        {
+          "src": "images/battles/landmarks-v6/catharine-furnace.png",
+          "bytes": 2241724
+        },
+        {
+          "src": "images/battles/landmarks-v2/chancellor-house.png",
+          "bytes": 1955284
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.png",
+          "bytes": 2266302
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.json",
+          "bytes": 290
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/realistic-v2/pasture.png",
+          "bytes": 3488867
+        },
+        {
+          "src": "images/battles/oak-canopy-v1.webp",
+          "bytes": 687166
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "wilderness",
+      "artPass": null,
+      "loadEntries": 47,
+      "uniqueAssets": 45,
+      "bytes": 37824194,
+      "assets": [
+        {
+          "src": "images/battles/landmarks-v4/widow-tapp-house.png",
+          "bytes": 2573547
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.png",
+          "bytes": 2266302
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.json",
+          "bytes": 290
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/realistic-v2/pasture.png",
+          "bytes": 3488867
+        },
+        {
+          "src": "images/battles/oak-canopy-v1.webp",
+          "bytes": 687166
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "third_winchester",
+      "artPass": null,
+      "loadEntries": 47,
+      "uniqueAssets": 45,
+      "bytes": 36792358,
+      "assets": [
+        {
+          "src": "images/battles/landmarks-v1/hackwood.png",
+          "bytes": 1541711
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.png",
+          "bytes": 2266302
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.json",
+          "bytes": 290
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/realistic-v2/pasture.png",
+          "bytes": 3488867
+        },
+        {
+          "src": "images/battles/oak-canopy-v1.webp",
+          "bytes": 687166
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "cedar_creek",
+      "artPass": null,
+      "loadEntries": 48,
+      "uniqueAssets": 46,
+      "bytes": 39366040,
+      "assets": [
+        {
+          "src": "images/battles/landmarks-v6/heater-house.png",
+          "bytes": 2584536
+        },
+        {
+          "src": "images/battles/landmarks-v1/belle-grove.png",
+          "bytes": 1530857
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.png",
+          "bytes": 2266302
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.json",
+          "bytes": 290
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/realistic-v2/pasture.png",
+          "bytes": 3488867
+        },
+        {
+          "src": "images/battles/oak-canopy-v1.webp",
+          "bytes": 687166
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "gettysburg",
+      "artPass": null,
+      "loadEntries": 45,
+      "uniqueAssets": 43,
+      "bytes": 36646749,
+      "assets": [
+        {
+          "src": "images/battles/landmarks-v7/brian-house.png",
+          "bytes": 3045224
+        },
+        {
+          "src": "images/battles/landmarks-v3/leister-house.png",
+          "bytes": 2281704
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/gettysburg-terrain-v3.png",
+          "bytes": 2511799
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "gettysburg_jackson",
+      "artPass": null,
+      "loadEntries": 47,
+      "uniqueAssets": 45,
+      "bytes": 37157310,
+      "assets": [
+        {
+          "src": "images/battles/landmarks-v3/evergreen-gatehouse.png",
+          "bytes": 1906663
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.png",
+          "bytes": 2266302
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.json",
+          "bytes": 290
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/realistic-v2/pasture.png",
+          "bytes": 3488867
+        },
+        {
+          "src": "images/battles/oak-canopy-v1.webp",
+          "bytes": 687166
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "chickamauga",
+      "artPass": null,
+      "loadEntries": 48,
+      "uniqueAssets": 46,
+      "bytes": 40645647,
+      "assets": [
+        {
+          "src": "images/battles/landmarks-v5/snodgrass-house.png",
+          "bytes": 2739568
+        },
+        {
+          "src": "images/battles/landmarks-v2/brotherton-cabin.png",
+          "bytes": 2655432
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.png",
+          "bytes": 2266302
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.json",
+          "bytes": 290
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/realistic-v2/pasture.png",
+          "bytes": 3488867
+        },
+        {
+          "src": "images/battles/oak-canopy-v1.webp",
+          "bytes": 687166
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "cold_harbor",
+      "artPass": null,
+      "loadEntries": 49,
+      "uniqueAssets": 47,
+      "bytes": 43746265,
+      "assets": [
+        {
+          "src": "images/battles/siege-v1/ravine.png",
+          "bytes": 3129222
+        },
+        {
+          "src": "images/battles/siege-v1/earthwork.png",
+          "bytes": 2633727
+        },
+        {
+          "src": "images/battles/landmarks-v4/garthright-house.png",
+          "bytes": 2732669
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.png",
+          "bytes": 2266302
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.json",
+          "bytes": 290
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/realistic-v2/pasture.png",
+          "bytes": 3488867
+        },
+        {
+          "src": "images/battles/oak-canopy-v1.webp",
+          "bytes": 687166
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "petersburg",
+      "artPass": null,
+      "loadEntries": 48,
+      "uniqueAssets": 46,
+      "bytes": 40718749,
+      "assets": [
+        {
+          "src": "images/battles/siege-v1/earthwork.png",
+          "bytes": 2633727
+        },
+        {
+          "src": "images/battles/siege-v1/crater.png",
+          "bytes": 2834375
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.png",
+          "bytes": 2266302
+        },
+        {
+          "src": "images/battles/realistic-v2/foliage.json",
+          "bytes": 290
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/realistic-v2/pasture.png",
+          "bytes": 3488867
+        },
+        {
+          "src": "images/battles/oak-canopy-v1.webp",
+          "bytes": 687166
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "battle": "gettysburg",
+      "artPass": "?artPass=gettysburg-v1",
+      "loadEntries": 45,
+      "uniqueAssets": 43,
+      "bytes": 37532034,
+      "assets": [
+        {
+          "src": "images/battles/landmarks-v7/brian-house.png",
+          "bytes": 3045224
+        },
+        {
+          "src": "images/battles/landmarks-v3/leister-house.png",
+          "bytes": 2281704
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/gettysburg-terrain-v3.png",
+          "bytes": 2511799
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/gettysburg-v1/union-ready.png",
+          "bytes": 1994133
+        },
+        {
+          "src": "images/units/gettysburg-v1/union-ready.json",
+          "bytes": 2511
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/gettysburg-v1/confederate-ready.png",
+          "bytes": 2032562
+        },
+        {
+          "src": "images/units/gettysburg-v1/confederate-ready.json",
+          "bytes": 2534
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "gettysburg",
+      "artPass": "?artPass=gettysburg-v2",
+      "loadEntries": 53,
+      "uniqueAssets": 51,
+      "bytes": 45182926,
+      "assets": [
+        {
+          "src": "images/units/gettysburg-v2/union-ready.png",
+          "bytes": 1849384
+        },
+        {
+          "src": "images/units/gettysburg-v2/union-ready.json",
+          "bytes": 14288
+        },
+        {
+          "src": "images/units/gettysburg-v2/union-march.png",
+          "bytes": 2380067
+        },
+        {
+          "src": "images/units/gettysburg-v2/union-march.json",
+          "bytes": 27076
+        },
+        {
+          "src": "images/units/gettysburg-v2/confederate-ready.png",
+          "bytes": 1861683
+        },
+        {
+          "src": "images/units/gettysburg-v2/confederate-ready.json",
+          "bytes": 14051
+        },
+        {
+          "src": "images/units/gettysburg-v2/confederate-march.png",
+          "bytes": 2362232
+        },
+        {
+          "src": "images/units/gettysburg-v2/confederate-march.json",
+          "bytes": 27396
+        },
+        {
+          "src": "images/battles/landmarks-v7/brian-house.png",
+          "bytes": 3045224
+        },
+        {
+          "src": "images/battles/landmarks-v3/leister-house.png",
+          "bytes": 2281704
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/gettysburg-terrain-v3.png",
+          "bytes": 2511799
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "gettysburg",
+      "artPass": "?artPass=gettysburg-v3",
+      "loadEntries": 47,
+      "uniqueAssets": 45,
+      "bytes": 37407371,
+      "assets": [
+        {
+          "src": "images/units/gettysburg-v3/union-a-march-e.png",
+          "bytes": 757228
+        },
+        {
+          "src": "images/units/gettysburg-v3/union-a-march-e.json",
+          "bytes": 3394
+        },
+        {
+          "src": "images/battles/landmarks-v7/brian-house.png",
+          "bytes": 3045224
+        },
+        {
+          "src": "images/battles/landmarks-v3/leister-house.png",
+          "bytes": 2281704
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/gettysburg-terrain-v3.png",
+          "bytes": 2511799
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    },
+    {
+      "battle": "gettysburg",
+      "artPass": "?artPass=gettysburg-v4",
+      "loadEntries": 49,
+      "uniqueAssets": 47,
+      "bytes": 37717155,
+      "assets": [
+        {
+          "src": "images/units/gettysburg-v4/union-a-march-e.png",
+          "bytes": 520759
+        },
+        {
+          "src": "images/units/gettysburg-v4/union-a-march-e.json",
+          "bytes": 3214
+        },
+        {
+          "src": "images/units/gettysburg-v4/union-a-actions-e.png",
+          "bytes": 542117
+        },
+        {
+          "src": "images/units/gettysburg-v4/union-a-actions-e.json",
+          "bytes": 4316
+        },
+        {
+          "src": "images/battles/landmarks-v7/brian-house.png",
+          "bytes": 3045224
+        },
+        {
+          "src": "images/battles/landmarks-v3/leister-house.png",
+          "bytes": 2281704
+        },
+        {
+          "src": "images/battles/realistic-v2/bunting.png",
+          "bytes": 3092715
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.png",
+          "bytes": 2145673
+        },
+        {
+          "src": "images/battles/realistic-v2/earthworks.json",
+          "bytes": 293
+        },
+        {
+          "src": "images/battles/gettysburg-terrain-v3.png",
+          "bytes": 2511799
+        },
+        {
+          "src": "images/units/confederate-infantry-v1.webp",
+          "bytes": 38012
+        },
+        {
+          "src": "images/units/union-infantry-v1.webp",
+          "bytes": 34616
+        },
+        {
+          "src": "images/units/union-artillery-v2.png",
+          "bytes": 1767373
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.png",
+          "bytes": 1507548
+        },
+        {
+          "src": "images/units/detailed-v2/union-ready.json",
+          "bytes": 4040
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.png",
+          "bytes": 1506765
+        },
+        {
+          "src": "images/units/detailed-v2/union-walk.json",
+          "bytes": 4039
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.png",
+          "bytes": 1451167
+        },
+        {
+          "src": "images/units/detailed-v2/union-aim.json",
+          "bytes": 3185
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.png",
+          "bytes": 1485353
+        },
+        {
+          "src": "images/units/detailed-v2/union-crew.json",
+          "bytes": 3179
+        },
+        {
+          "src": "images/units/realistic-v1/axial-aim.png",
+          "bytes": 827255
+        },
+        {
+          "src": "images/units/realistic-v1/union-aim.json",
+          "bytes": 1445
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.png",
+          "bytes": 2093508
+        },
+        {
+          "src": "images/units/realistic-v1/union-infantry.json",
+          "bytes": 13569
+        },
+        {
+          "src": "images/units/realistic-v1/artillery-crew.png",
+          "bytes": 2104502
+        },
+        {
+          "src": "images/units/realistic-v1/union-crew.json",
+          "bytes": 7085
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.webp",
+          "bytes": 147186
+        },
+        {
+          "src": "images/units/directional-melee-v1/union-infantry.json",
+          "bytes": 13986
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.webp",
+          "bytes": 908674
+        },
+        {
+          "src": "images/units/directional-v2/union-infantry.json",
+          "bytes": 78671
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.png",
+          "bytes": 1630823
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-ready.json",
+          "bytes": 4044
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.png",
+          "bytes": 1597978
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-walk.json",
+          "bytes": 4043
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.png",
+          "bytes": 1553757
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-aim.json",
+          "bytes": 3191
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.png",
+          "bytes": 1484016
+        },
+        {
+          "src": "images/units/detailed-v2/confederate-crew.json",
+          "bytes": 3188
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-aim.json",
+          "bytes": 1449
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.png",
+          "bytes": 2181294
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-infantry.json",
+          "bytes": 13587
+        },
+        {
+          "src": "images/units/realistic-v1/confederate-crew.json",
+          "bytes": 7100
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.webp",
+          "bytes": 138166
+        },
+        {
+          "src": "images/units/directional-melee-v1/confederate-infantry.json",
+          "bytes": 13992
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.webp",
+          "bytes": 852878
+        },
+        {
+          "src": "images/units/directional-v2/confederate-infantry.json",
+          "bytes": 78677
+        }
+      ]
+    }
+  ]
+}

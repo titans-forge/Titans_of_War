@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import { test } from 'node:test';
+import {withdrawalGoals,isWithdrawalGoals} from '../src/battle/withdrawalGoals.js';
+import {CivilWarBattleEngine} from '../src/battle/civilWarEngine.js';
+import {getBattleAssessment,isBattleAssessment} from '../src/battle/battleAssessment.js';
+import {createFreshCampaignState,createCampaignSnapshot,restoreCampaignFromSnapshot} from '../src/game/campaignStorage.js';
+const unit=(id,type='infantry')=>({id,type,side:'confederate',initialStrength:100,strength:100,withdrawn:true,withdrawalOrganized:true,status:'steady'});
+const snap=()=>({scenarioId:'gettysburg',gettysburg:{},outcome:'disciplined-withdrawal',formations:[unit('a'),unit('b'),unit('c','artillery')]});
+const mission={kind:'withdraw'};
+test('complete orderly exits earn all applicable goals without requiring fighting',()=>{const r=withdrawalGoals(snap(),mission,true);assert.ok(isWithdrawalGoals(r));assert.ok(r.goals.every(g=>g.status==='achieved'));});
+test('90 percent is an exact threshold, not rounded display credit',()=>{const s=snap();s.formations.forEach(u=>u.strength=89.99);assert.equal(withdrawalGoals(s,mission,true).goals[0].status,'not-earned');s.formations.forEach(u=>u.strength=90);assert.equal(withdrawalGoals(s,mission,true).goals[0].status,'achieved');});
+test('routed escapes and waiting reserves cannot earn complete recovery',()=>{const s=snap();s.formations[0].status='routing';s.formations[1].withdrawn=false;s.formations[1].active=false;const r=withdrawalGoals(s,mission,true);assert.equal(r.goals[0].status,'not-earned');assert.equal(r.goals[1].status,'not-earned');});
+test('abandoned guns do not count as gun recovery even when crews escape',()=>{const s=snap();s.formations[2].gunsAbandoned=true;assert.equal(withdrawalGoals(s,mission,true).goals[2].status,'not-earned');});
+test('no artillery means no artificial gun trophy',()=>{const s=snap();s.formations.pop();assert.equal(withdrawalGoals(s,mission,true).goals.length,2);});
+test('mission failure cannot earn goals; live progress is never a final award',()=>{assert.ok(withdrawalGoals(snap(),mission,false).goals.every(g=>g.status==='not-earned'));const s=snap();s.outcome='undecided';assert.ok(withdrawalGoals(s,mission,true).goals.every(g=>g.status==='tracking'));});
+test('delegation, transfers, legacy observations and other mission types are excluded',()=>{const s=snap();assert.equal(withdrawalGoals({...s,delegated:true},mission,true),null);assert.equal(withdrawalGoals({...s,scenarioId:'cold_harbor'},mission,true),null);assert.equal(withdrawalGoals(s,{kind:'preserve'},true),null);delete s.gettysburg;assert.equal(withdrawalGoals(s,mission,true),null);});
+test('malformed or duplicated goals reject',()=>{const r=withdrawalGoals(snap(),mission,true);r.goals[1].id='army';assert.equal(isWithdrawalGoals(r),false);});
+test('real Gettysburg withdrawal goals survive a campaign archive without changing grading',()=>{
+ const state=createFreshCampaignState(1861,'gettysburg'),e=new CivilWarBattleEngine('gettysburg',state,'option_b');for(const u of e.state.filter(u=>u.side==='confederate'&&u.active))e.order(u.id,'withdraw');for(let i=0;i<5000&&e.outcome==='undecided';i++)e.tick(.05);assert.notEqual(e.outcome,'undecided');const s=e.snapshot(),a=getBattleAssessment(s,'option_b');assert.equal(a.objective.status,'achieved');assert.ok(isBattleAssessment(a));assert.ok(a.withdrawalGoals.goals.every(g=>g.status==='achieved'));const legacy=structuredClone(a);delete legacy.withdrawalGoals;assert.ok(isBattleAssessment(legacy));assert.equal(a.commandScore,legacy.commandScore);
+ const scene={id:'gettysburg',title:'Gettysburg',turn:1,choices:[{id:'option_b',text:'Withdraw'}]};state.battleCampaign={version:1,results:{gettysburg:{battleId:'gettysburg',scenarioId:'gettysburg',choiceId:'option_b',result:s.outcome,score:s.score,confederateLossRate:s.confederateLossRate,unionLossRate:s.unionLossRate,assessment:a,delegated:false,battleRulesVersion:15}}};const restored=restoreCampaignFromSnapshot(createCampaignSnapshot(state,scene),[scene]);assert.ok(restored);assert.deepEqual(restored.state.battleCampaign.results.gettysburg.assessment.withdrawalGoals,a.withdrawalGoals);
+});

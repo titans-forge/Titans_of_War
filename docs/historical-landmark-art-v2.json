@@ -1,0 +1,73 @@
+{
+  "generator": "Built-in OpenAI image_gen tool",
+  "assets": [
+    {
+      "id": "brotherton-cabin",
+      "path": "public/images/battles/landmarks-v2/brotherton-cabin.png",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 2700575,
+      "sha256": "4fc253e5c08292e2ca96b0802aa3c8067a70bf89f33d5f700d2fb55c43061dc7"
+    },
+    {
+      "id": "chancellor-house",
+      "path": "public/images/battles/landmarks-v2/chancellor-house.png",
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 1957830,
+      "sha256": "40cef206fa124cd0ff098a1b189437a75871e00498da897153247689af8cb785"
+    },
+    {
+      "id": "shiloh-church",
+      "path": "public/images/battles/landmarks-v2/shiloh-church.png",
+      "dimensions": [
+        1374,
+        1145
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 2218369,
+      "sha256": "b65fba3cc03cba6f85407bc57bf4a3827d55f9d18c7306a827ac49308bbbbce4"
+    }
+  ],
+  "references": {
+    "shiloh-church": [
+      "https://www.nps.gov/places/shiloh-church-tour-stop-5.htm",
+      "A. M. Connett painting, circa 1901, Shiloh National Military Park collection"
+    ],
+    "chancellor-house": [
+      "https://www.loc.gov/item/2004661922/",
+      "https://www.nps.gov/places/chancellor-house-site.htm"
+    ],
+    "brotherton-cabin": [
+      "https://www.nps.gov/chch/learn/news/chickamaugaartilleryapril29.htm",
+      "https://www.nps.gov/parkhistory/online_books/chch/hrs/appendixb.pdf",
+      "https://www.nps.gov/parkhistory/online_books/chch/hrs/chapter1.pdf"
+    ]
+  },
+  "limitations": [
+    "Illustrative reconstructions; fine architectural details, especially dormers/porches and unseen walls, are not measured historical reconstructions.",
+    "Shiloh reference painting dates circa 1901, after the battle.",
+    "Brotherton cabin now standing is postwar; no claim that the generated sprite is an exact 1863 house.",
+    "Original selected files copied unchanged; rejected painted-checkerboard and broad-halo attempts excluded.",
+    "Scale and coordinates are representative game placements.",
+    "No garrison or destruction mechanic; existing terrain cover zones remain authoritative."
+  ]
+}

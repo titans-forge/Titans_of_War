@@ -1,0 +1,482 @@
+{
+  "source": "docs/art-pass/candidates/gettysburg-v13/confederate-a-w-actions-candidate.png",
+  "sourceHash": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b",
+  "publicPNG": "public/images/units/gettysburg-v13/confederate-a-actions-w.png",
+  "atlas": "public/images/units/gettysburg-v13/confederate-a-actions-w.json",
+  "nativeSize": {
+    "w": 1254,
+    "h": 1254
+  },
+  "nativeMode": "RGBA",
+  "pixelTreatment": "none; byte-for-byte native PNG copy, full equal cells",
+  "annotationMethod": "Fresh independent model-assisted exact-SHA all-four-cell inspection. Concealed pelvis X +/-8 native pixels projected to individual supporting-sole Y +/-3 pixels; cap top +/-2 pixels. One source-wide rounded median cap-to-sole height, no phase scaling. Detailed alpha-threshold ROIs and evidence in the linked source review. Neutral firing mouth +/-4 pixels, independently distinguished from bayonet tip.",
+  "referenceHeight": 454,
+  "scaleMethod": "One uniform body reference for the entire source; no action or phase size correction.",
+  "solidPaddingVerified": true,
+  "nonzeroAlphaPaddingVerified": false,
+  "cells": [
+    {
+      "index": 0,
+      "alpha": {
+        "1": {
+          "pixels": 60708,
+          "bounds": [
+            41,
+            20,
+            623,
+            595
+          ],
+          "padding": [
+            41,
+            20,
+            4,
+            32
+          ]
+        },
+        "8": {
+          "pixels": 55176,
+          "bounds": [
+            251,
+            23,
+            498,
+            592
+          ],
+          "padding": [
+            251,
+            23,
+            129,
+            35
+          ]
+        },
+        "64": {
+          "pixels": 54073,
+          "bounds": [
+            252,
+            23,
+            497,
+            591
+          ],
+          "padding": [
+            252,
+            23,
+            130,
+            36
+          ]
+        },
+        "128": {
+          "pixels": 53335,
+          "bounds": [
+            253,
+            25,
+            497,
+            591
+          ],
+          "padding": [
+            253,
+            25,
+            130,
+            36
+          ]
+        },
+        "240": {
+          "pixels": 51704,
+          "bounds": [
+            258,
+            38,
+            496,
+            590
+          ],
+          "padding": [
+            258,
+            38,
+            131,
+            37
+          ]
+        }
+      },
+      "diagnosticBluePixels": {
+        "1": 18,
+        "8": 0,
+        "64": 0,
+        "128": 0
+      },
+      "rootPixels": [
+        421,
+        591
+      ],
+      "capTopY": 130,
+      "bodySpanDiagnostic": 461
+    },
+    {
+      "index": 1,
+      "alpha": {
+        "1": {
+          "pixels": 59069,
+          "bounds": [
+            25,
+            19,
+            595,
+            609
+          ],
+          "padding": [
+            25,
+            19,
+            32,
+            18
+          ]
+        },
+        "8": {
+          "pixels": 53462,
+          "bounds": [
+            98,
+            153,
+            573,
+            605
+          ],
+          "padding": [
+            98,
+            153,
+            54,
+            22
+          ]
+        },
+        "64": {
+          "pixels": 52132,
+          "bounds": [
+            99,
+            154,
+            571,
+            604
+          ],
+          "padding": [
+            99,
+            154,
+            56,
+            23
+          ]
+        },
+        "128": {
+          "pixels": 51440,
+          "bounds": [
+            101,
+            154,
+            571,
+            604
+          ],
+          "padding": [
+            101,
+            154,
+            56,
+            23
+          ]
+        },
+        "240": {
+          "pixels": 49535,
+          "bounds": [
+            136,
+            155,
+            570,
+            603
+          ],
+          "padding": [
+            136,
+            155,
+            57,
+            24
+          ]
+        }
+      },
+      "diagnosticBluePixels": {
+        "1": 11,
+        "8": 0,
+        "64": 0,
+        "128": 0
+      },
+      "rootPixels": [
+        481,
+        604
+      ],
+      "capTopY": 154,
+      "bodySpanDiagnostic": 450
+    },
+    {
+      "index": 2,
+      "alpha": {
+        "1": {
+          "pixels": 64113,
+          "bounds": [
+            39,
+            15,
+            607,
+            595
+          ],
+          "padding": [
+            39,
+            15,
+            20,
+            32
+          ]
+        },
+        "8": {
+          "pixels": 57377,
+          "bounds": [
+            317,
+            115,
+            516,
+            573
+          ],
+          "padding": [
+            317,
+            115,
+            111,
+            54
+          ]
+        },
+        "64": {
+          "pixels": 56102,
+          "bounds": [
+            317,
+            115,
+            516,
+            572
+          ],
+          "padding": [
+            317,
+            115,
+            111,
+            55
+          ]
+        },
+        "128": {
+          "pixels": 55227,
+          "bounds": [
+            318,
+            116,
+            515,
+            572
+          ],
+          "padding": [
+            318,
+            116,
+            112,
+            55
+          ]
+        },
+        "240": {
+          "pixels": 53275,
+          "bounds": [
+            319,
+            116,
+            514,
+            571
+          ],
+          "padding": [
+            319,
+            116,
+            113,
+            56
+          ]
+        }
+      },
+      "diagnosticBluePixels": {
+        "1": 12,
+        "8": 0,
+        "64": 0,
+        "128": 0
+      },
+      "rootPixels": [
+        437,
+        572
+      ],
+      "capTopY": 115,
+      "bodySpanDiagnostic": 457
+    },
+    {
+      "index": 3,
+      "alpha": {
+        "1": {
+          "pixels": 65176,
+          "bounds": [
+            57,
+            49,
+            575,
+            607
+          ],
+          "padding": [
+            57,
+            49,
+            52,
+            20
+          ]
+        },
+        "8": {
+          "pixels": 57952,
+          "bounds": [
+            248,
+            54,
+            469,
+            567
+          ],
+          "padding": [
+            248,
+            54,
+            158,
+            60
+          ]
+        },
+        "64": {
+          "pixels": 56716,
+          "bounds": [
+            248,
+            54,
+            468,
+            567
+          ],
+          "padding": [
+            248,
+            54,
+            159,
+            60
+          ]
+        },
+        "128": {
+          "pixels": 55782,
+          "bounds": [
+            248,
+            55,
+            468,
+            567
+          ],
+          "padding": [
+            248,
+            55,
+            159,
+            60
+          ]
+        },
+        "240": {
+          "pixels": 53630,
+          "bounds": [
+            249,
+            62,
+            467,
+            566
+          ],
+          "padding": [
+            249,
+            62,
+            160,
+            61
+          ]
+        }
+      },
+      "diagnosticBluePixels": {
+        "1": 21,
+        "8": 0,
+        "64": 0,
+        "128": 0
+      },
+      "rootPixels": [
+        384,
+        567
+      ],
+      "capTopY": 120,
+      "bodySpanDiagnostic": 447
+    }
+  ],
+  "clips": [
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 4,
+      "action": "ready",
+      "key": "confederate-gettysburg-v13-a-actions-w",
+      "frames": [
+        "a-ready-4-0"
+      ],
+      "sourceHash": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b",
+      "referenceHeight": 454,
+      "pivots": [
+        {
+          "x": 0.671451,
+          "y": 0.942584
+        }
+      ],
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "scope": "Exact historical Gettysburg v13 local opt-in preview only; incomplete unapproved art family."
+    },
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 4,
+      "action": "fire",
+      "key": "confederate-gettysburg-v13-a-actions-w",
+      "frames": [
+        "a-fire-4-0"
+      ],
+      "sourceHash": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b",
+      "referenceHeight": 454,
+      "pivots": [
+        {
+          "x": 0.767145,
+          "y": 0.963317
+        }
+      ],
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "scope": "Exact historical Gettysburg v13 local opt-in preview only; incomplete unapproved art family.",
+      "muzzles": [
+        {
+          "x": 0.30622,
+          "y": 0.341308
+        }
+      ]
+    },
+    {
+      "side": "confederate",
+      "identity": "a",
+      "direction": 4,
+      "action": "reload",
+      "key": "confederate-gettysburg-v13-a-actions-w",
+      "frames": [
+        "a-reload-4-0",
+        "a-reload-4-1"
+      ],
+      "sourceHash": "b69df8ddd96adaa450dccdd9220882f82936e07462e3e9fc215f7ab9c907fd2b",
+      "referenceHeight": 454,
+      "pivots": [
+        {
+          "x": 0.69697,
+          "y": 0.912281
+        },
+        {
+          "x": 0.61244,
+          "y": 0.904306
+        }
+      ],
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "scope": "Exact historical Gettysburg v13 local opt-in preview only; incomplete unapproved art family."
+    }
+  ],
+  "limitations": [
+    "Exact-SHA four-cell source acceptance only, not human/anatomy/history certification.",
+    "Concealed pelvis and far-side attachments are estimated; supporting sole has about3-pixel native uncertainty.",
+    "Visible stylization does not establish historical equipment manufacture or drill.",
+    "No default/production/full-family approval or runtime temporal/cold-resume/residency/performance proof.",
+    "Model-assisted inspection is not independent human, physical anatomy, historical drill or exact skeleton/face continuity certification.",
+    "Native cap-to-supporting-sole spans vary by 14 pixels; one whole-source body reference retains this variation.",
+    "Entire native RGBA source and each full equal cell are copied byte-for-byte without raster mirroring, recoloring, trimming, resampling or alpha cleanup.",
+    "Low-alpha colored RGB residue remains; targeted alpha diagnostics do not prove perfectly clean transparency or exhaustive absence of fringe.",
+    "Missing Confederate identities/bearings, aim transitions, authored recoil, melee, casualties, bearer grips and crews remain unfinished."
+  ],
+  "productionApproved": false,
+  "familyApproved": false
+}

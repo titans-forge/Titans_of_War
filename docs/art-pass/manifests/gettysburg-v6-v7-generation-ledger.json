@@ -1,0 +1,2720 @@
+{
+  "schemaVersion": 1,
+  "ledger": "gettysburg-v6-v7-native-generation-attempts",
+  "auditDate": "2026-10-01",
+  "scope": "All preserved imagegen candidate attempts in Gettysburg v6 and v7 candidate directories, including the superseded Union B SE study. Native Blender structural guide renders are linked references, excluded from imagegen-attempt counts.",
+  "generator": {
+    "tool": "built-in imagegen",
+    "modelIdentifier": null,
+    "modelIdentifierStatus": "not reported by authored prompt records; no model ID inferred"
+  },
+  "method": "Read-only native file/Pillow/NumPy inspection. Original files recovered by exact SHA-256 matching within the preserved generated-images directory, then directly compared byte-for-byte. Prompt/review/annotation records bind selection, rejection and reference provenance. Only this ledger JSON was written.",
+  "countAudit": {
+    "requested": {
+      "v6": 4,
+      "v7": 13,
+      "total": 17
+    },
+    "observed": {
+      "v6": 4,
+      "v7": 13,
+      "total": 17,
+      "selectedLimitedPreviews": 7,
+      "rejectedOrSuperseded": 10
+    },
+    "matchesRequested": true,
+    "candidateInventoryPattern": "docs/art-pass/candidates/gettysburg-v{6,7}/*candidate.png",
+    "candidatePaths": [
+      "docs/art-pass/candidates/gettysburg-v6/union-se-actions-bearing-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v6/union-se-actions-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v6/union-se-actions-padded-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v6/union-se-actions-spaced-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-actions-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-actions-padded-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-gait-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-padded-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-spaced-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-padded-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-spaced-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/union-a-s-march-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/union-b-s-actions-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/union-b-s-march-candidate.png",
+      "docs/art-pass/candidates/gettysburg-v7/union-b-se-march-candidate.png"
+    ],
+    "excludedNativeBlenderGuidePaths": [
+      "docs/art-pass/candidates/gettysburg-v6/union-se-actions-guide.png",
+      "docs/art-pass/candidates/gettysburg-v7/confederate-n-actions-guide.png",
+      "docs/art-pass/candidates/gettysburg-v7/confederate-n-march-guide.png",
+      "docs/art-pass/candidates/gettysburg-v7/union-s-actions-guide.png",
+      "docs/art-pass/candidates/gettysburg-v7/union-s-march-guide.png"
+    ],
+    "promptBlocks": {
+      "docs/art-pass/prompts/gettysburg-v6-diagonal-actions.md": 4,
+      "docs/art-pass/prompts/gettysburg-v7-board-facing.md": 12,
+      "docs/art-pass/prompts/gettysburg-v7-union-variation.md": 1
+    },
+    "promptBlocksTotal": 17,
+    "preservedGeneratedOriginalFilesScanned": 125,
+    "matchedOriginals": 17,
+    "unmatchedCandidates": [],
+    "explanation": "Four v6 and thirteen v7 candidates reconcile exactly. Seven final sources are selected only for limited opt-in previews; ten earlier attempts/studies remain rejected or unused. Other generated-images files are outside this ledger project scope. Prompt documents are not chronologically ordered; entry order groups lineage and is not a generation timestamp claim."
+  },
+  "records": {
+    "prompts": [
+      {
+        "path": "docs/art-pass/prompts/gettysburg-v6-diagonal-actions.md",
+        "sha256AtAudit": "c5bcbf4bf0368ebf6ecd2f1afcc77f3b5b773efb038dfa6b4336fd679a755667",
+        "bytes": 11316,
+        "exactPromptBlocks": 4
+      },
+      {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "sha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "bytes": 24956,
+        "exactPromptBlocks": 12
+      },
+      {
+        "path": "docs/art-pass/prompts/gettysburg-v7-union-variation.md",
+        "sha256AtAudit": "c51532917e059137bd2ae1a0804a01f2abcf6406815fcc6307ac5e87b7023c85",
+        "bytes": 3396,
+        "exactPromptBlocks": 1
+      }
+    ],
+    "annotations": [
+      {
+        "path": "docs/art-pass/manifests/gettysburg-v6-source-annotations.json",
+        "sha256AtAudit": "c8c2e1dcf0bb3c28e83eb3564c73c621a034d4fa08290addfbc13d35a9a895b1"
+      },
+      {
+        "path": "docs/art-pass/manifests/gettysburg-v7-source-annotations.json",
+        "sha256AtAudit": "222c9cc7429b46b2277e556a033216d68284e2fb7bc2c4f1ef9ba2ab40e52d9d"
+      }
+    ],
+    "reviews": [
+      {
+        "path": "docs/art-pass/reviews/gettysburg-v6-independent-source-review.md",
+        "sha256AtAudit": "ae55d00878304761a892f0c6a958609c93d55bfa63a3129acf7367f17d6dca50"
+      },
+      {
+        "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-source-review.md",
+        "sha256AtAudit": "bd8a8511b01d7a7a1851a6fb02e58c3011e7b17067c4d4ed853aa2d0f532d3b5"
+      },
+      {
+        "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-pose-review.md",
+        "sha256AtAudit": "cb1b75e4d14406f0293f5f39f8fd8172df0699054a94bf8a01e2ab9aef5d49a6"
+      }
+    ]
+  },
+  "referenceArtifactCatalog": [
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-guide.png",
+      "sha256": "79a2b769e561cd92bab6f3d31b02f9af54a763d960dfe5eebb914d088cbd05c2",
+      "bytes": 449268,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6,
+      "nativeStructuralReceipt": {
+        "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-guide.json",
+        "sha256": "798b944ac0f7ff481f7cbc7744ae14217b63de185948bb35b29792dccdd48844"
+      }
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v5/union-se-march-padded-candidate.png",
+      "sha256": "90a124967a778789bcdbaf5b83fc0cba689f145486450ba775798ec106bfc103",
+      "bytes": 609955,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v5/union-e-actions-candidate.png",
+      "sha256": "78fa2637045fc066ad86c1ea118897e30ac35542a1a14c6327f923a904b8201f",
+      "bytes": 592405,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-candidate.png",
+      "sha256": "e25a0563b430988c4951afbb47e31ac22945d783e300f162090f79c6c2aad50a",
+      "bytes": 861288,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-spaced-candidate.png",
+      "sha256": "880cb6fc8dd66bc205b0a6c29fe7cdfca5d0c4245b5e67b5f97d668011cc5453",
+      "bytes": 735312,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-bearing-candidate.png",
+      "sha256": "8575d57a5f4cccfa7aff619588b9168c23d0cfdc9ac633546e81e3409bf48910",
+      "bytes": 738207,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/union-s-march-guide.png",
+      "sha256": "b2ca51175eef4e691340d697dff4c4f295ce4bdfb99b8089b6cb88d014318aca",
+      "bytes": 452657,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6,
+      "nativeStructuralReceipt": {
+        "path": "docs/art-pass/candidates/gettysburg-v7/union-s-march-guide.json",
+        "sha256": "3a882896b1f72cbe1c7e7f8898cd79c75a63369db5bc3a4bc57a4e925adad2b4"
+      }
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v4/union-e-march-candidate.png",
+      "sha256": "43b8f4394b6071958b693d83c14eb7f324e277706bd5513d23b536467e9f6a42",
+      "bytes": 520759,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/confederate-n-march-guide.png",
+      "sha256": "bc02642f32379810c85c7bbda94c4e5975379221c509945c02b14f7e970f4f4e",
+      "bytes": 478301,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6,
+      "nativeStructuralReceipt": {
+        "path": "docs/art-pass/candidates/gettysburg-v7/confederate-n-march-guide.json",
+        "sha256": "d85d2e1ce9becac3cec878a1abbc43347015d44da92a0c8a1f2fe62bdfedf772"
+      }
+    },
+    {
+      "path": "public/images/units/gettysburg-v2/confederate-ready.png",
+      "sha256": "a5f837f49675440bba1e500b348fdbd3759a2238f6f10bf39a449d92709a9aa3",
+      "bytes": 1861683,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-candidate.png",
+      "sha256": "b41f0b3641fe52961813f105fe3fb8ece7b2b8c9d4c966d694ca308e0333a96c",
+      "bytes": 540671,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-padded-candidate.png",
+      "sha256": "30f24508f2acc51df7ed80777337375dd5860c45da8cc64b2b6c0d5bcfa70a80",
+      "bytes": 505052,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-gait-candidate.png",
+      "sha256": "82b91a9655e18ed39f22d3c06e5c9b94cfcdd8a9e4ec645593b4732feb0ceb4b",
+      "bytes": 515970,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/union-s-actions-guide.png",
+      "sha256": "ced9e1dcaefcde88423ebcebe86653a2741f9b38bd54cf28472a9071da8036e5",
+      "bytes": 453847,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6,
+      "nativeStructuralReceipt": {
+        "path": "docs/art-pass/candidates/gettysburg-v7/union-s-actions-guide.json",
+        "sha256": "2314d676b294d9fb50afd648a761bc2af9b77764a1ec1314c331b5d271b2acc0"
+      }
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/union-a-s-march-candidate.png",
+      "sha256": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000",
+      "bytes": 490022,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-padded-candidate.png",
+      "sha256": "bd4650f0d15bf5abf612ebfd01edecf9560c7a459b96e2643ad76ca5d023b61e",
+      "bytes": 768245,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-candidate.png",
+      "sha256": "f9af79132c87ebdcedd6d00a181d5dc8dbe54234fa988b5ba8bf9a1d68806ed5",
+      "bytes": 635687,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-padded-candidate.png",
+      "sha256": "bc6ed631e9ef2b344e80d7e1100acc01446263e0db36d833f69bbdc30ce03920",
+      "bytes": 576944,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-spaced-candidate.png",
+      "sha256": "fe4b4a0a531f6e4e6709fa747393d4fa6cc6e5e13ced71fd287c4cd440d1e1c2",
+      "bytes": 582088,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/union-b-s-march-candidate.png",
+      "sha256": "544dd143918b18af8807e34a406affe7c83b23378a554d5f88a12586cc16ef68",
+      "bytes": 494241,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/confederate-n-actions-guide.png",
+      "sha256": "0724d5892c8350731274ff4317045a0aa0b4197e756af99752bb53bbba34a1b0",
+      "bytes": 453268,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6,
+      "nativeStructuralReceipt": {
+        "path": "docs/art-pass/candidates/gettysburg-v7/confederate-n-actions-guide.json",
+        "sha256": "d5d0da0b901b29b9100206e9a46056892ec1a1bc0060cdf9631f299d5c61c1a0"
+      }
+    },
+    {
+      "path": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-actions-candidate.png",
+      "sha256": "05d4e1e6ae31805db79db5c4546074f43e77ff7127f071846bbf3766ffd4df4a",
+      "bytes": 562460,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pngBitDepth": 8,
+      "pngColorType": 6
+    }
+  ],
+  "attempts": [
+    {
+      "id": "gettysburg-v6-union-se-actions-candidate",
+      "artPass": "gettysburg-v6",
+      "side": "union",
+      "identity": "a",
+      "direction": 1,
+      "screenBearing": "SE",
+      "actionSheet": "actions",
+      "stage": "initial",
+      "precedingAttemptProjectPath": null,
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-dc0191e9-c2d9-4e9d-88e9-1201f85adcf3.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-candidate.png",
+      "native": {
+        "sha256": "e25a0563b430988c4951afbb47e31ac22945d783e300f162090f79c6c2aad50a",
+        "bytes": 861288,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            171,
+            18,
+            148,
+            0
+          ],
+          [
+            79,
+            126,
+            28,
+            0
+          ],
+          [
+            192,
+            0,
+            184,
+            46
+          ],
+          [
+            126,
+            0,
+            260,
+            40
+          ]
+        ],
+        "minimumAlpha64Padding": 0,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": false
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v6-diagonal-actions.md",
+        "section": "SE ready / fire / load / ram candidate",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 12,
+        "fenceEndLineAtAudit": 22,
+        "exactFencedPromptSha256": "19fd68d0b20593608494c0ee318d7af530f98e7c78a56ab099a7a3074d0f7068",
+        "documentSha256AtAudit": "c5bcbf4bf0368ebf6ecd2f1afcc77f3b5b773efb038dfa6b4336fd679a755667",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-guide.png",
+          "role": "native Blender structural camera/action guide",
+          "provenanceBasis": "authored prompt record"
+        },
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v5/union-se-march-padded-candidate.png",
+          "role": "reviewed Union A SE appearance/identity",
+          "provenanceBasis": "authored prompt record"
+        },
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v5/union-e-actions-candidate.png",
+          "role": "weapon/socket/bore/rod hardware only; E bearing not requested",
+          "provenanceBasis": "authored prompt record"
+        }
+      ],
+      "decision": {
+        "selected": false,
+        "status": "rejected_preserved_attempt",
+        "reason": "All four cells fail alpha64 padding: top-row bottom margins0/0 and bottom-row top margins0/0; strong-opacity cross-row contamination. Firing projection was also shallower than the SE guide.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v6-independent-source-review.md",
+            "sha256AtAudit": "ae55d00878304761a892f0c6a958609c93d55bfa63a3129acf7367f17d6dca50"
+          }
+        ],
+        "annotationRecord": null,
+        "publicCopies": [],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v6-union-se-actions-spaced-candidate",
+      "artPass": "gettysburg-v6",
+      "side": "union",
+      "identity": "a",
+      "direction": 1,
+      "screenBearing": "SE",
+      "actionSheet": "actions",
+      "stage": "common size/placement correction",
+      "precedingAttemptProjectPath": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-candidate.png",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-7ccdc4c8-cb6b-4774-a5c1-fef5b243a0c2.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-spaced-candidate.png",
+      "native": {
+        "sha256": "880cb6fc8dd66bc205b0a6c29fe7cdfca5d0c4245b5e67b5f97d668011cc5453",
+        "bytes": 735312,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            172,
+            44,
+            164,
+            17
+          ],
+          [
+            111,
+            149,
+            36,
+            18
+          ],
+          [
+            202,
+            88,
+            191,
+            59
+          ],
+          [
+            156,
+            43,
+            244,
+            60
+          ]
+        ],
+        "minimumAlpha64Padding": 17,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": true
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v6-diagonal-actions.md",
+        "section": "Uniform size and cell placement correction",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 33,
+        "fenceEndLineAtAudit": 38,
+        "exactFencedPromptSha256": "bdbbcb61c7d50cd5cfb3fba39c418429001d9f666b8bac6a2d25c55cddeccff6",
+        "documentSha256AtAudit": "c5bcbf4bf0368ebf6ecd2f1afcc77f3b5b773efb038dfa6b4336fd679a755667",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-candidate.png",
+          "role": "edit target",
+          "provenanceBasis": "stage lineage in prompt record; preceding output"
+        }
+      ],
+      "decision": {
+        "selected": false,
+        "status": "rejected_preserved_attempt",
+        "reason": "Solid padding passes (minimum17px), but manual firing barrel projection is approximately15degrees down-right, outside requested25\u201335degree SE band. Integration/firing-bearing approval withheld.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v6-independent-source-review.md",
+            "sha256AtAudit": "ae55d00878304761a892f0c6a958609c93d55bfa63a3129acf7367f17d6dca50"
+          }
+        ],
+        "annotationRecord": null,
+        "publicCopies": [],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v6-union-se-actions-bearing-candidate",
+      "artPass": "gettysburg-v6",
+      "side": "union",
+      "identity": "a",
+      "direction": 1,
+      "screenBearing": "SE",
+      "actionSheet": "actions",
+      "stage": "firing bearing correction",
+      "precedingAttemptProjectPath": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-spaced-candidate.png",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-911a39b3-a6b2-4cc5-8a4a-d527c74c7d82.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-bearing-candidate.png",
+      "native": {
+        "sha256": "8575d57a5f4cccfa7aff619588b9168c23d0cfdc9ac633546e81e3409bf48910",
+        "bytes": 738207,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            158,
+            48,
+            179,
+            13
+          ],
+          [
+            118,
+            161,
+            59,
+            12
+          ],
+          [
+            194,
+            93,
+            186,
+            44
+          ],
+          [
+            148,
+            52,
+            233,
+            44
+          ]
+        ],
+        "minimumAlpha64Padding": 12,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": false
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v6-diagonal-actions.md",
+        "section": "Firing bearing correction",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 45,
+        "fenceEndLineAtAudit": 50,
+        "exactFencedPromptSha256": "754644049b800fb52d9a9dda759301065a59779b30b1ce44a8c8f0406039c93a",
+        "documentSha256AtAudit": "c5bcbf4bf0368ebf6ecd2f1afcc77f3b5b773efb038dfa6b4336fd679a755667",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-spaced-candidate.png",
+          "role": "edit target",
+          "provenanceBasis": "stage lineage in prompt record; preceding output"
+        },
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-guide.png",
+          "role": "SE firing structure/bearing reference",
+          "provenanceBasis": "Image2 structure requirement and initial guide provenance in same record"
+        }
+      ],
+      "decision": {
+        "selected": false,
+        "status": "rejected_preserved_attempt",
+        "reason": "Firing bearing improved, but ready/fire bottom alpha64 margins13/12px fail16px gate. Untargeted cells/details also changed; exact isolated edit not established.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v6-independent-source-review.md",
+            "sha256AtAudit": "ae55d00878304761a892f0c6a958609c93d55bfa63a3129acf7367f17d6dca50"
+          }
+        ],
+        "annotationRecord": null,
+        "publicCopies": [],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v6-union-se-actions-padded-candidate",
+      "artPass": "gettysburg-v6",
+      "side": "union",
+      "identity": "a",
+      "direction": 1,
+      "screenBearing": "SE",
+      "actionSheet": "actions",
+      "stage": "top-row padding repair",
+      "precedingAttemptProjectPath": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-bearing-candidate.png",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-6b11e5f8-74f7-461d-a205-feab49475f65.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-padded-candidate.png",
+      "native": {
+        "sha256": "bd4650f0d15bf5abf612ebfd01edecf9560c7a459b96e2643ad76ca5d023b61e",
+        "bytes": 768245,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            157,
+            18,
+            176,
+            39
+          ],
+          [
+            117,
+            119,
+            56,
+            45
+          ],
+          [
+            193,
+            92,
+            183,
+            43
+          ],
+          [
+            147,
+            51,
+            231,
+            43
+          ]
+        ],
+        "minimumAlpha64Padding": 18,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": true
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v6-diagonal-actions.md",
+        "section": "Top-row padding repair",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 59,
+        "fenceEndLineAtAudit": 63,
+        "exactFencedPromptSha256": "cf269a98e42d7fdd01a39f1cd9f5a3908647f49488a26dad98ae14179063a02f",
+        "documentSha256AtAudit": "c5bcbf4bf0368ebf6ecd2f1afcc77f3b5b773efb038dfa6b4336fd679a755667",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-bearing-candidate.png",
+          "role": "edit target",
+          "provenanceBasis": "stage lineage in prompt record; preceding output"
+        }
+      ],
+      "decision": {
+        "selected": true,
+        "status": "selected_limited_opt_in_source_preview",
+        "reason": "Final all-four-cell review passes alpha64 padding with minimum18px and approximately31degree SE fire. Selected only for limited opt-in Union A SE ready/fire/two-state loading source preview.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v6-independent-source-review.md",
+            "sha256AtAudit": "ae55d00878304761a892f0c6a958609c93d55bfa63a3129acf7367f17d6dca50"
+          }
+        ],
+        "annotationRecord": {
+          "path": "docs/art-pass/manifests/gettysburg-v6-source-annotations.json",
+          "jsonPointer": "/sources/0",
+          "recordSha256AtAudit": "c8c2e1dcf0bb3c28e83eb3564c73c621a034d4fa08290addfbc13d35a9a895b1",
+          "sourceSha256": "bd4650f0d15bf5abf612ebfd01edecf9560c7a459b96e2643ad76ca5d023b61e",
+          "key": null,
+          "scope": "opt-in Union A SE stationary actions; exact historical Gettysburg v6/v7 only",
+          "referenceHeight": 495,
+          "actions": [
+            [
+              "ready",
+              [
+                0
+              ]
+            ],
+            [
+              "fire",
+              [
+                1
+              ]
+            ],
+            [
+              "reload",
+              [
+                2,
+                3
+              ]
+            ]
+          ],
+          "productionApproved": false
+        },
+        "publicCopies": [
+          {
+            "path": "public/images/units/gettysburg-v6/union-a-actions-se.png",
+            "byteIdentical": true,
+            "sha256": "bd4650f0d15bf5abf612ebfd01edecf9560c7a459b96e2643ad76ca5d023b61e"
+          }
+        ],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-union-b-se-march-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "union",
+      "identity": "b",
+      "direction": 1,
+      "screenBearing": "SE",
+      "actionSheet": "march",
+      "stage": "identity study superseded by S/N priority",
+      "precedingAttemptProjectPath": null,
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-46a0cd5e-5d74-4695-9a40-863c29127570.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/union-b-se-march-candidate.png",
+      "native": {
+        "sha256": "92c1605c766a1b7cd925d812c2838caaee2915e3dc2ab5d074b0c1d3f63274f6",
+        "bytes": 621862,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            215,
+            23,
+            118,
+            25
+          ],
+          [
+            131,
+            31,
+            218,
+            16
+          ],
+          [
+            236,
+            12,
+            110,
+            23
+          ],
+          [
+            131,
+            16,
+            218,
+            35
+          ]
+        ],
+        "minimumAlpha64Padding": 12,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": false
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-union-variation.md",
+        "section": "B SE march identity edit",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 9,
+        "fenceEndLineAtAudit": 16,
+        "exactFencedPromptSha256": "67d8415b467c3e75f5d0cab9a0a4820ec1fa6896afca1c59f7944e12fea7e7c1",
+        "documentSha256AtAudit": "c51532917e059137bd2ae1a0804a01f2abcf6406815fcc6307ac5e87b7023c85",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v5/union-se-march-padded-candidate.png",
+          "role": "identity-edit target and preserved SE gait/camera/kit reference",
+          "provenanceBasis": "authored prompt record"
+        }
+      ],
+      "decision": {
+        "selected": false,
+        "status": "rejected_and_superseded_study",
+        "reason": "Bottom-left top alpha64 padding12px fails16px gate. S/N board-facing work superseded this B SE study; no public asset or v7 source annotation selects it. Exact identity-only edit/age/pose invariance not certified.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/prompts/gettysburg-v7-union-variation.md",
+            "sha256AtAudit": "c51532917e059137bd2ae1a0804a01f2abcf6406815fcc6307ac5e87b7023c85"
+          }
+        ],
+        "annotationRecord": null,
+        "publicCopies": [],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-union-a-s-march-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "union",
+      "identity": "a",
+      "direction": 2,
+      "screenBearing": "S",
+      "actionSheet": "march",
+      "stage": "initial",
+      "precedingAttemptProjectPath": null,
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-0440f236-1080-4b3a-9c91-7b0d7625ac5c.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/union-a-s-march-candidate.png",
+      "native": {
+        "sha256": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000",
+        "bytes": 490022,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            260,
+            27,
+            192,
+            21
+          ],
+          [
+            187,
+            27,
+            263,
+            23
+          ],
+          [
+            262,
+            19,
+            189,
+            33
+          ],
+          [
+            188,
+            18,
+            263,
+            39
+          ]
+        ],
+        "minimumAlpha64Padding": 18,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": true
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "section": "Union A S march",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 13,
+        "fenceEndLineAtAudit": 16,
+        "exactFencedPromptSha256": "4c39a0530a378f30c709c1f7f10bc2618ea90325dc151dc90630fcfbfe4e3e4d",
+        "documentSha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/union-s-march-guide.png",
+          "role": "native Blender S march structure/bearing",
+          "provenanceBasis": "authored prompt record"
+        },
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v4/union-e-march-candidate.png",
+          "role": "Union A identity/kit/material appearance only",
+          "provenanceBasis": "authored prompt record"
+        }
+      ],
+      "decision": {
+        "selected": true,
+        "status": "selected_limited_opt_in_source_preview",
+        "reason": "All edges pass alpha64 padding (minimum18px). Opposite contacts and passing supports accepted with chronological native-cell order[0,3,2,1], correcting passing-cell order relative to guide. Limited opt-in Union A S march source preview.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-source-review.md",
+            "sha256AtAudit": "bd8a8511b01d7a7a1851a6fb02e58c3011e7b17067c4d4ed853aa2d0f532d3b5"
+          }
+        ],
+        "annotationRecord": {
+          "path": "docs/art-pass/manifests/gettysburg-v7-source-annotations.json",
+          "jsonPointer": "/sources/0",
+          "recordSha256AtAudit": "222c9cc7429b46b2277e556a033216d68284e2fb7bc2c4f1ef9ba2ab40e52d9d",
+          "sourceSha256": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000",
+          "key": "union-gettysburg-v7-a-march-s",
+          "scope": "opt-in Union A S marching; exact historical Gettysburg v7 only",
+          "referenceHeight": 440,
+          "actions": [
+            [
+              "march",
+              [
+                0,
+                3,
+                2,
+                1
+              ]
+            ]
+          ],
+          "productionApproved": false
+        },
+        "publicCopies": [
+          {
+            "path": "public/images/units/gettysburg-v7/union-a-march-s.png",
+            "byteIdentical": true,
+            "sha256": "c177704cb3e4c7fa64f405dc13724013ad03476a53510ae7b01a1614376e7000"
+          }
+        ],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-confederate-a-n-march-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 6,
+      "screenBearing": "N",
+      "actionSheet": "march",
+      "stage": "initial",
+      "precedingAttemptProjectPath": null,
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-98325177-d11c-4ef1-8462-735f0bb978f6.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-candidate.png",
+      "native": {
+        "sha256": "b41f0b3641fe52961813f105fe3fb8ece7b2b8c9d4c966d694ca308e0333a96c",
+        "bytes": 540671,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            227,
+            26,
+            219,
+            21
+          ],
+          [
+            213,
+            26,
+            231,
+            26
+          ],
+          [
+            228,
+            5,
+            217,
+            43
+          ],
+          [
+            213,
+            6,
+            233,
+            62
+          ]
+        ],
+        "minimumAlpha64Padding": 5,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": false
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "section": "Confederate A N march",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 24,
+        "fenceEndLineAtAudit": 27,
+        "exactFencedPromptSha256": "eba571abe1f0e88e706429912ef2a9f0eff194e779af6e50023cf9aef9175099",
+        "documentSha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/confederate-n-march-guide.png",
+          "role": "native Blender N march structure/bearing",
+          "provenanceBasis": "authored prompt record"
+        },
+        {
+          "path": "public/images/units/gettysburg-v2/confederate-ready.png",
+          "role": "accepted Confederate A rear/N appearance and kit, index6",
+          "provenanceBasis": "authored prompt record"
+        }
+      ],
+      "decision": {
+        "selected": false,
+        "status": "rejected_preserved_attempt",
+        "reason": "Bottom-row top alpha64 margins5/6px fail16px gate. Visual leg-chain review also finds repeated left-support/right-lift passing states, withholding intended opposite passing support.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-pose-review.md",
+            "sha256AtAudit": "cb1b75e4d14406f0293f5f39f8fd8172df0699054a94bf8a01e2ab9aef5d49a6"
+          }
+        ],
+        "annotationRecord": null,
+        "publicCopies": [],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-confederate-a-n-march-padded-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 6,
+      "screenBearing": "N",
+      "actionSheet": "march",
+      "stage": "common size/placement padding repair",
+      "precedingAttemptProjectPath": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-candidate.png",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-18f00f17-cad0-4ed1-82b1-296025fc04df.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-padded-candidate.png",
+      "native": {
+        "sha256": "30f24508f2acc51df7ed80777337375dd5860c45da8cc64b2b6c0d5bcfa70a80",
+        "bytes": 505052,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            236,
+            64,
+            215,
+            16
+          ],
+          [
+            176,
+            64,
+            272,
+            16
+          ],
+          [
+            237,
+            36,
+            212,
+            48
+          ],
+          [
+            177,
+            36,
+            269,
+            58
+          ]
+        ],
+        "minimumAlpha64Padding": 16,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": true
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "section": "Confederate N march padding repair",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 119,
+        "fenceEndLineAtAudit": 121,
+        "exactFencedPromptSha256": "78121dbc37f487f8fb97cb2dd08695a0e75ca2caab4784943372046932e331e0",
+        "documentSha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-candidate.png",
+          "role": "edit target",
+          "provenanceBasis": "authored prompt record"
+        },
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/confederate-n-march-guide.png",
+          "role": "native Blender N gait/bearing structural reference",
+          "provenanceBasis": "authored prompt record"
+        }
+      ],
+      "decision": {
+        "selected": false,
+        "status": "rejected_preserved_attempt",
+        "reason": "Fresh native padding measurement passes16px gate exactly at the minimum. The recorded subsequent opposite-passing repair identifies repeated left-support passing states; source is rejected for that gait concern, not for padding.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+            "sha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7"
+          }
+        ],
+        "annotationRecord": null,
+        "publicCopies": [],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-confederate-a-n-march-gait-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 6,
+      "screenBearing": "N",
+      "actionSheet": "march",
+      "stage": "opposite-passing repair",
+      "precedingAttemptProjectPath": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-padded-candidate.png",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-763b5874-08c1-4bf9-821c-6567efb8afe8.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-gait-candidate.png",
+      "native": {
+        "sha256": "82b91a9655e18ed39f22d3c06e5c9b94cfcdd8a9e4ec645593b4732feb0ceb4b",
+        "bytes": 515970,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            236,
+            74,
+            210,
+            0
+          ],
+          [
+            169,
+            75,
+            275,
+            2
+          ],
+          [
+            235,
+            37,
+            208,
+            38
+          ],
+          [
+            168,
+            38,
+            273,
+            44
+          ]
+        ],
+        "minimumAlpha64Padding": 0,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": false
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "section": "Confederate N opposite-passing repair",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 100,
+        "fenceEndLineAtAudit": 102,
+        "exactFencedPromptSha256": "9978014926b2b2a1ed53fa946f96659496ae5aad0344157eb83da4c712f60ee2",
+        "documentSha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-padded-candidate.png",
+          "role": "edit target",
+          "provenanceBasis": "authored prompt record"
+        },
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/confederate-n-march-guide.png",
+          "role": "opposite-passing anatomical chain structure only",
+          "provenanceBasis": "authored prompt record"
+        }
+      ],
+      "decision": {
+        "selected": false,
+        "status": "rejected_preserved_attempt",
+        "reason": "Visual review resolves repeated-support concern: BR right support/left lift, TR left support/right lift. Top-row bottom alpha64 margins0/2px still fail16px gate.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-pose-review.md",
+            "sha256AtAudit": "cb1b75e4d14406f0293f5f39f8fd8172df0699054a94bf8a01e2ab9aef5d49a6"
+          }
+        ],
+        "annotationRecord": null,
+        "publicCopies": [],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-confederate-a-n-march-spaced-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 6,
+      "screenBearing": "N",
+      "actionSheet": "march",
+      "stage": "top-row placement correction",
+      "precedingAttemptProjectPath": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-gait-candidate.png",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-80e16995-dcb6-4d10-a57b-b712ab84f2a0.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-spaced-candidate.png",
+      "native": {
+        "sha256": "cf9e0535f7dd581b815940c32a35d51b4ec573d92c6a3cdfbaf4bb74ccc10e64",
+        "bytes": 516307,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            234,
+            36,
+            208,
+            35
+          ],
+          [
+            170,
+            36,
+            271,
+            39
+          ],
+          [
+            233,
+            38,
+            207,
+            36
+          ],
+          [
+            166,
+            38,
+            271,
+            42
+          ]
+        ],
+        "minimumAlpha64Padding": 35,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": true
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "section": "Final placement corrections",
+        "blockWithinSection": 2,
+        "fenceStartLineAtAudit": 74,
+        "fenceEndLineAtAudit": 76,
+        "exactFencedPromptSha256": "71c4d7bf5875da6b0987a0ad870a10e3c53cf82bf740c7b98d894345026951a7",
+        "documentSha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-gait-candidate.png",
+          "role": "edit target",
+          "provenanceBasis": "authored prompt record"
+        }
+      ],
+      "decision": {
+        "selected": true,
+        "status": "selected_limited_opt_in_source_preview",
+        "reason": "All four fresh leg/kit/grip reviews pass limited preview with native order[0,1,2,3]. All alpha64 margins pass, minimum35px. Exact40px translation or isolated edit not claimed.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-pose-review.md",
+            "sha256AtAudit": "cb1b75e4d14406f0293f5f39f8fd8172df0699054a94bf8a01e2ab9aef5d49a6"
+          }
+        ],
+        "annotationRecord": {
+          "path": "docs/art-pass/manifests/gettysburg-v7-source-annotations.json",
+          "jsonPointer": "/sources/3",
+          "recordSha256AtAudit": "222c9cc7429b46b2277e556a033216d68284e2fb7bc2c4f1ef9ba2ab40e52d9d",
+          "sourceSha256": "cf9e0535f7dd581b815940c32a35d51b4ec573d92c6a3cdfbaf4bb74ccc10e64",
+          "key": "confederate-gettysburg-v7-a-march-n",
+          "scope": "opt-in Confederate A N marching; exact historical Gettysburg v7 only",
+          "referenceHeight": 440,
+          "actions": [
+            [
+              "march",
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          ],
+          "productionApproved": false
+        },
+        "publicCopies": [
+          {
+            "path": "public/images/units/gettysburg-v7/confederate-a-march-n.png",
+            "byteIdentical": true,
+            "sha256": "cf9e0535f7dd581b815940c32a35d51b4ec573d92c6a3cdfbaf4bb74ccc10e64"
+          }
+        ],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-union-a-s-actions-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "union",
+      "identity": "a",
+      "direction": 2,
+      "screenBearing": "S",
+      "actionSheet": "actions",
+      "stage": "initial",
+      "precedingAttemptProjectPath": null,
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-f5a41ec6-e61e-46bc-b917-ce08f908b92b.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-candidate.png",
+      "native": {
+        "sha256": "f9af79132c87ebdcedd6d00a181d5dc8dbe54234fa988b5ba8bf9a1d68806ed5",
+        "bytes": 635687,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            256,
+            14,
+            169,
+            1
+          ],
+          [
+            146,
+            143,
+            279,
+            0
+          ],
+          [
+            246,
+            80,
+            172,
+            60
+          ],
+          [
+            185,
+            0,
+            245,
+            52
+          ]
+        ],
+        "minimumAlpha64Padding": 0,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": false
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "section": "Union A S stationary actions",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 109,
+        "fenceEndLineAtAudit": 113,
+        "exactFencedPromptSha256": "b103be89ae99f79539488e16ad1c139eeb18403859a91db79377ec3cd4089ead",
+        "documentSha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/union-s-actions-guide.png",
+          "role": "native Blender S action structure/bearing",
+          "provenanceBasis": "authored prompt record"
+        },
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/union-a-s-march-candidate.png",
+          "role": "matching Union A S appearance/body/kit",
+          "provenanceBasis": "authored prompt record"
+        },
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v6/union-se-actions-padded-candidate.png",
+          "role": "fine separate weapon hardware only; SE bearing not requested",
+          "provenanceBasis": "authored prompt record"
+        }
+      ],
+      "decision": {
+        "selected": false,
+        "status": "rejected_preserved_attempt",
+        "reason": "Ready top/bottom alpha64 margins14/1px, fire bottom0px and ram top0px fail16px gate. High-alpha cross-row content prevents integration.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-source-review.md",
+            "sha256AtAudit": "bd8a8511b01d7a7a1851a6fb02e58c3011e7b17067c4d4ed853aa2d0f532d3b5"
+          }
+        ],
+        "annotationRecord": null,
+        "publicCopies": [],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-union-a-s-actions-padded-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "union",
+      "identity": "a",
+      "direction": 2,
+      "screenBearing": "S",
+      "actionSheet": "actions",
+      "stage": "common size/placement padding repair",
+      "precedingAttemptProjectPath": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-candidate.png",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-4c676c11-be69-465a-ac45-f9cabe9e453c.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-padded-candidate.png",
+      "native": {
+        "sha256": "bc6ed631e9ef2b344e80d7e1100acc01446263e0db36d833f69bbdc30ce03920",
+        "bytes": 576944,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            262,
+            50,
+            172,
+            12
+          ],
+          [
+            169,
+            169,
+            266,
+            11
+          ],
+          [
+            249,
+            97,
+            174,
+            64
+          ],
+          [
+            201,
+            43,
+            233,
+            59
+          ]
+        ],
+        "minimumAlpha64Padding": 11,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": false
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "section": "Union A S actions padding repair",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 92,
+        "fenceEndLineAtAudit": 94,
+        "exactFencedPromptSha256": "5ee52242d67dfe58fe464cf57f6f1ec031ee3fc618382cc80a9dd502147f0f7c",
+        "documentSha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-candidate.png",
+          "role": "edit target",
+          "provenanceBasis": "named initial stationary sheet and stage lineage in prompt record"
+        }
+      ],
+      "decision": {
+        "selected": false,
+        "status": "rejected_preserved_attempt",
+        "reason": "Top-row bottom alpha64 margins12/11px remain below16px despite improved containment and plausible S fire. Exact85% scale transform not claimed.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-source-review.md",
+            "sha256AtAudit": "bd8a8511b01d7a7a1851a6fb02e58c3011e7b17067c4d4ed853aa2d0f532d3b5"
+          }
+        ],
+        "annotationRecord": null,
+        "publicCopies": [],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-union-a-s-actions-spaced-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "union",
+      "identity": "a",
+      "direction": 2,
+      "screenBearing": "S",
+      "actionSheet": "actions",
+      "stage": "all-cell placement correction",
+      "precedingAttemptProjectPath": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-padded-candidate.png",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-adf64ff0-2f76-4d26-940b-5eaa3b7e518f.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-spaced-candidate.png",
+      "native": {
+        "sha256": "fe4b4a0a531f6e4e6709fa747393d4fa6cc6e5e13ced71fd287c4cd440d1e1c2",
+        "bytes": 582088,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            255,
+            32,
+            176,
+            33
+          ],
+          [
+            168,
+            149,
+            264,
+            31
+          ],
+          [
+            246,
+            75,
+            167,
+            90
+          ],
+          [
+            200,
+            29,
+            227,
+            75
+          ]
+        ],
+        "minimumAlpha64Padding": 29,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": true
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "section": "Final placement corrections",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 68,
+        "fenceEndLineAtAudit": 70,
+        "exactFencedPromptSha256": "2ea2be08a95970cc2c90cc0af1684804021adefb25a52973d0dc8bcd231a73f6",
+        "documentSha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-padded-candidate.png",
+          "role": "edit target",
+          "provenanceBasis": "authored prompt record"
+        }
+      ],
+      "decision": {
+        "selected": true,
+        "status": "selected_limited_opt_in_source_preview",
+        "reason": "Fresh all-four-cell review accepts limited Union A S ready/fire/two-state loading source preview. All alpha64 margins pass, minimum29px, with chiefly S tube mouth/axis. Exact20px translation or isolated edit not claimed.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-source-review.md",
+            "sha256AtAudit": "bd8a8511b01d7a7a1851a6fb02e58c3011e7b17067c4d4ed853aa2d0f532d3b5"
+          }
+        ],
+        "annotationRecord": {
+          "path": "docs/art-pass/manifests/gettysburg-v7-source-annotations.json",
+          "jsonPointer": "/sources/2",
+          "recordSha256AtAudit": "222c9cc7429b46b2277e556a033216d68284e2fb7bc2c4f1ef9ba2ab40e52d9d",
+          "sourceSha256": "fe4b4a0a531f6e4e6709fa747393d4fa6cc6e5e13ced71fd287c4cd440d1e1c2",
+          "key": "union-gettysburg-v7-a-actions-s",
+          "scope": "opt-in Union A S stationary actions; exact historical Gettysburg v7 only",
+          "referenceHeight": 460,
+          "actions": [
+            [
+              "ready",
+              [
+                0
+              ]
+            ],
+            [
+              "fire",
+              [
+                1
+              ]
+            ],
+            [
+              "reload",
+              [
+                2,
+                3
+              ]
+            ]
+          ],
+          "productionApproved": false
+        },
+        "publicCopies": [
+          {
+            "path": "public/images/units/gettysburg-v7/union-a-actions-s.png",
+            "byteIdentical": true,
+            "sha256": "fe4b4a0a531f6e4e6709fa747393d4fa6cc6e5e13ced71fd287c4cd440d1e1c2"
+          }
+        ],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-union-b-s-march-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "union",
+      "identity": "b",
+      "direction": 2,
+      "screenBearing": "S",
+      "actionSheet": "march",
+      "stage": "identity edit",
+      "precedingAttemptProjectPath": "docs/art-pass/candidates/gettysburg-v7/union-a-s-march-candidate.png",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-d40e2817-9eb2-4369-855c-f2f05d608bd6.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/union-b-s-march-candidate.png",
+      "native": {
+        "sha256": "544dd143918b18af8807e34a406affe7c83b23378a554d5f88a12586cc16ef68",
+        "bytes": 494241,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            259,
+            26,
+            189,
+            20
+          ],
+          [
+            186,
+            26,
+            260,
+            22
+          ],
+          [
+            260,
+            18,
+            187,
+            31
+          ],
+          [
+            187,
+            19,
+            259,
+            37
+          ]
+        ],
+        "minimumAlpha64Padding": 18,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": true
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "section": "Union B S identity march",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 83,
+        "fenceEndLineAtAudit": 85,
+        "exactFencedPromptSha256": "187a1fdad1436464a0d67c52755c983ffdbb13c90984940948c8a11933fdba5b",
+        "documentSha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/union-a-s-march-candidate.png",
+          "role": "reviewed edit target and S gait/camera/kit reference",
+          "provenanceBasis": "authored prompt record"
+        }
+      ],
+      "decision": {
+        "selected": true,
+        "status": "selected_limited_opt_in_source_preview",
+        "reason": "Fresh all-four-cell review accepts subtle consistent B facial variation and chronological mapping[0,3,2,1]. All alpha64 margins pass, minimum18px. Exact age/likeness/face-only isolation unverified; limited opt-in Union B S march source preview.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-source-review.md",
+            "sha256AtAudit": "bd8a8511b01d7a7a1851a6fb02e58c3011e7b17067c4d4ed853aa2d0f532d3b5"
+          }
+        ],
+        "annotationRecord": {
+          "path": "docs/art-pass/manifests/gettysburg-v7-source-annotations.json",
+          "jsonPointer": "/sources/1",
+          "recordSha256AtAudit": "222c9cc7429b46b2277e556a033216d68284e2fb7bc2c4f1ef9ba2ab40e52d9d",
+          "sourceSha256": "544dd143918b18af8807e34a406affe7c83b23378a554d5f88a12586cc16ef68",
+          "key": "union-gettysburg-v7-b-march-s",
+          "scope": "opt-in Union B S marching; exact historical Gettysburg v7 only",
+          "referenceHeight": 440,
+          "actions": [
+            [
+              "march",
+              [
+                0,
+                3,
+                2,
+                1
+              ]
+            ]
+          ],
+          "productionApproved": false
+        },
+        "publicCopies": [
+          {
+            "path": "public/images/units/gettysburg-v7/union-b-march-s.png",
+            "byteIdentical": true,
+            "sha256": "544dd143918b18af8807e34a406affe7c83b23378a554d5f88a12586cc16ef68"
+          }
+        ],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-union-b-s-actions-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "union",
+      "identity": "b",
+      "direction": 2,
+      "screenBearing": "S",
+      "actionSheet": "actions",
+      "stage": "identity edit",
+      "precedingAttemptProjectPath": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-spaced-candidate.png",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-b296bf0a-9092-4608-9e1b-edaa5c769bef.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/union-b-s-actions-candidate.png",
+      "native": {
+        "sha256": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c",
+        "bytes": 601577,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            254,
+            33,
+            174,
+            32
+          ],
+          [
+            167,
+            148,
+            261,
+            31
+          ],
+          [
+            244,
+            74,
+            163,
+            89
+          ],
+          [
+            198,
+            29,
+            223,
+            73
+          ]
+        ],
+        "minimumAlpha64Padding": 29,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": true
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "section": "Union B S stationary identity edit",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 46,
+        "fenceEndLineAtAudit": 48,
+        "exactFencedPromptSha256": "1fac2a3e60b12f5c995ed69674f948174458bc9d46b4aed9aa1b889868a978ab",
+        "documentSha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/union-a-s-actions-spaced-candidate.png",
+          "role": "first reference/edit target",
+          "provenanceBasis": "authored prompt record"
+        },
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/union-b-s-march-candidate.png",
+          "role": "second reference/B facial identity only",
+          "provenanceBasis": "authored prompt record"
+        }
+      ],
+      "decision": {
+        "selected": true,
+        "status": "selected_limited_opt_in_source_preview",
+        "reason": "Fresh all-four-cell review accepts subtle consistent B identity and S ready/fire/two-state loading. All alpha64 margins pass, minimum29px; exact face-only isolation/age/likeness unverified. Limited opt-in source preview.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-source-review.md",
+            "sha256AtAudit": "bd8a8511b01d7a7a1851a6fb02e58c3011e7b17067c4d4ed853aa2d0f532d3b5"
+          }
+        ],
+        "annotationRecord": {
+          "path": "docs/art-pass/manifests/gettysburg-v7-source-annotations.json",
+          "jsonPointer": "/sources/4",
+          "recordSha256AtAudit": "222c9cc7429b46b2277e556a033216d68284e2fb7bc2c4f1ef9ba2ab40e52d9d",
+          "sourceSha256": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c",
+          "key": "union-gettysburg-v7-b-actions-s",
+          "scope": "opt-in Union B S stationary actions; exact historical Gettysburg v7 only",
+          "referenceHeight": 460,
+          "actions": [
+            [
+              "ready",
+              [
+                0
+              ]
+            ],
+            [
+              "fire",
+              [
+                1
+              ]
+            ],
+            [
+              "reload",
+              [
+                2,
+                3
+              ]
+            ]
+          ],
+          "productionApproved": false
+        },
+        "publicCopies": [
+          {
+            "path": "public/images/units/gettysburg-v7/union-b-actions-s.png",
+            "byteIdentical": true,
+            "sha256": "b3719bc03beba5f3613ec22300789d0653aadb0ce05102b65a8cfcb4be73ad5c"
+          }
+        ],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-confederate-a-n-actions-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 6,
+      "screenBearing": "N",
+      "actionSheet": "actions",
+      "stage": "initial",
+      "precedingAttemptProjectPath": null,
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-7055b6cb-ce6a-4704-b7b7-db3cb5607ddd.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-actions-candidate.png",
+      "native": {
+        "sha256": "05d4e1e6ae31805db79db5c4546074f43e77ff7127f071846bbf3766ffd4df4a",
+        "bytes": 562460,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            254,
+            39,
+            187,
+            0
+          ],
+          [
+            183,
+            93,
+            263,
+            0
+          ],
+          [
+            276,
+            0,
+            171,
+            45
+          ],
+          [
+            191,
+            0,
+            261,
+            46
+          ]
+        ],
+        "minimumAlpha64Padding": 0,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": false
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "section": "Confederate A N stationary actions",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 55,
+        "fenceEndLineAtAudit": 59,
+        "exactFencedPromptSha256": "36835c41d8552f79b3c34f45831ab975d368695d12f16901aec9352857fc2789",
+        "documentSha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/confederate-n-actions-guide.png",
+          "role": "native Blender N action structure/bearing",
+          "provenanceBasis": "authored prompt record"
+        },
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-march-gait-candidate.png",
+          "role": "corrected-gait N appearance/kit only; padding still withheld",
+          "provenanceBasis": "authored prompt record"
+        },
+        {
+          "path": "public/images/units/gettysburg-v2/confederate-ready.png",
+          "role": "accepted Confederate A N kit appearance/index6",
+          "provenanceBasis": "authored prompt record"
+        }
+      ],
+      "decision": {
+        "selected": false,
+        "status": "rejected_preserved_attempt",
+        "reason": "Top-row bottom alpha64 margins0/0px and bottom-row top margins0/0px fail16px gate; strong-opacity row spill. Rear-view fire is plausible but layout rejected.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-pose-review.md",
+            "sha256AtAudit": "cb1b75e4d14406f0293f5f39f8fd8172df0699054a94bf8a01e2ab9aef5d49a6"
+          }
+        ],
+        "annotationRecord": null,
+        "publicCopies": [],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    },
+    {
+      "id": "gettysburg-v7-confederate-a-n-actions-padded-candidate",
+      "artPass": "gettysburg-v7",
+      "side": "confederate",
+      "identity": "a",
+      "direction": 6,
+      "screenBearing": "N",
+      "actionSheet": "actions",
+      "stage": "common size/placement correction",
+      "precedingAttemptProjectPath": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-actions-candidate.png",
+      "originalPath": "/Users/titansforge/.codex/generated_images/01a07dec-6d36-7502-86fe-7095742e4f2e/exec-5a8d1209-90cc-4d47-be3d-3f991d4fb88f.png",
+      "projectPath": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-actions-padded-candidate.png",
+      "native": {
+        "sha256": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0",
+        "bytes": 468067,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "format": "PNG",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "pngBitDepth": 8,
+        "pngColorType": 6
+      },
+      "preservation": {
+        "projectByteIdenticalToOriginal": true,
+        "bindingMethod": "Unique SHA-256 match followed by direct byte comparison; both native files inspected.",
+        "rasterPostprocessingPerformed": false
+      },
+      "cellLayout": {
+        "rows": 2,
+        "columns": 2,
+        "cellDimensions": [
+          627,
+          627
+        ],
+        "cellOrder": "row-major native cells0,1,2,3"
+      },
+      "nativeMeasurement": {
+        "alpha64SolidPaddingLTRB": [
+          [
+            268,
+            81,
+            197,
+            28
+          ],
+          [
+            194,
+            159,
+            274,
+            24
+          ],
+          [
+            282,
+            66,
+            175,
+            90
+          ],
+          [
+            201,
+            84,
+            266,
+            88
+          ]
+        ],
+        "minimumAlpha64Padding": 24,
+        "hardPaddingGate": {
+          "thresholdAlpha": 64,
+          "minimumPixelsOnEveryCellEdge": 16,
+          "passes": true
+        },
+        "method": "read-only Pillow/native NumPy alpha scans; inclusive pixel extrema"
+      },
+      "promptRecord": {
+        "path": "docs/art-pass/prompts/gettysburg-v7-board-facing.md",
+        "section": "Confederate N actions spacing correction",
+        "blockWithinSection": 1,
+        "fenceStartLineAtAudit": 35,
+        "fenceEndLineAtAudit": 39,
+        "exactFencedPromptSha256": "57105effbfbc668c07064bb330811be67610af114d30f29116433516450ab7a4",
+        "documentSha256AtAudit": "a18a925b51d384f4a15daf1858991eeea8468359966acc21030ef662215d45a7",
+        "provenanceLimit": "authored exact prompt record; full tool-request transcript is not reconstructed here"
+      },
+      "references": [
+        {
+          "path": "docs/art-pass/candidates/gettysburg-v7/confederate-a-n-actions-candidate.png",
+          "role": "edit target",
+          "provenanceBasis": "named initial05d4 source and stage lineage in prompt record"
+        }
+      ],
+      "decision": {
+        "selected": true,
+        "status": "selected_limited_opt_in_source_preview",
+        "reason": "Fresh all-four-cell review accepts limited Confederate A N ready/fire/two-state loading preview. All alpha64 margins pass, minimum24px. Shoulder/stock-region relationship supports plausible N fire; hidden grips/cheek/sight/bore/rod insertion remain uncertified. Exact75% reduction not claimed.",
+        "evidenceRecords": [
+          {
+            "path": "docs/art-pass/reviews/gettysburg-v7-board-facing-pose-review.md",
+            "sha256AtAudit": "cb1b75e4d14406f0293f5f39f8fd8172df0699054a94bf8a01e2ab9aef5d49a6"
+          }
+        ],
+        "annotationRecord": {
+          "path": "docs/art-pass/manifests/gettysburg-v7-source-annotations.json",
+          "jsonPointer": "/sources/5",
+          "recordSha256AtAudit": "222c9cc7429b46b2277e556a033216d68284e2fb7bc2c4f1ef9ba2ab40e52d9d",
+          "sourceSha256": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0",
+          "key": "confederate-gettysburg-v7-a-actions-n",
+          "scope": "opt-in Confederate A N stationary actions; exact historical Gettysburg v7 only",
+          "referenceHeight": 375,
+          "actions": [
+            [
+              "ready",
+              [
+                0
+              ]
+            ],
+            [
+              "fire",
+              [
+                1
+              ]
+            ],
+            [
+              "reload",
+              [
+                2,
+                3
+              ]
+            ]
+          ],
+          "productionApproved": false
+        },
+        "publicCopies": [
+          {
+            "path": "public/images/units/gettysburg-v7/confederate-a-actions-n.png",
+            "byteIdentical": true,
+            "sha256": "8c97e41c277a07f7e63d08bbb7aa91782ab38a7769531fc2bc9dcf2dd7c5faf0"
+          }
+        ],
+        "productionApproved": false,
+        "fullFamilyApproved": false,
+        "humanValidated": false,
+        "historicalValidated": false,
+        "anatomicalValidated": false
+      }
+    }
+  ],
+  "limits": [
+    "Selected means the named limited source preview and matching local public copy/annotations, not production/full-family approval.",
+    "Model-assisted anatomical/pose/camera judgments are not independent human, historical or drill validation.",
+    "Prompt requests for exact identity-only edits, 75/80/85/88/90 percent sizes or exact12/20/40px translations do not establish those transformations in generated pixels.",
+    "Reference bindings come from authored prompt records and named stage lineage; precise tool arguments or hidden model metadata are not invented.",
+    "Every native source remains unchanged. Alpha64 padding does not imply transparent margins at every nonzero alpha or a fringe-free image.",
+    "The first padded Confederate N marcher passes the16px padding gate; its rejection is the recorded repeated-support gait concern.",
+    "Chronological native-cell order[0,3,2,1] for selected Union S marchers differs from row-major guide order; pixels were not reordered."
+  ]
+}

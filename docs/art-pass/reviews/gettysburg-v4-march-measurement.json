@@ -1,0 +1,317 @@
+{
+  "source": "docs/art-pass/candidates/gettysburg-v4/union-e-march-candidate.png",
+  "sourceHash": "43b8f4394b6071958b693d83c14eb7f324e277706bd5513d23b536467e9f6a42",
+  "publicPNG": "public/images/units/gettysburg-v4/union-a-march-e.png",
+  "atlas": "public/images/units/gettysburg-v4/union-a-march-e.json",
+  "nativeSize": {
+    "w": 1254,
+    "h": 1254
+  },
+  "nativeMode": "RGBA",
+  "pixelTreatment": "none; equal full native cells, byte-for-byte PNG copy",
+  "annotationMethod": "manual torso/pelvis center X and row-shared ground Y, approximately +/-5 source px; never per-phase lowest-boot roots",
+  "scaleMethod": "one standing-height reference per source/action calibration; march 412, stationary ready/fire 426, reload 447 native px",
+  "registrationLimits": "imagegen did not preserve exact guide placement or native body scale; row registration and measured uniform scaling correct layout, not anatomy or equipment drift",
+  "cells": [
+    {
+      "index": 0,
+      "alpha": {
+        "1": {
+          "pixels": 51689,
+          "bounds": [
+            0,
+            38,
+            621,
+            611
+          ]
+        },
+        "8": {
+          "pixels": 44872,
+          "bounds": [
+            157,
+            40,
+            485,
+            564
+          ]
+        },
+        "64": {
+          "pixels": 43710,
+          "bounds": [
+            158,
+            42,
+            484,
+            563
+          ]
+        },
+        "128": {
+          "pixels": 43004,
+          "bounds": [
+            158,
+            43,
+            483,
+            563
+          ]
+        },
+        "240": {
+          "pixels": 41192,
+          "bounds": [
+            159,
+            49,
+            480,
+            562
+          ]
+        }
+      },
+      "solidPadding": [
+        158,
+        42,
+        143,
+        64
+      ],
+      "rootPixels": [
+        310,
+        565
+      ],
+      "capTopY": 153
+    },
+    {
+      "index": 1,
+      "alpha": {
+        "1": {
+          "pixels": 46248,
+          "bounds": [
+            41,
+            23,
+            611,
+            623
+          ]
+        },
+        "8": {
+          "pixels": 39534,
+          "bounds": [
+            225,
+            41,
+            494,
+            565
+          ]
+        },
+        "64": {
+          "pixels": 38510,
+          "bounds": [
+            225,
+            42,
+            493,
+            563
+          ]
+        },
+        "128": {
+          "pixels": 37914,
+          "bounds": [
+            226,
+            44,
+            492,
+            563
+          ]
+        },
+        "240": {
+          "pixels": 36278,
+          "bounds": [
+            227,
+            48,
+            490,
+            562
+          ]
+        }
+      },
+      "solidPadding": [
+        225,
+        42,
+        134,
+        64
+      ],
+      "rootPixels": [
+        310,
+        565
+      ],
+      "capTopY": 158
+    },
+    {
+      "index": 2,
+      "alpha": {
+        "1": {
+          "pixels": 53742,
+          "bounds": [
+            154,
+            6,
+            605,
+            571
+          ]
+        },
+        "8": {
+          "pixels": 45745,
+          "bounds": [
+            172,
+            24,
+            485,
+            550
+          ]
+        },
+        "64": {
+          "pixels": 44563,
+          "bounds": [
+            173,
+            26,
+            484,
+            550
+          ]
+        },
+        "128": {
+          "pixels": 43870,
+          "bounds": [
+            173,
+            27,
+            483,
+            549
+          ]
+        },
+        "240": {
+          "pixels": 42046,
+          "bounds": [
+            174,
+            33,
+            480,
+            549
+          ]
+        }
+      },
+      "solidPadding": [
+        173,
+        26,
+        143,
+        77
+      ],
+      "rootPixels": [
+        307,
+        550
+      ],
+      "capTopY": 137
+    },
+    {
+      "index": 3,
+      "alpha": {
+        "1": {
+          "pixels": 46832,
+          "bounds": [
+            154,
+            3,
+            583,
+            555
+          ]
+        },
+        "8": {
+          "pixels": 40399,
+          "bounds": [
+            226,
+            30,
+            496,
+            550
+          ]
+        },
+        "64": {
+          "pixels": 39312,
+          "bounds": [
+            227,
+            31,
+            495,
+            549
+          ]
+        },
+        "128": {
+          "pixels": 38778,
+          "bounds": [
+            227,
+            33,
+            494,
+            549
+          ]
+        },
+        "240": {
+          "pixels": 37118,
+          "bounds": [
+            228,
+            37,
+            492,
+            548
+          ]
+        }
+      },
+      "solidPadding": [
+        227,
+        31,
+        132,
+        78
+      ],
+      "rootPixels": [
+        316,
+        550
+      ],
+      "capTopY": 138
+    }
+  ],
+  "clips": [
+    {
+      "side": "union",
+      "identity": "a",
+      "direction": 0,
+      "action": "march",
+      "key": "union-gettysburg-v4-march-e",
+      "frames": [
+        "a-march-0-0",
+        "a-march-0-1",
+        "a-march-0-2",
+        "a-march-0-3"
+      ],
+      "sourceHash": "43b8f4394b6071958b693d83c14eb7f324e277706bd5513d23b536467e9f6a42",
+      "referenceHeight": 412,
+      "pivots": [
+        {
+          "x": 0.494418,
+          "y": 0.901116
+        },
+        {
+          "x": 0.494418,
+          "y": 0.901116
+        },
+        {
+          "x": 0.489633,
+          "y": 0.877193
+        },
+        {
+          "x": 0.503987,
+          "y": 0.877193
+        }
+      ],
+      "approval": {
+        "reviewed": true,
+        "rejected": false
+      },
+      "scope": "opt-in E action-family preview only"
+    }
+  ],
+  "review": {
+    "scope": "opt-in Union A E-only ready/march/fire/two-state reload",
+    "productionApproved": false,
+    "familyApproved": false,
+    "anatomicalValidation": false,
+    "solidPaddingVerified": true,
+    "nonzeroAlphaPaddingVerified": false,
+    "risks": [
+      "Colored edge fringes and alpha 1..7 ghost pixels remain in original native source.",
+      "Two row placements and separate action scales require manual registration; no skeletal or exact identity certification.",
+      "Loading states simplify percussion muzzleloading; ramrod and fixed bayonet partly coalesce near the hand/muzzle.",
+      "Weapon is representative period imagery, not certified exact Model 1861 or regiment-specific armament.",
+      "Firing is one held pose; reload is two stepped states, not a smooth or complete drill.",
+      "Other directions, Confederate soldiers, second identity, melee, casualty and actual standard bearers remain accepted-art fallback."
+    ]
+  }
+}

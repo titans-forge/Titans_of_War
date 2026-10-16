@@ -1,0 +1,218 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 150,
+        "y": 14,
+        "w": 164,
+        "h": 493
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 164,
+        "h": 493
+      },
+      "sourceSize": {
+        "w": 164,
+        "h": 493
+      },
+      "pivot": {
+        "x": 0.496951,
+        "y": 0.993915
+      },
+      "bodyHeight": 449
+    },
+    "1": {
+      "frame": {
+        "x": 487,
+        "y": 10,
+        "w": 187,
+        "h": 500
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 187,
+        "h": 500
+      },
+      "sourceSize": {
+        "w": 187,
+        "h": 500
+      },
+      "pivot": {
+        "x": 0.542781,
+        "y": 0.994
+      },
+      "bodyHeight": 452
+    },
+    "2": {
+      "frame": {
+        "x": 851,
+        "y": 11,
+        "w": 186,
+        "h": 495
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 186,
+        "h": 495
+      },
+      "sourceSize": {
+        "w": 186,
+        "h": 495
+      },
+      "pivot": {
+        "x": 0.526882,
+        "y": 0.993939
+      },
+      "bodyHeight": 448
+    },
+    "3": {
+      "frame": {
+        "x": 1213,
+        "y": 21,
+        "w": 184,
+        "h": 489
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 184,
+        "h": 489
+      },
+      "sourceSize": {
+        "w": 184,
+        "h": 489
+      },
+      "pivot": {
+        "x": 0.48913,
+        "y": 0.993865
+      },
+      "bodyHeight": 452
+    },
+    "4": {
+      "frame": {
+        "x": 130,
+        "y": 515,
+        "w": 162,
+        "h": 476
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 162,
+        "h": 476
+      },
+      "sourceSize": {
+        "w": 162,
+        "h": 476
+      },
+      "pivot": {
+        "x": 0.484568,
+        "y": 0.993697
+      },
+      "bodyHeight": 444
+    },
+    "5": {
+      "frame": {
+        "x": 483,
+        "y": 518,
+        "w": 188,
+        "h": 470
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 188,
+        "h": 470
+      },
+      "sourceSize": {
+        "w": 188,
+        "h": 470
+      },
+      "pivot": {
+        "x": 0.465426,
+        "y": 0.993617
+      },
+      "bodyHeight": 441
+    },
+    "6": {
+      "frame": {
+        "x": 858,
+        "y": 515,
+        "w": 185,
+        "h": 475
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 185,
+        "h": 475
+      },
+      "sourceSize": {
+        "w": 185,
+        "h": 475
+      },
+      "pivot": {
+        "x": 0.478378,
+        "y": 0.993684
+      },
+      "bodyHeight": 443
+    },
+    "7": {
+      "frame": {
+        "x": 1234,
+        "y": 516,
+        "w": 175,
+        "h": 475
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 175,
+        "h": 475
+      },
+      "sourceSize": {
+        "w": 175,
+        "h": 475
+      },
+      "pivot": {
+        "x": 0.531429,
+        "y": 0.993684
+      },
+      "bodyHeight": 444
+    }
+  },
+  "meta": {
+    "image": "union-ready.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "sha256": "75160c7f8168a69f9dbddc0460c4fd6406708798cbea1f3c3965b4c3e4c3f0cc",
+    "chromaKey": "#00ff00",
+    "generation": "OpenAI built-in imagegen; model identifier not reported",
+    "originalPixelsPreserved": true,
+    "originalFileSha256": "98d5bec5a0000ddbee38d0fe26977280ab7328764e9fc524535c94b7d8e338af",
+    "pixelSha256": "88848d58f2ed188be9baf46ea9a3c426df8a490c717cac510ef5aa990dcc976b",
+    "encoding": "Lossless PNG repack; original decoded pixels and non-IDAT chunks preserved"
+  }
+}
