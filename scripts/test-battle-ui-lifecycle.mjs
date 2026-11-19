@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import test from 'node:test';
-import { boundedZoom, overviewZoom } from '../src/battle/battleUsability.js';
+import { boundedZoom, hasFieldViewport, overviewZoom } from '../src/battle/battleUsability.js';
 import { landmarkField, landmarkDestinationError } from '../src/battle/historicalLandmarks.js';
 
 // Exercise the production scene's actual frame methods without a GPU/DOM renderer.
@@ -13,7 +13,7 @@ const emit = source.slice(source.indexOf('  emitSnapshot('), source.lastIndexOf(
 const setSpeedBlock = source.slice(source.indexOf('  setSpeed(speed) {'), source.indexOf('  setSelected(id)'));
 test('opening or closing the field desk preserves a manually chosen close-up', () => {
   const block = source.slice(source.indexOf('  resizeCamera() {'), source.indexOf('  fitCamera() {'));
-  const Scene = vm.runInNewContext(`(class {${block}})`, { boundedZoom, overviewZoom });
+  const Scene = vm.runInNewContext(`(class {${block}})`, { boundedZoom, hasFieldViewport, overviewZoom });
   const scene = new Scene();
   let fitted = 0, centered;
   Object.assign(scene, { cameraMode: 'manual', scale: { width: 1200, height: 500 }, world: { width: 1700, height: 900 },
@@ -24,11 +24,11 @@ test('opening or closing the field desk preserves a manually chosen close-up', (
 });
 function scene({ outcome = 'undecided', pending = false, speed = 0, hidden = false } = {}) {
   const document = { hidden };
-  const methods = vm.runInNewContext(`({${update},\n${emit}})`, { document, recordFieldProfile() {} });
+  const methods = vm.runInNewContext(`({${update},\n${emit}})`, { document, hasFieldViewport, recordFieldProfile() {} });
   let ticks = 0, callbacks = 0;
   const snapshot = { outcome, time: 0, formations: [] };
   const context = {
-    ...methods, speed, snapshotClock: 0, presentationCache: new FieldPresentationCache(), views: new Map(), cameras: {main:{zoom:1}},
+    ...methods, speed, scale: { width: 1200, height: 500 }, snapshotClock: 0, presentationCache: new FieldPresentationCache(), views: new Map(), cameras: {main:{zoom:1}},
     engine: { pendingOutcome: pending, tick() { ticks++; }, snapshot: () => snapshot },
     shadows: { clear() {} }, dust: { clear() {} }, smoke: { clear() {} }, drawSelection() {},
     onBattleSnapshot() { callbacks++; },

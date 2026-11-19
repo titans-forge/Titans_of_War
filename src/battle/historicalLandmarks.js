@@ -1,6 +1,9 @@
+import { DUNKER_CHURCH } from './antietamArt.js';
+
 // Representative placement on the compressed battle boards, not survey coordinates.
 // Building footprints block every side equally; yards confer no additional cover.
 const sites = {
+  antietam: [DUNKER_CHURCH],
   wilderness: [{ id: 'widow-tapp-house', name: 'Widow Tapp House', minimumRules: 11, assetSet: 'landmarks-v4', x: 285, y: 510, width: 92, height: 60, artWidth: 150, artHeight: 124, labelOffsetY: -88,
     approachX: 320, approachY: 625,
     note: 'Catharine Tapp’s rented farm stood beside the Orange Plank Road. Her family fled as Hill’s front broke and Longstreet’s troops arrived. This is an illustrative reconstruction of the modest log home. The marked farm clearing has open-ground cover and movement; the battle’s short visibility limits still apply.',
@@ -48,7 +51,7 @@ const sites = {
 
 export function landmarksFor(scenarioId, version) {
   return version >= 8 ? (sites[scenarioId] || []).filter(site => version >= (site.minimumRules || 8))
-    .map(site => ({ ...site, src: `images/battles/${site.assetSet || 'landmarks-v1'}/${site.id}.png` })) : [];
+    .map(site => ({ ...site, src: site.src ?? `images/battles/${site.assetSet || 'landmarks-v1'}/${site.id}.png` })) : [];
 }
 
 // July 3 Gettysburg retains its dedicated rules; both tactical systems expose

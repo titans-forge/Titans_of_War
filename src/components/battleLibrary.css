@@ -1,0 +1,121 @@
+.campaign-modal.cw-battle-library {
+  overflow: hidden;
+  gap: 12px;
+}
+
+.cw-battle-library-body {
+  min-height: 0;
+  overflow-y: auto;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding-inline-end: 4px;
+}
+
+.cw-battle-library-body:focus-visible {
+  outline: 2px solid #ede0a9;
+  outline-offset: -2px;
+}
+
+.cw-battle-library-footer {
+  flex: none;
+  padding-block-start: 10px;
+  border-block-start: 1px solid #515b53;
+}
+
+.cw-battle-library-footer > button {
+  width: 100%;
+}
+
+.cw-battle-library-search {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: end;
+  gap: 8px;
+  margin-block-end: 10px;
+}
+
+.cw-battle-library-search:has(button) {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.cw-battle-library-search input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: 1px solid #697064;
+  background: #1d2324;
+  color: inherit;
+  font: inherit;
+  font-size: max(16px, 1em);
+}
+
+.cw-battle-library-status:not(:empty) {
+  margin: 6px 0 12px;
+}
+
+.cw-battle-library select {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-height: 44px;
+}
+
+.cw-battle-library-date {
+  margin-top: 8px;
+}
+
+.campaign-modal.cw-report-dialog {
+  overflow: hidden;
+  gap: 12px;
+}
+
+.campaign-modal.cw-report-dialog > .cw-report-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding-inline-end: 6px;
+}
+
+.cw-report-body:focus-visible {
+  outline: 2px solid #ede0a9;
+  outline-offset: -2px;
+}
+
+.cw-report-footer {
+  flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-block-start: 1px solid #515b53;
+  padding-block-start: 10px;
+}
+
+.cw-report-footer > button {
+  flex: 1 1 175px;
+}
+
+.cw-campaign-report-footer {
+  align-items: center;
+}
+
+.cw-campaign-report-footer > p {
+  flex: 1 1 230px;
+  font-size: .875rem;
+}
+
+.cw-campaign-report-footer > button {
+  flex: 0 1 auto;
+  margin-inline-start: auto;
+}
+
+@media (max-width: 480px) {
+  .cw-campaign-report-footer > button {
+    flex: 1 0 100%;
+  }
+}

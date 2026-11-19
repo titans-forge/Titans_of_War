@@ -1,5 +1,5 @@
 import { getBattleSupplyProfile, EMERGENCY_RESERVE_LIMIT } from './campaignSupply.js';
-import { BATTLE_SCENARIOS } from './battles.js';
+import { battleForScenario } from './battles.js';
 
 export function createCampaignContinuity(after, entry, nextScenario) {
   const next = !after.gameOver && nextScenario ? {
@@ -14,7 +14,7 @@ export function createCampaignContinuity(after, entry, nextScenario) {
     treasury: economy.treasuryArrears, ammunition: economy.munitionsArrears,
     reserves: Math.max(0, EMERGENCY_RESERVE_LIMIT - economy.emergencyUsed),
   } : null;
-  const nextBattle = next && Object.hasOwn(BATTLE_SCENARIOS, nextScenario.id);
+  const nextBattle = next && battleForScenario(nextScenario, after);
   const supply = nextBattle && modern ? getBattleSupplyProfile(after) : null;
   const carried = modern ? 'Campaign resources, obligations and recorded decisions' : 'Campaign resources and recorded decisions';
   const timelineNote = next && entry.scenarioId === 'atlanta_holds_october' && nextScenario.id === 'third_winchester'

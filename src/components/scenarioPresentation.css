@@ -1,4 +1,7 @@
-.scenario-theater { margin-bottom:1.25rem; min-width:0; }
+.scenario-theater { min-width:0; }
+.scenario-detail-content { display:flex; flex-direction:column; }
+.scenario-detail-body { margin-bottom:1.25rem; }
+.scenario-situation, .scenario-detail-toggle { display:none; }
 .scenario-identity h2 { font-size:clamp(1.15rem,2vw,1.45rem); color:var(--text-primary); line-height:1.25; margin:0 0 .4rem; }
 .scenario-command { color:var(--accent-gold); font-family:var(--font-mono); font-size:.76rem; line-height:1.5; margin:0; }
 .scenario-view-controls { display:flex; flex-wrap:wrap; gap:.45rem; margin:.85rem 0; }
@@ -6,6 +9,7 @@
 .scenario-view-controls button[aria-pressed="true"] { border-color:var(--accent-gold); background:rgba(212,175,55,.12); color:#f1d58b; }
 .scenario-view-controls button:focus-visible,.scene-source summary:focus-visible { outline:2px solid #f1d58b; outline-offset:3px; }
 .scenario-figure { margin:0; overflow:hidden; border:1px solid var(--border-color); border-radius:6px; background:#0b0e12; }
+.scenario-detail-body > .scenario-figure:first-child { margin-top:.85rem; }
 .scenario-visual { aspect-ratio:1672/941; width:100%; overflow:hidden; display:flex; align-items:center; justify-content:center; }
 .scenario-visual img { display:block; width:100%; height:100%; }
 .scenario-figure figcaption { padding:.75rem .9rem; border-top:1px solid rgba(212,175,55,.18); }
@@ -16,7 +20,123 @@
 .scene-source a { display:block; color:#e2c47c; margin-top:.45rem; text-underline-offset:3px; overflow-wrap:anywhere; }
 .scenario-briefing-text,.scenario-briefing p { font-size:.9rem; line-height:1.55; color:var(--text-secondary); }
 .scene-unavailable { padding:1rem; font-size:.85rem; line-height:1.5; }
-@media(max-width:700px) { .scenario-view-controls button { min-height:44px; } .scenario-figure figcaption { padding:.65rem .75rem; } .scenario-identity h2 { font-size:1.2rem; } }
+.cw-map-preview {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: #24231e;
+  cursor: zoom-in;
+}
+.cw-map-preview img {
+  display: block;
+  width: 100%;
+  height: clamp(12rem, 46vw, 21rem);
+  object-fit: contain;
+}
+.cw-map-preview span {
+  position: absolute;
+  inset: auto .65rem .65rem auto;
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  min-height: 44px;
+  padding: .45rem .7rem;
+  border: 1px solid #8f784c;
+  border-radius: 4px;
+  background: #151813;
+  color: #f2dbab;
+  font: 600 .8rem var(--font-display);
+}
+.cw-map-preview:focus-visible { outline-offset: -4px; }
+.cw-briefing-map h3 {
+  margin: .32rem 0 0;
+  color: #f1e1bd;
+  font-family: Georgia, serif;
+  font-size: 1.06rem;
+}
+.cw-map-source {
+  display: inline-block;
+  width: fit-content;
+  margin-top: .2rem;
+  padding-block: .38rem;
+  font-size: .82rem;
+  color: #e2c47c;
+  text-underline-offset: 3px;
+}
+.campaign-modal.cw-map-inspector {
+  width: min(62rem, 100%);
+  height: min(88dvh, 54rem);
+  padding: clamp(.65rem, 2vw, 1.15rem);
+  gap: .65rem;
+  overflow: hidden;
+}
+.cw-map-inspector > header { flex: none; }
+.cw-map-inspector > header h2 {
+  font: 600 clamp(1.05rem, 2vw, 1.35rem) / 1.2 Georgia, serif;
+}
+.cw-map-tools {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: .4rem;
+}
+.cw-map-tools button { min-width: 44px; }
+.cw-map-tools output {
+  margin-inline-start: auto;
+  color: var(--text-secondary);
+  font-size: .8rem;
+  white-space: nowrap;
+}
+.campaign-modal.cw-map-inspector > .cw-map-scroll {
+  display: flex;
+  flex: 1 1 0;
+  min-height: 0;
+  min-width: 0;
+  container-type: size;
+  overflow: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-x pan-y;
+  border: 1px solid #706248;
+  background: #22201c;
+}
+.cw-map-scroll img {
+  flex: none;
+  align-self: start;
+  margin: auto;
+  width: calc(100% * var(--map-zoom));
+  width: calc(min(100cqw, 100cqh * var(--map-aspect)) * var(--map-zoom));
+  height: auto;
+  max-width: none;
+}
+.cw-map-scroll:focus-visible { outline: 2px solid #f1d58b; outline-offset: -3px; }
+@media (max-width: 850px) {
+  .scenario-situation { display:block; margin:.65rem 0 .35rem; color:var(--text-secondary); font-size:.9rem; line-height:1.45; }
+  .scenario-detail-toggle {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:.5rem;
+    width:100%;
+    min-height:44px;
+    padding:.45rem 0;
+    border:0;
+    border-top:1px solid var(--border-color);
+    background:transparent;
+    color:var(--accent-gold);
+    font:600 .85rem var(--font-display);
+    text-align:left;
+    cursor:pointer;
+  }
+  .scenario-detail-toggle[aria-expanded="false"] + .scenario-detail-content { display:none; }
+  .scenario-detail-toggle[aria-expanded="true"] > svg { transform:rotate(180deg); }
+  .scenario-detail-content .briefing-preview { display:none; }
+  .scenario-briefing > summary { min-height:44px; align-content:center; cursor:pointer; }
+  .scenario-view-controls button { min-height:44px; }
+  .scenario-figure figcaption { padding:.65rem .75rem; }
+  .scenario-identity h2 { font-size:1.2rem; }
+}
 .campaign-report-card .battle-assessment { font-size:.95rem; line-height:1.55; }
 .campaign-report-card .battle-assessment-heading { gap:1rem; align-items:baseline; flex-wrap:wrap; }
 .campaign-report-card .battle-assessment-heading span { font-size:1.6rem; color:#e2c47c; }

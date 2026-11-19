@@ -1,6 +1,7 @@
 import { formationStatusLabel } from '../battle/battleTactics.js';
 import { getGettysburgFormationAdvice } from '../battle/gettysburgCommandBrief.js';
 import { canCommand } from '../battle/battleUsability.js';
+import { GETTYSBURG_RULES } from '../battle/gettysburgMechanics.js';
 
 const onField = unit => Boolean(unit?.active && unit.strength > 0 && !unit.withdrawn && !['broken', 'surrendered'].includes(unit.status));
 
@@ -23,6 +24,21 @@ export function selectableRetreatBlocker(selected, snapshot, blockerId) {
     || guidance.blockerSide !== selected.side) return null;
   const blocker = snapshot.formations.find(unit => unit.id === blockerId);
   return blocker?.id !== selected.id && onField(blocker) && blocker.side === selected.side && canCommand(blocker) && !blocker.pendingCommand ? blocker : null;
+}
+
+export function FormationWithdrawalReadout({ selected, fieldBattle, locations }) {
+  if (!onField(selected) || selected.order !== 'withdraw' || !selected.retreatOrigin) return null;
+  if (fieldBattle?.requireExitIds.includes(selected.id)) {
+    const exit = selected.retreatExit;
+    if (!Number.isFinite(exit?.x) || !Number.isFinite(exit?.y)) {
+      return <p>Marked exit required. Keep the rear exit clear of nearby enemy formations.</p>;
+    }
+    const label = locations.find(location => location.kind === 'Exit' && location.x === exit.x && location.y === exit.y)?.name;
+    const distance = Math.round(Math.hypot(selected.x - exit.x, selected.y - exit.y));
+    return <p>Marked exit required · {label || 'Assigned rear exit'} ({Math.round(exit.x)}, {Math.round(exit.y)}). About {distance} field units straight to the marker. Keep the exit clear of nearby enemy formations.</p>;
+  }
+  const distance = Math.round(Math.hypot(selected.x - selected.retreatOrigin.x, selected.y - selected.retreatOrigin.y));
+  return <p>Retreat distance {distance} / {GETTYSBURG_RULES.retreatDistance}. To leave before reaching an exit, move at least {GETTYSBURG_RULES.retreatRearProgress} field units toward your rear and clear enemy fire and pursuit.</p>;
 }
 
 // Display the current participation state without changing the preserved battle record.

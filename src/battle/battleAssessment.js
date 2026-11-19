@@ -5,6 +5,17 @@ import { henryHillConditions } from './henryHillObjective.js';
 import { battleAfterAction } from './battleAfterAction.js';
 import { BATTLE_ENGINE_CONFIGS } from './battleDefinitions.js';
 import { getGettysburgJacksonMissionPresentation } from './gettysburgJacksonMission.js';
+import { FIVE_FORKS_MISSIONS } from './fiveForksMission.js';
+import { JONESBOROUGH_MISSIONS } from './jonesboroughMission.js';
+import { SECOND_MANASSAS_MISSIONS } from './secondManassasMission.js';
+import { FREDERICKSBURG_MISSIONS } from './fredericksburgMission.js';
+import { GAINES_MILL_MISSIONS } from './gainesMillMission.js';
+import { NEW_MARKET_MISSIONS } from './newMarketMission.js';
+import { MISSIONARY_RIDGE_MISSIONS } from './missionaryRidgeMission.js';
+import { SPOTSYLVANIA_MISSIONS } from './spotsylvaniaMission.js';
+import { KENNESAW_MISSIONS } from './kennesawMission.js';
+import { VICKSBURG_MISSIONS } from './vicksburgMission.js';
+import { SAILORS_CREEK_MISSIONS } from './sailorsCreekMission.js';
 
 export const BATTLE_ASSESSMENT_VERSION = 1;
 const WIN = ['decisive-win', 'costly-win'];
@@ -16,6 +27,34 @@ const objective = (label, kind, outcomes, signals = []) => ({ label, kind, outco
 // The mission definitions follow the campaign choices and the engine's authored
 // success conditions. Political/cavalry work outside the field is not invented.
 export const BATTLE_OBJECTIVES = {
+  sailors_creek: Object.fromEntries(Object.entries(SAILORS_CREEK_MISSIONS).map(([id, mission]) =>
+    [id, objective(mission.assessment, mission.kind, [mission.result], ['sailorsCreek'])])),
+  vicksburg: Object.fromEntries(Object.entries(VICKSBURG_MISSIONS).map(([id, mission]) =>
+    [id, objective(mission.assessment, mission.kind, [mission.result], ['vicksburg'])])),
+  kennesaw_mountain: Object.fromEntries(Object.entries(KENNESAW_MISSIONS).map(([id, mission]) =>
+    [id, objective(mission.assessment, mission.kind, [mission.result], ['kennesaw'])])),
+  spotsylvania: Object.fromEntries(Object.entries(SPOTSYLVANIA_MISSIONS).map(([id, mission]) =>
+    [id, objective(mission.assessment, mission.kind, [mission.result], ['spotsylvania'])])),
+  missionary_ridge: Object.fromEntries(Object.entries(MISSIONARY_RIDGE_MISSIONS).map(([id, mission]) =>
+    [id, objective(mission.assessment, mission.kind, [mission.result], ['missionaryRidge'])])),
+  new_market: Object.fromEntries(Object.entries(NEW_MARKET_MISSIONS).map(([id, mission]) =>
+    [id, objective(mission.assessment, mission.kind, [mission.result], ['newMarket'])])),
+  gaines_mill: Object.fromEntries(Object.entries(GAINES_MILL_MISSIONS).map(([id, mission]) =>
+    [id, objective(mission.assessment, mission.kind, [mission.result], ['gainesMill'])])),
+  fredericksburg: Object.fromEntries(Object.entries(FREDERICKSBURG_MISSIONS).map(([id, mission]) =>
+    [id, objective(mission.assessment, mission.kind, [mission.result], ['fredericksburg'])])),
+  second_manassas: Object.fromEntries(Object.entries(SECOND_MANASSAS_MISSIONS).map(([id, mission]) =>
+    [id, objective(mission.assessment, mission.kind, [mission.result], ['secondManassas'])])),
+  jonesborough: Object.fromEntries(Object.entries(JONESBOROUGH_MISSIONS).map(([id, mission]) =>
+    [id, objective(mission.assessment, mission.kind, [mission.result], ['jonesborough'])])),
+  five_forks: Object.fromEntries(Object.entries(FIVE_FORKS_MISSIONS).map(([id, mission]) =>
+    [id, objective(mission.assessment, mission.threshold === undefined ? 'hold' : 'withdraw', [mission.result], ['fiveForks'])])),
+  antietam: {
+    option_a: objective('Hold the Bloody Lane under pressure', 'hold', ['costly-win'], ['antietam']),
+    option_b: objective('Withdraw at least 65% of the army in order', 'withdraw', WITHDRAW, ['antietam']),
+    option_c: objective('Defend both the Cornfield and the Bloody Lane', 'hold', WIN, ['antietam']),
+    option_d: objective('Recover the Lower Bridge approach with A. P. Hill', 'attack', WIN, ['antietam']),
+  },
   first_manassas: {
     option_a: objective('Break the Union attack with a counterstroke', 'attack', WIN),
     option_b: objective('Hold Henry Hill against the Union attack', 'hold', WIN),
@@ -93,6 +132,18 @@ const resultLabels = {
 function readSignal(id, snapshot, config) {
   const value = (label, satisfied, detail) => ({ label, satisfied, detail });
   switch (id) {
+    case 'missionaryRidge': return value('Missionary Ridge mission', snapshot.fieldBattle?.missionaryRidge?.status === 'achieved', snapshot.fieldBattle?.missionaryRidge?.title || 'No field evidence recorded');
+    case 'spotsylvania': return value('Spotsylvania mission', snapshot.fieldBattle?.spotsylvania?.status === 'achieved', snapshot.fieldBattle?.spotsylvania?.title || 'No field evidence recorded');
+    case 'kennesaw': return value('Kennesaw Mountain mission', snapshot.fieldBattle?.kennesaw?.status === 'achieved', snapshot.fieldBattle?.kennesaw?.title || 'No field evidence recorded');
+    case 'vicksburg': return value('Vicksburg mission', snapshot.fieldBattle?.vicksburg?.status === 'achieved', snapshot.fieldBattle?.vicksburg?.title || 'No field evidence recorded');
+    case 'sailorsCreek': return value('Sailor’s Creek mission', snapshot.fieldBattle?.sailorsCreek?.status === 'achieved', snapshot.fieldBattle?.sailorsCreek?.title || 'No field evidence recorded');
+    case 'newMarket': return value('New Market mission', snapshot.fieldBattle?.newMarket?.status === 'achieved', snapshot.fieldBattle?.newMarket?.title || 'No field evidence recorded');
+    case 'gainesMill': return value('Gaines’ Mill mission', snapshot.fieldBattle?.gainesMill?.status === 'achieved', snapshot.fieldBattle?.gainesMill?.title || 'No field evidence recorded');
+    case 'jonesborough': return value('Jonesborough mission', snapshot.fieldBattle?.jonesborough?.status === 'achieved', snapshot.fieldBattle?.jonesborough?.title || 'No field evidence recorded');
+    case 'secondManassas': return value('Second Manassas mission', snapshot.fieldBattle?.secondManassas?.status === 'achieved', snapshot.fieldBattle?.secondManassas?.title || 'No field evidence recorded');
+    case 'fredericksburg': return value('Fredericksburg mission', snapshot.fieldBattle?.fredericksburg?.status === 'achieved', snapshot.fieldBattle?.fredericksburg?.title || 'No field evidence recorded');
+    case 'fiveForks': return value('Five Forks mission', snapshot.fieldBattle?.fiveForks?.status === 'achieved', snapshot.fieldBattle?.fiveForks?.title || 'No field evidence recorded');
+    case 'antietam': return value('Sharpsburg mission', snapshot.fieldBattle?.antietam?.status === 'achieved', snapshot.fieldBattle?.antietam?.title || 'No field evidence recorded');
     case 'attackGround': return value('Supported objective held', snapshot.fieldBattle?.attackObjective?.held >= snapshot.fieldBattle?.attackObjective?.required, `${(snapshot.fieldBattle?.attackObjective?.held || 0).toFixed(1)} / ${snapshot.fieldBattle?.attackObjective?.required || 8} field minutes`);
     case 'surprise': return value('Timely surprise contact', snapshot.surpriseState === 'triggered', snapshot.surpriseState === 'triggered' ? 'Window used' : snapshot.surpriseState === 'expired' ? 'Window missed' : 'Not yet recorded');
     case 'johnston': return value('Johnston protected', snapshot.commanderStatus === 'protected', snapshot.commanderStatus === 'protected' ? 'Protected' : 'Protection not established');
@@ -107,7 +158,11 @@ function readSignal(id, snapshot, config) {
       const early = snapshot.prematureCommitment === true || snapshot.events?.some((event) => event.message === "Hill's battered front has advanced before Longstreet can support it.");
       return value('No premature commitment', !early, early ? 'Front committed before support arrived' : 'No early commitment recorded');
     }
-    case 'coveredExit': return value('Covered corridor exit', snapshot.thirdWinchester?.withdrawalState === 'secured', `${percent((snapshot.thirdWinchester?.escapedRatio || 0) * 100)}% cleared the corridor`);
+    case 'coveredExit': {
+      const withdrawal = snapshot.thirdWinchester;
+      const escaped = Math.floor((withdrawal?.escapedRatio || 0) * 100);
+      return value('Covered corridor exit', withdrawal?.withdrawalState === 'secured', `${escaped}% withdrawn in order / 65% required`);
+    }
     case 'ridge': return value('Sustained ridge control', snapshot.gettysburg?.held >= snapshot.gettysburg?.holdRequired, `${(snapshot.gettysburg?.held || 0).toFixed(1)} / ${snapshot.gettysburg?.holdRequired || 18} field minutes`);
     case 'escapeGettysburg': return value('Force safely withdrawn in order', snapshot.gettysburg?.escaped >= 0.7, `${Math.round((snapshot.gettysburg?.escaped || 0) * 100)}% / 70% required`);
     case 'assault': return value('Assault contact', snapshot.assaultState === 'engaged', snapshot.assaultState === 'engaged' ? 'Contact within the assault window' : 'Timed contact not established');
@@ -163,6 +218,30 @@ export function getBattleAssessment(snapshot, choiceId) {
   const evidence = [
     { label: source === 'delegated' ? 'Staff outcome estimate' : 'Field outcome', value: finished ? outcomeLabel : 'Undecided' },
     ...signals.map((signal) => ({ label: signal.label, value: signal.detail })),
+    ...(source === 'manual' && battleId === 'antietam' ? (snapshot.fieldBattle?.antietam?.conditions || [])
+      .map(row => ({ label: row.label, value: `${row.satisfied ? 'Met' : 'Unmet'}: ${row.detail}` })) : []),
+    ...(source === 'manual' && battleId === 'five_forks' ? (snapshot.fieldBattle?.fiveForks?.conditions || [])
+      .map(row => ({ label: row.label, value: `${row.satisfied ? 'Met' : 'Unmet'}: ${row.detail}` })) : []),
+    ...(source === 'manual' && battleId === 'jonesborough' ? (snapshot.fieldBattle?.jonesborough?.conditions || [])
+      .map(row => ({ label: row.label, value: `${row.satisfied ? 'Met' : 'Unmet'}: ${row.detail}` })) : []),
+    ...(source === 'manual' && battleId === 'second_manassas' ? (snapshot.fieldBattle?.secondManassas?.conditions || [])
+      .map(row => ({ label: row.label, value: `${row.satisfied ? 'Met' : 'Unmet'}: ${row.detail}` })) : []),
+    ...(source === 'manual' && battleId === 'fredericksburg' ? (snapshot.fieldBattle?.fredericksburg?.conditions || [])
+      .map(row => ({ label: row.label, value: `${row.satisfied ? 'Met' : 'Unmet'}: ${row.detail}` })) : []),
+    ...(source === 'manual' && battleId === 'gaines_mill' ? (snapshot.fieldBattle?.gainesMill?.conditions || [])
+      .map(row => ({ label: row.label, value: `${row.satisfied ? 'Met' : 'Unmet'}: ${row.detail}` })) : []),
+    ...(source === 'manual' && battleId === 'new_market' ? (snapshot.fieldBattle?.newMarket?.conditions || [])
+      .map(row => ({ label: row.label, value: `${row.satisfied ? 'Met' : 'Unmet'}: ${row.detail}` })) : []),
+    ...(source === 'manual' && battleId === 'missionary_ridge' ? (snapshot.fieldBattle?.missionaryRidge?.conditions || [])
+      .map(row => ({ label: row.label, value: `${row.satisfied ? 'Met' : 'Unmet'}: ${row.detail}` })) : []),
+    ...(source === 'manual' && battleId === 'spotsylvania' ? (snapshot.fieldBattle?.spotsylvania?.conditions || [])
+      .map(row => ({ label: row.label, value: `${row.satisfied ? 'Met' : 'Unmet'}: ${row.detail}` })) : []),
+    ...(source === 'manual' && battleId === 'kennesaw_mountain' ? (snapshot.fieldBattle?.kennesaw?.conditions || [])
+      .map(row => ({ label: row.label, value: `${row.satisfied ? 'Met' : 'Unmet'}: ${row.detail}` })) : []),
+    ...(source === 'manual' && battleId === 'vicksburg' ? (snapshot.fieldBattle?.vicksburg?.conditions || [])
+      .map(row => ({ label: row.label, value: `${row.satisfied ? 'Met' : 'Unmet'}: ${row.detail}` })) : []),
+    ...(source === 'manual' && battleId === 'sailors_creek' ? (snapshot.fieldBattle?.sailorsCreek?.conditions || [])
+      .map(row => ({ label: row.label, value: `${row.satisfied ? 'Met' : 'Unmet'}: ${row.detail}` })) : []),
     ...henryHillConditions(source === 'manual' ? snapshot.fieldBattle?.defenseObjective : null).map(condition => ({ label: condition.label, value: `${condition.satisfied ? 'Met' : 'Unmet'}: ${condition.detail}` })),
     { label: source === 'delegated' ? 'Estimated army retained' : 'Army retained', value: `${armyRetained}%` },
     { label: 'Field ammunition retained', value: ammunitionRetained === null ? 'Not observed' : `${ammunitionRetained}%` },
@@ -209,6 +288,7 @@ export function isBattleAssessment(value) {
   }
   return Array.isArray(value.explanation) && value.explanation.length > 0 && value.explanation.length <= 6
     && value.explanation.every((line) => text(line, 500))
-    && Array.isArray(value.evidence) && value.evidence.length > 0 && value.evidence.length <= 12
+    // A withdrawal can report ten tactical checks alongside four summary rows.
+    && Array.isArray(value.evidence) && value.evidence.length > 0 && value.evidence.length <= 14
     && value.evidence.every((item) => record(item) && text(item.label, 120) && text(item.value, 240));
 }

@@ -43,5 +43,50 @@
     "runtimeSha256": "da6538f30f20dd2253458c9618f6c9f6fd1080c03629172ef7c2744e4fec8f22",
     "processing": "WebP encoding only; no resize, crop or painted edits",
     "historicalStatus": "New interpretive illustration; not documentary evidence; specialist review still pending"
+  },
+  {
+    "id": "preliminary-proclamation-v1",
+    "tool": "built-in image_gen",
+    "original": "exec-27390347-fde9-42bb-aa95-2f4cd75589d0.png",
+    "master": "01-preliminary-proclamation-review.png",
+    "runtime": "/images/presentation/preliminary-proclamation-v1.webp",
+    "width": 1672,
+    "height": 941,
+    "masterBytes": 2290236,
+    "runtimeBytes": 339244,
+    "masterSha256": "81fde741c14dc5ecfe232ae096e47757177a16566c861cbb9a46779c199b4b42",
+    "runtimeSha256": "18f74c91d23bb6114f5baa0b7e884933f88a6fc756546351e22cf19499c2bf63",
+    "processing": "WebP encoding only; original dimensions and composition retained",
+    "historicalStatus": "AI historical interpretation of Lincoln considering the September 1862 preliminary proclamation; owner-approved briefing artwork."
+  },
+  {
+    "id": "soldiers-voting-1864-v1",
+    "tool": "built-in image_gen",
+    "original": "exec-8ebb7128-cd65-4115-add9-0f4b947a3d7f.png",
+    "master": "02-election-soldiers-voting-review.png",
+    "runtime": "/images/presentation/soldiers-voting-1864-v1.webp",
+    "width": 1672,
+    "height": 941,
+    "masterBytes": 2881416,
+    "runtimeBytes": 364484,
+    "masterSha256": "1b68ca28fd3ea2f30c23cb6b275550b75643fe6dab96777f4ae2069ccacd721f",
+    "runtimeSha256": "6d3ef41117121c4293e8d5866a04a0f41dd6fcc514f9c65d19b313b292ea9b86",
+    "processing": "WebP encoding only; original dimensions and composition retained",
+    "historicalStatus": "AI interpretation of Union soldiers voting in the field, informed by William Waud’s 1864 drawing; owner-approved for either result route."
+  },
+  {
+    "id": "richmond-capitol-square-v1",
+    "tool": "built-in image_gen",
+    "original": "exec-04df1a57-4dfb-43bd-a365-8df85a68959f.png",
+    "master": "03-richmond-capitol-square.png",
+    "runtime": "/images/presentation/richmond-capitol-square-v1.webp",
+    "width": 1672,
+    "height": 941,
+    "masterBytes": 3420944,
+    "runtimeBytes": 358718,
+    "masterSha256": "a14d175844126bd861d2d55dcc4cf1f015bfe68f4cb17a794c4100c2a419ac3b",
+    "runtimeSha256": "a67e37801e2c3f1a21c2459c2bb5183dd7fe8242661f76af38914190225e7cf6",
+    "processing": "WebP encoding only; original dimensions and composition retained",
+    "historicalStatus": "AI reconstruction adapted from the History Forge hospital-contingent reference. Composition distinguishes the hospital companies, Major Turner’s uniformed observers, and the civilian crowd."
   }
 ]

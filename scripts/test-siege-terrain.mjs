@@ -8,7 +8,7 @@ import { siegeTerrainPlan, clipDestroyedRoads, drawSiegeTerrain, siegeTerrainGui
 function context() {
  const calls=[],ctx={calls};
  for(const name of ['save','restore','beginPath','rect','clip','translate','rotate','scale','fillRect','drawImage','moveTo','lineTo','closePath','fill','stroke'])ctx[name]=(...args)=>calls.push({name,args});
- ctx.createRadialGradient=()=>({addColorStop(){}});return ctx;
+ ctx.createRadialGradient=ctx.createLinearGradient=()=>({addColorStop(){}});return ctx;
 }
 for(const id of ['cold_harbor','petersburg'])test(`${id}: drawing remains confined to existing terrain without changing any opening`,()=>{
  for(const rules of [7,10,11,12])for(const choice of ['option_a','option_b','option_c','option_d']){
@@ -23,6 +23,30 @@ for(const id of ['cold_harbor','petersburg'])test(`${id}: drawing remains confin
   assert.equal(ctx.calls.filter(c=>c.name==='save').length,ctx.calls.filter(c=>c.name==='restore').length);
  }
 });
+
+test('Cold Harbor relief replaces the stamped cuts within the authored zone and preserves the pike and checkpoint', () => {
+  const engine = new CivilWarBattleEngine('cold_harbor', { rulesVersion: 2, battleRulesVersion: 18 }, 'option_b');
+  const original = engine.checkpoint();
+  const ctx = context();
+  const scene = {
+    engine,
+    coldHarborTerrainArt: true,
+    textures: { get: () => assert.fail('Cold Harbor relief should draw without legacy siege stamps') },
+  };
+  drawSiegeTerrain(scene, ctx);
+  const works = engine.fieldBattle.zones.find(zone => zone.kind === 'earthworks');
+  assert.deepEqual(ctx.calls.find(call => call.name === 'rect')?.args,
+    [works.left, works.top, works.right - works.left, works.bottom - works.top]);
+  assert.ok(ctx.calls.some(call => call.name === 'translate' && call.args[0] === engine.config.movement.roadBands[0].value
+    && call.args[1] === 0));
+  assert.ok(ctx.calls.filter(call => call.name === 'fill').length > 20);
+  assert.equal(ctx.calls.filter(call => call.name === 'save').length, ctx.calls.filter(call => call.name === 'restore').length);
+  const repeated = context();
+  drawSiegeTerrain(scene, repeated);
+  assert.deepEqual(repeated.calls, ctx.calls);
+  assert.deepEqual(engine.checkpoint(), original);
+});
+
 test('other battlefields retain their terrain; generated plans are stable and do not share mutable zones',()=>{
  const e=new CivilWarBattleEngine('petersburg',{battleRulesVersion:11},'option_b'),a=siegeTerrainPlan(e.scenarioId,e.fieldBattle.zones),b=siegeTerrainPlan(e.scenarioId,e.fieldBattle.zones);
  assert.deepEqual(a,b);a[0].zone.left=0;assert.notEqual(e.fieldBattle.zones[0].left,0);assert.notEqual(b[0].zone.left,0);

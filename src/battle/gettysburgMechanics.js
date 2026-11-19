@@ -20,7 +20,15 @@ const enemies = (e, u) => e.state.filter(v => v.side !== u.side && living(v));
 const threats = (e, u) => enemies(e, u).filter(v => v.status !== 'routing' && v.order !== 'withdraw' && !v.gunsAbandoned);
 const nearest = (e, u) => threats(e, u).sort((a, b) => dist(u, a) - dist(u, b))[0];
 const friend = (e, u, radius = 240) => e.state.some(v => v.id !== u.id && v.side === u.side && gettysburgOrganized(v) && dist(u, v) <= radius);
-const rearSign = (u, e) => e?.fieldBattle ? ((e.config.retreatEdges?.[u.side] || (u.side === 'union' ? 'top' : 'bottom')) === 'top' ? -1 : 1) : u.side === 'union' ? -1 : 1;
+const rearEdge = (u, e) => (e?.fieldBattle && e.config.retreatEdges?.[u.side]) || (u.side === 'union' ? 'top' : 'bottom');
+const rearSign = (u, e) => {
+  const edge = rearEdge(u, e);
+  return edge === 'top' || edge === 'west' ? -1 : 1;
+};
+const rearAxis = (u, e) => {
+  const edge = rearEdge(u, e);
+  return edge === 'west' || edge === 'east' ? 'x' : 'y';
+};
 const sectorsFor = e => e.fieldBattle?.sectors || RIDGE_SECTORS;
 const retreatCorridorPilot = e => e.battleRulesVersion >= 18 && e.scenarioId === 'gettysburg';
 const fieldEvent = (e, u, message) => { e.events.push({ time: e.time, type: 'command', message: `${u ? `${u.name}: ` : ''}${message}` }); if (e.events.length > 100) e.events.splice(1, 1); };
@@ -193,7 +201,11 @@ function applyCommand(e, u, order, point) {
   u.facingOrder = null; u.focusTargetId = null; u.blockedTime = 0;
   if (order === 'rally' || order === 'reform') { u.order = 'rally'; u.safeTime = 0; return; }
   u.order = order;
-  if (order === 'fallback') u.target = { x: u.x, y: clamp(u.y + rearSign(u, e) * 135, 35, e.world.height - 35) };
+  if (order === 'fallback') {
+    u.target = rearAxis(u, e) === 'x'
+      ? { x: clamp(u.x + rearSign(u, e) * 135, 35, e.world.width - 35), y: u.y }
+      : { x: u.x, y: clamp(u.y + rearSign(u, e) * 135, 35, e.world.height - 35) };
+  }
   else if (order === 'withdraw') u.target = retreatTarget(e, u);
   else if (order === 'move') { u.order = 'advance'; u.directMove = true; u.target = { x: clamp(point.x, 45, e.world.width - 45), y: clamp(point.y, 25, e.world.height - 25) }; }
   else if (order === 'assault') {
@@ -245,7 +257,8 @@ function retreatTarget(e, u) {
 export function canDisengageGettysburg(e, u) {
   if (!living(u) || u.order === 'rally' || (u.order !== 'withdraw' && u.status !== 'routing') || !u.retreatOrigin) return false;
   if (e.fieldBattle?.requireExitIds.includes(u.id)) return false;
-  if (dist(u, u.retreatOrigin) < GETTYSBURG_RULES.retreatDistance || (u.y - u.retreatOrigin.y) * rearSign(u, e) < GETTYSBURG_RULES.retreatRearProgress) return false;
+  const axis = rearAxis(u, e);
+  if (dist(u, u.retreatOrigin) < GETTYSBURG_RULES.retreatDistance || (u[axis] - u.retreatOrigin[axis]) * rearSign(u, e) < GETTYSBURG_RULES.retreatRearProgress) return false;
   // Distance alone cannot remove a unit from an ongoing fight or let it evade pursuit.
   return enemies(e, u).every(v => {
     if (dist(u, v) < 285) return false;
@@ -612,7 +625,8 @@ export function stepTacticalFormations(e, dt) {
     if (moving && gunsReady(e, u, true, dt)) {
       const speed = u.type === 'artillery' && !u.gunsAbandoned ? 13 : u.order === 'fallback' ? 14 : u.status === 'routing' ? 28 : u.order === 'assault' ? 29 : 24;
       const arrived = movement(e, u, dt, u.target, speed * (u.formationMode === 'column' ? 1.12 : 1));
-      const atExit = Math.abs(u.y - u.target.y) < 20 && Math.abs(u.x - u.target.x) < 70 && !enemies(e, u).some(v => dist(u, v) < 80);
+      const axis = rearAxis(u, e), lateral = axis === 'x' ? 'y' : 'x';
+      const atExit = Math.abs(u[axis] - u.target[axis]) < 20 && Math.abs(u[lateral] - u.target[lateral]) < 70 && !enemies(e, u).some(v => dist(u, v) < 80);
       if ((u.status === 'routing' || u.order === 'withdraw') && (atExit || canDisengageGettysburg(e, u))) {
         retire(e, u, atExit ? 'rear-exit' : 'disengaged'); continue;
       }

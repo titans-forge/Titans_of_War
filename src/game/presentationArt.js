@@ -54,6 +54,64 @@ export const PRESENTATION_ART = Object.freeze({
       }),
     ]),
   }),
+  emancipation: Object.freeze({
+    ...generated,
+    id: 'preliminary-proclamation-v1',
+    src: '/images/presentation/preliminary-proclamation-v1.webp',
+    title: 'The preliminary proclamation',
+    alt: 'Abraham Lincoln studies several pages at a writing desk beside a tall window.',
+    caption: 'Washington, September 1862. An imagined moment as Lincoln considers the Preliminary Emancipation Proclamation, historically issued on September 22.',
+    scopeNote: 'The room, papers and moment at the desk are reconstructed. The National Archives holds the signed document.',
+    sourceLinks: Object.freeze([
+      Object.freeze({
+        title: 'Preliminary Emancipation Proclamation, September 22, 1862',
+        url: 'https://www.archives.gov/exhibits/american_originals_iv/images/emancipation_proclamation/preliminary_emancipation_page_3.html',
+        evidenceType: 'Primary document',
+        supports: 'The signed preliminary proclamation and its date.',
+      }),
+    ]),
+  }),
+  election: Object.freeze({
+    ...generated,
+    id: 'soldiers-voting-1864-v1',
+    src: '/images/presentation/soldiers-voting-1864-v1.webp',
+    title: 'The soldiers’ vote',
+    alt: 'A Union soldier places his ballot in a wooden box while a clerk records the vote and other soldiers wait.',
+    caption: 'Autumn 1864. An imagined field polling station, informed by William Waud’s drawing of Pennsylvania soldiers voting in the Army of the James.',
+    scopeNote: 'This scene depicts voting in camp. The campaign determines the election result.',
+    sourceLinks: Object.freeze([
+      Object.freeze({
+        title: 'William Waud, Pennsylvania Soldiers Voting, Army of the James',
+        url: 'https://www.loc.gov/exhibits/civil-war-in-america/november-1863-april-1865.html#obj28',
+        evidenceType: 'Contemporary drawing and collection notes',
+        supports: 'Pennsylvania soldiers voting in the field in 1864.',
+      }),
+    ]),
+  }),
+  richmondRecruitment: Object.freeze({
+    ...generated,
+    id: 'richmond-capitol-square-v1',
+    src: '/images/presentation/richmond-capitol-square-v1.webp',
+    title: 'Capitol Square — the hospital companies',
+    credit: 'AI-generated for Titans of War using a History Forge reconstruction as a reference · 2026',
+    alt: 'Black hospital workers in civilian clothes form up on Capitol Square. A separate uniformed Black squad watches from the right, with civilians gathered behind both groups.',
+    caption: 'Richmond, March 22, 1865. Two companies of Black hospital workers parade in civilian clothes while Major Turner’s uniformed squad watches. The Richmond Enquirer reported thousands of spectators.',
+    scopeNote: 'This reconstruction shows an event later in March than the legislative debate. The newspaper transcriptions describe the groups and the reported crowd. Faces, positions and clothing details are interpretive.',
+    sourceLinks: Object.freeze([
+      Object.freeze({
+        title: 'Richmond Dispatch account, March 23, 1865',
+        url: 'https://mail.civilwarrichmond.com/military-organizations/black-confederates/2294-1865-03-23-richmond-dispatch-from-the-richmond-dispatch-8-10-1864-arrival-of-wounded-negroes-twenty-odd-of-burnside-s-negro-troops-who-were-wounded-in-an-engagement-a-few-days-since-near-petersburg-and-fell-into-our-hands-were-brought-to-this-city-yesterd',
+        evidenceType: 'Contemporary newspaper transcription',
+        supports: 'Two ununiformed hospital companies and a separate squad of Major Turner’s uniformed troops who came to watch.',
+      }),
+      Object.freeze({
+        title: 'Richmond Enquirer account, March 23, 1865',
+        url: 'https://mail.civilwarrichmond.com/written-accounts/newspapers/richmond-enquirer/2660-1865-03-23-richmond-enquirer-description-of-the-winder-jackson-battalion-s-parade-at-capitol-square-call-for-richmond-ladies-to-produce-a-flag-for-this-uni',
+        evidenceType: 'Contemporary newspaper transcription',
+        supports: 'The previous day’s drill and the newspaper’s estimate of thousands of spectators.',
+      }),
+    ]),
+  }),
   appomattox: Object.freeze({
     ...generated,
     id: 'appomattox-paroles-v3',
@@ -76,6 +134,10 @@ export const PRESENTATION_ART = Object.freeze({
 const SCENARIO_ART = new Map([
   ['fort_sumter', PRESENTATION_ART.sumter],
   ['naval_technology', PRESENTATION_ART.hamptonRoads],
+  ['emancipation_cabinet_debate', PRESENTATION_ART.emancipation],
+  ['election_1864_lincoln', PRESENTATION_ART.election],
+  ['election_1864_mcclellan', PRESENTATION_ART.election],
+  ['black_confederate_debate', PRESENTATION_ART.richmondRecruitment],
   ['appomattox_decision', PRESENTATION_ART.appomattox],
 ]);
 

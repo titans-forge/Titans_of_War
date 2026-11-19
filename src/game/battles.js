@@ -1,7 +1,19 @@
 import { getBattleAssessment } from '../battle/battleAssessment.js';
 import { applySupplyDeltas, getBattleSupplyProfile } from './campaignSupply.js';
 import { getGettysburgJacksonBrief } from '../battle/gettysburgJacksonMission.js';
-import { FIELD_RESULT_CONSEQUENCES_VERSION, usesCurrentFieldConsequences } from './fieldResultConsequences.js';
+import { fieldConsequencesVersion, fieldMissionRules, isChoiceGatedField, usesAssessedFieldConsequences } from './fieldResultConsequences.js';
+import { ANTIETAM_MISSIONS } from '../battle/antietamMission.js';
+import { FIVE_FORKS_MISSIONS } from '../battle/fiveForksMission.js';
+import { JONESBOROUGH_MISSIONS } from '../battle/jonesboroughMission.js';
+import { SECOND_MANASSAS_MISSIONS } from '../battle/secondManassasMission.js';
+import { FREDERICKSBURG_MISSIONS } from '../battle/fredericksburgMission.js';
+import { GAINES_MILL_MISSIONS } from '../battle/gainesMillMission.js';
+import { NEW_MARKET_MISSIONS } from '../battle/newMarketMission.js';
+import { MISSIONARY_RIDGE_MISSIONS } from '../battle/missionaryRidgeMission.js';
+import { SPOTSYLVANIA_MISSIONS } from '../battle/spotsylvaniaMission.js';
+import { KENNESAW_MISSIONS } from '../battle/kennesawMission.js';
+import { VICKSBURG_MISSIONS } from '../battle/vicksburgMission.js';
+import { SAILORS_CREEK_MISSIONS } from '../battle/sailorsCreekMission.js';
 
 const clamp = (value, minimum = 0, maximum = 100) => Math.max(minimum, Math.min(maximum, value));
 
@@ -198,10 +210,275 @@ export const BATTLE_SCENARIOS = {
   },
 };
 
-export function battleForScenario(activeScenario, state) {
-  const battle = BATTLE_SCENARIOS[activeScenario?.id];
-  if (!battle) return null;
-  return state?.battleCampaign?.results?.[activeScenario.id] ? null : battle;
+const antietamField = {
+  id: 'antietam',
+  scenarioId: 'antietam',
+  title: 'Antietam — The Sharpsburg Line',
+  date: 'September 17, 1862',
+  defaultSelection: 'antietam-hill',
+};
+
+const missionSuccessResults = scenarioId => Object.fromEntries(
+  Object.entries(fieldMissionRules(scenarioId).outcomes).map(([id, verdict]) => [id, [verdict]]));
+
+const antietamCampaignBattle = {
+  ...antietamField,
+  eyebrow: 'Optional field command',
+  objective: 'Hold the Sunken Road under assault or bring the army off the field in order.',
+  context: 'The map compresses the Cornfield, Sunken Road and Lower Bridge. The field result records your army’s performance at Sharpsburg and carries forward into the campaign.',
+  fieldOrdersByChoice: {
+    option_a: ANTIETAM_MISSIONS.option_a.orders,
+    option_b: ANTIETAM_MISSIONS.option_b.orders,
+  },
+  successResultsByChoice: missionSuccessResults('antietam'),
+};
+
+const fiveForksBattle = {
+  id: 'five_forks',
+  scenarioId: 'five_forks',
+  title: 'Five Forks — The Road to Ford’s Depot',
+  date: 'April 1, 1865',
+  defaultSelection: 'five-forks-steuart',
+  eyebrow: 'Optional field command',
+  objective: 'Delay the Union advance at the crossroads, cover an ordered exit with a rear guard, or preserve the force by leaving early.',
+  context: 'The map compresses White Oak Road and the approaches to Ford’s Depot. Sheridan’s cavalry presses from the south as Warren’s infantry threatens the exposed Confederate left. The single marked exit is a gameplay abstraction.',
+  fieldOrdersByChoice: Object.fromEntries(Object.entries(FIVE_FORKS_MISSIONS).map(([id, mission]) => [id, mission.orders])),
+  successResultsByChoice: missionSuccessResults('five_forks'),
+  practiceChoices: [
+    { id: 'option_a', text: 'Hold the crossroads and the Angle.' },
+    { id: 'option_b', text: 'Cover an organized withdrawal with a rear guard.' },
+    { id: 'option_c', text: 'Withdraw early through Ford’s Road.' },
+  ],
+};
+
+const jonesboroughBattle = {
+  id: 'jonesborough',
+  scenarioId: 'fall_of_atlanta',
+  title: 'Jonesborough — The Last Railroad',
+  date: 'August 31–September 1, 1864',
+  defaultSelection: 'jonesborough-govan',
+  eyebrow: 'Optional field command',
+  objective: 'Reopen a window on the Macon & Western Railroad or bring Hardee’s formations and guns out toward Lovejoy’s Station.',
+  context: 'Hood makes the campaign decision in Atlanta. On this compressed battlefield, you command Hardee’s force around Jonesborough, where the Union advance threatened the railroad that supplied the city.',
+  fieldOrdersByChoice: Object.fromEntries(Object.entries(JONESBOROUGH_MISSIONS).map(([id, mission]) => [id, mission.orders])),
+  successResultsByChoice: missionSuccessResults('fall_of_atlanta'),
+  practiceChoices: [
+    { id: 'option_a', text: 'Counterattack and hold the rail crossing.' },
+    { id: 'option_b', text: 'Bring Hardee’s formations and guns out in order.' },
+  ],
+};
+
+const secondManassasBattle = {
+  id: 'second_manassas',
+  scenarioId: 'second_manassas',
+  title: 'Second Manassas — The Deep Cut and Chinn Ridge',
+  date: 'August 30, 1862',
+  defaultSelection: 'second-manassas-starke',
+  eyebrow: 'Optional field command',
+  objective: 'Keep Jackson’s position at the Deep Cut while Longstreet attacks Chinn Ridge, or cover the line with artillery and hold the reserve.',
+  context: 'The map compresses the unfinished railroad grade, Groveton and Chinn Ridge. Porter attacks Jackson’s position as Longstreet’s wing threatens the Union left. The reconnaissance mission is an alternate command choice.',
+  fieldOrdersByChoice: Object.fromEntries(Object.entries(SECOND_MANASSAS_MISSIONS).map(([id, mission]) => [id, mission.orders])),
+  successResultsByChoice: missionSuccessResults('second_manassas'),
+  practiceChoices: [
+    { id: 'option_a', text: 'Hold the Deep Cut and take Chinn Ridge.' },
+    { id: 'option_b', text: 'Cover the Deep Cut and keep the reserve ready.' },
+  ],
+};
+
+const fredericksburgBattle = {
+  id: 'fredericksburg',
+  scenarioId: 'fredericksburg_field',
+  title: 'Fredericksburg — The Sunken Road and Prospect Hill',
+  date: 'December 13, 1862',
+  defaultSelection: 'fredericksburg-cobb',
+  eyebrow: 'Optional field command',
+  objective: 'Support the defenders at the Sunken Road or bring the reserve up to Prospect Hill in time to hold the line.',
+  context: 'The battlefield compresses the Rappahannock riverfront, Marye’s Heights and Prospect Hill. Follow the selected sector’s mission before returning to the winter decisions.',
+  fieldOrdersByChoice: Object.fromEntries(Object.entries(FREDERICKSBURG_MISSIONS).map(([id, mission]) => [id, mission.orders])),
+  successResultsByChoice: missionSuccessResults('fredericksburg_field'),
+  practiceChoices: [
+    { id: 'option_a', text: 'Hold the Sunken Road under attack.' },
+    { id: 'option_b', text: 'Reinforce Prospect Hill.' },
+  ],
+};
+
+const gainesMillBattle = {
+  id: 'gaines_mill',
+  scenarioId: 'seven_days',
+  title: 'Gaines’ Mill — Across Boatswain’s Creek',
+  date: 'June 27, 1862',
+  defaultSelection: 'gaines-mill-hood',
+  eyebrow: 'Optional field command',
+  objective: 'Cross Boatswain’s Creek and establish a supported breach, or hold a crossing to cover an organized withdrawal.',
+  context: 'The field represents Porter’s position above Boatswain’s Creek and the approach to the Watt House plateau. The view is rotated and distances are compressed.',
+  fieldOrdersByChoice: Object.fromEntries(Object.entries(GAINES_MILL_MISSIONS).map(([id, mission]) => [id, mission.orders])),
+  successResultsByChoice: missionSuccessResults('seven_days'),
+  practiceChoices: [
+    { id: 'option_a', text: 'Open a supported breach at Porter’s ridge.' },
+    { id: 'option_b', text: 'Cover a withdrawal across Boatswain’s Creek.' },
+  ],
+};
+
+const newMarketBattle = {
+  id: 'new_market',
+  scenarioId: 'new_market',
+  title: 'New Market — Bushong Farm and the Valley Pike',
+  date: 'May 15, 1864',
+  defaultSelection: 'new-market-wharton',
+  eyebrow: 'Optional field command',
+  objective: 'Advance on Bushong Farm with support, or hold the Valley Pike with an organized reserve.',
+  context: 'The board compresses Bushong House and its orchard, the muddy Field of Lost Shoes and the Valley Pike. The two missions let you explore different uses of the reserve.',
+  fieldOrdersByChoice: Object.fromEntries(Object.entries(NEW_MARKET_MISSIONS).map(([id, mission]) => [id, mission.orders])),
+  successResultsByChoice: missionSuccessResults('new_market'),
+  practiceChoices: [
+    { id: 'option_a', text: 'Support the advance on Bushong Farm.' },
+    { id: 'option_b', text: 'Hold the Valley Pike with the cadets in reserve.' },
+  ],
+};
+
+const missionaryRidgeBattle = {
+  id: 'missionary_ridge',
+  scenarioId: 'missionary_ridge',
+  title: 'Missionary Ridge — Hold the Crest',
+  date: 'November 25, 1863',
+  defaultSelection: 'missionary-ridge-bate',
+  eyebrow: 'Optional field command',
+  objective: 'Hold the Main Crest under pressure or screen an organized withdrawal off the ridge.',
+  context: 'This board compresses Orchard Knob, the lower rifle pits, and the central crest beside Bragg’s headquarters. The Union’s Chattanooga victory frames both missions.',
+  fieldOrdersByChoice: Object.fromEntries(Object.entries(MISSIONARY_RIDGE_MISSIONS).map(([id, mission]) => [id, mission.orders])),
+  successResultsByChoice: missionSuccessResults('missionary_ridge'),
+  practiceChoices: [
+    { id: 'option_a', text: 'Hold the Main Crest under pressure.' },
+    { id: 'option_b', text: 'Screen the crest and withdraw in order.' },
+  ],
+};
+
+const spotsylvaniaBattle = {
+  id: 'spotsylvania',
+  scenarioId: 'spotsylvania',
+  title: 'Spotsylvania — The Bloody Angle',
+  date: 'May 12–13, 1864',
+  defaultSelection: 'spotsylvania-ramseur',
+  eyebrow: 'Optional field command',
+  objective: 'Stabilize the Interior Line with infantry and guns, or recover a section of the West Face with a reserve in hand.',
+  context: 'The board compresses the Mule Shoe, McCoull House, and the two lines of earthworks. The missions settle a local action in the longer battle.',
+  fieldOrdersByChoice: Object.fromEntries(Object.entries(SPOTSYLVANIA_MISSIONS).map(([id, mission]) => [id, mission.orders])),
+  successResultsByChoice: missionSuccessResults('spotsylvania'),
+  practiceChoices: [
+    { id: 'option_a', text: 'Stabilize the Interior Line with infantry and guns.' },
+    { id: 'option_b', text: 'Retake a section of the West Face.' },
+  ],
+};
+
+const kennesawBattle = {
+  id: 'kennesaw_mountain',
+  scenarioId: 'kennesaw_mountain',
+  title: 'Kennesaw Mountain — Cheatham Hill',
+  date: 'June 27, 1864',
+  defaultSelection: 'kennesaw-vaughan',
+  selectionByChoice: { option_b: 'kennesaw-mebane' },
+  eyebrow: 'Optional field command',
+  objective: 'Hold the Dead Angle under pressure or get the guns and rear guard out by the Southern Road.',
+  context: 'The board compresses the approaches to the Dead Angle. Kolb Farmhouse marks the separate June 22 action to the south. The two orders resolve a local command in the larger Atlanta campaign.',
+  fieldOrdersByChoice: Object.fromEntries(Object.entries(KENNESAW_MISSIONS).map(([id, mission]) => [id, mission.orders])),
+  successResultsByChoice: missionSuccessResults('kennesaw_mountain'),
+  practiceChoices: [
+    { id: 'option_a', text: 'Hold the Dead Angle on Cheatham Hill.' },
+    { id: 'option_b', text: 'Cover the guns’ withdrawal down the Southern Road.' },
+  ],
+};
+
+const vicksburgBattle = {
+  id: 'vicksburg',
+  scenarioId: 'vicksburg',
+  title: 'Vicksburg — Railroad Redoubt',
+  date: 'May 22, 1863',
+  defaultSelection: 'vicksburg-waul',
+  selectionByChoice: { option_b: 'vicksburg-battery' },
+  eyebrow: 'Optional field command',
+  objective: 'Recover the breached redoubt or save the guns and infantry at the Interior Line.',
+  context: 'The board compresses the Railroad Redoubt, the Southern Railroad cut, and the neighboring Second Texas Lunette. Both orders resolve a local action. Vicksburg is still under siege.',
+  fieldOrdersByChoice: Object.fromEntries(Object.entries(VICKSBURG_MISSIONS).map(([id, mission]) => [id, mission.orders])),
+  successResultsByChoice: missionSuccessResults('vicksburg'),
+  practiceChoices: [
+    { id: 'option_a', text: 'Retake the Railroad Redoubt with Waul’s Texas Legion.' },
+    { id: 'option_b', text: 'Bring the guns back to the Interior Line.' },
+  ],
+};
+
+const sailorsCreekBattle = {
+  id: 'sailors_creek',
+  scenarioId: 'sailors_creek',
+  title: 'Sailor’s Creek — Hillsman Farm',
+  date: 'April 6, 1865',
+  defaultSelection: 'sailors-kershaw',
+  selectionByChoice: { option_b: 'sailors-lee' },
+  eyebrow: 'Optional field command',
+  objective: 'Keep an aid route open or withdraw the remaining formations together.',
+  context: 'This board represents the Hillsman Farm sector. The Overton–Hillsman House marks the historical VI Corps field hospital that treated men from both armies. Aid Staging and the West Road are local game objectives.',
+  fieldOrdersByChoice: Object.fromEntries(Object.entries(SAILORS_CREEK_MISSIONS).map(([id, mission]) => [id, mission.orders])),
+  successResultsByChoice: missionSuccessResults('sailors_creek'),
+  practiceChoices: [
+    { id: 'option_a', text: 'Keep the South Bank open for an aid escort.' },
+    { id: 'option_b', text: 'Withdraw the formations by the West Road.' },
+  ],
+};
+
+const choiceGatedBattles = {
+  sailors_creek: sailorsCreekBattle,
+  vicksburg: vicksburgBattle,
+  kennesaw_mountain: kennesawBattle,
+  spotsylvania: spotsylvaniaBattle,
+  missionary_ridge: missionaryRidgeBattle,
+  new_market: newMarketBattle,
+  seven_days: gainesMillBattle,
+  second_manassas: secondManassasBattle,
+  antietam: antietamCampaignBattle,
+  fredericksburg_field: fredericksburgBattle,
+  five_forks: fiveForksBattle,
+  fall_of_atlanta: jonesboroughBattle,
+};
+
+export const PRACTICE_BATTLES = {
+  sailors_creek: sailorsCreekBattle,
+  vicksburg: vicksburgBattle,
+  ...BATTLE_SCENARIOS,
+  kennesaw_mountain: kennesawBattle,
+  spotsylvania: spotsylvaniaBattle,
+  missionary_ridge: missionaryRidgeBattle,
+  new_market: newMarketBattle,
+  seven_days: gainesMillBattle,
+  second_manassas: secondManassasBattle,
+  fredericksburg_field: fredericksburgBattle,
+  antietam: {
+    ...antietamField,
+    objective: 'Manage three linked sectors with a limited reserve. Choose whether to hold the Sunken Road, withdraw in order, defend a wider front, or contest the Lower Bridge.',
+    context: 'This compressed and rotated battlefield places the Cornfield, Sunken Road and Lower Bridge on one board. Formations represent larger commands, and the four practice objectives model different possible decisions.',
+    fieldOrdersByChoice: Object.fromEntries(Object.entries(ANTIETAM_MISSIONS).map(([id, mission]) => [id, mission.orders])),
+    practiceChoices: [
+      { id: 'option_a', text: 'Hold the Bloody Lane under pressure.' },
+      { id: 'option_b', text: 'Withdraw the army in order.' },
+      { id: 'option_c', text: 'Hold both the Cornfield and the Bloody Lane.' },
+      { id: 'option_d', text: 'Try an alternate counterattack toward the Lower Bridge.' },
+    ],
+  },
+  five_forks: fiveForksBattle,
+  fall_of_atlanta: jonesboroughBattle,
+};
+
+export function fieldCommandTitle(battle, choiceId, battleRulesVersion) {
+  return battle.id === 'shiloh' && choiceId === 'option_b' && battleRulesVersion >= 14
+    ? 'Shiloh — Hold the Command Reserve'
+    : battle.title;
+}
+
+export function battleForScenario(activeScenario, state, choiceId) {
+  const scenarioId = activeScenario?.id;
+  if (state?.battleCampaign?.results?.[scenarioId]) return null;
+  if (isChoiceGatedField(scenarioId)) {
+    return usesAssessedFieldConsequences(state, scenarioId, choiceId) ? choiceGatedBattles[scenarioId] : null;
+  }
+  return BATTLE_SCENARIOS[scenarioId] || null;
 }
 
 export function battleReadiness(state, choiceId, battle = BATTLE_SCENARIOS.manassas_battlefield) {
@@ -273,7 +550,82 @@ export function battleReadiness(state, choiceId, battle = BATTLE_SCENARIOS.manas
     option_c: { preparation: -6, cohesion: -4, note: 'Political rumors provide no physical delay or battlefield advantage; the divisions still face Sheridan on the same timetable.' },
     option_d: { preparation: 7, cohesion: 12, note: 'Farm-road columns and a cavalry screen improve withdrawal coordination, but preserving the army still depends on readiness and an open Valley Pike.' },
   };
-  const postureTable = battle?.id === 'third_winchester'
+  const antietamPostures = {
+    option_a: { preparation: 5, cohesion: 7, note: 'Keep both infantry formations in the Sunken Road line so they can support each other under pressure.' },
+    option_b: { preparation: 5, cohesion: 12, note: 'Order the withdrawal while formations are still organized, and account for the reserve as it arrives.' },
+    option_c: { preparation: 1, cohesion: 3, note: 'Defending two sectors makes a single reserve cover more ground.' },
+    option_d: { preparation: -4, cohesion: -3, note: 'Recovering the bridge approach depends on staging the arriving reserve with Toombs.' },
+  };
+  const fiveForksPostures = {
+    option_a: { preparation: -4, cohesion: -5, note: 'Holding the long line keeps the crossroads covered but exposes the Angle to Warren’s turning attack.' },
+    option_b: { preparation: 4, cohesion: 8, note: 'A refused flank shortens the line. A rear guard must stay on Ford’s Road long enough for the rest to leave in order.' },
+    option_c: { preparation: 2, cohesion: 9, note: 'An immediate withdrawal gives the force the best margin to reach the exit before pressure builds.' },
+  };
+  const jonesboroughPostures = {
+    option_a: { preparation: -2, cohesion: 4, note: 'Commit infantry together at the crossing. Expect pressure to build before the railroad can be used again.' },
+    option_b: { preparation: 4, cohesion: 11, note: 'Give the batteries time to limber and keep the approach to Lovejoy’s Station open.' },
+  };
+  const secondManassasPostures = {
+    option_a: { preparation: 3, cohesion: 3, note: 'Keep Jackson’s formations in touch while Longstreet’s wing advances on Chinn Ridge.' },
+    option_b: { preparation: 4, cohesion: 9, note: 'Deploy covering guns near Groveton and keep the reserve ready behind the Deep Cut.' },
+  };
+  const fredericksburgPostures = {
+    option_a: { preparation: 6, cohesion: 6, note: 'Bring the battery into support of the Sunken Road and keep the defenders together behind the wall.' },
+    option_b: { preparation: 4, cohesion: 8, note: 'Move the reserve early enough to reinforce Prospect Hill before Meade’s pressure breaks the line.' },
+  };
+  const gainesMillPostures = {
+    option_a: { preparation: 5, cohesion: -2, note: 'Keep supporting infantry close after crossing the creek. A single brigade cannot secure the ridge.' },
+    option_b: { preparation: 3, cohesion: 10, note: 'Hold the crossing together while the other formations prepare to leave in order.' },
+  };
+  const newMarketPostures = {
+    option_a: { preparation: 2, cohesion: -2, note: 'Send a regular brigade with the cadets. Keep both organized while crossing the muddy field.' },
+    option_b: { preparation: 5, cohesion: 8, note: 'Keep the regular brigades together on the pike and the cadet reserve safely behind them.' },
+  };
+  const missionaryRidgePostures = {
+    option_a: { preparation: 6, cohesion: 5, note: 'Keep two organized infantry formations together on the crest while Union pressure builds.' },
+    option_b: { preparation: 3, cohesion: 10, note: 'Keep the rear guard on the crest while the rest of the command makes for the eastern exits.' },
+  };
+  const spotsylvaniaPostures = {
+    option_a: { preparation: 6, cohesion: 7, note: 'Form a supported line and bring the battery into action before pressure reaches the interior works.' },
+    option_b: { preparation: 3, cohesion: 1, note: 'Move supporting infantry together and keep an organized reserve clear of the fight for the West Face.' },
+  };
+  const kennesawPostures = {
+    option_a: { preparation: 7, cohesion: 6, note: 'Bring two infantry formations together behind the Dead Angle and keep the line organized under pressure.' },
+    option_b: { preparation: 4, cohesion: 9, note: 'Get the guns onto the Southern Road while organized infantry covers the withdrawal.' },
+  };
+  const vicksburgPostures = {
+    option_a: { preparation: 5, cohesion: 6, note: 'Bring Waul into the redoubt and restore a supported line before pressure returns.' },
+    option_b: { preparation: 4, cohesion: 9, note: 'Keep infantry at the redoubt until the guns deploy at the Interior Line.' },
+  };
+  const sailorsCreekPostures = {
+    option_a: { preparation: 4, cohesion: 5, note: 'Keep the infantry together on the South Bank while the escort reaches Aid Staging.' },
+    option_b: { preparation: 4, cohesion: 9, note: 'Send the lead formations toward the exit while the rear guard holds.' },
+  };
+  const postureTable = battle?.id === 'sailors_creek'
+    ? sailorsCreekPostures
+    : battle?.id === 'vicksburg'
+    ? vicksburgPostures
+    : battle?.id === 'kennesaw_mountain'
+    ? kennesawPostures
+    : battle?.id === 'spotsylvania'
+    ? spotsylvaniaPostures
+    : battle?.id === 'missionary_ridge'
+    ? missionaryRidgePostures
+    : battle?.id === 'new_market'
+    ? newMarketPostures
+    : battle?.id === 'gaines_mill'
+    ? gainesMillPostures
+    : battle?.id === 'fredericksburg'
+    ? fredericksburgPostures
+    : battle?.id === 'second_manassas'
+    ? secondManassasPostures
+    : battle?.id === 'jonesborough'
+    ? jonesboroughPostures
+    : battle?.id === 'five_forks'
+    ? fiveForksPostures
+    : battle?.id === 'antietam'
+    ? antietamPostures
+    : battle?.id === 'third_winchester'
     ? thirdWinchesterPostures
     : battle?.id === 'shiloh'
     ? shilohPostures
@@ -326,9 +678,48 @@ function offensiveOutcome(score) {
   return 'rout';
 }
 
+const STAFF_MISSION_THRESHOLDS = {
+  antietam: { option_a: 64, option_b: 62 },
+  five_forks: { option_a: 76, option_b: 63, option_c: 57 },
+  jonesborough: { option_a: 76, option_b: 62 },
+  second_manassas: { option_a: 74, option_b: 60 },
+  fredericksburg: { option_a: 65, option_b: 67 },
+  gaines_mill: { option_a: 70 },
+  new_market: { option_a: 70, option_b: 63 },
+  missionary_ridge: { option_a: 68, option_b: 62 },
+  spotsylvania: { option_a: 64, option_b: 70 },
+  kennesaw_mountain: { option_a: 66, option_b: 62 },
+  vicksburg: { option_a: 69, option_b: 61 },
+  sailors_creek: { option_a: 62, option_b: 59 },
+};
+
 export function delegateBattle(state, battle, choiceId) {
   const readiness = battleReadiness(state, choiceId, battle);
-  const postureBonus = battle?.id === 'third_winchester'
+  const postureBonus = battle?.id === 'sailors_creek'
+    ? ({ option_a: 3, option_b: 6 }[choiceId] || 0)
+    : battle?.id === 'vicksburg'
+    ? ({ option_a: 3, option_b: 7 }[choiceId] || 0)
+    : battle?.id === 'kennesaw_mountain'
+    ? ({ option_a: 5, option_b: 7 }[choiceId] || 0)
+    : battle?.id === 'spotsylvania'
+    ? ({ option_a: 6, option_b: 3 }[choiceId] || 0)
+    : battle?.id === 'missionary_ridge'
+    ? ({ option_a: 3, option_b: 6 }[choiceId] || 0)
+    : battle?.id === 'new_market'
+    ? ({ option_a: 4, option_b: 7 }[choiceId] || 0)
+    : battle?.id === 'gaines_mill'
+    ? 4
+    : battle?.id === 'fredericksburg'
+    ? ({ option_a: 6, option_b: 4 }[choiceId] || 0)
+    : battle?.id === 'second_manassas'
+    ? ({ option_a: 1, option_b: 6 }[choiceId] || 0)
+    : battle?.id === 'jonesborough'
+    ? ({ option_a: -4, option_b: 8 }[choiceId] || 0)
+    : battle?.id === 'five_forks'
+    ? ({ option_a: -3, option_b: 5, option_c: 9 }[choiceId] || 0)
+    : battle?.id === 'antietam'
+    ? ({ option_a: 2, option_b: 8 }[choiceId] || 0)
+    : battle?.id === 'third_winchester'
     ? ({ option_a: -14, option_b: 6, option_c: -6, option_d: 10 }[choiceId] || 0)
     : battle?.id === 'shiloh'
     ? ({ option_a: 2, option_b: 11, option_c: -5, option_d: 4 }[choiceId] || 0)
@@ -351,7 +742,12 @@ export function delegateBattle(state, battle, choiceId) {
       : ({ option_a: -2, option_b: 10, option_c: 1, option_d: 3 }[choiceId] || 0);
   const profile = getBattleSupplyProfile(state);
   const score = clamp(Math.round(readiness.preparation * 0.52 + readiness.cohesion * 0.28 + readiness.supply * 0.12 + readiness.morale * 0.08 + postureBonus - profile.readinessPenalty - profile.foodPenalty));
-  const result = battle?.id === 'third_winchester' && ['option_b', 'option_d'].includes(choiceId)
+  const mission = fieldMissionRules(battle?.scenarioId);
+  const result = mission
+    ? (score >= STAFF_MISSION_THRESHOLDS[battle.id]?.[choiceId]
+      ? mission.outcomes[choiceId]
+      : score >= 42 ? 'defeat' : 'rout')
+    : battle?.id === 'third_winchester' && ['option_b', 'option_d'].includes(choiceId)
     ? (score >= (choiceId === 'option_b' ? 62 : 60) ? 'disciplined-withdrawal' : score >= 43 ? 'defeat' : 'rout')
     : battle?.id === 'third_winchester' && choiceId === 'option_a'
       ? (score >= 64 ? 'costly-win' : score >= 44 ? 'defeat' : 'rout')
@@ -413,6 +809,7 @@ export function delegateBattle(state, battle, choiceId) {
   const resolution = {
     battleId: battle.id,
     scenarioId: battle.scenarioId,
+    ...(mission ? { choiceId } : {}),
     result,
     score,
     confederateLossRate: result === 'decisive-win' ? 0.11 : result === 'costly-win' ? 0.23 : result === 'disciplined-withdrawal' ? 0.16 : result === 'defeat' ? 0.31 : 0.45,
@@ -443,15 +840,24 @@ const OUTCOME_EFFECTS = {
   rout: { metrics: { militaryStrength: -10, munitions: -5, publicMorale: -10 }, tactical: -12 },
 };
 
-export function applyBattleResolution(state, resolution) {
+export function applyBattleResolution(state, resolution, { legacyShiloh = false } = {}) {
   if (!resolution?.scenarioId || state?.battleCampaign?.results?.[resolution.scenarioId]) return state;
+  const mission = fieldMissionRules(resolution.scenarioId);
+  if (mission && (state.scenarioId !== resolution.scenarioId || resolution.battleId !== mission.battleId
+    || !Object.hasOwn(mission.outcomes, resolution.choiceId)
+    || !usesAssessedFieldConsequences(state, resolution.scenarioId, resolution.choiceId)
+    || (resolution.battleRulesVersion !== undefined && resolution.battleRulesVersion < 18))) return state;
+  const battle = mission ? choiceGatedBattles[resolution.scenarioId] : BATTLE_SCENARIOS[resolution.scenarioId];
   const effect = OUTCOME_EFFECTS[resolution.result] || OUTCOME_EFFECTS.defeat;
+  const policyVersion = legacyShiloh && resolution.scenarioId === 'shiloh_army_of_tennessee'
+    ? null
+    : fieldConsequencesVersion(state, resolution.scenarioId);
   const result = {
     ...resolution,
-    ...(usesCurrentFieldConsequences(state, resolution.scenarioId)
+    ...(policyVersion
       && (resolution.battleRulesVersion === undefined || resolution.battleRulesVersion >= 18)
-      ? { fieldResultConsequencesVersion: FIELD_RESULT_CONSEQUENCES_VERSION } : {}),
-    title: BATTLE_SCENARIOS[resolution.scenarioId]?.title || resolution.battleId,
+      ? { fieldResultConsequencesVersion: policyVersion } : {}),
+    title: battle?.title || resolution.battleId,
     tacticalScore: effect.tactical,
     completedTurn: state.currentTurn,
   };
@@ -465,7 +871,7 @@ export function applyBattleResolution(state, resolution) {
       version: 1,
       results: { ...(state.battleCampaign?.results || {}), [resolution.scenarioId]: result },
     },
-    statusMessage: `${battleResultLabel(resolution.result, resolution.assessment)} at ${BATTLE_SCENARIOS[resolution.scenarioId]?.title || 'the field battle'}. The result now shapes the strategic consequence.`,
+    statusMessage: `${battleResultLabel(resolution.result, resolution.assessment)} at ${battle?.title || 'the field battle'}. The result now shapes the strategic consequence.`,
   };
 }
 

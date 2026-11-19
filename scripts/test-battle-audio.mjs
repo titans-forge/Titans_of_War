@@ -55,3 +55,19 @@ test('a failed voice allocation is contained and disconnects its partial graph',
   assert.doesNotThrow(()=>h.manager.update([h.event(1)],h.options));assert.equal(h.manager.voices.size,0);assert.equal(h.manager.enabled,false);
   assert.ok(h.nodes.filter(n=>n.kind==='noise').every(n=>n.disconnected));h.manager.dispose();
 });
+
+test('recorded organized and disordered exits have different cues', async () => {
+  const h = harness(), cues = [];
+  h.manager.play = key => cues.push(key);
+  await h.manager.unlock();
+  h.manager.update([], h.options);
+  const events = [
+    { ...h.event(1, 'departure'), organized: true },
+    { ...h.event(2, 'departure'), organized: false },
+    h.event(3, 'melee'),
+  ];
+  h.manager.update(events, h.options);
+  h.manager.update(events, h.options);
+  assert.deepEqual(cues, ['ordered-exit', 'departure', 'melee']);
+  h.manager.dispose();
+});

@@ -1,6 +1,7 @@
 import { CivilWarBattleEngine } from '../battle/civilWarEngine.js';
 import { combatCheckpointEnvelope } from '../battle/combatCheckpointEnvelope.js';
-import { BATTLE_SCENARIOS } from './battles.js';
+import { BATTLE_SCENARIOS, PRACTICE_BATTLES, battleForScenario } from './battles.js';
+import { isChoiceGatedField } from './fieldResultConsequences.js';
 import { CAMPAIGN_STORAGE_KEY } from './campaignStorage.js';
 export const FIELD_CHECKPOINT_KEY = 'titans-of-war:field-checkpoint:v1';
 const MAX_BYTES = 3000000;
@@ -36,8 +37,21 @@ export function loadFieldCheckpoint(storage = defaultStorage()) {
     if (typeof envelope.payload !== 'string' || envelope.checksum !== checksum(envelope.payload)) throw new Error('The field checkpoint is damaged.');
     const saved = JSON.parse(envelope.payload), context = saved.context;
     if (saved.version !== 1) throw new Error('This field checkpoint needs a different game version.');
-    if (saved.anchor !== campaignAnchor(storage.getItem(CAMPAIGN_STORAGE_KEY))) throw new Error('This field checkpoint belongs to an earlier campaign state.');
-    const battle = Object.values(BATTLE_SCENARIOS).find(b => b.id === context?.battle?.id);
+    const campaignRaw = storage.getItem(CAMPAIGN_STORAGE_KEY);
+    if (saved.anchor !== campaignAnchor(campaignRaw)) throw new Error('This field checkpoint belongs to an earlier campaign state.');
+    const availableBattles = context?.practice === true ? PRACTICE_BATTLES : BATTLE_SCENARIOS;
+    const battleId = context?.battle?.id;
+    const registered = Object.values(PRACTICE_BATTLES).find(entry => entry.id === battleId);
+    const choiceGatedCampaign = registered && isChoiceGatedField(registered.scenarioId) && context?.practice !== true;
+    const campaign = choiceGatedCampaign ? JSON.parse(campaignRaw) : null;
+    const battle = choiceGatedCampaign
+      ? battleForScenario({ id: campaign.activeScenarioId }, campaign.state, context.choiceId)
+      : Object.values(availableBattles).find(b => b.id === battleId);
+    if (choiceGatedCampaign && (battle?.id !== battleId || context.baseState?.scenarioId !== registered.scenarioId
+      || context.resumeState?.scenarioId !== registered.scenarioId || !context.choiceId)) throw new Error('The saved battle is not supported.');
+    if (battle?.practiceChoices && context.practice === true && !battle.practiceChoices.some(choice => choice.id === context.choiceId)) {
+      throw new Error('The saved battle is not supported.');
+    }
     if (!battle || !['option_a','option_b','option_c','option_d'].includes(context.choiceId)) throw new Error('The saved battle is not supported.');
     CivilWarBattleEngine.fromCheckpoint(combatCheckpointEnvelope(context.checkpoint), battle.id, context.resumeState, context.choiceId);
     return { pending: { ...context, battle, mode: 'suspended' }, error: null };

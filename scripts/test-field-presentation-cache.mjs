@@ -6,12 +6,13 @@ import {CivilWarBattleEngine} from '../src/battle/civilWarEngine.js';
 import {createFreshCampaignState} from '../src/game/campaignStorage.js';
 import {BATTLE_SCENARIOS} from '../src/game/battles.js';
 import {FieldPresentationCache} from '../src/battle/fieldPresentationCache.js';
+import {hasFieldViewport} from '../src/battle/battleUsability.js';
 import {percentile} from '../src/battle/fieldPerformance.js';
 const source=fs.readFileSync(new URL('../src/battle/CivilWarBattlefield.jsx',import.meta.url),'utf8');
-const Scene=vm.runInNewContext(source.slice(source.indexOf('class CivilWarBattleScene'))+'; CivilWarBattleScene',{Phaser:{Scene:class{}},document:{hidden:false},recordFieldProfile(){}});
+const Scene=vm.runInNewContext(source.slice(source.indexOf('class CivilWarBattleScene'))+'; CivilWarBattleScene',{Phaser:{Scene:class{}},document:{hidden:false},hasFieldViewport,recordFieldProfile(){}});
 function fixture(engine){
  const scene=Object.create(Scene.prototype);let passes=0,snapshots=0;const snapshot=engine.snapshot.bind(engine);engine.snapshot=(...args)=>{snapshots++;return snapshot(...args);};
- Object.assign(scene,{engine,presentationCache:new FieldPresentationCache(),speed:0,snapshotClock:0,views:new Map(),cameras:{main:{zoom:.4}},shadows:{clear(){}},dust:{clear(){}},smoke:{clear(){}},syncFormation(){passes++;},drawSelection(){},onBattleSnapshot(){},clearDestination(){},selectedId:engine.state.find(u=>u.side==='confederate').id});
+ Object.assign(scene,{engine,presentationCache:new FieldPresentationCache(),speed:0,snapshotClock:0,views:new Map(),scale:{width:900,height:500},cameras:{main:{zoom:.4}},shadows:{clear(){}},dust:{clear(){}},smoke:{clear(){}},syncFormation(){passes++;},drawSelection(){},onBattleSnapshot(){},clearDestination(){},selectedId:engine.state.find(u=>u.side==='confederate').id});
  return {scene,counts:()=>({passes,snapshots})};
 }
 for(const battle of Object.values(BATTLE_SCENARIOS))test(`${battle.id}: repeated paused frames preserve tactical state and reuse presentation`,()=>{

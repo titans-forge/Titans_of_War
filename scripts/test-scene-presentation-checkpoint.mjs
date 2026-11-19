@@ -8,6 +8,8 @@ import { getBattleEngineConfig } from '../src/battle/battleDefinitions.js';
 import { createFormationVisual, updateFormationVisual } from '../src/battle/formationVisualState.js';
 import { createFormationVisualCheckpoint, restoreFormationVisualFromCheckpoint } from '../src/battle/formationVisualCheckpoint.js';
 import { gettysburgInfantryClipPolicy } from '../src/battle/gettysburgInfantryClipPolicy.js';
+import { gettysburgFieldArtEnabled } from '../src/battle/gettysburgFieldArt.js';
+import { manassasFieldArtEnabled } from '../src/battle/manassasFieldArt.js';
 import { combatCheckpointEnvelope } from '../src/battle/combatCheckpointEnvelope.js';
 import { createFreshCampaignState, createCampaignSnapshot, CAMPAIGN_STORAGE_KEY } from '../src/game/campaignStorage.js';
 import { saveFieldCheckpoint, loadFieldCheckpoint, FIELD_CHECKPOINT_KEY } from '../src/game/fieldCheckpoint.js';
@@ -19,6 +21,7 @@ const Scene = vm.runInNewContext(source.slice(source.indexOf('class CivilWarBatt
   Phaser: { Scene: class {} }, CivilWarBattleEngine, FieldPresentationCache, getBattleEngineConfig,
   performance, Map, window: { location: { search: '?artPass=gettysburg-v8' }, matchMedia: () => ({ matches: false }) },
   combatCheckpointEnvelope, createFormationVisualCheckpoint, restoreFormationVisualFromCheckpoint, updateFormationVisual, gettysburgInfantryClipPolicy,
+  gettysburgFieldArtEnabled, manassasFieldArtEnabled,
 });
 const campaign = { ...createFreshCampaignState(1861), battleRulesVersion: 17 };
 const visualTime = engine => engine.time + (engine.resolutionTime || 0);

@@ -4,12 +4,11 @@ import { AppInformation } from './components/AppInformation.jsx';
 import { createPracticeState, practiceAmmunitionLabel } from './game/practiceConditions.js';
 import { CampaignStart } from './components/CampaignStart.jsx';
 import { clearFieldCheckpoint } from './game/fieldCheckpoint.js';
-import { loadFieldSuspension, saveFieldSuspension } from './game/fieldSuspendSave.js';
+import { discardOwnedFieldSuspension, loadFieldSuspension, saveFieldSuspension, settleOwnedFieldSuspension } from './game/fieldSuspendSave.js';
 // Titans of War — Main App Coordinator (Dual Basic & AI Mode)
 import { CampaignAssessmentPanel } from './components/CampaignAssessmentPanel';
 import { calculateCampaignAssessment, formatCampaignAssessment } from './game/campaignAssessment';
 import { resolveEndingPresentationArt } from './game/presentationArt';
-import { BattleAssessmentPanel } from './components/BattleAssessmentPanel';
 import { CampaignLogistics } from './components/CampaignLogistics';
 import { commitRecoveryAllocation, selectRecoveryAllocation, getCampaignScenario } from './game/campaignSupply';
 import React, { lazy, Suspense, useState, useEffect, useRef, useMemo } from 'react';
@@ -31,11 +30,12 @@ import { compareModelProfiles, RECOMMENDED_LOCAL_MODEL, resolveModelProfile } fr
 import { StrategyAudioManager } from './engine/StrategyAudioManager';
 import { CivilWarBattleGate } from './components/CivilWarBattleGate';
 import { CampaignSaveNotice } from './components/CampaignSaveNotice';
-import { AfterAction, BattleLibrary, CampaignDialog, CampaignJournal } from './components/CampaignOverlays';
+import { AfterAction, BattleLibrary, CampaignDialog, CampaignJournal, PracticeBattleReport } from './components/CampaignOverlays';
 import { CampaignWalkthrough, CampaignKeyboardHelp } from './components/CampaignHelp';
 import { createAfterAction, RESOURCE_LABELS, nextPhasePreview } from './game/campaignExperience';
 import { CAMPAIGN_STORAGE_KEY, DEMO_STORAGE_KEY, loadCampaignCheckpoints, saveCampaignCheckpoint, backupOriginalCampaignRaw, readOriginalCampaignRaw } from './game/campaignStorage';
 import { applyBattleResolution, battleChoiceSuccessModifier, battleForScenario, battleReadiness, battleResultLabel, delegateBattle } from './game/battles';
+import { isChoiceGatedField, usesAssessedFieldConsequences } from './game/fieldResultConsequences.js';
 
 const CommandTraining = lazy(() => import('./components/CommandTraining.jsx'));
 const CivilWarBattleEncounter = lazy(() => import('./components/CivilWarBattleEncounter').then((module) => ({ default: module.CivilWarBattleEncounter })));
@@ -155,7 +155,7 @@ function buildCampaignShareText(state, score) {
     'Titans of War campaign result',
     '',
     `Outcome: ${state.gameOver ? currentScore.survived ? 'Campaign survived' : 'Campaign collapsed' : 'Campaign in progress'}`,
-    `Ending: ${currentScore.endingClass}`,
+    `Ending: ${currentScore.endingLabel}`,
     formatCampaignAssessment(calculateCampaignAssessment(state)),
     `Original command performance: ${currentScore.commandScore}/100 (${currentScore.commandGrade})`,
     `Tactical smarts: ${currentScore.reportCards.tacticalSmarts.score}/100 (${currentScore.reportCards.tacticalSmarts.grade})`,
@@ -164,7 +164,7 @@ function buildCampaignShareText(state, score) {
       `Challenge: ${state.difficulty === 'story' ? 'Story' : 'Standard'}`,
       `Unpaid supply obligations: Treasury ${Math.round(state.campaignEconomy.treasuryArrears * 10) / 10}; Ammunition ${Math.round(state.campaignEconomy.munitionsArrears * 10) / 10}. These are included in the campaign outcome assessment; the original command formula is retained separately.`,
     ] : []),
-    `Timeline divergence: ${((state.divergenceIndex || 0) * 100).toFixed(0)}% (descriptive; not a command grade)`,
+    `Timeline divergence: ${((state.divergenceIndex || 0) * 100).toFixed(0)}%. The outcome assessment does not score divergence directly. Some original command indicators reflect divergence.`,
     `Decisions enacted: ${(state.history || []).length}`,
     `Seed: ${state.seed}`,
     '',
@@ -210,7 +210,7 @@ const CAMPAIGN_PHASES = [
   {
     start: 21,
     end: 24,
-    label: 'Atlanta Falls and the Nation Votes',
+    label: 'Atlanta and the Nation Votes',
     note: 'Atlanta, Winchester, Cedar Creek, and the presidential election decide whether Northern politics can still change the war.',
   },
   {
@@ -230,7 +230,7 @@ export default function App() {
   const [initialCampaign] = useState(loadInitialCampaign);
   const [gameState, setGameState] = useState(initialCampaign.state);
   const [storedScenario, setActiveScenario] = useState(initialCampaign.activeScenario);
-  const activeScenario = useMemo(() => getCampaignScenario(gameState, storedScenario), [gameState.rulesVersion, gameState.history, storedScenario]);
+  const activeScenario = useMemo(() => getCampaignScenario(gameState, storedScenario), [gameState.rulesVersion, gameState.battleRulesVersion, gameState.history, storedScenario]);
   const correspondence = getScenarioCorrespondence(gameState, activeScenario?.id);
   const letterDraft = correspondence?.draft || '';
   const sentimentResult = correspondence?.result || null;
@@ -242,10 +242,14 @@ export default function App() {
   archiveContextRef.current = { gameState, activeScenario };
   const [selectedChoiceId, setSelectedChoiceId] = useState(null);
   const [hoveredChoiceId, setHoveredChoiceId] = useState(null);
-  const [initialField] = useState(() => loadFieldSuspension(undefined, initialCampaign.checkpointCampaignSnapshot));
+  const [initialField] = useState(() => ({
+    ...loadFieldSuspension(undefined, initialCampaign.checkpointCampaignSnapshot),
+    handledCampaign: { current: null },
+  }));
   const fieldOwnerRef = useRef(initialField.owner);
   const [pendingBattle, setPendingBattle] = useState(initialField.pending);
   const [startOpen, setStartOpen] = useState(() => !initialField.pending && !initialField.error && !initialCampaign.state.pendingDebrief);
+  const campaignReportHeading = useRef(null);
   const trainingReturnRef = useRef('library');
   const openTraining = (origin) => {
     trainingReturnRef.current = origin;
@@ -260,6 +264,7 @@ export default function App() {
   const [showBattleLibrary, setShowBattleLibrary] = useState(false);
   const [showJournal, setShowJournal] = useState(false);
   const [practiceResult, setPracticeResult] = useState(null);
+  const [previousPracticeSetup, setPreviousPracticeSetup] = useState(null);
   const [showCommandTraining,setShowCommandTraining] = useState(false);
   const [archiveProtected, setArchiveProtected] = useState(Boolean(initialCampaign.protectSave || initialField.protectedCampaign));
   const demoReturnRef = useRef(null);
@@ -489,8 +494,22 @@ export default function App() {
   }, [selectedChoiceId]);
 
   useEffect(() => {
+    const heading = campaignReportHeading.current;
+    if (!gameState.gameOver || gameState.pendingDebrief || startOpen || !heading) return;
+    heading.focus({ preventScroll: true });
+    heading.scrollIntoView({ block: 'start', behavior: 'instant' });
+  }, [gameState.gameOver, gameState.pendingDebrief, startOpen]);
+
+  // Opening and finishing a fresh practice battle are independent of campaign saves.
+  const pendingBattleForSave = pendingBattle?.practice && !pendingBattle.checkpoint ? null : pendingBattle;
+  useEffect(() => {
     if (archiveProtected && !isDemo) return;
     if (!isDemo && pendingBattle?.checkpoint) return;
+    // Ending an owned field handles storage before releasing the encounter.
+    // Keep later campaign edits eligible for the regular autosave.
+    const handledCampaign = initialField.handledCampaign;
+    if (!isDemo && handledCampaign?.current === gameState) return;
+    if (handledCampaign) handledCampaign.current = null;
     const result = saveCampaignSnapshot(createCampaignSnapshot(gameState, activeScenario, { aiPortalEngaged, selectedModel }), undefined, isDemo ? DEMO_STORAGE_KEY : CAMPAIGN_STORAGE_KEY);
     setCampaignSaveStatus({ ...result, turn: gameState.currentTurn });
     if (result.ok) {
@@ -501,7 +520,7 @@ export default function App() {
     } else {
       setArchiveMessage(`Auto-save unavailable: ${result.error}.`);
     }
-  }, [gameState, activeScenario, aiPortalEngaged, selectedModel, isDemo, archiveProtected, saveRetry, pendingBattle, initialField.error]);
+  }, [gameState, activeScenario, aiPortalEngaged, selectedModel, isDemo, archiveProtected, saveRetry, pendingBattleForSave, initialField.error]);
 
   useEffect(() => {
     if (skipNextScenarioEffect.current) {
@@ -624,13 +643,27 @@ export default function App() {
 
   const completeCampaignChoice = (baseState, choiceId, successModifier, statusNote = '') => {
     const result = advanceCampaignTurn(baseState, activeScenario, choiceId, STATIC_SCENARIOS, successModifier);
-    invalidateLetterRequest();
-    const finalState = {
+    let finalState = {
       ...result.state,
       correspondence: null,
       pendingDebrief: createAfterAction(gameState, result.state, result.historyEntry, result.nextScenario, baseState, pendingBattle?.baseState),
       statusMessage: result.state.statusMessage + statusNote
     };
+    if (pendingBattle?.checkpoint) {
+      const nextScenario = result.nextScenario;
+      if (nextScenario) {
+        finalState = { ...finalState, actor: nextScenario.actor, roleLabel: nextScenario.roleLabel, nextScenarioId: null };
+      }
+      settleOwnedFieldSuspension(createCampaignSnapshot(finalState, nextScenario || activeScenario, { aiPortalEngaged, selectedModel }), pendingBattle, fieldOwnerRef.current);
+      initialField.handledCampaign.current = finalState;
+      fieldOwnerRef.current = null;
+      if (gameState.currentTurn !== finalState.currentTurn || gameState.nextScenarioId !== finalState.nextScenarioId) {
+        skipNextScenarioEffect.current = true;
+      }
+      setCampaignSaveStatus({ ok: true, error: null, turn: finalState.currentTurn });
+      setArchiveMessage(`Auto-saved turn ${finalState.currentTurn} · seed ${finalState.seed}.`);
+    }
+    invalidateLetterRequest();
     setGameState(finalState);
     if (result.nextScenario && result.nextScenario.id !== activeScenario.id) {
       setActiveScenario(result.nextScenario);
@@ -654,22 +687,55 @@ export default function App() {
     setPendingBattle(saved.pending);
   };
 
+  const launchPractice = (setup) => {
+    setPreviousPracticeSetup(setup);
+    setPracticeResult(null);
+    setShowBattleLibrary(false);
+    setPendingBattle({ ...setup, practice: true, mode: 'fight' });
+  };
+
+  const discardCurrentField = () => {
+    discardOwnedFieldSuspension(pendingBattle, fieldOwnerRef.current);
+    initialField.handledCampaign.current = gameState;
+    fieldOwnerRef.current = null;
+  };
+
   const handleBattleResolution = (resolution) => {
     if (!pendingBattle) return;
     if (pendingBattle.practice) {
-      setPracticeResult({ ...resolution, title: pendingBattle.battle.title, openingOrder: pendingBattle.openingOrder, ammunitionLabel: practiceAmmunitionLabel(pendingBattle.resumeState || pendingBattle.practiceState) });
+      const { battle, choiceId, openingOrder } = pendingBattle;
+      const practiceState = pendingBattle.practiceState || pendingBattle.resumeState;
+      if (pendingBattle.checkpoint) {
+        try { discardCurrentField(); }
+        catch (error) { setOperationError(error.message); return; }
+      }
+      setPracticeResult({
+        ...resolution, title: battle.title, openingOrder,
+        ammunitionLabel: practiceAmmunitionLabel(practiceState),
+        setup: { battle, choiceId, openingOrder, practiceState },
+      });
       setPendingBattle(null);
       return;
     }
-    const battleState = applyBattleResolution(pendingBattle.baseState || gameState, resolution);
+    // A suspended Shiloh encounter opened before the new settlement still
+    // completes under the campaign terms it was offered when it began.
+    const legacyShiloh = pendingBattle.battle.id === 'shiloh' && Boolean(pendingBattle.checkpoint)
+      && pendingBattle.assessedShilohSettlement !== true;
+    const battleState = applyBattleResolution(pendingBattle.baseState || gameState, resolution, { legacyShiloh });
     const fieldNote = ` Field command: ${battleResultLabel(resolution.result, resolution.assessment)}.`;
+    try {
+      completeCampaignChoice(
+        battleState,
+        pendingBattle.choiceId,
+        battleChoiceSuccessModifier(pendingBattle.battle, pendingBattle.choiceId, resolution.result, pendingBattle.successModifier),
+        `${pendingBattle.statusNote}${fieldNote}`
+      );
+    } catch (error) {
+      if (!pendingBattle.checkpoint) throw error;
+      setOperationError(error.message);
+      return;
+    }
     setPendingBattle(null);
-    completeCampaignChoice(
-      battleState,
-      pendingBattle.choiceId,
-      battleChoiceSuccessModifier(pendingBattle.battle, pendingBattle.choiceId, resolution.result, pendingBattle.successModifier),
-      `${pendingBattle.statusNote}${fieldNote}`
-    );
   };
 
   const handleCancelPendingBattle = () => {
@@ -704,9 +770,13 @@ export default function App() {
       // Melancholic tone: no bonus (morale already docked on submission)
     }
 
-    const battle = battleForScenario(activeScenario, gameState);
+    const battle = battleForScenario(activeScenario, gameState, selectedChoiceId);
     if (battle) {
-      setPendingBattle({ battle, choiceId: selectedChoiceId, successModifier, statusNote, mode: 'gate', baseState: commitRecoveryAllocation(gameState) });
+      const fieldDecides = usesAssessedFieldConsequences(gameState, battle.scenarioId, selectedChoiceId);
+      setPendingBattle({ battle, choiceId: selectedChoiceId, successModifier, statusNote: fieldDecides ? '' : statusNote,
+        mode: 'gate', baseState: commitRecoveryAllocation(gameState),
+        ...(fieldDecides && battle.id === 'shiloh' ? { assessedShilohSettlement: true } : {}),
+      });
       return;
     }
 
@@ -1179,6 +1249,7 @@ export default function App() {
     const handleGlobalKeyDown = (e) => {
       if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
       if (startOpen || showCommandTraining || pendingBattle || gameState.pendingDebrief || showBattleLibrary || showJournal || practiceResult || primerPanelOpen || showTutorial || showHotkeysHelp || campaignAction || operationError) return;
+      if (document.activeElement?.closest('[aria-modal="true"]')) return;
       // Ignore key binds if user is actively writing a letter or typing in a field
       if (['TEXTAREA', 'INPUT', 'SELECT', 'BUTTON', 'SUMMARY'].includes(document.activeElement.tagName)) {
         return;
@@ -1248,7 +1319,7 @@ export default function App() {
         onGuide={() => { setStartOpen(false); setShowTutorial(true); }}
         onKeys={() => { setStartOpen(false); setShowHotkeysHelp(true); }}
         onDifficulty={difficulty => { setGameState(previous => previous.history.length ? previous : { ...previous, difficulty }); setNeedsConfirmation(false); }} />}
-      {operationError && <CampaignDialog title="Campaign preserved" onClose={() => setOperationError('')}><p>{operationError}</p></CampaignDialog>}
+      {operationError && <div className={pendingBattle?.checkpoint ? 'campaign-field-error' : undefined}><CampaignDialog title="Campaign storage" onClose={() => setOperationError('')}><p role="alert">{operationError}</p></CampaignDialog></div>}
       {campaignAction && !operationError && <CampaignDialog title={campaignAction.type === 'reset' ? 'Start a new campaign?' : 'Return to this checkpoint?'} onClose={() => setCampaignAction(null)}>
         <p>Your current campaign will be kept as a checkpoint before anything is replaced.</p>
         <button className="tactical-button primary" onClick={() => {
@@ -1258,36 +1329,35 @@ export default function App() {
         }}>{campaignAction.type === 'reset' ? 'Start new campaign' : 'Restore checkpoint'}</button>
         <button className="tactical-button" onClick={() => setCampaignAction(null)}>Keep playing</button>
       </CampaignDialog>}
-      {gameState.pendingDebrief && <AfterAction saveNotice={<CampaignSaveNotice status={campaignSaveStatus} protectedSave={archiveProtected && !isDemo} demo={isDemo} onRetry={() => setSaveRetry(value => value + 1)} onExport={handleExportCampaignSave} />} report={gameState.pendingDebrief} onContinue={() => {
+      {gameState.pendingDebrief && <AfterAction saveNotice={<CampaignSaveNotice status={campaignSaveStatus} protectedSave={archiveProtected && !isDemo} demo={isDemo} onRetry={() => setSaveRetry(value => value + 1)} onExport={handleExportCampaignSave} />} report={gameState.pendingDebrief}
+        endingSummary={gameState.pendingDebrief.concluded ? gameState.statusMessage : null} onContinue={() => {
         setGameState((previous) => ({ ...previous, pendingDebrief: null }));
         window.scrollTo({ top: 0, behavior: 'instant' });
       }} />}
       {showCommandTraining && <Suspense fallback={<div className="cw-battle-loading" role="status">Preparing command training…</div>}><CommandTraining onClose={()=>{setShowCommandTraining(false);if(trainingReturnRef.current === 'start') setStartOpen(true); else if(trainingReturnRef.current === 'library') setShowBattleLibrary(true);}} /></Suspense>}
-      {showBattleLibrary && <BattleLibrary scenarios={STATIC_SCENARIOS} onTraining={()=>openTraining('library')} onClose={() => setShowBattleLibrary(false)} onStart={(battle, scenario, choiceId, enemyDoctrine, ammunition) => {
-        setShowBattleLibrary(false);
-        setPendingBattle({ battle, choiceId, openingOrder: scenario.choices.find(choice => choice.id === choiceId)?.text, practice: true, mode: 'fight', practiceState: createPracticeState(scenario, enemyDoctrine, ammunition) });
-      }} />}
-      {practiceResult && <CampaignDialog title="Practice battle report" onClose={() => setPracticeResult(null)}>
-        <p className="eyebrow">{practiceResult.title}</p>
-        {practiceResult.ammunitionLabel && <p>Practice conditions: {practiceResult.ammunitionLabel}.</p>}
-        {practiceResult.enemyDoctrineLabel && <p>Union command approach: {practiceResult.enemyDoctrineLabel}</p>}
-        <h3>{battleResultLabel(practiceResult.result, practiceResult.assessment)}</h3><BattleAssessmentPanel assessment={practiceResult.assessment} legacyScore={practiceResult.score} />
-        {practiceResult.openingOrder && <p><strong>Opening order: </strong>{practiceResult.openingOrder}</p>}
-        <dl className="result-deltas">{[['Confederate losses', practiceResult.confederateLossRate], ['Union losses', practiceResult.unionLossRate]].filter(([, rate]) => Number.isFinite(rate)).map(([label, rate]) => <div key={label}><dt>{label}</dt><dd>{Math.round(rate * 100)}%</dd></div>)}</dl>
-        <p className="muted">Try a different opening strategy or reserve movement, then compare the result and losses.</p>
-        <p>Your campaign is unchanged.</p><button className="tactical-button primary" onClick={() => { setPracticeResult(null); setShowBattleLibrary(true); }}>Choose another battle</button>
-      </CampaignDialog>}
+      {showBattleLibrary && <BattleLibrary scenarios={STATIC_SCENARIOS} previousSetup={previousPracticeSetup} onTraining={()=>openTraining('library')} onClose={() => setShowBattleLibrary(false)} onStart={(battle, scenario, choiceId, enemyDoctrine, ammunition) => launchPractice({
+        battle, choiceId, openingOrder: scenario.choices.find(choice => choice.id === choiceId)?.text,
+        practiceState: createPracticeState(scenario, enemyDoctrine, ammunition),
+      })} />}
+      {practiceResult && <PracticeBattleReport result={practiceResult} onClose={() => setPracticeResult(null)}
+        onRetry={() => launchPractice(practiceResult.setup)}
+        onChoose={() => {
+          setPreviousPracticeSetup(practiceResult.setup);
+          setPracticeResult(null);
+          setShowBattleLibrary(true);
+        }} />}
       {showJournal && <CampaignJournal history={gameState.history} checkpoints={isDemo ? [] : loadCampaignCheckpoints()} onClose={() => setShowJournal(false)} onRestore={(checkpoint) => {
         setShowJournal(false); setCampaignAction({ type: 'restore', checkpoint });
       }} />}
       {pendingBattle?.mode === 'suspended' && <CampaignDialog title="Battle saved on this device" onClose={() => setPendingBattle(previous => ({ ...previous, mode: 'fight' }))}>
         <p>{pendingBattle.battle.title} · field time {Math.floor(pendingBattle.checkpoint.state.time)}. Your formations and confirmed orders are saved. Resume starts paused. You may safely close this page.</p>
         <button className="tactical-button primary" onClick={() => setPendingBattle(previous => ({ ...previous, mode: 'fight' }))}>Resume saved battle</button>
-        <button className="tactical-button" onClick={() => { try { clearFieldCheckpoint(); setPendingBattle(null); } catch (error) { setOperationError(error.message); } }}>Discard saved battle</button>
+        <button className="tactical-button" onClick={() => { try { discardCurrentField(); setPendingBattle(null); } catch (error) { setOperationError(error.message); } }}>Discard saved battle</button>
       </CampaignDialog>}
       {pendingBattle?.mode === 'gate' && (
         <CivilWarBattleGate
           canSuspend={!isDemo && !archiveProtected}
+          fieldDecides={usesAssessedFieldConsequences(pendingBattle.baseState || gameState, pendingBattle.battle.scenarioId, pendingBattle.choiceId)}
           saveNotice={<CampaignSaveNotice status={campaignSaveStatus} protectedSave={archiveProtected && !isDemo} demo={isDemo} onRetry={() => setSaveRetry(value => value + 1)} onExport={handleExportCampaignSave} />}
           battleRulesVersion={(pendingBattle.baseState || gameState).battleRulesVersion}
           battle={pendingBattle.battle}
@@ -1310,9 +1380,15 @@ export default function App() {
             choiceId={pendingBattle.choiceId}
             onResolve={handleBattleResolution}
             onClose={() => {
-              if (pendingBattle.checkpoint) clearFieldCheckpoint();
+              if (pendingBattle.checkpoint) discardCurrentField();
               if (pendingBattle.practice) { setPendingBattle(null); setShowBattleLibrary(true); }
-              else setPendingBattle((previous) => ({ ...previous, checkpoint: null, resumeState: null, mode: 'gate' }));
+              else setPendingBattle((previous) => {
+                const assessedShiloh = previous.battle.id === 'shiloh'
+                  && usesAssessedFieldConsequences(previous.baseState || gameState, previous.battle.scenarioId);
+                return { ...previous, checkpoint: null, resumeState: null, mode: 'gate',
+                  ...(assessedShiloh ? { assessedShilohSettlement: true, statusNote: '' } : {}),
+                };
+              });
             }}
           />
         </Suspense>
@@ -1674,13 +1750,14 @@ export default function App() {
 
 
         {/* Center Column: Scenarios, Letter & Action Console */}
-        <section className="campaign-flow" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+        <section className="campaign-flow">
           
           {gameState.gameOver ? (
-            <div className="tactical-card campaign-report-card" style={{ textAlign: 'center', padding: '3rem 2rem', borderColor: 'var(--accent-gold)', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <div style={{ color: 'var(--accent-gold)', fontSize: '2.5rem' }}>⚔️</div>
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', textTransform: 'uppercase' }}>Campaign Report</h2>
+            <div className="tactical-card campaign-report-card">
+              <h2 ref={campaignReportHeading} tabIndex={-1}>Campaign Report</h2>
               <p className="atmospheric-log">{gameState.statusMessage}</p>
+
+              {campaignScore && <CampaignAssessmentPanel state={gameState} legacyScore={campaignScore} />}
 
               {endingMedia && <figure className="scenario-figure" style={{ textAlign: 'left' }}>
                 <div className="scenario-visual"><img src={publicAssetUrl(endingMedia.src)} alt={endingMedia.alt || endingMedia.title} style={{ objectFit: 'contain' }} /></div>
@@ -1701,7 +1778,6 @@ export default function App() {
               {/* Campaign report card */}
               {campaignScore && (
                 <div style={{ background: 'rgba(0,0,0,0.3)', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.25rem', textAlign: 'left' }}>
-                  <CampaignAssessmentPanel state={gameState} legacyScore={campaignScore} />
                   <details className="original-command-report"><summary>Original detailed command report</summary>
                   <div className="campaign-grade-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.75rem', marginBottom: '1rem' }}>
                     {[campaignScore.reportCards.tacticalSmarts, campaignScore.reportCards.strategicBrilliance].map((card) => (
@@ -1728,7 +1804,7 @@ export default function App() {
                     </div>
                   </div>
 
-                  <details><summary>Historical composite: {campaignScore.total}/1000 · {campaignScore.grade}</summary><p>Command performance evaluates tactics and strategy. Timeline fidelity is recorded separately, not deducted from command performance.</p>
+                  <details><summary>Historical composite: {campaignScore.total}/1000 · {campaignScore.grade}</summary><p>Original command performance uses tactical and strategic indicators, some of which reflect divergence. The Timeline Fidelity card contributes to the historical composite.</p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem', marginBottom: '0.85rem' }}>
                     {campaignScore.breakdown.map((b) => (
                       <div key={b.label}>
@@ -1745,9 +1821,9 @@ export default function App() {
                   </details>
 
                   <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', lineHeight: '1.4', borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.6rem' }}>
-                    <strong style={{ color: gradeColor(campaignScore.commandGrade) }}>{campaignScore.survived ? 'Campaign survived' : 'Campaign collapsed'}</strong> · Ending: <strong>{campaignScore.endingClass}</strong>. {campaignScore.endingNote}
+                    <strong style={{ color: gradeColor(campaignScore.commandGrade) }}>{campaignScore.survived ? 'Campaign survived' : 'Campaign collapsed'}</strong> · Ending: <strong>{campaignScore.endingLabel}</strong>. {campaignScore.endingNote}
                     <br />
-                    <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--text-muted, var(--text-secondary))' }}>Timeline divergence: {(gameState.divergenceIndex * 100).toFixed(0)}% · Describes this route; does not lower your command grade.</span>
+                    <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--text-muted, var(--text-secondary))' }}>Timeline divergence · {(gameState.divergenceIndex * 100).toFixed(0)}%</span>
                     <br />
                     <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--text-muted, var(--text-secondary))' }}>Cabinet crises faced/resolved: {campaignScore.crisisSummary.faced} / {campaignScore.crisisSummary.resolved}</span>
                     <br />
@@ -1836,7 +1912,7 @@ export default function App() {
                   <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                     {gameState.shards.hotspur.alignment < 30 && (
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem', borderBottom: '1px solid rgba(239, 68, 68, 0.08)', paddingBottom: '0.4rem' }}>
-                        <span style={{ lineHeight: '1.4' }}>• <strong>Radical Attackers (Hotspur) Crisis:</strong> Fire-eaters are openly resisting caution. <strong>Strength declines by 4 per turn.</strong></span>
+                        <span style={{ lineHeight: '1.4' }}>• <strong>Radical Attackers (Hotspur) Crisis:</strong> Fire-eaters resist caution and increase army losses when upkeep applies.</span>
                         <button 
                           onClick={() => handleResolveCabinetCrisis('hotspur')} 
                           disabled={gameState.metrics.treasury < 25} 
@@ -1849,7 +1925,7 @@ export default function App() {
                     )}
                     {gameState.shards.fox.alignment < 30 && (
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem', borderBottom: '1px solid rgba(239, 68, 68, 0.08)', paddingBottom: '0.4rem' }}>
-                        <span style={{ lineHeight: '1.4' }}>• <strong>Tactical Pragmatists (Fox) Crisis:</strong> Governors resist new levies. <strong>Munitions fall by 4 per turn.</strong></span>
+                        <span style={{ lineHeight: '1.4' }}>• <strong>Tactical Pragmatists (Fox) Crisis:</strong> Governors resist new levies and increase ammunition costs when upkeep applies.</span>
                         <button 
                           onClick={() => handleResolveCabinetCrisis('fox')} 
                           disabled={gameState.metrics.treasury < 25} 
@@ -1862,7 +1938,7 @@ export default function App() {
                     )}
                     {gameState.shards.wolf.alignment < 30 && (
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem', paddingBottom: '0.2rem' }}>
-                        <span style={{ lineHeight: '1.4' }}>• <strong>Diplomatic Strategists (Wolf) Crisis:</strong> Financiers withhold support. <strong>Treasury slips by 4 per turn.</strong></span>
+                        <span style={{ lineHeight: '1.4' }}>• <strong>Diplomatic Strategists (Wolf) Crisis:</strong> Financiers withhold support and increase treasury costs when upkeep applies.</span>
                         <button 
                           onClick={() => handleResolveCabinetCrisis('wolf')} 
                           disabled={gameState.metrics.treasury < 25} 
@@ -1887,152 +1963,98 @@ export default function App() {
                 <ScenarioTheater
                   scenario={activeScenario}
                   gameState={gameState}
-                  selectedChoiceId={selectedChoiceId}
-                />
-
-                {/* Opt-in historical context — surfaces sourced primers tagged on
-                    this turn (naval tech, cotton diplomacy, Copperhead politics,
-                    etc.) without auto-popping or competing with the decision UI. */}
-                {(() => {
-                  const primerIds = getPrimerIdsForScenario(activeScenario);
-                  if (!primerIds.length) return null;
-                  return (
-                    <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '0.35rem 0 0.1rem' }}>
-                      <button
-                        type="button"
-                        onClick={() => setPrimerPanelOpen(true)}
-                        title="Open source-backed historical primers for this turn."
-                        style={{
-                          background: 'rgba(212, 175, 55, 0.06)',
-                          border: '1px solid rgba(212, 175, 55, 0.28)',
-                          color: 'var(--accent-gold)',
-                          padding: '0.35rem 0.7rem',
-                          fontSize: '0.7rem',
-                          borderRadius: '3px',
-                          cursor: 'pointer',
-                          fontFamily: 'var(--font-mono)',
-                          letterSpacing: '0.04em',
-                        }}
-                      >
-                        📜 Historical context ({primerIds.length})
-                      </button>
-                    </div>
-                  );
-                })()}
-
-                {/* Cabinet debate */}
-                <details className="advisor-details">
-                  <summary>Consult advisors</summary>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.6rem' }}>
-                    <div style={{ fontSize: '0.7rem', color: 'var(--accent-gold)', fontFamily: 'var(--font-mono)', fontWeight: 'bold' }}>🗣️ CABINET DEBATE</div>
-                    <div style={{ fontSize: '0.58rem', color: 'var(--text-secondary)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
-                      {advisorDebate?.source === 'deterministic-fallback' ? 'Deterministic fallback' : 'Deterministic synthesis'}
-                    </div>
-                  </div>
-
-                  {advisorDebate && ['hotspur', 'fox', 'wolf'].map((key) => {
-                    const entry = advisorDebate[key];
-                    const meta = choiceAvailabilityById[entry.choiceId] || {};
-                    const accent = key === 'hotspur' ? 'var(--accent-red)' : (key === 'fox' ? 'var(--accent-gold)' : 'var(--accent-blue)');
-                    const isSelected = selectedChoiceId === entry.choiceId;
-
+                >
+                  {/* Opt-in historical context — surfaces sourced primers tagged on
+                      this turn (naval tech, cotton diplomacy, Copperhead politics,
+                      etc.) without auto-popping or competing with the decision UI. */}
+                  {(() => {
+                    const primerIds = getPrimerIdsForScenario(activeScenario);
+                    if (!primerIds.length) return null;
                     return (
-                      <button
-                        key={key}
-                        type="button"
-                        aria-pressed={isSelected}
-                        aria-label={`${entry.speaker} backs ${entry.choiceLabel}${meta.locked ? `. Locked: ${meta.lockReason}` : ''}`}
-                        onClick={() => { if (!meta.locked && entry.choiceId) setSelectedChoiceId(entry.choiceId); }}
-                        disabled={meta.locked || !entry.choiceId}
-                        title={meta.locked ? meta.lockReason : `Back ${entry.choiceLabel}`}
-                        style={{
-                          textAlign: 'left',
-                          background: isSelected ? 'rgba(212,175,55,0.08)' : 'rgba(255,255,255,0.02)',
-                          borderTop: `1px solid ${isSelected ? 'rgba(212,175,55,0.35)' : 'rgba(255,255,255,0.04)'}`,
-                          borderRight: `1px solid ${isSelected ? 'rgba(212,175,55,0.35)' : 'rgba(255,255,255,0.04)'}`,
-                          borderBottom: `1px solid ${isSelected ? 'rgba(212,175,55,0.35)' : 'rgba(255,255,255,0.04)'}`,
-                          borderLeft: `3px solid ${accent}`,
-                          borderRadius: '4px',
-                          padding: '0.65rem 0.75rem',
-                          color: 'inherit',
-                          cursor: meta.locked ? 'not-allowed' : 'pointer',
-                          opacity: meta.locked ? 0.5 : 1,
-                        }}
-                      >
-                        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '0.5rem', marginBottom: '0.35rem', alignItems: 'center' }}>
-                          <strong style={{ textTransform: 'capitalize', color: accent, fontSize: '0.72rem' }}>{entry.speaker}</strong>
-                          <span style={{ fontSize: '0.62rem', color: meta.locked ? 'var(--accent-red)' : 'var(--accent-gold)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>
-                            backs {entry.choiceLabel}{meta.locked ? ' · locked' : ''}
-                          </span>
-                        </div>
-                        <div style={{ fontSize: '0.73rem', color: 'var(--text-secondary)', lineHeight: '1.45' }}>
-                          {entry.argument}
-                        </div>
-                      </button>
+                      <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '0.35rem 0 0.1rem' }}>
+                        <button
+                          type="button"
+                          onClick={() => setPrimerPanelOpen(true)}
+                          title="Open source-backed historical primers for this turn."
+                          style={{
+                            background: 'rgba(212, 175, 55, 0.06)',
+                            border: '1px solid rgba(212, 175, 55, 0.28)',
+                            color: 'var(--accent-gold)',
+                            padding: '0.35rem 0.7rem',
+                            fontSize: '0.7rem',
+                            borderRadius: '3px',
+                            cursor: 'pointer',
+                            fontFamily: 'var(--font-mono)',
+                            letterSpacing: '0.04em',
+                          }}
+                        >
+                          📜 Historical context ({primerIds.length})
+                        </button>
+                      </div>
                     );
-                  })}
+                  })()}
 
-                  {advisorDebate && (
-                    <div style={{ fontSize: '0.63rem', color: 'var(--text-secondary)', lineHeight: '1.45', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '0.45rem' }}>
-                      <div style={{ marginBottom: '0.2rem' }}>{advisorDebate.summary}</div>
-                      <div>Political economy: {advisorDebate.politicalEconomy.overview}</div>
+                  {/* Cabinet debate */}
+                  <details className="advisor-details">
+                    <summary>Consult advisors</summary>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.6rem' }}>
+                      <div style={{ fontSize: '0.7rem', color: 'var(--accent-gold)', fontFamily: 'var(--font-mono)', fontWeight: 'bold' }}>🗣️ CABINET DEBATE</div>
+                      <div style={{ fontSize: '0.58rem', color: 'var(--text-secondary)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                        {advisorDebate?.source === 'deterministic-fallback' ? 'Deterministic fallback' : 'Deterministic synthesis'}
+                      </div>
                     </div>
-                  )}
-                </details>
+
+                    {advisorDebate && ['hotspur', 'fox', 'wolf'].map((key) => {
+                      const entry = advisorDebate[key];
+                      const meta = choiceAvailabilityById[entry.choiceId] || {};
+                      const accent = key === 'hotspur' ? 'var(--accent-red)' : (key === 'fox' ? 'var(--accent-gold)' : 'var(--accent-blue)');
+                      const isSelected = selectedChoiceId === entry.choiceId;
+
+                      return (
+                        <button
+                          key={key}
+                          type="button"
+                          aria-pressed={isSelected}
+                          aria-label={`${entry.speaker} backs ${entry.choiceLabel}${meta.locked ? `. Locked: ${meta.lockReason}` : ''}`}
+                          onClick={() => { if (!meta.locked && entry.choiceId) setSelectedChoiceId(entry.choiceId); }}
+                          disabled={meta.locked || !entry.choiceId}
+                          title={meta.locked ? meta.lockReason : `Back ${entry.choiceLabel}`}
+                          style={{
+                            textAlign: 'left',
+                            background: isSelected ? 'rgba(212,175,55,0.08)' : 'rgba(255,255,255,0.02)',
+                            borderTop: `1px solid ${isSelected ? 'rgba(212,175,55,0.35)' : 'rgba(255,255,255,0.04)'}`,
+                            borderRight: `1px solid ${isSelected ? 'rgba(212,175,55,0.35)' : 'rgba(255,255,255,0.04)'}`,
+                            borderBottom: `1px solid ${isSelected ? 'rgba(212,175,55,0.35)' : 'rgba(255,255,255,0.04)'}`,
+                            borderLeft: `3px solid ${accent}`,
+                            borderRadius: '4px',
+                            padding: '0.65rem 0.75rem',
+                            color: 'inherit',
+                            cursor: meta.locked ? 'not-allowed' : 'pointer',
+                            opacity: meta.locked ? 0.5 : 1,
+                          }}
+                        >
+                          <div style={{ display: 'flex', justifyContent: 'space-between', gap: '0.5rem', marginBottom: '0.35rem', alignItems: 'center' }}>
+                            <strong style={{ textTransform: 'capitalize', color: accent, fontSize: '0.72rem' }}>{entry.speaker}</strong>
+                            <span style={{ fontSize: '0.62rem', color: meta.locked ? 'var(--accent-red)' : 'var(--accent-gold)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>
+                              backs {entry.choiceLabel}{meta.locked ? ' · locked' : ''}
+                            </span>
+                          </div>
+                          <div style={{ fontSize: '0.73rem', color: 'var(--text-secondary)', lineHeight: '1.45' }}>
+                            {entry.argument}
+                          </div>
+                        </button>
+                      );
+                    })}
+
+                    {advisorDebate && (
+                      <div style={{ fontSize: '0.63rem', color: 'var(--text-secondary)', lineHeight: '1.45', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '0.45rem' }}>
+                        <div style={{ marginBottom: '0.2rem' }}>{advisorDebate.summary}</div>
+                        <div>Political economy: {advisorDebate.politicalEconomy.overview}</div>
+                      </div>
+                    )}
+                  </details>
+                </ScenarioTheater>
               </div>
-
-              {/* Sentiment Letter box */}
-              <details className="tactical-card campaign-correspondence" style={{ background: 'rgba(212, 175, 55, 0.01)' }}>
-                <summary>Optional correspondence</summary>
-                <div className="card-title">
-                  <PenTool size={14} /> Letter home to {activeScenario.letterTarget}
-                </div>
-                <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '0.75rem', lineHeight: '1.3' }}>
-                  Write an optional letter. Heartfelt: +5 morale. Resolute: +5 strength and -5 morale. Melancholic: -10 morale. A standard brief changes no resources. Planning adds 10 percentage points for heartfelt or resolute letters, or 5 for a standard brief, to chance-based decisions.
-                </p>
-
-                <textarea
-                  id="letter-textarea"
-                  aria-label={`Letter home to ${activeScenario.letterTarget}`}
-                  rows="3"
-                  className="letter-textarea"
-                  value={letterDraft}
-                  onChange={(e) => setLetterDraft(e.target.value)}
-                  onFocus={() => setIsLetterWriting(true)}
-                  onBlur={() => setIsLetterWriting(false)}
-                  placeholder="Pen it now (or skip)... E.g., 'My dearest Anna, the fog rises over Matthews Hill. Jackson is standing firm. Keep the faith.'"
-                  disabled={!!sentimentResult}
-                />
-
-                <div style={{ display: 'flex', justifyItems: 'center', justifyContent: 'space-between', marginTop: '0.75rem', alignItems: 'center' }}>
-                  {sentimentResult ? (
-                    <div style={{ fontSize: '0.75rem', color: 'var(--accent-gold)', fontFamily: 'var(--font-mono)' }}>
-                      📝 {sentimentResult.description}
-                    </div>
-                  ) : (
-                    <div style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }}>Awaiting dictation...</div>
-                  )}
-
-                  <div style={{ display: 'flex', gap: '0.5rem' }}>
-                    <button 
-                      onClick={() => applySentimentMods({ skipped: true, description: 'Letter skipped. Strategic assessment bypassed this turn.' })}
-                      disabled={!!sentimentResult} 
-                      className="tactical-button" 
-                      style={{ padding: '0.35rem 0.75rem', fontSize: '0.7rem' }}
-                    >
-                      Skip
-                    </button>
-                    <button 
-                      onClick={handleAnalyzeLetter} 
-                      disabled={!!sentimentResult || !letterDraft.trim()} 
-                      className="tactical-button primary" 
-                      style={{ padding: '0.35rem 0.75rem', fontSize: '0.7rem' }}
-                    >
-                      Sign & Send
-                    </button>
-                  </div>
-                </div>
-              </details>
 
               {/* Action Console choices */}
               <div id="choices-panel" className="tactical-card campaign-choices">
@@ -2043,6 +2065,7 @@ export default function App() {
                   {activeScenario.choices.map(choice => {
                     const availability = choiceAvailabilityById[choice.id] || {};
                     const { advisor, alignmentLocked, divergenceLocked, locked, lockReason } = availability;
+                    const fieldDecides = usesAssessedFieldConsequences(gameState, activeScenario.id, choice.id);
 
                     return (
                     <button
@@ -2054,7 +2077,7 @@ export default function App() {
                       onMouseEnter={() => {
                         if (!locked) {
                           setHoveredChoiceId(choice.id);
-                          if (choice.successRate !== undefined && choice.successRate < 0.80) {
+                          if (!fieldDecides && choice.successRate !== undefined && choice.successRate < 0.80) {
                             audioManagerRef.current?.playDistantArtilleryBarrage?.();
                           }
                         }
@@ -2074,7 +2097,8 @@ export default function App() {
                       <div className="choice-text">{choice.text}</div>
                       <div className="choice-impact" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.75rem', marginTop: '0.4rem', color: 'var(--text-secondary)' }}>
                         <span>Tradeoff: {choice.costDescription}</span>
-                        {choice.successRate !== undefined && (
+                        {fieldDecides && isChoiceGatedField(activeScenario.id) && <span>Field command available</span>}
+                        {!fieldDecides && choice.successRate !== undefined && (
                           <span style={{ color: 'var(--accent-gold)', fontWeight: 'bold', fontFamily: 'var(--font-mono)' }}>
                             🎲 SUCCESS: {(choice.successRate * 100).toFixed(0)}%
                           </span>
@@ -2118,6 +2142,59 @@ export default function App() {
                   </label>
                 </div>
               </div>
+
+              {/* Sentiment Letter box */}
+              <details className="tactical-card campaign-correspondence" style={{ background: 'rgba(212, 175, 55, 0.01)' }}>
+                <summary>Optional correspondence</summary>
+                <div className="card-title">
+                  <PenTool size={14} /> Letter home to {activeScenario.letterTarget}
+                </div>
+                <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '0.75rem', lineHeight: '1.3' }}>
+                  Write an optional letter. Heartfelt: +5 morale. Resolute: +5 strength and -5 morale. Melancholic: -10 morale. A standard brief changes no resources. Planning adds 10 percentage points for heartfelt or resolute letters, or 5 for a standard brief, to chance-based decisions.
+                </p>
+
+                <textarea
+                  id="letter-textarea"
+                  aria-label={`Letter home to ${activeScenario.letterTarget}`}
+                  rows="3"
+                  className="letter-textarea"
+                  value={letterDraft}
+                  onChange={(e) => setLetterDraft(e.target.value)}
+                  onFocus={() => setIsLetterWriting(true)}
+                  onBlur={() => setIsLetterWriting(false)}
+                  placeholder="Pen it now (or skip)... E.g., 'My dearest Anna, the fog rises over Matthews Hill. Jackson is standing firm. Keep the faith.'"
+                  disabled={!!sentimentResult}
+                />
+
+                <div style={{ display: 'flex', justifyItems: 'center', justifyContent: 'space-between', marginTop: '0.75rem', alignItems: 'center' }}>
+                  {sentimentResult ? (
+                    <div style={{ fontSize: '0.75rem', color: 'var(--accent-gold)', fontFamily: 'var(--font-mono)' }}>
+                      📝 {sentimentResult.description}
+                    </div>
+                  ) : (
+                    <div style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }}>Awaiting dictation...</div>
+                  )}
+
+                  <div style={{ display: 'flex', gap: '0.5rem' }}>
+                    <button
+                      onClick={() => applySentimentMods({ skipped: true, description: 'Letter skipped. Strategic assessment bypassed this turn.' })}
+                      disabled={!!sentimentResult}
+                      className="tactical-button"
+                      style={{ padding: '0.35rem 0.75rem', fontSize: '0.7rem' }}
+                    >
+                      Skip
+                    </button>
+                    <button
+                      onClick={handleAnalyzeLetter}
+                      disabled={!!sentimentResult || !letterDraft.trim()}
+                      className="tactical-button primary"
+                      style={{ padding: '0.35rem 0.75rem', fontSize: '0.7rem' }}
+                    >
+                      Sign & Send
+                    </button>
+                  </div>
+                </div>
+              </details>
 
             </>
           )}
@@ -2164,7 +2241,7 @@ export default function App() {
                 </div>
                 <div style={{ fontSize: '0.78rem', color: 'var(--text-primary)', fontWeight: 'bold', marginTop: '0.15rem', lineHeight: '1.35' }}>
                   {gameState.gameOver
-                    ? campaignScore?.endingClass
+                    ? campaignScore?.endingLabel
                     : nextPhasePreview(activeScenario, activeScenario.choices.find((choice) => choice.id === selectedChoiceId), STATIC_SCENARIOS)}
                 </div>
                 <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', marginTop: '0.15rem' }}>

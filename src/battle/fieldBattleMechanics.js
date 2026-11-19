@@ -7,6 +7,18 @@ import { coordinateEnemy } from './enemyCoordination.js';
 import { initializeTacticalFormations, stepTacticalFormations, GETTYSBURG_RULES, gettysburgOrganized, gettysburgClearance, safeToRallyGettysburg } from './gettysburgMechanics.js';
 import { FIELD_BATTLE_PROFILES, insideFieldSector, fieldExitTargets } from './fieldBattleProfiles.js';
 import { BATTLE_OBJECTIVES } from './battleAssessment.js';
+import { ANTIETAM_MISSIONS, updateAntietamMission } from './antietamMission.js';
+import { FIVE_FORKS_MISSIONS, directFiveForksAssaults, updateFiveForksMission } from './fiveForksMission.js';
+import { JONESBOROUGH_MISSIONS, directJonesboroughAssaults, updateJonesboroughMission } from './jonesboroughMission.js';
+import { SECOND_MANASSAS_MISSIONS, directSecondManassasAssaults, updateSecondManassasMission } from './secondManassasMission.js';
+import { FREDERICKSBURG_MISSIONS, directFredericksburgAssaults, updateFredericksburgMission } from './fredericksburgMission.js';
+import { GAINES_MILL_MISSIONS, directGainesMillPressure, updateGainesMillMission } from './gainesMillMission.js';
+import { NEW_MARKET_MISSIONS, directNewMarketPressure, updateNewMarketMission } from './newMarketMission.js';
+import { MISSIONARY_RIDGE_MISSIONS, directMissionaryRidgePressure, updateMissionaryRidgeMission } from './missionaryRidgeMission.js';
+import { SPOTSYLVANIA_MISSIONS, directSpotsylvaniaPressure, updateSpotsylvaniaMission } from './spotsylvaniaMission.js';
+import { KENNESAW_MISSIONS, directKennesawPressure, updateKennesawMission } from './kennesawMission.js';
+import { VICKSBURG_MISSIONS, directVicksburgPressure, updateVicksburgMission } from './vicksburgMission.js';
+import { SAILORS_CREEK_MISSIONS, directSailorsCreekPressure, updateSailorsCreekMission } from './sailorsCreekMission.js';
 export { fieldTerrain, fieldLineOfFire, fieldExitTargets } from './fieldBattleProfiles.js';
 const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 
@@ -43,6 +55,94 @@ export function initializeFieldBattle(e) {
   }
   initializeTacticalFormations(e);
   updateFieldSectors(e);
+  if (e.scenarioId === 'antietam') {
+    const mission = ANTIETAM_MISSIONS[e.choiceId] || ANTIETAM_MISSIONS.option_a;
+    e.fieldBattle.advice = [...mission.orders, ...e.fieldBattle.advice];
+    updateAntietamMission(e);
+  }
+  if (e.scenarioId === 'five_forks' && FIVE_FORKS_MISSIONS[e.choiceId]) {
+    const mission = FIVE_FORKS_MISSIONS[e.choiceId];
+    e.fieldBattle.missionDeadline = mission.deadline;
+    e.fieldBattle.advice = [...mission.orders, ...e.fieldBattle.advice];
+    e.fieldBattle.commandPost = { x: 780, y: 112 };
+    e.fieldBattle.requireExitIds = e.state.filter(unit => unit.side === 'confederate').map(unit => unit.id);
+    updateFiveForksMission(e);
+  }
+  if (e.scenarioId === 'jonesborough' && JONESBOROUGH_MISSIONS[e.choiceId]) {
+    const mission = JONESBOROUGH_MISSIONS[e.choiceId];
+    e.fieldBattle.missionDeadline = mission.deadline;
+    e.fieldBattle.advice = [...mission.orders, ...e.fieldBattle.advice];
+    e.fieldBattle.commandPost = { x: 972, y: 746 };
+    e.fieldBattle.requireExitIds = e.state.filter(unit => unit.side === 'confederate').map(unit => unit.id);
+    updateJonesboroughMission(e);
+  }
+  if (e.scenarioId === 'second_manassas' && SECOND_MANASSAS_MISSIONS[e.choiceId]) {
+    const mission = SECOND_MANASSAS_MISSIONS[e.choiceId];
+    e.fieldBattle.missionDeadline = mission.deadline;
+    e.fieldBattle.advice = [...mission.orders, ...e.fieldBattle.advice];
+    e.fieldBattle.commandPost = { x: 389, y: 584 };
+    updateSecondManassasMission(e);
+  }
+  if (e.scenarioId === 'fredericksburg' && FREDERICKSBURG_MISSIONS[e.choiceId]) {
+    const mission = FREDERICKSBURG_MISSIONS[e.choiceId];
+    e.fieldBattle.missionDeadline = mission.deadline;
+    e.fieldBattle.advice = [...mission.orders, ...e.fieldBattle.advice];
+    e.fieldBattle.commandPost = { x: 288, y: 447 };
+    updateFredericksburgMission(e);
+  }
+  if (e.scenarioId === 'gaines_mill' && GAINES_MILL_MISSIONS[e.choiceId]) {
+    const mission = GAINES_MILL_MISSIONS[e.choiceId];
+    e.fieldBattle.missionDeadline = mission.deadline;
+    e.fieldBattle.advice = [...mission.orders, ...e.fieldBattle.advice];
+    e.fieldBattle.commandPost = { x: 650, y: 658 };
+    if (mission.kind === 'withdraw') e.fieldBattle.requireExitIds = e.state.filter(unit => unit.side === 'confederate').map(unit => unit.id);
+    updateGainesMillMission(e);
+  }
+  if (e.scenarioId === 'new_market' && NEW_MARKET_MISSIONS[e.choiceId]) {
+    const mission = NEW_MARKET_MISSIONS[e.choiceId];
+    e.fieldBattle.missionDeadline = mission.deadline;
+    e.fieldBattle.advice = [...mission.orders, ...e.fieldBattle.advice];
+    e.fieldBattle.commandPost = { x: 796, y: 691 };
+    updateNewMarketMission(e);
+  }
+  if (e.scenarioId === 'missionary_ridge' && MISSIONARY_RIDGE_MISSIONS[e.choiceId]) {
+    const mission = MISSIONARY_RIDGE_MISSIONS[e.choiceId];
+    e.fieldBattle.missionDeadline = mission.deadline;
+    e.fieldBattle.advice = [...mission.orders, ...e.fieldBattle.advice];
+    e.fieldBattle.commandPost = { x: 1080, y: 225 };
+    if (mission.kind === 'withdraw') e.fieldBattle.requireExitIds = e.state.filter(unit => unit.side === 'confederate').map(unit => unit.id);
+    updateMissionaryRidgeMission(e);
+  }
+  if (e.scenarioId === 'spotsylvania' && SPOTSYLVANIA_MISSIONS[e.choiceId]) {
+    const mission = SPOTSYLVANIA_MISSIONS[e.choiceId];
+    e.fieldBattle.missionDeadline = mission.deadline;
+    e.fieldBattle.advice = [...mission.orders, ...e.fieldBattle.advice];
+    e.fieldBattle.commandPost = { x: 920, y: 775 };
+    updateSpotsylvaniaMission(e);
+  }
+  if (e.scenarioId === 'kennesaw_mountain' && KENNESAW_MISSIONS[e.choiceId]) {
+    const mission = KENNESAW_MISSIONS[e.choiceId];
+    e.fieldBattle.missionDeadline = mission.deadline;
+    e.fieldBattle.advice = [...mission.orders, ...e.fieldBattle.advice];
+    e.fieldBattle.commandPost = { x: 946, y: 645 };
+    if (mission.kind === 'withdraw') e.fieldBattle.requireExitIds = e.state.filter(unit => unit.side === 'confederate').map(unit => unit.id);
+    updateKennesawMission(e);
+  }
+  if (e.scenarioId === 'vicksburg' && VICKSBURG_MISSIONS[e.choiceId]) {
+    const mission = VICKSBURG_MISSIONS[e.choiceId];
+    e.fieldBattle.missionDeadline = mission.deadline;
+    e.fieldBattle.advice = [...mission.orders, ...e.fieldBattle.advice];
+    e.fieldBattle.commandPost = { x: 502, y: 561 };
+    updateVicksburgMission(e);
+  }
+  if (e.scenarioId === 'sailors_creek' && SAILORS_CREEK_MISSIONS[e.choiceId]) {
+    const mission = SAILORS_CREEK_MISSIONS[e.choiceId];
+    e.fieldBattle.missionDeadline = mission.deadline;
+    e.fieldBattle.advice = [...mission.orders, ...e.fieldBattle.advice];
+    e.fieldBattle.commandPost = { x: 661, y: 659 };
+    if (mission.kind === 'withdraw') e.fieldBattle.requireExitIds = e.state.filter(unit => unit.side === 'confederate').map(unit => unit.id);
+    updateSailorsCreekMission(e);
+  }
   if (e.fieldBattle.attackObjective || usesShilohReserveMission(e) || chickamaugaPreservation(e)) updateFieldMission(e);
   e.events.push({ time: 0, type: 'command', message: 'Updated field command: orders arrive by courier. Move does not fire; Assault commits to a marked command sector. Fallback keeps troops available, Rally needs safety and support, and Withdraw leaves the battle.' });
 }
@@ -72,7 +172,11 @@ export function updateFieldCommand(e) {
     const mustAdvance = e.config.unionAdvance || u.id === 'buell-vanguard' || (e.scenarioId === 'cold_harbor' && e.coldHarborAssaultState === 'engaged') || (e.scenarioId === 'petersburg' && e.craterState === 'contested');
     if (u.condition === 'wavering' && !['fallback', 'rally', 'withdraw'].includes(u.order)) {
       const exit = fieldExitTargets(e, u).sort((a, b) => distance(u, a) - distance(u, b))[0];
-      u.order = 'fallback'; u.directMove = false; u.target = { x: u.x, y: Math.max(35, Math.min(e.world.height - 35, u.y + Math.sign(exit.y - u.y) * 135)) };
+      u.order = 'fallback';
+      u.directMove = false;
+      u.target = ['fredericksburg', 'missionary_ridge', 'vicksburg'].includes(e.scenarioId)
+        ? { x: Math.max(35, Math.min(e.world.width - 35, u.x + Math.sign(exit.x - u.x) * 135)), y: u.y }
+        : { x: u.x, y: Math.max(35, Math.min(e.world.height - 35, u.y + Math.sign(exit.y - u.y) * 135)) };
     } else if (u.order === 'hold' && u.condition === 'shaken' && safeToRallyGettysburg(e, u)) {
       u.order = 'rally'; u.safeTime = 0;
     } else if (mustAdvance && target && u.type !== 'artillery' && u.order === 'hold' && e.time > 3.2) {
@@ -95,6 +199,17 @@ export function updateFieldCommand(e) {
       u.target = { x: target.x, y: target.y };
     }
   }
+  if (e.scenarioId === 'five_forks' && e.time > 3.2) directFiveForksAssaults(e);
+  if (e.scenarioId === 'jonesborough' && e.time > 3.2) directJonesboroughAssaults(e);
+  if (e.scenarioId === 'second_manassas' && e.time > 3.2) directSecondManassasAssaults(e);
+  if (e.scenarioId === 'fredericksburg' && e.time > 3.2) directFredericksburgAssaults(e);
+  if (e.scenarioId === 'gaines_mill' && e.time > 3.2) directGainesMillPressure(e);
+  if (e.scenarioId === 'new_market' && e.time > 3.2) directNewMarketPressure(e);
+  if (e.scenarioId === 'missionary_ridge' && e.time > 3.2) directMissionaryRidgePressure(e);
+  if (e.scenarioId === 'spotsylvania' && e.time > 3.2) directSpotsylvaniaPressure(e);
+  if (e.scenarioId === 'kennesaw_mountain' && e.time > 3.2) directKennesawPressure(e);
+  if (e.scenarioId === 'vicksburg' && e.time > 3.2) directVicksburgPressure(e);
+  if (e.scenarioId === 'sailors_creek' && e.time > 3.2) directSailorsCreekPressure(e);
   coordinateEnemy(e);
   f.reserveIntent = e.events.filter(v => ['reinforcement', 'assault', 'counterattack', 'gap', 'warning', 'dispatch'].includes(v.type)).at(-1)?.message || 'No new enemy movement reported';
 }
@@ -115,7 +230,7 @@ export function judgeFieldExit(e) {
   if (force.some(u => u.active && !['broken', 'surrendered'].includes(u.status)) || waiting) return false;
   // Specialized withdrawals still require their authored corridor, screen,
   // transfer or raid conditions. Merely saving soldiers is not mission success.
-  if (['third_winchester', 'cold_harbor', 'petersburg'].includes(e.scenarioId)) return false;
+  if (['third_winchester', 'cold_harbor', 'petersburg', 'antietam', 'five_forks', 'jonesborough', 'second_manassas', 'fredericksburg', 'gaines_mill', 'new_market', 'missionary_ridge', 'spotsylvania', 'kennesaw_mountain', 'vicksburg', 'sailors_creek'].includes(e.scenarioId)) return false;
   const mission = BATTLE_OBJECTIVES[e.scenarioId]?.[e.choiceId];
   const escaped = force.filter(u => u.withdrawn && u.withdrawalOrganized).reduce((n, u) => n + u.strength, 0) / Math.max(1, e.initialConfederate);
   const preservationMission = ['withdraw', 'preserve'].includes(mission?.kind) && !mission?.signals.includes('fullInterval');
@@ -139,6 +254,18 @@ export function tickFieldBattle(e, dt) {
 
 // Apply mission evidence before accepting a legacy scenario's outcome category.
 export function updateFieldMission(e, dt = 0) {
+  if (e.scenarioId === 'antietam') { updateAntietamMission(e, dt); return true; }
+  if (e.scenarioId === 'five_forks') return updateFiveForksMission(e, dt);
+  if (e.scenarioId === 'jonesborough') return updateJonesboroughMission(e, dt);
+  if (e.scenarioId === 'second_manassas') return updateSecondManassasMission(e, dt);
+  if (e.scenarioId === 'fredericksburg') return updateFredericksburgMission(e, dt);
+  if (e.scenarioId === 'gaines_mill') return updateGainesMillMission(e, dt);
+  if (e.scenarioId === 'new_market') return updateNewMarketMission(e, dt);
+  if (e.scenarioId === 'missionary_ridge') return updateMissionaryRidgeMission(e, dt);
+  if (e.scenarioId === 'spotsylvania') return updateSpotsylvaniaMission(e, dt);
+  if (e.scenarioId === 'kennesaw_mountain') return updateKennesawMission(e, dt);
+  if (e.scenarioId === 'vicksburg') return updateVicksburgMission(e, dt);
+  if (e.scenarioId === 'sailors_creek') return updateSailorsCreekMission(e, dt);
   const preservation = chickamaugaPreservation(e);
   if (preservation) {
     e.fieldBattle.preservationObjective = preservation;

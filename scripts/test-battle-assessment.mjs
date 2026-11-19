@@ -27,9 +27,9 @@ function play(id, choice, policy = 'hold') {
   return engine.snapshot();
 }
 
-test('all eleven configured battles and all forty-four authored postures declare an assessment mission', () => {
+test('all twenty-three configured battles and all seventy-one authored postures declare an assessment mission', () => {
   assert.deepEqual(Object.keys(BATTLE_OBJECTIVES).sort(), Object.keys(BATTLE_ENGINE_CONFIGS).sort());
-  assert.equal(Object.values(BATTLE_OBJECTIVES).reduce((n, choices) => n + Object.keys(choices).length, 0), 44);
+  assert.equal(Object.values(BATTLE_OBJECTIVES).reduce((n, choices) => n + Object.keys(choices).length, 0), 71);
   for (const [id, config] of Object.entries(BATTLE_ENGINE_CONFIGS)) {
     assert.deepEqual(Object.keys(BATTLE_OBJECTIVES[id]).sort(), Object.keys(config.postures).sort());
     for (const choice of Object.keys(config.postures)) {
@@ -109,6 +109,17 @@ test('a completed sortie requires both target strikes and the return, not merely
   const noReturn = getBattleAssessment(observed, 'option_c');
   assert.equal(noReturn.objective.status, 'partial');
   assert.equal(getBattleAssessment({ ...observed, sortieState: 'withdrawn' }, 'option_c').objective.status, 'achieved');
+});
+
+test('Cold Harbor explains a repulse that fell short of a field victory', () => {
+  const snapshot = {
+    scenarioId: 'cold_harbor', fieldBattle: {}, outcome: 'defeat',
+    coldHarborAssaultState: 'repulsed', confederateLossRate: .15, ammunitionRate: .9,
+  };
+  const assessment = getBattleAssessment(snapshot, 'option_b');
+  assert.equal(assessment.objective.status, 'partial');
+  assert.match(assessment.afterAction.next[0], /also requires a field victory/);
+  assert.match(assessment.afterAction.next[0], /cover boundary/);
 });
 
 test('a costly Gettysburg success does not claim the decisive heights objective or recognition threshold', () => {

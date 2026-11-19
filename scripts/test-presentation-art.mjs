@@ -11,10 +11,14 @@ const completed = (scenarioId, choiceId, overrides = {}) => ({
   ...overrides,
 });
 
-test('only the three reviewed scenarios replace scene art; archive fallback stays available elsewhere', () => {
+test('curated art matches its decision and both election routes share the voting scene', () => {
   assert.equal(resolvePresentationArt('fort_sumter'), PRESENTATION_ART.sumter);
   assert.equal(resolvePresentationArt('naval_technology'), PRESENTATION_ART.hamptonRoads);
   assert.equal(resolvePresentationArt('appomattox_decision'), PRESENTATION_ART.appomattox);
+  assert.equal(resolvePresentationArt('emancipation_cabinet_debate'), PRESENTATION_ART.emancipation);
+  assert.equal(resolvePresentationArt('election_1864_lincoln'), PRESENTATION_ART.election);
+  assert.equal(resolvePresentationArt('election_1864_mcclellan'), PRESENTATION_ART.election);
+  assert.equal(resolvePresentationArt('black_confederate_debate'), PRESENTATION_ART.richmondRecruitment);
   for (const id of [undefined, null, {}, 'constructor', '__proto__', 'radical_republican_crisis', 'greensboro_convention', 'southern_independence_1864', 'ai_generated_scenario']) {
     assert.equal(resolvePresentationArt(id), null, String(id));
   }
@@ -22,8 +26,8 @@ test('only the three reviewed scenarios replace scene art; archive fallback stay
 
 test('scene metadata is explicit created art with actual dimensions and scoped historical evidence', () => {
   const records = Object.values(PRESENTATION_ART);
-  assert.equal(records.length, 3);
-  assert.equal(new Set(records.map((art) => art.src)).size, 3);
+  assert.equal(records.length, 6);
+  assert.equal(new Set(records.map((art) => art.src)).size, records.length);
   for (const art of records) {
     assert.equal(art.kind, 'generated-art');
     assert.match(art.label, /AI-generated.*interpretation/);
@@ -40,6 +44,10 @@ test('scene metadata is explicit created art with actual dimensions and scoped h
   assert.match(PRESENTATION_ART.hamptonRoads.caption, /March 9, 1862/);
   assert.match(PRESENTATION_ART.hamptonRoads.caption, /March 8 naval decision/);
   assert.match(PRESENTATION_ART.appomattox.caption, /can lead elsewhere/);
+  assert.match(PRESENTATION_ART.emancipation.caption, /Preliminary.*September 22/);
+  assert.match(PRESENTATION_ART.election.caption, /Pennsylvania soldiers voting/);
+  assert.match(PRESENTATION_ART.richmondRecruitment.caption, /civilian clothes while Major Turner’s uniformed squad watches/);
+  assert.match(PRESENTATION_ART.richmondRecruitment.caption, /Enquirer reported thousands/);
 });
 
 test('completed historical parole ending receives art with outcome-specific copy', () => {

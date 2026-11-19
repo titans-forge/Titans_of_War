@@ -30,14 +30,15 @@ async function loadCampaignPictureAllowlist() {
         const picture = campaignPicturePath(candidate);
         if (picture) allowed.add(picture);
       }
-    }
-
-    for (const choiceId of ['option_a', 'option_b', 'option_c', 'option_d']) {
-      const endingMedia = resolveCampaignEndingMedia({
-        history: [{ scenarioId: 'southern_independence_1864', choiceId }],
-      });
-      const picture = campaignPicturePath(endingMedia?.src);
-      if (picture) allowed.add(picture);
+      for (const choice of scenario.choices) {
+        if (!scenario.endsCampaign && !choice.endsCampaign) continue;
+        const endingMedia = resolveCampaignEndingMedia({
+          gameOver: true,
+          history: [{ scenarioId: scenario.id, choiceId: choice.id }],
+        });
+        const picture = campaignPicturePath(endingMedia?.src);
+        if (picture) allowed.add(picture);
+      }
     }
 
     for (const excluded of EXCLUDED_RELEASE_ASSETS) allowed.delete(excluded);

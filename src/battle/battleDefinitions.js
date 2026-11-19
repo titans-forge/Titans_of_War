@@ -1,4 +1,16 @@
 const WORLD = { width: 1500, height: 900 };
+const MISSIONARY_RIDGE_WORLD = { width: 1600, height: 900 };
+const SPOTSYLVANIA_WORLD = { width: 1600, height: 900 };
+const KENNESAW_WORLD = { width: 1600, height: 900 };
+const VICKSBURG_WORLD = { width: 1600, height: 900 };
+const SAILORS_CREEK_WORLD = { width: 1600, height: 900 };
+const NEW_MARKET_WORLD = { width: 1600, height: 900 };
+const GAINES_MILL_WORLD = { width: 1600, height: 900 };
+const FREDERICKSBURG_WORLD = { width: 1600, height: 900 };
+const ANTIETAM_WORLD = { width: 1650, height: 900 };
+const FIVE_FORKS_WORLD = { width: 1600, height: 880 };
+const JONESBOROUGH_WORLD = { width: 1600, height: 880 };
+const SECOND_MANASSAS_WORLD = { width: 1600, height: 900 };
 const CHANCELLORSVILLE_WORLD = { width: 1600, height: 900 };
 const WILDERNESS_WORLD = { width: 1600, height: 900 };
 const CEDAR_CREEK_WORLD = { width: 1600, height: 900 };
@@ -162,7 +174,456 @@ const PETERSBURG_FORMATIONS = [
   { id: 'union-engineer-depot-east', name: 'Eastern Engineer Depot', side: 'union', type: 'artillery', x: 1275, y: 195, facing: Math.PI / 2, frontage: 105, mode: 'line', strength: 220, morale: 55, cohesion: 52, ammunition: 0, active: false, siegeObjective: true },
 ];
 
+// Across this rotated and compressed field, the historical left, center
+// and right appear left to right. Formations represent local detachments.
+const ANTIETAM_FORMATIONS = [
+  { id: 'antietam-lawton', name: "Lawton's line", side: 'confederate', type: 'infantry', x: 420, y: 505, facing: -Math.PI / 2, frontage: 165, mode: 'line', strength: 2900, morale: 79, cohesion: 77, ammunition: 47 },
+  { id: 'antietam-hill', name: "D. H. Hill's division", side: 'confederate', type: 'infantry', x: 715, y: 560, facing: -Math.PI / 2, frontage: 170, mode: 'line', strength: 4200, morale: 85, cohesion: 83, ammunition: 48 },
+  { id: 'antietam-anderson', name: "R. H. Anderson's division", side: 'confederate', type: 'infantry', x: 935, y: 590, facing: -Math.PI / 2, frontage: 165, mode: 'line', strength: 3200, morale: 81, cohesion: 78, ammunition: 46 },
+  { id: 'antietam-toombs', name: "Toombs's bridge defenders", side: 'confederate', type: 'infantry', x: 1385, y: 558, facing: -Math.PI / 2, frontage: 125, mode: 'line', strength: 1800, morale: 80, cohesion: 76, ammunition: 42 },
+  { id: 'antietam-hood', name: "Hood's division", side: 'confederate', type: 'infantry', x: 300, y: 690, facing: -Math.PI / 2, frontage: 155, mode: 'line', strength: 3200, morale: 86, cohesion: 81, ammunition: 42, reserve: true },
+  { id: 'antietam-light-division', name: "A. P. Hill's Light Division", side: 'confederate', type: 'infantry', x: 1255, y: 743, facing: -Math.PI / 2, frontage: 150, mode: 'column', strength: 3300, morale: 86, cohesion: 81, ammunition: 46, active: false, arrivalTime: 46, reserve: true, arrivalMessage: "A. P. Hill's Light Division has arrived from Harpers Ferry on the Confederate right." },
+  { id: 'antietam-confederate-artillery', name: 'Confederate field batteries', side: 'confederate', type: 'artillery', x: 786, y: 692, facing: -Math.PI / 2, frontage: 100, mode: 'line', strength: 260, morale: 81, cohesion: 80, ammunition: 44 },
+  { id: 'antietam-hooker', name: "Hooker's I Corps", side: 'union', type: 'infantry', x: 423, y: 213, facing: Math.PI / 2, frontage: 170, mode: 'line', strength: 3800, morale: 75, cohesion: 71, ammunition: 45 },
+  { id: 'antietam-mansfield', name: "Mansfield's XII Corps", side: 'union', type: 'infantry', x: 277, y: 110, facing: Math.PI / 2, frontage: 150, mode: 'line', strength: 3200, morale: 73, cohesion: 70, ammunition: 44, active: false, arrivalTime: 13, arrivalMessage: "Mansfield's XII Corps enters behind the Cornfield attack." },
+  { id: 'antietam-french', name: "French's II Corps division", side: 'union', type: 'infantry', x: 690, y: 266, facing: Math.PI / 2, frontage: 165, mode: 'line', strength: 4400, morale: 75, cohesion: 70, ammunition: 45, active: false, arrivalTime: 21, arrivalMessage: "French's division opens the attack toward the Sunken Road." },
+  { id: 'antietam-richardson', name: "Richardson's II Corps division", side: 'union', type: 'infantry', x: 978, y: 182, facing: Math.PI / 2, frontage: 160, mode: 'line', strength: 4100, morale: 76, cohesion: 71, ammunition: 45, active: false, arrivalTime: 32, arrivalMessage: "Richardson's division follows French toward the Confederate center." },
+  { id: 'antietam-burnside', name: "Burnside's IX Corps", side: 'union', type: 'infantry', x: 1325, y: 293, facing: Math.PI / 2, frontage: 165, mode: 'line', strength: 4200, morale: 74, cohesion: 71, ammunition: 45, active: false, arrivalTime: 38, arrivalMessage: "Burnside's IX Corps moves on the Lower Bridge." },
+  { id: 'antietam-union-artillery', name: 'Union field batteries', side: 'union', type: 'artillery', x: 834, y: 99, facing: Math.PI / 2, frontage: 95, mode: 'line', strength: 250, morale: 72, cohesion: 68, ammunition: 38 },
+];
+
+// North-up compression of White Oak Road and the Ford's Road approach.
+// Formations represent parts of the historical commands, with authored strengths.
+const FIVE_FORKS_FORMATIONS = [
+  { id: 'five-forks-steuart', name: "Steuart's brigade", side: 'confederate', type: 'infantry', x: 825, y: 411, facing: Math.PI / 2, frontage: 140, mode: 'line', strength: 1260, morale: 82, cohesion: 81, ammunition: 45 },
+  { id: 'five-forks-ransom', name: "Ransom's brigade", side: 'confederate', type: 'infantry', x: 1100, y: 418, facing: .23, frontage: 128, mode: 'line', strength: 1200, morale: 80, cohesion: 79, ammunition: 44 },
+  { id: 'five-forks-wallace', name: "Wallace's brigade", side: 'confederate', type: 'infantry', x: 955, y: 346, facing: .66, frontage: 118, mode: 'line', strength: 1120, morale: 82, cohesion: 82, ammunition: 43 },
+  { id: 'five-forks-corse', name: "Corse's brigade", side: 'confederate', type: 'infantry', x: 590, y: 416, facing: Math.PI / 2, frontage: 135, mode: 'line', strength: 1300, morale: 84, cohesion: 80, ammunition: 44 },
+  { id: 'five-forks-fitz-lee', name: "Fitzhugh Lee's dismounted troopers", side: 'confederate', type: 'infantry', x: 711, y: 293, facing: .72, frontage: 110, mode: 'line', strength: 970, morale: 85, cohesion: 85, ammunition: 44, reserve: true },
+  { id: 'five-forks-guns', name: "Pegram's batteries", side: 'confederate', type: 'artillery', x: 714, y: 400, facing: Math.PI / 2, frontage: 96, mode: 'line', strength: 185, morale: 82, cohesion: 79, ammunition: 38 },
+  { id: 'five-forks-devin', name: "Devin's dismounted division", side: 'union', type: 'infantry', x: 787, y: 687, facing: -Math.PI / 2, frontage: 148, mode: 'line', strength: 1600, morale: 74, cohesion: 72, ammunition: 46 },
+  { id: 'five-forks-custer', name: "Custer's dismounted division", side: 'union', type: 'infantry', x: 394, y: 754, facing: -1.15, frontage: 145, mode: 'line', strength: 1560, morale: 73, cohesion: 70, ammunition: 42, active: false, arrivalTime: 12, arrivalMessage: "Custer's dismounted troops enter from the south-west." },
+  { id: 'five-forks-ayres', name: "Ayres's V Corps division", side: 'union', type: 'infantry', x: 1412, y: 490, facing: Math.PI, frontage: 152, mode: 'line', strength: 2050, morale: 76, cohesion: 74, ammunition: 45, active: false, arrivalTime: 11, arrivalMessage: "Ayres's V Corps division advances on the exposed Angle." },
+  { id: 'five-forks-crawford', name: "Crawford's V Corps division", side: 'union', type: 'infantry', x: 1410, y: 218, facing: Math.PI, frontage: 145, mode: 'line', strength: 1840, morale: 75, cohesion: 73, ammunition: 44, active: false, arrivalTime: 16, arrivalMessage: "Crawford's V Corps division presses toward Ford's Road from the east." },
+  { id: 'five-forks-griffin', name: "Griffin's V Corps division", side: 'union', type: 'infantry', x: 1460, y: 392, facing: Math.PI, frontage: 145, mode: 'line', strength: 1860, morale: 73, cohesion: 73, ammunition: 44, active: false, arrivalTime: 25, arrivalMessage: "Griffin joins the pressure on the Confederate left." },
+];
+
+// The September 1 front, compressed around Hardee's salient and the railroad.
+// Unit locations, strengths and timing are tuned for play.
+const JONESBOROUGH_FORMATIONS = [
+  { id: 'jonesborough-govan', name: 'Govan’s brigade', side: 'confederate', type: 'infantry', x: 780, y: 517, facing: -Math.PI / 2, frontage: 136, mode: 'line', strength: 1330, morale: 84, cohesion: 81, ammunition: 48 },
+  { id: 'jonesborough-granbury', name: 'Granbury’s brigade', side: 'confederate', type: 'infantry', x: 1090, y: 512, facing: -Math.PI / 2, frontage: 127, mode: 'line', strength: 1280, morale: 86, cohesion: 83, ammunition: 48 },
+  { id: 'jonesborough-lowrey', name: 'Lowrey’s brigade', side: 'confederate', type: 'infantry', x: 856, y: 609, facing: -Math.PI / 2, frontage: 132, mode: 'line', strength: 1250, morale: 79, cohesion: 76, ammunition: 43 },
+  { id: 'jonesborough-carter', name: 'Carter’s supporting line', side: 'confederate', type: 'infantry', x: 655, y: 468, facing: -2.5, frontage: 137, mode: 'line', strength: 1510, morale: 79, cohesion: 74, ammunition: 40 },
+  { id: 'jonesborough-battery', name: 'Hardee’s field battery', side: 'confederate', type: 'artillery', x: 952, y: 602, facing: -Math.PI / 2, frontage: 78, mode: 'line', strength: 250, morale: 80, cohesion: 78, ammunition: 43 },
+  { id: 'jonesborough-morgan', name: 'Morgan’s XIV Corps line', side: 'union', type: 'infantry', x: 899, y: 399, facing: Math.PI / 2, frontage: 120, mode: 'line', strength: 950, morale: 66, cohesion: 66, ammunition: 44 },
+  { id: 'jonesborough-carlin', name: 'Carlin’s XIV Corps line', side: 'union', type: 'infantry', x: 546, y: 302, facing: .9, frontage: 158, mode: 'line', strength: 1520, morale: 78, cohesion: 72, ammunition: 43 },
+  { id: 'jonesborough-baird', name: 'Baird’s XIV Corps line', side: 'union', type: 'infantry', x: 487, y: 301, facing: .8, frontage: 143, mode: 'column', strength: 1350, morale: 77, cohesion: 73, ammunition: 44, active: false, arrivalTime: 13, arrivalMessage: 'Baird’s line joins the XIV Corps pressure west of the railroad.' },
+  { id: 'jonesborough-stanley', name: 'Stanley’s IV Corps advance', side: 'union', type: 'infantry', x: 1040, y: 171, facing: Math.PI / 2, frontage: 152, mode: 'column', strength: 2380, morale: 83, cohesion: 79, ammunition: 48, active: false, arrivalTime: 25, arrivalMessage: 'Stanley’s IV Corps advance appears along the railroad from the north.' },
+  { id: 'jonesborough-union-guns', name: 'Union field battery', side: 'union', type: 'artillery', x: 749, y: 208, facing: 1.2, frontage: 80, mode: 'line', strength: 260, morale: 73, cohesion: 70, ammunition: 43 },
+];
+
+// Representative formations from the final afternoon. Gameplay compresses
+// the two fronts, their strengths, and the interval between attacks.
+const SECOND_MANASSAS_FORMATIONS = [
+  { id: 'second-manassas-starke', name: 'Starke’s Deep Cut line', side: 'confederate', type: 'infantry', x: 524, y: 267, facing: 0, frontage: 144, mode: 'line', strength: 1830, morale: 82, cohesion: 78, ammunition: 46 },
+  { id: 'second-manassas-lawton', name: 'Lawton’s support', side: 'confederate', type: 'infantry', x: 562, y: 344, facing: 0, frontage: 145, mode: 'line', strength: 1700, morale: 84, cohesion: 81, ammunition: 44 },
+  { id: 'second-manassas-hood', name: 'Hood’s Texas Brigade', side: 'confederate', type: 'infantry', x: 820, y: 611, facing: 0, frontage: 140, mode: 'line', strength: 1760, morale: 86, cohesion: 82, ammunition: 46 },
+  { id: 'second-manassas-kemper', name: 'Kemper’s supporting line', side: 'confederate', type: 'infantry', x: 818, y: 748, facing: -.2, frontage: 137, mode: 'line', strength: 1680, morale: 84, cohesion: 79, ammunition: 45 },
+  { id: 'second-manassas-battery', name: 'Stephen D. Lee’s artillery', side: 'confederate', type: 'artillery', x: 494, y: 529, facing: -.35, frontage: 80, mode: 'line', strength: 235, morale: 83, cohesion: 81, ammunition: 40 },
+  { id: 'second-manassas-porter', name: 'Porter’s Deep Cut assault', side: 'union', type: 'infantry', x: 758, y: 320, facing: Math.PI, frontage: 145, mode: 'line', strength: 1570, morale: 72, cohesion: 71, ammunition: 44 },
+  { id: 'second-manassas-mclean', name: 'McLean’s Ohio brigade', side: 'union', type: 'infantry', x: 1090, y: 628, facing: Math.PI, frontage: 126, mode: 'line', strength: 1170, morale: 72, cohesion: 71, ammunition: 44 },
+  { id: 'second-manassas-warren', name: 'Warren’s Groveton line', side: 'union', type: 'infantry', x: 907, y: 466, facing: Math.PI, frontage: 121, mode: 'line', strength: 1430, morale: 76, cohesion: 74, ammunition: 46 },
+  { id: 'second-manassas-maine', name: '5th Maine Battery', side: 'union', type: 'artillery', x: 1220, y: 622, facing: Math.PI, frontage: 78, mode: 'line', strength: 195, morale: 74, cohesion: 70, ammunition: 35, active: false, arrivalTime: 24, arrivalMessage: 'The 5th Maine Battery reaches the approaches to Chinn Ridge.' },
+  { id: 'second-manassas-reynolds', name: 'Pennsylvania Reserves', side: 'union', type: 'infantry', x: 1343, y: 676, facing: Math.PI, frontage: 139, mode: 'column', strength: 1400, morale: 77, cohesion: 74, ammunition: 42, active: false, arrivalTime: 29, arrivalMessage: 'The Pennsylvania Reserves cover the approach from Henry Hill.' },
+];
+
+// December 13 compressed into two connected sectors. Names represent the
+// formations involved in each fight, not a literal order of battle.
+const FREDERICKSBURG_FORMATIONS = [
+  { id: 'fredericksburg-cobb', name: 'Cobb’s stone-wall line', side: 'confederate', type: 'infantry', x: 584, y: 220, facing: 0, frontage: 106, mode: 'line', strength: 1510, morale: 82, cohesion: 78, ammunition: 50 },
+  { id: 'fredericksburg-kershaw', name: 'Kershaw’s supporting line', side: 'confederate', type: 'infantry', x: 572, y: 305, facing: 0, frontage: 103, mode: 'line', strength: 1530, morale: 83, cohesion: 81, ammunition: 48 },
+  { id: 'fredericksburg-walton', name: 'Walton’s Washington Artillery', side: 'confederate', type: 'artillery', x: 366, y: 322, facing: 0, frontage: 72, mode: 'line', strength: 188, morale: 82, cohesion: 78, ammunition: 37 },
+  { id: 'fredericksburg-gregg', name: 'Gregg’s South Carolinians', side: 'confederate', type: 'infantry', x: 515, y: 586, facing: 0, frontage: 107, mode: 'line', strength: 1340, morale: 78, cohesion: 78, ammunition: 44 },
+  { id: 'fredericksburg-lane', name: 'Lane’s North Carolinians', side: 'confederate', type: 'infantry', x: 531, y: 710, facing: 0, frontage: 115, mode: 'line', strength: 1410, morale: 81, cohesion: 76, ammunition: 44 },
+  { id: 'fredericksburg-early', name: 'Early’s reserve', side: 'confederate', type: 'infantry', x: 385, y: 521, facing: 0, frontage: 110, mode: 'line', strength: 1690, morale: 84, cohesion: 82, ammunition: 47, reserve: true },
+  { id: 'fredericksburg-french', name: 'French’s assault line', side: 'union', type: 'infantry', x: 785, y: 267, facing: Math.PI, frontage: 128, mode: 'line', strength: 1740, morale: 74, cohesion: 72, ammunition: 44 },
+  { id: 'fredericksburg-hancock', name: 'Hancock’s supporting division', side: 'union', type: 'infantry', x: 853, y: 214, facing: Math.PI, frontage: 117, mode: 'line', strength: 1440, morale: 74, cohesion: 71, ammunition: 43, active: false, arrivalTime: 8, arrivalMessage: 'Hancock’s Union infantry follows French toward the Sunken Road.' },
+  { id: 'fredericksburg-humphreys', name: 'Humphreys’s assault line', side: 'union', type: 'infantry', x: 885, y: 332, facing: Math.PI, frontage: 112, mode: 'line', strength: 1400, morale: 73, cohesion: 70, ammunition: 41, active: false, arrivalTime: 18, arrivalMessage: 'Humphreys’s line arrives for another assault on Marye’s Heights.' },
+  { id: 'fredericksburg-meade', name: 'Meade’s Pennsylvania Reserves', side: 'union', type: 'infantry', x: 773, y: 650, facing: Math.PI, frontage: 119, mode: 'line', strength: 1540, morale: 76, cohesion: 74, ammunition: 46 },
+  { id: 'fredericksburg-gibbon', name: 'Gibbon’s supporting infantry', side: 'union', type: 'infantry', x: 843, y: 745, facing: Math.PI, frontage: 109, mode: 'line', strength: 1290, morale: 74, cohesion: 71, ammunition: 42, active: false, arrivalTime: 10, arrivalMessage: 'Gibbon’s infantry arrives on the southern approach.' },
+  { id: 'fredericksburg-union-guns', name: 'Union artillery on the plain', side: 'union', type: 'artillery', x: 889, y: 544, facing: Math.PI, frontage: 76, mode: 'line', strength: 188, morale: 75, cohesion: 72, ammunition: 33 },
+];
+
+// Compressed formations for the tactical board. Their strengths and timing
+// are tuned for play and do not represent a literal order of battle.
+const GAINES_MILL_FORMATIONS = [
+  { id: 'gaines-mill-hood', name: 'Hood’s Texas Brigade', side: 'confederate', type: 'infantry', x: 714, y: 564, facing: -Math.PI / 2, frontage: 110, mode: 'line', strength: 1660, morale: 83, cohesion: 81, ammunition: 46 },
+  { id: 'gaines-mill-law', name: 'Law’s supporting brigade', side: 'confederate', type: 'infantry', x: 883, y: 566, facing: -Math.PI / 2, frontage: 109, mode: 'line', strength: 1540, morale: 82, cohesion: 80, ammunition: 46 },
+  { id: 'gaines-mill-hill', name: 'A. P. Hill’s supporting line', side: 'confederate', type: 'infantry', x: 514, y: 627, facing: -Math.PI / 2, frontage: 115, mode: 'line', strength: 1380, morale: 74, cohesion: 74, ammunition: 39 },
+  { id: 'gaines-mill-battery', name: 'Confederate field battery', side: 'confederate', type: 'artillery', x: 697, y: 679, facing: -Math.PI / 2, frontage: 65, mode: 'line', strength: 168, morale: 82, cohesion: 77, ammunition: 32 },
+  { id: 'gaines-mill-morell', name: 'Morell’s ridge line', side: 'union', type: 'infantry', x: 812, y: 318, facing: Math.PI / 2, frontage: 117, mode: 'line', strength: 1350, morale: 70, cohesion: 73, ammunition: 40 },
+  { id: 'gaines-mill-sykes', name: 'Sykes’s regulars', side: 'union', type: 'infantry', x: 491, y: 312, facing: Math.PI / 2, frontage: 105, mode: 'line', strength: 1210, morale: 74, cohesion: 74, ammunition: 42 },
+  { id: 'gaines-mill-guns', name: 'Porter’s plateau battery', side: 'union', type: 'artillery', x: 1121, y: 287, facing: Math.PI / 2, frontage: 72, mode: 'line', strength: 176, morale: 76, cohesion: 72, ammunition: 33 },
+  { id: 'gaines-mill-slocum', name: 'Slocum’s supporting infantry', side: 'union', type: 'infantry', x: 1068, y: 183, facing: Math.PI / 2, frontage: 110, mode: 'line', strength: 1080, morale: 75, cohesion: 72, ammunition: 34, active: false, arrivalTime: 17, arrivalMessage: 'Slocum’s infantry arrives behind Porter’s ridge.' },
+];
+
+// Representative groups for the farm and pike actions. Strengths, distances
+// and reinforcement timings are playable abstractions.
+const NEW_MARKET_FORMATIONS = [
+  { id: 'new-market-wharton', name: 'Wharton’s brigade', side: 'confederate', type: 'infantry', x: 435, y: 575, facing: -Math.PI / 2, frontage: 114, mode: 'line', strength: 1830, morale: 84, cohesion: 83, ammunition: 44 },
+  { id: 'new-market-echols', name: 'Echols’s brigade', side: 'confederate', type: 'infantry', x: 886, y: 566, facing: -Math.PI / 2, frontage: 116, mode: 'line', strength: 1650, morale: 82, cohesion: 81, ammunition: 44 },
+  { id: 'new-market-cadets', name: 'VMI Cadet Battalion', side: 'confederate', type: 'infantry', x: 674, y: 659, facing: -Math.PI / 2, frontage: 68, mode: 'line', strength: 265, morale: 82, cohesion: 82, ammunition: 36, reserve: true },
+  { id: 'new-market-battery', name: 'McLaughlin’s field battery', side: 'confederate', type: 'artillery', x: 945, y: 676, facing: -Math.PI / 2, frontage: 68, mode: 'line', strength: 148, morale: 77, cohesion: 76, ammunition: 33 },
+  { id: 'new-market-thoburn', name: 'Thoburn’s Union infantry', side: 'union', type: 'infantry', x: 648, y: 315, facing: Math.PI / 2, frontage: 112, mode: 'line', strength: 1360, morale: 72, cohesion: 75, ammunition: 41 },
+  { id: 'new-market-moor', name: 'Moor’s Union infantry', side: 'union', type: 'infantry', x: 1110, y: 311, facing: Math.PI / 2, frontage: 108, mode: 'line', strength: 1320, morale: 74, cohesion: 72, ammunition: 39 },
+  { id: 'new-market-carlin', name: 'Carlin’s Union battery', side: 'union', type: 'artillery', x: 522, y: 214, facing: Math.PI / 2, frontage: 70, mode: 'line', strength: 151, morale: 73, cohesion: 71, ammunition: 31 },
+  { id: 'new-market-union-reserve', name: 'Sigel’s supporting infantry', side: 'union', type: 'infantry', x: 1128, y: 197, facing: Math.PI / 2, frontage: 104, mode: 'line', strength: 1050, morale: 73, cohesion: 74, ammunition: 37, active: false, arrivalTime: 17, activationOrder: 'hold', arrivalMessage: 'Supporting Union infantry arrives behind the Pike line.' },
+];
+
+// The center formations represent portions of the historical divisions.
+const MISSIONARY_RIDGE_FORMATIONS = [
+  { id: 'missionary-ridge-anderson', name: 'Anderson’s crest infantry', side: 'confederate', type: 'infantry', x: 1002, y: 300, facing: Math.PI, frontage: 140, mode: 'line', strength: 1780, morale: 85, cohesion: 86, ammunition: 44 },
+  { id: 'missionary-ridge-bate', name: 'Bate’s supporting infantry', side: 'confederate', type: 'infantry', x: 1124, y: 465, facing: Math.PI, frontage: 134, mode: 'line', strength: 1640, morale: 83, cohesion: 84, ammunition: 42 },
+  { id: 'missionary-ridge-rearguard', name: 'Army rearguard', side: 'confederate', type: 'infantry', x: 1220, y: 634, facing: Math.PI, frontage: 118, mode: 'line', strength: 1260, morale: 83, cohesion: 85, ammunition: 40, reserve: true },
+  { id: 'missionary-ridge-battery', name: 'Confederate crest battery', side: 'confederate', type: 'artillery', x: 1010, y: 578, facing: Math.PI, frontage: 74, mode: 'line', strength: 146, morale: 82, cohesion: 83, ammunition: 32 },
+  { id: 'missionary-ridge-wood', name: 'Wood’s Union infantry', side: 'union', type: 'infantry', x: 571, y: 314, facing: 0, frontage: 137, mode: 'line', strength: 1540, morale: 76, cohesion: 74, ammunition: 42 },
+  { id: 'missionary-ridge-sheridan', name: 'Sheridan’s Union infantry', side: 'union', type: 'infantry', x: 592, y: 492, facing: 0, frontage: 145, mode: 'line', strength: 1640, morale: 76, cohesion: 73, ammunition: 42 },
+  { id: 'missionary-ridge-baird', name: 'Baird’s supporting infantry', side: 'union', type: 'infantry', x: 650, y: 186, facing: 0, frontage: 124, mode: 'line', strength: 1230, morale: 75, cohesion: 74, ammunition: 39, active: false, arrivalTime: 12, activationOrder: 'hold', arrivalMessage: 'Baird’s supporting infantry appears north of the first wave.' },
+  { id: 'missionary-ridge-union-battery', name: 'Union field battery', side: 'union', type: 'artillery', x: 328, y: 438, facing: 0, frontage: 75, mode: 'line', strength: 158, morale: 77, cohesion: 80, ammunition: 35 },
+];
+
+// These formations represent parts of the historical commands. The board
+// compresses several hours of fighting onto two local objectives.
+const SPOTSYLVANIA_FORMATIONS = [
+  { id: 'spotsylvania-gordon', name: 'Gordon’s infantry', side: 'confederate', type: 'infantry', x: 707, y: 622, facing: -Math.PI / 2, frontage: 122, mode: 'line', strength: 1685, morale: 86, cohesion: 83, ammunition: 45 },
+  { id: 'spotsylvania-ramseur', name: 'Ramseur’s infantry', side: 'confederate', type: 'infantry', x: 1012, y: 600, facing: -Math.PI / 2, frontage: 124, mode: 'line', strength: 1580, morale: 84, cohesion: 83, ammunition: 43 },
+  { id: 'spotsylvania-reserve', name: 'Interior reserve infantry', side: 'confederate', type: 'infantry', x: 733, y: 743, facing: -Math.PI / 2, frontage: 116, mode: 'line', strength: 1200, morale: 85, cohesion: 84, ammunition: 41, reserve: true },
+  { id: 'spotsylvania-battery', name: 'Confederate field battery', side: 'confederate', type: 'artillery', x: 937, y: 743, facing: -Math.PI / 2, frontage: 70, mode: 'line', strength: 148, morale: 80, cohesion: 81, ammunition: 34 },
+  { id: 'spotsylvania-barlow', name: 'Barlow’s Union infantry', side: 'union', type: 'infantry', x: 759, y: 224, facing: Math.PI / 2, frontage: 130, mode: 'line', strength: 1680, morale: 77, cohesion: 73, ammunition: 40 },
+  { id: 'spotsylvania-birney', name: 'Birney’s Union infantry', side: 'union', type: 'infantry', x: 588, y: 360, facing: Math.PI / 2, frontage: 124, mode: 'line', strength: 1330, morale: 75, cohesion: 72, ammunition: 40 },
+  { id: 'spotsylvania-wright', name: 'Wright’s supporting infantry', side: 'union', type: 'infantry', x: 456, y: 250, facing: Math.PI / 2, frontage: 124, mode: 'line', strength: 1280, morale: 78, cohesion: 74, ammunition: 39, active: false, arrivalTime: 13, activationOrder: 'hold', arrivalMessage: 'Wright’s supporting infantry arrives on the western approach.' },
+  { id: 'spotsylvania-union-battery', name: 'Union field battery', side: 'union', type: 'artillery', x: 343, y: 213, facing: Math.PI / 2, frontage: 68, mode: 'line', strength: 147, morale: 75, cohesion: 73, ammunition: 31 },
+];
+
+const KENNESAW_FORMATIONS = [
+  { id: 'kennesaw-maney', name: 'Maney’s infantry', side: 'confederate', type: 'infantry', x: 718, y: 424, facing: -Math.PI / 2, frontage: 125, mode: 'line', strength: 1520, morale: 87, cohesion: 86, ammunition: 46 },
+  { id: 'kennesaw-vaughan', name: 'Vaughan’s infantry', side: 'confederate', type: 'infantry', x: 1025, y: 466, facing: -Math.PI / 2, frontage: 115, mode: 'line', strength: 1440, morale: 86, cohesion: 85, ammunition: 44 },
+  { id: 'kennesaw-reserve', name: 'Hill reserve infantry', side: 'confederate', type: 'infantry', x: 1030, y: 695, facing: -Math.PI / 2, frontage: 100, mode: 'line', strength: 990, morale: 84, cohesion: 86, ammunition: 39, reserve: true },
+  { id: 'kennesaw-mebane', name: 'Mebane’s battery', side: 'confederate', type: 'artillery', x: 973, y: 560, facing: -Math.PI / 2, frontage: 68, mode: 'line', strength: 145, morale: 83, cohesion: 84, ammunition: 33 },
+  { id: 'kennesaw-mccook', name: 'McCook’s Union infantry', side: 'union', type: 'infantry', x: 640, y: 171, facing: Math.PI / 2, frontage: 120, mode: 'line', strength: 1490, morale: 77, cohesion: 75, ammunition: 36 },
+  { id: 'kennesaw-harker', name: 'Harker’s Union infantry', side: 'union', type: 'infantry', x: 849, y: 144, facing: Math.PI / 2, frontage: 119, mode: 'line', strength: 1370, morale: 77, cohesion: 75, ammunition: 36 },
+  { id: 'kennesaw-mitchell', name: 'Mitchell’s supporting infantry', side: 'union', type: 'infantry', x: 516, y: 238, facing: Math.PI / 2, frontage: 102, mode: 'line', strength: 1210, morale: 77, cohesion: 74, ammunition: 34, active: false, arrivalTime: 15, activationOrder: 'hold', arrivalMessage: 'Mitchell’s infantry arrives on the upper approach.' },
+  { id: 'kennesaw-union-battery', name: 'Union field battery', side: 'union', type: 'artillery', x: 466, y: 169, facing: Math.PI / 2, frontage: 68, mode: 'line', strength: 138, morale: 76, cohesion: 74, ammunition: 24 },
+];
+
+const VICKSBURG_FORMATIONS = [
+  { id: 'vicksburg-alabama', name: '30th Alabama infantry', side: 'confederate', type: 'infantry', x: 721, y: 518, facing: 0, frontage: 94, mode: 'line', strength: 1050, morale: 80, cohesion: 80, ammunition: 38 },
+  { id: 'vicksburg-waul', name: 'Waul’s Texas Legion', side: 'confederate', type: 'infantry', x: 528, y: 369, facing: 0, frontage: 100, mode: 'line', strength: 1110, morale: 86, cohesion: 85, ammunition: 39, reserve: true },
+  { id: 'vicksburg-battery', name: 'Confederate field guns', side: 'confederate', type: 'artillery', x: 612, y: 587, facing: 0, frontage: 67, mode: 'line', strength: 130, morale: 82, cohesion: 84, ammunition: 30 },
+  { id: 'vicksburg-griffith', name: 'Griffith’s 22nd Iowa detachment', side: 'union', type: 'infantry', x: 874, y: 498, facing: Math.PI, frontage: 50, mode: 'column', strength: 132, morale: 40, cohesion: 34, ammunition: 20 },
+  { id: 'vicksburg-iowa', name: 'Federal Iowa infantry', side: 'union', type: 'infantry', x: 1202, y: 546, facing: Math.PI, frontage: 109, mode: 'line', strength: 1035, morale: 78, cohesion: 73, ammunition: 34 },
+  { id: 'vicksburg-carr', name: 'Carr’s supporting infantry', side: 'union', type: 'infantry', x: 1136, y: 264, facing: Math.PI, frontage: 109, mode: 'line', strength: 975, morale: 77, cohesion: 73, ammunition: 34, active: false, arrivalTime: 11, activationOrder: 'hold', arrivalMessage: 'Carr’s supporting infantry appears on the eastern approach.' },
+  { id: 'vicksburg-union-battery', name: 'Federal field guns', side: 'union', type: 'artillery', x: 1164, y: 452, facing: Math.PI, frontage: 65, mode: 'line', strength: 138, morale: 75, cohesion: 73, ammunition: 29 },
+];
+
+const SAILORS_CREEK_FORMATIONS = [
+  { id: 'sailors-lee', name: 'Custis Lee’s infantry', side: 'confederate', type: 'infantry', x: 707, y: 521, facing: -Math.PI / 2, frontage: 118, mode: 'line', strength: 1480, morale: 79, cohesion: 81, ammunition: 42 },
+  { id: 'sailors-kershaw', name: 'Kershaw’s infantry', side: 'confederate', type: 'infantry', x: 1036, y: 573, facing: -Math.PI / 2, frontage: 116, mode: 'line', strength: 1530, morale: 82, cohesion: 81, ammunition: 42, reserve: true },
+  { id: 'sailors-escort', name: 'Casualty escort infantry', side: 'confederate', type: 'infantry', x: 1318, y: 719, facing: -Math.PI / 2, frontage: 90, mode: 'line', strength: 610, morale: 82, cohesion: 84, ammunition: 32 },
+  { id: 'sailors-wheaton', name: 'Wheaton’s VI Corps infantry', side: 'union', type: 'infantry', x: 698, y: 222, facing: Math.PI / 2, frontage: 129, mode: 'line', strength: 1730, morale: 81, cohesion: 80, ammunition: 40 },
+  { id: 'sailors-seymour', name: 'Seymour’s VI Corps infantry', side: 'union', type: 'infantry', x: 918, y: 241, facing: Math.PI / 2, frontage: 117, mode: 'line', strength: 1460, morale: 81, cohesion: 79, ammunition: 38 },
+  { id: 'sailors-keifer', name: 'Keifer’s supporting infantry', side: 'union', type: 'infantry', x: 479, y: 216, facing: Math.PI / 2, frontage: 104, mode: 'line', strength: 1020, morale: 79, cohesion: 77, ammunition: 35, active: false, arrivalTime: 10, activationOrder: 'hold', arrivalMessage: 'Keifer’s supporting line reaches the western creek approach.' },
+  { id: 'sailors-union-guns', name: 'VI Corps field battery', side: 'union', type: 'artillery', x: 1000, y: 127, facing: Math.PI / 2, frontage: 69, mode: 'line', strength: 142, morale: 78, cohesion: 80, ammunition: 26 },
+];
+
 export const BATTLE_ENGINE_CONFIGS = {
+  sailors_creek: {
+    id: 'sailors_creek',
+    world: SAILORS_CREEK_WORLD,
+    terrain: { key: 'sailors-creek-pasture', src: 'images/battles/realistic-v2/pasture.png', mapMode: false },
+    projection: { horizon: 80, farScale: .58, nearScale: 1.08 },
+    formations: SAILORS_CREEK_FORMATIONS,
+    defaultSelection: 'sailors-kershaw',
+    maxTime: 91,
+    unionAdvance: false,
+    retreatEdges: { confederate: 'west', union: 'top' },
+    postures: {
+      option_a: { morale: 3, cohesion: 4, fatigue: 3, reserveMode: 'line', commanderStatus: 'forming an aid screen' },
+      option_b: { morale: 3, cohesion: 5, fatigue: 2, reserveMode: 'line', commanderStatus: 'covering the westward withdrawal' },
+    },
+    choiceDeployments: {
+      option_b: { formations: {
+        'sailors-lee': { x: 679, y: 664 },
+        'sailors-kershaw': { x: 879, y: 543 },
+        'sailors-escort': { x: 710, y: 753 },
+      } },
+    },
+  },
+  vicksburg: {
+    id: 'vicksburg',
+    world: VICKSBURG_WORLD,
+    terrain: { key: 'vicksburg-pasture', src: 'images/battles/realistic-v2/pasture.png', mapMode: false },
+    projection: { horizon: 80, farScale: .58, nearScale: 1.08 },
+    formations: VICKSBURG_FORMATIONS,
+    defaultSelection: 'vicksburg-waul',
+    maxTime: 64,
+    unionAdvance: false,
+    retreatEdges: { confederate: 'west', union: 'east' },
+    postures: {
+      option_a: { morale: 3, cohesion: 4, fatigue: 3, reserveMode: 'line', commanderStatus: 'recovering the redoubt' },
+      option_b: { morale: 3, cohesion: 5, fatigue: 2, reserveMode: 'line', commanderStatus: 'covering the interior line' },
+    },
+    choiceDeployments: {
+      option_b: { formations: {
+        'vicksburg-waul': { x: 340, y: 470 },
+      } },
+    },
+  },
+  kennesaw_mountain: {
+    id: 'kennesaw_mountain',
+    world: KENNESAW_WORLD,
+    terrain: { key: 'kennesaw-pasture', src: 'images/battles/realistic-v2/pasture.png', mapMode: false },
+    projection: { horizon: 80, farScale: .58, nearScale: 1.08 },
+    formations: KENNESAW_FORMATIONS,
+    defaultSelection: 'kennesaw-vaughan',
+    maxTime: 78,
+    unionAdvance: false,
+    postures: {
+      option_a: { morale: 3, cohesion: 4, fatigue: 2, reserveMode: 'line', commanderStatus: 'supporting the Dead Angle' },
+      option_b: { morale: 3, cohesion: 5, fatigue: 2, reserveMode: 'line', commanderStatus: 'covering the southern road' },
+    },
+    choiceDeployments: {
+      option_b: { formations: {
+        'kennesaw-vaughan': { x: 865, y: 460 },
+        'kennesaw-mebane': { x: 1022, y: 590 },
+      } },
+    },
+  },
+  spotsylvania: {
+    id: 'spotsylvania',
+    world: SPOTSYLVANIA_WORLD,
+    terrain: { key: 'spotsylvania-pasture', src: 'images/battles/realistic-v2/pasture.png', mapMode: false },
+    projection: { horizon: 80, farScale: .58, nearScale: 1.08 },
+    formations: SPOTSYLVANIA_FORMATIONS,
+    defaultSelection: 'spotsylvania-ramseur',
+    maxTime: 60,
+    unionAdvance: false,
+    postures: {
+      option_a: { morale: 3, cohesion: 5, fatigue: 3, reserveMode: 'line', commanderStatus: 'preparing the second line' },
+      option_b: { morale: 3, cohesion: 5, fatigue: 3, reserveMode: 'line', commanderStatus: 'supporting the local counterattack' },
+    },
+    choiceDeployments: {
+      option_b: { formations: {
+        'spotsylvania-gordon': { x: 537, y: 528 },
+        'spotsylvania-ramseur': { x: 677, y: 521 },
+        'spotsylvania-battery': { x: 665, y: 633 },
+      } },
+    },
+  },
+  missionary_ridge: {
+    id: 'missionary_ridge',
+    world: MISSIONARY_RIDGE_WORLD,
+    terrain: { key: 'missionary-ridge-pasture', src: 'images/battles/realistic-v2/pasture.png', mapMode: false },
+    projection: { horizon: 80, farScale: .58, nearScale: 1.08 },
+    formations: MISSIONARY_RIDGE_FORMATIONS,
+    defaultSelection: 'missionary-ridge-bate',
+    maxTime: 68,
+    unionAdvance: false,
+    retreatEdges: { confederate: 'east', union: 'west' },
+    postures: {
+      option_a: { morale: 3, cohesion: 4, fatigue: 2, reserveMode: 'line', commanderStatus: 'supporting the center line' },
+      option_b: { morale: 2, cohesion: 6, fatigue: 2, reserveMode: 'line', commanderStatus: 'covering the eastward withdrawal' },
+    },
+    choiceDeployments: {
+      option_b: { formations: {
+        'missionary-ridge-bate': { x: 1000, y: 451 },
+        'missionary-ridge-rearguard': { x: 1256, y: 585 },
+        'missionary-ridge-battery': { x: 1228, y: 711 },
+      } },
+    },
+  },
+  new_market: {
+    id: 'new_market',
+    world: NEW_MARKET_WORLD,
+    terrain: { key: 'new-market-grass', src: 'images/battles/realistic-v2/pasture.png', mapMode: false },
+    projection: { horizon: 80, farScale: .58, nearScale: 1.08 },
+    formations: NEW_MARKET_FORMATIONS,
+    defaultSelection: 'new-market-wharton',
+    maxTime: 65,
+    unionAdvance: false,
+    postures: {
+      option_a: { morale: 2, cohesion: 2, fatigue: 3, reserveMode: 'line', commanderStatus: 'supporting the farm advance' },
+      option_b: { morale: 1, cohesion: 4, fatigue: 2, reserveMode: 'line', commanderStatus: 'securing the supply route' },
+    },
+    choiceDeployments: {
+      option_b: { formations: {
+        'new-market-wharton': { x: 978, y: 562 },
+        'new-market-echols': { x: 1130, y: 573 },
+        'new-market-cadets': { x: 849, y: 650 },
+        'new-market-battery': { x: 923, y: 681 },
+        'new-market-union-reserve': { arrivalTime: 8 },
+      } },
+    },
+  },
+  gaines_mill: {
+    id: 'gaines_mill',
+    world: GAINES_MILL_WORLD,
+    terrain: { key: 'gaines-mill-grass', src: 'images/battles/realistic-v2/pasture.png', mapMode: false },
+    projection: { horizon: 80, farScale: .58, nearScale: 1.08 },
+    formations: GAINES_MILL_FORMATIONS,
+    defaultSelection: 'gaines-mill-hood',
+    maxTime: 62,
+    unionAdvance: false,
+    postures: {
+      option_a: { morale: 2, cohesion: 3, fatigue: 3, reserveMode: 'line', commanderStatus: 'coordinating the ravine assault' },
+      option_b: { morale: 0, cohesion: 4, fatigue: 2, reserveMode: 'line', commanderStatus: 'covering the crossing withdrawal' },
+    },
+    choiceDeployments: {
+      option_b: { formations: {
+        'gaines-mill-hood': { x: 512, y: 596 },
+        'gaines-mill-law': { x: 650, y: 585 },
+        'gaines-mill-hill': { x: 790, y: 708 },
+        'gaines-mill-battery': { x: 585, y: 674 },
+        'gaines-mill-sykes': { x: 544, y: 328 },
+        'gaines-mill-slocum': { x: 511, y: 282, arrivalTime: 24, activationOrder: 'hold', arrivalMessage: 'Slocum’s infantry follows the probe toward the ravine.' },
+      } },
+    },
+  },
+  fredericksburg: {
+    id: 'fredericksburg',
+    world: FREDERICKSBURG_WORLD,
+    terrain: { key: 'fredericksburg-grass', src: 'images/battles/realistic-v2/pasture.png', mapMode: false },
+    projection: { horizon: 80, farScale: .58, nearScale: 1.08 },
+    formations: FREDERICKSBURG_FORMATIONS,
+    defaultSelection: 'fredericksburg-cobb',
+    maxTime: 51,
+    unionAdvance: false,
+    retreatEdges: { confederate: 'west', union: 'east' },
+    movement: { baseMultiplier: .97 },
+    postures: {
+      option_a: { morale: 2, cohesion: 3, fatigue: 3, reserveMode: 'line', commanderStatus: 'directing the heights defense' },
+      option_b: { morale: 0, cohesion: 5, fatigue: 3, reserveMode: 'line', commanderStatus: 'covering the Prospect Hill gap' },
+    },
+    choiceDeployments: {
+      option_a: { formations: { 'fredericksburg-gibbon': { arrivalTime: 24 } } },
+      option_b: { formations: {
+        'fredericksburg-hancock': { arrivalTime: 22 },
+        'fredericksburg-humphreys': { arrivalTime: 37 },
+        'fredericksburg-meade': { x: 723, y: 650 },
+      } },
+    },
+  },
+  second_manassas: {
+    id: 'second_manassas',
+    world: SECOND_MANASSAS_WORLD,
+    terrain: { key: 'second-manassas-grass', src: 'images/battles/realistic-v2/pasture.png', mapMode: false },
+    projection: { horizon: 80, farScale: .56, nearScale: 1.08 },
+    formations: SECOND_MANASSAS_FORMATIONS,
+    defaultSelection: 'second-manassas-starke',
+    maxTime: 53,
+    unionAdvance: false,
+    movement: { baseMultiplier: .97 },
+    postures: {
+      option_a: { morale: 3, cohesion: 2, fatigue: 3, reserveMode: 'line', commanderStatus: 'coordinating the two wings' },
+      option_b: { morale: 0, cohesion: 6, fatigue: 1, reserveMode: 'line', commanderStatus: 'directing the limited defense' },
+    },
+    choiceDeployments: {
+      option_b: { formations: {
+        'second-manassas-hood': { x: 687, y: 619 },
+        'second-manassas-kemper': { x: 665, y: 750 },
+        'second-manassas-battery': { x: 452, y: 551 },
+        'second-manassas-warren': { x: 841, y: 463 },
+        'second-manassas-reynolds': { arrivalTime: 22 },
+      } },
+    },
+  },
+  jonesborough: {
+    id: 'jonesborough',
+    world: JONESBOROUGH_WORLD,
+    terrain: { key: 'jonesborough-grass', src: 'images/battles/realistic-v2/pasture.png', mapMode: false },
+    projection: { horizon: 80, farScale: .56, nearScale: 1.08 },
+    formations: JONESBOROUGH_FORMATIONS,
+    defaultSelection: 'jonesborough-govan',
+    maxTime: 49,
+    unionAdvance: true,
+    movement: { baseMultiplier: .96 },
+    postures: {
+      option_a: { morale: 2, cohesion: 3, fatigue: 4, reserveMode: 'line', commanderStatus: 'directing the rail counterattack' },
+      option_b: { morale: 0, cohesion: 7, fatigue: 2, reserveMode: 'column', commanderStatus: 'organizing the Lovejoy withdrawal' },
+    },
+    choiceDeployments: {
+      option_b: { formations: {
+        'jonesborough-govan': { x: 760, y: 548 },
+        'jonesborough-granbury': { x: 1069, y: 541 },
+        'jonesborough-lowrey': { x: 864, y: 660, mode: 'column' },
+        'jonesborough-carter': { x: 595, y: 475 },
+        'jonesborough-battery': { x: 963, y: 678 },
+        'jonesborough-morgan': { morale: 76, cohesion: 75 },
+        'jonesborough-stanley': { arrivalTime: 17 },
+      } },
+    },
+  },
+  five_forks: {
+    id: 'five_forks',
+    world: FIVE_FORKS_WORLD,
+    terrain: { key: 'five-forks-grass', src: 'images/battles/realistic-v2/pasture.png', mapMode: false },
+    projection: { horizon: 82, farScale: .54, nearScale: 1.06 },
+    formations: FIVE_FORKS_FORMATIONS,
+    defaultSelection: 'five-forks-steuart',
+    maxTime: 60,
+    unionAdvance: true,
+    retreatEdges: { confederate: 'top', union: 'bottom' },
+    movement: { baseMultiplier: .96, roadBands: [{ axis: 'x', value: 780, width: 52, multiplier: 1.14 }, { axis: 'y', value: 445, width: 21, multiplier: 1.09 }] },
+    postures: {
+      option_a: { morale: 0, cohesion: 3, fatigue: 4, reserveMode: 'line', commanderStatus: 'holding the extended line' },
+      option_b: { morale: 3, cohesion: 6, fatigue: 3, reserveMode: 'line', commanderStatus: 'directing the rearguard' },
+      option_c: { morale: 1, cohesion: 7, fatigue: 1, reserveMode: 'column', commanderStatus: 'organizing the early withdrawal' },
+    },
+    choiceDeployments: {
+      option_b: { formations: {
+        'five-forks-ransom': { x: 1024, y: 377 },
+        'five-forks-wallace': { x: 855, y: 284, facing: 0 },
+        'five-forks-fitz-lee': { x: 702, y: 240, facing: 0 },
+      } },
+      option_c: { formations: {
+        'five-forks-steuart': { x: 810, y: 350, mode: 'column' },
+        'five-forks-ransom': { x: 980, y: 320, mode: 'column' },
+        'five-forks-wallace': { x: 925, y: 250, mode: 'column' },
+        'five-forks-corse': { x: 620, y: 300, mode: 'column' },
+        'five-forks-fitz-lee': { x: 681, y: 212 },
+        'five-forks-guns': { x: 751, y: 205 },
+      } },
+    },
+  },
+  antietam: {
+    id: 'antietam',
+    world: ANTIETAM_WORLD,
+    terrain: { key: 'pasture', src: 'images/battles/realistic-v2/pasture.png', mapMode: false },
+    projection: { horizon: 85, farScale: .54, nearScale: 1.06 },
+    formations: ANTIETAM_FORMATIONS,
+    defaultSelection: 'antietam-hill',
+    maxTime: 92,
+    unionAdvance: true,
+    movement: { baseMultiplier: .94, roadBands: [{ axis: 'y', value: 740, width: 48, multiplier: 1.12 }] },
+    postures: {
+      option_a: { morale: 5, cohesion: 6, fatigue: 5, reserveMode: 'line', commanderStatus: 'holding the Sunken Road' },
+      option_b: { morale: 1, cohesion: 6, fatigue: 4, reserveMode: 'column', commanderStatus: 'organizing withdrawal' },
+      option_c: { morale: 4, cohesion: 5, fatigue: 6, reserveMode: 'line', commanderStatus: 'holding the Cornfield and the lane' },
+      option_d: { morale: 4, cohesion: 4, fatigue: 7, reserveMode: 'line', commanderStatus: 'preparing the right-wing counterstroke' },
+    },
+    choiceDeployments: {
+      option_b: { formations: {
+        'antietam-lawton': { x: 352, y: 595, mode: 'column' },
+        'antietam-hill': { y: 635, mode: 'column' },
+        'antietam-anderson': { y: 656, mode: 'column' },
+        'antietam-toombs': { y: 660, mode: 'column' },
+        'antietam-light-division': { arrivalTime: 38 },
+      } },
+      option_c: { formations: { 'antietam-hood': { x: 322, y: 545 } } },
+      option_d: { formations: { 'antietam-toombs': { x: 1380, y: 665 } } },
+    },
+  },
   first_manassas: {
     id: 'first_manassas',
     world: WORLD,

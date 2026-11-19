@@ -245,7 +245,8 @@ test('direct movement cannot bypass the scenario time limit and result resolutio
 
 test('all 40 legacy battle/choice replay snapshots retain their reviewed baseline', () => {
   const results = [];
-  const ids = Object.keys(BATTLE_ENGINE_CONFIGS).filter((id) => id !== 'third_winchester');
+  // New fields have their own replay tests. Keep the reviewed snapshot set fixed.
+  const ids = Object.keys(BATTLE_ENGINE_CONFIGS).filter((id) => !['third_winchester', 'antietam', 'five_forks', 'jonesborough', 'second_manassas', 'fredericksburg', 'gaines_mill', 'new_market', 'missionary_ridge', 'spotsylvania', 'kennesaw_mountain', 'vicksburg', 'sailors_creek'].includes(id));
   assert.equal(ids.length, 10);
   for (const id of ids) for (const choice of ['option_a', 'option_b', 'option_c', 'option_d']) {
     const engine = new CivilWarBattleEngine(id, {}, choice);

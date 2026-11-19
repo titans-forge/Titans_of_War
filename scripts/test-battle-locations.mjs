@@ -51,6 +51,29 @@ test('Petersburg sortie locations exist only for the selected supported sortie m
   assert.equal(names.includes('Eastern Engineer Depot'),choice==='option_c');
  }
 });
+test('Petersburg modern field guides use the real crater bounds and preserve combat geometry', () => {
+ const engine = new CivilWarBattleEngine('petersburg', createFreshCampaignState(1864, 'petersburg_siege'), 'option_b');
+ const before = engine.checkpoint();
+ const snapshot = engine.snapshot();
+ const classic = battleLocations(snapshot), modern = battleLocations(snapshot, true);
+ assert.deepEqual(modern.filter(site => !site.scenic && site.kind !== 'Terrain'), classic);
+ const basin = snapshot.fieldBattle.zones.find(zone => zone.kind === 'crater');
+ const crater = modern.find(site => site.id === 'Terrain:crater-basin');
+ assert.deepEqual([crater.x - crater.width / 2, crater.y - crater.height / 2, crater.x + crater.width / 2, crater.y + crater.height / 2],
+   [basin.left, basin.top, basin.right, basin.bottom]);
+ const church = modern.find(site => site.id === 'Landmark:blandford-church');
+ assert.equal(church.scenic, true);
+ assert.ok(engine.fieldBattle.landmarks.every(site => site.id !== 'blandford-church'));
+ const {scene, drawings, camera} = fixture(engine, 1280);
+ scene.petersburgTerrainArt = true;
+ assert.equal(scene.focusLocation(church.id), true);
+ assert.deepEqual(camera.center, [church.x, church.y]);
+ assert.equal(scene.locationOutline, null, 'scenery has no collision rectangle');
+ assert.equal(drawings.length, 1);
+ assert.equal(scene.focusLocation(crater.id), true);
+ assert.ok(scene.locationOutline);
+ assert.deepEqual(engine.checkpoint(), before);
+});
 test('location refocus destroys old markers and preserves the target across viewport changes',()=>{
  const e=new CivilWarBattleEngine('third_winchester',createFreshCampaignState(22),'option_c');
  const {scene,drawings,published}=fixture(e);const target=battleLocations(e.snapshot()).find(p=>p.kind==='Exit');

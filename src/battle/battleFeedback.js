@@ -38,3 +38,22 @@ export function armyAttention(snapshot) {
     return priority ? [{id:u.id,name:u.name,priority,reason,advice}] : [];
   }).sort((a,b)=>b.priority-a.priority || a.id.localeCompare(b.id));
 }
+export function gettysburgOrderReceipt(unit) {
+  if (!unit) return null;
+  if (unit.withdrawn) return unit.withdrawalOrganized ? 'Exited in order' : 'Exited in disorder';
+  if (!unit.active) return 'Off the field';
+  if (unit.status === 'routing') return 'Routing';
+  if (unit.status === 'broken') return 'Formation broken';
+  if (unit.pendingCommand) return 'Order en route';
+  if (unit.inMelee) return 'In close contact';
+  if (unit.gunState === 'limbering') return 'Limbering guns';
+  if (unit.gunState === 'unlimbering') return 'Deploying guns';
+  if (unit.turnBlocked || unit.blockedTime >= .5) return 'Maneuver blocked';
+  if (unit.order === 'withdraw') return 'Withdrawing to the rear';
+  if (unit.order === 'fallback') return 'Falling back';
+  if (unit.order === 'rally') return 'Rallying';
+  if (unit.directMove) return 'Moving to destination';
+  if (unit.order === 'hold' && unit.gunState === 'deployed') return unit.reload > 0 && unit.lastVolleyAt >= 0 ? 'Crew reloading' : 'Guns deployed';
+  if (unit.order === 'hold') return 'Holding position';
+  return unit.order === 'assault' ? 'Assault underway' : 'Advancing';
+}

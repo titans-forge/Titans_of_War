@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { writeFileSync } from 'node:fs';
 import { CivilWarBattleEngine } from '../src/battle/civilWarEngine.js';
+import { BATTLE_ENGINE_CONFIGS } from '../src/battle/battleDefinitions.js';
 import { FIELD_BATTLE_PROFILES, fieldTerrain, fieldExitTargets } from '../src/battle/fieldBattleProfiles.js';
 import { getBattleAssessment } from '../src/battle/battleAssessment.js';
 import { gettysburgLineOfFire, gettysburgRange, gettysburgClearance, gettysburgOrganized } from '../src/battle/gettysburgMechanics.js';
@@ -50,7 +51,7 @@ for(const id of ids) {
  await test(`${id}: finalization freezes formations and never launches a healthy army away`,()=>{
   const e=make(id), before=structuredClone(e.state);e.beginResolution('defeat');run(e,2);assert.deepEqual(e.state,before);assert.equal(e.outcome,'defeat');
  });
- for(const choice of ['option_a','option_b','option_c','option_d'])await test(`${id}/${choice}: idle policy terminates without invalid state`,()=>{play(id,choice,'hold');});
+ for(const choice of Object.keys(BATTLE_ENGINE_CONFIGS[id].postures))await test(`${id}/${choice}: idle policy terminates without invalid state`,()=>{play(id,choice,'hold');});
 }
 const missions=[
  ['first_manassas','option_b','spread'],['first_manassas','option_c','withdraw'],

@@ -1,6 +1,7 @@
 // Titans of War - Core Historical Scenario Database
 import { INITIAL_STATE } from './initialState.js';
 import { resolveScenarioMedia } from './mediaCatalog.js';
+import { CEDAR_CREEK_ELECTION_FIELD_REQUIREMENTS } from './fieldResultConsequences.js';
 import antietamCard from '../assets/images/antietam_card.jpg';
 import appomattoxCard from '../assets/images/appomattox_card.jpg';
 import chancellorsvilleCard from '../assets/images/chancellorsville_card.jpg';
@@ -794,12 +795,48 @@ export const STATIC_SCENARIOS = [
   },
 
 {
+    id: "fredericksburg_field",
+    turn: 9,
+    interlude: true,
+    suppressCabinetCrisisAfter: true,
+    date: "December 13, 1862",
+    actor: "General Robert E. Lee",
+    roleLabel: "Army Commander",
+    image: "/images/cw_pictures/Lee at Fredricksburg.jpeg",
+    title: "Fredericksburg — The Sunken Road and Prospect Hill",
+    description: "Burnside’s army has crossed the Rappahannock. At Marye’s Heights, infantry hold the stone wall along the Sunken Road as Union columns advance from town. Farther south at Prospect Hill, Meade’s division threatens Jackson’s line. Decide where to commit your support before turning to the work of keeping the army together through winter.",
+    letterTarget: "President Jefferson Davis",
+    sourceNotes: "National Park Service, Fredericksburg Battlefield Tour, Assault on Marye’s Heights and Prospect Hill. The two sectors and the timing of the field missions are compressed for play.",
+    primerTags: ["impressment_bread_riots", "death_in_the_civil_war", "faith_in_the_armies"],
+    choices: [
+      {
+        id: "option_a",
+        next: "fredericksburg_winter_politics",
+        text: "Hold the Sunken Road and deploy the guns to support the defenders at Marye’s Heights.",
+        proposer: "fox",
+        costDescription: "Commits 8 Munitions. The position must hold under attack with artillery support.",
+        effects: { metrics: { munitions: -8, publicMorale: 4 }, shards: { fox: +6 } },
+        consequence: "Lee gives priority to the line at Marye’s Heights as the armies close.",
+      },
+      {
+        id: "option_b",
+        next: "fredericksburg_winter_politics",
+        text: "Send the reserve to Prospect Hill to steady Jackson’s line against Meade’s attack.",
+        proposer: "hotspur",
+        costDescription: "Commits 6 Munitions. The reserve must reach the threatened ground and hold it under pressure.",
+        effects: { metrics: { munitions: -6, publicMorale: 3 }, shards: { hotspur: +6 } },
+        consequence: "Lee sends the reserve toward the fighting on the southern end of the line.",
+      },
+    ],
+  },
+
+{
     id: "fredericksburg_winter_politics",
   turn: 9,
     date: "December 1862 - January 1863",
     actor: "President Jefferson Davis",
     roleLabel: "Commander-in-Chief",
-    image: antietamCard,
+    image: "/images/cw_pictures/Christmas Truce.jpeg",
     title: "Fredericksburg and Winter Camps — The Rappahannock Interlude",
     description: "Burnside's assaults have been smashed against Marye's Heights, and the Army of Northern Virginia stands victorious above the Rappahannock. Yet victory has not solved the Confederacy's real winter problems. Shoes are short, furloughs are politicized, governors resent Richmond impressments, and the army that will need to fight again in 1863 is shivering in muddy camps. Along the riverbanks, burial flags, exchanged newspapers, and brief Christmas-week fraternization show that the soldiers remain human even as the governments harden. The question now is whether Fredericksburg becomes a springboard for bold action or a disciplined pause that rebuilds the army, the railroads, and the home front.",
     letterTarget: "your wife Varina",
@@ -1103,6 +1140,44 @@ export const STATIC_SCENARIOS = [
     ]
   },
 
+  {
+    id: "vicksburg",
+    turn: 12,
+    interlude: true,
+    suppressCabinetCrisisAfter: true,
+    date: "May 22, 1863",
+    actor: "Lt. Gen. John C. Pemberton",
+    roleLabel: "Vicksburg Defense Commander",
+    image: "/images/battles/landmarks-vicksburg-v1/vicksburg-card.webp",
+    title: "Vicksburg — Breach at the Railroad Redoubt",
+    description: "After a four-hour bombardment, Union troops break into one corner of the Railroad Redoubt, an earthwork above the Southern Railroad of Mississippi. Historically, Waul’s Texas Legion helped drive them out. Grant turned to siege, and Vicksburg surrendered on July 4. Command the local defense or try an alternate fallback inside the city's defenses.",
+    sourceNotes: "National Park Service, Second Assault on the Vicksburg Defenses and Railroad Redoubt. The field compresses the ravines and railway. The Interior Line represents an alternate local position.",
+    letterTarget: "the Vicksburg garrison",
+    primerTags: ["vicksburg_siege"],
+    choices: [
+      {
+        id: "option_a",
+        next: "gettysburg_campaign_setup",
+        text: "Retake the Railroad Redoubt with Waul’s Texas Legion. Hold the works against renewed Union pressure.",
+        proposer: "hotspur",
+        costDescription: "Commits 12 Munitions. Holding the redoubt can add 6 Public Morale.",
+        effects: { metrics: { munitions: -12, publicMorale: 6 }, shards: { hotspur: 6 } },
+        scoreCard: { tactical: 0, strategic: 5 },
+        consequence: "Pemberton orders the reserve to clear the redoubt.",
+      },
+      {
+        id: "option_b",
+        next: "gettysburg_campaign_setup",
+        text: "Bring the guns back to the Interior Line. Cover the move, then pull the infantry into the new position.",
+        proposer: "fox",
+        costDescription: "Commits 6 Munitions. An organized fallback can preserve 6 Food Supply and add 2 Public Morale.",
+        effects: { metrics: { munitions: -6, foodSupply: 6, publicMorale: 2 }, shards: { fox: 6 } },
+        scoreCard: { tactical: 0, strategic: 4 },
+        consequence: "Pemberton orders the guns and infantry back to a line inside Vicksburg’s defenses.",
+      },
+    ],
+  },
+
 {
     id: "gettysburg_with_jackson",
   turn: 13,
@@ -1186,7 +1261,7 @@ export const STATIC_SCENARIOS = [
     date: "July 1863",
     actor: "President Jefferson Davis",
     roleLabel: "Civil Executive",
-    image: "/images/cw_pictures/CSA Independence.jpeg",
+    image: "/images/cw_pictures/Davis cabinet.jpeg",
     title: "International Recognition — Victory or a Longer War",
     description: "The alternate chain has produced the diplomatic break Richmond sought from the beginning. Albert Sidney Johnston survived Shiloh and kept the Western army coherent; Jackson survived Chancellorsville and helped turn Gettysburg into a decisive Confederate victory on Northern soil. Britain and France now announce recognition of the Confederate States and offer joint mediation built around an immediate armistice. Recognition changes the legal and diplomatic position, but it does not compel Washington to stop fighting unless Richmond accepts the armistice and converts battlefield success into a settlement. Davis must choose whether to take the victory now or continue the war in pursuit of stronger terms.",
     letterTarget: "the Confederate Congress and the governments of Britain and France",
@@ -1555,6 +1630,43 @@ export const STATIC_SCENARIOS = [
   },
 
 {
+    id: "missionary_ridge",
+    turn: 15,
+    interlude: true,
+    suppressCabinetCrisisAfter: true,
+    date: "November 25, 1863",
+    actor: "General Braxton Bragg",
+    roleLabel: "Army Commander",
+    image: "/images/battles/landmarks-missionary-ridge-v1/missionary-ridge-card.webp",
+    title: "Missionary Ridge — The Battle for Chattanooga",
+    description: "The Union has taken Orchard Knob and Lookout Mountain and is pressing toward Missionary Ridge. From the crest, Bragg must decide where to hold and when to pull back. Historically, the Confederate army retreated toward Dalton and the Union secured Chattanooga. These orders decide how many troops and supplies get through the fighting on this stretch of the ridge.",
+    sourceNotes: "National Park Service, Missionary Ridge and Orchard Knob, Chickamauga and Chattanooga National Military Park. The front is compressed for play and the orders describe local counterfactuals.",
+    letterTarget: "President Jefferson Davis",
+    choices: [
+      {
+        id: "option_a",
+        next: "wilderness_opening",
+        text: "Hold the Main Crest under pressure long enough for supply wagons to clear the rear.",
+        proposer: "hotspur",
+        costDescription: "Commits 8 Munitions. A successful defense can preserve 5 Food Supply and add 6 Public Morale.",
+        effects: { metrics: { munitions: -8, foodSupply: 5, publicMorale: 6 }, shards: { hotspur: 6 } },
+        scoreCard: { tactical: 0, strategic: 7 },
+        consequence: "Bragg orders a local defense of the crest to gain time.",
+      },
+      {
+        id: "option_b",
+        next: "wilderness_opening",
+        text: "Screen the crest, then take the army off the ridge in order.",
+        proposer: "fox",
+        costDescription: "Commits 4 Munitions. An organized withdrawal can preserve 11 Food Supply and add 2 Public Morale.",
+        effects: { metrics: { munitions: -4, foodSupply: 11, publicMorale: 2 }, shards: { fox: 6 } },
+        scoreCard: { tactical: 0, strategic: 4 },
+        consequence: "Bragg prepares to leave the ridge under a rear guard.",
+      },
+    ],
+  },
+
+  {
     id: "chattanooga_stranglehold",
   turn: 15,
     interlude: true,
@@ -1743,12 +1855,50 @@ export const STATIC_SCENARIOS = [
   },
 
 {
+    id: "spotsylvania",
+    turn: 17,
+    interlude: true,
+    suppressCabinetCrisisAfter: true,
+    date: "May 12–13, 1864",
+    actor: "General Robert E. Lee",
+    roleLabel: "Army Commander",
+    image: "/images/battles/landmarks-spotsylvania-v1/spotsylvania-card.webp",
+    title: "Spotsylvania Court House — The Mule Shoe",
+    description: "Union troops have broken into the Mule Shoe salient. Fighting at the Bloody Angle on the West Face buys time to finish a shorter line behind the salient. The historical defense fell back to that line overnight. In this field command, Lee can strengthen the Interior Line or try to regain a section of the outer works. Supplies carry over in the shared campaign ledger.",
+    sourceNotes: "National Park Service, History of the Battle of Spotsylvania Court House and Spotsylvania Battlefield Cultural Landscape Inventory. The playable positions and timing are compressed.",
+    letterTarget: "President Jefferson Davis",
+    primerTags: ["civil_war_medicine"],
+    choices: [
+      {
+        id: "option_a",
+        next: "new_market",
+        text: "Build up the shorter Interior Line with infantry and guns before the attack reaches it.",
+        proposer: "fox",
+        costDescription: "Commits 9 Munitions. A sustained defense can preserve 4 Food Supply and add 5 Public Morale.",
+        effects: { metrics: { munitions: -9, foodSupply: 4, publicMorale: 5 }, shards: { fox: 6 } },
+        scoreCard: { tactical: 0, strategic: 7 },
+        consequence: "Lee orders infantry and guns to make the Interior Line ready.",
+      },
+      {
+        id: "option_b",
+        next: "new_market",
+        text: "Retake a section of the West Face with a supported advance and keep the reserve available.",
+        proposer: "hotspur",
+        costDescription: "Commits 12 Munitions. A successful counterstroke can preserve 2 Food Supply and add 11 Public Morale.",
+        effects: { metrics: { munitions: -12, foodSupply: 2, publicMorale: 11 }, shards: { hotspur: 6 } },
+        scoreCard: { tactical: 0, strategic: 5 },
+        consequence: "Lee orders a local counterstroke at the West Face.",
+      },
+    ],
+  },
+
+  {
     id: "atlanta_election_pressure",
     turn: 19,
     date: "July-August 1864",
     actor: "President Jefferson Davis",
     roleLabel: "Commander-in-Chief",
-    image: chickamaugaCard,
+    image: "/images/cw_pictures/Davis and Lee.jpeg",
     title: "The March to Atlanta — Johnston, Hood, and the Election Clock",
     description: "Sherman's three armies are grinding south from Chattanooga through the North Georgia rail belt, repeatedly turning Confederate positions rather than smashing them head-on. Joseph E. Johnston insists that space can be traded for time, that every mile stretched across the hills and river crossings hurts Sherman more than one reckless battle, and that keeping Atlanta unfallen through the autumn could help break Lincoln politically. Davis and the Richmond press are running out of patience. The question is no longer just military: it is whether Atlanta should be defended by maneuver, by offensive fury, by political delay aimed at the Northern election, or by stripping the city's industrial value before it can be taken.",
     letterTarget: "the governors and Gen. Lee",
@@ -1804,17 +1954,52 @@ export const STATIC_SCENARIOS = [
   },
 
 {
-    // Alternate-history branch — reached only by keeping Johnston in command at
-    // atlanta_election_pressure:option_b. Joseph E. Johnston's maneuver
-    // defense holds Atlanta past the September 2 fall date and into the
-    // November election window, converting the Georgia campaign into a
-    // political crisis for Lincoln rather than a military one for the South.
+    id: "kennesaw_mountain",
+    turn: 19,
+    interlude: true,
+    suppressCabinetCrisisAfter: true,
+    date: "June 27, 1864",
+    actor: "General Joseph E. Johnston",
+    roleLabel: "Army Commander",
+    image: "/images/battles/landmarks-kennesaw-v1/kennesaw-card.webp",
+    title: "Kennesaw Mountain — The Atlanta Approaches",
+    description: "Sherman has ordered attacks on Johnston’s lines northwest of Marietta. On Cheatham Hill, one Union column climbs toward the bend known as the Dead Angle. Historically the main attacks on June 27 were repulsed, and the Atlanta campaign continued. Choose a local defense of the hill or a covered move of the guns down the Southern Road.",
+    sourceNotes: "National Park Service, Battle Detail GA015 and The Dead Angle. The game compresses the landscape and offers a local withdrawal order as an alternative.",
+    letterTarget: "President Jefferson Davis",
+    primerTags: ["atlanta_campaign_1864"],
+    choices: [
+      {
+        id: "option_a",
+        next: "atlanta_election_pressure",
+        text: "Hold the Dead Angle on Cheatham Hill with two infantry formations while Union pressure builds.",
+        proposer: "hotspur",
+        costDescription: "Commits 10 Munitions. Holding the hill can preserve 3 Food Supply and add 8 Public Morale.",
+        effects: { metrics: { munitions: -10, foodSupply: 3, publicMorale: 8 }, shards: { hotspur: 6 } },
+        scoreCard: { tactical: 0, strategic: 6 },
+        consequence: "Johnston orders the local line to hold on Cheatham Hill.",
+      },
+      {
+        id: "option_b",
+        next: "atlanta_election_pressure",
+        text: "Move the guns down the Southern Road and hold a rear guard until it can withdraw in order.",
+        proposer: "fox",
+        costDescription: "Commits 5 Munitions. A covered withdrawal can preserve 9 Food Supply and add 1 Public Morale.",
+        effects: { metrics: { munitions: -5, foodSupply: 9, publicMorale: 1 }, shards: { fox: 6 } },
+        scoreCard: { tactical: 0, strategic: 5 },
+        consequence: "Johnston orders the field battery to the road under cover of the infantry.",
+      },
+    ],
+  },
+
+  {
+    // Alternate-history branch reached by keeping Johnston in command at the
+    // Atlanta decision. His maneuver defense holds the city into the election.
     id: "atlanta_holds_october",
     turn: 21,
     date: "October-November 1864",
     actor: "General Joseph E. Johnston",
     roleLabel: "Army of Tennessee Commander",
-    image: "/images/cw_pictures/Burning of Atlanta.jpeg",
+    image: "/images/cw_pictures/Davis and Lee.jpeg",
     title: "Atlanta Holds Past September — The Election Clock Runs Down",
     description: "Johnston has been right where his critics said he was wrong. The Army of Tennessee has refused the set-piece battle Hood would have given Sherman in July, has traded space for time at every river crossing from the Etowah to the Chattahoochee, and has kept Atlanta inside Confederate lines through September. Sherman is still maneuvering — the railroads to Macon and Augusta are contested, not cut — but the September telegram Washington needed never went out, and the New York Tribune is openly speculating about a Lincoln defeat. The Democratic platform from Chicago, with its peace plank, is now circulating as a serious settlement proposition. Whether the war ends in Confederate independence, in a Concurrent-Majority compact under McClellan, or in one more bloody campaign depends on what Richmond and the field army do in the next sixty days.",
     letterTarget: "President Davis and Vice President Stephens",
@@ -2040,10 +2225,7 @@ export const STATIC_SCENARIOS = [
       mcclellanRequiredAll: [
         { scenarioId: "atlanta_election_pressure", choiceId: "option_b", label: "Atlanta delayed (Keep Johnston)" }
       ],
-      mcclellanRequiredAnyOf: [
-        { scenarioId: "cedar_creek", choiceId: "option_a", fieldResultRequirement: "field-victory", label: "Cedar Creek — Confederate field victory" },
-        { scenarioId: "cedar_creek", choiceId: "option_c", fieldResultRequirement: "ordered-supply-withdrawal", label: "Cedar Creek — organized withdrawal with prisoners and supply" }
-      ]
+      mcclellanRequiredAnyOf: CEDAR_CREEK_ELECTION_FIELD_REQUIREMENTS
     },
     choices: [
       {
@@ -2103,9 +2285,9 @@ export const STATIC_SCENARIOS = [
     date: "November 8, 1864",
     actor: "President Jefferson Davis",
     roleLabel: "Civil Executive",
-    image: "/images/cw_pictures/Lincoln Cabinet.jpeg",
+    image: "/images/cw_pictures/Davis cabinet.jpeg",
     title: "Election of 1864 — Lincoln Wins a Mandate to Finish the War",
-    description: "The returns are decisive. Atlanta's fall, Union recovery in the Valley, and the soldier vote have held Lincoln's coalition together. McClellan carried a serious opposition, but his rejection of disunion and the army's vote denied Richmond the political collapse it hoped to exploit. The Confederacy now faces an administration committed to prosecuting the war through surrender. Davis must decide whether to answer the result with military concentration, a renewed attempt at reunion talks, a public appeal to the states, or an effort to preserve negotiating leverage for the spring.",
+    description: "The returns are decisive. Lincoln's coalition holds, with support from soldiers in the field. McClellan drew a substantial opposition vote, but his rejection of disunion gave Richmond little reason to expect recognition of Confederate independence. The Confederacy now faces an administration committed to prosecuting the war through surrender. Davis must decide whether to answer the result with military concentration, a renewed attempt at reunion talks, a public appeal to the states, or an effort to preserve negotiating leverage for the spring.",
     letterTarget: "the Confederate Congress and state governors",
     sourceNotes: "Official presidential election returns for 1864; Lincoln, Collected Works vol. VII; McClellan acceptance letter, September 8 1864; Sherman to Halleck, September 3 1864; Sheridan campaign dispatches; Nicolay and Hay, Abraham Lincoln: A History vol. IX.",
     period_voice: "Lincoln told a serenading crowd after the election that the result demonstrated a republican government could hold a national election during civil war without surrendering either the government or the election.",
@@ -2169,7 +2351,7 @@ export const STATIC_SCENARIOS = [
     date: "November 8, 1864",
     actor: "President Jefferson Davis",
     roleLabel: "Civil Executive",
-    image: "/images/cw_pictures/Armistice.jpeg",
+    image: "/images/cw_pictures/Davis cabinet.jpeg",
     title: "Election of 1864 — McClellan Wins, but Union Remains His Condition",
     description: "The campaign has denied Lincoln the sequence of victories that restored his coalition in the historical election. Atlanta remained unresolved too long, Confederate resistance in the Valley retained political force, and McClellan has carried enough Northern states to win. Yet this is not independence. McClellan repudiated the Chicago peace plank and made restoration of the Union a condition of settlement. Between election and inauguration, Lincoln remains president and Grant remains in command. Richmond has a narrow opportunity to shape an armistice or conditional reunion before battlefield events outrun the political transition.",
     letterTarget: "Confederate commissioners and Democratic intermediaries",
@@ -2307,6 +2489,7 @@ export const STATIC_SCENARIOS = [
     choices: [
       {
         id: "option_a",
+        next: "fall_of_atlanta",
         text: "Launch an immediate, desperate counter-attack into the crater under Mahone.",
         proposer: "hotspur",
         costDescription: "Consumes 20 Military Strength, secures the breach.",
@@ -2324,6 +2507,7 @@ export const STATIC_SCENARIOS = [
       },
       {
         id: "option_b",
+        next: "fall_of_atlanta",
         text: "Seal the secondary works, contain the breach, and preserve the army rather than counterattacking into the crater at once.",
         proposer: "fox",
         costDescription: "Lower immediate losses, but risks leaving the Union lodged inside the works.",
@@ -2335,6 +2519,7 @@ export const STATIC_SCENARIOS = [
       },
       {
         id: "option_c",
+        next: "fall_of_atlanta",
         text: "Mount a night sortie against Grant's forward siege works, wrecking sap rollers, gabions, and exposed rail parties before withdrawing.",
         proposer: "wolf",
         costDescription: "Aggressive but limited action. Costs men and ammunition while preserving the campaign line.",
@@ -2346,6 +2531,7 @@ export const STATIC_SCENARIOS = [
       },
       {
         id: "option_d",
+        next: "fall_of_atlanta",
         text: "Seed the crater approaches with new land mines and electrically fired torpedoes, then channel the Union assault into marked killing ground.",
         proposer: "sovereign",
         costDescription: "Consumes Treasury and munitions, but stays within period mine and torpedo experimentation.",
@@ -2436,7 +2622,7 @@ export const STATIC_SCENARIOS = [
     date: "April 2-3, 1865",
     actor: "General Robert E. Lee",
     roleLabel: "Army Commander",
-    image: "/images/cw_pictures/richmond_evacuation_theater_flux2.jpg",
+    image: "/images/cw_pictures/Richmond burns 1864.jpeg",
     title: "Richmond Evacuation - The Capital Burns",
     description: "The Petersburg line has cracked and Richmond can no longer be defended as a capital, depot, and symbol at the same time. Fires are spreading near the warehouses, government clerks are trying to move records south, and Davis needs the army preserved long enough to keep any national authority alive. Lee must decide whether Richmond is worth one more stand, whether the army should move immediately toward Amelia Court House, or whether the evacuation itself can be used to shape the final political terms of the war.",
     letterTarget: "President Jefferson Davis",
@@ -2591,17 +2777,56 @@ export const STATIC_SCENARIOS = [
     ]
   },
 
+  {
+    id: "sailors_creek",
+    turn: 28,
+    interlude: true,
+    settlementInterlude: true,
+    suppressCabinetCrisisAfter: true,
+    date: "April 6, 1865",
+    actor: "Lt. Gen. Richard S. Ewell",
+    roleLabel: "Rear Guard Commander",
+    image: "/images/battles/landmarks-sailors-creek-v1/sailors-creek-card.webp",
+    title: "Sailor’s Creek — The Last March",
+    description: "After Richmond’s evacuation, Union forces split Lee’s retreating army into isolated groups. At Hillsman Farm, the Union VI Corps crosses Little Sailor’s Creek to confront Ewell’s men. The Confederates suffered a major defeat on April 6. Here you command one small part of the retreat and choose what the rear guard can still preserve.",
+    sourceNotes: "National Park Service, Sailor’s Creek battle detail; Virginia State Parks, Overton–Hillsman House. The aid route and local withdrawal are alternate orders for play.",
+    letterTarget: "General Robert E. Lee",
+    primerTags: ["sailors_creek_retreat"],
+    choices: [
+      {
+        id: "option_a",
+        next: "appomattox_decision",
+        text: "Keep the South Bank open while an escort reaches the Aid Staging area.",
+        proposer: "hotspur",
+        costDescription: "Commits 5 Munitions. Securing the aid route can restore 4 Public Morale.",
+        effects: { metrics: { munitions: -5, publicMorale: 4 }, shards: { hotspur: 4 } },
+        scoreCard: { tactical: 0, strategic: 4 },
+        consequence: "Ewell orders an escort to the local aid point while the infantry holds the bank.",
+      },
+      {
+        id: "option_b",
+        next: "appomattox_decision",
+        text: "Withdraw the leading formations by the West Road, then bring off the rear guard.",
+        proposer: "fox",
+        costDescription: "Commits 3 Munitions. An organized withdrawal can preserve 4 Food Supply and restore 2 Public Morale.",
+        effects: { metrics: { munitions: -3, foodSupply: 4, publicMorale: 2 }, shards: { fox: 5 } },
+        scoreCard: { tactical: 0, strategic: 4 },
+        consequence: "Ewell orders the leading formations to the West Road as the rear guard stays in place.",
+      },
+    ],
+  },
+
 {
     id: "southern_independence_1864",
   turn: 28,
-    date: "Autumn 1864 — Spring 1865",
+    date: "April 1865 — Alternate Timeline",
     actor: "President Jefferson Davis",
     roleLabel: "Civil Executive",
-    image: "/images/cw_pictures/Davis and Lee.jpeg",
+    image: "/images/cw_pictures/Davis cabinet.jpeg",
     title: "The Peace Crisis — Independence, Armistice, or Concurrent Majority",
-    description: "This is the timeline where it all changed. Jackson survived Chancellorsville and remade Gettysburg. The Western army held together after Shiloh because Johnston never rode into the kill zone. Four years of cumulative Confederate decisions have bent the war so far from its historical arc that Northern public opinion has reached a breaking point the Union never reached in the history we know. Grant is stalled. Sherman is bleeding. The autumn elections have shattered Lincoln's war coalition, and European powers are quietly drafting mediation proposals. Confederate armies still hold Virginia, the Valley is unbroken, and Richmond stands. Full independence is still on the table, but it is the hardest road. McClellan's candidacy, carried by a Democratic coalition with peace men inside it, offers something more plausible than recognized disunion: a restructured Federal Republic. Calhoun's Concurrent Majority meant that a numerical national majority should not govern a distinct sectional interest without that section's concurrent consent. The question is whether the South demands all or takes the next best thing.",
+    description: "McClellan has taken office after defeating Lincoln in November. Confederate troops have evacuated Richmond, and Davis must negotiate as the remaining armies regroup. In this alternate timeline, Jackson survived Chancellorsville and helped turn Gettysburg. The Western army held together after Shiloh because Johnston never rode into the kill zone. Those earlier campaigns give Confederate diplomats a hearing in London and Paris even after the loss of the capital. Independence still depends on using foreign support to secure a settlement. McClellan enters office committed to reunion, and Confederate envoys propose Calhoun's Concurrent Majority principle, under which federal acts affecting a section's interests would require that section's consent.",
     letterTarget: "the Confederate People and the world",
-    sourceNotes: "Calhoun, A Disquisition on Government (1851), on concurrent majority and sectional consent; Democratic Party Platform of 1864; George B. McClellan letter accepting the Democratic nomination, Sept. 8 1864, rejecting disunion while opposing Lincoln's war policy; Nevins, The War for the Union vol. IV; Foote, The Civil War vol. III.",
+    sourceNotes: "Calhoun's A Disquisition on Government (1851), the Democratic Party Platform of 1864, and McClellan's letter accepting the Democratic nomination (September 8, 1864) inform the political positions. See also Nevins, The War for the Union vol. IV, and Foote, The Civil War vol. III. The election result and April negotiations in this branch are fictional.",
     period_voice: "McClellan's 1864 acceptance letter rejected disunion as a settlement even while condemning the administration's conduct of the war. This route treats his election as pressure for reunion under altered constitutional terms, not as automatic Southern independence.",
     suppressCabinetCrisisAfter: true,
     // The Peace Crisis is terminal. Any choice here ends the campaign and
@@ -2614,7 +2839,7 @@ export const STATIC_SCENARIOS = [
     choices: [
       {
         id: "option_a",
-        text: "Issue a formal declaration of unconditional independence. Demand immediate diplomatic recognition from Britain and France and accept nothing less.",
+        text: "Reaffirm unconditional independence and ask Britain and France to back recognition with mediation and diplomatic pressure.",
         proposer: "hotspur",
         minDivergence: 0.88,
         // Full independence is the maximum alternate-history outcome and is
@@ -2661,11 +2886,11 @@ export const STATIC_SCENARIOS = [
           metrics: { publicMorale: +32, treasury: +18, militaryStrength: +10, divergenceIndex: +0.22 },
           shards: { fox: +38, wolf: +12, hotspur: -8 }
         },
-        consequence: "French and British envoys arrive in Washington with a draft armistice that Grant's army cannot simply ignore. Meade and Lee agree to a ceasefire along the existing lines, and commissioners begin drafting the boundary terms in Richmond. Southern independence, without proclamation, settles across the continent like weather — a fact before it is a treaty."
+        consequence: "British and French envoys broker a binding ceasefire along the existing military lines. Commissioners use those lines to begin boundary talks. The fighting ends in this campaign while sovereignty remains open to negotiation."
       },
       {
         id: "option_c",
-        text: "Work through McClellan's Democratic coalition toward a conditional armistice: he will propose to Congress and the states a Concurrent Majority compact giving both sections veto power over federal acts affecting sectional sovereignty.",
+        text: "Ask President McClellan for an armistice and a pledge to submit a Concurrent Majority amendment requiring both sections to consent to federal acts affecting their sovereignty.",
         proposer: "wolf",
         // The McClellan / Concurrent Majority path is the baseline
         // achievable McClellan-victory ending. It requires the two
@@ -2691,18 +2916,18 @@ export const STATIC_SCENARIOS = [
           metrics: { publicMorale: +30, treasury: +22, divergenceIndex: +0.15, militaryStrength: +8 },
           shards: { wolf: +45, fox: +18, hotspur: -20 }
         },
-        consequence: "CAMPAIGN CONCLUDED — Alternate History Settlement. McClellan wins the November election and Confederate envoys are waiting. He promises to ask Congress and the states for a constitutional settlement drawn from Calhoun's Concurrent Majority: no legislation touching sectional sovereignty would pass without concurrent consent from both sections. The South accepts an armistice not as independence, but as a wager that reunion can be made conditional through formal amendment rather than imposed by arms alone. McClellan supports the proposal; ratification by Congress and the states is not guaranteed. The campaign closes here."
+        consequence: "After taking office, McClellan receives the Confederate envoys and agrees to an armistice. The Confederate government accepts reunion under a framework that puts Calhoun's Concurrent Majority before Congress and the states. Ratification remains undecided as the armies stand down."
       },
       {
         id: "option_d",
-        text: "Offer Lincoln a modified federal compact before McClellan can win: permanent state sovereignty, no slavery extension to territories, voluntary reconstruction funds — end the killing without requiring a new president.",
+        text: "Offer President McClellan a reunion compact affirming state authority, barring the extension of slavery into the territories, and funding reconstruction through voluntary state contributions.",
         proposer: "sovereign",
-        costDescription: "Deeply uncertain. Lincoln may reject it outright. But a deal struck before McClellan wins gives the South the best constitutional language it will get from a war president. Always available as a fallback even when the McClellan and independence conditions have not been earned.",
+        costDescription: "Offers reunion on narrower terms. Available without the additional history requirements for independence, European mediation, or the Concurrent Majority amendment.",
         effects: {
           metrics: { publicMorale: +18, treasury: +8, divergenceIndex: +0.28, militaryStrength: +4 },
           shards: { fox: +18, wolf: +20, hotspur: -18 }
         },
-        consequence: "The offer lands in Washington like a diplomatic grenade. Lincoln, facing political collapse and aware that McClellan waits in the wings, accepts the framework over his own cabinet's objections. The settlement is not Calhoun's Concurrent Majority in full, but it embeds state sovereignty deep enough into the post-war constitutional language that a reunited republic looks nothing like the centralized Union Lincoln started the war to preserve."
+        consequence: "McClellan and Confederate commissioners agree on reunion under a modified compact. The armies stand down. The states ratify the compact's provisions on state authority, slavery in the territories, and voluntary funding for reconstruction."
       }
     ]
   },
@@ -2710,10 +2935,11 @@ export const STATIC_SCENARIOS = [
 {
     id: "greensboro_convention",
   turn: 28,
+    endsCampaign: true,
     date: "April 1865",
     actor: "President Jefferson Davis",
     roleLabel: "Civil Executive",
-    image: "/images/cw_pictures/Davis and Lee.jpeg",
+    image: "/images/cw_pictures/Davis cabinet.jpeg",
     title: "Greensboro Convention — Parole, Armistice, or Exhaustion",
     description: "This timeline has diverged too far to end neatly at Appomattox. Richmond has been abandoned, the field armies are still partly intact, but enlistments are expiring, bread riots and supply failures are spreading, and governors are asserting their own authority over men and food. In Greensboro, civilian and military leaders weigh whether to parole armies by department, seek a temporary armistice, or let the war decay into scattered state resistance. The issue is no longer just battlefield honor; it is whether any coherent civil order can outlast the war's exhaustion.",
     letterTarget: "the governors and people of the South",
@@ -3042,6 +3268,11 @@ export const HISTORIC_ADVISORS = {
     hotspur: "If emancipation is a war measure, then make it serve the army. The proclamation must open recruiting ground, not merely fill newspaper columns.",
     fox: "Move carefully. Maryland, Kentucky, and Missouri still matter, and a proclamation that breaks the coalition before the recruits arrive would be poor arithmetic.",
     wolf: "Europe is the key audience beyond the cabinet room. If Britain or France intervene after this, they must explain why they are helping slavery's government against a Union war measure."
+  },
+  fredericksburg_field: {
+    fox: "At Marye’s Heights, make the stone wall work for you. Put the battery behind the infantry line and keep it there under pressure.",
+    hotspur: "Watch the wooded gap at Prospect Hill. Jackson’s men need a reserve close enough to answer Meade’s advance.",
+    wolf: "Whichever sector you reinforce, leave yourself men and ammunition for winter. A local success still leaves the army to feed and equip.",
   },
   fredericksburg_winter_politics: {
     hotspur: "Fredericksburg has broken them on the heights. Strike again before winter excuses their weakness and turns victory into idleness.",

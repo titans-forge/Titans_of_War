@@ -9,8 +9,10 @@ import { CivilWarBattleEngine } from '../src/battle/civilWarEngine.js';
 import { getBattleAssessment } from '../src/battle/battleAssessment.js';
 import { createCampaignSnapshot, createFreshCampaignState, restoreCampaignFromSnapshot } from '../src/game/campaignStorage.js';
 import { advanceCampaignTurn } from '../src/game/headlessCampaign.js';
-import { calculateElectionPressure, resolveNextScenario } from '../src/game/simulationEngine.js';
-import { createAfterAction } from '../src/game/campaignExperience.js';
+import { calculateElectionPressure, forecastCampaignChoice, resolveNextScenario } from '../src/game/simulationEngine.js';
+import { cedarCreekCampaignReadout, createAfterAction } from '../src/game/campaignExperience.js';
+import { fieldAttackPlanFor } from '../src/battle/fieldAttackPlans.js';
+import { overviewZoom } from '../src/battle/battleUsability.js';
 
 // Production scenarios include image imports. This owned SSR instance exposes
 // no websocket/listener, changes no source, and is closed after awaited tests.
@@ -19,6 +21,7 @@ const vite = await createServer({ configFile: false, root: new URL('..', import.
   cacheDir: cache, server: { middlewareMode: true, ws: false }, appType: 'custom', logLevel: 'silent' });
 try {
   const { STATIC_SCENARIOS } = await vite.ssrLoadModule('/src/game/scenarios.js');
+  const { buildCampaignChronicle } = await vite.ssrLoadModule('/src/game/chronicleExporter.js');
   const scene = id => STATIC_SCENARIOS.find(s => s.id === id);
   const clone = value => JSON.parse(JSON.stringify(value));
   // Earlier history is a declared targeted fixture, not a played campaign.
@@ -57,6 +60,120 @@ try {
   const newResult = (id, result) => ({ battleId: id, scenarioId: id, result, score: 60,
     confederateLossRate: 0.2, unionLossRate: 0.2, delegated: false, battleRulesVersion: 18 });
 
+  await test('Manassas uses the assessment, records each terminal verdict and preserves earlier rules', () => {
+    const id = 'manassas_battlefield';
+    const battle = BATTLE_SCENARIOS[id];
+    const verdicts = ['decisive-win', 'costly-win', 'disciplined-withdrawal', 'defeat', 'rout'];
+    for (const choice of scene(id).choices) {
+      for (const result of verdicts) {
+        const field = { ...newResult(id, result), battleId: battle.id, choiceId: choice.id };
+        field.assessment = getBattleAssessment(field, choice.id);
+        const turn = finish(stateAt(id), choice.id, field);
+        const expected = choice.id === 'option_c' ? result === 'disciplined-withdrawal' : ['decisive-win', 'costly-win'].includes(result);
+        assert.equal(turn.historyEntry.choiceSucceeded, expected, `${choice.id}:${result}`);
+        assert.equal(turn.historyEntry.battleResult.fieldResultConsequencesVersion, 2);
+        assert.equal(turn.historyEntry.metricEffects.militaryStrength, undefined, 'the field ledger already applies its army delta');
+        assert.equal(Boolean(turn.historyEntry.metricEffects.treasury), choice.id === 'option_c' && expected);
+        assert.equal(turn.historyEntry.consequence.includes('not achieved'), !expected && field.assessment.objective.status !== 'partial');
+      }
+      const planner = forecastCampaignChoice(stateAt(id), scene(id), choice, 0.25);
+      assert.equal(planner.successChance, null);
+      assert.deepEqual(planner.outcomes.map(item => item.result), verdicts);
+    }
+    const limited = { ...newResult(id, 'costly-win'), battleId: battle.id, choiceId: 'option_a' };
+    limited.assessment = getBattleAssessment({
+      ...limited, fieldBattle: { attackObjective: { name: 'Union battery line', held: 4, required: 8 } },
+    }, limited.choiceId);
+    const partial = finish(stateAt(id), 'option_a', limited).historyEntry;
+    assert.equal(partial.choiceSucceeded, false);
+    assert.match(partial.consequence, /limited victory.*partial progress/);
+    assert.ok(partial.scoreCard.strategic <= 0);
+
+    const legacyState = stateAt(id, null, { battleRulesVersion: 17 });
+    const legacy = finish(legacyState, 'option_a', { ...limited, battleRulesVersion: 17 }).historyEntry;
+    assert.equal(legacy.battleResult.fieldResultConsequencesVersion, undefined);
+    assert.equal(legacy.consequence, legacy.choiceSucceeded ? scene(id).choices[0].successConsequence : scene(id).choices[0].failureConsequence);
+  });
+
+  await test('Manassas audit replays produce distinct saved reports for manual loss and win on seed 1862', () => {
+    const battle = BATTLE_SCENARIOS.manassas_battlefield;
+    for (const [seed, useReference] of [[1861, false], [1862, false], [1862, true]]) {
+      const start = createFreshCampaignState(seed, STATIC_SCENARIOS[0].id);
+      const sumter = advanceCampaignTurn(start, STATIC_SCENARIOS[0], 'option_c', STATIC_SCENARIOS);
+      const e = new CivilWarBattleEngine(battle.id, sumter.state, 'option_a');
+      const plan = fieldAttackPlanFor(battle.id, sumter.state.battleRulesVersion);
+      const reserve = plan.steps.find(step => step.id === 'elzey-reinforcement');
+      if (useReference) {
+        for (const step of plan.steps.filter(step => step.id !== reserve.id)) {
+          e.setFormation(step.id, 'line');
+          e.move(step.id, { x: step.x, y: step.y });
+        }
+      }
+      let reserveMoving = false;
+      let jacksonAttacking = false;
+      let reserveAttacking = false;
+      for (let frame = 0; frame < 2200 && e.outcome === 'undecided'; frame++) {
+        if (useReference) {
+          const elzey = e.state.find(unit => unit.id === reserve.id);
+          if (!reserveMoving && elzey.active && e.time >= 51) {
+            e.move(reserve.id, { x: reserve.x, y: reserve.y });
+            reserveMoving = true;
+          }
+          if (!jacksonAttacking && e.time >= 60) {
+            e.order('jackson-brigade', 'assault', { sectorId: 'left' });
+            jacksonAttacking = true;
+          }
+          if (!reserveAttacking && reserveMoving && Math.hypot(elzey.x - reserve.x, elzey.y - reserve.y) < 8) {
+            e.order(reserve.id, 'assault', { sectorId: 'left' });
+            reserveAttacking = true;
+          }
+        }
+        e.tick(0.2);
+      }
+      const snapshot = e.snapshot();
+      assert.equal(snapshot.outcome, useReference ? 'decisive-win' : 'defeat');
+      const field = {
+        ...newResult(battle.scenarioId, snapshot.outcome), battleId: battle.id, choiceId: 'option_a',
+        score: snapshot.score, assessment: getBattleAssessment(snapshot, 'option_a'),
+        confederateLossRate: snapshot.confederateLossRate, unionLossRate: snapshot.unionLossRate,
+      };
+      const turn = finish(sumter.state, 'option_a', field);
+      const { historyEntry: entry } = turn;
+      const report = turn.state.pendingDebrief;
+      assert.equal(entry.choiceSucceeded, useReference);
+      assert.equal(entry.consequence, report.consequence);
+      assert.match(entry.consequence, useReference ? /decisive victory.*secured its objective/ : /field defeat.*mission was not achieved/);
+      assert.equal(report.deltas.find(delta => delta.key === 'publicMorale').breakdown.battle, useReference ? 5 : -6);
+      const { markdown } = buildCampaignChronicle(turn.state, { scenarios: STATIC_SCENARIOS, includeMediaEmbeds: false });
+      assert.ok(markdown.includes(entry.consequence));
+      assert.match(markdown, useReference ? /Field verdict\*\*: Decisive Confederate victory/ : /Field verdict\*\*: Field defeat/);
+      assert.doesNotMatch(markdown, /Tactical Dice Roll/);
+    }
+  });
+
+  await test('Manassas delegation distinguishes a staff estimate and a decision from a replayed field', () => {
+    const id = 'manassas_battlefield';
+    const outcomes = new Set();
+    for (const readiness of [20, 85]) {
+      const state = stateAt(id, readiness);
+      const result = delegateBattle(state, BATTLE_SCENARIOS[id], 'option_a');
+      const turn = finish(state, 'option_a', result);
+      outcomes.add(turn.historyEntry.choiceSucceeded);
+      assert.equal(turn.historyEntry.choiceSucceeded, result.assessment.objective.status === 'achieved');
+      assert.match(turn.historyEntry.consequence, /^Staff estimate\./);
+    }
+    assert.deepEqual(outcomes, new Set([false, true]));
+  });
+
+  await test('an unmeasured map never supplies a zero divisor for the overview zoom', () => {
+    const world = { width: 1600, height: 900 };
+    for (const height of [0, NaN, Infinity]) {
+      const zoom = overviewZoom({ width: 844, height }, world);
+      assert.ok(Number.isFinite(0.4 / zoom));
+    }
+    assert.equal(overviewZoom({ width: 640, height: 180 }, world), 0.2);
+  });
+
   await test('real delegation produces all five Cedar outcomes with coherent journal, debrief, election and cold restore', () => {
     const observed = new Set();
     for (const readiness of [10, 30, 50, 85]) for (const choiceId of ['option_a', 'option_b', 'option_c', 'option_d']) {
@@ -68,6 +185,18 @@ try {
       assert.equal(entry.battleResult.result, field.result);
       assert.equal(entry.battleResult.fieldResultConsequencesVersion, 1);
       const factors = calculateElectionPressure(turn.state.history).factors.filter(f => f.scenarioId === 'cedar_creek');
+      const readout = cedarCreekCampaignReadout(turn.state.pendingDebrief);
+      const trace = entry.resourceTransitions;
+      assert.deepEqual(readout, {
+        electionPressure: factors[0].points,
+        prerequisiteMet: choiceId === 'option_a' && ['decisive-win', 'costly-win'].includes(field.result)
+          || choiceId === 'option_c' && field.result === 'disciplined-withdrawal',
+        food: {
+          operation: trace.afterDecisionEffects.foodSupply - trace.afterUpkeep.foodSupply,
+          minimumReserve: trace.afterDecision.foodSupply - trace.afterDecisionEffects.foodSupply,
+        },
+        delegated: true,
+      });
       if (['defeat', 'rout'].includes(field.result)) {
         assert.equal(entry.choiceSucceeded, false);
         assert.match(entry.consequence, field.result === 'rout' ? /collapses into a rout/ : /ends in a field defeat/);
@@ -75,6 +204,7 @@ try {
         assert.ok(entry.scoreCard.tactical < 0);
         assert.ok(entry.scoreCard.strategic <= 0);
         assert.ok(factors.every(f => f.points < 0));
+        assert.ok(readout.food.operation <= 0);
         assert.equal(turn.nextScenario?.id, 'election_1864_lincoln');
       } else if (['decisive-win', 'costly-win'].includes(field.result)) {
         assert.match(entry.consequence, field.result === 'decisive-win' ? /decisive Confederate victory/ : /limited Confederate victory at heavy cost/);
@@ -104,7 +234,28 @@ try {
       const turn = finish(state, choiceId, newResult('cedar_creek', result));
       assert.equal(calculateElectionPressure(turn.state.history).winner, 'mcclellan', 'this fixture isolates the prerequisite gate from the numeric threshold');
       assert.equal(turn.nextScenario?.id, `election_1864_${winner}`, `${choiceId}:${result}`);
+      assert.equal(cedarCreekCampaignReadout(turn.state.pendingDebrief).prerequisiteMet, winner === 'mcclellan');
     }
+  });
+
+  await test('Cedar debrief uses the applied food change and leaves an untraced amount blank', () => {
+    const state = stateAt('cedar_creek');
+    state.metrics.foodSupply = 99;
+    const turn = finish(state, 'option_a', newResult('cedar_creek', 'decisive-win'));
+    const report = turn.state.pendingDebrief;
+    const displayed = cedarCreekCampaignReadout(report);
+    assert.equal(turn.historyEntry.metricEffects.foodSupply, 22);
+    assert.ok(displayed.food.operation > 0 && displayed.food.operation < 22);
+    assert.equal(displayed.delegated, false);
+    const withoutTrace = clone(report);
+    delete withoutTrace.cedarFood;
+    assert.equal(cedarCreekCampaignReadout(withoutTrace).food, null);
+    const depleted = finish(stateAt('cedar_creek', 10), 'option_a', newResult('cedar_creek', 'defeat'));
+    const depletedReport = depleted.state.pendingDebrief;
+    const depletedReadout = cedarCreekCampaignReadout(depletedReport);
+    assert.ok(depletedReport.deltas.find(item => item.key === 'foodSupply').breakdown.decision > 0);
+    assert.ok(depletedReadout.food.operation <= 0);
+    assert.ok(depletedReadout.food.minimumReserve > 0);
   });
 
   await test('Third Winchester rejects failed preservation credit and labels independent political messaging', () => {
@@ -183,6 +334,7 @@ try {
       const state = stateAt('cedar_creek', 50, options);
       const turn = finish(state, 'option_a', { ...newResult('cedar_creek', 'defeat'), battleRulesVersion: options.battleRulesVersion });
       assert.equal(turn.historyEntry.battleResult.fieldResultConsequencesVersion, undefined);
+      assert.equal(cedarCreekCampaignReadout(turn.state.pendingDebrief), null);
       assert.equal(turn.historyEntry.consequence, scene('cedar_creek').choices[0].consequence);
       assert.equal(turn.historyEntry.choiceSucceeded, null);
       assert.equal(calculateElectionPressure(turn.state.history).score, 11);

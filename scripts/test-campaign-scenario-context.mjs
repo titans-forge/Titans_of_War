@@ -7,7 +7,7 @@ import { getCampaignScenario } from '../src/game/campaignSupply.js';
 import { advanceCampaignTurn, getScenarioForState } from '../src/game/headlessCampaign.js';
 import { battleForScenario, delegateBattle, applyBattleResolution, battleChoiceSuccessModifier } from '../src/game/battles.js';
 
-const vite = await createServer({ server: { middlewareMode: true }, appType: 'custom' });
+const vite = await createServer({ server: { middlewareMode: true, ws: false }, appType: 'custom' });
 const { STATIC_SCENARIOS } = await vite.ssrLoadModule('/src/game/scenarios.js');
 const { CivilWarBattleEngine } = await vite.ssrLoadModule('/src/battle/civilWarEngine.js');
 await vite.close();
@@ -25,6 +25,36 @@ const failedFlankAssertions = {
   rout: /approved Jackson’s concealed flank march.*attack collapsed into a rout/i,
 };
 const fieldOutcomes = ['decisive-win', 'costly-win', 'disciplined-withdrawal', 'defeat', 'rout'];
+
+for (const [sourceId, order, fieldId, nextId] of [
+  ['chickamauga', 'option_c', 'missionary_ridge', 'wilderness_opening'],
+  ['wilderness', 'option_b', 'spotsylvania', 'new_market'],
+  ['cold_harbor', 'option_b', 'kennesaw_mountain', 'atlanta_election_pressure'],
+]) test(`a cabinet crisis after ${sourceId} resumes through ${fieldId}`, () => {
+  const source = STATIC_SCENARIOS.find(scenario => scenario.id === sourceId);
+  const fresh = createFreshCampaignState(1861, sourceId, { difficulty: 'story' });
+  const state = { ...fresh, currentTurn: source.turn,
+    shards: { ...fresh.shards, hotspur: { ...fresh.shards.hotspur, alignment: 2 } } };
+  const crisis = advanceCampaignTurn(state, source, order, STATIC_SCENARIOS);
+  assert.equal(crisis.nextScenario.id, 'hotspur_cabinet_crisis');
+  assert.equal(crisis.state.currentTurn, source.turn + 1);
+  const cold = restoreCampaignFromSnapshot(createCampaignSnapshot(crisis.state, crisis.nextScenario), STATIC_SCENARIOS);
+  const resumed = advanceCampaignTurn(cold.state, cold.activeScenario, 'option_b', STATIC_SCENARIOS);
+  assert.equal(resumed.nextScenario.id, fieldId);
+  assert.equal(resumed.directorRoute, 'field-interlude');
+  assert.equal(resumed.state.currentTurn, crisis.state.currentTurn);
+  const fieldChoice = resumed.nextScenario.choices[0].id;
+  const battle = battleForScenario(resumed.nextScenario, resumed.state, fieldChoice);
+  const field = delegateBattle(resumed.state, battle, fieldChoice);
+  const applied = applyBattleResolution(resumed.state, field);
+  const settled = advanceCampaignTurn(applied, resumed.nextScenario, fieldChoice, STATIC_SCENARIOS,
+    battleChoiceSuccessModifier(battle, fieldChoice, field.result));
+  assert.equal(settled.nextScenario.id, nextId);
+  assert.equal(settled.state.currentTurn, crisis.state.currentTurn);
+  assert.deepEqual(settled.state.history.map(entry => entry.scenarioId), [sourceId, cold.activeScenario.id, fieldId]);
+  assert.equal(advanceCampaignTurn({ ...cold.state, battleRulesVersion: 17 }, cold.activeScenario, 'option_b', STATIC_SCENARIOS)
+    .nextScenario.id, nextId);
+});
 
 function arriveWithFieldResult(fieldResult, battleRulesVersion = 18) {
   const state = { ...createFreshCampaignState(1861, maneuver.id, { difficulty: 'story', battleRulesVersion }), currentTurn: 10 };
@@ -60,6 +90,17 @@ function arrive(choiceId, playField = false) {
   return advanceCampaignTurn(state, maneuver, choiceId, STATIC_SCENARIOS, modifier);
 }
 
+function assertJacksonRouteAfterVicksburg(resolved) {
+  const interlude = resolved.nextScenario;
+  assert.equal(interlude.id, 'vicksburg');
+  const battle = battleForScenario(interlude, resolved.state, 'option_b');
+  const field = delegateBattle(resolved.state, battle, 'option_b');
+  const settled = applyBattleResolution(resolved.state, field);
+  const continued = advanceCampaignTurn(settled, interlude, 'option_b', STATIC_SCENARIOS,
+    battleChoiceSuccessModifier(battle, 'option_b', field.result));
+  assert.equal(continued.nextScenario.id, 'gettysburg_with_jackson_setup');
+}
+
 for (const choiceId of Object.keys(assertions)) {
   test(`real Chancellorsville ${choiceId} handoff retains the chosen approach rather than asserting Jackson's completed flank rupture`, () => {
     const result = arrive(choiceId);
@@ -82,7 +123,7 @@ for (const choiceId of Object.keys(assertions)) {
     assert.equal(getCampaignScenario(result.state, aftermath).description, result.nextScenario.description);
   });
 
-  test(`${choiceId} context survives a cold pre-upgrade snapshot without changing its recorded field result`, () => {
+  test(`${choiceId} context survives a cold snapshot without changing its recorded field result`, () => {
     const result = arrive(choiceId, true), originalState = structuredClone(result.state), originalScenario = structuredClone(aftermath);
     const snapshot = createCampaignSnapshot(result.state, aftermath);
     const cold = restoreCampaignFromSnapshot(plain(snapshot), STATIC_SCENARIOS);
@@ -96,7 +137,7 @@ for (const choiceId of Object.keys(assertions)) {
     assert.deepEqual(result.state, originalState); assert.deepEqual(aftermath, originalScenario);
     const resolved = advanceCampaignTurn(cold.state, cold.activeScenario, 'option_b', STATIC_SCENARIOS);
     assert.match(resolved.historyEntry.choiceText, /Jackson at headquarters/);
-    assert.equal(resolved.nextScenario.id, 'gettysburg_with_jackson_setup');
+    assertJacksonRouteAfterVicksburg(resolved);
   });
 }
 
@@ -176,7 +217,7 @@ test('an actual unsuccessful flank A field command reaches causal aftermath and 
   assert.match(arrived.nextScenario.description, failedFlankAssertions[field.result]);
   assert.deepEqual(arrived.historyEntry.battleResult, applied.battleCampaign.results[maneuver.id]);
   const resolved = advanceCampaignTurn(arrived.state, aftermath, 'option_b', STATIC_SCENARIOS);
-  assert.equal(resolved.nextScenario.id, 'gettysburg_with_jackson_setup');
+  assertJacksonRouteAfterVicksburg(resolved);
   assert.match(resolved.historyEntry.choiceText, /Jackson at headquarters/);
 });
 
@@ -213,5 +254,5 @@ test('only the most recent maneuver choice supplies the context and applying it 
 
 test('the real App scenario memo observes history changes that can change branch context', () => {
   const source = readFileSync(new URL('../src/App.jsx', import.meta.url), 'utf8');
-  assert.match(source, /getCampaignScenario\(gameState, storedScenario\), \[gameState\.rulesVersion, gameState\.history, storedScenario\]/);
+  assert.match(source, /getCampaignScenario\(gameState, storedScenario\), \[gameState\.rulesVersion, gameState\.battleRulesVersion, gameState\.history, storedScenario\]/);
 });

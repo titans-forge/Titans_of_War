@@ -6,11 +6,15 @@ import { Shield, Swords, X } from 'lucide-react';
 import { useRef } from 'react';
 import { useDialogFocus } from './useDialogFocus';
 import { BATTLE_OBJECTIVES } from '../battle/battleAssessment.js';
+import { fieldCommandTitle } from '../game/battles.js';
 
-export function CivilWarBattleGate({ battle, readiness, choiceId, choiceText, onFight, onDelegate, onCancel, saveNotice, battleRulesVersion, canSuspend = false }) {
+export function CivilWarBattleGate({ battle, readiness, choiceId, choiceText, onFight, onDelegate, onCancel, saveNotice, battleRulesVersion, canSuspend = false, fieldDecides = false }) {
   const dialogRef = useRef(null);
   useDialogFocus(dialogRef, true, onCancel);
   const mission = BATTLE_OBJECTIVES[battle.id]?.[choiceId];
+  const objective = fieldDecides && battle.id === 'first_manassas' && ['option_a', 'option_d'].includes(choiceId)
+    ? 'Secure the Union battery line with supporting infantry for eight field minutes'
+    : mission?.label || choiceText;
   const withdrawalOrders = siegeBrief(battle.id, choiceId, battleRulesVersion) || withdrawalBrief(battle.id, choiceId, battleRulesVersion);
   const fieldOrders = withdrawalOrders?.orders || (battle.id === 'chickamauga' && ['option_c', 'option_d'].includes(choiceId) && battleRulesVersion >= 15 ? CHICKAMAUGA_PRESERVATION_BRIEF : battle.id === 'shiloh' && choiceId === 'option_b' && battleRulesVersion >= 14 ? SHILOH_RESERVE_BRIEF : battle.fieldOrdersByChoice?.[choiceId] || []);
 
@@ -21,9 +25,16 @@ export function CivilWarBattleGate({ battle, readiness, choiceId, choiceText, on
         <div className="cw-battle-gate-mark"><Swords /></div>
         <div className="cw-battle-gate-copy">
           <p className="cw-battle-eyebrow">{battle.eyebrow}</p>
-          <h2 id="cw-battle-gate-title">{battle.title}</h2>
-          <p className="cw-selected-mission"><strong>Selected mission: </strong>{mission?.label || choiceText}</p>
+          <h2 id="cw-battle-gate-title">{fieldCommandTitle(battle, choiceId, battleRulesVersion)}</h2>
+          <p className="cw-selected-mission"><strong>{fieldDecides ? 'Your objective · ' : 'Selected mission: '}</strong>{objective}</p>
           <div className="cw-selected-posture"><strong>Selected strategy</strong><span>{choiceText}</span></div>
+          {fieldDecides && <details className="cw-field-orders">
+            <summary>What carries into the campaign</summary>
+            <p>The field verdict and your objective decide campaign credit. Army strength, ammunition and morale carry forward. Delegating gives a staff estimate.</p>
+            <p>{battle.id === 'shiloh'
+              ? 'Johnston’s status is recorded separately from the mission. Keeping him protected is possible even if the reserve objective falls short.'
+              : 'An orderly exit preserves your force. It fulfills the mission when you chose withdrawal.'}</p>
+          </details>}
           {fieldOrders.length > 0 && (
             <div className="cw-gate-orders">
               <strong>Orders for this mission</strong>

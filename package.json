@@ -1,6 +1,6 @@
 {
   "name": "titans-of-war",
-  "version": "0.32.0",
+  "version": "0.33.0",
   "private": true,
   "description": "A historical educational strategy game about Civil War command decisions, campaign pressure, and alternate-history outcomes.",
   "type": "module",

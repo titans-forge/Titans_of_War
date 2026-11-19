@@ -1,13 +1,22 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { mkdtempSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { test } from 'node:test';
+import { fileURLToPath } from 'node:url';
 import { createServer } from 'vite';
 import { INITIAL_STATE } from '../src/game/initialState.js';
 import { tickMetrics, forecastCampaignChoice, getChoiceAvailability } from '../src/game/simulationEngine.js';
 import { advanceCampaignTurn } from '../src/game/headlessCampaign.js';
 import { createFreshCampaignState, createCampaignSnapshot, getCampaignSnapshotCompatibility, restoreCampaignFromSnapshot } from '../src/game/campaignStorage.js';
-import { getBattleSupplyProfile, getRecoveryOptions, selectRecoveryAllocation, commitRecoveryAllocation, applySupplyDeltas, getCampaignChoice } from '../src/game/campaignSupply.js';
+import { getBattleSupplyProfile, getRecoveryOptions, selectRecoveryAllocation, commitRecoveryAllocation, applySupplyDeltas, getCampaignChoice, getCampaignScenario } from '../src/game/campaignSupply.js';
+import { applyBattleResolution, battleChoiceSuccessModifier, battleForScenario, delegateBattle } from '../src/game/battles.js';
+import { usesAssessedFieldConsequences } from '../src/game/fieldResultConsequences.js';
 import { getBattleAssessment } from '../src/battle/battleAssessment.js';
+import { MANASSAS_COMBINED_ARMS_PLAN } from '../src/battle/fieldAttackPlans.js';
+import { createPracticeState } from '../src/game/practiceConditions.js';
+import { runManassasReference } from './lib/manassas-reference-run.mjs';
 
 const scene = { id: 'supply-fixture', turn: 1, title: 'Supply fixture', choices: [{ id: 'continue', text: 'Continue the campaign', effects: { metrics: {}, shards: {} }, consequence: 'Continued.' }] };
 const fresh = (metrics = {}, difficulty = 'standard') => ({ ...createFreshCampaignState(1861, scene.id, { difficulty }), metrics: { ...INITIAL_STATE.metrics, ...metrics } });
@@ -275,24 +284,77 @@ test('saved supply reports and resolved battle assessments reject malformed nest
   }
 });
 
-test('actual authored choices forecast deterministically and persist their economy reports across varied states', async () => {
-  const vite = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'silent' });
+function assertForecastContains(forecast, actual, context) {
+  for (const [key, value] of Object.entries(actual.state.metrics)) {
+    const { min, max } = forecast.resources[key];
+    assert.ok(value >= min && value <= max, `${context}:${key} actual ${value} outside [${min}, ${max}]`);
+  }
+}
+
+test('campaign forecasts cover authored choices and settled field orders across varied states', async () => {
+  const cacheDir = mkdtempSync(join(tmpdir(), 'civil-war-campaign-supply-'));
+  const vite = await createServer({ configFile: false, root: fileURLToPath(new URL('..', import.meta.url)), cacheDir,
+    server: { middlewareMode: true, ws: false }, appType: 'custom', logLevel: 'silent' });
   try {
     const { STATIC_SCENARIOS } = await vite.ssrLoadModule('/src/game/scenarios.js');
-    let checked = 0;
-    for (const scenario of STATIC_SCENARIOS) for (const choice of scenario.choices) for (const seed of [7, 41, 1861]) {
+    let authored = 0, fields = 0;
+    for (const scenario of STATIC_SCENARIOS) for (const { id: choiceId } of scenario.choices) for (const seed of [7, 41, 1861]) {
       let state = { ...fresh({ treasury: seed % 101, munitions: seed * 7 % 101, militaryStrength: 55, publicMorale: 60, foodSupply: 35 }, seed === 7 ? 'story' : 'standard'),
         seed, scenarioId: scenario.id, currentTurn: scenario.turn || 12 };
       if (seed === 7) state = selectRecoveryAllocation(state, 'emergency');
-      const forecast = forecastCampaignChoice(state, scenario, choice, 0.1);
-      const actual = advanceCampaignTurn(state, scenario, choice, STATIC_SCENARIOS, 0.1);
-      for (const key of Object.keys(state.metrics)) assert.ok(actual.state.metrics[key] >= forecast.resources[key].min && actual.state.metrics[key] <= forecast.resources[key].max, `${scenario.id}:${choice.id}:${key}`);
-      assert.deepEqual(advanceCampaignTurn(state, scenario, choice, STATIC_SCENARIOS, 0.1), actual);
-      const archive = createCampaignSnapshot(actual.state, actual.nextScenario || scenario);
-      assert.ok(getCampaignSnapshotCompatibility(archive).ok, `${scenario.id}:${choice.id}:save`);
+      const current = getCampaignScenario(state, scenario);
+      const choice = current.choices.find(order => order.id === choiceId);
+      const context = `${current.id}:${choiceId}:${seed}`;
+      const forecast = forecastCampaignChoice(state, current, choice, 0.1);
+      const battle = usesAssessedFieldConsequences(state, current.id, choiceId)
+        ? battleForScenario(current, state, choiceId) : null;
+      let base = state, modifier = 0.1;
+      let projectedFieldResult;
+      if (battle) {
+        const prepared = commitRecoveryAllocation(state);
+        const field = delegateBattle(prepared, battle, choiceId);
+        base = applyBattleResolution(prepared, field);
+        modifier = battleChoiceSuccessModifier(battle, choiceId, field.result, modifier);
+        assert.equal(forecast.successChance, null, context);
+        projectedFieldResult = forecast.outcomes.find(outcome => outcome.result === field.result);
+        assert.ok(projectedFieldResult, context);
+        fields++;
+      } else {
+        authored++;
+      }
+      const actual = advanceCampaignTurn(base, current, choiceId, STATIC_SCENARIOS, modifier);
+      assertForecastContains(forecast, actual, context);
+      if (projectedFieldResult) {
+        assert.deepEqual(actual.state.metrics, projectedFieldResult.metrics, context);
+        assert.deepEqual(actual.state.campaignEconomy, projectedFieldResult.campaignEconomy, context);
+      }
+      assert.deepEqual(advanceCampaignTurn(base, current, choiceId, STATIC_SCENARIOS, modifier), actual);
+      const archive = createCampaignSnapshot(actual.state, actual.nextScenario || current);
+      assert.ok(getCampaignSnapshotCompatibility(archive).ok, `${context}:save`);
       assert.deepEqual(restoreCampaignFromSnapshot(archive, STATIC_SCENARIOS).state.campaignEconomy, actual.state.campaignEconomy);
-      checked++;
     }
-    assert.ok(checked >= 500, 'broad authored outcomes must be covered');
-  } finally { await vite.close(); }
+    assert.ok(authored >= 400 && fields >= 50, `coverage includes ${authored} authored and ${fields} field orders`);
+
+    const manassas = STATIC_SCENARIOS.find(scenario => scenario.id === 'manassas_battlefield');
+    const state = createPracticeState(manassas);
+    const battle = battleForScenario(manassas, state, 'option_a');
+    const current = getCampaignScenario(state, manassas);
+    const forecast = forecastCampaignChoice(state, current, current.choices.find(choice => choice.id === 'option_a'));
+    for (const [plan, expected] of [['current', 'achieved'], ['earlier', 'failed']]) {
+      const { snapshot } = runManassasReference({ rules: state.battleRulesVersion, commit: 65,
+        ...(plan === 'earlier' ? { plan: MANASSAS_COMBINED_ARMS_PLAN } : {}) });
+      const field = { battleId: battle.id, scenarioId: battle.scenarioId, choiceId: 'option_a',
+        battleRulesVersion: snapshot.battleRulesVersion, result: snapshot.outcome, delegated: false,
+        assessment: getBattleAssessment(snapshot, 'option_a') };
+      assert.equal(field.assessment.objective.status, expected);
+      const base = applyBattleResolution(commitRecoveryAllocation(state), field);
+      const actual = advanceCampaignTurn(base, current, 'option_a', STATIC_SCENARIOS,
+        battleChoiceSuccessModifier(battle, 'option_a', field.result));
+      assert.equal(actual.historyEntry.choiceSucceeded, plan === 'current');
+      assertForecastContains(forecast, actual, `First Manassas manual ${plan}`);
+    }
+  } finally {
+    await vite.close();
+    rmSync(cacheDir, { recursive: true, force: true });
+  }
 });

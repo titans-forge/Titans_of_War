@@ -1,9 +1,15 @@
 import { calculateCampaignScore, divergenceTier, summarizeCabinetCrises, summarizePoliticalEconomy } from './simulationEngine.js';
 import { resolveCampaignEndingMedia, resolveScenarioMedia } from './mediaCatalog.js';
+import { resolveEndingPresentationArt, resolvePresentationArt } from './presentationArt.js';
 import { AUDIO_TRACK_LIBRARY } from './audioCatalog.js';
 import { HISTORICAL_PRIMERS } from './historicalPrimers.js';
+import { battleResultLabel } from './battles.js';
+import { hasAssessedFieldConsequences } from './fieldResultConsequences.js';
 
 export function resolveExportMedia(scenarioId, scenarios = []) {
+  const art = resolvePresentationArt(scenarioId);
+  if (art) return { ...art, assetKey: art.id };
+
   const media = resolveScenarioMedia(scenarioId);
   if (media?.assetKey !== 'unknown' || !Array.isArray(scenarios)) {
     return media;
@@ -27,10 +33,16 @@ export function resolveExportMedia(scenarioId, scenarios = []) {
   };
 }
 
+export function resolveExportEndingMedia(state) {
+  const art = resolveEndingPresentationArt(state);
+  return art ? { ...art, assetKey: `${art.id}:ending` } : resolveCampaignEndingMedia(state);
+}
+
 function formatMediaEmbed(media, format) {
   if (!media?.src || media.assetKey === 'unknown') return '';
   if (format === 'markdown') {
-    return `![${media.title}](${media.src})`;
+    const src = /\s/.test(media.src) ? `<${media.src}>` : media.src;
+    return `![${media.alt || media.title}](${src})`;
   }
   const fileName = media.src.split('/').pop();
   return `![[${fileName}]]`;
@@ -70,9 +82,8 @@ export function buildCampaignChronicle(state, options = {}) {
     });
   }
 
-  const endingMedia = resolveCampaignEndingMedia(state);
-  if (endingMedia && endingMedia.assetKey !== 'unknown' && !seenMedia.has(endingMedia.assetKey)) {
-    seenMedia.add(endingMedia.assetKey);
+  const endingMedia = resolveExportEndingMedia(state);
+  if (endingMedia) {
     usedMedia.push({
       assetKey: endingMedia.assetKey,
       src: endingMedia.src,
@@ -109,7 +120,7 @@ export function buildCampaignChronicle(state, options = {}) {
   markdown += `* Timeline Fidelity: **${campaignScore.reportCards.timelineFidelity.score} / 100** (${campaignScore.reportCards.timelineFidelity.grade})\n`;
   markdown += `* Composite score: **${campaignScore.total} / 1000** (${campaignScore.grade})\n`;
   markdown += `* Campaign outcome: **${campaignScore.survived ? 'Survived' : 'Collapsed'}**\n`;
-  markdown += `* Ending class: **${campaignScore.endingClass}** — ${campaignScore.endingNote}\n`;
+  markdown += `* Ending: **${campaignScore.endingLabel}** — ${campaignScore.endingNote}\n`;
   markdown += `* Crisis management: **${campaignScore.crisisSummary.resolved}/${campaignScore.crisisSummary.faced}** crises resolved\n\n`;
 
   markdown += `### Cabinet Crisis Register\n`;
@@ -151,19 +162,32 @@ export function buildCampaignChronicle(state, options = {}) {
       markdown += `> *${sourceScenario.period_voice}*\n>\n`;
     }
     markdown += `> **Operational Command**: *${entry.choiceText}*\n`;
-    if (entry.choiceSucceeded !== null && entry.choiceSucceeded !== undefined) {
+    const assessedField = entry.scenarioId === entry.battleResult?.scenarioId && hasAssessedFieldConsequences(entry.battleResult);
+    if (assessedField) {
+      const result = entry.battleResult;
+      markdown += `> **${result.delegated ? 'Staff estimate' : 'Field verdict'}**: ${battleResultLabel(result.result, result.assessment)}\n`;
+      markdown += `> **Selected mission**: ${entry.choiceSucceeded ? 'Achieved' : 'Incomplete'}\n`;
+    } else if (entry.choiceSucceeded !== null && entry.choiceSucceeded !== undefined) {
       markdown += `> **Tactical Dice Roll**: **${entry.choiceSucceeded ? 'SUCCESSFUL STRATEGIC BREAKTHROUGH' : 'STRATEGIC REJECT / FAILURE'}**\n`;
     }
     if (entry.crisisFor) {
       markdown += `> **Cabinet Crisis**: **${entry.crisisLabel}** — ${entry.crisisResolved ? 'temporarily stabilized' : 'still unstable after the session'}.\n`;
     }
     markdown += `>\n`;
-    markdown += `> **Resolved Historical Consequence**: ${entry.consequence}\n`;
+    markdown += `> **${assessedField ? 'Simulated consequence' : 'Resolved Historical Consequence'}**: ${entry.consequence}\n`;
     if (sourceScenario?.sourceNotes) {
       markdown += `>\n> **Sources**: ${sourceScenario.sourceNotes}\n`;
     }
     markdown += `\n`;
   });
+
+  if (endingMedia) {
+    markdown += `### Campaign Ending\n\n`;
+    if (includeMediaEmbeds) {
+      markdown += `${formatMediaEmbed(endingMedia, mediaEmbedFormat)}\n\n`;
+    }
+    markdown += `${endingMedia.caption}\n\n`;
+  }
 
   // Section: which sourced primers the player consulted during the run.
   // Passed in via options.consultedPrimerIds (an array of primer ids that the
@@ -228,7 +252,7 @@ export function buildCampaignChronicle(state, options = {}) {
     }
   });
 
-  const summary = `${campaignScore.survived ? 'Survived' : 'Collapsed'} through turn ${state.currentTurn} with composite ${campaignScore.total}/${campaignScore.grade}, tactical ${campaignScore.reportCards.tacticalSmarts.grade}, strategic ${campaignScore.reportCards.strategicBrilliance.grade}, timeline ${campaignScore.reportCards.timelineFidelity.grade}, ${(state.divergenceIndex * 100).toFixed(0)}% divergence, and ${crisisSummary.resolved}/${crisisSummary.faced} cabinet crises resolved. Ending: ${campaignScore.endingClass}.`;
+  const summary = `${campaignScore.survived ? 'Survived' : 'Collapsed'} through turn ${state.currentTurn} with composite ${campaignScore.total}/${campaignScore.grade}, tactical ${campaignScore.reportCards.tacticalSmarts.grade}, strategic ${campaignScore.reportCards.strategicBrilliance.grade}, timeline ${campaignScore.reportCards.timelineFidelity.grade}, ${(state.divergenceIndex * 100).toFixed(0)}% divergence, and ${crisisSummary.resolved}/${crisisSummary.faced} cabinet crises resolved. Ending: ${campaignScore.endingLabel}.`;
   const filename = options.filename || `Titans_of_War_Chronicle_Turn_${state.history.length}.md`;
 
   return {

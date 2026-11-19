@@ -63,7 +63,7 @@ test('Shiloh routing and decided retreats use the same side-specific rear as wit
   }
 });
 
-test('shared retreat targeting preserves the Winchester corridor and standard-map rear edges', () => {
+test('shared retreat targeting preserves the Winchester corridor and authored rear edges', () => {
   const winchester = new CivilWarBattleEngine('third_winchester', {}, 'option_b');
   const unit = winchester.state.find((entry) => entry.side === 'confederate' && entry.active);
   const corridor = winchester.winchesterRetreatTarget(unit);
@@ -76,11 +76,16 @@ test('shared retreat targeting preserves the Winchester corridor and standard-ma
   assert.equal(unit.target.x, corridor.x);
   assert.equal(unit.target.y, winchester.world.height + 100);
 
-  for (const scenarioId of Object.keys(BATTLE_ENGINE_CONFIGS).filter((id) => !['shiloh', 'third_winchester'].includes(id))) {
+  for (const scenarioId of Object.keys(BATTLE_ENGINE_CONFIGS).filter((id) => !['shiloh', 'third_winchester', 'five_forks', 'fredericksburg'].includes(id))) {
     const engine = new CivilWarBattleEngine(scenarioId, {}, 'option_b');
+    const lateralRear = { missionary_ridge: 'confederate', vicksburg: 'union' }[scenarioId];
     for (const formation of engine.state) {
       const target = engine.retreatTarget(formation, 85);
-      assert.deepEqual(target, { x: formation.x, y: formation.side === 'confederate' ? engine.world.height + 85 : -85 });
+      const expected = lateralRear
+        ? { x: formation.side === lateralRear ? engine.world.width + 85 : -85, y: formation.y }
+        : scenarioId === 'sailors_creek' && formation.side === 'confederate' ? { x: -85, y: formation.y }
+        : { x: formation.x, y: formation.side === 'confederate' ? engine.world.height + 85 : -85 };
+      assert.deepEqual(target, expected, `${scenarioId} · ${formation.id}`);
     }
   }
 });
@@ -158,7 +163,7 @@ test('a Cold Harbor transfer that subsequently routs loses its withdrawal credit
 });
 
 test('movement multiplier changes displacement only and defaults preserve previous speeds', () => {
-  assert.equal(deployments.length, 44);
+  assert.equal(deployments.length, 71);
   for (const { scenarioId, choiceId } of deployments) {
     const engine = new CivilWarBattleEngine(scenarioId, {}, choiceId);
     for (const type of ['infantry', 'artillery']) for (const [formationMode, modeSpeed] of Object.entries(modes)) {

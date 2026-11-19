@@ -38,6 +38,7 @@ export const MAP_PLATE_CAPTIONS = {
   potomac_leverage_campaign: 'Game schematic — Plate IV-B: Maryland Invasion corridor & Potomac approaches, Sept. 1862.',
   antietam: "Game schematic — Plate V: Topography of the Bloody Lane & Dunker Church sectors, September 1862 setting.",
   emancipation_cabinet_debate: 'Game schematic — Plate V-C: Washington cabinet debate after the Maryland Campaign, recruitment policy, and European diplomacy, Sept. 1862.',
+  fredericksburg_field: 'Game schematic — Fredericksburg, December 13, 1862. The Sunken Road, Rappahannock crossings, and Prospect Hill are shown at compressed scale.',
   fredericksburg_winter_politics: 'Game schematic — Plate V-B: Fredericksburg heights, winter camps, and Rappahannock riverbank exchanges, Dec. 1862-Jan. 1863.',
   chancellorsville_maneuver: "Game schematic — Plate VI-A: Wilderness roads and Jackson's concealed flank march route, May 1863.",
   chancellorsville_aftermath: "Game schematic — Plate VI-B: Wilderness crossings and dusk attack sectors on the Union right, May 1863.",
@@ -48,6 +49,11 @@ export const MAP_PLATE_CAPTIONS = {
   gettysburg_with_jackson: 'Game schematic — Plate VII-E: Cemetery Hill, Culp\'s Hill, and the Baltimore Pike under alternate corps command, July 1863.',
   gettysburg_recognition_crisis: 'Game schematic — Plate VII-F Alt.: Gettysburg victory lines, Atlantic diplomatic routes, and the proposed armistice boundary, July 1863.',
   chickamauga: "Game schematic — Plate VIII: Forest thickets along the River of Death, September 1863 setting.",
+  missionary_ridge: 'Game schematic — Orchard Knob, the western climb to Missionary Ridge, and the eastern road. November 25, 1863.',
+  spotsylvania: 'Game schematic — The Mule Shoe, the West Face and the shorter Interior Line. May 12–13, 1864.',
+  kennesaw_mountain: 'Game schematic — Cheatham Hill and the Southern Road at Kennesaw Mountain. June 27, 1864.',
+  vicksburg: 'Game schematic — Railroad Redoubt, Southern Railroad cut, and an alternate Interior Line. May 22, 1863.',
+  sailors_creek: 'Game schematic — Hillsman Farm and Little Sailor’s Creek. April 6, 1865.',
   chattanooga_stranglehold: 'Game schematic — Plate VIII-B: Rail blockade coordinates of Chattanooga siege, Oct. 1863.',
   wilderness_opening: "Game schematic — Plate IX-A: Orange Plank Road crisis, Longstreet's approach, and Texas Brigade counterstroke sectors, May 1864.",
   wilderness: "Game schematic — Plate IX-B: The Tangled Woods and Brock Road crossroad sectors, May 1864 setting.",
@@ -147,6 +153,31 @@ export const MAP_INSPECTOR_PINS = {
     { x: 48, y: 44, label: 'Cold Harbor Crossroads', desc: 'The road junction anchoring the Confederate line and narrowing Grant\'s attack options.' },
     { x: 28, y: 72, label: 'Union Assault Front', desc: 'Ground over which Federal infantry must cross open killing zones into entrenched fire.' },
     { x: 74, y: 28, label: 'Petersburg Pivot', desc: 'Road and rail direction that matters once Lee treats Cold Harbor as cover for the next move south.' },
+  ],
+  sailors_creek: [
+    { x: 69, y: 22, label: 'Overton–Hillsman House', desc: 'The Union VI Corps used the house as a field hospital for wounded men from both armies.' },
+    { x: 52, y: 45, label: 'Little Sailor’s Creek', desc: 'Union infantry crossed the creek below Hillsman Farm.' },
+    { x: 27, y: 73, label: 'West Road', desc: 'A representative local exit for the game’s ordered withdrawal.' },
+  ],
+  vicksburg: [
+    { x: 50, y: 39, label: 'Railroad Redoubt', desc: 'Union troops briefly broke into the damaged southeast corner. Waul’s Texas Legion helped clear the breach.' },
+    { x: 67, y: 72, label: 'Southern Railroad', desc: 'The redoubt overlooked this railroad into Vicksburg.' },
+    { x: 26, y: 55, label: 'Interior Line', desc: 'A game position for the alternate fallback inside the city’s defenses.' },
+  ],
+  kennesaw_mountain: [
+    { x: 34, y: 32, label: 'Upper Approach', desc: 'Here the game compresses the approach across the rising ground to Cheatham Hill.' },
+    { x: 49, y: 50, label: 'Dead Angle', desc: 'The June 27 attack on Cheatham Hill met the Confederate earthworks at this bend.' },
+    { x: 75, y: 76, label: 'Southern Road', desc: 'A representative route for the game’s covered withdrawal order.' },
+  ],
+  spotsylvania: [
+    { x: 30, y: 38, label: 'Bloody Angle', desc: 'The bend on the west face of the Mule Shoe became the focus of prolonged fighting.' },
+    { x: 51, y: 52, label: 'McCoull House', desc: 'The family sheltered in the basement during the fighting. A period photograph documents the house.' },
+    { x: 51, y: 74, label: 'Interior Line', desc: 'The shorter defensive line gave the Confederates a position behind the salient.' },
+  ],
+  missionary_ridge: [
+    { x: 22, y: 42, label: 'Orchard Knob', desc: 'By November 25 Grant used the knob to observe the attack.' },
+    { x: 63, y: 35, label: 'Missionary Ridge', desc: 'The crest rises steeply east of the city. The tactical field shows a compressed central sector.' },
+    { x: 83, y: 65, label: 'Eastern road', desc: 'The game’s exit represents the army’s retreat toward Georgia.' },
   ],
   new_market: [
     { x: 54, y: 54, label: 'Bushong Farm', desc: 'Center of the field where the cadets and main Confederate line strike through mud and wheat.' },
@@ -536,7 +567,123 @@ export const MAP_ANNOTATIONS = {
       confederate: { x: 170, y: 230, label: 'CONFED. FORCE', width: 70 },
     },
   },
-  gettysburg_decision: {
+  sailors_creek: {
+    topography: {
+      type: 'contours', shape: 'ellipse', centerX: 420, centerY: 74,
+      radiusX: 74, radiusY: 37, rotation: 0.22, layers: 5, strokeStyle: '#b8c69425',
+    },
+    waterways: [{
+      type: 'bezier', start: [0, 145], cp1: [174, 108], cp2: [325, 179], end: [600, 135],
+      lineWidth: 7, strokeStyle: '#47788e',
+      label: { text: 'LITTLE SAILOR’S CREEK', x: 300, y: 177, color: '#92c1d0', font: 'bold 11px "Share Tech Mono"' },
+    }],
+    labels: [
+      { text: 'OVERTON–HILLSMAN HOUSE', x: 399, y: 63 },
+      { text: 'SOUTH BANK', x: 230, y: 198 },
+      { text: 'WEST ROAD', x: 108, y: 256 },
+      { text: 'AID STAGING', x: 406, y: 257 },
+    ].map(label => ({ ...label, color: '#d4c28a', font: 'bold 12px "Share Tech Mono"' })),
+    troops: {
+      union: { x: 259, y: 76, label: 'VI CORPS', width: 78 },
+      confederate: { x: 244, y: 225, label: 'EWELL', width: 75 },
+    },
+    maneuvers: {
+      option_a: {
+        endX: 385, endY: 247, label: 'SCREEN FOR THE ESCORT',
+        strokeStyle: '#bf7168', fillStyle: '#efa99b',
+      },
+      option_b: {
+        radius: 37, label: 'COVER THE EXIT',
+        strokeStyle: '#51b69b', fillStyle: '#95dfc7',
+      },
+    },
+  },
+  vicksburg: {
+    topography: {
+      type: 'contours', shape: 'ellipse', centerX: 300, centerY: 143,
+      radiusX: 81, radiusY: 40, rotation: -0.14, layers: 5, strokeStyle: '#c3b38322',
+    },
+    labels: [
+      { text: 'RAILROAD REDOUBT', x: 260, y: 90 },
+      { text: 'INTERIOR LINE', x: 109, y: 198 },
+      { text: 'SOUTHERN RAILROAD', x: 314, y: 244 },
+    ].map(label => ({ ...label, color: '#d4c28a', font: 'bold 12px "Share Tech Mono"' })),
+    troops: {
+      union: { x: 395, y: 120, label: 'MCCLERNAND', width: 86 },
+      confederate: { x: 207, y: 153, label: 'PEMBERTON', width: 78 },
+    },
+    maneuvers: {
+      option_a: {
+        endX: 311, endY: 112, label: 'CLEAR THE BREACH',
+        strokeStyle: '#c86a5f', fillStyle: '#efab9c',
+      },
+      option_b: {
+        radius: 36, label: 'COVER THE FALLBACK',
+        strokeStyle: '#51b69b', fillStyle: '#95dfc7',
+      },
+    },
+  },
+  kennesaw_mountain: {
+    topography: {
+      type: 'contours', shape: 'ellipse', centerX: 301, centerY: 159,
+      radiusX: 74, radiusY: 43, rotation: -0.32, layers: 5, strokeStyle: '#bdab721f',
+    },
+    labels: [
+      { text: 'UPPER APPROACH', x: 150, y: 79 },
+      { text: 'DEAD ANGLE', x: 274, y: 121 },
+      { text: 'SOUTHERN ROAD', x: 422, y: 233 },
+    ].map(label => ({ ...label, color: '#d4c28a', font: 'bold 12px "Share Tech Mono"' })),
+    troops: {
+      union: { x: 187, y: 110, label: 'THOMAS', width: 65 },
+      confederate: { x: 280, y: 167, label: 'JOHNSTON', width: 70 },
+    },
+    maneuvers: {
+      option_a: {
+        endX: 296, endY: 148, label: 'REINFORCE THE ANGLE',
+        strokeStyle: '#c86a5f', fillStyle: '#efab9c',
+      },
+      option_b: {
+        radius: 34, label: 'COVER THE EXIT',
+        strokeStyle: '#51b69b', fillStyle: '#95dfc7',
+      },
+    },
+  },
+  spotsylvania: {
+    topography: { type: 'contours', shape: 'ellipse', centerX: 300, centerY: 230, radiusX: 105, radiusY: 25, layers: 4 },
+    labels: [
+      { text: 'MULE SHOE', x: 280, y: 72 },
+      { text: 'WEST FACE', x: 158, y: 128 },
+      { text: 'MCCOULL HOUSE', x: 318, y: 162 },
+      { text: 'INTERIOR LINE', x: 230, y: 264 },
+    ],
+    troops: {
+      union: { x: 270, y: 101, label: 'UNION', width: 65 },
+      confederate: { x: 262, y: 209, label: 'LEE', width: 65 },
+    },
+    maneuvers: {
+      option_a: { endX: 315, endY: 250, label: 'SUPPORT THE INTERIOR LINE' },
+      option_b: { radius: 41, label: 'SUPPORT THE WEST FACE COUNTERSTROKE' },
+    },
+  },
+  missionary_ridge: {
+    topography: {
+      type: 'contours', shape: 'ellipse', centerX: 380, centerY: 145,
+      radiusX: 25, radiusY: 88, rotation: 0.1, layers: 4,
+    },
+    labels: [
+      { text: 'ORCHARD KNOB', x: 90, y: 85 },
+      { text: 'MAIN CREST', x: 400, y: 70 },
+      { text: 'EASTERN ROAD', x: 460, y: 235 },
+    ],
+    troops: {
+      union: { x: 164, y: 152, label: 'THOMAS', width: 70 },
+      confederate: { x: 375, y: 160, label: 'BRAGG', width: 65 },
+    },
+    maneuvers: {
+      option_a: { endX: 380, endY: 137, label: 'SUPPORT THE CREST' },
+      option_b: { radius: 40, label: 'SCREEN THE WITHDRAWAL' },
+    },
+  },
   new_market: {
     topography: {
       type: 'contours',
@@ -595,6 +742,7 @@ export const MAP_ANNOTATIONS = {
       option_d: { endOffsetX: 130, endOffsetY: -14 },
     },
   },
+  gettysburg_decision: {
     topography: {
       type: 'contours',
       shape: 'ellipse',

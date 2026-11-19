@@ -42,10 +42,36 @@ export function loadFieldSuspension(storage = defaultStorage(), expectedSnapshot
   }
 }
 
+function requireOwnedSuspension(pending, owner, storage) {
+  const previousLoad = loadFieldSuspension(storage);
+  const previous = previousLoad.pending;
+  if (typeof owner !== 'string' || !owner || previousLoad.owner !== owner
+    || !previous || previous.battle.id !== pending.battle?.id || previous.choiceId !== pending.choiceId
+    || JSON.stringify(previous.checkpoint) !== JSON.stringify(pending.checkpoint)
+    || JSON.stringify(previous.resumeState) !== JSON.stringify(pending.resumeState)) {
+    const error = new Error('The previously loaded field checkpoint changed.');
+    error.code = 'FIELD_OWNER_CHANGED';
+    throw error;
+  }
+}
+
+export function discardOwnedFieldSuspension(pending, owner, storage = defaultStorage()) {
+  updateFieldPair({ pending, owner, storage });
+}
+
+export function settleOwnedFieldSuspension(snapshot, pending, owner, storage = defaultStorage()) {
+  if (!snapshot) throw new Error('No settled campaign was provided.');
+  updateFieldPair({ snapshot, pending, owner, storage });
+}
+
 // localStorage has no transaction or compare-and-swap. Stage the unchanged
 // storage formats first, then verify each write and recover only bytes still
 // owned by this attempt. Another tab can still act between a check and a write.
 export function saveFieldSuspension(snapshot, pending, checkpoint, resumeState, storage = defaultStorage(), owner = null) {
+  return updateFieldPair({ snapshot, pending, checkpoint, resumeState, storage, owner, suspending: true });
+}
+
+function updateFieldPair({ snapshot, pending, checkpoint, resumeState, storage, owner, suspending = false }) {
   if (!storage) throw new Error('Device storage is unavailable. Stay in battle and try again.');
   const before = new Map();
   const staged = new Map();
@@ -61,39 +87,36 @@ export function saveFieldSuspension(snapshot, pending, checkpoint, resumeState, 
       getItem: key => staged.has(key) ? staged.get(key) : readBefore(key),
       setItem: (key, value) => { readBefore(key); staged.set(key, value); },
     };
-    if (pending?.checkpoint) {
-      const previousLoad = loadFieldSuspension(preparation);
-      const previous = previousLoad.pending;
-      if (typeof owner !== 'string' || !owner || previousLoad.owner !== owner
-        || !previous || previous.battle.id !== pending.battle?.id || previous.choiceId !== pending.choiceId
-        || JSON.stringify(previous.checkpoint) !== JSON.stringify(pending.checkpoint)
-        || JSON.stringify(previous.resumeState) !== JSON.stringify(pending.resumeState)) {
-        const error = new Error('The previously loaded field checkpoint changed.');
-        error.code = 'FIELD_OWNER_CHANGED';
-        throw error;
-      }
+    if (!suspending || pending?.checkpoint) requireOwnedSuspension(pending, owner, preparation);
+    if (suspending || snapshot) {
+      const campaign = saveCampaignSnapshot(snapshot, preparation);
+      if (!campaign.ok) throw new Error(campaign.error);
     }
-    const campaign = saveCampaignSnapshot(snapshot, preparation);
-    if (!campaign.ok) throw new Error(campaign.error);
-    context = saveFieldCheckpoint(pending, checkpoint, resumeState, preparation);
-    const validation = loadFieldCheckpoint(preparation);
-    if (!validation.pending || validation.error) throw new Error('The proposed field checkpoint is invalid.');
+    if (suspending) {
+      context = saveFieldCheckpoint(pending, checkpoint, resumeState, preparation);
+      if (!loadFieldCheckpoint(preparation).pending) throw new Error('The proposed field checkpoint is invalid.');
+    } else {
+      staged.set(FIELD_CHECKPOINT_KEY, null);
+    }
 
     // Older campaigns retain the existing recovery-backup semantics. A
     // verified recovery is deliberately retained even if suspension fails.
-    const keys = [...staged.keys()].filter(key => !ownedKeys.includes(key)).concat(ownedKeys);
+    const keys = [...staged.keys()].filter(key => !ownedKeys.includes(key)).concat(ownedKeys.filter(key => staged.has(key)));
+    const expected = key => staged.has(key) ? staged.get(key) : before.get(key);
     for (const key of keys) {
       if (storage.getItem(key) !== before.get(key)) throw new Error('Storage changed during the save.');
-      if (key === FIELD_CHECKPOINT_KEY && storage.getItem(CAMPAIGN_STORAGE_KEY) !== staged.get(CAMPAIGN_STORAGE_KEY)) {
+      if (key === FIELD_CHECKPOINT_KEY && storage.getItem(CAMPAIGN_STORAGE_KEY) !== expected(CAMPAIGN_STORAGE_KEY)) {
         throw new Error('The campaign changed during the save.');
       }
       attempted.push(key);
-      storage.setItem(key, staged.get(key));
+      if (staged.get(key) === null) storage.removeItem(key);
+      else storage.setItem(key, staged.get(key));
       if (storage.getItem(key) !== staged.get(key)) throw new Error('The saved bytes could not be verified.');
     }
     for (const key of ownedKeys) {
-      if (storage.getItem(key) !== staged.get(key)) throw new Error('The saved pair changed during verification.');
+      if (storage.getItem(key) !== expected(key)) throw new Error('The saved pair changed during verification.');
     }
+    if (!suspending) return;
     if (!loadFieldCheckpoint(storage).pending) throw new Error('The saved field checkpoint could not be loaded.');
     for (const key of ownedKeys) {
       if (storage.getItem(key) !== staged.get(key)) throw new Error('The saved pair changed after validation.');
@@ -123,9 +146,13 @@ export function saveFieldSuspension(snapshot, pending, checkpoint, resumeState, 
     }
     const message = rollbackComplete
       ? cause?.code === 'FIELD_OWNER_CHANGED'
-        ? 'Battle was not saved. The campaign or field save changed since this battle was loaded. Reload before saving; the stored campaign and field save are preserved.'
-        : 'Battle was not saved. Your previous campaign and field save are preserved. Stay in battle and try again.'
-      : 'Battle was not saved. Storage changed or recovery was blocked; the previous save pair could not be fully restored. Stay in battle and export your campaign before retrying.';
+        ? suspending
+          ? 'Battle was not saved. The campaign or field save changed since this battle was loaded. Reload before saving; the stored campaign and field save are preserved.'
+          : 'The campaign or field save changed since this battle was loaded. Reload to resume the stored campaign and field save.'
+        : suspending
+          ? 'Battle was not saved. Your previous campaign and field save are preserved. Stay in battle and try again.'
+          : `The field save could not be updated (${cause.message}). Your previous campaign and field save are preserved.`
+      : `${suspending ? 'Battle was not saved.' : 'The field save could not be updated.'} Storage changed or recovery was blocked; the previous save pair could not be fully restored. Stay in battle and export your campaign before retrying.`;
     const error = new Error(message, { cause });
     error.rollbackComplete = rollbackComplete;
     error.concurrentDrift = concurrentDrift;

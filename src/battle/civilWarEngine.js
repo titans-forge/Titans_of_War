@@ -965,6 +965,10 @@ export class CivilWarBattleEngine {
       return resolutionSpread === null ? target : { ...target, y: this.world.height + margin };
     }
     const edge = this.config.retreatEdges?.[unit.side] || (unit.side === 'confederate' ? 'bottom' : 'top');
+    if (edge === 'west' || edge === 'east') return {
+      x: edge === 'west' ? -margin : this.world.width + margin,
+      y: resolutionSpread === null ? unit.y : clamp(unit.y + resolutionSpread, 40, this.world.height - 40),
+    };
     return {
       x: resolutionSpread === null ? unit.x : clamp(unit.x + resolutionSpread, 40, this.world.width - 40),
       y: edge === 'top' ? -margin : this.world.height + margin,
@@ -1592,6 +1596,7 @@ export class CivilWarBattleEngine {
       ? { label: `Ridge control: ${this.gettysburg.held.toFixed(1)} / ${this.gettysburg.holdRequired}`, message: this.gettysburg.reserveIntent }
       : { label: `Force withdrawn: ${Math.round(this.gettysburg.escaped * 100)}% / 70%`, message: 'Only survivors withdrawn in order count toward preserving the army.' };
     const latest = this.events.at(-1)?.message || '';
+    if (this.fieldBattle?.antietam) return { label: this.fieldBattle.antietam.title, message: latest || this.fieldBattle.advice[0] };
     if (this.scenarioId === 'third_winchester') {
       const progress = this.thirdWinchester;
       const escaped = Math.round(progress.escapedRatio * 100);

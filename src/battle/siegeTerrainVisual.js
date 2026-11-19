@@ -1,4 +1,7 @@
 import { drawNaturalRoad } from './realisticScenery.js';
+import { drawColdHarborWorks } from './coldHarborWorks.js';
+import { petersburgReliefPlan } from './petersburgRelief.js';
+import { drawPetersburgSiegeTerrain } from './petersburgWorks.js';
 
 export const SIEGE_TERRAIN_ASSETS = ['ravine', 'earthwork', 'crater'].map(id => ({ id, key: `siege-${id}`, src: `images/battles/siege-v1/${id}.png` }));
 export const hasSiegeTerrain = id => ['cold_harbor', 'petersburg'].includes(id);
@@ -40,7 +43,14 @@ export function clipDestroyedRoads(ctx,e) {
 export function drawSiegeTerrain(scene,ctx) {
   const e=scene.engine;
   if (!hasSiegeTerrain(e.scenarioId)) return;
+  const petersburgRelief = scene.petersburgTerrainArt && petersburgReliefPlan(e);
+  if (petersburgRelief) {
+    drawPetersburgSiegeTerrain(ctx, petersburgRelief, e.fieldBattle.zones);
+    return;
+  }
+  const coldHarborRelief = e.scenarioId === 'cold_harbor' && scene.coldHarborTerrainArt;
   for(const {zone,sprites} of siegeTerrainPlan(e.scenarioId,e.fieldBattle.zones)) {
+    if (coldHarborRelief && zone.kind === 'ravine') continue;
     ctx.save();ctx.beginPath();ctx.rect(zone.left,zone.top,zone.right-zone.left,zone.bottom-zone.top);ctx.clip();
     // Trampled interiors distinguish the full defended area from adjacent pasture.
     if(zone.kind==='earthworks') {
@@ -49,7 +59,8 @@ export function drawSiegeTerrain(scene,ctx) {
       const wash=ctx.createRadialGradient(0,0,.2,0,0,1);wash.addColorStop(0,'rgba(122,98,58,.28)');wash.addColorStop(1,'rgba(122,98,58,0)');
       ctx.fillStyle=wash;ctx.fillRect(-1,-1,2,2);ctx.restore();
     }
-    for(const s of sprites) {
+    if (coldHarborRelief && zone.kind === 'earthworks') drawColdHarborWorks(ctx, zone);
+    else for(const s of sprites) {
       ctx.save();ctx.translate(s.x,s.y);ctx.rotate(s.angle);
       ctx.drawImage(scene.textures.get(`siege-${s.asset}`).getSourceImage(),-s.width/2,-s.height/2,s.width,s.height);ctx.restore();
     }

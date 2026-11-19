@@ -1,6 +1,8 @@
 // Titans of War — Core Game State & Physics Resolution Engine
 import { campaignRulesVersion, commitRecoveryAllocation, createCampaignEconomy, applySupplyDeltas, getCampaignUpkeep, getFundedBenefitRatio, getCurrentRecoveryPlan, getRecoveryOptions, getBattleSupplyProfile, getCampaignChoice } from './campaignSupply.js';
-import { resolveFieldResultConsequences, satisfiesFieldResultRequirement, fieldElectionFactors, removeUnsupportedFieldScoreCredit } from './fieldResultConsequences.js';
+import { resolveFieldResultConsequences, satisfiesFieldResultRequirement, fieldElectionFactors, removeUnsupportedFieldScoreCredit, isChoiceGatedField, usesAssessedFieldConsequences } from './fieldResultConsequences.js';
+import { battleForScenario, applyBattleResolution } from './battles.js';
+import { getBattleAssessment } from '../battle/battleAssessment.js';
 
 // Clamps a metric between 0 and 100
 const clamp = (val) => Math.max(0, Math.min(100, val));
@@ -217,10 +219,12 @@ export function tickMetrics(state, choice = null, successModifier = 0, options =
   let resolvedConsequence = "";
 
   if (choice) {
-    resolvedEffects = choice.effects;
-    resolvedConsequence = choice.consequence;
+    const fieldConsequences = resolveFieldResultConsequences(state, options.activeScenarioId || state.scenarioId, choice);
+    resolvedEffects = fieldConsequences ? fieldConsequences.effects : choice.effects;
+    resolvedConsequence = fieldConsequences ? fieldConsequences.consequence : choice.consequence;
+    if (fieldConsequences) choiceSucceeded = fieldConsequences.choiceSucceeded;
 
-    if (choice.successRate !== undefined) {
+    if (!fieldConsequences && choice.successRate !== undefined) {
       // Deterministic roll: reproducible for a given (seed, turn).
       const rng = mulberry32(deriveSeed(state.seed ?? 0, state.currentTurn));
       const roll = rng();
@@ -237,13 +241,6 @@ export function tickMetrics(state, choice = null, successModifier = 0, options =
         };
         resolvedConsequence = choice.failureConsequence || `The strategic operation failed: ${choice.consequence}`;
       }
-    }
-
-    const fieldConsequences = resolveFieldResultConsequences(state, options.activeScenarioId || state.scenarioId, choice);
-    if (fieldConsequences) {
-      choiceSucceeded = fieldConsequences.choiceSucceeded;
-      resolvedEffects = fieldConsequences.effects;
-      resolvedConsequence = fieldConsequences.consequence;
     }
 
     if (resolvedEffects) {
@@ -301,22 +298,17 @@ export function tickMetrics(state, choice = null, successModifier = 0, options =
   let won = false;
   const alternateTimeline = divergence >= 0.6;
 
-  // Terminal scenarios (the Peace Crisis, etc.) close the campaign on any
-  // choice. The campaign also ends on the final turn or when a metric floor
-  // is breached. The terminal flag is passed by advanceCampaignTurn after
-  // reading scenario.endsCampaign / choice.endsCampaign.
-  if (options.endsCampaign && choice) {
+  // Once the campaign has reached the last field interlude, even a rout
+  // carries its losses into the authored settlement. The normal resource
+  // floors still apply on the march there and the chosen settlement ends play.
+  if (choice && (options.endsCampaign || (!options.settlementInterlude && state.currentTurn >= CAMPAIGN_FINAL_TURN))) {
     gameOver = true;
     won = nextMetrics.militaryStrength > 10
       && nextMetrics.publicMorale > 10
       && (nextMetrics.foodSupply === undefined || nextMetrics.foodSupply > 5);
     statusMessage = finalTurnStatusMessage(state, choice, divergence);
-  } else if (state.currentTurn >= CAMPAIGN_FINAL_TURN && choice) {
-    gameOver = true;
-    won = nextMetrics.militaryStrength > 10
-      && nextMetrics.publicMorale > 10
-      && (nextMetrics.foodSupply === undefined || nextMetrics.foodSupply > 5);
-    statusMessage = finalTurnStatusMessage(state, choice, divergence);
+  } else if (choice && options.settlementInterlude) {
+    statusMessage = 'The field order is recorded. The final decision awaits at Appomattox.';
   } else if (nextMetrics.militaryStrength <= 10) {
     gameOver = true;
     statusMessage = "DEFEAT: Desertion, straggling, expiring enlistments, and battlefield losses have left you without a field army capable of continuing the campaign.";
@@ -354,25 +346,53 @@ export function tickMetrics(state, choice = null, successModifier = 0, options =
 // It calls the same resolution function used on commitment, including clamping,
 // allocation, upkeep, obligations, survival floors and new-rules corrections.
 export function forecastCampaignChoice(state, scenario, choice, successModifier = 0) {
-  const options = { skipTurnDecay: Boolean(scenario?.interlude || scenario?.crisisFor), endsCampaign: Boolean(scenario?.endsCampaign || choice?.endsCampaign), activeScenarioId: scenario?.id || state.scenarioId };
-  const chance = choice?.successRate === undefined ? null : Math.max(0, Math.min(1, choice.successRate + successModifier));
-  const alternatives = chance === null ? [null] : chance <= 0 ? [false] : chance >= 1 ? [true] : [false, true];
-  const outcomes = alternatives.map(result => {
-    const resolved = tickMetrics(state, choice, successModifier, { ...options, ...(result === null ? {} : { forecastOutcome: result }) });
-    return { result: result === null ? 'certain' : result ? 'success' : 'failure', metrics: resolved.metrics,
+  const options = {
+    skipTurnDecay: Boolean(scenario?.interlude || scenario?.crisisFor),
+    settlementInterlude: Boolean(scenario?.settlementInterlude),
+    endsCampaign: Boolean(scenario?.endsCampaign || choice?.endsCampaign),
+    activeScenarioId: scenario?.id || state.scenarioId,
+  };
+  const prepared = choice ? commitRecoveryAllocation(state) : state;
+  const fieldBattle = choice && usesAssessedFieldConsequences(state, options.activeScenarioId, choice.id)
+    ? battleForScenario({ id: options.activeScenarioId }, state, choice.id) : null;
+  const fieldDecides = Boolean(fieldBattle);
+  const chance = fieldDecides || choice?.successRate === undefined ? null : Math.max(0, Math.min(1, choice.successRate + successModifier));
+  const project = (result, base, forecastOptions) => {
+    const resolved = tickMetrics(base, choice, successModifier, forecastOptions);
+    return { result, metrics: resolved.metrics,
       gameOver: resolved.gameOver, won: resolved.won, statusMessage: resolved.statusMessage, supplyReport: resolved.supplyReport || null,
       campaignEconomy: resolved.campaignEconomy || state.campaignEconomy || null, resourceTransitions: resolved.resourceTransitions };
-  });
+  };
+  const alternatives = chance === null ? [null] : chance <= 0 ? [false] : chance >= 1 ? [true] : [false, true];
+  const verdicts = isChoiceGatedField(fieldBattle?.scenarioId)
+    ? [...fieldBattle.successResultsByChoice[choice.id], 'defeat', 'rout']
+    : ['decisive-win', 'costly-win', 'disciplined-withdrawal', 'defeat', 'rout'];
+  const outcomes = fieldDecides
+    ? verdicts.flatMap(result => {
+      const battle = fieldBattle;
+      const isShiloh = battle.id === 'shiloh';
+      const commanderStatus = isShiloh && ['option_b', 'option_d'].includes(choice.id) ? 'protected' : undefined;
+      const field = { scenarioId: battle.scenarioId, battleId: battle.id, choiceId: choice.id, result, commanderStatus };
+      const estimated = { ...field, assessment: getBattleAssessment({ ...field, delegated: true }, choice.id) };
+      const completed = project(result, applyBattleResolution(prepared, estimated), options);
+      // A favorable Shiloh verdict can still leave reserve, ground or exit
+      // conditions unmet. Show that lower resource bound before commitment.
+      if (!isShiloh || estimated.assessment?.objective.status !== 'achieved') return [completed];
+      return [completed, project(result, applyBattleResolution(prepared, field), options)];
+    })
+    : alternatives.map(result => project(result === null ? 'certain' : result ? 'success' : 'failure', state,
+      result === null ? options : { ...options, forecastOutcome: result }));
   const resources = Object.fromEntries(Object.keys(state.metrics).map(key => {
     const values = outcomes.map(outcome => outcome.metrics[key]);
     return [key, { min: Math.min(...values), max: Math.max(...values), deltaMin: Math.min(...values) - state.metrics[key], deltaMax: Math.max(...values) - state.metrics[key] }];
   }));
-  const prepared = choice ? commitRecoveryAllocation(state) : state;
   return { rulesVersion: campaignRulesVersion(state), difficulty: state.difficulty || 'standard', successChance: chance,
     resources, outcomes, allocationId: getCurrentRecoveryPlan(state)?.allocationId || 'none',
     allocationOptions: getRecoveryOptions(state), battleSupply: getBattleSupplyProfile(prepared),
     upkeep: outcomes[0]?.supplyReport?.upkeep || null, possibleCollapse: outcomes.some(outcome => outcome.gameOver && !outcome.won && !state.gameOver),
-    scope: 'Campaign resolution before any unplayed field battle. Field losses and its success modifier can change these ranges.' };
+    scope: fieldDecides
+      ? 'Illustrative ranges across field verdicts, including allocation and upkeep. Actual objective progress determines the campaign result.'
+      : 'Campaign resolution before any unplayed field battle. Field losses and its success modifier can change these ranges.' };
 }
 
 // --- Divergence tiers (the index becomes narratively + mechanically meaningful) ---
@@ -383,6 +403,8 @@ export function divergenceTier(divergence) {
   if (d >= 0.12) return { tier: 'drifting', label: 'Drifting Timeline', note: 'Localized deviations from the historical record.' };
   return { tier: 'tethered', label: 'Tethered to History', note: 'Events track the orthodox chronology.' };
 }
+
+const MEDIATED_ARMISTICE_STATUS = 'CAMPAIGN CONCLUDED — European mediation produces a binding armistice along the existing military lines. Sovereignty and a permanent boundary remain open to negotiation.';
 
 function finalTurnStatusMessage(state, choice, divergence) {
   const key = `${state.scenarioId || 'campaign'}:${choice?.id || 'option'}`;
@@ -411,11 +433,11 @@ function finalTurnStatusMessage(state, choice, divergence) {
     case 'southern_independence_1864:option_a':
       return 'CAMPAIGN CONCLUDED — An alternate history is forged. Davis proclaimed Confederate independence as Northern war-weariness reached its breaking point, and the South stands as a recognized sovereign nation.';
     case 'southern_independence_1864:option_b':
-      return 'CAMPAIGN CONCLUDED — European mediation produced a binding armistice along the existing lines. Southern independence is recognized by a world that respected four years of Confederate battlefield record.';
+      return MEDIATED_ARMISTICE_STATUS;
     case 'southern_independence_1864:option_c':
-      return "CAMPAIGN CONCLUDED \u2014 ALTERNATE HISTORY SETTLEMENT. McClellan won the election and Confederate envoys were waiting. He accepts an armistice framework and promises to ask Congress and the states for a Concurrent Majority compact: no federal act touching sectional sovereignty would pass without concurrent consent of both sections. McClellan supports the proposal; ratification by Congress and the states is not guaranteed. The South does not gain independence; it gambles on reunion through amendment rather than surrender by exhaustion.";
+      return 'CAMPAIGN CONCLUDED — ALTERNATE HISTORY SETTLEMENT. President McClellan accepts an armistice and will submit a Concurrent Majority amendment to Congress and the states. The proposal would require both sections to consent to federal acts affecting their sovereignty. Ratification remains undecided.';
     case 'southern_independence_1864:option_d':
-      return "CAMPAIGN CONCLUDED \u2014 A modified compact settled the war before McClellan could win it. Permanent state sovereignty is embedded in the post-war constitutional language, and a reunited republic emerges that Lincoln would barely recognize as the one he fought to preserve.";
+      return 'CAMPAIGN CONCLUDED — President McClellan agrees to reunion under a modified compact. The states ratify provisions protecting state authority, restricting slavery in the territories, and providing voluntary reconstruction funds.';
     default:
       return divergence >= 0.6
         ? `CAMPAIGN CONCLUDED — a new history is written. The war ended on a timeline ${(divergence * 100).toFixed(0)}% removed from our own.`
@@ -428,22 +450,26 @@ export function classifyCampaignEnding(state) {
   const lastEntry = Array.isArray(state.history) && state.history.length
     ? state.history[state.history.length - 1]
     : null;
+  const status = state.statusMessage || '';
+  // Advancing from the penultimate scene can reach the last turn by defeat.
+  const resourceCollapse = status.startsWith('DEFEAT:')
+    || (!status.startsWith('CAMPAIGN CONCLUDED') && (state.currentTurn || 0) < CAMPAIGN_FINAL_TURN);
 
-  if ((metrics.militaryStrength || 0) <= 10 && (state.currentTurn || 0) < CAMPAIGN_FINAL_TURN) {
+  if (resourceCollapse && (metrics.militaryStrength || 0) <= 10) {
     return {
       endingClass: 'Army Exhausted',
       endingNote: 'Desertion, straggling, expiring enlistments, and battlefield attrition left no field army capable of continuing the campaign.'
     };
   }
 
-  if ((metrics.publicMorale || 0) <= 10 && (state.currentTurn || 0) < CAMPAIGN_FINAL_TURN) {
+  if (resourceCollapse && (metrics.publicMorale || 0) <= 10) {
     return {
       endingClass: 'Home Front Fracture',
       endingNote: 'Bread riots, draft resistance, and evaporating civilian confidence broke the ability to sustain the war.'
     };
   }
 
-  if ((metrics.foodSupply || 0) <= 5 && (state.currentTurn || 0) < CAMPAIGN_FINAL_TURN) {
+  if (resourceCollapse && (metrics.foodSupply || 0) <= 5) {
     return {
       endingClass: 'Granary Collapse',
         endingNote: "The Valley's granaries and field depots failed, leaving the armies too hungry to continue coherent operations."
@@ -507,6 +533,14 @@ export function classifyCampaignEnding(state) {
         endingNote: "Davis's proclamation forced the world to choose. Britain and France recognized the Confederacy as Northern political will finally fractured beyond recovery."
       };
     case 'southern_independence_1864:option_b':
+      // The persisted status distinguishes the revised outcome from completed saves.
+      if (status.startsWith(MEDIATED_ARMISTICE_STATUS)) {
+        return {
+          endingClass: 'Southern Independence — Mediated Armistice',
+          endingLabel: 'European-Mediated Armistice',
+          endingNote: 'The armies accept a binding ceasefire on the existing military lines. Commissioners will negotiate sovereignty and a permanent boundary.'
+        };
+      }
       return {
         endingClass: 'Southern Independence — Mediated Armistice',
         endingNote: 'European mediation ratified the war\'s final lines as a permanent boundary. The Confederacy emerged from the armistice as a recognized sovereign state.'
@@ -519,7 +553,9 @@ export function classifyCampaignEnding(state) {
     case 'southern_independence_1864:option_d':
       return {
         endingClass: 'Modified Constitutional Compact',
-        endingNote: 'A pre-election compact with Lincoln embedded permanent state sovereignty into post-war constitutional language. The republic is reunited but restructured — neither the Union Lincoln started the war to preserve nor the Confederacy Davis proclaimed.'
+        endingNote: lastEntry.choiceText?.startsWith('Offer Lincoln a modified federal compact')
+          ? 'A pre-election compact with Lincoln embedded permanent state sovereignty into post-war constitutional language. The republic is reunited but restructured — neither the Union Lincoln started the war to preserve nor the Confederacy Davis proclaimed.'
+          : 'President McClellan and Confederate commissioners agreed to reunion. The modified compact protects state authority, bars the extension of slavery into the territories, and funds reconstruction through voluntary state contributions.'
       };
     default: {
       const tier = divergenceTier(state.divergenceIndex);
@@ -1109,6 +1145,7 @@ export function calculateCampaignScore(state) {
     turnsCompleted,
     divergence: state.divergenceIndex || 0,
     endingClass: ending.endingClass,
+    endingLabel: ending.endingLabel || ending.endingClass,
     endingNote: ending.endingNote,
     crisisSummary,
     reportCards,
@@ -1195,7 +1232,9 @@ export function calculateElectionPressure(history = [], threshold = 7) {
   if (crater?.choiceId === 'option_b' || crater?.choiceId === 'option_c') add(crater, 1, 'Petersburg endurance');
 
   const atlantaFall = latest('fall_of_atlanta');
-  if (atlantaFall?.choiceId === 'option_a') {
+  const atlantaFieldFactors = fieldElectionFactors(atlantaFall);
+  if (atlantaFieldFactors) for (const factor of atlantaFieldFactors) add(atlantaFall, factor.points, factor.label);
+  else if (atlantaFall?.choiceId === 'option_a') {
     add(atlantaFall, atlantaFall.choiceSucceeded ? 4 : -2, 'Jonesborough and Atlanta');
   } else if (atlantaFall?.choiceId === 'option_b') {
     add(atlantaFall, -3, 'Atlanta evacuated');
@@ -1289,13 +1328,7 @@ export function resolveNextScenario(currentScenario, choice, nextTurn, scenarios
   if (currentScenario && Array.isArray(currentScenario.branches)) {
     const historyEntries = Array.isArray(history) ? history : [];
     const historyIds = new Set(historyEntries.map(h => h.scenarioId).filter(Boolean));
-    const historyHasChoice = (requirement) => historyEntries.some((entry) => {
-      if (!requirement || entry.scenarioId !== requirement.scenarioId) return false;
-      if (requirement.choiceId && entry.choiceId !== requirement.choiceId) return false;
-      if (Array.isArray(requirement.choiceIds) && !requirement.choiceIds.includes(entry.choiceId)) return false;
-      if (requirement.choiceSucceeded !== undefined && entry.choiceSucceeded !== requirement.choiceSucceeded) return false;
-      return true;
-    });
+    const historyHasChoice = requirement => historyHasRequirement(historyEntries, requirement);
     const eligible = currentScenario.branches
       .filter((b) => {
         if ((divergence || 0) < (b.minDivergence || 0)) return false;

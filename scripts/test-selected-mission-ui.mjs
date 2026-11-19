@@ -10,7 +10,7 @@ import { createServer } from 'vite';
 // this check makes no claim about battlefield pixels or control interactions.
 const cacheDir = mkdtempSync(join(tmpdir(), 'tow-selected-mission-'));
 const previousWindow = globalThis.window;
-globalThis.window = { localStorage: { getItem: () => '1' }, matchMedia: () => ({ matches: false }) };
+globalThis.window = { localStorage: { getItem: () => '1' }, matchMedia: () => ({ matches: false }), location: { search: '' } };
 const vite = await createServer({
   configLoader: 'native', cacheDir,
   plugins: [{

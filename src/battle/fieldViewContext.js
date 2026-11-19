@@ -23,13 +23,20 @@ function checkpointTime(checkpoint, scenarioId) {
     && timeValue(time) && timeValue(resolution) && timeValue(time + resolution) ? time + resolution : null;
 }
 
+function checkpointFormations(checkpoint) {
+  const formations = data(data(checkpoint, 'state'), 'state');
+  return Array.isArray(formations) && formations.length <= 256 ? formations : [];
+}
+
+function commandableFormationId(formation) {
+  const id = data(formation, 'id');
+  const unit = { active: data(formation, 'active'), side: data(formation, 'side'), status: data(formation, 'status') };
+  return idValue(id) && canCommand(unit) && unit.status !== 'surrendered' && data(formation, 'withdrawn') !== true ? id : null;
+}
+
 function eligibleSelection(checkpoint, selectedId) {
   if (!idValue(selectedId)) return null;
-  const formations = data(data(checkpoint, 'state'), 'state');
-  if (!Array.isArray(formations) || formations.length > 256) return null;
-  const formation = formations.find(unit => data(unit, 'id') === selectedId);
-  const unit = { active: data(formation, 'active'), side: data(formation, 'side'), status: data(formation, 'status') };
-  return canCommand(unit) && unit.status !== 'surrendered' && data(formation, 'withdrawn') !== true ? selectedId : null;
+  return commandableFormationId(checkpointFormations(checkpoint).find(unit => data(unit, 'id') === selectedId));
 }
 
 /** Keep the requested world point visible safely after a viewport change. */
@@ -63,6 +70,15 @@ export function readFieldViewContext(checkpoint, world, scenarioId) {
     return { selectedId: eligibleSelection(checkpoint, context.selectedId),
       camera: cameraValid(context.camera) ? { mode: context.camera.mode, zoom: context.camera.zoom, center: { ...context.camera.center } } : null };
   } catch { return null; }
+}
+
+export function restoredFieldSelection(checkpoint, world, scenarioId, defaultId) {
+  const saved = readFieldViewContext(checkpoint, world, scenarioId)?.selectedId;
+  if (saved) return saved;
+  try {
+    if (checkpointTime(checkpoint, scenarioId) === null || eligibleSelection(checkpoint, defaultId)) return defaultId;
+    return commandableFormationId(checkpointFormations(checkpoint).find(commandableFormationId)) || defaultId;
+  } catch { return defaultId; }
 }
 
 /** Capture current scroll, including a pan before Phaser's next render. */

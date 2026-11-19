@@ -15,6 +15,24 @@ export function clothColumn(u, phase) {
     y: u * (3.6 * Math.sin(wave) + .7 * Math.sin(wave * 2)) + u * u * 1.8,
     light: .73 + .245 * Math.cos(wave) + .025 * Math.sin(wave * 2) };
 }
+
+// More weight at the fly than at the seam. Atlas generation uses the same
+// coordinates for fabric and dye so the period pattern stays attached.
+export function fieldClothColumn(u, phase) {
+  const wave = phase - u * 8.1;
+  const ripple = Math.sin(wave) * 4.1 + Math.sin(wave * 2 - .7) * .85;
+  return {
+    x: u * .9 + .025 * (Math.sin(wave) - Math.sin(phase)),
+    y: u * (u * 2.6 + ripple),
+    light: .81 + .16 * Math.cos(wave) + .025 * Math.cos(wave * 2),
+  };
+}
+
+export function fieldStandardLean(time, phase, walking, reducedMotion) {
+  if (reducedMotion) return 0;
+  return .024 * Math.sin(time * 1.7 + phase)
+    + (walking ? .028 * Math.sin(time * 4.6 + phase) : 0);
+}
 function adapter(ctx) {
   const g = {
     fillStyle(c, a = 1) { ctx.fillStyle = `rgba(${c >> 16},${c >> 8 & 255},${c & 255},${a})`; return g; },
@@ -31,6 +49,7 @@ export function createStandardTextures(scene) {
   // canvases. Omitted IDs retain periodStandardFor's documented Gettysburg
   // default for standalone callers; a later scene can add its own missing keys.
   const id = scene.scenarioId || 'gettysburg';
+  const column = scene.gettysburgFieldArt ? fieldClothColumn : clothColumn;
   for (const side of ['union', 'confederate']) {
     const key = keyFor(side,id); if (scene.textures.exists(key)) continue;
     const square = periodStandardFor(side,id).pattern === 'anv';
@@ -45,7 +64,7 @@ export function createStandardTextures(scene) {
     for(let frame=0;frame<CLOTH_FRAMES;frame++){
       const ox=(frame%8)*FRAME_W,oy=Math.floor(frame/8)*FRAME_H,phase=frame/CLOTH_FRAMES*TAU;
       for(let sx=0;sx<flat.width;sx++){
-        const p=clothColumn(sx/flat.width,phase),q=clothColumn((sx+1)/flat.width,phase);
+        const p=column(sx/flat.width,phase),q=column((sx+1)/flat.width,phase);
         const dx=ox+12+p.x*flat.width,dy=oy+(top+68)*SCALE+p.y*SCALE,dw=Math.max(.3,(q.x-p.x)*flat.width+.25);
         out.drawImage(flat,sx,0,1,flat.height,dx,dy,dw,flat.height);
         out.fillStyle=`rgba(16,13,10,${1-p.light})`;out.fillRect(dx,dy,dw,flat.height);

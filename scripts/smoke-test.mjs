@@ -22,7 +22,10 @@ import {
 } from '../src/game/simulationEngine.js';
 import { advanceCampaignTurn, getScenarioForState, runHeadlessCampaign, runHeadlessCampaignAsync } from '../src/game/headlessCampaign.js';
 import { INITIAL_STATE } from '../src/game/initialState.js';
-import { resolveScenarioMediaSet } from '../src/game/mediaCatalog.js';
+import { resolveCampaignEndingMedia, resolveScenarioMediaSet } from '../src/game/mediaCatalog.js';
+import { buildCampaignChronicle } from '../src/game/chronicleExporter.js';
+import { buildCampaignBundle } from '../src/game/campaignBundle.js';
+import { resolveEndingPresentationArt } from '../src/game/presentationArt.js';
 
 const baseState = {
   currentTurn: 1,
@@ -387,6 +390,38 @@ const recognitionWarContinues = advanceCampaignTurn(
 );
 assert.equal(recognitionWarContinues.state.gameOver, false, 'declining the immediate armistice should keep the campaign active');
 assert.equal(recognitionWarContinues.nextScenario.id, 'chickamauga', 'continuing after recognition should resume at Chickamauga');
+
+const recognitionEndingArt = resolveCampaignEndingMedia(recognizedIndependence.state);
+assert.equal(recognitionEndingArt.assetKey, 'csa_victory_condition_grok');
+assert.match(recognitionEndingArt.caption, /alternate July 1863/);
+assert.equal(resolveCampaignEndingMedia(recognitionWarContinues.state), null);
+assert.equal(resolveCampaignEndingMedia({ ...recognizedIndependence.state, gameOver: false }), null);
+assert.equal(resolveCampaignEndingMedia({ ...recognizedIndependence.state, statusMessage: 'DEFEAT: the campaign collapsed.' }), null);
+
+const peaceEnding = (choiceId) => ({
+  ...recognizedIndependence.state,
+  history: [{ scenarioId: 'southern_independence_1864', choiceId }],
+  currentTurn: CAMPAIGN_FINAL_TURN,
+});
+assert.match(resolveCampaignEndingMedia(peaceEnding('option_a')).era, /April 1865/);
+assert.equal(resolveCampaignEndingMedia(peaceEnding('option_b')), null, 'a European armistice leaves the result in text');
+assert.equal(resolveCampaignEndingMedia(peaceEnding('option_c')).assetKey, 'mcclellan_armistice_grok');
+assert.equal(resolveCampaignEndingMedia(peaceEnding('option_d')), null);
+
+const recognitionBundle = buildCampaignBundle(recognizedIndependence.state, recognitionStage);
+assert.ok(recognitionBundle.chronicle.markdown.split('### Campaign Ending')[1].includes(`(<${recognitionEndingArt.src}>)`));
+assert.deepEqual(recognitionBundle.mediaManifest.assets.find(asset => asset.id === recognitionEndingArt.assetKey)?.referencedBy, [recognitionStage.id]);
+assert.doesNotMatch(buildCampaignChronicle(recognitionWarContinues.state).markdown, /CSA Independence/);
+assert.doesNotMatch(buildCampaignChronicle(peaceEnding('option_b')).markdown, /CSA Independence|Armistice\.jpeg/);
+
+const paroleEnding = {
+  ...peaceEnding('option_b'),
+  history: [{ scenarioId: 'appomattox_decision', choiceId: 'option_b' }],
+};
+const paroleArt = resolveEndingPresentationArt(paroleEnding);
+const paroleChronicle = buildCampaignChronicle(paroleEnding);
+assert.ok(paroleChronicle.markdown.split('### Campaign Ending')[1].includes(paroleArt.caption));
+assert.equal(paroleChronicle.usedMedia.find(media => media.scenarioId === 'campaign_ending')?.src, paroleArt.src);
 
 const mcclellanStage = {
   id: 'election_1864_mcclellan',
@@ -987,11 +1022,13 @@ assert.equal(proceduralTacticalMedia.isProcedural, true, 'unmapped tactical scen
 assert.equal(proceduralTacticalMedia.src, '', 'procedural tactical fallback should not reuse theater/card art');
 
 const greensboroMedia = resolveScenarioMediaSet('greensboro_convention').theater;
-assert.equal(
-  greensboroMedia.src.includes('Davis and Lee.jpeg'),
-  true,
-  'Greensboro should use the Davis and Lee late-war strategy image'
-);
+assert.equal(greensboroMedia.assetKey, 'davis_cabinet_grok');
+assert.match(greensboroMedia.caption, /earlier|later decisions at Greensboro/);
+assert.doesNotMatch(greensboroMedia.caption, /Atlanta|election/i);
+assert.match(resolveScenarioMediaSet('southern_independence_1864').theater.caption, /after the capital’s evacuation/);
+assert.equal(resolveScenarioMediaSet('gettysburg_recognition_crisis').theater.assetKey, 'davis_cabinet_grok');
+assert.equal(resolveScenarioMediaSet('fredericksburg_winter_politics').theater.assetKey, 'christmas_truce_winter');
+assert.equal(resolveScenarioMediaSet('fredericksburg_field').theater.assetKey, 'lee_at_fredericksburg');
 const chancellorsvilleOpeningMedia = resolveScenarioMediaSet('chancellorsville_maneuver').theater;
 assert.ok(
   chancellorsvilleOpeningMedia.cropFocus.y <= 0.36,

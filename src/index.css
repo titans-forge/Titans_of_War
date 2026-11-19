@@ -1,10 +1,25 @@
 .campaign-layout.game-layout { display: block; }
 .campaign-layout .campaign-politics, .campaign-layout .campaign-desk { display: none !important; }
 .campaign-layout.desk-open .campaign-politics, .campaign-layout.desk-open .campaign-desk { display: flex !important; margin: 20px 0; }
-.campaign-flow { display: grid !important; grid-template-columns: minmax(0, 1.2fr) minmax(310px, 1fr); align-items: start; }
+.campaign-flow { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(310px, 1fr); align-items: start; gap: 1.25rem; }
 .campaign-flow > * { min-width: 0; grid-column: 1 / -1; }
 .campaign-flow > .scenario-brief { grid-column: 1; grid-row: 1; }
 .campaign-flow > .campaign-choices { grid-column: 2; grid-row: 1; }
+.tactical-card.campaign-report-card {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(.85rem, 2vw, 1.5rem);
+  border-color: var(--accent-gold);
+  padding: clamp(1rem, 4vw, 2rem);
+  text-align: center;
+}
+.campaign-report-card > h2 {
+  font-size: 1.5rem;
+  scroll-margin-block-start: 1rem;
+}
+.campaign-report-card > .battle-assessment {
+  text-align: left;
+}
 .campaign-flow .scenario-visual { height: 290px !important; min-height: 0 !important; }
 .briefing-preview { font-size: 15px; line-height: 1.5; color: var(--text-secondary); margin: 12px 0; }
 .campaign-resource-strip { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border-color); }
@@ -22,6 +37,7 @@
 .campaign-correspondence summary, .advisor-details summary, .campaign-modal summary { cursor: pointer; padding: 10px 0; font-weight: 600; }
 .campaign-choices .choice-btn { min-height: 64px; }
 .campaign-modal-shade { position: fixed; inset: 0; z-index: 900; background: #000b; display: grid; place-items: center; padding: 20px; }
+.campaign-field-error > .campaign-modal-shade { z-index: 3100; }
 .campaign-modal { width: min(760px, 100%); max-height: 90dvh; overflow: auto; background: #111719; border: 1px solid #6b6650; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
 .campaign-modal header { display: flex; justify-content: space-between; gap: 16px; align-items: center; }
 .campaign-modal h2 { font-size: 24px; }
@@ -52,11 +68,10 @@
 .demo-banner { padding: 12px; border: 1px solid #aa9054; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
 button:focus-visible, summary:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #f5d36c; outline-offset: 3px; }
 @media (max-width: 850px) {
-  .campaign-flow { grid-template-columns: minmax(0, 1fr); }
+  .campaign-flow { grid-template-columns: minmax(0, 1fr); gap: .8rem; }
   .campaign-flow > .scenario-brief, .campaign-flow > .campaign-choices { grid-column: 1; grid-row: auto; }
-  .campaign-flow > .scenario-brief { order: 0; }
-  .campaign-flow > .campaign-choices { order: 1; }
-  .campaign-flow > .campaign-correspondence { order: 2; }
+  .campaign-flow > :is(.scenario-brief, .campaign-choices) { padding: .85rem 1rem; }
+  .campaign-flow > :is(.scenario-brief, .campaign-choices) > .card-title { margin-bottom: .65rem; }
   .campaign-flow .scenario-visual { height: 230px !important; }
   .campaign-header-actions { justify-content: flex-start; gap: 8px !important; }
   .campaign-resource-strip { gap: 8px 16px; }
@@ -65,6 +80,12 @@ button:focus-visible, summary:focus-visible, select:focus-visible, input:focus-v
   .campaign-modal-shade { padding: 10px; }
   .campaign-modal h2 { font-size: 21px; }
   .campaign-choices button { min-height: 44px; }
+  .campaign-choices .choice-impact { flex-wrap: wrap; gap: .3rem .55rem; }
+}
+@media (min-width: 660px) and (max-width: 850px) and (orientation: landscape) and (max-height: 550px) {
+  .campaign-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .campaign-flow > .scenario-brief { grid-column: 1; grid-row: 1; }
+  .campaign-flow > .campaign-choices { grid-column: 2; grid-row: 1; }
 }
 
 @font-face {
@@ -672,7 +693,8 @@ select:focus-visible,
 .cw-battle-hint { margin-top: 1rem; color: var(--text-secondary); font-size: 0.7rem; line-height: 1.5; }
 
 .cw-battlefield-frame { position: relative; min-width: 0; min-height: 0; overflow: hidden; background: #141912; }
-.cw-battlefield-host { position: absolute; inset: 0; }
+.cw-battlefield-host { position: absolute; inset: 0; overflow: hidden; }
+.cw-battlefield-host canvas { display: block; }
 .cw-battle-zoom { position: absolute; top: 0.75rem; right: 0.75rem; z-index: 2; }
 .cw-field-status { position: absolute; top: 0.75rem; left: 0.75rem; z-index: 2; display: grid; gap: 0.2rem; max-width: min(28rem, calc(100% - 8rem)); padding: 0.5rem 0.65rem; border-left: 3px solid var(--accent-gold); background: rgba(9, 12, 16, 0.88); color: var(--text-secondary); font: 0.62rem/1.35 var(--font-mono); }
 .cw-field-status strong { color: var(--accent-gold); text-transform: uppercase; }
@@ -864,32 +886,73 @@ select:focus-visible,
 .native-app .campaign-modal-shade { padding:calc(12px + env(safe-area-inset-top)) calc(12px + env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) calc(12px + env(safe-area-inset-left)); }
 .native-app .campaign-modal { height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 24px); max-height:100%; min-height:0; overflow-y:auto; overscroll-behavior-y:contain; touch-action:pan-y; -webkit-overflow-scrolling:touch; }
 .native-app .campaign-modal > * { flex-shrink:0; }
-/* On a short landscape phone, reserve the screen for the battlefield. */
+/* Reserve map space in short landscape windows, including browser embeds. */
 @media (orientation:landscape) and (max-height:550px) {
-  .native-app .cw-tactical .cw-battle-header { grid-template-columns:minmax(0,1fr) auto; padding:3px 8px; gap:4px; }
-  .native-app .cw-tactical .cw-battle-header h2 { font-size:14px; margin:0; }
-  .native-app .cw-tactical .cw-battle-header > div:first-child > span,
-  .native-app .cw-tactical .cw-battle-objective { display:none; }
-  .native-app .cw-tactical .cw-battle-header-actions button { min-width:44px; height:44px; }
-  .native-app .cw-tactical .cw-battle-stage { position:relative; grid-template-columns:180px minmax(0,1fr); overflow:hidden; }
-  .native-app .cw-tactical .cw-formation-inspector { padding:5px; overflow:auto; }
-  .native-app .cw-tactical .cw-inspector-toggle { display:block; min-height:44px; width:100%; background:#25352f; color:#eee5d1; border:1px solid #849c91; }
-  .native-app .cw-tactical .cw-inspector-summary { display:grid; gap:4px; }
-  .native-app .cw-tactical .cw-inspector-details { display:none; }
-  .native-app .cw-tactical .cw-formation-inspector[data-expanded="true"] .cw-inspector-details { display:block; }
-  .native-app .cw-tactical .cw-mobile-unit-summary { display:block; font-size:11px; margin:4px 0; }
-  .native-app .cw-tactical .cw-battle-zoom { padding:2px; gap:2px; flex-wrap:nowrap; }
-  .native-app .cw-tactical .cw-battle-zoom > button { min-width:44px; min-height:44px; padding:2px; font-size:11px; }
-  .native-app .cw-tactical .cw-battle-zoom > button span { display:none; }
-  .native-app .cw-tactical .cw-map-options { font-size:11px; }
-  .native-app .cw-tactical .cw-ridge-progress { max-height:52px; overflow:auto; margin:0; }
-  .native-app .cw-tactical .cw-ridge-progress .cw-sector-strip { display:none; }
-  .native-app .cw-tactical .cw-objective-heading button { min-height:44px; }
-  .native-app .cw-tactical .cw-command-phase { display:none; }
-  .native-app .cw-tactical .cw-field-progress .cw-objective-heading { min-height:24px; }
-  .native-app .cw-tactical .cw-command-receipt { min-height:24px; padding:2px 8px; }
-  .native-app .cw-tactical .cw-command-receipt-copy > small { display:none; }
-  .native-app .cw-tactical .cw-battle-command-bar > button { min-height:44px; font-size:11px; }
-  .native-app .cw-tactical .cw-battle-clock { min-height:22px; font-size:10px; }
-  .native-app .cw-tactical .cw-quick-sector select { min-height:28px; }
+  .cw-battle-overlay.cw-tactical .cw-battle-header { grid-template-columns:minmax(0,1fr) auto; padding:3px 8px; gap:4px; }
+  .cw-battle-overlay.cw-tactical .cw-battle-header-actions { grid-row:1; grid-column:2; }
+  .cw-battle-overlay.cw-tactical .cw-battle-header h2 { font-size:14px; margin:0; }
+  .cw-battle-overlay.cw-tactical .cw-battle-header > div:first-child > span,
+  .cw-battle-overlay.cw-tactical .cw-battle-eyebrow,
+  .cw-battle-overlay.cw-tactical .cw-battle-objective { display:none; }
+  .cw-battle-overlay.cw-tactical .cw-battle-header-actions button { min-width:44px; height:44px; }
+  .cw-battle-overlay.cw-tactical .cw-battle-stage { position:relative; grid-template-columns:min(24%, 180px) minmax(0,1fr); grid-template-rows:minmax(168px,1fr); overflow-y:auto; }
+  .cw-battle-overlay.cw-tactical .cw-formation-inspector { display:block; min-height:0; max-height:none; padding:5px; overflow:auto; }
+  .cw-battle-overlay.cw-tactical .cw-inspector-toggle { display:block; min-height:44px; width:100%; background:#25352f; color:#eee5d1; border:1px solid #849c91; }
+  .cw-battle-overlay.cw-tactical .cw-inspector-summary { display:grid; grid-template-columns:minmax(0,1fr); gap:4px; }
+  .cw-battle-overlay.cw-tactical .cw-inspector-details { display:none; position:static; padding:6px 0; overflow:visible; }
+  .cw-battle-overlay.cw-tactical .cw-formation-inspector[data-expanded="true"] .cw-inspector-details { display:block; }
+  .cw-battle-overlay.cw-tactical .cw-mobile-unit-summary { display:block; font-size:11px; margin:4px 0; }
+  .cw-battle-overlay.cw-tactical .cw-battle-zoom { padding:2px; gap:2px; }
+  .cw-battle-overlay.cw-tactical .cw-battle-zoom > button { min-width:44px; min-height:44px; padding:2px; font-size:11px; }
+  .cw-battle-overlay.cw-tactical .cw-battle-zoom > button span { display:none; }
+  .cw-battle-overlay.cw-tactical .cw-map-options { margin-left:auto; font-size:11px; }
+  .cw-battle-overlay.cw-tactical .cw-map-options > summary { display:flex; align-items:center; min-height:44px; padding:0 8px; border:1px solid #849c91; cursor:pointer; }
+  .cw-battle-overlay.cw-tactical .cw-map-options > div { position:absolute; right:4px; top:100%; z-index:12; padding:8px; background:#15201f; border:1px solid #849c91; }
+  .cw-battle-overlay.cw-tactical .cw-ridge-progress { max-height:60px; overflow:auto; margin:0; }
+  .cw-battle-overlay.cw-tactical .cw-ridge-progress[data-compact-mission] { max-height:none; overflow:visible; }
+  .cw-battle-overlay.cw-tactical .cw-battlefield-host { min-height:90px; }
+  .cw-battle-overlay.cw-tactical .cw-ridge-progress .cw-sector-strip { display:none; }
+  .cw-battle-overlay.cw-tactical .cw-objective-heading button { min-height:44px; }
+  .cw-battle-overlay.cw-tactical .cw-command-phase { display:none; }
+  .cw-battle-overlay.cw-tactical .cw-command-receipt { min-height:24px; padding:2px 8px; }
+  .cw-battle-overlay.cw-tactical .cw-command-receipt-copy > small { display:none; }
+  .cw-battle-overlay.cw-tactical .cw-battle-command-bar > button { min-height:44px; font-size:11px; }
+  .cw-battle-overlay.cw-tactical .cw-gettysburg-command-bar { grid-template-columns:repeat(6,minmax(0,1fr)) minmax(70px,110px); }
+  .cw-battle-overlay.cw-tactical .cw-battle-clock { grid-column:auto; min-height:44px; justify-content:center; gap:4px; padding:2px 6px; font-size:10px; }
+  .cw-battle-overlay.cw-tactical .cw-battle-clock strong { font-size:12px; }
+  .cw-battle-overlay.cw-tactical .cw-quick-sector select { min-height:44px; }
+  .cw-battle-overlay.cw-tactical .cw-command-receipt { padding-block:0; }
+  .cw-battle-overlay.cw-tactical .cw-gettysburg-command-bar[data-completed="true"] > button:not(.cw-battle-return) { display:none; }
+  .cw-battle-overlay.cw-tactical .cw-gettysburg-command-bar > .cw-battle-return { grid-column:1 / -1; justify-self:stretch; width:100%; }
+}
+
+.cw-compact-progress { display:none; }
+/* Put the live mission beside the map tools when a short window has the width. */
+@media (min-width: 650px) and (orientation:landscape) and (max-height:550px) {
+  .cw-battle-overlay.cw-tactical .cw-gettysburg-frame[data-completed="false"] {
+    grid-template-columns:minmax(0,1fr) minmax(152px,30%);
+    grid-template-rows:auto minmax(0,1fr);
+  }
+  .cw-battle-overlay.cw-tactical .cw-gettysburg-frame[data-completed="false"] > .cw-ridge-progress {
+    grid-row:1;
+    grid-column:2;
+    box-sizing:border-box;
+    max-height:48px;
+    padding:2px 6px;
+    border-block:0;
+    border-inline-start:1px solid #455651;
+  }
+  .cw-battle-overlay.cw-tactical .cw-gettysburg-frame[data-completed="false"] > .cw-ridge-progress[data-compact-mission] {
+    max-height:none;
+    padding:2px 4px;
+  }
+  .cw-battle-overlay.cw-tactical .cw-gettysburg-frame[data-completed="false"] > .cw-battlefield-host { grid-row:2; grid-column:1 / -1; }
+  .cw-battle-overlay.cw-tactical .cw-gettysburg-frame[data-completed="false"] .cw-objective-heading button { min-width:44px; padding:2px; }
+  .cw-battle-overlay.cw-tactical .cw-gettysburg-frame[data-completed="false"] .cw-objective-heading button span { display:none; }
+  .cw-battle-overlay.cw-tactical .cw-objective-heading .cw-full-objective { display:none; }
+  .cw-battle-overlay.cw-tactical .cw-objective-heading .cw-compact-progress { display:block; }
+}
+@media (min-width: 650px) and (max-width: 720px) and (orientation:landscape) and (max-height:550px) {
+  .cw-battle-overlay.cw-tactical .cw-battle-zoom > button { flex:0 0 44px; }
+  .cw-battle-overlay.cw-tactical :is(.cw-field-locator,.cw-map-options) > summary { padding-inline:5px; }
 }

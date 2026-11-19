@@ -41,6 +41,9 @@ assert.equal(saveCampaignCheckpoint(snap, { getItem: () => null, setItem() { thr
 assert.deepEqual(loadCampaignCheckpoints({ getItem: () => '{bad-json' }), []);
 assert.equal(nextPhasePreview(scene, { endsCampaign: true }, []), 'Campaign settlement');
 assert.equal(nextPhasePreview(scene, { next: 'fixture' }, [scene]), scene.title);
+assert.equal(nextPhasePreview({ endsCampaign: true }, {}, []), 'Campaign settlement');
+assert.match(nextPhasePreview({ id: 'vicksburg' }, { next: 'gettysburg_campaign_setup' }, []), /commanders available/);
+assert.match(nextPhasePreview({ id: 'richmond_evacuation' }, { next: 'appomattox_decision' }, []), /field engagement may come first/);
 
 const approx = (actual, expected, message) => assert.ok(Math.abs(actual - expected) < 1e-10, `${message}: ${actual} != ${expected}`);
 function reconcile(value) {

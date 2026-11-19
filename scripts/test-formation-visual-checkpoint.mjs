@@ -181,8 +181,8 @@ test('a restored pose respects changed presentation settings instead of forcing 
 
 test('all authored opening deployments, artillery anchors, and dormant reserves fit the same presentation format', () => {
   let checked = 0;
-  for (const scenarioId of Object.keys(BATTLE_ENGINE_CONFIGS)) for (const choiceId of ['option_a', 'option_b', 'option_c', 'option_d']) {
-    const engine = new CivilWarBattleEngine(scenarioId, { battleRulesVersion: 17 }, choiceId);
+  for (const [scenarioId, config] of Object.entries(BATTLE_ENGINE_CONFIGS)) for (const choiceId of Object.keys(config.postures)) {
+    const engine = new CivilWarBattleEngine(scenarioId, {}, choiceId);
     const formations = engine.snapshot({ presentation: true }).formations;
     const states = new Map(formations.map(formation => [formation.id, createFormationVisual(formation, formation.type === 'artillery' ? 1 : 32)]));
     const saved = json(createFormationVisualCheckpoint(formations, states, 0));
@@ -196,5 +196,5 @@ test('all authored opening deployments, artillery anchors, and dormant reserves 
     }
     checked += 1;
   }
-  assert.equal(checked, 44);
+  assert.equal(checked, 71);
 });

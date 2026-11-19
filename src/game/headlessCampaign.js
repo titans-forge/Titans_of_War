@@ -1,5 +1,6 @@
 import { createFreshCampaignState } from './campaignStorage.js';
 import { getCampaignScenarioContext } from './campaignScenarioContext.js';
+import { usesAssessedFieldConsequences } from './fieldResultConsequences.js';
 import { HISTORY_SCORE_CARD_VERSION, calculateCampaignScore, resolveChoiceScoreCard, resolveNextScenario, tickMetrics } from './simulationEngine.js';
 
 export const DEFAULT_MAX_DECISIONS = 80;
@@ -12,6 +13,14 @@ const CRISIS_LABELS = {
   hotspur: 'Hotspur Cabinet Crisis',
   fox: 'Fox Supply Crisis',
   wolf: 'Wolf Finance Crisis'
+};
+const FIELD_INTERLUDES = {
+  emancipation_cabinet_debate: { before: ['fredericksburg_winter_politics'], field: 'fredericksburg_field' },
+  chancellorsville_aftermath: { before: ['gettysburg_campaign_setup', 'gettysburg_with_jackson_setup'], field: 'vicksburg' },
+  chickamauga: { before: ['wilderness_opening'], field: 'missionary_ridge' },
+  wilderness: { before: ['new_market'], field: 'spotsylvania' },
+  cold_harbor: { before: ['atlanta_election_pressure'], field: 'kennesaw_mountain' },
+  richmond_evacuation: { before: ['appomattox_decision'], field: 'sailors_creek' },
 };
 
 export function getScenarioForState(state, scenarios) {
@@ -79,8 +88,9 @@ export function buildHistoryEntry(state, activeScenario, choice, ticked) {
 }
 
 // Derives a human-readable tag describing which routing path the campaign director took.
-function resolveDirectorRoute(activeScenario, choice, nextScenario, ticked) {
+function resolveDirectorRoute(activeScenario, choice, nextScenario, ticked, fieldInterlude) {
   if (!nextScenario) return 'end-of-campaign';
+  if (fieldInterlude?.field === nextScenario.id) return 'field-interlude';
   if (choice?.next && nextScenario.id === choice.next) return 'choice.next';
   if (activeScenario?.electionBranch) return `election-result:${nextScenario.id}`;
   if (nextScenario.crisisFor) return `cabinet-crisis:${nextScenario.crisisFor}`;
@@ -103,6 +113,7 @@ export function advanceCampaignTurn(state, activeScenario, choiceInput, scenario
 
   const rawTicked = tickMetrics(state, choice, successModifier, {
     skipTurnDecay: !!activeScenario?.interlude || !!activeScenario?.crisisFor,
+    settlementInterlude: !!activeScenario?.settlementInterlude,
     // Terminal scenarios (Peace Crisis, etc.) end the campaign on any
     // choice regardless of currentTurn so the player lands cleanly on the
     // final grade screen rather than being asked for further turns.
@@ -121,17 +132,35 @@ export function advanceCampaignTurn(state, activeScenario, choiceInput, scenario
     : rawTicked;
   const historyEntry = buildHistoryEntry(state, activeScenario, choice, ticked);
   const resolvedHistory = [...(state.history || []), historyEntry];
-  const nextScenario = ticked.gameOver
+  // The western interlude occupies the same turn as the pending eastern
+  // briefing. Recover the Jackson choice from the journal after save/restore.
+  const priorEasternOrder = activeScenario.id === 'vicksburg'
+    ? state.history?.findLast(entry => entry.scenarioId === 'chancellorsville_aftermath')
+    : null;
+  const routingChoice = priorEasternOrder?.choiceId === 'option_b'
+    ? { ...choice, next: 'gettysburg_with_jackson_setup' }
+    : choice;
+  const authoredNextScenario = ticked.gameOver
     ? null
     : resolveNextScenario(
       activeScenario,
-      choice,
+      routingChoice,
       ticked.currentTurn,
       scenarios,
       ticked.divergenceIndex,
       ticked.shards,
       resolvedHistory
     );
+  // A cabinet hearing interrupts the pending handoff without settling it.
+  const interludeSource = activeScenario.crisisFor
+    ? state.history?.findLast(entry => !entry.crisisFor)?.scenarioId
+    : activeScenario.id;
+  const interlude = FIELD_INTERLUDES[interludeSource];
+  const nextScenario = interlude?.before.includes(authoredNextScenario?.id)
+    && usesAssessedFieldConsequences(state, interlude.field)
+    && !resolvedHistory.some(entry => entry.scenarioId === interlude.field)
+    ? scenarios.find(scene => scene.id === interlude.field) || authoredNextScenario
+    : authoredNextScenario;
   const linearScenario = ticked.gameOver
     ? null
     : scenarios.find((scenario) => scenario.turn === ticked.currentTurn) || null;
@@ -142,7 +171,7 @@ export function advanceCampaignTurn(state, activeScenario, choiceInput, scenario
     ? null
     : (nextScenarioId ? nextScenario : (linearScenario || nextScenario || null));
 
-  const directorRoute = resolveDirectorRoute(activeScenario, choice, canonicalNextScenario, ticked);
+  const directorRoute = resolveDirectorRoute(activeScenario, routingChoice, canonicalNextScenario, ticked, interlude);
 
   const nextState = {
     ...clone(state),

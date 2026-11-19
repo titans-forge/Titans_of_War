@@ -30,14 +30,24 @@ export function withdrawalCommand(snapshot, choiceId) {
     const p=snapshot.thirdWinchester, c=BATTLE_ENGINE_CONFIGS.third_winchester;
     if (!p) return null;
     const covered=p.middleFieldHeld >= c.middleFieldHoldRequired || p.rearguardHeld >= c.rearguardHoldRequired;
-    return {title:covered ? 'Cover earned · Bring the screen home' : 'Cover needed before the final withdrawal',
-      progress:`Middle Field ${p.middleFieldHeld.toFixed(1)} / ${c.middleFieldHoldRequired} min · Rearguard ${p.rearguardHeld.toFixed(1)} / ${c.rearguardHoldRequired} min`,
-      detail:`Corridor ${Math.floor(p.escapedRatio*100)}% / 65% · Gordon or Wharton home: ${p.rearguardSurvived ? 'yes' : 'not yet'}`};
+    const coverProgress = Math.floor(100 * Math.max(p.middleFieldHeld / c.middleFieldHoldRequired, p.rearguardHeld / c.rearguardHoldRequired));
+    const escaped = Math.floor(p.escapedRatio * 100);
+    const final = Boolean(snapshot.outcome && snapshot.outcome !== 'undecided');
+    const coverTime = time => (Math.floor(time * 10) / 10).toFixed(1);
+    const coverLabel = covered ? 'Cover earned' : 'Cover incomplete';
+    const title = final ? `Withdrawal results · ${coverLabel}`
+      : covered ? 'Cover earned · Bring the screen home' : 'Cover needed before the final withdrawal';
+    const rearguard = p.rearguardSurvived ? 'yes' : final ? 'no' : 'not yet';
+    return {title, final,
+      compactProgress:`${covered ? 'Cover earned' : `Cover ${coverProgress}%`} · ${escaped}% / 65% out`,
+      progress:`Middle Field ${coverTime(p.middleFieldHeld)} / ${c.middleFieldHoldRequired} min · Rearguard ${coverTime(p.rearguardHeld)} / ${c.rearguardHoldRequired} min`,
+      detail:`${final ? 'Withdrawn in order' : 'Corridor'} ${escaped}% / 65% · Gordon or Wharton home: ${rearguard}`};
   }
   const army=snapshot.formations.filter(u=>u.side==='confederate');
   const initial=army.reduce((n,u)=>n+u.initialStrength,0);
   const escaped=army.filter(u=>u.withdrawn && u.withdrawalOrganized && !['routing','broken','surrendered'].includes(u.status)).reduce((n,u)=>n+u.strength,0)/Math.max(1,initial);
   const reserves=army.filter(u=>['texas-brigade','longstreet-first-corps'].includes(u.id));
   const state=u=>u.withdrawn ? u.withdrawalOrganized ? 'home in order' : 'escaped in disorder' : u.active ? ['routing','broken','surrendered'].includes(u.status) ? 'in disorder' : u.order === 'withdraw' || u.pendingCommand?.order === 'withdraw' ? 'withdrawing' : 'on field — needs an exit order' : u.participated ? 'lost from command' : u.arrivalBlocked ? 'arrival blocked — clear the area' : `due at ${u.arrivalTime}`;
-  return {title:'Account for the arriving reserves',progress:`Withdrawn in order ${Math.floor(escaped*100)}% / 65% of starting army`,detail:reserves.map(u=>`${u.name}: ${state(u)}`).join(' · ')};
+  const compactProgress = `${Math.floor(escaped * 100)}% / 65% out in order`;
+  return {title:'Account for the arriving reserves',compactProgress,progress:`Withdrawn in order ${Math.floor(escaped*100)}% / 65% of starting army`,detail:reserves.map(u=>`${u.name}: ${state(u)}`).join(' · ')};
 }

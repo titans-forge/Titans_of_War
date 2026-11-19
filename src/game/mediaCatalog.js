@@ -36,6 +36,22 @@ const LOCAL_ARCHIVE_PROVENANCE = {
   assetRoles: ['theater', 'tactical-underlay', 'chronicle'],
 };
 
+const ARCHIVAL_BRIEFING_MAP = {
+  kind: 'map',
+  geographicScope: 'battlefield-reference',
+  credit: 'Library of Congress, Geography and Map Division',
+  provenanceStatus: 'verified',
+  sourceInstitution: 'Library of Congress Geography and Map Division',
+  license: 'Public Domain',
+  historicalMedium: 'map',
+  assetRoles: ['card'],
+  useInApp: true,
+  cropFocus: { x: 0.5, y: 0.5 },
+  cropMode: 'contain',
+  theaterOpacity: 1,
+  overlayOpacity: 0,
+};
+
 const ASSETS = {
   battlefield_start_of_war: {
     src: '/images/cw_pictures/battlefield start of war.jpg',
@@ -424,18 +440,18 @@ const ASSETS = {
   fredericksburg_rappahannock_winter: {
     src: '/images/cw_pictures/battlefield3.jpg',
     kind: 'battlefield',
-    title: 'Fredericksburg Winter Camps — Rappahannock Line',
-    location: 'Fredericksburg, Virginia',
-    era: 'December 1862 - January 1863',
-    bestFor: ['fredericksburg_winter_politics'],
-    caption: 'After Fredericksburg, victory gives way to winter camps, burial flags, and the political labor of keeping the army fit for spring.',
+    title: 'Cannon on the Rappahannock Campaign Ground',
+    location: 'Virginia',
+    era: 'Contemporary photograph',
+    bestFor: [],
+    caption: 'A modern photograph of two cannon on a grassy battlefield.',
     credit: 'Contemporary battlefield photograph taken by the creator of Titans of War',
     provenanceStatus: 'verified',
     sourceInstitution: 'Titans Forge project archive',
     sourceUrl: 'https://github.com/JCapone83/Titans_of_War',
     license: 'CC BY 4.0 project media',
     historicalMedium: 'modern-photo',
-    useInApp: true,
+    useInApp: false,
     cropFocus: { x: 0.5, y: 0.45 },
     cropMode: 'wide',
     theaterOpacity: 0.9,
@@ -516,7 +532,7 @@ const ASSETS = {
     title: 'North Georgia Campaign — Approaches to Atlanta',
     location: 'North Georgia rail corridor',
     era: 'Summer 1864',
-    bestFor: ['atlanta_election_pressure', 'greensboro_convention'],
+    bestFor: ['atlanta_election_pressure'],
     caption: 'Temporary Western Theater artwork used for the march on Atlanta until a dedicated Atlanta or Cold Harbor replacement is selected.',
     credit: 'Contemporary battlefield photograph taken by the creator of Titans of War',
     provenanceStatus: 'verified',
@@ -535,11 +551,11 @@ const ASSETS = {
   atlanta_burning_grok: {
     src: '/images/cw_pictures/Burning of Atlanta.jpeg',
     kind: 'art',
-    title: 'Atlanta in Flames — Election Shock',
+    title: 'Atlanta in Flames — Campaign Illustration',
     location: 'Atlanta, Georgia',
-    era: 'September 1864',
+    era: '1864',
     bestFor: ['fall_of_atlanta'],
-    caption: 'Atlanta burns as Sherman\'s success reshapes Northern politics, Southern morale, and the last hope of changing the 1864 election clock.',
+    caption: 'An imagined view of fire and Union troops in Atlanta. The September briefing begins with the city’s rail link under threat and its fate still in play.',
     credit: 'AI-generated image created by the project author',
     provenanceStatus: 'verified',
     sourceInstitution: 'Titans Forge project archive',
@@ -553,6 +569,121 @@ const ASSETS = {
     theaterOpacity: 0.95,
     overlayOpacity: 0.32,
     promptSeed: 'Atlanta burning Sherman campaign 1864 city in flames generated theater art',
+  },
+
+  sailors_creek_card: {
+    src: '/images/battles/landmarks-sailors-creek-v1/sailors-creek-card.webp',
+    kind: 'art',
+    title: 'Hillsman Farm above Little Sailor’s Creek',
+    location: 'Amelia and Prince Edward counties, Virginia',
+    era: 'April 6, 1865',
+    bestFor: ['sailors_creek'],
+    caption: 'An AI-generated interpretation of the wet valley below Hillsman Farm. The view and positions are illustrative.',
+    credit: 'Created with OpenAI image generation for Titans Forge · 2026',
+    provenanceStatus: 'verified',
+    sourceInstitution: 'Titans Forge project archive',
+    sourceUrl: './images/battles/landmarks-sailors-creek-v1/sailors-creek-card.webp',
+    license: 'CC BY 4.0 project media, where rights exist',
+    historicalMedium: 'generated-art',
+    assetRoles: ['theater', 'chronicle'],
+    useInApp: true,
+    cropFocus: { x: 0.50, y: 0.50 },
+    cropMode: 'contain',
+    theaterOpacity: 0.95,
+    overlayOpacity: 0.27,
+    promptSeed: 'Overton–Hillsman House and the Little Sailor’s Creek floodplain in April 1865',
+  },
+
+  vicksburg_card: {
+    src: '/images/battles/landmarks-vicksburg-v1/vicksburg-card.webp',
+    kind: 'art',
+    title: 'The Railroad Redoubt above the cut',
+    location: 'Vicksburg, Mississippi',
+    era: 'May 22, 1863',
+    bestFor: ['vicksburg'],
+    caption: 'An AI-generated interpretation of the Railroad Redoubt. The relief, positions and distances are illustrative.',
+    credit: 'Created with OpenAI image generation for Titans Forge · 2026',
+    provenanceStatus: 'verified',
+    sourceInstitution: 'Titans Forge project archive',
+    sourceUrl: './images/battles/landmarks-vicksburg-v1/vicksburg-card.webp',
+    license: 'CC BY 4.0 project media, where rights exist',
+    historicalMedium: 'generated-art',
+    assetRoles: ['theater', 'chronicle'],
+    useInApp: true,
+    cropFocus: { x: 0.5, y: 0.5 },
+    cropMode: 'contain',
+    theaterOpacity: 0.95,
+    overlayOpacity: 0.27,
+    promptSeed: 'Railroad Redoubt and loess ravines at Vicksburg, May 22 1863',
+  },
+
+  kennesaw_card: {
+    src: '/images/battles/landmarks-kennesaw-v1/kennesaw-card.webp',
+    kind: 'art',
+    title: 'Earthworks on Cheatham Hill',
+    location: 'Cobb County, Georgia',
+    era: 'June 27, 1864',
+    bestFor: ['kennesaw_mountain'],
+    caption: 'An AI-generated interpretation of the approach to the Dead Angle at Kennesaw Mountain. The view and troop positions are illustrative.',
+    credit: 'Created with OpenAI image generation for Titans Forge · 2026',
+    provenanceStatus: 'verified',
+    sourceInstitution: 'Titans Forge project archive',
+    sourceUrl: './images/battles/landmarks-kennesaw-v1/kennesaw-card.webp',
+    license: 'CC BY 4.0 project media, where rights exist',
+    historicalMedium: 'generated-art',
+    assetRoles: ['theater', 'chronicle'],
+    useInApp: true,
+    cropFocus: { x: 0.5, y: 0.5 },
+    cropMode: 'contain',
+    theaterOpacity: 0.95,
+    overlayOpacity: 0.27,
+    promptSeed: 'Georgia clay and timber earthworks on Cheatham Hill at Kennesaw Mountain',
+  },
+
+  spotsylvania_card: {
+    src: '/images/battles/landmarks-spotsylvania-v1/spotsylvania-card.webp',
+    kind: 'art',
+    title: 'Earthworks at the Mule Shoe',
+    location: 'Spotsylvania County, Virginia',
+    era: 'May 12–13, 1864',
+    bestFor: ['spotsylvania'],
+    caption: 'An AI-generated interpretation of the rain-soaked Mule Shoe earthworks. Positions and distances are illustrative.',
+    credit: 'Created with OpenAI image generation for Titans Forge · 2026',
+    provenanceStatus: 'verified',
+    sourceInstitution: 'Titans Forge project archive',
+    sourceUrl: './images/battles/landmarks-spotsylvania-v1/spotsylvania-card.webp',
+    license: 'CC BY 4.0 project media, where rights exist',
+    historicalMedium: 'generated-art',
+    assetRoles: ['theater', 'chronicle'],
+    useInApp: true,
+    cropFocus: { x: 0.5, y: 0.51 },
+    cropMode: 'contain',
+    theaterOpacity: 0.95,
+    overlayOpacity: 0.27,
+    promptSeed: 'Rain-soaked earthworks at the Bloody Angle, Spotsylvania',
+  },
+
+  missionary_ridge_card: {
+    src: '/images/battles/landmarks-missionary-ridge-v1/missionary-ridge-card.webp',
+    kind: 'art',
+    title: 'Missionary Ridge from the west',
+    location: 'Chattanooga, Tennessee',
+    era: 'November 25, 1863',
+    bestFor: ['missionary_ridge'],
+    caption: 'An AI-generated interpretation of the western approach to Missionary Ridge. The relief and troop positions are illustrative.',
+    credit: 'Created with OpenAI image generation for Titans Forge · 2026',
+    provenanceStatus: 'verified',
+    sourceInstitution: 'Titans Forge project archive',
+    sourceUrl: './images/battles/landmarks-missionary-ridge-v1/missionary-ridge-card.webp',
+    license: 'CC BY 4.0 project media, where rights exist',
+    historicalMedium: 'generated-art',
+    assetRoles: ['theater', 'chronicle'],
+    useInApp: true,
+    cropFocus: { x: 0.52, y: 0.49 },
+    cropMode: 'contain',
+    theaterOpacity: 0.95,
+    overlayOpacity: 0.28,
+    promptSeed: 'Late autumn 1863 Missionary Ridge as seen from the west',
   },
 
   battlefield5_chattanooga: {
@@ -852,11 +983,11 @@ const ASSETS = {
   christmas_truce_winter: {
     src: '/images/cw_pictures/Christmas Truce.jpeg',
     kind: 'art',
-    title: 'Christmas Truce of 1862',
+    title: 'Winter on the Rappahannock',
     location: 'Rappahannock winter lines, Virginia',
     era: 'December 1862',
     bestFor: ['fredericksburg_winter_politics'],
-    caption: 'A winter truce scene frames the strange calm after Fredericksburg, when camps, politics, and the possibility of temporary humanity interrupted slaughter.',
+    caption: 'An imagined riverbank exchange between Union and Confederate soldiers during the winter after Fredericksburg.',
     credit: 'AI-generated image created by the project author',
     provenanceStatus: 'verified',
     sourceInstitution: 'Titans Forge project archive',
@@ -866,7 +997,7 @@ const ASSETS = {
     assetRoles: ['theater', 'chronicle'],
     useInApp: true,
     cropFocus: { x: 0.5, y: 0.34 },
-    cropMode: 'wide',
+    cropMode: 'contain',
     theaterOpacity: 0.94,
     overlayOpacity: 0.3,
     promptSeed: 'Christmas truce 1862 Civil War winter camps generated theater art',
@@ -945,8 +1076,8 @@ const ASSETS = {
     title: 'Jefferson Davis and Cabinet',
     location: 'Richmond, Virginia',
     era: '1862-1865',
-    bestFor: ['naval_technology', 'hotspur_cabinet_crisis'],
-    caption: 'Davis and his ministers frame the war as a sequence of cabinet fights over escalation, resources, and political survival.',
+    bestFor: ['naval_technology', 'hotspur_cabinet_crisis', 'gettysburg_recognition_crisis', 'election_1864_lincoln', 'election_1864_mcclellan', 'black_confederate_debate', 'greensboro_convention', 'southern_independence_1864'],
+    caption: 'An imagined Confederate cabinet meeting in wartime Richmond.',
     credit: 'AI-generated image created by the project author',
     provenanceStatus: 'verified',
     sourceInstitution: 'Titans Forge project archive',
@@ -968,8 +1099,8 @@ const ASSETS = {
     title: 'Davis and Lee — Late War Strategy Room',
     location: 'Richmond, Virginia',
     era: '1864',
-    bestFor: ['atlanta_election_pressure'],
-    caption: 'Davis and Lee weigh Atlanta, industrial survival, and the 1864 election clock as late-war strategy collapses into political crisis.',
+    bestFor: ['atlanta_election_pressure', 'atlanta_holds_october'],
+    caption: 'An imagined strategy meeting in Richmond as Confederate leaders weigh Atlanta’s railroads and the approaching 1864 election.',
     credit: 'AI-generated image created by the project author',
     provenanceStatus: 'verified',
     sourceInstitution: 'Titans Forge project archive',
@@ -988,18 +1119,18 @@ const ASSETS = {
   csa_victory_condition_grok: {
     src: '/images/cw_pictures/CSA Independence.jpeg',
     kind: 'art',
-    title: 'Confederate Independence Victory Condition',
+    title: 'Recognized Confederate Independence — Alternate History',
     location: 'Richmond, Virginia',
-    era: 'Alternate 1865',
+    era: 'Alternate 1863 or 1865',
     bestFor: ['gettysburg_recognition_crisis', 'southern_independence_1864'],
-    caption: 'Reserved result art for the rare full-independence ending: the hardest alternate-history line in the campaign.',
+    caption: 'An imagined public celebration in Richmond after Confederate independence is secured in an alternate campaign.',
     credit: 'AI-generated image created by the project author',
     provenanceStatus: 'verified',
     sourceInstitution: 'Titans Forge project archive',
     sourceUrl: 'https://github.com/JCapone83/Titans_of_War',
     license: 'CC BY 4.0 project media',
     historicalMedium: 'generated-art',
-    assetRoles: ['theater', 'chronicle'],
+    assetRoles: ['chronicle'],
     useInApp: true,
     cropFocus: { x: 0.5, y: 0.5 },
     cropMode: 'portrait',
@@ -1015,14 +1146,14 @@ const ASSETS = {
     location: 'Virginia peace line',
     era: 'Alternate 1865',
     bestFor: ['election_1864_mcclellan', 'southern_independence_1864'],
-    caption: 'Reserved result art for the McClellan victory route: an armistice and proposed constitutional settlement, not automatic Southern independence.',
+    caption: 'An imagined meeting between McClellan and Lee after a negotiated stand-down in the alternate campaign.',
     credit: 'AI-generated image created by the project author',
     provenanceStatus: 'verified',
     sourceInstitution: 'Titans Forge project archive',
     sourceUrl: 'https://github.com/JCapone83/Titans_of_War',
     license: 'CC BY 4.0 project media',
     historicalMedium: 'generated-art',
-    assetRoles: ['theater', 'chronicle'],
+    assetRoles: ['chronicle'],
     useInApp: true,
     cropFocus: { x: 0.5, y: 0.48 },
     cropMode: 'wide',
@@ -1037,7 +1168,7 @@ const ASSETS = {
     title: 'Lee at Fredericksburg — Before the Battle',
     location: 'Fredericksburg, Virginia',
     era: 'December 1862',
-    bestFor: ['fredericksburg_winter_politics'],
+    bestFor: ['fredericksburg_field'],
     caption: 'Lee stands resolute before Fredericksburg, commanding the heights above the Rappahannock as Northern columns prepare their assault.',
     credit: 'AI-generated image created by the project author',
     provenanceStatus: 'verified',
@@ -1059,9 +1190,9 @@ const ASSETS = {
     kind: 'art',
     title: 'Lincoln and Cabinet',
     location: 'Washington, D.C.',
-    era: 'April 1861',
-    bestFor: ['radical_republican_crisis', 'greensboro_convention'],
-    caption: 'Lincoln and his cabinet face the political consequences of the Fort Sumter crisis as mobilization, restraint, and border-state pressure collide.',
+    era: 'Civil War',
+    bestFor: ['radical_republican_crisis', 'emancipation_cabinet_debate'],
+    caption: 'An imagined meeting between Abraham Lincoln and his cabinet during the Civil War.',
     credit: 'AI-generated image created by the project author',
     provenanceStatus: 'verified',
     sourceInstitution: 'Titans Forge project archive',
@@ -1149,7 +1280,7 @@ const ASSETS = {
     title: 'Appomattox Court House — Final Days',
     location: 'Appomattox, Virginia',
     era: 'April 1865',
-    bestFor: ['greensboro_convention', 'appomattox_decision'],
+    bestFor: ['appomattox_decision'],
     caption: "Lee's remaining columns face the final decision: surrender with honor or dissolution.",
     credit: 'Contemporary photograph / reenactment taken by the creator of Titans of War',
     provenanceStatus: 'verified',
@@ -1185,6 +1316,54 @@ const ASSETS = {
     theaterOpacity: 0.85,
     overlayOpacity: 0.3,
     promptSeed: 'Civil War 1861 battlefield sepia period illustration',
+  },
+
+  map_fort_sumter_foster: {
+    ...ARCHIVAL_BRIEFING_MAP,
+    src: '/images/briefing-maps/fort-sumter-foster.webp',
+    title: 'Fort Sumter and the Besieging Batteries',
+    location: 'Charleston Harbor, South Carolina',
+    era: 'April 12–13, 1861 depicted. Published in 1866.',
+    bestFor: ['fort_sumter'],
+    caption: 'John G. Foster’s report locates Fort Sumter and the batteries at Cummings Point, Fort Moultrie, and Fort Johnson during the opening bombardment. This scan shows the map plate from the 1866 congressional report.',
+    mapScopeLabel: 'Charleston Harbor · April 12–13, 1861',
+    sourceUrl: 'https://www.loc.gov/item/99448835/',
+  },
+
+  map_first_manassas_1861: {
+    ...ARCHIVAL_BRIEFING_MAP,
+    src: '/images/briefing-maps/first-manassas-1861.webp',
+    title: 'First Bull Run at 4 p.m.',
+    location: 'Manassas, Virginia',
+    era: 'July 21, 1861',
+    bestFor: ['manassas_battlefield'],
+    caption: 'This 1861 map depicts the two armies at 4 p.m. on July 21. It marks the Stone Bridge, Warrenton Turnpike, Henry house, and the ground around Bull Run.',
+    mapScopeLabel: 'First Manassas · July 21, 1861',
+    sourceUrl: 'https://www.loc.gov/item/99439191/',
+  },
+
+  map_second_manassas_warren: {
+    ...ARCHIVAL_BRIEFING_MAP,
+    src: '/images/briefing-maps/second-manassas-warren.webp',
+    title: 'Second Manassas Troop Movements',
+    location: 'Prince William County, Virginia',
+    era: 'August 30, 1862 depicted. Surveyed in 1878.',
+    bestFor: ['second_manassas'],
+    caption: 'G. K. Warren’s map reconstructs the fighting on August 30, the day after this briefing begins. It shows the unfinished railroad and Bull Run, with later annotations for August 29 movements.',
+    mapScopeLabel: 'Second Manassas · August 30, 1862',
+    sourceUrl: 'https://www.loc.gov/item/99439182/',
+  },
+
+  map_gettysburg_bachelder: {
+    ...ARCHIVAL_BRIEFING_MAP,
+    src: '/images/briefing-maps/gettysburg-bachelder.webp',
+    title: 'Gettysburg Battlefield — John B. Bachelder',
+    location: 'Gettysburg, Pennsylvania',
+    era: 'July 1–3, 1863 depicted',
+    bestFor: ['gettysburg_decision', 'gettysburg_with_jackson'],
+    caption: 'John B. Bachelder’s bird’s-eye map shows the town, the Round Tops, Cemetery Hill, and Culp’s Hill. The positions represent the historical battle of July 1–3, 1863.',
+    mapScopeLabel: 'Gettysburg battlefield · July 1–3, 1863',
+    sourceUrl: 'https://www.loc.gov/item/2007630423/',
   },
 
   map_fort_sumter_charleston_harbor: {
@@ -1286,29 +1465,6 @@ const ASSETS = {
     promptSeed: 'Shiloh surprise attack dawn at Pittsburg Landing painterly theater image',
   },
 
-  shiloh_pittsburg_landing_theater_flux2: {
-    src: '/images/cw_pictures/shiloh_pittsburg_landing_theater_flux2.jpg',
-    kind: 'art',
-    title: 'Shiloh at Pittsburg Landing — Flux2 Theater Render',
-    location: 'Shiloh / Pittsburg Landing, Tennessee',
-    era: 'April 1862',
-    bestFor: ['shiloh_army_of_tennessee'],
-    caption: 'Generated theater art emphasizing the wooded shock of Shiloh, the pressure toward Pittsburg Landing, and the Western Theater stakes of command cohesion.',
-    credit: 'Generated by Titans Forge with local FLUX.2 Klein 9B',
-    provenanceStatus: 'verified',
-    sourceInstitution: 'Titans Forge local image engine',
-    sourceUrl: 'https://github.com/JCapone83/Titans_of_War/blob/main/docs/image-generation-pipeline.md',
-    license: 'Excluded from public release; local FLUX.2 Klein 9B non-commercial model license',
-    historicalMedium: 'generated-art',
-    assetRoles: ['theater', 'chronicle'],
-    useInApp: false,
-    cropFocus: { x: 0.5, y: 0.46 },
-    cropMode: 'wide',
-    theaterOpacity: 0.94,
-    overlayOpacity: 0.32,
-    promptSeed: 'Shiloh wooded assault Pittsburg Landing river steamers generated theater art',
-  },
-
   petersburg_ai_gen: {
     src: '/images/cw_pictures/battle of petersburg.jpeg',
     kind: 'art',
@@ -1361,8 +1517,8 @@ const ASSETS = {
     title: 'Richmond CT Parade — March 1865',
     location: 'Richmond, Virginia',
     era: 'March 1865',
-    bestFor: ['black_confederate_debate'],
-    caption: 'A late-war Richmond parade frames the political fight over recruiting Colored Troops and the limits of Confederate manpower policy.',
+    bestFor: [],
+    caption: 'An imagined military parade created for the project archive.',
     credit: 'AI-generated image created by the project author with Grok Imagine',
     provenanceStatus: 'verified',
     sourceInstitution: 'Titans Forge project archive',
@@ -1370,7 +1526,7 @@ const ASSETS = {
     license: 'CC BY 4.0 project media',
     historicalMedium: 'generated-art',
     assetRoles: ['theater', 'chronicle'],
-    useInApp: true,
+    useInApp: false,
     cropFocus: { x: 0.5, y: 0.66 },
     cropMode: 'wide',
     theaterOpacity: 0.95,
@@ -1401,36 +1557,13 @@ const ASSETS = {
     promptSeed: 'Richmond burns evacuation generated theater art',
   },
 
-  richmond_evacuation_theater_flux2: {
-    src: '/images/cw_pictures/richmond_evacuation_theater_flux2.jpg',
-    kind: 'art',
-    title: 'Richmond Evacuation — Flux2 Theater Render',
-    location: 'Richmond, Virginia',
-    era: 'April 1865',
-    bestFor: ['richmond_evacuation'],
-    caption: 'Generated theater art of Confederate columns leaving Richmond through smoke, fires, and civilian traffic as the capital collapses behind them.',
-    credit: 'Generated by Titans Forge with local FLUX.2 Klein 9B',
-    provenanceStatus: 'verified',
-    sourceInstitution: 'Titans Forge local image engine',
-    sourceUrl: 'https://github.com/JCapone83/Titans_of_War/blob/main/docs/image-generation-pipeline.md',
-    license: 'Excluded from public release; local FLUX.2 Klein 9B non-commercial model license',
-    historicalMedium: 'generated-art',
-    assetRoles: ['theater', 'chronicle'],
-    useInApp: false,
-    cropFocus: { x: 0.54, y: 0.48 },
-    cropMode: 'wide',
-    theaterOpacity: 0.94,
-    overlayOpacity: 0.32,
-    promptSeed: 'Richmond evacuation fires civilians wagons night march generated theater art',
-  },
-
   appomattox_ai_gen: {
     src: '/images/cw_pictures/Appomattox.jpeg',
     kind: 'art',
     title: 'Appomattox — AI Theater Render',
     location: 'Appomattox Court House, Virginia',
     era: 'April 1865',
-    bestFor: ['appomattox_decision', 'greensboro_convention'],
+    bestFor: ['appomattox_decision'],
     caption: 'Primary theater image for the final surrender settlement and the last political choices around Confederate collapse.',
     credit: 'AI-generated image created by the project author',
     provenanceStatus: 'verified',
@@ -1817,16 +1950,22 @@ const SCENARIO_ASSET_MAP = {
   potomac_leverage_campaign:'battlefield_md_campaign',
   antietam:                 'antietam_thulstrup_1887',
   emancipation_cabinet_debate:'lincoln_cabinet_grok',
-  fredericksburg_winter_politics:'lee_at_fredericksburg',
+  fredericksburg_field:      'lee_at_fredericksburg',
+  fredericksburg_winter_politics:'christmas_truce_winter',
   chancellorsville_maneuver:'lee_jackson_last_meeting',
   chancellorsville_aftermath:'battlefield_jackson_flank_march',
   gettysburg_campaign_setup:'battlefield4',
   gettysburg_with_jackson_setup:'x2_pennsylvania_campaign',
   gettysburg_with_jackson:  'gettysburg_thulstrup_1887',
-  gettysburg_recognition_crisis:'csa_victory_condition_grok',
+  gettysburg_recognition_crisis:'davis_cabinet_grok',
   susquehanna_offensive:    'battlefield4',
   gettysburg_decision:      'gettysburg_thulstrup_1887',
   chickamauga:              'chickamauga_close_battle_grok',
+  missionary_ridge:         'missionary_ridge_card',
+  spotsylvania:            'spotsylvania_card',
+  kennesaw_mountain:       'kennesaw_card',
+  vicksburg:               'vicksburg_card',
+  sailors_creek:           'sailors_creek_card',
   atlanta_election_pressure:'davis_lee_war_room',
   atlanta_holds_october:    'davis_lee_war_room',
   fall_of_atlanta:          'atlanta_burning_grok',
@@ -1835,17 +1974,17 @@ const SCENARIO_ASSET_MAP = {
   wilderness:               'grant_meade_overland_grok',
   cold_harbor:             'grant_overland_command',
   new_market:               'new_market_cadets_grok',
-  black_confederate_debate: 'richmond_ct_parade_grok',
+  black_confederate_debate: 'davis_cabinet_grok',
   third_winchester:         'third_winchester_grok',
   cedar_creek:              'cedar_creek_reenactment',
-  election_1864_lincoln:    'lincoln_cabinet_grok',
-  election_1864_mcclellan:  'mcclellan_armistice_grok',
+  election_1864_lincoln:    'davis_cabinet_grok',
+  election_1864_mcclellan:  'davis_cabinet_grok',
   petersburg_siege:         'petersburg_ai_gen',
   five_forks:               'five_forks_generated_battle',
   richmond_evacuation:      'richmond_burns_grok',
-  greensboro_convention:    'davis_lee_war_room',
+  greensboro_convention:    'davis_cabinet_grok',
   appomattox_decision:      'appomattox_ai_gen',
-  southern_independence_1864:'davis_lee_war_room',
+  southern_independence_1864:'davis_cabinet_grok',
 };
 
 const SCENARIO_TACTICAL_ASSET_MAP = {
@@ -1876,6 +2015,14 @@ const SCENARIO_TACTICAL_ASSET_MAP = {
   wilderness: 'map_wilderness',
 };
 
+const SCENARIO_BRIEFING_ASSET_MAP = {
+  fort_sumter: 'map_fort_sumter_foster',
+  manassas_battlefield: 'map_first_manassas_1861',
+  second_manassas: 'map_second_manassas_warren',
+  gettysburg_decision: 'map_gettysburg_bachelder',
+  gettysburg_with_jackson: 'map_gettysburg_bachelder',
+};
+
 /**
  * Scenario-specific framing adjustments layered on top of the canonical asset metadata.
  * This keeps theater and tactical placement sourced from one shared catalog instead of
@@ -1890,11 +2037,17 @@ const SCENARIO_MEDIA_OVERRIDES = {
   seven_days: { tacticalView: { zoom: 1.08 } },
   antietam: { tacticalView: { zoom: 1.16 } },
   fredericksburg_winter_politics: { tacticalView: { zoom: 1.04 } },
-  black_confederate_debate: { tacticalView: { zoom: 1.14 } },
+  black_confederate_debate: {
+    caption: 'An imagined Confederate cabinet meeting in Richmond provides context for the late-war debate over Black enlistment.',
+    tacticalView: { zoom: 1.14 },
+  },
   chancellorsville_aftermath: { tacticalView: { zoom: 1.08 } },
   gettysburg_campaign_setup: { tacticalView: { zoom: 1.08 } },
   gettysburg_with_jackson_setup: { tacticalView: { zoom: 1.08 } },
   gettysburg_with_jackson: { tacticalView: { zoom: 1.08 } },
+  gettysburg_recognition_crisis: {
+    caption: 'An imagined Richmond cabinet session sets the scene as Davis weighs the Anglo-French offer of an armistice in this alternate July 1863.',
+  },
   chickamauga: { tacticalView: { zoom: 1.1 } },
   atlanta_election_pressure: { tacticalView: { zoom: 1.04 } },
   first_winchester: { tacticalView: { zoom: 1.08 } },
@@ -1903,9 +2056,21 @@ const SCENARIO_MEDIA_OVERRIDES = {
   cedar_creek: { tacticalView: { zoom: 1.08 } },
   wilderness: { tacticalView: { zoom: 1.1 } },
   cold_harbor: { tacticalView: { zoom: 1.12 } },
+  election_1864_lincoln: {
+    caption: 'An imagined Richmond cabinet meeting provides context for Davis’s response to Lincoln’s reelection.',
+  },
+  election_1864_mcclellan: {
+    caption: 'An imagined Richmond cabinet meeting provides context as Davis weighs negotiations after McClellan’s victory in this alternate election.',
+  },
   petersburg_siege: { tacticalView: { zoom: 1.14 } },
   five_forks: { tacticalView: { zoom: 1.06 } },
+  greensboro_convention: {
+    caption: 'An imagined wartime cabinet meeting in Richmond provides context for the Confederate government’s later decisions at Greensboro.',
+  },
   appomattox_decision: { tacticalView: { zoom: 1.12 } },
+  southern_independence_1864: {
+    caption: 'An imagined wartime cabinet meeting in Richmond provides context for Davis’s search for a settlement after the capital’s evacuation.',
+  },
 };
 
 // Scope is reviewed separately from rights/provenance. Legacy asset IDs and
@@ -1978,29 +2143,53 @@ export function resolveScenarioMediaSet(scenarioId) {
     },
     scenarioId,
   };
+  const briefingAsset = MEDIA_CATALOG[SCENARIO_BRIEFING_ASSET_MAP[scenarioId]] || plannedTacticalMap;
+  const briefingMap = briefingAsset?.useInApp
+    && briefingAsset.provenanceStatus === 'verified'
+    && briefingAsset.geographicScope === 'battlefield-reference'
+    && briefingAsset.bestFor.includes(scenarioId)
+    ? { ...briefingAsset, showGameOverlay: false, scenarioId }
+    : null;
 
   return {
     theater,
     tacticalMap: plannedTacticalMap?.useInApp && plannedTacticalMap.provenanceStatus === 'verified'
       ? plannedTacticalMap : proceduralTacticalMap,
+    briefingMap,
     plannedTacticalMap,
     card: null,
   };
 }
 
-export function resolveCampaignEndingMedia(state) {
-  const history = Array.isArray(state?.history) ? state.history : [];
-  const lastEntry = history[history.length - 1] || null;
-  const endingKey = `${lastEntry?.scenarioId || ''}:${lastEntry?.choiceId || ''}`;
-  const endingAssetMap = {
-    'election_1864_mcclellan:option_d': 'mcclellan_armistice_grok',
-    'southern_independence_1864:option_a': 'csa_victory_condition_grok',
-    'southern_independence_1864:option_b': 'csa_victory_condition_grok',
-    'southern_independence_1864:option_c': 'mcclellan_armistice_grok',
-  };
-  const assetKey = endingAssetMap[endingKey] || null;
+const ENDING_ART = {
+  'gettysburg_recognition_crisis:option_a': {
+    assetKey: 'csa_victory_condition_grok',
+    title: 'Recognized Independence after Gettysburg — Alternate History',
+    era: 'Alternate July 1863',
+    caption: 'An imagined celebration in Richmond after Davis accepts the Anglo-French armistice and secures recognized independence in this alternate July 1863.',
+  },
+  'election_1864_mcclellan:option_d': {
+    assetKey: 'mcclellan_armistice_grok',
+    caption: 'An imagined meeting between McClellan and Lee after conditional reunion is agreed in this alternate campaign. McClellan pledges to submit the Concurrent Majority amendment. Ratification remains open.',
+  },
+  'southern_independence_1864:option_a': {
+    assetKey: 'csa_victory_condition_grok',
+    era: 'Alternate April 1865',
+    caption: 'An imagined celebration in Richmond after Davis obtains an internationally recognized settlement for independence in this alternate campaign.',
+  },
+  'southern_independence_1864:option_c': {
+    assetKey: 'mcclellan_armistice_grok',
+    title: 'McClellan’s Armistice and the Proposed Amendment — Alternate History',
+    caption: 'An imagined meeting between McClellan and Lee after the April armistice in this alternate campaign. The proposed Concurrent Majority amendment awaits congressional and state action.',
+  },
+};
 
-  return assetKey ? normalizeMediaAsset(assetKey, ASSETS[assetKey] || ASSETS.unknown) : null;
+export function resolveCampaignEndingMedia(state) {
+  if (state?.gameOver !== true || state.nextScenarioId || state.statusMessage?.startsWith('DEFEAT:')) return null;
+  const lastEntry = Array.isArray(state.history) ? state.history.at(-1) : null;
+  const ending = ENDING_ART[`${lastEntry?.scenarioId}:${lastEntry?.choiceId}`];
+  if (!ending) return null;
+  return { ...MEDIA_CATALOG[ending.assetKey], ...ending };
 }
 
 /** Full catalog — exported for tooling (validator, benchmark reports, etc.) */

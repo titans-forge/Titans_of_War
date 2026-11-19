@@ -230,6 +230,25 @@ test('enemy, missing, inactive, routed, broken, surrendered and withdrawn select
   } finally { warm.close(); }
 });
 
+test('a restored field chooses an active formation if both saved and default selections have withdrawn', async () => {
+  const defaultId = battleFor('gettysburg').defaultSelection;
+  const warm = await wrapper({ selectedId: 'pettigrew-division' });
+  try {
+    frame(warm.scene);
+    const saved = clone(warm.ref.current.checkpoint());
+    for (const unit of saved.state.state) {
+      if ([defaultId, 'pettigrew-division'].includes(unit.id)) {
+        unit.active = false;
+        unit.withdrawn = true;
+      }
+    }
+    const remaining = saved.state.state.find(unit => unit.side === 'confederate' && unit.active);
+    assert.ok(remaining);
+    const cold = await encounter(saved);
+    try { assert.equal(cold.field.props.selectedId, remaining.id); } finally { cold.react.close(); }
+  } finally { warm.close(); }
+});
+
 test('invalid camera falls back independently of valid selection and hostile accessors never execute', async () => {
   const warm = await wrapper({ selectedId: 'pettigrew-division' });
   try {

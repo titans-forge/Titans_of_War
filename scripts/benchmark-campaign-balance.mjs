@@ -30,7 +30,7 @@ for(const difficulty of ['story','standard'])for(let seed=1861;seed<1885;seed++)
   const choice=proposer==='adaptive'?[...legal].sort((a,b)=>utility(state,expectedMetrics(b))-utility(state,expectedMetrics(a)))[0]:legal.find(c=>c.proposer===proposer)||legal[0];
   const allocation=proposer==='adaptive'?getRecoveryOptions(state).filter(o=>o.available).sort((a,b)=>(utility(state,b.deltas)-(b.id==='emergency'?1.5:0))-(utility(state,a.deltas)-(a.id==='emergency'?1.5:0)))[0]?.id:state.metrics.foodSupply<30?'emergency':state.metrics.munitions<40?'purchase':'none';
   state=selectRecoveryAllocation(state,allocation||'none');
-  const battle=battleForScenario(scene,state);let modifier=0,field=null;
+  const battle=battleForScenario(scene,state,choice.id);let modifier=0,field=null;
   if(battle){state=commitRecoveryAllocation(state);field=delegateBattle(state,battle,choice.id);state=applyBattleResolution(state,field);modifier=battleChoiceSuccessModifier(battle,choice.id,field.result);}
   const result=advanceCampaignTurn(state,scene,choice,STATIC_SCENARIOS,modifier);state=result.state;
   steps.push({scenario:scene.id,choice:choice.id,crisis:scene.crisisFor||null,battle:field?.result||null,metrics:state.metrics});

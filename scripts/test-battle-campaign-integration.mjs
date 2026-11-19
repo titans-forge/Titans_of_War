@@ -132,10 +132,22 @@ try {
       assert.equal(resumed.state.pendingDebrief, null);
       assert.deepEqual(resumed.state.history.at(-1).battleResult, JSON.parse(JSON.stringify(returned.history.at(-1).battleResult)));
       const authored = resolveChoiceScoreCard(scenarioId, choice);
+      const field = advanced.historyEntry.battleResult;
+      // Assessed missions replace unearned campaign bonuses. Older field
+      // editions still add the complete authored card to the field score.
+      const missionMissed = field.fieldResultConsequencesVersion && advanced.historyEntry.choiceSucceeded === false;
+      const expectedCard = { ...authored };
+      if (missionMissed) {
+        expectedCard.tactical = Math.min(0, expectedCard.tactical || 0);
+        if (scenarioId !== 'third_winchester' || choice.id !== 'option_c') {
+          expectedCard.strategic = Math.min(0, expectedCard.strategic || 0);
+        }
+      }
+      expectedCard.tactical = (expectedCard.tactical || 0) + field.tacticalScore;
       assert.deepEqual(
         advanced.historyEntry.scoreCard,
-        { ...authored, tactical: (authored.tactical || 0) + battleState.battleCampaign.results[scenarioId].tacticalScore },
-        `${battle.id}:${choice.id} field grading must preserve the complete authored scorecard`,
+        expectedCard,
+        `${battle.id}:${choice.id} must add field credit once and award mission credit only under its settlement policy`,
       );
       assert.deepEqual(choiceScoreCard(advanced.historyEntry), advanced.historyEntry.scoreCard, 'lookup must not add the field bonus twice');
       assert.notEqual(advanced.nextScenario?.id, scenarioId, `${battle.id}:${choice.id} must return to the campaign instead of looping`);

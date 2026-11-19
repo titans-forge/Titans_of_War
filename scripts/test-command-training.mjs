@@ -4,6 +4,18 @@ import {CommandTrainingEngine,COMMAND_LESSONS,TRAINING_A,TRAINING_B,TRAINING_FOE
 import {previewGroupOrder,confirmGroupOrder} from '../src/battle/groupOrders.js';
 import {CivilWarBattleEngine} from '../src/battle/civilWarEngine.js';
 import {createFormationVisual,updateFormationVisual} from '../src/battle/formationVisualState.js';
+import {COMMAND_TRAINING_KEY,readTrainingLesson,saveTrainingLesson} from '../src/battle/commandTrainingProgress.js';
+test('training progress returns to the saved lesson by stable identity and tolerates invalid storage',()=>{
+ const data=new Map(),storage={getItem:key=>data.get(key),setItem:(key,value)=>data.set(key,value)};
+ assert.equal(readTrainingLesson(COMMAND_LESSONS,storage),0);
+ saveTrainingLesson(COMMAND_LESSONS[2],storage);
+ assert.equal(readTrainingLesson(COMMAND_LESSONS,storage),2);
+ assert.equal(readTrainingLesson([...COMMAND_LESSONS].reverse(),storage),COMMAND_LESSONS.length-3);
+ data.set(COMMAND_TRAINING_KEY,'retired-lesson');
+ assert.equal(readTrainingLesson(COMMAND_LESSONS,storage),0);
+ assert.doesNotThrow(()=>saveTrainingLesson(COMMAND_LESSONS[2],{setItem(){throw new Error('blocked');}}));
+ assert.equal(readTrainingLesson(COMMAND_LESSONS,{getItem(){throw new Error('blocked');}}),0);
+});
 const run=(e,n=40)=>{for(let i=0;i<n/.05;i++)e.tick(.05);};
 for(const lesson of COMMAND_LESSONS)test(`training ${lesson.id} requires action and completes through real commands`,()=>{
  const idle=new CommandTrainingEngine(lesson.id);run(idle,25);assert.equal(idle.training.complete,false,'time alone cannot complete the exercise');

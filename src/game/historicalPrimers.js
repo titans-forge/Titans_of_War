@@ -179,6 +179,28 @@ export const HISTORICAL_PRIMERS = {
     relatedScenarios: ['antietam', 'seven_days', 'fredericksburg_winter_politics', 'wilderness', 'petersburg_siege'],
   },
 
+  sailors_creek_retreat: {
+    id: 'sailors_creek_retreat',
+    topic: 'Sailor’s Creek — The Retreat Breaks Apart',
+    summary: 'On April 6, 1865, Union forces cut off nearly a quarter of Lee’s retreating army near Sailor’s Creek. Three separate actions took place at Hillsman Farm, Marshall’s Crossroads and Lockett Farm. Ewell and seven other Confederate generals were captured. Lee surrendered the Army of Northern Virginia three days later at Appomattox Court House. The Overton–Hillsman House served as a field hospital for soldiers from both armies.',
+    period_voice: 'Philip Sheridan reported his victory to Grant and predicted that continued pressure could force Lee to surrender. When that message reached Abraham Lincoln, he urged the commanders to continue.',
+    power_analysis: 'The army’s strength on paper mattered less once its formations lost contact. Union infantry and cavalry separated parts of the retreating column. Many men and officers survived the fighting only to be taken prisoner.',
+    complexity_note: 'The game concentrates on the Hillsman Farm sector and uses representative formations. Its local aid route and West Road exit are alternate objectives. The Overton–Hillsman House marks the historical hospital, and the final campaign decision still takes place at Appomattox.',
+    sourceNotes: 'National Park Service, Sailor’s Creek battle detail VA093. Virginia Department of Conservation and Recreation, Sailor’s Creek Battlefield State Park. Virginia Department of Historic Resources, Twilight of the Civil War.',
+    relatedScenarios: ['sailors_creek', 'appomattox_decision'],
+  },
+
+  vicksburg_siege: {
+    id: 'vicksburg_siege',
+    topic: 'Vicksburg — An Assault Becomes a Siege',
+    summary: 'On May 22, 1863, Union troops briefly penetrated the Railroad Redoubt, which overlooked the Southern Railroad of Mississippi. Waul’s Texas Legion helped retake the position. Union attacks elsewhere along the defenses also failed, and Grant shifted to siege. Civilians took shelter in caves dug into the hillsides as the bombardment continued. Pemberton surrendered Vicksburg on July 4, and Port Hudson fell five days later.',
+    period_voice: 'In her memoir My Cave Life in Vicksburg, Mary Loughborough remembered living in a hand-dug shelter with seats and enough room to stand. The damp earth made even a comparatively spacious cave uncomfortable.',
+    power_analysis: 'Vicksburg’s bluffs guarded the Mississippi. Once Vicksburg and Port Hudson fell, the Union controlled the river and the Confederacy was divided. A local defense could preserve troops and supplies while the wider siege tightened.',
+    complexity_note: 'The field covers one small part of the May 22 assault. The Interior Line is an alternate game position. Its result changes the campaign’s resource ledger, while the historical record of the siege stays in the briefing.',
+    sourceNotes: 'Vicksburg National Military Park, Railroad Redoubt, Second Assault on the Vicksburg Defenses, Cave Life, and Troops in the Campaign, Siege, and Defense of Vicksburg.',
+    relatedScenarios: ['vicksburg'],
+  },
+
   army_technology_advancement: {
     id: 'army_technology_advancement',
     topic: 'Army Technology — Rifles, Trenches, Telegraphs, and the Tactical Lag',

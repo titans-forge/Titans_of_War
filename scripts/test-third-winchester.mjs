@@ -388,7 +388,7 @@ try {
     assert.equal(engine.thirdWinchester.middleFieldHeld, 1, 'one remaining defender cannot accumulate a two-formation objective');
   });
 
-  await test('begin/resume, destination confirmation and objective tracker share the ordered overlay stack', () => {
+  await test('desktop keeps the ordered field overlay and compact tactical views dock Move confirmation', () => {
     const source = readFileSync(new URL('../src/components/CivilWarBattleEncounter.jsx', import.meta.url), 'utf8');
     const css = readFileSync(new URL('../src/battle/battleUsability.css', import.meta.url), 'utf8');
     const start = source.indexOf('<div className="cw-field-overlays">');
@@ -396,13 +396,19 @@ try {
     assert.ok(start >= 0 && footer > start);
     const overlay = source.slice(start, footer);
     const begin = overlay.indexOf('className="cw-begin-battle"');
-    const destination = overlay.indexOf('className="cw-destination-confirm"');
+    const destination = overlay.indexOf('{!dockDestination && destinationConfirmation}');
     const status = overlay.indexOf('className="cw-field-status"');
     assert.ok(begin >= 0 && destination > begin && status > destination);
+    const commandBar = source.slice(footer, source.indexOf('</footer>', footer));
+    assert.match(commandBar, /\{dockDestination && destinationConfirmation\}/);
+    assert.match(commandBar, /tactical && !\(dockDestination && destination\)/);
+    assert.match(source, /const dockDestination = compact && tactical;/);
+    assert.match(source, /const destinationConfirmation = destination && \(\s*<div className="cw-destination-confirm"/);
     assert.match(css, /\.cw-field-overlays\s*\{[^}]*display:\s*flex;[^}]*flex-direction:\s*column;/);
     for (const selector of ['cw-field-status', 'cw-begin-battle', 'cw-destination-confirm']) {
       assert.match(css, new RegExp(`\\.cw-field-overlays \\.${selector}\\s*\\{[^}]*position:\\s*static;`));
     }
+    assert.match(css, /\.cw-battle-command-bar > \.cw-destination-confirm\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*position:\s*static;/);
   });
 
   await test('delegation uses Winchester readiness and preserves distinct withdrawal objectives', () => {

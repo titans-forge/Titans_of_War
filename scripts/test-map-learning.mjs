@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdtempSync, rmSync } from 'node:fs';
+import { existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createElement } from 'react';
@@ -19,6 +19,7 @@ try {
   const { MEDIA_CATALOG, resolveScenarioMediaSet } = await vite.ssrLoadModule('/src/game/mediaCatalog.js');
   const { LEARNING_REFLECTIONS, LEARNING_SOURCES, getLearningReflection } = await vite.ssrLoadModule('/src/game/learningReflections.js');
   const { default: BattlefieldMap } = await vite.ssrLoadModule('/src/components/BattlefieldMap.jsx');
+  const { default: ScenarioTheater } = await vite.ssrLoadModule('/src/components/ScenarioTheater.jsx');
   const { default: CampaignReflection } = await vite.ssrLoadModule('/src/components/CampaignReflection.jsx');
   const scenarioIds = new Set(STATIC_SCENARIOS.map((scenario) => scenario.id));
 
@@ -45,27 +46,31 @@ try {
   assert.match(resolveScenarioMediaSet('gettysburg_decision').tacticalMap.mapScopeLabel, /East Cavalry Field.*not Cemetery Ridge/);
   assert.match(resolveScenarioMediaSet('wilderness').tacticalMap.mapScopeLabel, /May 4 approach/);
 
-  // Test the renderer, not only metadata: source maps cannot receive an
-  // unregistered game canvas; illustrative fallbacks retain their diagram.
-  let historicalViews = 0;
-  for (const id of scenarioIds) {
-    const media = resolveScenarioMediaSet(id).tacticalMap;
-    const html = renderToStaticMarkup(createElement(BattlefieldMap, { scenarioId: id, selectedChoiceId: 'option_b' }));
-    assert.ok(media.mapScopeLabel, `${id} has a visible geographic scope`);
-    if (media.src) {
-      historicalViews++;
-      assert.equal(media.provenanceStatus, 'verified');
-      assert.equal(media.showGameOverlay, false);
-      assert.match(html, /<img/);
-      assert.doesNotMatch(html, /<canvas/);
-      assert.match(html, /NO GAME OVERLAY/);
-      assert.match(html, /Source ·/);
-    } else {
-      assert.match(html, /<canvas/);
-      assert.match(html, /not to scale|NOT TO SCALE/);
-      assert.match(html, /not a surveyed map/);
-      assert.doesNotMatch(html, /INSPECT MAP/);
+  const historicalViews = new Set();
+  for (const scenario of STATIC_SCENARIOS) {
+    const { briefingMap } = resolveScenarioMediaSet(scenario.id);
+    const theater = renderToStaticMarkup(createElement(ScenarioTheater, { scenario }));
+    assert.doesNotMatch(theater, /<canvas|Illustrative Game Schematic/i);
+    if (!briefingMap) {
+      assert.doesNotMatch(theater, />Historical map<\//);
+      continue;
     }
+    historicalViews.add(scenario.id);
+    assert.equal(briefingMap.provenanceStatus, 'verified');
+    assert.equal(briefingMap.geographicScope, 'battlefield-reference');
+    assert.ok(existsSync(join('public', briefingMap.src)), `${scenario.id} bundles its map`);
+    const html = renderToStaticMarkup(createElement(BattlefieldMap, { map: briefingMap }));
+    assert.match(theater, />Historical map<\//);
+    assert.match(html, /<img/);
+    assert.doesNotMatch(html, /<canvas/);
+    assert.match(html, /Inspect map/);
+    assert.ok(html.includes(briefingMap.sourceInstitution));
+  }
+  for (const id of ['fort_sumter', 'shiloh_army_of_tennessee', 'antietam', 'gettysburg_decision', 'appomattox_decision']) {
+    assert.ok(historicalViews.has(id), `${id} retains a map specific to its decision`);
+  }
+  for (const id of ['radical_republican_crisis', 'potomac_leverage_campaign', 'gettysburg_campaign_setup', 'wilderness', 'petersburg_siege']) {
+    assert.equal(historicalViews.has(id), false, `${id} has no placeholder or borrowed briefing map`);
   }
 
   assert.equal(LEARNING_REFLECTIONS.length, 5);
@@ -95,7 +100,7 @@ try {
     assert.equal(getLearningReflection(id), null);
     assert.equal(renderToStaticMarkup(createElement(CampaignReflection, { scenarioId: id })), '');
   }
-  console.log(`Map and learning checks passed (${scenarioIds.size} rendered scenarios; ${historicalViews} scoped historical views; ${LEARNING_REFLECTIONS.length} reflections covering ${mappedIds.size} hinges).`);
+  console.log(`Map and learning checks passed (${scenarioIds.size} rendered scenarios; ${historicalViews.size} scoped historical views; ${LEARNING_REFLECTIONS.length} reflections covering ${mappedIds.size} hinges).`);
 } finally {
   await vite.close();
   rmSync(cacheDir, { recursive: true, force: true });

@@ -461,12 +461,14 @@ const figureCapacity = (unit) => unit.type === 'artillery' ? 1 : 32;
 const deployments = Object.entries(BATTLE_ENGINE_CONFIGS).flatMap(([scenarioId, config]) =>
   Object.keys(config.postures).map((choiceId) => ({ scenarioId, choiceId, config })));
 
-test('all 11 scenarios and 4 choices remain within the 700-figure allocation budget', (context) => {
-  assert.equal(Object.keys(BATTLE_ENGINE_CONFIGS).length, 11);
+test('all 23 scenarios remain within the 700-figure allocation budget', (context) => {
+  assert.equal(Object.keys(BATTLE_ENGINE_CONFIGS).length, 23);
+  const reducedOptions = { sailors_creek: ['option_a', 'option_b'], vicksburg: ['option_a', 'option_b'], kennesaw_mountain: ['option_a', 'option_b'], spotsylvania: ['option_a', 'option_b'], missionary_ridge: ['option_a', 'option_b'], new_market: ['option_a', 'option_b'], gaines_mill: ['option_a', 'option_b'], fredericksburg: ['option_a', 'option_b'], second_manassas: ['option_a', 'option_b'], jonesborough: ['option_a', 'option_b'], five_forks: ['option_a', 'option_b', 'option_c'] };
   for (const config of Object.values(BATTLE_ENGINE_CONFIGS)) {
-    assert.deepEqual(Object.keys(config.postures).sort(), ['option_a', 'option_b', 'option_c', 'option_d']);
+    assert.deepEqual(Object.keys(config.postures).sort(),
+      reducedOptions[config.id] || ['option_a', 'option_b', 'option_c', 'option_d']);
   }
-  assert.equal(deployments.length, 44);
+  assert.equal(deployments.length, 71);
   const renderer = readFileSync(new URL('../src/battle/CivilWarBattlefield.jsx', import.meta.url), 'utf8');
   assert.match(renderer, /const capacity = formation\.type === 'artillery' \? 1 : 32;/,
     'update the budget fixture when renderer allocation changes');

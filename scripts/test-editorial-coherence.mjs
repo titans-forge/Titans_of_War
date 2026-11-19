@@ -116,7 +116,8 @@ try {
   const render = (scenario) => renderToStaticMarkup(createElement(ScenarioTheater, { scenario, gameState: state }));
   for (const [id, label] of [
     ['naval_technology', 'AI-generated historical interpretation'],
-    ['election_1864_mcclellan', 'Generated interpretation'],
+    ['election_1864_mcclellan', 'AI-generated historical interpretation'],
+    ['gettysburg_recognition_crisis', 'Generated interpretation'],
     ['manassas_battlefield', 'Historical painting'],
     ['fort_sumter', 'AI-generated historical interpretation'],
   ]) {
@@ -127,6 +128,14 @@ try {
     assert.match(markup, /class="scenario-visual"/);
     assert.match(markup, /class="scenario-figure"/);
     assert.match(markup, /<figcaption>/, 'caption remains outside the scene image');
+  }
+
+  assert.match(render(scenarioById('gettysburg_recognition_crisis')), /Davis cabinet\.jpeg/);
+  assert.doesNotMatch(render(scenarioById('gettysburg_recognition_crisis')), /CSA Independence\.jpeg/);
+  for (const id of ['election_1864_lincoln', 'election_1864_mcclellan']) {
+    const election = render(scenarioById(id));
+    assert.match(election, /soldiers-voting-1864-v1\.webp/);
+    assert.doesNotMatch(election, /Armistice\.jpeg/);
   }
 
   for (const scenario of STATIC_SCENARIOS) {
@@ -167,5 +176,5 @@ try {
 
 // The current authored settlement route must reach its existing ending artwork.
 const { resolveCampaignEndingMedia } = await import('../src/game/mediaCatalog.js');
-const settlementArt = resolveCampaignEndingMedia({ history: [{ scenarioId: 'election_1864_mcclellan', choiceId: 'option_d' }] });
+const settlementArt = resolveCampaignEndingMedia({ gameOver: true, history: [{ scenarioId: 'election_1864_mcclellan', choiceId: 'option_d' }] });
 assert.ok(settlementArt?.title === 'McClellan Armistice and Conditional Reunion', 'current reunion ending resolves its existing ending artwork');

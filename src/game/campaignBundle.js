@@ -1,5 +1,5 @@
 import { createCampaignSnapshot } from './campaignStorage.js';
-import { buildCampaignChronicle, resolveExportMedia } from './chronicleExporter.js';
+import { buildCampaignChronicle, resolveExportEndingMedia, resolveExportMedia } from './chronicleExporter.js';
 
 export const CAMPAIGN_BUNDLE_VERSION = 1;
 
@@ -21,14 +21,19 @@ function collectReferencedScenarioIds(state, activeScenario) {
 
 function buildMediaManifest(state, activeScenario, exportedAt, scenarios = []) {
   const scenarioIds = collectReferencedScenarioIds(state, activeScenario);
-  const seenAssets = new Set();
-  const assets = [];
+  const entries = scenarioIds.map((id) => [id, resolveExportMedia(id, scenarios)]);
+  const ending = resolveExportEndingMedia(state);
+  if (ending) entries.push([state.history.at(-1).scenarioId, ending]);
 
-  for (const scenarioId of scenarioIds) {
-    const media = resolveExportMedia(scenarioId, scenarios);
-    if (!media?.src || media.assetKey === 'unknown' || seenAssets.has(media.assetKey)) continue;
-    seenAssets.add(media.assetKey);
-    assets.push({
+  const assets = new Map();
+  for (const [scenarioId, media] of entries) {
+    if (!media?.src || media.assetKey === 'unknown') continue;
+    const asset = assets.get(media.assetKey);
+    if (asset) {
+      asset.referencedBy.push(scenarioId);
+      continue;
+    }
+    assets.set(media.assetKey, {
       id: media.assetKey,
       src: media.src,
       title: media.title,
@@ -42,10 +47,7 @@ function buildMediaManifest(state, activeScenario, exportedAt, scenarios = []) {
       cropMode: media.cropMode || 'wide',
       theaterOpacity: media.theaterOpacity ?? null,
       overlayOpacity: media.overlayOpacity ?? null,
-      referencedBy: scenarioIds.filter((id) => {
-        const linked = resolveExportMedia(id, scenarios);
-        return linked.assetKey === media.assetKey;
-      }),
+      referencedBy: [scenarioId],
       sourcePath: media.src,
     });
   }
@@ -55,7 +57,7 @@ function buildMediaManifest(state, activeScenario, exportedAt, scenarios = []) {
     generatedAt: exportedAt,
     activeScenarioId: activeScenario?.id || state?.scenarioId || null,
     referencedScenarioIds: scenarioIds,
-    assets,
+    assets: [...assets.values()],
     note: 'Image files are referenced by existing public paths; this bundle does not embed binary media.',
   };
 }

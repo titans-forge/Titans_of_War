@@ -1,6 +1,18 @@
 /** Original synthesized field cues. Simulation events drive sound, never render frames. */
 const clamp = (value, low, high) => Math.min(high, Math.max(low, value));
 const CUES = new Set(['volley', 'routing', 'broken', 'departure', 'reinforcement', 'melee']);
+const SIGNAL_NOTES = Object.freeze({
+  reinforcement: [392, 523],
+  'ordered-exit': [262, 392],
+  departure: [294, 220],
+  routing: [247, 147],
+  broken: [196, 131],
+});
+
+function cueForEvent(event) {
+  if (event.type === 'volley') return event.weapon === 'artillery' ? 'cannon' : 'musket';
+  return event.type === 'departure' && event.organized === true ? 'ordered-exit' : event.type;
+}
 export class BattleAudioManager {
   constructor({ createContext = () => {
     const Context = globalThis.AudioContext || globalThis.webkitAudioContext;
@@ -61,7 +73,7 @@ export class BattleAudioManager {
     if (previous === null) return; // Opening snapshots must not replay past fighting.
     for (const event of entries) {
       if (event.id <= previous || !CUES.has(event.type) || this.voices.size >= 6) continue;
-      const key = event.type === 'volley' ? event.weapon === 'artillery' ? 'cannon' : 'musket' : event.type;
+      const key = cueForEvent(event);
       const gap = key === 'musket' ? 0.11 : key === 'cannon' ? 0.25 : 0.4;
       if (ctx.currentTime - (this.lastCueAt.get(key) ?? -Infinity) < gap) continue;
       this.lastCueAt.set(key, ctx.currentTime);
@@ -107,9 +119,9 @@ export class BattleAudioManager {
     if (shot) source.buffer = key === 'melee' ? this.meleeBuffer() : this.noiseBuffer(duration);
     else {
       source.type = 'triangle';
-      const pitch = key === 'reinforcement' ? 392 : key === 'departure' ? 294 : 196;
-      source.frequency.setValueAtTime(pitch, now);
-      source.frequency.setValueAtTime(key === 'reinforcement' ? 523 : key === 'departure' ? 349 : 147, now + 0.14);
+      const [first, second] = SIGNAL_NOTES[key];
+      source.frequency.setValueAtTime(first, now);
+      source.frequency.setValueAtTime(second, now + 0.14);
     }
     filter.type = 'lowpass';
     filter.frequency.value = key === 'cannon' ? 650 : key === 'musket' ? 2800 : key === 'melee' ? 5500 : 1200;

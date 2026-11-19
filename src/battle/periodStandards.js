@@ -3,11 +3,17 @@
 export const PERIOD_STANDARDS = Object.freeze({ union: { stars: 34, label: 'US', description: '34-star United States national color' }, confederate: { stars: 13, label: 'CS', description: 'Square Army of Northern Virginia battle flag' } });
 // Representative national or army patterns; individual regiments often kept
 // older colors or carried different designs. No exact regimental attribution.
-const LATE_FIELDS = new Set(['third_winchester', 'wilderness', 'cedar_creek', 'cold_harbor', 'petersburg', 'chickamauga']);
+const LATE_FIELDS = new Set(['third_winchester', 'wilderness', 'cedar_creek', 'cold_harbor', 'petersburg', 'chickamauga', 'spotsylvania', 'kennesaw_mountain', 'sailors_creek']);
 export function periodStandardFor(side, scenarioId = 'gettysburg') {
   if (side === 'union') {
     const stars = LATE_FIELDS.has(scenarioId) ? 35 : 34;
     return { pattern: 'us-national', stars, description: `${stars}-star United States national color` };
+  }
+  if (scenarioId === 'kennesaw_mountain') {
+    return { pattern: 'army-of-tennessee', stars: 13, description: 'Representative 1864 Army of Tennessee battle color' };
+  }
+  if (scenarioId === 'vicksburg') {
+    return { pattern: 'first-national', stars: 13, description: 'Representative First National color documented at Vicksburg' };
   }
   if (['first_manassas', 'shiloh', 'chickamauga'].includes(scenarioId)) {
     const stars = scenarioId === 'first_manassas' ? 11 : 13;
@@ -82,6 +88,22 @@ export function drawPeriodStandard(g, side, scenarioId = 'gettysburg', cloth = n
     for (let i = 0; i < standard.stars; i++) {
       const angle = -Math.PI / 2 + i * Math.PI * 2 / standard.stars;
       star(g, 13.5 + Math.cos(angle) * 7.2, -50 + Math.sin(angle) * 7.2, 1.15);
+    }
+  } else if (standard.pattern === 'army-of-tennessee') {
+    g.fillStyle(0xa52c36, 1).fillRect(3, -60, 48, 30);
+    // The 1864 western pattern carries the two diagonal bands to the edges.
+    for (const [halfWidth, dye] of [[.18, 0xf4efdf], [.125, 0x233f6d]]) {
+      const band = [[0, 0], [halfWidth, 0], [1, 1 - halfWidth], [1, 1], [1 - halfWidth, 1], [0, halfWidth]];
+      for (const flipped of [false, true]) {
+        g.fillStyle(dye, 1).fillPoints(band.map(([u, v]) => ({
+          x: 3 + 48 * u, y: -60 + 30 * (flipped ? 1 - v : v),
+        })), true);
+      }
+    }
+    star(g, 27, -45, 1.5);
+    for (const step of [-3, -2, -1, 1, 2, 3]) {
+      star(g, 27 + 6 * step, -45 + 3.75 * step, 1.35);
+      star(g, 27 + 6 * step, -45 - 3.75 * step, 1.35);
     }
   } else {
     g.fillStyle(0xf4efdf, 1).fillRect(3, -62, 34, 34);

@@ -6,13 +6,38 @@ import { battleLocations } from './battleLocations.js';
 import { sortieTargets } from './siegeCommand.js';
 import { siegeTargetAssets, siegeTargetPlan, createSiegeTargetVisual, updateSiegeTargetVisual } from './siegeTargetVisual.js';
 import { landmarkField, landmarkDestinationError } from './historicalLandmarks.js';
-import { createStandardTextures, createRealisticStandard, createStandardPole } from './realisticStandards.js';
+import { createStandardTextures, createRealisticStandard, createStandardPole, fieldStandardLean } from './realisticStandards.js';
 import { createSceneryTextures } from './realisticScenery.js';
 import { DETAILED_UNIT_PAGES, createDetailedUnitTextures, detailedInfantryPose, detailedUnitAssetDirectory } from './detailedUnitVisual.js';
 import { gettysburgInfantryFamilyAssets, gettysburgInfantryFamilyEnabled, gettysburgInfantryFamilyPose, gettysburgInfantryFamilyTextureKey, gettysburgInfantryStandardAnchor } from './gettysburgInfantryFamily.js';
 import { prepareGettysburgInfantryClips, gettysburgInfantryClipPose } from './gettysburgInfantryClips.js';
 import { gettysburgInfantryClipAssets, gettysburgInfantryClipDefinitions } from './gettysburgInfantryClipAssets.js';
 import { gettysburgInfantryClipPolicy } from './gettysburgInfantryClipPolicy.js';
+import { gettysburgFieldArtEnabled, GETTYSBURG_FIELD_POSES, GETTYSBURG_FIELD_TERRAIN, preloadGettysburgFieldArt, mountGettysburgFieldArt } from './gettysburgFieldArt.js';
+import { manassasFieldArtEnabled, MANASSAS_FIELD_TERRAIN } from './manassasFieldArt.js';
+import { manassasInfantryPose, preloadManassasInfantry } from './manassasInfantryArt.js';
+import { usesShilohReserveMission, shilohReserveNetwork } from './shilohReserveObjective.js';
+import { drawShilohCommandLinks } from './shilohCommandPresentation.js';
+import { shilohLandingArtEnabled, SHILOH_LANDING_ART, SHILOH_LANDING_LABEL } from './shilohLandingArt.js';
+import { chancellorsvilleLandmarkArtEnabled, CHANCELLORSVILLE_LANDMARK_ART } from './chancellorsvilleLandmarkArt.js';
+import { wildernessLandmarkArtEnabled, WILDERNESS_LANDMARK_ART, WILDERNESS_ROAD_LOCATION, WILDERNESS_ROAD_LABEL_OFFSET } from './wildernessLandmarkArt.js';
+import { chickamaugaLandmarkArtEnabled, CHICKAMAUGA_LANDMARK_ART } from './chickamaugaLandmarkArt.js';
+import { winchesterLandmarkArtEnabled, WINCHESTER_LANDMARK_ART, WINCHESTER_CORRIDOR_LOCATION, WINCHESTER_CORRIDOR_LABEL_GAP } from './winchesterLandmarkArt.js';
+import { cedarCreekLandmarkArtEnabled, CEDAR_CREEK_LANDMARK_ART } from './cedarCreekLandmarkArt.js';
+import { coldHarborTerrainArtEnabled, COLD_HARBOR_LANDMARK_ART } from './coldHarborTerrainArt.js';
+import { petersburgTerrainArtEnabled, BLANDFORD_CHURCH } from './petersburgTerrainArt.js';
+import { ANTIETAM_BRIDGE, DUNKER_CHURCH, antietamBridgeLocation } from './antietamArt.js';
+import { BURNT_QUARTER, fiveForksSites } from './fiveForksArt.js';
+import { WARREN_HOUSE, jonesboroughSites } from './jonesboroughArt.js';
+import { SECOND_MANASSAS_HOUSES, secondManassasSites } from './secondManassasArt.js';
+import { INNIS_HOUSE, fredericksburgSites } from './fredericksburgArt.js';
+import { WATT_HOUSE, gainesMillSites } from './gainesMillArt.js';
+import { BUSHONG_HOUSE, newMarketSites } from './newMarketArt.js';
+import { BRAGG_HEADQUARTERS, missionaryRidgeSites } from './missionaryRidgeArt.js';
+import { MCCOULL_HOUSE, spotsylvaniaSites } from './spotsylvaniaArt.js';
+import { KOLB_FARMHOUSE, kennesawSites } from './kennesawArt.js';
+import { vicksburgSites } from './vicksburgArt.js';
+import { HILLSMAN_HOUSE, sailorsSites } from './sailorsCreekArt.js';
 import { gettysburgInfantryShootingAge } from './gettysburgInfantryShotMotion.js';
 import { gettysburgInfantryReloadProgress } from './gettysburgInfantryReloadProgress.js';
 import { sampleGettysburgInfantryVolley, createGettysburgInfantryShotCheckpoint, restoreGettysburgInfantryShots } from './gettysburgInfantryVolleyPresentation.js';
@@ -26,7 +51,7 @@ import { retreatOpacity } from './retreatPresentation.js';
 import { drawPeriodStandard, updatePeriodStandard } from './periodStandards.js';
 import { RIDGE_SECTORS, gettysburgOrganized } from './gettysburgMechanics.js';
 import { drawGettysburgTerrain } from './gettysburgTerrainVisual.js';
-import { createArtilleryVisual, updateArtilleryVisual } from './artilleryVisual.js';
+import { createArtilleryVisual, gettysburgBatteryMotion, updateArtilleryVisual } from './artilleryVisual.js';
 import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 import Phaser from 'phaser';
 import { CivilWarBattleEngine } from './civilWarEngine.js';
@@ -39,11 +64,15 @@ import { ContactLayoutPresentation } from './contactLayoutPresentation.js';
 import { createGettysburgStandardAnchorCheckpoint, restoreGettysburgStandardAnchorCheckpoint } from './gettysburgStandardCheckpoint.js';
 import { createGettysburgDustCheckpoint, restoreGettysburgDustCheckpoint } from './gettysburgDustCheckpoint.js';
 import { formationStatusLabel } from './battleTactics.js';
-import { overviewZoom, boundedZoom, formationFocusZoom, nearestHit, isPanGesture, canCommand } from './battleUsability.js';
+import { overviewZoom, hasFieldViewport, boundedZoom, formationFocusZoom, nearestHit, isPanGesture, canCommand } from './battleUsability.js';
+import { drawConfirmedMoveCue } from './fieldMoveCue.js';
+import { fitOverviewLabels } from './fieldLabelLayout.js';
 import { createFieldViewCheckpoint, readFieldViewCheckpoint } from './fieldViewCheckpoint.js';
 import { sampleGettysburgLocomotion, gettysburgWalkingFigure, createGettysburgLocomotionCheckpoint, restoreGettysburgLocomotionCheckpoint } from './gettysburgLocomotionPresentation.js';
 
 const PUBLIC_BASE = import.meta.env.BASE_URL;
+const SHILOH_CHURCH_ART = 'images/battles/landmarks-shiloh-v1/shiloh-church.webp';
+const SHILOH_LANDING_LOCATION = 'Sector:right';
 
 function projectedScale(y, projection, world) {
   const depth = Math.max(0, Math.min(1, (y - projection.horizon) / (world.height - projection.horizon)));
@@ -91,7 +120,8 @@ export const CivilWarBattlefield = forwardRef(function CivilWarBattlefield({ sce
   });
 
   useEffect(() => {
-    if (!host.current) return undefined;
+    const element = host.current;
+    if (!element) return undefined;
     const battleScene = new CivilWarBattleScene(scenarioId, campaignState, choiceId, onSelect, onSnapshot, onDestination, trainingLesson, checkpoint);
     battleScene.onZoom = onZoom;
     battleScene.onGroupPreview = onGroupPreview;
@@ -104,20 +134,39 @@ export const CivilWarBattlefield = forwardRef(function CivilWarBattlefield({ sce
     battleScene.setSelected(selectedId);
     battleScene.setSpeed(speed);
     scene.current = battleScene;
+    const measureHost = typeof ResizeObserver === 'function';
+    const bounds = measureHost ? element.getBoundingClientRect() : null;
     const game = new Phaser.Game({
       // Canvas is deliberate here: the representative formations remain well
       // below its practical sprite limit, while mobile iframe/WebGL contexts
       // can fail framebuffer creation after responsive resizing on itch.io.
       type: Phaser.CANVAS,
-      parent: host.current,
+      parent: element,
       backgroundColor: '#111710',
-      scale: { mode: Phaser.Scale.RESIZE, width: '100%', height: '100%' },
+      scale: bounds
+        ? { mode: Phaser.Scale.NONE, width: Math.max(1, Math.floor(bounds.width)), height: Math.max(1, Math.floor(bounds.height)) }
+        : { mode: Phaser.Scale.RESIZE, width: '100%', height: '100%' },
       render: { antialias: true, pixelArt: false },
       // Campaign music owns audio; this scene has no Phaser sound assets.
       audio: { noAudio: true },
       scene: battleScene,
     });
+    // HUD changes and phone rotation both size the host. Explicitly resize
+    // the scene from that measurement so Phaser's viewport events cannot
+    // leave the backing canvas at a stale size.
+    const fit = rectangle => {
+      if (!game.canvas || !hasFieldViewport(rectangle)) return;
+      const width = Math.max(1, Math.floor(rectangle.width));
+      const height = Math.max(1, Math.floor(rectangle.height));
+      if (game.canvas.width !== width || game.canvas.height !== height) game.scale.resize(width, height);
+    };
+    const resize = measureHost ? new ResizeObserver(([entry]) => fit(entry.contentRect)) : null;
+    if (resize) {
+      resize.observe(element);
+      game.events.once('ready', () => fit(element.getBoundingClientRect()));
+    }
     return () => {
+      resize?.disconnect();
       scene.current = null;
       game.destroy(true);
     };
@@ -142,20 +191,65 @@ class CivilWarBattleScene extends Phaser.Scene {
     this.config = getBattleEngineConfig(scenarioId);
     this.world = this.config.world;
     this.engine = trainingLesson ? new CommandTrainingEngine(trainingLesson) : checkpoint ? CivilWarBattleEngine.fromCheckpoint(combatCheckpointEnvelope(checkpoint), scenarioId, campaignState, choiceId) : new CivilWarBattleEngine(scenarioId, campaignState, choiceId);
+    const search = window.location.search;
+    const artRules = trainingLesson ? 0 : this.engine.battleRulesVersion;
+    this.gettysburgFieldArt = gettysburgFieldArtEnabled(scenarioId, artRules, search);
+    this.manassasFieldArt = manassasFieldArtEnabled(scenarioId, artRules, search);
+    this.shilohLandmarksArt = scenarioId === 'shiloh' && shilohLandingArtEnabled(scenarioId, artRules, search);
+    this.chancellorsvilleLandmarksArt = scenarioId === 'chancellorsville'
+      && chancellorsvilleLandmarkArtEnabled(scenarioId, artRules, search);
+    this.wildernessLandmarksArt = scenarioId === 'wilderness'
+      && wildernessLandmarkArtEnabled(scenarioId, artRules, search);
+    this.chickamaugaLandmarksArt = scenarioId === 'chickamauga'
+      && chickamaugaLandmarkArtEnabled(scenarioId, artRules, search);
+    this.winchesterLandmarksArt = scenarioId === 'third_winchester'
+      && winchesterLandmarkArtEnabled(scenarioId, artRules, search);
+    this.cedarCreekLandmarksArt = scenarioId === 'cedar_creek'
+      && cedarCreekLandmarkArtEnabled(scenarioId, artRules, search);
+    this.coldHarborTerrainArt = scenarioId === 'cold_harbor'
+      && coldHarborTerrainArtEnabled(scenarioId, artRules, search);
+    this.petersburgTerrainArt = scenarioId === 'petersburg'
+      && petersburgTerrainArtEnabled(scenarioId, artRules, search);
+    this.antietamTerrainArt = scenarioId === 'antietam' && Boolean(this.engine.fieldBattle);
+    this.fiveForksTerrainArt = scenarioId === 'five_forks' && Boolean(this.engine.fieldBattle);
+    this.jonesboroughTerrainArt = scenarioId === 'jonesborough' && Boolean(this.engine.fieldBattle);
+    this.secondManassasTerrainArt = scenarioId === 'second_manassas' && Boolean(this.engine.fieldBattle);
+    this.fredericksburgTerrainArt = scenarioId === 'fredericksburg' && Boolean(this.engine.fieldBattle);
+    this.gainesMillTerrainArt = scenarioId === 'gaines_mill' && Boolean(this.engine.fieldBattle);
+    this.newMarketTerrainArt = scenarioId === 'new_market' && Boolean(this.engine.fieldBattle);
+    this.missionaryRidgeTerrainArt = scenarioId === 'missionary_ridge' && Boolean(this.engine.fieldBattle);
+    this.spotsylvaniaTerrainArt = scenarioId === 'spotsylvania' && Boolean(this.engine.fieldBattle);
+    this.kennesawTerrainArt = scenarioId === 'kennesaw_mountain' && Boolean(this.engine.fieldBattle);
+    this.vicksburgTerrainArt = scenarioId === 'vicksburg' && Boolean(this.engine.fieldBattle);
+    this.sailorsTerrainArt = scenarioId === 'sailors_creek' && Boolean(this.engine.fieldBattle);
+    this.fieldPlaceArt = this.antietamTerrainArt ? { [DUNKER_CHURCH.id]: DUNKER_CHURCH }
+      : this.coldHarborTerrainArt ? COLD_HARBOR_LANDMARK_ART
+      : this.cedarCreekLandmarksArt ? CEDAR_CREEK_LANDMARK_ART
+      : this.winchesterLandmarksArt ? WINCHESTER_LANDMARK_ART
+      : this.chickamaugaLandmarksArt ? CHICKAMAUGA_LANDMARK_ART
+      : this.chancellorsvilleLandmarksArt ? CHANCELLORSVILLE_LANDMARK_ART
+      : this.wildernessLandmarksArt ? WILDERNESS_LANDMARK_ART : null;
+    this.fieldCommandArt = this.gettysburgFieldArt || this.manassasFieldArt;
     // Optional presentation data must not execute getters during combat revival.
     try { this.savedPresentation = Object.getOwnPropertyDescriptor(checkpoint || {}, 'presentation')?.value; }
     catch { this.savedPresentation = undefined; }
     if (this.engine.gettysburg) this.config = { ...this.config, terrain: { ...this.config.terrain, key: this.engine.battleRulesVersion >= 10 ? 'gettysburg-terrain-v3' : 'gettysburg-terrain-v2', src: this.engine.battleRulesVersion >= 10 ? 'images/battles/gettysburg-terrain-v3.png' : 'images/battles/gettysburg-terrain-v2.webp' } };
+    if (this.gettysburgFieldArt) this.config = {
+      ...this.config, terrain: { key: GETTYSBURG_FIELD_TERRAIN, src: `images/battles/${GETTYSBURG_FIELD_TERRAIN}.webp`, mapMode: false },
+    };
     this.tactical = Boolean(this.engine.gettysburg || this.engine.fieldBattle);
     if (this.engine.fieldBattle) {
-      const ground = { first_manassas: 'manassas-ground-v3', shiloh: 'shiloh-ground-v2' }[scenarioId] || 'realistic-v2/pasture';
-      this.config = { ...this.config, terrain: { key: ground, src: `images/battles/${ground}.${ground.includes('realistic-v2') || ground === 'manassas-ground-v3' ? 'png' : 'webp'}`, mapMode: false } };
+      const ground = {
+        first_manassas: this.manassasFieldArt ? `${MANASSAS_FIELD_TERRAIN}.webp` : 'manassas-ground-v3.png',
+        shiloh: 'shiloh-ground-v2.webp',
+      }[scenarioId] || 'realistic-v2/pasture.png';
+      this.config = { ...this.config, terrain: { key: ground.slice(0, ground.lastIndexOf('.')), src: `images/battles/${ground}`, mapMode: false } };
     }
     this.onSelectFormation = onSelect;
     this.onBattleSnapshot = onSnapshot;
     this.onDestination = onDestination;
     this.inputMode = 'move';
-    this.artPassSearch = window.location.search;
+    this.artPassSearch = this.gettysburgFieldArt ? GETTYSBURG_FIELD_POSES : search;
     // Raw canonical query matching uses only native String/Array operations:
     // old disabled-Scene VM witnesses do not provide URLSearchParams or the
     // optional imported helper. Duplicate or encoded variants fall back.
@@ -198,11 +292,13 @@ class CivilWarBattleScene extends Phaser.Scene {
       && contactQuery.filter(part => part.split('=')[0] === 'artPass').length === 1
       && contactQuery.filter(part => part.split('=')[0] === 'viewContinuity').length === 1
       && contactQuery.includes('artPass=gettysburg-v32') && contactQuery.includes('viewContinuity=v39');
-    this.locomotionHeadingEnabled = this.scenarioId === 'gettysburg'
+    const manassasMotion = this.manassasFieldArt ? new URLSearchParams(search).getAll('infantryMotion').join(',') : '';
+    this.manassasInfantryArt = manassasMotion === 'v2';
+    this.locomotionHeadingEnabled = manassasMotion === 'v1' || this.manassasInfantryArt || (this.scenarioId === 'gettysburg'
       && !contactQuery.some(part => part.includes('%'))
       && contactQuery.filter(part => part.split('=')[0] === 'artPass').length === 1
       && contactQuery.filter(part => part.split('=')[0] === 'locomotionHeading').length === 1
-      && contactQuery.includes('artPass=gettysburg-v32') && contactQuery.includes('locomotionHeading=v40');
+      && contactQuery.includes('artPass=gettysburg-v32') && contactQuery.includes('locomotionHeading=v40'));
     this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.views = new Map();
     this.selectedId = this.engine.snapshot({ presentation: true }).formations.find((unit) => unit.side === 'confederate')?.id;
@@ -257,14 +353,14 @@ class CivilWarBattleScene extends Phaser.Scene {
     }
     if (this.locomotionHeadingEnabled && presentation) {
       const heading = createGettysburgLocomotionCheckpoint(presentation, snapshot.formations, this.views, time,
-        { reducedMotion: Boolean(this.reducedMotion), resolving: Boolean(snapshot.resolving || snapshot.outcome !== 'undecided') });
+        { scenarioId: this.scenarioId, reducedMotion: Boolean(this.reducedMotion), resolving: Boolean(snapshot.resolving || snapshot.outcome !== 'undecided') });
       if (heading) presentation.locomotionHeading = heading;
     }
     return { ...combat, presentation };
   }
 
   sampleFormationVisual(state, formation, time, scale, resolving) {
-    const options = { reducedMotion: this.reducedMotion, resolving };
+    const options = { reducedMotion: this.reducedMotion, resolving, skipEmptyHeading: this.fieldCommandArt };
     if (!this.locomotionHeadingEnabled) return updateFormationVisual(state, formation, time, scale, options);
     const view = this.views.get(formation.id);
     const previousTime = state.time;
@@ -310,11 +406,34 @@ class CivilWarBattleScene extends Phaser.Scene {
   }
 
   preload() {
+    if (this.manassasInfantryArt) preloadManassasInfantry(this.load, PUBLIC_BASE);
     for (const asset of gettysburgInfantryFamilyAssets(this.scenarioId, this.artPassSearch, PUBLIC_BASE)) this.load.atlas(asset.key, asset.image, asset.json);
-    for (const asset of gettysburgInfantryClipAssets(this.scenarioId, this.artPassSearch, PUBLIC_BASE)) this.load.atlas(asset.key, asset.image, asset.json);
+    if (this.gettysburgFieldArt) preloadGettysburgFieldArt(this, PUBLIC_BASE);
+    else for (const asset of gettysburgInfantryClipAssets(this.scenarioId, this.artPassSearch, PUBLIC_BASE)) this.load.atlas(asset.key, asset.image, asset.json);
     for (const asset of siegeTargetAssets(this.engine.snapshot())) this.load.image(asset.key, `${PUBLIC_BASE}${asset.src}`);
-    if (this.engine.fieldBattle) for (const asset of siegeTerrainAssets(this.scenarioId)) this.load.image(asset.key, `${PUBLIC_BASE}${asset.src}`);
-    for (const site of landmarkField(this.engine)?.landmarks || []) this.load.image(`landmark-${site.id}`, `${PUBLIC_BASE}${site.src}`);
+    if (this.engine.fieldBattle && !this.coldHarborTerrainArt && !this.petersburgTerrainArt) {
+      for (const asset of siegeTerrainAssets(this.scenarioId)) this.load.image(asset.key, `${PUBLIC_BASE}${asset.src}`);
+    }
+    for (const site of landmarkField(this.engine)?.landmarks || []) {
+      const artwork = this.fieldPlaceArt?.[site.id];
+      const src = artwork?.src || (this.shilohLandmarksArt && site.id === 'shiloh-church' ? SHILOH_CHURCH_ART : site.src);
+      this.load.image(`landmark-${site.id}`, `${PUBLIC_BASE}${src}`);
+    }
+    if (this.petersburgTerrainArt) this.load.image(BLANDFORD_CHURCH.id, `${PUBLIC_BASE}${BLANDFORD_CHURCH.src}`);
+    if (this.antietamTerrainArt) this.load.image(ANTIETAM_BRIDGE.id, `${PUBLIC_BASE}${ANTIETAM_BRIDGE.src}`);
+    if (this.fiveForksTerrainArt) this.load.image(BURNT_QUARTER.id, `${PUBLIC_BASE}${BURNT_QUARTER.src}`);
+    if (this.jonesboroughTerrainArt) this.load.image(WARREN_HOUSE.id, `${PUBLIC_BASE}${WARREN_HOUSE.src}`);
+    if (this.secondManassasTerrainArt) {
+      for (const site of SECOND_MANASSAS_HOUSES) this.load.image(site.id, `${PUBLIC_BASE}${site.src}`);
+    }
+    if (this.fredericksburgTerrainArt) this.load.image(INNIS_HOUSE.id, `${PUBLIC_BASE}${INNIS_HOUSE.src}`);
+    if (this.gainesMillTerrainArt) this.load.image(WATT_HOUSE.id, `${PUBLIC_BASE}${WATT_HOUSE.src}`);
+    if (this.newMarketTerrainArt) this.load.image(BUSHONG_HOUSE.id, `${PUBLIC_BASE}${BUSHONG_HOUSE.src}`);
+    if (this.missionaryRidgeTerrainArt) this.load.image(BRAGG_HEADQUARTERS.id, `${PUBLIC_BASE}${BRAGG_HEADQUARTERS.src}`);
+    if (this.spotsylvaniaTerrainArt) this.load.image(MCCOULL_HOUSE.id, `${PUBLIC_BASE}${MCCOULL_HOUSE.src}`);
+    if (this.kennesawTerrainArt) this.load.image(KOLB_FARMHOUSE.id, `${PUBLIC_BASE}${KOLB_FARMHOUSE.src}`);
+    if (this.sailorsTerrainArt) this.load.image(HILLSMAN_HOUSE.id, `${PUBLIC_BASE}${HILLSMAN_HOUSE.src}`);
+    if (this.shilohLandmarksArt) this.load.image(SHILOH_LANDING_ART.key, `${PUBLIC_BASE}${SHILOH_LANDING_ART.src}`);
     this.load.image('bunting-material', `${PUBLIC_BASE}images/battles/realistic-v2/bunting.png`);
     // The July 3 terrain plate supplies its grove and orchard; this board only
     // stamps earthworks. Loading the unused foliage also created a full canvas.
@@ -343,6 +462,7 @@ class CivilWarBattleScene extends Phaser.Scene {
   }
 
   create() {
+    if (this.gettysburgFieldArt) mountGettysburgFieldArt(this);
     createDetailedUnitTextures(this);
     this.infantryClips = prepareGettysburgInfantryClips(
       gettysburgInfantryClipDefinitions(this.scenarioId, this.artPassSearch, this.textures),
@@ -379,9 +499,63 @@ class CivilWarBattleScene extends Phaser.Scene {
       }
     }
     this.missionLabels = [];
+    this.missionLabelLeaders = this.add.graphics().setDepth(38999);
+    const bridge = this.antietamTerrainArt && antietamBridgeLocation(this.engine.fieldBattle);
+    if (bridge) {
+      this.add.image(bridge.x, bridge.y, bridge.id).setDisplaySize(bridge.width, bridge.height).setDepth(2);
+      this.addFieldPlaceLabel(bridge.x, bridge.y + bridge.labelOffsetY, bridge.name, `Landmark:${bridge.id}`);
+    }
+    if (this.fiveForksTerrainArt) {
+      for (const site of fiveForksSites(this.engine.fieldBattle)) {
+        const isHouse = site.id === BURNT_QUARTER.id;
+        if (isHouse && this.textures.exists(site.id)) {
+          this.add.image(site.x, site.y, site.id).setDisplaySize(site.width, site.height).setDepth((site.y + 30) * 10);
+        }
+        this.addFieldPlaceLabel(site.x, site.y + site.labelOffsetY, site.name, `${isHouse ? 'Landmark' : 'Terrain'}:${site.id}`);
+      }
+    }
+    if (this.jonesboroughTerrainArt || this.secondManassasTerrainArt || this.fredericksburgTerrainArt || this.gainesMillTerrainArt
+      || this.newMarketTerrainArt || this.missionaryRidgeTerrainArt || this.spotsylvaniaTerrainArt || this.kennesawTerrainArt || this.vicksburgTerrainArt
+      || this.sailorsTerrainArt) {
+      const scenicSites = this.sailorsTerrainArt ? sailorsSites
+        : this.vicksburgTerrainArt ? vicksburgSites
+        : this.kennesawTerrainArt ? kennesawSites
+        : this.spotsylvaniaTerrainArt ? spotsylvaniaSites
+        : this.missionaryRidgeTerrainArt ? missionaryRidgeSites
+        : this.newMarketTerrainArt ? newMarketSites
+          : this.gainesMillTerrainArt ? gainesMillSites
+            : this.fredericksburgTerrainArt ? fredericksburgSites
+              : this.secondManassasTerrainArt ? secondManassasSites : jonesboroughSites;
+      for (const site of scenicSites(this.engine.fieldBattle)) {
+        if (site.src && this.textures.exists(site.id)) {
+          // Keep the supplied art’s aspect ratio while fitting its map footprint.
+          const source = this.textures.get(site.id).getSourceImage();
+          const scale = Math.min(site.width / source.width, site.height / source.height);
+          this.add.image(site.x, site.y, site.id).setScale(scale).setDepth((site.y + 28) * 10);
+        }
+        if (site.showMapLabel !== false) {
+          this.addFieldPlaceLabel(site.x + (site.labelOffsetX ?? 0), site.y + site.labelOffsetY, site.name, `${site.kind}:${site.id}`);
+        }
+      }
+    }
+    if (this.petersburgTerrainArt) {
+      const church = BLANDFORD_CHURCH;
+      this.add.image(church.x, church.y - 14, church.id).setDisplaySize(church.width, church.height).setDepth(2);
+      this.addFieldPlaceLabel(church.x, church.y + church.labelOffsetY, church.name, `Landmark:${church.id}`);
+    }
     for (const site of landmarkField(this.engine)?.landmarks || []) {
       this.add.image(site.x, site.y - 18, `landmark-${site.id}`).setDisplaySize(site.artWidth, site.artHeight).setDepth((site.y + site.height / 2) * 10);
-      this.missionLabels.push(this.add.text(site.x, site.y + (site.labelOffsetY ?? site.height / 2 + 20), site.name, { fontFamily: 'Outfit, sans-serif', fontSize: '14px', color: '#ffedc2', stroke: '#1f2119', strokeThickness: 4 }).setOrigin(.5).setDepth(39000));
+      const artwork = this.fieldPlaceArt?.[site.id];
+      const labelY = site.y + (artwork?.labelOffsetY ?? site.labelOffsetY ?? site.height / 2 + 20);
+      if (artwork || (this.shilohLandmarksArt && site.id === 'shiloh-church')) {
+        const label = this.addFieldPlaceLabel(site.x, labelY, site.name, `Landmark:${site.id}`);
+        if (artwork?.minimumLabelRise) {
+          label.setData('placeSpacing', { labelY, siteY: site.y, minimumRise: artwork.minimumLabelRise });
+        }
+      } else {
+        this.missionLabels.push(this.add.text(site.x, labelY, site.name, { fontFamily: 'Outfit, sans-serif', fontSize: '14px', color: '#ffedc2', stroke: '#1f2119', strokeThickness: 4 }).setOrigin(.5).setDepth(39000)
+          .setData('overviewKind', 'Landmark').setData('landmarkLocation', `Landmark:${site.id}`));
+      }
       const outline = this.add.rectangle(site.x, site.y, site.width, site.height, 0xc5a25e, .08).setStrokeStyle(2, 0xf7d994, .9).setDepth(39000);
       this.overlayExtras.push(outline);
     }
@@ -390,14 +564,107 @@ class CivilWarBattleScene extends Phaser.Scene {
       const sites = sortieSites.length ? sortieSites : this.engine.gettysburg ? RIDGE_SECTORS : this.engine.fieldBattle.attackObjective ? [this.engine.fieldBattle.attackObjective] : this.engine.fieldBattle.sectors;
       const exits = this.engine.fieldBattle ? fieldExitTargets(this.engine, { side: 'confederate' }) : [{ x: this.world.width / 2, y: this.world.height - 18 }];
       for (const site of sites) {
+        if (this.shilohLandmarksArt && site.name === 'Pittsburg Landing') continue;
+        if (this.cedarCreekLandmarksArt && site.id === 'center') continue;
+        if (bridge && site.id === 'right') continue;
+        const locationId = `Sector:${site.id}`;
+        if (this.sailorsTerrainArt) {
+          if (site.name === 'West Road' || site.name === 'South Bank Heights') continue;
+          const offsets = { center: [76, -68], right: [41, 73] };
+          const [offsetX, offsetY] = offsets[site.id] || [0, -site.height / 2];
+          this.addFieldPlaceLabel(site.x + offsetX, site.y + offsetY, site.name, locationId);
+          continue;
+        }
+        if (this.vicksburgTerrainArt) {
+          // The redoubt has its own landmark marker.
+          if (site.name === 'Railroad Redoubt') continue;
+          const offsets = { left: [-82, -117], right: [95, -126] };
+          const [offsetX, offsetY] = offsets[site.id] || [0, -site.height / 2];
+          this.addFieldPlaceLabel(site.x + offsetX, site.y + offsetY, site.name, locationId);
+          continue;
+        }
+        if (this.kennesawTerrainArt) {
+          // The scenic marker already names the central works at their bend.
+          if (site.name === 'Dead Angle') continue;
+          const offsets = { left: [50, -59], right: [99, -34] };
+          const [offsetX, offsetY] = offsets[site.id] || [0, -site.height / 2];
+          this.addFieldPlaceLabel(site.x + offsetX, site.y + offsetY, site.name, locationId);
+          continue;
+        }
+        if (this.spotsylvaniaTerrainArt) {
+          const offsets = { left: [66, 23], center: [-212, 65], right: [78, -114] };
+          const [offsetX, offsetY] = offsets[site.id] || [0, -site.height / 2];
+          this.addFieldPlaceLabel(site.x + offsetX, site.y + offsetY, site.name, locationId);
+          continue;
+        }
+        if (this.missionaryRidgeTerrainArt) {
+          const offsets = { left: [-22, -158], center: [-40, -137], right: [23, 151] };
+          const [offsetX, offsetY] = offsets[site.id] || [0, -site.height / 2];
+          this.addFieldPlaceLabel(site.x + offsetX, site.y + offsetY, site.name, locationId);
+          continue;
+        }
+        if (this.newMarketTerrainArt) {
+          const offsets = { left: [175, -105], center: [5, -62], right: [-14, 96] };
+          const [xOffset, yOffset] = offsets[site.id] || [0, -site.height / 2];
+          this.addFieldPlaceLabel(site.x + xOffset, site.y + yOffset, site.name, locationId);
+          continue;
+        }
+        if (this.gainesMillTerrainArt || this.fredericksburgTerrainArt || this.secondManassasTerrainArt || this.jonesboroughTerrainArt || this.fiveForksTerrainArt || this.antietamTerrainArt || this.coldHarborTerrainArt || (this.petersburgTerrainArt && !sortieSites.length)) {
+          // The crossing is already identified by the rail and depot signs above it.
+          const fredericksburgReserveRoad = this.fredericksburgTerrainArt && site.id === 'center';
+          const labelY = fredericksburgReserveRoad ? site.y + 2
+            : this.jonesboroughTerrainArt && site.id === 'center' ? site.y + site.height / 2 + 9
+              : site.y - site.height / 2 - 12;
+          this.addFieldPlaceLabel(site.x + (fredericksburgReserveRoad ? 205 : 0), labelY, site.name, locationId);
+          continue;
+        }
+        if (this.wildernessLandmarksArt && locationId === WILDERNESS_ROAD_LOCATION) {
+          this.addFieldPlaceLabel(site.x, site.y + WILDERNESS_ROAD_LABEL_OFFSET, site.name, locationId);
+          continue;
+        }
         const label = this.add.text(site.x, site.y - site.height / 2 - 12, `◇ ${site.name}`, { fontFamily: 'Outfit, sans-serif', fontSize: '13px', color: '#fff0c7', stroke: '#253022', strokeThickness: 4 }).setOrigin(.5, 1).setDepth(sortieSites.length ? 39000 : 1);
         if (sortieSites.length) label.setData('sortieSite', site);
+        label.setData('overviewKind', sortieSites.length || site === this.engine.fieldBattle?.attackObjective ? 'Objective' : 'Sector');
         this.missionLabels.push(label);
       }
       // One direction marker per distinct rear route, without terrain boxes.
       const exit = exits[Math.floor(exits.length / 2)];
-      if (exit) this.missionLabels.push(this.add.text(exit.x, exit.y < this.world.height / 2 ? 26 : this.world.height - 26, this.config.withdrawalCorridor ? '↓ Winchester corridor' : exit.y < this.world.height / 2 ? '↑ Confederate rear' : '↓ Confederate rear', { fontFamily: 'Outfit, sans-serif', fontSize: '13px', color: '#d3ead2', stroke: '#253022', strokeThickness: 4 }).setOrigin(.5).setDepth(1));
+      if (exit && this.winchesterLandmarksArt) {
+        this.addFieldPlaceLabel(exit.x, this.config.withdrawalCorridor.top - WINCHESTER_CORRIDOR_LABEL_GAP, 'Winchester corridor', WINCHESTER_CORRIDOR_LOCATION);
+      } else if (exit && this.fiveForksTerrainArt) {
+        this.addFieldPlaceLabel(exit.x, 32, '↑ Ford’s Road · Confederate exit', `Exit:${Math.floor(exits.length / 2)}`);
+      } else if (exit && this.jonesboroughTerrainArt) {
+        // Leave the southern edge clear for the paused Begin Battle control.
+        this.addFieldPlaceLabel(exit.x, exit.y - 140, '↓ Toward Lovejoy’s Station', `Exit:${Math.floor(exits.length / 2)}`);
+      } else if (exit && this.secondManassasTerrainArt) {
+        const north = exit.y < this.world.height / 2;
+        this.addFieldPlaceLabel(exit.x, exit.y + (north ? 40 : -104),
+          north ? '↑ Confederate rear' : '↓ Confederate rear', `Exit:${Math.floor(exits.length / 2)}`);
+      } else if (exit && this.fredericksburgTerrainArt) {
+        this.addFieldPlaceLabel(exit.x + 112, exit.y, '← Confederate rear', `Exit:${Math.floor(exits.length / 2)}`);
+      } else if (exit && this.gainesMillTerrainArt) {
+        this.addFieldPlaceLabel(exit.x + 365, exit.y - 130, '↓ Confederate rear', `Exit:${Math.floor(exits.length / 2)}`);
+      } else if (exit && this.newMarketTerrainArt) {
+        this.addFieldPlaceLabel(exit.x + 335, exit.y - 117, '↓ Confederate rear', `Exit:${Math.floor(exits.length / 2)}`);
+      } else if (exit && this.missionaryRidgeTerrainArt) {
+        this.addFieldPlaceLabel(exit.x - 143, exit.y + 40, 'Dalton Road →', `Exit:${Math.floor(exits.length / 2)}`);
+      } else if (exit && this.spotsylvaniaTerrainArt) {
+        this.addFieldPlaceLabel(exit.x - 350, exit.y - 83, '↓ Confederate rear', `Exit:${Math.floor(exits.length / 2)}`);
+      } else if (exit && this.kennesawTerrainArt) {
+        const roadExit = exits.at(-1);
+        this.addFieldPlaceLabel(roadExit.x + 64, roadExit.y - 52, '↓ Confederate rear', `Exit:${exits.length - 1}`);
+      } else if (exit && this.vicksburgTerrainArt) {
+        this.addFieldPlaceLabel(exit.x + 137, exit.y, '← Confederate rear', `Exit:${Math.floor(exits.length / 2)}`);
+      } else if (exit && this.sailorsTerrainArt) {
+        this.addFieldPlaceLabel(exit.x + 172, exit.y + 52, '← Toward Rice’s Station', `Exit:${Math.floor(exits.length / 2)}`);
+      } else if (exit) {
+        this.missionLabels.push(this.add.text(exit.x, exit.y < this.world.height / 2 ? 26 : this.world.height - 26, this.config.withdrawalCorridor ? '↓ Winchester corridor' : exit.y < this.world.height / 2 ? '↑ Confederate rear' : '↓ Confederate rear', { fontFamily: 'Outfit, sans-serif', fontSize: '13px', color: '#d3ead2', stroke: '#253022', strokeThickness: 4 }).setOrigin(.5).setDepth(1).setData('overviewKind', 'Exit'));
+      }
     }
+    if (this.shilohLandmarksArt) {
+      this.addFieldPlaceLabel(SHILOH_LANDING_LABEL.x, SHILOH_LANDING_LABEL.y, 'Pittsburg Landing', SHILOH_LANDING_LOCATION);
+    }
+    this.missionLabelAnchors = this.missionLabels.map(label => ({ x: label.x, y: label.y }));
     this.input.addPointer(1);
     this.activePointers = new Set();
     this.input.setTopOnly(false);
@@ -407,6 +674,9 @@ class CivilWarBattleScene extends Phaser.Scene {
     this.input.on('pointerupoutside', pointer => { this.activePointers.delete(pointer.id); this.gesture = null; });
     this.input.on('gameout', () => { this.activePointers.clear(); this.gesture = null; });
     this.groupGraphics = this.add.graphics().setDepth(3);
+    if (this.scenarioId === 'shiloh' && usesShilohReserveMission(this.engine)) {
+      this.shilohLinks = this.add.graphics().setDepth(2.5);
+    }
     if (this.engine.training?.point) { const p=this.engine.training.point;this.add.circle(p.x,p.y,20,0xe4ce79,.2).setStrokeStyle(2,0xffeda8).setDepth(2);this.add.text(p.x,p.y+28,'Practice marker',{fontSize:'15px',color:'#fff4c8',stroke:'#18251b',strokeThickness:4}).setOrigin(.5).setDepth(2); }
     this.shadows = this.add.graphics().setDepth(2);
     this.dust = this.add.graphics().setDepth(3);
@@ -428,6 +698,39 @@ class CivilWarBattleScene extends Phaser.Scene {
     this.profile = startFieldProfile(this.game.canvas.parentElement, this.profileStart);
     attachFieldProfileRenderer(this.profile, this.game);
     this.events.once('shutdown', () => stopFieldProfile(this.profile));
+  }
+
+  addFieldPlaceLabel(x, y, name, locationId) {
+    const label = this.add.text(x, y, name, {
+      fontFamily: 'Outfit, sans-serif', fontSize: '14px', fontStyle: 'bold', color: '#fff3d3',
+      backgroundColor: '#18231ee8', padding: { x: 5, y: 3 },
+    }).setOrigin(.5).setDepth(39000);
+    label.setData('fieldPlace', locationId);
+    this.missionLabels.push(label);
+    return label;
+  }
+
+  overviewControlBounds(camera) {
+    const canvas = this.game.canvas;
+    const control = canvas.closest('.cw-battlefield-frame')?.querySelector('.cw-begin-battle');
+    if (!control) {
+      this.overviewControl = null;
+      return null;
+    }
+    const { width, height } = camera;
+    const cached = this.overviewControl;
+    if (cached?.control === control && cached.width === width && cached.height === height) return cached.box;
+    const field = canvas.getBoundingClientRect();
+    const button = control.getBoundingClientRect();
+    if (!field.width || !field.height || !button.width || !button.height) return null;
+    const scaleX = width / field.width;
+    const scaleY = height / field.height;
+    const box = {
+      left: (button.left - field.left) * scaleX, right: (button.right - field.left) * scaleX,
+      top: (button.top - field.top) * scaleY, bottom: (button.bottom - field.top) * scaleY,
+    };
+    this.overviewControl = { control, width, height, box };
+    return box;
   }
 
   beginFieldGesture(pointer, objects) {
@@ -493,6 +796,7 @@ class CivilWarBattleScene extends Phaser.Scene {
   }
 
   resizeCamera() {
+    if (!hasFieldViewport(this.scale)) return;
     if (!this.cameraMode || this.cameraMode === 'overview') return this.fitCamera();
     const camera = this.cameras.main;
     if (this.cameraMode === 'free' && this.ordinaryFreeView) {
@@ -525,6 +829,7 @@ class CivilWarBattleScene extends Phaser.Scene {
   }
 
   fitCamera() {
+    if (!hasFieldViewport(this.scale)) return;
     this.clearLocation();
     this.cameraMode = 'overview';
     this.fittedWidth = this.scale.width;
@@ -546,7 +851,7 @@ class CivilWarBattleScene extends Phaser.Scene {
   }
 
   update(_time, delta) {
-    if (document.hidden) return;
+    if (document.hidden || !hasFieldViewport(this.scale)) return;
     const profileStart = this.profile ? performance.now() : 0;
     const advancing = this.speed > 0 || Boolean(this.engine.pendingOutcome);
     if (advancing) {
@@ -561,6 +866,7 @@ class CivilWarBattleScene extends Phaser.Scene {
     }
     const snapshotBuilt = advancing || !this.presentationCache.current;
     const snapshot = this.presentationCache.snapshot(this.engine, advancing);
+    this.petersburgGroundState?.(snapshot.craterState);
     const inspection = `${this.selectedId}|${this.touchInspectId}|${this.reducedMotion}|${[...this.views].filter(([, view]) => view.hovered).map(([id]) => id).join(',')}`;
     const formationPass = this.presentationCache.needsFormationPass(snapshot, this.cameras.main.zoom, inspection);
     if (formationPass) {
@@ -586,13 +892,91 @@ class CivilWarBattleScene extends Phaser.Scene {
       view.label.setText(this.engine.fieldBattle ? view.sector.name : `${view.sector.name}\n${{union: 'US', confederate: 'CS', contested: 'CONTESTED', vacant: 'VACANT'}[control]}`);
       view.label.setScale(Math.min(2, 1 / this.cameras.main.zoom, (view.sector.width - 16) / view.label.width));
     }
-    for (const label of this.missionLabels || []) {
+    const fieldCamera = this.cameras.main;
+    const overview = this.cameraMode === 'overview' && !this.engine.training;
+    const compactOverview = overview && (fieldCamera.width <= 700 || fieldCamera.height <= 260);
+    const layoutOverview = compactOverview || (overview && this.scenarioId === 'wilderness');
+    const overviewLabels = layoutOverview && this.showMissionMarkers && !this.showOverlay ? [] : null;
+    for (const [index, label] of (this.missionLabels || []).entries()) {
       const site = label.getData('sortieSite');
       if (site) label.setText(`${snapshot.sortieTargetsHit?.includes(site.id) ? '✓' : '◇'} ${site.name}${snapshot.sortieTargetsHit?.includes(site.id) ? ' · Struck' : ''}`);
-      label.setVisible(Boolean(this.showMissionMarkers) && !this.showOverlay).setScale(Math.min(1.5, 1 / this.cameras.main.zoom));
+      const place = label.getData('fieldPlace');
+      const corridorLocated = this.winchesterLandmarksArt && place === WINCHESTER_CORRIDOR_LOCATION
+        && this.focusedLocationId?.startsWith('Exit:');
+      const belleGroveLocated = this.cedarCreekLandmarksArt && place === 'Landmark:belle-grove'
+        && this.focusedLocationId === 'Sector:center';
+      const craterLocated = this.petersburgTerrainArt && place === 'Sector:center'
+        && this.focusedLocationId === 'Terrain:crater-basin';
+      const bridgeLocated = this.antietamTerrainArt && place === 'Landmark:lower-bridge'
+        && this.focusedLocationId === 'Sector:right';
+      const fredericksburgHillLocated = this.fredericksburgTerrainArt
+        && ((place === 'Sector:left' && this.focusedLocationId === 'Terrain:maryes-heights')
+          || (place === 'Sector:right' && this.focusedLocationId === 'Terrain:prospect-hill'));
+      const valleyPikeLocated = this.newMarketTerrainArt && place === 'Sector:center' && this.focusedLocationId === 'Terrain:valley-pike';
+      const daltonRoadLocated = this.missionaryRidgeTerrainArt && place?.startsWith('Exit:') && this.focusedLocationId === 'Terrain:dalton-road';
+      const kennesawPlaceLocated = this.kennesawTerrainArt
+        && ((place === 'Terrain:dead-angle' && this.focusedLocationId === 'Sector:center')
+          || (place === 'Sector:right' && this.focusedLocationId === 'Terrain:southern-road'));
+      const vicksburgPlaceLocated = this.vicksburgTerrainArt && place === 'Landmark:railroad-redoubt'
+        && ['Sector:center', 'Objective:center'].includes(this.focusedLocationId);
+      const sailorsPlaceLocated = this.sailorsTerrainArt
+        && ((place === 'Terrain:west-road' && this.focusedLocationId === 'Sector:left')
+          || (place === 'Terrain:south-bank-heights' && ['Sector:center', 'Objective:center'].includes(this.focusedLocationId))
+          || (place === 'Sector:center' && this.focusedLocationId === 'Terrain:south-bank-heights'));
+      const locationId = place || label.getData('landmarkLocation');
+      const located = locationId && this.locationLabel && (this.focusedLocationId === locationId
+        || corridorLocated || belleGroveLocated || craterLocated || bridgeLocated || fredericksburgHillLocated || valleyPikeLocated || daltonRoadLocated || kennesawPlaceLocated || vicksburgPlaceLocated || sailorsPlaceLocated);
+      const maxScale = place ? (this.fieldPlaceArt ? 6 : 4) : 1.5;
+      const zoom = fieldCamera.zoom;
+      const labelScale = compactOverview ? .88 / zoom : Math.min(maxScale, 1 / zoom);
+      const spacing = place && label.getData('placeSpacing');
+      const anchor = this.missionLabelAnchors[index];
+      const anchorY = spacing ? Math.min(spacing.labelY, spacing.siteY - spacing.minimumRise / zoom) : anchor.y;
+      const halfWidth = label.width * labelScale / 2;
+      const clippedLandmark = (this.cedarCreekLandmarksArt || this.petersburgTerrainArt || this.antietamTerrainArt || this.fiveForksTerrainArt) && this.cameraMode === 'location'
+        && place?.startsWith('Landmark:') && (anchor.x - halfWidth < fieldCamera.worldView.left
+          || anchor.x + halfWidth > fieldCamera.worldView.right);
+      const halfHeight = label.height * labelScale / 2;
+      const clippedDetailedPlace = (this.jonesboroughTerrainArt || this.secondManassasTerrainArt || this.fredericksburgTerrainArt || this.gainesMillTerrainArt
+        || this.newMarketTerrainArt || this.missionaryRidgeTerrainArt || this.spotsylvaniaTerrainArt || this.kennesawTerrainArt || this.vicksburgTerrainArt
+        || this.sailorsTerrainArt) && place && this.cameraMode === 'location'
+        && (anchor.x - halfWidth < fieldCamera.worldView.left || anchor.x + halfWidth > fieldCamera.worldView.right
+          || anchorY - halfHeight < fieldCamera.worldView.top || anchorY + halfHeight > fieldCamera.worldView.bottom);
+      label.setVisible(Boolean(this.showMissionMarkers) && !this.showOverlay && !located && !clippedLandmark && !clippedDetailedPlace)
+        .setScale(labelScale);
+      if (overviewLabels && label.visible) {
+        overviewLabels.push({
+          key: index, kind: label.getData('overviewKind') || place?.split(':')[0],
+          x: anchor.x, y: anchorY, width: label.width * zoom * labelScale, height: label.height * zoom * labelScale,
+          originX: label.originX, originY: label.originY,
+        });
+      } else label.setPosition(anchor.x, anchorY);
+    }
+    this.missionLabelLeaders?.clear();
+    if (overviewLabels?.length) {
+      const layout = fitOverviewLabels(overviewLabels, fieldCamera, this.world, fieldCamera.zoom, this.overviewControlBounds(fieldCamera));
+      this.missionLabelLeaders.lineStyle(1 / fieldCamera.zoom, 0xffe6a1, .7);
+      for (const marker of overviewLabels) {
+        const placement = layout.get(marker.key);
+        const label = this.missionLabels[marker.key];
+        if (!placement) label.setVisible(false);
+        else {
+          label.setPosition(placement.x, placement.y);
+          if (placement.leader) this.missionLabelLeaders.lineBetween(marker.x, marker.y, placement.leader.x, placement.leader.y);
+        }
+      }
     }
     this.groupGraphics?.clear();
     for(const point of this.pendingGroup?.points || []) {const unit=snapshot.formations.find(u=>u.id===point.id);if(unit){this.groupGraphics.lineStyle(2,0xf1dfa4,.8).lineBetween(unit.x,unit.y,point.x,point.y).strokeCircle(point.x,point.y,18);}}
+    if (this.shilohLinks) {
+      const visible = this.showMissionMarkers && !snapshot.resolving && snapshot.outcome === 'undecided';
+      this.shilohLinks.setVisible(visible);
+      if (visible && (formationPass || this.shilohLinkSnapshot !== snapshot || !this.shilohLinksDrawn)) {
+        drawShilohCommandLinks(this.shilohLinks, snapshot.formations, shilohReserveNetwork(snapshot.formations), this.cameras.main.zoom);
+        this.shilohLinkSnapshot = snapshot;
+      }
+      this.shilohLinksDrawn = visible;
+    }
     this.drawSelection(snapshot);
     if (this.snapshotClock >= 140 || (snapshot.outcome !== 'undecided' && snapshot.outcome !== this.lastEmittedOutcome)) {
       this.emitSnapshot(snapshot);
@@ -626,7 +1010,7 @@ class CivilWarBattleScene extends Phaser.Scene {
     });
     const pole = createStandardPole(this);
     const flag = createRealisticStandard(this, formation.side, this.scenarioId);
-    const groundStandard = this.scenarioId === 'gettysburg' && formation.type !== 'artillery';
+    const groundStandard = (this.scenarioId === 'gettysburg' || this.manassasFieldArt) && formation.type !== 'artillery';
     if (groundStandard) {
       // A longer staff keeps the cloth above heads once its base is on the
       // soldier's ground slot; raising the whole container would float it again.
@@ -660,7 +1044,7 @@ class CivilWarBattleScene extends Phaser.Scene {
       const view = this.views.get(formation.id);
       view.locomotionHeading = restoreGettysburgLocomotionCheckpoint(this.savedPresentation, formation, view.visual,
         this.engine.time + (this.engine.resolutionTime || 0),
-        { reducedMotion: Boolean(this.reducedMotion), resolving: Boolean(this.engine.resolving || this.engine.outcome !== 'undecided') });
+        { scenarioId: this.scenarioId, reducedMotion: Boolean(this.reducedMotion), resolving: Boolean(this.engine.resolving || this.engine.outcome !== 'undecided') });
     }
     if (this.nativeShotMotion) this.views.get(formation.id).shots = restoreGettysburgInfantryShots(formation, capacity, this.engine.time + (this.engine.resolutionTime || 0), this.savedPresentation, this.shotPresentationId);
     if (this.standardContinuityEnabled) {
@@ -768,11 +1152,14 @@ class CivilWarBattleScene extends Phaser.Scene {
       { scenarioId: this.scenarioId, search: this.artPassSearch, clips: this.infantryClips || [], textures: this.textures, scale, infantryPresentationScale: this.infantryPresentationScale });
 
     if (view.artillery) {
+      const batteryMotion = this.fieldCommandArt ? gettysburgBatteryMotion(formation, this.engine.time, this.reducedMotion) : null;
       updateArtilleryVisual(view.artillery, { x: formation.x, y: formation.y, facing: formation.facing, scale,
         limbered: formation.gunState === 'limbered', moving: visual.moving, abandoned: formation.gunsAbandoned,
-        time: battleTime, reducedMotion: this.reducedMotion, crewAction: formation.reload > 0 ? 'reload' : 'idle', recoil: volleyAge >= 0 && volleyAge < 0.6 ? 1 - volleyAge / 0.6 : 0 });
+        time: battleTime, reducedMotion: this.reducedMotion, crewAction: visual.moving ? 'walk' : formation.reload > 0 ? 'reload' : 'idle',
+        recoil: volleyAge >= 0 && volleyAge < 0.6 ? 1 - volleyAge / 0.6 : 0, ...batteryMotion });
     }
 
+    const stepOptions = { reducedMotion: this.reducedMotion, resolving, annotateStationaryTurn: this.manassasInfantryArt };
     for (const figure of visual.figures) {
       const soldier = view.soldiers[figure.id];
       const { sprite } = soldier;
@@ -781,8 +1168,14 @@ class CivilWarBattleScene extends Phaser.Scene {
         continue;
       }
       const drawFigure = this.locomotionHeadingEnabled
-        ? gettysburgWalkingFigure(figure, view.locomotionHeading, formation, battleTime, { reducedMotion: this.reducedMotion, resolving }) : figure;
+        ? gettysburgWalkingFigure(figure, view.locomotionHeading, formation, battleTime, stepOptions) : figure;
       let pose = view.realistic && formation.type !== 'artillery' ? (view.detailed ? detailedInfantryPose : realisticInfantryPose)(formation.id, drawFigure, battleTime, this.reducedMotion, resolving) : null;
+      const marchPose = this.manassasInfantryArt && formation.type === 'infantry' && pose
+        ? manassasInfantryPose(this.textures, formation.side, drawFigure, stepOptions) : null;
+      if (marchPose) {
+        // The art already places its supporting sole on the ground.
+        pose = { ...pose, flip: marchPose.flip, angle: 0, offsetX: 0, offsetY: 0 };
+      }
       const familyPose = view.infantryFamily && pose ? gettysburgInfantryFamilyPose(formation.id, drawFigure, battleTime, {
         scenarioId: this.scenarioId, search: this.artPassSearch, reducedMotion: this.reducedMotion,
         paused: this.speed === 0 && !restoringFrame, resolving, frozenContact: soldier.familyContact,
@@ -815,11 +1208,12 @@ class CivilWarBattleScene extends Phaser.Scene {
       }
       const variation = 0.97 + deterministicUnitValue(formation.id, figure.id, 53) * 0.06;
       if (pose) {
+        const authored = clipPose || marchPose;
         const legacyRear = pose.useLegacyRearAim && formation.side === 'union';
-        const texture = clipPose ? clipPose.key : familyAvailable ? familyTexture : view.detailed ? (legacyRear ? `${formation.side}-aim-realistic` : `${formation.side}-detailed-${pose.page}`) : `${formation.side}-${pose.axialAim ? 'aim-realistic' : 'realistic'}`;
-        sprite.setTexture(texture, clipPose ? clipPose.frame : legacyRear ? '3-6' : pose.frame);
-        const unitScale = (view.detailed ? 58 : 62) * figure.scale / (clipPose?.referenceHeight || sprite.frame.customData?.bodyHeight || sprite.frame.realHeight);
-        sprite.setOrigin(clipPose?.pivot.x ?? sprite.frame.pivotX, clipPose?.pivot.y ?? sprite.frame.pivotY).setScale(unitScale * pose.width * bodyScale, unitScale * pose.height * bodyScale)
+        const texture = authored ? authored.key : familyAvailable ? familyTexture : view.detailed ? (legacyRear ? `${formation.side}-aim-realistic` : `${formation.side}-detailed-${pose.page}`) : `${formation.side}-${pose.axialAim ? 'aim-realistic' : 'realistic'}`;
+        sprite.setTexture(texture, authored ? authored.frame : legacyRear ? '3-6' : pose.frame);
+        const unitScale = (view.detailed ? 58 : 62) * figure.scale / (authored?.referenceHeight || sprite.frame.customData?.bodyHeight || sprite.frame.realHeight);
+        sprite.setOrigin(authored?.pivot.x ?? sprite.frame.pivotX, authored?.pivot.y ?? sprite.frame.pivotY).setScale(unitScale * pose.width * bodyScale, unitScale * pose.height * bodyScale)
           .setAngle(pose.angle).setFlipX(pose.flip).setTint(pose.tint);
       } else if (view.directional) {
         const frame = `${drawFigure.action}-${drawFigure.direction}-${drawFigure.frame}`;
@@ -900,13 +1294,15 @@ class CivilWarBattleScene extends Phaser.Scene {
       view.hitArea.setPosition(0, 0).setOrigin(0).setRotation(0).setSize(this.world.width, this.world.height).setDepth(formation.y * 10 + 5);
       view.hitArea.input.hitArea = new Phaser.Geom.Polygon(hitPoints);
       view.hitArea.input.hitAreaCallback = Phaser.Geom.Polygon.Contains;
-      const standardAnchor = this.scenarioId === 'gettysburg' && formation.type !== 'artillery'
+      const standardAnchor = view.standardUI
         ? gettysburgInfantryStandardAnchor(formation, visual.figures, view.standardAnchorId) : null;
       if (standardAnchor) view.standardAnchorId = standardAnchor.id;
       // Place the staff beside a stable living soldier's ground slot; its depth
       // follows those feet rather than the raised cloth or inspection label.
-      for (const layer of standardLayers) layer.setPosition(standardAnchor ? standardAnchor.x + 4 * scale : formation.x, standardAnchor ? standardAnchor.y : top - 13 * scale).setScale(Math.max(0.8, scale));
-      if (view.standardUI) view.standard.setDepth((standardAnchor?.y ?? formation.y) * 10 + 3);
+      const staff = standardAnchor && this.gettysburgFieldArt
+        ? this.contactLayout.groundPoint(formation.id, standardAnchor) : standardAnchor;
+      for (const layer of standardLayers) layer.setPosition(staff ? staff.x + 4 * scale : formation.x, staff ? staff.y : top - 13 * scale).setScale(Math.max(0.8, scale));
+      if (view.standardUI) view.standard.setDepth((staff?.y ?? formation.y) * 10 + 3);
     } else {
       view.hitArea.disableInteractive();
       for (const layer of standardLayers) {
@@ -916,7 +1312,11 @@ class CivilWarBattleScene extends Phaser.Scene {
     }
     const inspected = view.hovered || this.touchInspectId === formation.id;
     view.bar.setVisible(inspected); view.barBack.setVisible(inspected);
-    updatePeriodStandard(view.flag, formation.side, this.scenarioId, battleTime, deterministicUnitValue(formation.id, 0, 503) * Math.PI * 2, this.reducedMotion);
+    const flagPhase = deterministicUnitValue(formation.id, 0, 503) * Math.PI * 2;
+    if (this.fieldCommandArt && view.standardUI) {
+      view.standard.setRotation(fieldStandardLean(battleTime, flagPhase, visual.moving, this.reducedMotion));
+    }
+    updatePeriodStandard(view.flag, formation.side, this.scenarioId, battleTime, flagPhase, this.reducedMotion);
     view.bar.setDisplaySize(42 * Math.max(0, formation.strength / formation.initialStrength), 4);
     const cue = !this.tactical ? '' : formation.inMelee ? 'CLOSE COMBAT' : formation.status === 'routing' ? 'ROUTING' : formation.order === 'withdraw' ? 'WITHDRAWING' : formation.pinned ? 'PINNED' : ['limbering', 'unlimbering'].includes(formation.gunState) ? formation.gunState.toUpperCase() : '';
     view.condition.setText(cue).setVisible(inspected && Boolean(cue)).setScale(Math.min(1.8, 1 / Math.max(0.01, this.cameras.main.zoom * view.standard.scaleX)));
@@ -936,7 +1336,7 @@ class CivilWarBattleScene extends Phaser.Scene {
     this.selection.beginPath();
     this.selection.arc(selected.x, selected.y, 30, .2, Math.PI - .2, false);
     this.selection.strokePath();
-    if (this.showOverlay && this.tactical && selected.type === 'infantry' && (this.engine.fieldBattle || selected.y < 500) && gettysburgOrganized(selected) && selected.readiness?.supported === false) {
+    if (this.showOverlay && !this.shilohLinksDrawn && this.tactical && selected.type === 'infantry' && (this.engine.fieldBattle || selected.y < 500) && gettysburgOrganized(selected) && selected.readiness?.supported === false) {
       const friend = snapshot.formations.filter(unit => unit.id !== selected.id && unit.side === selected.side && gettysburgOrganized(unit)).sort((a, b) => Math.hypot(selected.x - a.x, selected.y - a.y) - Math.hypot(selected.x - b.x, selected.y - b.y))[0];
       const gap = friend ? Math.hypot(selected.x - friend.x, selected.y - friend.y) : Infinity;
       if (friend && gap < 650) {
@@ -948,7 +1348,6 @@ class CivilWarBattleScene extends Phaser.Scene {
         this.supportLabel.setText(`SUPPORT GAP · ${Math.ceil(gap)} / ${selected.readiness.supportRange || 340}`).setPosition((selected.x + friend.x) / 2, (selected.y + friend.y) / 2 + 22).setScale(Math.min(2, 1 / this.cameras.main.zoom)).setVisible(true);
       }
     }
-    const destination = this.pendingDestination || (['advance', 'assault', 'fallback', 'withdraw'].includes(selected.order) ? selected.target : null);
     if (this.showRange) {
       this.selection.lineStyle(2, 0x83d7df, 0.8);
       if (selected.tactics) {
@@ -969,13 +1368,20 @@ class CivilWarBattleScene extends Phaser.Scene {
       const target = snapshot.formations.find(unit => unit.id === selected.tactics.targetId && unit.active);
       if (target) this.selection.lineStyle(2, 0xf6a095, 0.8).strokeCircle(target.x, target.y, 23);
     }
-    if (destination && (this.pendingDestination || this.showOverlay)) {
-      this.selection.lineStyle(3, this.pendingDestination ? 0xffffff : 0xd4af37, 0.95);
-      const route = !this.pendingDestination && selected.path?.length ? [{ x: selected.x, y: selected.y }, ...selected.path, destination] : [selected, destination];
+    const preview = selected.side === 'confederate' ? this.pendingDestination : null;
+    const overlayDestination = this.showOverlay && selected.side === 'confederate'
+      && !selected.directMove && selected.pendingCommand?.order !== 'move'
+      && ['advance', 'assault', 'fallback', 'withdraw'].includes(selected.order) ? selected.target : null;
+    const destination = preview || overlayDestination;
+    if (destination) {
+      this.selection.lineStyle(3, preview ? 0xffffff : 0xd4af37, 0.95);
+      const route = !preview && selected.path?.length ? [{ x: selected.x, y: selected.y }, ...selected.path, destination] : [selected, destination];
       for (let i = 1; i < route.length; i++) this.selection.lineBetween(route[i - 1].x, route[i - 1].y, route[i].x, route[i].y);
       this.selection.strokeCircle(destination.x, destination.y, 14);
       this.selection.lineBetween(destination.x - 22, destination.y, destination.x + 22, destination.y);
       this.selection.lineBetween(destination.x, destination.y - 22, destination.x, destination.y + 22);
+    } else if (!this.pendingGroup && !snapshot.resolving && snapshot.outcome === 'undecided') {
+      drawConfirmedMoveCue(this.selection, selected, this.cameras.main.zoom);
     }
 
   }
@@ -1072,24 +1478,44 @@ class CivilWarBattleScene extends Phaser.Scene {
     this.locationOutline = null; this.locationLabel = null;
   }
   focusLocation(id, pause = true) {
-    const site = battleLocations(this.engine.snapshot()).find(site => site.id === id);
+    const site = battleLocations(this.engine.snapshot(), this.petersburgTerrainArt).find(site => site.id === id);
     if (!site) return false;
     if (pause) this.setSpeed(0);
     this.clearLocation();
     this.cameraMode = 'location'; this.focusedLocationId = id;
     const camera = this.cameras.main;
     const overview = overviewZoom(this.scale, this.world);
+    const corridor = this.winchesterLandmarksArt && id === WINCHESTER_CORRIDOR_LOCATION
+      ? this.config.withdrawalCorridor : null;
+    const outlineWidth = corridor ? corridor.right - corridor.left : site.width;
+    const focusHeight = corridor ? this.world.height - corridor.top : site.height;
     // Fit the whole site with room to see nearby formations, including on phones.
     camera.setZoom(Math.max(overview, Math.min(1.2,
-      this.scale.width / (site.width + 200), this.scale.height / (site.height + 180))));
-    this.updateCameraBounds(); camera.centerOn(site.x, site.y);
-    this.locationOutline = this.add.graphics().setDepth(39010);
-    this.locationOutline.lineStyle(4 / camera.zoom, 0xffe6a1, 1);
-    this.locationOutline.strokeRoundedRect(site.x - site.width / 2, site.y - site.height / 2, site.width, site.height, 10);
+      this.scale.width / (outlineWidth + 200), this.scale.height / (focusHeight + 180))));
+    const frameLanding = this.shilohLandmarksArt && id === SHILOH_LANDING_LOCATION;
+    const artwork = id.startsWith('Landmark:') && this.fieldPlaceArt?.[id.slice('Landmark:'.length)];
+    // A short field places the location receipt over the top edge of the canvas.
+    const cameraLift = this.scale.height < 260 ? artwork?.shortViewCameraLift ?? 0 : 0;
+    this.updateCameraBounds();
+    camera.centerOn(frameLanding ? 1265 : site.x, frameLanding ? 800 : site.y - cameraLift);
+    const road = this.wildernessLandmarksArt && id === WILDERNESS_ROAD_LOCATION
+      && this.engine.fieldBattle?.zones.find(zone => zone.kind === 'road');
+    const outlineY = road ? road.top : corridor ? corridor.top : site.y - site.height / 2;
+    const outlineHeight = road ? road.bottom - road.top : focusHeight;
+    if (!site.scenic) {
+      this.locationOutline = this.add.graphics().setDepth(39010);
+      this.locationOutline.lineStyle(4 / camera.zoom, 0xffe6a1, 1);
+      this.locationOutline.strokeRoundedRect(corridor ? corridor.left : site.x - site.width / 2, outlineY, outlineWidth, outlineHeight, 10);
+    }
     const below = site.y < this.world.height / 2;
-    this.locationLabel = this.add.text(site.x, site.y + (below ? 1 : -1) * (site.height / 2 + 12), site.name,
+    const labelOffset = road ? WILDERNESS_ROAD_LABEL_OFFSET
+      : artwork?.labelOffsetY ?? site.labelOffsetY ?? (below ? 1 : -1) * (site.height / 2 + 12);
+    const labelY = corridor ? corridor.top - WINCHESTER_CORRIDOR_LABEL_GAP : site.y + labelOffset;
+    const labelName = corridor ? 'Winchester corridor' : site.name;
+    const labelX = site.x + (this.newMarketTerrainArt && id === 'Sector:left' ? 126 : site.focusLabelOffsetX ?? 0);
+    this.locationLabel = this.add.text(labelX, labelY, labelName,
       { fontFamily: 'Georgia', fontSize: '14px', color: '#fff1c5', backgroundColor: '#18231f', padding: { x: 8, y: 5 }, align: 'center', wordWrap: { width: 240 } })
-      .setOrigin(.5, below ? 0 : 1).setScale(1 / camera.zoom).setDepth(39011);
+      .setOrigin(.5, artwork || site.scenic || road || corridor ? .5 : below ? 0 : 1).setScale(1 / camera.zoom).setDepth(39011);
     this.onZoom?.(camera.zoom / overview);
     return true;
   }

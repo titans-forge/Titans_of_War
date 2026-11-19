@@ -4,7 +4,7 @@ import { createContext, runInContext } from 'node:vm';
 import { parseAst } from 'rolldown/parseAst';
 import * as campaign from '../../src/game/campaignStorage.js';
 import * as field from '../../src/game/fieldCheckpoint.js';
-import { loadFieldSuspension, saveFieldSuspension } from '../../src/game/fieldSuspendSave.js';
+import { discardOwnedFieldSuspension, loadFieldSuspension, saveFieldSuspension, settleOwnedFieldSuspension } from '../../src/game/fieldSuspendSave.js';
 import { CivilWarBattleEngine } from '../../src/battle/civilWarEngine.js';
 import { BATTLE_SCENARIOS, applyBattleResolution, battleChoiceSuccessModifier, battleResultLabel } from '../../src/game/battles.js';
 import { advanceCampaignTurn } from '../../src/game/headlessCampaign.js';
@@ -60,6 +60,7 @@ export function appHarness(f, source = readFileSync(new URL('../../src/App.jsx',
   const loader = only(nodes(ast, node => node.type === 'FunctionDeclaration' && node.id?.name === 'loadInitialCampaign'), 'actual App loader');
   const effectCall = only(nodes(ast, node => node.type === 'CallExpression' && node.callee?.name === 'useEffect' && calls(node.arguments[0], 'saveCampaignSnapshot')), 'actual App autosave');
   const suspend = only(nodes(ast, node => node.type === 'VariableDeclarator' && node.id?.name === 'handleSuspendBattle'), 'actual App Save & Leave handler');
+  const discardCurrent = only(nodes(ast, node => node.type === 'VariableDeclarator' && node.id?.name === 'discardCurrentField'), 'actual App owned discard handler');
   const resolution = only(nodes(ast, node => node.type === 'VariableDeclarator' && node.id?.name === 'handleBattleResolution'), 'actual App resolution handler');
   const complete = only(nodes(ast, node => node.type === 'VariableDeclarator' && node.id?.name === 'completeCampaignChoice'), 'actual App campaign settlement handler');
   const restore = only(nodes(ast, node => node.type === 'VariableDeclarator' && node.id?.name === 'applyCampaignArchive'), 'actual App archive handler');
@@ -68,8 +69,8 @@ export function appHarness(f, source = readFileSync(new URL('../../src/App.jsx',
   const archiveProtection = only(nodes(ast, node => node.type === 'VariableDeclarator' && node.id?.type === 'ArrayPattern' && node.id.elements[0]?.name === 'archiveProtected'), 'actual App archive protection initializer');
   const resume = nodes(ast, node => node.type === 'JSXAttribute' && node.name?.name === 'onClose' && calls(node.value?.expression, 'setPendingBattle')
     && slice(node.value.expression).includes("mode: 'fight'"));
-  const discard = only(nodes(ast, node => node.type === 'JSXAttribute' && node.name?.name === 'onClick' && calls(node.value?.expression, 'clearFieldCheckpoint') && calls(node.value?.expression, 'setOperationError')), 'actual App discard callback');
-  const close = only(nodes(ast, node => node.type === 'JSXAttribute' && node.name?.name === 'onClose' && calls(node.value?.expression, 'clearFieldCheckpoint')), 'actual App encounter close callback');
+  const discard = only(nodes(ast, node => node.type === 'JSXAttribute' && node.name?.name === 'onClick' && calls(node.value?.expression, 'discardCurrentField') && calls(node.value?.expression, 'setOperationError')), 'actual App discard callback');
+  const close = only(nodes(ast, node => node.type === 'JSXAttribute' && node.name?.name === 'onClose' && calls(node.value?.expression, 'discardCurrentField')), 'actual App encounter close callback');
   const context = createContext({ ...campaign, ...field, STATIC_SCENARIOS: [scenario],
     initialField: null, initialCampaign: null, fieldOwnerRef: { current: null }, pendingBattle: null, archiveProtected: false, isDemo: false,
     aiPortalEngaged: false, selectedModel: '', archiveMessage: '', saveRetry: 0, campaignSaveStatus: null,
@@ -81,6 +82,8 @@ export function appHarness(f, source = readFileSync(new URL('../../src/App.jsx',
     saveFieldCheckpoint: (pending, checkpoint, state) => field.saveFieldCheckpoint(pending, checkpoint, state, f.storage),
     loadFieldSuspension: (unused, expected) => loadFieldSuspension(f.storage, expected),
     saveFieldSuspension: (snapshot, pending, checkpoint, state, unused, owner) => saveFieldSuspension(snapshot, pending, checkpoint, state, f.storage, owner),
+    discardOwnedFieldSuspension: (pending, owner) => discardOwnedFieldSuspension(pending, owner, f.storage),
+    settleOwnedFieldSuspension: (snapshot, pending, owner) => settleOwnedFieldSuspension(snapshot, pending, owner, f.storage),
     clearFieldCheckpoint: () => field.clearFieldCheckpoint(f.storage),
     saveCampaignCheckpoint: snapshot => campaign.saveCampaignCheckpoint(snapshot, f.storage),
     backupOriginalCampaignRaw: () => campaign.backupOriginalCampaignRaw(f.storage),
@@ -94,7 +97,7 @@ export function appHarness(f, source = readFileSync(new URL('../../src/App.jsx',
       if (updates) updates.push(update); else update();
     };
   }
-  const compiled = `${slice(loader)}\nconst runAutosave=${slice(effectCall.arguments[0])};\nconst handleSuspendBattle=${slice(suspend.init)};\nconst completeCampaignChoice=${slice(complete.init)};\nconst handleBattleResolution=${slice(resolution.init)};\nconst protectCurrentCampaign=${slice(protect.init)};\nconst applyCampaignArchive=${slice(restore.init)};\nconst resumeBattle=${slice(only(resume, 'actual App resume callback').value.expression)};\nconst discardBattle=${slice(discard.value.expression)};\nconst closeBattle=${slice(close.value.expression)};`;
+  const compiled = `${slice(loader)}\nconst runAutosave=${slice(effectCall.arguments[0])};\nconst handleSuspendBattle=${slice(suspend.init)};\nconst completeCampaignChoice=${slice(complete.init)};\nconst discardCurrentField=${slice(discardCurrent.init)};\nconst handleBattleResolution=${slice(resolution.init)};\nconst protectCurrentCampaign=${slice(protect.init)};\nconst applyCampaignArchive=${slice(restore.init)};\nconst resumeBattle=${slice(only(resume, 'actual App resume callback').value.expression)};\nconst discardBattle=${slice(discard.value.expression)};\nconst closeBattle=${slice(close.value.expression)};`;
   runInContext(compiled, context);
   const loaded = runInContext('loadInitialCampaign()', context);
   context.initialCampaign = loaded;

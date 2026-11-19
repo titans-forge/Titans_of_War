@@ -1,4 +1,5 @@
 import { createCampaignContinuity, isCampaignContinuity } from './campaignContinuity.js';
+import { CEDAR_CREEK_ELECTION_FIELD_REQUIREMENTS, fieldElectionFactors, satisfiesFieldResultRequirement } from './fieldResultConsequences.js';
 export const RESOURCE_LABELS = {
   militaryStrength: 'Army strength', munitions: 'Ammunition', treasury: 'Treasury',
   foodSupply: 'Food', publicMorale: 'Morale',
@@ -13,6 +14,9 @@ function isResourceBreakdown(item) {
 
 export function isAfterActionReport(value) {
   return Boolean(value && (value.continuity === undefined || isCampaignContinuity(value.continuity)) && ['title', 'choice', 'consequence', 'nextTitle'].every((key) => typeof value[key] === 'string')
+    && (value.choiceId === undefined || typeof value.choiceId === 'string')
+    && (value.cedarFood === undefined || (Number.isFinite(value.cedarFood?.operation)
+      && Number.isFinite(value.cedarFood.minimumReserve) && value.cedarFood.minimumReserve >= 0))
     && (value.battleResult == null || (typeof value.battleResult === 'object' && !Array.isArray(value.battleResult) && typeof value.battleResult.result === 'string'))
     && Number.isFinite(value.divergenceChange) && Array.isArray(value.deltas)
     && value.deltas.length === Object.keys(RESOURCE_LABELS).length
@@ -24,6 +28,15 @@ export function isAfterActionReport(value) {
 // resolution, before tickMetrics. New history snapshots supply it implicitly.
 export function createAfterAction(before, after, entry, nextScenario, baseAfterBattle = null, baseBeforeBattle = null) {
   const trace = entry.resourceTransitions;
+  const cedarCreek = entry.scenarioId === 'cedar_creek';
+  const foodBeforeDecision = trace?.afterUpkeep?.foodSupply;
+  const foodFromDecision = trace?.afterDecisionEffects?.foodSupply;
+  const foodAfterFloor = trace?.afterDecision?.foodSupply;
+  // The generic decision row includes the survival floor. Cedar's report
+  // needs to distinguish stores gained or lost from guaranteed carryover.
+  const cedarFood = cedarCreek && [foodBeforeDecision, foodFromDecision, foodAfterFloor].every(Number.isFinite)
+    ? { operation: foodFromDecision - foodBeforeDecision, minimumReserve: foodAfterFloor - foodFromDecision }
+    : null;
   const deltas = Object.entries(RESOURCE_LABELS).map(([key, label]) => {
     const start = before.metrics[key];
     const end = after.metrics[key];
@@ -52,6 +65,8 @@ export function createAfterAction(before, after, entry, nextScenario, baseAfterB
   return {
     continuity: createCampaignContinuity(after, entry, nextScenario),
     scenarioId: entry.scenarioId,
+    ...(cedarCreek ? { choiceId: entry.choiceId } : {}),
+    ...(cedarFood ? { cedarFood } : {}),
     title: entry.scenarioTitle,
     choice: entry.choiceText,
     consequence: entry.consequence,
@@ -65,8 +80,30 @@ export function createAfterAction(before, after, entry, nextScenario, baseAfterB
   };
 }
 
+export function cedarCreekCampaignReadout(report) {
+  if (report?.scenarioId !== 'cedar_creek') return null;
+  const { battleResult, scenarioId } = report;
+  const choiceId = report.choiceId || battleResult?.choiceId;
+  if (typeof choiceId !== 'string') return null;
+  const entry = { scenarioId, choiceId, battleResult };
+  const factors = fieldElectionFactors(entry);
+  if (!factors) return null;
+  const prerequisiteMet = CEDAR_CREEK_ELECTION_FIELD_REQUIREMENTS.some(requirement =>
+    requirement.choiceId === entry.choiceId && satisfiesFieldResultRequirement(entry, requirement));
+  return {
+    electionPressure: factors[0].points,
+    prerequisiteMet,
+    food: report.cedarFood ?? null,
+    delegated: battleResult.delegated === true,
+  };
+}
+
 export function nextPhasePreview(scenario, selectedChoice, scenarios) {
-  if (selectedChoice?.endsCampaign) return 'Campaign settlement';
+  if (scenario?.endsCampaign || selectedChoice?.endsCampaign) return 'Campaign settlement';
+  if (scenario?.id === 'vicksburg') return 'The Gettysburg briefing resumes with the commanders available in your campaign.';
+  if (scenario?.id === 'richmond_evacuation' && selectedChoice?.next === 'appomattox_decision') {
+    return 'The retreat leads toward Appomattox. Another field engagement may come first.';
+  }
   if (selectedChoice?.next) return scenarios.find((entry) => entry.id === selectedChoice.next)?.title || 'A new branch';
   return 'Next phase depends on your decision and the campaign situation.';
 }

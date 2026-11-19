@@ -1,28 +1,35 @@
-import { Capacitor } from '@capacitor/core';
 import { readBattleDisplayPreferences } from '../battle/battleDisplayPreferences.js';
-import { readFieldViewContext } from '../battle/fieldViewContext.js';
+import { restoredFieldSelection } from '../battle/fieldViewContext.js';
 import { GettysburgJacksonMissionConditions } from './GettysburgJacksonMissionConditions.jsx';
+import { FieldMissionCheckpoints } from './FieldMissionCheckpoints.jsx';
+import { fieldOrderGuidance } from '../battle/fieldOrderGuidance.js';
 import { getGettysburgJacksonMissionPresentation, presentGettysburgJacksonSnapshot } from '../battle/gettysburgJacksonMission.js';
 import { TurnClearanceRecovery } from './TurnClearanceRecovery.jsx';
 import { rememberTurnClearance, confirmTurnClearance, updateTurnClearance, turnClearanceResume, clearancePreviewMatches } from '../battle/turnClearanceRecovery.js';
 import { practiceAmmunitionLabel } from '../game/practiceConditions.js';
 import { battleLocations } from '../battle/battleLocations.js';
-import { FormationReadinessCard, selectableRetreatBlocker } from './FormationReadinessCard.jsx';
+import { FormationReadinessCard, FormationWithdrawalReadout, selectableRetreatBlocker } from './FormationReadinessCard.jsx';
 import { siegeBrief, siegeCommand } from '../battle/siegeCommand.js';
 import { withdrawalBrief, withdrawalCommand } from '../battle/withdrawalCommand.js';
 import { WithdrawalGoals } from './WithdrawalGoals.jsx';
 import { CHICKAMAUGA_PRESERVATION_BRIEF } from '../battle/chickamaugaPreservation.js';
-import { SHILOH_RESERVE_BRIEF, shilohReserveConditions } from '../battle/shilohReserveObjective.js';
+import { SHILOH_RESERVE_BRIEF, shilohReserveConditions, shilohReserveNetwork } from '../battle/shilohReserveObjective.js';
+import { SHILOH_RESERVE_ID, shilohCommandReadout } from '../battle/shilohCommandPresentation.js';
 import { siegeTerrainGuide } from '../battle/siegeTerrainVisual.js';
 import { landmarkField } from '../battle/historicalLandmarks.js';
 import { henryHillConditions } from '../battle/henryHillObjective.js';
 import { GroupOrders } from './GroupOrders.jsx';
-import { rallyFeedback, objectiveFeedback, armyAttention } from '../battle/battleFeedback.js';
+import { rallyFeedback, objectiveFeedback, armyAttention, gettysburgOrderReceipt } from '../battle/battleFeedback.js';
+import { gettysburgFieldArtEnabled } from '../battle/gettysburgFieldArt.js';
+import { manassasFieldArtEnabled } from '../battle/manassasFieldArt.js';
+import { WINCHESTER_CORRIDOR_LOCATION } from '../battle/winchesterLandmarkArt.js';
+import { petersburgTerrainArtEnabled } from '../battle/petersburgTerrainArt.js';
+import { petersburgReadout } from '../battle/petersburgCommandPresentation.js';
 import { periodStandardFor } from '../battle/periodStandards.js';
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { ArrowLeft, ArrowUpRight, BookOpen, Check, ChevronLeft, ChevronRight, Crosshair, FastForward, Flag, Hand, HeartPulse, Maximize, Minus, MousePointer2, Pause, Plus, Shield, Swords, Undo2, X } from 'lucide-react';
 import { CivilWarBattlefield } from '../battle/CivilWarBattlefield.jsx';
-import { battleResultLabel } from '../game/battles.js';
+import { battleResultLabel, fieldCommandTitle } from '../game/battles.js';
 import { BATTLE_OBJECTIVES, getBattleAssessment } from '../battle/battleAssessment.js';
 import { canCommand } from '../battle/battleUsability.js';
 import { getBattleEngineConfig } from '../battle/battleDefinitions.js';
@@ -79,6 +86,12 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
   const inspectorDetails = useRef(null);
   const leaveDialog = useRef(null);
   const closeButton = useRef(null);
+  const inspectorToggle = useRef(null);
+  const moveModeButton = useRef(null);
+  const destinationCancel = useRef(null);
+  const activeGroupReview = useRef(null);
+  const groupLauncher = useRef(null);
+  const groupCancelButton = useRef(null);
   const guideButton = useRef(null);
   const guidePanel = useRef(null);
   const guideHeading = useRef(null);
@@ -92,13 +105,21 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
   const [leaving, setLeaving] = useState(false);
   const [inspectorOpen, setInspectorOpen] = useState(false);
   const [wideField, setWideField] = useState(false);
-  const [compact, setCompact] = useState(() => window.matchMedia(Capacitor.isNativePlatform() ? '(max-width: 700px), (max-height: 550px)' : '(max-width: 700px)').matches);
+  const [speed, setSpeed] = useState(0);
+  const compactQuery = '(max-width: 700px), (orientation: landscape) and (max-height: 550px)';
+  const [compact, setCompact] = useState(() => window.matchMedia(compactQuery).matches);
   useEffect(() => {
-    const query = window.matchMedia(Capacitor.isNativePlatform() ? '(max-width: 700px), (max-height: 550px)' : '(max-width: 700px)');
-    const update = () => setCompact(query.matches);
+    const query = window.matchMedia(compactQuery);
+    const orientation = window.matchMedia('(orientation: landscape)');
+    const pause = () => setSpeed(0);
+    const update = () => { setCompact(query.matches); setSpeed(0); };
     query.addEventListener('change', update);
+    orientation.addEventListener('change', pause);
     update(); // Catch a viewport change between the initial render and subscription.
-    return () => query.removeEventListener('change', update);
+    return () => {
+      query.removeEventListener('change', update);
+      orientation.removeEventListener('change', pause);
+    };
   }, []);
   const inspectorExpanded = inspectorOpen || guide.open;
   const wideActive = wideField && !compact && !inspectorExpanded;
@@ -108,7 +129,6 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
   const [destination, setDestination] = useState(null);
   const [clearanceRecords, setClearanceRecords] = useState({});
   const pausedClearance = useRef(new WeakSet());
-  const [speed, setSpeed] = useState(0);
   const [assaultSectorDrafts, setAssaultSectorDrafts] = useState({});
   const rememberAssaultSector = (id, value) => {
     if (!id) return;
@@ -123,24 +143,51 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
     return () => document.removeEventListener('visibilitychange', pauseWhenHidden);
   }, []);
 
-  const [selectedId, setSelectedId] = useState(() => readFieldViewContext(checkpoint, getBattleEngineConfig(battle.id).world, battle.id)?.selectedId
-    || siegeBrief(battle.id, choiceId, effectiveCampaignState?.battleRulesVersion)?.selection || battle.defaultSelection);
+  const [selectedId, setSelectedId] = useState(() => restoredFieldSelection(checkpoint, getBattleEngineConfig(battle.id).world, battle.id,
+    siegeBrief(battle.id, choiceId, effectiveCampaignState?.battleRulesVersion)?.selection
+    || battle.selectionByChoice?.[choiceId] || battle.defaultSelection));
   const [snapshot, setSnapshot] = useState(null);
-  const locations = useMemo(() => battleLocations(snapshot), [snapshot]);
+  const petersburgTerrainArt = petersburgTerrainArtEnabled(battle.id, snapshot?.battleRulesVersion, window.location.search);
+  const locations = useMemo(() => battleLocations(snapshot, petersburgTerrainArt), [snapshot, petersburgTerrainArt]);
   const [locationChoice, setLocationChoice] = useState('');
   const [markedLocation, setMarkedLocation] = useState(null);
   const locateMenu = useRef(null);
   const locateButton = useRef(null);
-  const locate = id => {
+  const locate = (id, focusTarget = locateButton.current) => {
     const site = locations.find(site => site.id === id);
     if (!site || !battlefield.current?.locate(id)) return;
     setSpeed(0); setInspectorOpen(false); setMarkedLocation(site); setLocationChoice(id);
     if (locateMenu.current) locateMenu.current.open = false;
-    locateButton.current?.focus();
+    focusTarget?.focus();
   };
   const [groupPlan,setGroupPlan] = useState(null);
   const reviewingOrder = Boolean(destination || groupPlan);
-  const onGroupPreview=useCallback(plan=>{setGroupPlan(plan);if(plan){setSpeed(0);if(!plan.placing)setInspectorOpen(true);}},[]);
+  const onGroupPreview = useCallback(plan => {
+    activeGroupReview.current = plan;
+    setGroupPlan(plan);
+    if (!plan) return;
+    setSpeed(0);
+    if (!plan.placing) setInspectorOpen(true);
+  }, []);
+  useEffect(() => {
+    if (groupPlan) groupCancelButton.current?.focus({ preventScroll: Boolean(groupPlan.placing) });
+  }, [groupPlan]);
+  const cancelGroupOrder = useCallback(() => {
+    const launcher = groupLauncher.current;
+    battlefield.current?.cancelGroup();
+    groupLauncher.current = null;
+    setSpeed(0);
+    if (launcher?.isConnected) {
+      const panel = launcher.closest('.cw-group-panel');
+      if (panel) panel.open = true;
+      setInspectorOpen(true);
+    }
+    requestAnimationFrame(() => {
+      const focusTarget = launcher?.isConnected && launcher.getClientRects().length ? launcher
+        : inspectorToggle.current?.getClientRects().length ? inspectorToggle.current : overlay.current;
+      focusTarget?.focus();
+    });
+  }, []);
   const onSnapshot = useCallback((next) => setSnapshot(presentGettysburgJacksonSnapshot(next, choiceId)), [choiceId]);
   const onDestination = useCallback((point) => {
     setDestination(point);
@@ -166,12 +213,46 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
   const disabled = resolving || completed || !canCommand(selected);
   const gettysburg = Boolean(snapshot?.gettysburg);
   const fieldBattle = snapshot?.fieldBattle && withdrawalOrders ? { ...snapshot.fieldBattle, subtitle: withdrawalOrders.title, advice: withdrawalOrders.orders } : snapshot?.fieldBattle;
+  const antietamStatus = fieldBattle?.antietam;
+  const fiveForksStatus = fieldBattle?.fiveForks;
+  const jonesboroughStatus = fieldBattle?.jonesborough;
+  const secondManassasStatus = fieldBattle?.secondManassas;
+  const fredericksburgStatus = fieldBattle?.fredericksburg;
+  const gainesMillStatus = fieldBattle?.gainesMill;
+  const newMarketStatus = fieldBattle?.newMarket;
+  const missionaryRidgeStatus = fieldBattle?.missionaryRidge;
+  const spotsylvaniaStatus = fieldBattle?.spotsylvania;
+  const kennesawStatus = fieldBattle?.kennesaw;
+  const vicksburgStatus = fieldBattle?.vicksburg;
+  const sailorsCreekStatus = fieldBattle?.sailorsCreek;
+  const fieldMissionStatus = antietamStatus || fiveForksStatus || jonesboroughStatus || secondManassasStatus
+    || fredericksburgStatus || gainesMillStatus || newMarketStatus || missionaryRidgeStatus || spotsylvaniaStatus || kennesawStatus || vicksburgStatus || sailorsCreekStatus;
+  const compactMission = compact && Boolean(fieldMissionStatus) && !completed && !resolving;
+  const orderCue = fieldOrderGuidance(snapshot, choiceId);
   const withdrawalStatus = withdrawalCommand(snapshot, choiceId);
+  const landmarkShortcuts = petersburgTerrainArt || ['cedar_creek', 'cold_harbor', 'antietam', 'five_forks', 'jonesborough', 'second_manassas', 'fredericksburg', 'gaines_mill', 'new_market', 'missionary_ridge', 'spotsylvania', 'kennesaw_mountain', 'vicksburg', 'sailors_creek'].includes(battle.id)
+    ? locations.filter(site => ['Landmark', 'Terrain'].includes(site.kind)) : [];
   const siegeStatus = siegeCommand(snapshot, choiceId);
+  const craterStatus = petersburgReadout(snapshot, choiceId);
   const groundGuide = fieldBattle ? siegeTerrainGuide(battle.id) : null;
   const tactical = gettysburg || Boolean(fieldBattle);
   const attackObjective = fieldBattle?.attackObjective;
   const defenseObjective = fieldBattle?.defenseObjective;
+  const reserveObjective = fieldBattle?.reserveObjective;
+  const reserveNetwork = useMemo(() => reserveObjective ? shilohReserveNetwork(snapshot.formations) : null, [snapshot, reserveObjective]);
+  const reserveReadout = completed || resolving ? null : shilohCommandReadout(reserveObjective, reserveNetwork);
+  const reserveFormation = reserveNetwork && snapshot.formations.find(unit => unit.id === SHILOH_RESERVE_ID);
+  const connectedCorps = reserveNetwork && snapshot.formations
+    .filter(unit => reserveNetwork.frontLinks.some(link => link.from === unit.id || link.to === unit.id))
+    .map(unit => unit.name);
+  const chickamaugaCurrent = battle.id === 'chickamauga' && snapshot?.battleRulesVersion >= 18;
+  const breakthroughPhase = chickamaugaCurrent && choiceId === 'option_b' ? snapshot.fieldStatus?.label : null;
+  const timedFieldPhase = fieldBattle && ['cedar_creek', 'cold_harbor'].includes(battle.id)
+    ? snapshot.fieldStatus?.label : null;
+  const compactProgress = completed ? null : withdrawalStatus?.compactProgress || siegeStatus?.title
+    || reserveReadout?.compact || craterStatus?.compact || antietamStatus?.title || fiveForksStatus?.title || jonesboroughStatus?.title
+    || secondManassasStatus?.title || fredericksburgStatus?.title || gainesMillStatus?.title
+    || newMarketStatus?.title || missionaryRidgeStatus?.title || spotsylvaniaStatus?.title || kennesawStatus?.title || vicksburgStatus?.title || sailorsCreekStatus?.title || breakthroughPhase || timedFieldPhase;
   const commandSectors = snapshot?.gettysburg?.sectors || fieldBattle?.sectors || [];
   const assaultSector = assaultSectorPresentation(selected, commandSectors, assaultSectorDrafts[selectedId]);
   const canRally = tactical && !resolving && !completed && selected?.active && !['broken', 'surrendered'].includes(selected?.status);
@@ -208,7 +289,20 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
       delete next[selectedId]; if (record) next[selectedId] = record; return next;
     });
     battlefield.current?.confirmMove();
+    moveModeButton.current?.focus({ preventScroll: true });
   };
+  const cancelDestination = () => {
+    battlefield.current?.mode(inputMode);
+    moveModeButton.current?.focus({ preventScroll: true });
+  };
+  const dockDestination = compact && tactical;
+  const destinationConfirmation = destination && (
+    <div className="cw-destination-confirm" role="group" aria-label="Review move destination">
+      <span role="status">{destination.error || `Destination ${destination.x}, ${destination.y}`}</span>
+      <button disabled={disabled || Boolean(destination.error)} onClick={confirmDestination}><Check /> Confirm move</button>
+      <button ref={destinationCancel} onClick={cancelDestination} title="Cancel destination" aria-label="Cancel destination"><X /></button>
+    </div>
+  );
   const resumeSavedAttack = () => {
     const command = turnClearanceResume(clearanceRecords[selectedId], snapshot);
     if (disabled || reviewingOrder || !command) return;
@@ -216,6 +310,11 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
   };
   const selectedOrder = selected?.directMove ? 'move' : selected?.order;
   const commandOrder = selected?.pendingCommand?.order || selectedOrder;
+  const manassasArt = manassasFieldArtEnabled(battle.id, snapshot?.battleRulesVersion, window.location.search);
+  const fieldArt = manassasArt || gettysburgFieldArtEnabled(battle.id, snapshot?.battleRulesVersion, window.location.search);
+  const orderReceipt = gettysburgOrderReceipt(selected);
+  const blockedAtChickamauga = chickamaugaCurrent && orderReceipt === 'Maneuver blocked';
+  const fieldReceipt = fieldArt || blockedAtChickamauga ? orderReceipt : null;
   const commandOptions = tactical ? ['hold', 'advance', 'assault', 'fallback', 'rally', 'withdraw'] : ['hold', 'advance', 'volley', 'reform', 'withdraw'];
   const commandIcons = { hold: Shield, advance: ArrowUpRight, assault: Swords, fallback: Undo2, rally: HeartPulse, withdraw: Flag, volley: Crosshair, reform: HeartPulse };
   const commandDescriptions = { hold: 'Hold position and fire at threats in range.', advance: 'Close toward the enemy, then establish a firing line.', assault: 'Commit this infantry formation to the selected command sector.', fallback: 'Fall back a short distance, returning slow fire; remain available.', rally: 'Recover near friendly support after clearing enemy fire. Routed troops keep retreating until safe.', withdraw: 'Leave the battle permanently once clear of enemy fire.', volley: 'Hold position and fire when reloaded.', reform: 'Reform over 6 field minutes; no firing while reforming.' };
@@ -223,7 +322,20 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
     const report = tactical ? getGettysburgForceReport(snapshot, assessment) : null;
     return report && jacksonMission ? { ...report, headline: 'Field result recorded', explanation: jacksonMission.resultRationale || report.explanation } : report;
   }, [tactical, snapshot, assessment, jacksonMission]);
-  const commandBrief = fieldBattle ? { phase: completed ? 'After action' : snapshot.time ? snapshot.fieldStatus?.label || 'Field command' : 'Command phase · paused', message: snapshot.fieldStatus?.message || fieldBattle.advice[0] } : getGettysburgCommandBrief(snapshot, choiceId);
+  const commandBrief = fieldBattle ? {
+    phase: completed ? 'After action' : craterStatus ? 'Crater command' : antietamStatus ? 'Sharpsburg command' : fiveForksStatus ? 'Five Forks command' : jonesboroughStatus ? 'Jonesborough command'
+      : secondManassasStatus ? 'Second Manassas command'
+      : fredericksburgStatus ? 'Fredericksburg command'
+      : gainesMillStatus ? 'Gaines’ Mill command'
+      : newMarketStatus ? 'New Market command'
+      : missionaryRidgeStatus ? 'Missionary Ridge command'
+      : spotsylvaniaStatus ? 'Spotsylvania command'
+      : kennesawStatus ? 'Kennesaw Mountain command'
+      : vicksburgStatus ? 'Vicksburg command'
+      : sailorsCreekStatus ? 'Sailor’s Creek command'
+      : breakthroughPhase || timedFieldPhase || (snapshot.time ? snapshot.fieldStatus?.label || 'Field command' : 'Command phase · paused'),
+    message: snapshot.fieldStatus?.message || fieldBattle.advice[0],
+  } : getGettysburgCommandBrief(snapshot, choiceId);
   const fieldAttackPlan = attackObjective ? fieldAttackPlanFor(battle.id, snapshot.battleRulesVersion) : null;
   const fieldStagingStep = fieldAttackPlan?.steps.find(step => step.id === selectedId);
   const stagingStep = GETTYSBURG_STAGING_PLAN.find(step => step.id === selectedId);
@@ -255,7 +367,13 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
     if (value > 0 && guide.open) closeGuide();
     setSpeed(value);
   };
-  const openBrief = () => { if (guide.open) closeGuide(); setSpeed(0); setBriefOpen(true); setInspectorOpen(true); };
+  const openBrief = () => {
+    if (guide.open) closeGuide();
+    setSpeed(0);
+    setBriefOpen(true);
+    setInspectorOpen(true);
+    requestAnimationFrame(() => inspectorDetails.current?.querySelector('.cw-command-brief > summary')?.focus());
+  };
   const requestClose = useCallback(() => {
     setSpeed(0);
     setLeaving(true);
@@ -276,8 +394,20 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
       if (event.key === 'Escape') {
         event.preventDefault();
         event.stopPropagation();
+        const menu = event.target?.closest?.('details[open]:is(.cw-field-locator, .cw-map-options, .cw-field-mission-checks)')
+          || root.querySelector('details[name="cw-field-overlay"][open]');
         if (scope !== root) setLeaving(false);
         else if (guidePanel.current) closeGuide();
+        else if (menu) {
+          menu.open = false;
+          menu.querySelector('summary')?.focus();
+        }
+        else if (destinationCancel.current) destinationCancel.current.click();
+        else if (activeGroupReview.current) cancelGroupOrder();
+        else if (inspectorToggle.current?.getAttribute('aria-expanded') === 'true' && inspectorToggle.current.getClientRects().length) {
+          setInspectorOpen(false);
+          inspectorToggle.current.focus();
+        }
         else requestClose();
         return;
       }
@@ -294,7 +424,7 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
       for (const [sibling, inert] of siblings) sibling.inert = inert;
       if (previousFocus?.isConnected) previousFocus.focus();
     };
-  }, [requestClose, closeGuide]);
+  }, [requestClose, closeGuide, cancelGroupOrder]);
 
   useEffect(() => {
     const warn = (event) => { event.preventDefault(); event.returnValue = ''; };
@@ -335,16 +465,19 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
   const mapOptions = <>
     {compact && <div className="cw-locator-zoom"><button onClick={() => battlefield.current?.zoom(0.1)} title="Zoom in" aria-label="Zoom in"><Plus /></button><button onClick={() => battlefield.current?.zoom(-0.1)} title="Zoom out" aria-label="Zoom out"><Minus /></button></div>}
 <label className="cw-range-toggle"><input type="checkbox" checked={showRange} onChange={(event) => { setShowRange(event.target.checked); battlefield.current?.range(event.target.checked); }} />{snapshot?.battleRulesVersion >= 2 ? 'Fire arc' : 'Range'}</label>
-            {tactical && <label className="cw-range-toggle"><input type="checkbox" checked={missionMarkers} onChange={event => setMissionMarkers(event.target.checked)} />Mission markers</label>}
+            {tactical && !reserveReadout && <label className="cw-range-toggle"><input type="checkbox" checked={missionMarkers} onChange={event => setMissionMarkers(event.target.checked)} />Mission markers</label>}
             {tactical && <label className="cw-range-toggle"><input type="checkbox" title="Show command sectors, rear exits, cover, and movement zones" checked={terrainOverlay} onChange={event => setTerrainOverlay(event.target.checked)} />Tactical overlay</label>}
             <label className="cw-range-toggle"><input type="checkbox" checked={battleSound} onChange={(event) => { setBattleSound(event.target.checked); if (event.target.checked) void battleAudio.current?.unlock(); }} />Battle sound</label>
   </>;
+  const missionChecks = fieldMissionStatus && <FieldMissionCheckpoints mission={fieldMissionStatus}
+    battleName={battle.title.split(' — ')[0]} compact={compactMission} cue={orderCue} onLocate={locate} />;
+  const title = fieldCommandTitle(battle, choiceId, effectiveCampaignState?.battleRulesVersion);
 
   return (
-    <div ref={overlay} tabIndex={-1} className={`cw-battle-overlay cw-tactical${tactical ? ' cw-gettysburg-command' : ''}`} role="dialog" aria-modal="true" aria-label={battle.title}>
+    <div ref={overlay} tabIndex={-1} className={`cw-battle-overlay cw-tactical${tactical ? ' cw-gettysburg-command' : ''}`} role="dialog" aria-modal="true" aria-label={title}>
       <header className="cw-battle-header" inert={leaving}>
-        <div><p className="cw-battle-eyebrow">Titans of War · Field command</p><h2>{battle.title}</h2><span>{battle.date}</span></div>
-        <div className="cw-battle-objective"><strong>{completed ? assessment?.evidence.find(item => item.label === 'Field outcome')?.value || battleResultLabel(snapshot.outcome) : resolving ? 'The field is decided' : assessment?.objective.label || mission?.label || 'Follow your selected strategy'}</strong><small>{completed ? `Command ${assessment?.commandScore ?? snapshot.score} · Confederate losses ${Math.round(snapshot.confederateLossRate * 100)}%${snapshot.commanderStatus ? ` · Commander ${snapshot.commanderStatus}` : ''}` : resolving ? tactical ? 'The tactical state is preserved while the result is recorded.' : orderlyExit ? 'The army is preserved. The remaining rearguard withdraws while Union formations hold the field.' : 'The victors hold while the defeated formations leave the field.' : battle.context}</small></div>
+        <div><p className="cw-battle-eyebrow">Titans of War · Field command</p><h2>{title}</h2><span>{battle.date}</span></div>
+        {!compactMission && <div className="cw-battle-objective"><strong>{completed ? assessment?.evidence.find(item => item.label === 'Field outcome')?.value || battleResultLabel(snapshot.outcome) : resolving ? 'The field is decided' : assessment?.objective.label || mission?.label || 'Follow your selected strategy'}</strong><small>{completed ? `Command ${assessment?.commandScore ?? snapshot.score} · Confederate losses ${Math.round(snapshot.confederateLossRate * 100)}%${snapshot.commanderStatus ? ` · Commander ${snapshot.commanderStatus}` : ''}` : resolving ? tactical ? 'The tactical state is preserved while the result is recorded.' : orderlyExit ? 'The army is preserved. The remaining rearguard withdraws while Union formations hold the field.' : 'The victors hold while the defeated formations leave the field.' : battle.context}</small></div>}
         <div className="cw-battle-header-actions">
           {[0, 1, 2, 4].map((value) => <button key={value} aria-pressed={guideSpeed(guide, speed) === value} className={guideSpeed(guide, speed) === value ? 'active' : ''} onClick={() => changeSpeed(value)} disabled={resolving || completed || (value>0 && reviewingOrder)} title={value === 0 ? 'Pause battle' : `Run battle at ${value} times speed`} aria-label={value === 0 ? 'Pause battle' : `Run battle at ${value} times speed`}>{value === 0 ? <Pause /> : value === 4 ? <FastForward /> : `${value}x`}</button>)}
           <button ref={guideButton} aria-expanded={guide.open} aria-controls="cw-battle-guide" disabled={resolving} onClick={() => { if (guide.open) closeGuide(); else { setSpeed(0); dispatchGuide('open'); } }} title="Battle guide" aria-label="Battle guide"><BookOpen /></button>
@@ -356,7 +489,7 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
           <div className="cw-inspector-summary">
           
           <label className="cw-roster">Formation roster<select value={selectedId || ''} onChange={(event) => selectFromRoster(event.target.value)}>{snapshot?.formations.filter((unit) => unit.side === 'confederate').map((unit) => <option key={unit.id} value={unit.id}>{unit.name} - {formationStatusLabel(unit)}</option>)}</select></label>
-          <button className="cw-inspector-toggle" aria-controls="cw-inspector-details" aria-expanded={inspectorExpanded} onClick={() => { if (guide.open) closeGuide(); setInspectorOpen(!inspectorExpanded); if(!inspectorExpanded)requestAnimationFrame(()=>inspectorDetails.current?.scrollTo({top:0})); setSpeed(0); }}>{inspectorExpanded ? 'Close details' : 'Formation details'}{attention.length>0 && <small> · {attention.length} warnings</small>}</button>
+          <button ref={inspectorToggle} className="cw-inspector-toggle" aria-controls="cw-inspector-details" aria-expanded={inspectorExpanded} onClick={() => { if (guide.open) closeGuide(); setInspectorOpen(!inspectorExpanded); if(!inspectorExpanded)requestAnimationFrame(()=>inspectorDetails.current?.scrollTo({top:0})); setSpeed(0); }}>{inspectorExpanded ? 'Close details' : 'Formation details'}{attention.length>0 && <small> · {attention.length} warnings</small>}</button>
           </div>
           <p className="cw-mobile-unit-summary">{selected?.active ? `${Math.round(selected.strength)} troops · ${selected.inMelee ? 'Close combat' : selected.order === 'rally' ? 'Rallying' : selected.condition || formationStatusLabel(selected)} · ${Math.round(selected.cohesion)}% cohesion · ${selected.ammunition} volleys` : selected?.withdrawn ? formationStatusLabel(selected) : selected?.arrivalTime != null ? `Arrives in ${Math.max(0, Math.ceil(selected.arrivalTime - (snapshot?.time || 0)))}` : 'Not on field'}</p>
           <div ref={inspectorDetails} id="cw-inspector-details" className="cw-inspector-details">
@@ -391,6 +524,7 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
           {landmarkField(snapshot)?.landmarks?.length > 0 && <details className="cw-gettysburg-detail cw-historical-landmarks">
             <summary>Battlefield landmarks · {landmarkField(snapshot).landmarks.map(site => site.name).join(', ')}</summary>
             <p>Buildings block movement and direct fire for both armies. Leave turning room beside them. The terrain overlay outlines their occupied ground; there is no garrison or healing bonus.</p>
+            {manassasArt && <p>The road traces and farm tracks orient you on a condensed field. Use the tactical overlay to see where ground affects movement and cover.</p>}
             {landmarkField(snapshot).landmarks.map(site => <p key={site.id}><strong>{site.name}.</strong> <button className="cw-landmark-locate" onClick={() => { locate(`Landmark:${site.id}`); }}>View {site.name}</button>{site.note} <a href={site.source} target="_blank" rel="noreferrer">Historical reference</a></p>)}
             <p>Illustrative reconstructions on a compressed battlefield. Building scale and placement serve this battle’s playable layout.</p>
           </details>}
@@ -398,6 +532,7 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
             <summary>Terrain & history · {groundGuide.title}</summary>
             <p>{groundGuide.history} <a href={groundGuide.source} target="_blank" rel="noreferrer">Historical ground reference</a></p>
             <p>{groundGuide.tactics}</p>
+            {petersburgTerrainArt && <p>Blandford Church is a scenic landmark beyond the secondary line. Its position is representative. <a href="https://www.dhr.virginia.gov/historic-registers/123-0039/" target="_blank" rel="noreferrer">Blandford Church history</a></p>}
             {battle.id === 'petersburg' && snapshot.battleRulesVersion < 12 && <p>This saved battle retains the earlier road bonus through part of the Crater. Use updated battle mechanics before starting to apply the corrected basin movement.</p>}
             {snapshot.entrenchmentState === 'abandoned' && <p>This opening abandons the prepared defense; the works offer reduced protection.</p>}
             <p>Use the tactical overlay for exact terrain boundaries. Earthworks can be crossed. Positions and scale are representative.</p>
@@ -475,7 +610,7 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
           <div className="cw-unit-target">{selected?.fireStatus || (selected?.engagedWith ? `Target: ${snapshot.formations.find((unit) => unit.id === selected.engagedWith)?.name}` : 'No target in range')}{selected?.active && ['advance', 'assault', 'fallback', 'withdraw'].includes(selected?.order) ? ` | Destination ${Math.round(selected.target.x)}, ${Math.round(selected.target.y)}` : ''}</div>
           {tactical && <section className="cw-gettysburg-detail" aria-label={gettysburg ? "Gettysburg command status" : "Formation readiness"}>
             <FormationReadinessCard selected={selected} snapshot={snapshot} fieldBattle={Boolean(fieldBattle)} onSelectRetreatBlocker={selectRetreatBlocker} selectionDisabled={reviewingOrder || resolving || completed} />
-            {selected?.retreatOrigin && selected?.active && selected?.order === 'withdraw' && <p>{fieldBattle?.requireExitIds.includes(selected.id) ? 'Marked exit required. Retreat distance' : 'Retreat distance'} {Math.round(Math.hypot(selected.x - selected.retreatOrigin.x, selected.y - selected.retreatOrigin.y))} / 220 · Must also clear enemy fire and move 180 toward the rear.</p>}
+            <FormationWithdrawalReadout selected={selected} fieldBattle={fieldBattle} locations={locations} />
             {selected?.withdrawn && <p>{selected.departureReason === 'disengaged' ? 'Left the engagement area safely.' : 'Departed through a rear exit.'} Surviving troops remain counted in force preservation.</p>}
             {selected?.gunState && <p>Guns {selected.gunState}{selected.gunTimer ? ` · ${selected.gunTimer.toFixed(1)} field minutes remaining` : ''}</p>}
             {selected?.active && selected?.readiness?.turnClearance && <div className="cw-clearance-advice">
@@ -485,7 +620,27 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
             {recovery && <section className="cw-recovery-checks" aria-label="Rally requirements"><strong>{recovery.message}</strong><ul>{recovery.checks.map(check => <li key={check.label} data-met={check.met}>{check.met ? '✓' : '○'} {check.label}</li>)}</ul><p>Losses and fatigue remain after rallying.</p></section>}
             <details><summary>Period standards</summary><p>Union: {periodStandardFor('union', battle.id).description}. Confederate: {periodStandardFor('confederate', battle.id).description}. These are representative period patterns, not exact regimental reproductions.</p></details>
           </section>}
-          {tactical && <details className="cw-group-panel"><summary>Group orders</summary><GroupOrders snapshot={snapshot} world={world} plan={groupPlan} onPlace={request=>{battlefield.current?.placeGroup(request);setInspectorOpen(false);}} onPreview={request=>battlefield.current?.previewGroup(request)} onConfirm={() => { const ids = groupPlan?.ids || []; const result = battlefield.current?.confirmGroup(); if (result?.accepted) setClearanceRecords(previous => Object.fromEntries(Object.entries(previous).filter(([id]) => !ids.includes(id)))); return result; }} onCancel={()=>battlefield.current?.cancelGroup()} /></details>}
+          {tactical && <details className="cw-group-panel"><summary>Group orders</summary>
+            <GroupOrders snapshot={snapshot} world={world} plan={groupPlan}
+              onPlace={(request, launcher) => {
+                battlefield.current?.placeGroup(request);
+                groupLauncher.current = launcher;
+                setInspectorOpen(false);
+              }}
+              onPreview={(request, launcher) => {
+                battlefield.current?.previewGroup(request);
+                groupLauncher.current = launcher;
+              }}
+              onConfirm={() => {
+                const ids = groupPlan?.ids || [];
+                const result = battlefield.current?.confirmGroup();
+                groupLauncher.current = null;
+                if (result?.accepted) setClearanceRecords(previous => Object.fromEntries(Object.entries(previous).filter(([id]) => !ids.includes(id))));
+                return result;
+              }}
+              onCancel={() => battlefield.current?.cancelGroup()}
+              onDismiss={cancelGroupOrder} cancelButtonRef={groupCancelButton} />
+          </details>}
           <details className="cw-coordinate-order"><summary>Move destination</summary><form key={`${selectedId}:${Boolean(selected)}`} onSubmit={(event) => { event.preventDefault(); const data = new FormData(event.currentTarget); battlefield.current?.destination({ x: Number(data.get('x')), y: Number(data.get('y')) }); setInspectorOpen(false); }}><div className="cw-coordinate-inputs">{['x', 'y'].map((axis) => <label key={axis}>{axis.toUpperCase()}<input name={axis} type="number" required aria-label={`Destination ${axis.toUpperCase()}`} min={axis === 'x' ? 70 : 45} max={axis === 'x' ? world.width - 70 : world.height - 35} disabled={disabled} defaultValue={Math.round(selected?.[axis] || (axis === 'x' ? 70 : 45))} /></label>)}</div><button type="submit" disabled={disabled}><MousePointer2 /> Preview move</button></form></details>
           {fieldOrders.length > 0 && (
             <details className="cw-field-orders" open={!tactical}>
@@ -505,8 +660,8 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
           </details>
           </div>
         </aside>
-        <div className={`cw-battlefield-frame${tactical ? ' cw-gettysburg-frame' : ''}`} inert={compact && inspectorExpanded}>
-          {groupPlan?.placing && <div className="cw-group-placement" role="status">Click or tap the field to preview group destinations. <button onClick={()=>battlefield.current?.cancelGroup()}>Cancel group placement</button></div>}
+        <div className={`cw-battlefield-frame${tactical ? ' cw-gettysburg-frame' : ''}`} data-battlefield={battle.id} data-reserve-support={reserveReadout ? '' : undefined} data-completed={Boolean(completed)} inert={compact && inspectorExpanded}>
+          {groupPlan?.placing && <div className="cw-group-placement" role="status">Click or tap the field to preview group destinations. <button ref={groupCancelButton} onClick={cancelGroupOrder}>Cancel group placement</button></div>}
 
           <CivilWarBattlefield checkpoint={checkpoint} ref={battlefield} scenarioId={battle.id} campaignState={effectiveCampaignState} choiceId={choiceId} speed={guideSpeed(guide, speed)} selectedId={selectedId} onSelect={setSelectedId} onSnapshot={onSnapshot} onDestination={onDestination} onZoom={setZoom} terrainOverlay={terrainOverlay} missionMarkers={missionMarkers} showRange={showRange} onGroupPreview={onGroupPreview} />
           <div className="cw-battle-zoom">
@@ -515,19 +670,46 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
             {!compact && <><button onClick={() => battlefield.current?.zoom(0.1)} title="Zoom in" aria-label="Zoom in"><Plus /></button><button onClick={() => battlefield.current?.zoom(-0.1)} title="Zoom out" aria-label="Zoom out"><Minus /></button></>}
             <button onClick={() => { setMarkedLocation(null); battlefield.current?.fit(); }} title={`Fit battlefield (current zoom ${zoom.toFixed(1)}x overview)`} aria-label="Fit battlefield"><Maximize /><span>Overview</span></button>
             <button onClick={() => { setMarkedLocation(null); battlefield.current?.focus(); }} disabled={!selected?.active} title="Focus selected formation" aria-label="Focus selected formation"><Crosshair /><span>Focus</span></button>
-            {['pan', 'move'].map((mode) => <button key={mode} aria-pressed={inputMode === mode} disabled={mode === 'move' && disabled} title={mode === 'pan' ? 'Pan battlefield' : 'Choose move destination'} aria-label={mode === 'pan' ? 'Pan battlefield' : 'Choose move destination'} onClick={() => { setInputMode(mode); battlefield.current?.mode(mode); }}>{mode === 'pan' ? <Hand /> : <MousePointer2 />}<span>{mode === 'pan' ? 'Pan' : 'Move'}</span></button>)}
-            {locations.length > 0 && <details className="cw-field-locator" ref={locateMenu} onKeyDown={event => { if (event.key === 'Escape' && event.currentTarget.open) { event.preventDefault(); event.stopPropagation(); event.currentTarget.open = false; locateButton.current?.focus(); } }}>
-              <summary ref={locateButton}>Find on field</summary>
+            {['pan', 'move'].map((mode) => <button key={mode} ref={mode === 'move' ? moveModeButton : undefined} aria-pressed={inputMode === mode} disabled={mode === 'move' && disabled} title={mode === 'pan' ? 'Pan battlefield' : 'Choose move destination'} aria-label={mode === 'pan' ? 'Pan battlefield' : 'Choose move destination'} onClick={() => { setInputMode(mode); battlefield.current?.mode(mode); }}>{mode === 'pan' ? <Hand /> : <MousePointer2 />}<span>{mode === 'pan' ? 'Pan' : 'Move'}</span></button>)}
+            {locations.length > 0 && <details className={`cw-field-locator${reserveReadout ? ' cw-shiloh-network' : ''}`} ref={locateMenu} name={compact ? 'cw-field-overlay' : undefined}>
+              <summary ref={locateButton}>{reserveReadout ? 'Reserve support' : 'Find on field'}</summary>
               <form onSubmit={event => { event.preventDefault(); locate(locationChoice || locations[0].id); }}>
+                {reserveReadout && <>
+                  <p className="cw-shiloh-network-detail"><strong>{reserveReadout.status}</strong><br />{reserveReadout.detail}</p>
+                  {connectedCorps.length > 0 && <p>Connected front · {connectedCorps.join(' · ')}</p>}
+                  <div className="cw-shiloh-network-actions">
+                    <button type="button" disabled={!reserveFormation?.active} onClick={() => {
+                      setSpeed(0); selectFromRoster(SHILOH_RESERVE_ID);
+                      if (locateMenu.current) locateMenu.current.open = false;
+                      locateButton.current?.focus();
+                    }}>Select Breckinridge</button>
+                    <button type="button" onClick={() => locate('Sector:right')}>Find Pittsburg Landing</button>
+                  </div>
+                  <label className="cw-shiloh-network-toggle"><input type="checkbox" checked={missionMarkers} onChange={event => setMissionMarkers(event.target.checked)} />Show support links and field labels</label>
+                  <ul className="cw-shiloh-network-key">
+                    <li data-link="front">Connected front corps</li>
+                    <li data-link="reserve">Breckinridge in support</li>
+                    <li data-link="gap">Breckinridge out of range</li>
+                  </ul>
+                </>}
+                {battle.id === 'third_winchester' && locations.some(site => site.id === WINCHESTER_CORRIDOR_LOCATION)
+                  && <button type="button" className="cw-locate-corridor" onClick={() => locate(WINCHESTER_CORRIDOR_LOCATION)}>Find Winchester corridor</button>}
+                {landmarkShortcuts.length > 0 && <div className="cw-landmark-locator-shortcuts">
+                  {landmarkShortcuts.map(site => <button type="button" key={site.id} onClick={() => locate(site.id)}>Find {site.name}</button>)}
+                </div>}
                 <label>Battlefield location<select aria-label="Battlefield location" value={locationChoice || locations[0].id} onChange={event => setLocationChoice(event.target.value)}>
-                  {['Objective', 'Sector', 'Landmark', 'Plan', 'Exit'].map(kind => <optgroup key={kind} label={kind}>{locations.filter(site => site.kind === kind).map(site => <option key={site.id} value={site.id}>{site.name}</option>)}</optgroup>)}
+                  {['Objective', 'Sector', 'Landmark', 'Terrain', 'Plan', 'Exit'].map(kind => <optgroup key={kind} label={kind}>{locations.filter(site => site.kind === kind).map(site => <option key={site.id} value={site.id}>{site.name}</option>)}</optgroup>)}
                 </select></label>
                 <p>View pauses the battle. Exits are destinations, not guaranteed safe routes. Directions refer to this playable board.</p>
                 <button type="submit">View location</button>
               </form>
             </details>}
-            {compact ? <details className="cw-map-options"><summary>Map &amp; sound</summary><div>{mapOptions}</div></details> : mapOptions}
-            {markedLocation && <div className="cw-location-receipt" role="status">Marked: <strong>{markedLocation.name}</strong> · View only, no order issued.</div>}
+            {compact ? <details className="cw-map-options" name="cw-field-overlay"><summary>Map &amp; sound</summary><div>{mapOptions}</div></details> : mapOptions}
+            {markedLocation && <div className="cw-location-context">
+              <div className="cw-location-receipt" role="status">Marked: <strong>{markedLocation.name}</strong> · View only, no order issued.</div>
+              {markedLocation.note && <p className="cw-location-note">{markedLocation.note} {markedLocation.source
+                && <a href={markedLocation.source} target="_blank" rel="noreferrer">Historical reference</a>}</p>}
+            </div>}
           </div>
             {snapshot?.gettysburg && <section className="cw-ridge-progress" aria-label="Ridge objective progress">
               <div className="cw-objective-heading"><div><span className="cw-command-phase">{commandBrief.phase}</span><strong>{choiceId === 'option_a' ? `Ridge held ${snapshot.gettysburg.held.toFixed(1)} / ${snapshot.gettysburg.holdRequired || 18}` : `Force escaped ${Math.round(snapshot.gettysburg.escaped * 100)}% / 70%`}</strong></div><button onClick={openBrief} disabled={resolving} aria-label="Review command brief"><BookOpen /><span>Command brief</span></button></div>
@@ -535,15 +717,29 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
               <div className="cw-sector-strip">{snapshot.gettysburg.sectors.map(sector => <button type="button" key={sector.id} data-control={sector.control} title={`View ${sector.name}; pauses without issuing an order`} aria-label={`View ${sector.name}`} onClick={() => locate(`Sector:${sector.id}`)}>{sector.name}<strong>{sector.control === 'confederate' ? 'CS control' : sector.control === 'union' ? 'US control' : sector.control}</strong></button>)}</div>
               {completed && <GettysburgDebrief report={forceReport} assessment={assessment} />}
             </section>}
-          {fieldBattle && <section className="cw-ridge-progress cw-field-progress" aria-label="Mission and command sectors">
-            <div className="cw-objective-heading"><div><span className="cw-command-phase">{commandBrief.phase}</span><strong>{completed ? assessment?.objective.status === 'achieved' ? 'Mission achieved' : 'Mission incomplete' : attackObjective ? `${attackObjective.name} · ${attackObjective.held.toFixed(1)} / ${attackObjective.required}` : defenseObjective ? `Hold Henry Hill · ${Math.floor(defenseObjective.elapsed)} / ${defenseObjective.deadline}` : assessment?.objective.label || 'Command sectors'}</strong></div><button onClick={openBrief} disabled={resolving} aria-label="Review command brief"><BookOpen /><span>Command brief</span></button></div>
+          {fieldBattle && <section className="cw-ridge-progress cw-field-progress" aria-label="Mission and command sectors" data-compact-mission={compactMission ? '' : undefined}>
+            {compactMission ? <div className="cw-compact-mission-row">
+              {missionChecks}
+              <button type="button" className="cw-compact-brief-button" onClick={openBrief} aria-label="Review command brief" title="Command brief"><BookOpen /></button>
+            </div> : <div className="cw-objective-heading">
+              <div>
+                {!reserveReadout && <span className="cw-command-phase">{orderCue ? 'Next order' : commandBrief.phase}</span>}
+                <strong className={compactProgress ? 'cw-full-objective' : undefined}>{orderCue?.text || (completed ? assessment?.objective.status === 'achieved' ? 'Mission achieved' : 'Mission incomplete' : attackObjective ? `${attackObjective.name} · ${attackObjective.held.toFixed(1)} / ${attackObjective.required}` : defenseObjective ? `Hold Henry Hill · ${Math.floor(defenseObjective.elapsed)} / ${defenseObjective.deadline}` : assessment?.objective.label || 'Command sectors')}</strong>
+                {compactProgress && <strong className="cw-compact-progress">{compactProgress}</strong>}
+              </div>
+              {orderCue && <button type="button" onClick={event => locate(orderCue.locationId, event.currentTarget)}>Show {orderCue.locationLabel}</button>}
+              <button onClick={openBrief} disabled={resolving} aria-label="Review command brief"><BookOpen /><span>Command brief</span></button>
+            </div>}
             {!completed && siegeStatus && <div className="cw-reserve-progress" aria-label="Siege mission checkpoints"><strong>{siegeStatus.title}</strong><span>{siegeStatus.progress}</span><span>{siegeStatus.detail}</span></div>}
-            {!completed && withdrawalStatus && <div className="cw-reserve-progress" aria-label="Withdrawal command checkpoints"><strong>{withdrawalStatus.title}</strong><span>{withdrawalStatus.progress}</span><span>{withdrawalStatus.detail}</span></div>}
+            {craterStatus && <div className="cw-reserve-progress" aria-label="Crater mission checkpoints" data-state={craterStatus.state}><strong>{craterStatus.title}</strong><span>{craterStatus.detail}</span></div>}
+            {!compactMission && missionChecks}
+            {withdrawalStatus && (!completed || withdrawalStatus.final) && <div className="cw-reserve-progress" aria-label="Withdrawal command checkpoints"><strong>{withdrawalStatus.title}</strong><span>{withdrawalStatus.progress}</span><span>{withdrawalStatus.detail}</span></div>}
             {fieldBattle.preservationObjective && <div className="cw-reserve-progress" aria-label="Army preservation progress"><strong>Organized army retained · {Math.round(fieldBattle.preservationObjective.retained * 100)}% / 65%</strong><span>On field {Math.round(fieldBattle.preservationObjective.onField * 100)}% · Withdrawn in order {Math.round(fieldBattle.preservationObjective.escaped * 100)}%</span><span>Hold through minute 126, win a field result, or finish an orderly exit. The rail operation and coordination are resolved in the campaign.</span></div>}
-            {fieldBattle.reserveObjective && <div className="cw-reserve-progress" aria-label="Command reserve progress">
-              <strong>Hold through {fieldBattle.reserveObjective.deadline} · {fieldBattle.reserveObjective.held.toFixed(1)} / {fieldBattle.reserveObjective.required} support minutes</strong>
-              <progress aria-label="Continuous reserve support" max={fieldBattle.reserveObjective.required} value={fieldBattle.reserveObjective.held} />
-              <span>Organized force {Math.round(fieldBattle.reserveObjective.organizedRatio * 100)}% / 65% · Connected front {fieldBattle.reserveObjective.supporting} / 2 · Reserve {fieldBattle.reserveObjective.reserveReady && fieldBattle.reserveObjective.supported ? 'ready and linked' : 'needs support'}</span>
+            {!completed && reserveReadout && <div className="cw-reserve-progress cw-shiloh-progress" aria-label="Command reserve progress" data-interrupted={reserveReadout.interrupted}>
+              <div className="cw-shiloh-progress-top"><strong>{reserveReadout.status}</strong><span>{reserveReadout.timer} · Hold through {reserveObjective.deadline}</span></div>
+              <progress aria-label="Continuous reserve support" max={reserveObjective.required} value={reserveObjective.held} />
+              <span role="status">{reserveReadout.detail}</span>
+              <small>{reserveNetwork.supporting} corps linked · {Math.round(reserveNetwork.organizedRatio * 100)}% organized</small>
             </div>}
             {defenseObjective && <HenryHillProgress objective={defenseObjective} completed={completed} />}
             {attackObjective && <><progress aria-label="Supported objective control" max={attackObjective.required} value={attackObjective.held} /><p className="cw-command-explainer">{attackObjective.state} · {attackObjective.eligible} supporting infantry · {attackObjective.defenders} defender{attackObjective.defenders === 1 ? '' : 's'}</p></>}
@@ -555,16 +751,26 @@ export function CivilWarBattleEncounter({ battle, campaignState, choiceId, onRes
   <TurnClearanceRecovery record={clearanceRecords[selectedId]} sectors={commandSectors} disabled={disabled || reviewingOrder} onResume={resumeSavedAttack} onDismiss={() => forgetClearance()} />
 
 
-            {!markedLocation && !guideSpeed(guide, speed) && !completed && !resolving && <button className="cw-begin-battle" disabled={!snapshot || reviewingOrder} onClick={() => changeSpeed(1)}><Swords /> {reviewingOrder ? 'Confirm or cancel orders' : !snapshot ? 'Preparing battlefield' : snapshot.time ? 'Resume battle' : 'Begin battle'}</button>}
-            {destination && <div className="cw-destination-confirm" role="status"><span>{destination.error || `Destination ${destination.x}, ${destination.y}`}</span><button disabled={disabled || Boolean(destination.error)} onClick={confirmDestination}><Check /> Confirm move</button><button onClick={() => battlefield.current?.mode(inputMode)} title="Cancel destination" aria-label="Cancel destination"><X /></button></div>}
+            {!reviewingOrder && !guideSpeed(guide, speed) && !completed && !resolving && <button className="cw-begin-battle" data-resume={Boolean(snapshot?.time)} disabled={!snapshot} onClick={() => changeSpeed(1)}><Swords /> {!snapshot ? 'Preparing battlefield' : snapshot.time ? 'Resume battle' : 'Begin battle'}</button>}
+            {!dockDestination && destinationConfirmation}
             {snapshot?.fieldStatus && !tactical && <details className="cw-field-status"><summary>{snapshot.fieldStatus.label}</summary><span>{snapshot.fieldStatus.message}</span></details>}
           </div>
         </div>
       </div>
-      <footer className={`cw-battle-command-bar${tactical ? ' cw-gettysburg-command-bar' : ''}`} inert={leaving}>
-        {tactical && <div className="cw-command-receipt" aria-label="Selected formation order status"><div className="cw-command-receipt-copy"><strong>{selected?.name || 'Choose a formation'}</strong><span>{selected?.pendingCommand ? <>{selectedOrder} → <span className="cw-pending-label">{selected.pendingCommand.order} en route</span> · {selected.commandDelay.toFixed(1)} min{!guideSpeed(guide, speed) ? ' · paused' : ''}</> : selected?.active ? `${selectedOrder} received` : selected ? formationStatusLabel(selected) : 'Awaiting selection'}</span><small>{selected?.fireStatus || commandBrief.message}</small></div><label className="cw-quick-sector">Assault sector<select value={assaultSector} onChange={event => rememberAssaultSector(selectedId, event.target.value)} disabled={disabled || selected?.type === 'artillery'}><option value="nearest">Nearest sector</option>{commandSectors.map(sector => <option key={sector.id} value={sector.id}>{sector.name}</option>)}</select></label></div>}
+      <footer className={`cw-battle-command-bar${tactical ? ' cw-gettysburg-command-bar' : ''}`} data-completed={Boolean(completed)} inert={leaving}>
+        {dockDestination && destinationConfirmation}
+        {tactical && !(dockDestination && destination) && <div className="cw-command-receipt" aria-label="Selected formation order status">
+          <div className="cw-command-receipt-copy">
+            <strong>{selected?.name || 'Choose a formation'}</strong>
+            {fieldReceipt ? <span role="status">{fieldReceipt}{selected?.pendingCommand ? ` · ${commandOrder}` : ''}</span>
+              : <span>{selected?.pendingCommand ? <>{selectedOrder} → <span className="cw-pending-label">{selected.pendingCommand.order} en route</span> · {selected.commandDelay.toFixed(1)} min{!guideSpeed(guide, speed) ? ' · paused' : ''}</> : selected?.active ? `${selectedOrder} received` : selected ? formationStatusLabel(selected) : 'Awaiting selection'}</span>}
+            {blockedAtChickamauga && selected.readiness?.turnClearance && <button type="button" className="cw-preview-staging" disabled={disabled || reviewingOrder} onClick={previewTurningRoom}>Find turning room</button>}
+            <small>{fieldReceipt === 'Maneuver blocked' ? selected?.pressureReason : selected?.fireStatus || commandBrief.message}</small>
+          </div>
+          <label className="cw-quick-sector">Assault sector<select value={assaultSector} onChange={event => rememberAssaultSector(selectedId, event.target.value)} disabled={disabled || selected?.type === 'artillery'}><option value="nearest">Nearest sector</option>{commandSectors.map(sector => <option key={sector.id} value={sector.id}>{sector.name}</option>)}</select></label>
+        </div>}
         {commandOptions.map((order) => { const Icon = commandIcons[order]; return <button key={order} aria-pressed={commandOrder === order} data-pending={selected?.pendingCommand?.order === order} title={commandDescriptions[order]} onClick={() => issueUnitOrder(order, order === 'assault' && assaultSector !== 'nearest' ? { sectorId: assaultSector } : null)} disabled={(order === 'rally' ? !canRally : disabled) || (order === 'volley' && selected?.ammunition === 0) || (order === 'assault' && selected?.type === 'artillery')}><Icon /><span>{order}</span></button>; })}
-        {completed ? <button className="cw-battle-return" onClick={finish}><ArrowLeft />{practice ? 'View practice result' : 'Return consequences to campaign'}</button> : <div className="cw-battle-clock">{resolving ? 'Battle decided' : 'Field time'} <strong>{resolving ? tactical ? 'The tactical state is preserved while the result is recorded.' : orderlyExit ? 'Withdrawing' : 'Routing' : Math.floor(snapshot?.time || 0)}</strong></div>}
+        {completed ? <button className="cw-battle-return" onClick={finish}><ArrowLeft />{practice ? 'View practice result' : 'Return consequences to campaign'}</button> : <div className="cw-battle-clock">{resolving ? 'Battle decided' : 'Field time'} <strong>{resolving ? tactical ? 'Recording result' : orderlyExit ? 'Withdrawing' : 'Routing' : Math.floor(snapshot?.time || 0)}</strong></div>}
       </footer>
       {leaving && <div className="cw-leave-backdrop"><section ref={leaveDialog} className="cw-leave-dialog" role="alertdialog" aria-modal="true" aria-labelledby="cw-leave-title" aria-describedby="cw-leave-description">
         <h3 id="cw-leave-title">Leave this battle?</h3><p id="cw-leave-description">{completed ? 'This result has not been returned to the campaign.' : onSuspend ? 'Save your field orders and return later. Resume starts paused. Discarding restarts this encounter.' : 'Battle progress is not saved. Leaving discards these field orders and restarts this encounter.'}</p>

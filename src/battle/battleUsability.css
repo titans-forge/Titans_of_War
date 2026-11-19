@@ -29,7 +29,26 @@
 .cw-field-overlays > * { pointer-events: auto; }
 .cw-tactical .cw-field-overlays .cw-field-status { position: static; max-width: 100%; max-height: 8rem; margin: 0; overflow-wrap: anywhere; }
 .cw-tactical .cw-field-overlays .cw-begin-battle { position: static; transform: none; align-self: center; min-height: 44px; }
+.cw-tactical .cw-field-overlays .cw-begin-battle[data-resume="true"] { align-self: flex-start; min-width: 0; padding: 6px 12px; }
 .cw-field-overlays .cw-destination-confirm { position: static; max-width: 100%; }
+.cw-battle-command-bar > .cw-destination-confirm {
+  grid-column: 1 / -1;
+  position: static;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto 44px;
+  min-height: 51px;
+  padding: 2px 6px;
+  color: #f5ecd6;
+  background: #1a2728;
+  border-bottom: 1px solid #786b43;
+}
+.cw-battle-command-bar > .cw-destination-confirm > span { overflow-wrap: anywhere; }
+.cw-destination-confirm button { min-width: 44px; }
+.cw-destination-confirm button:first-of-type:not(:disabled) { border-color: #d8bc71; }
+.cw-destination-confirm button:disabled { opacity: 0.5; cursor: not-allowed; }
+@media (orientation: landscape) and (max-height: 550px) {
+  .cw-battle-command-bar > .cw-destination-confirm { min-height: 45px; padding-block: 0; }
+}
 .cw-leave-dialog { max-width: min(420px, calc(100% - 32px)); padding: 24px; background: #171d22; color: #f5ecd6; border: 1px solid #849c91; }
 .cw-leave-backdrop { position: absolute; inset: 0; z-index: 10; display: grid; place-items: center; overflow-y: auto; padding: 16px; background: rgb(0 0 0 / 75%); }
 .cw-leave-dialog h3 { margin-top: 0; }
@@ -262,6 +281,7 @@
 .cw-preview-staging { display: flex; align-items: center; gap: 6px; min-height: 44px; margin: 7px 9px; padding: 7px; border: 1px solid #a4996c; background: #304439; color: #eedfaf; border-radius: 3px; cursor: pointer; font-size: 12px; }
 .cw-preview-staging:disabled { opacity: 0.45; cursor: not-allowed; }
 .cw-preview-staging svg { width: 15px; height: 15px; }
+.cw-command-receipt-copy > .cw-preview-staging { margin: 0; justify-self: start; }
 
 /* The map gets the space: the live objective is a compact two-row instrument. */
 .cw-gettysburg-frame .cw-ridge-progress { gap: 3px; padding: 3px 8px 4px; }
@@ -406,6 +426,111 @@
 .cw-mission-note { margin:6px 0; font-size:11px; line-height:1.4; color:#d4d7cb; }
 @media(max-width:700px) { .cw-mission-conditions summary span { display:block; margin-left:13px; font-size:10px; } }
 
+.cw-field-mission-checks { min-width:0; }
+.cw-field-mission-checks summary { min-height:30px; padding:5px 8px; box-sizing:border-box; cursor:pointer; background:#222f2c; border:1px solid #657269; border-radius:4px; line-height:1.4; }
+.cw-field-mission-checks summary > span { margin-inline-start:12px; color:#e2e2cb; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.cw-field-mission-checks summary:focus-visible, .cw-field-mission-scroll:focus-visible { outline:2px solid #ede0a9; outline-offset:-2px; }
+.cw-field-mission-scroll { max-height:min(15rem, 27dvh); overflow:auto; padding:0 2px 3px; }
+.cw-field-mission-scroll .cw-mission-checklist { grid-template-columns:repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); margin-block-start:4px; }
+.cw-field-mission-scroll .cw-mission-checklist small { font-size:.73rem; }
+.cw-field-mission-scroll .cw-mission-checklist li[data-met="true"] > span { color:#a5cf9f; }
+@media(max-width:700px) {
+  .cw-field-mission-checks summary { min-height:44px; padding-block:10px; }
+  .cw-field-mission-scroll { max-height:min(10rem, 25dvh); }
+}
+@media (orientation:landscape) and (max-height:550px) {
+  .cw-field-mission-scroll { max-height:20dvh; }
+}
+
+.cw-compact-mission-row {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 44px;
+  gap:4px;
+  align-items:start;
+}
+.cw-compact-brief-button {
+  display:grid;
+  place-items:center;
+  min-height:44px;
+  padding:4px;
+  border:1px solid #637767;
+  border-radius:4px;
+  background:#253732;
+  color:#ede0b6;
+  cursor:pointer;
+}
+.cw-compact-brief-button svg { width:16px; height:16px; }
+.cw-compact-brief-button:focus-visible { outline:2px solid #ede0a9; outline-offset:-3px; }
+.cw-field-mission-checks summary > .cw-mission-summary-main { margin:0; white-space:normal; }
+.cw-field-mission-checks[data-compact] summary {
+  display:grid;
+  grid-template-columns:.6rem minmax(0,1fr);
+  align-items:center;
+  min-height:44px;
+  gap:4px;
+  padding:3px 6px;
+  line-height:1.15;
+}
+.cw-field-mission-checks[data-compact] summary::-webkit-details-marker { display:none; }
+.cw-field-mission-checks[data-compact] summary::before { content:"▸"; color:#f4d992; }
+.cw-field-mission-checks[data-compact][open] summary::before { content:"▾"; }
+.cw-field-mission-checks[data-compact] .cw-mission-summary-main strong, .cw-compact-order-cue { display:block; }
+.cw-compact-order-cue { margin-top:2px; color:#c5dbd0; }
+.cw-ridge-progress[data-compact-mission]:has(.cw-field-mission-checks[open]) { z-index:5; }
+.cw-field-mission-checks[data-compact] .cw-field-mission-scroll {
+  position:absolute;
+  inset:calc(100% + 4px) 4px auto;
+  box-sizing:border-box;
+  max-block-size:min(17rem, 38dvh);
+  padding:6px 8px;
+  border:1px solid #849c91;
+  background:#15201f;
+  box-shadow:0 6px 20px #0008;
+  overflow:auto;
+  overscroll-behavior:contain;
+  touch-action:pan-y;
+}
+.cw-compact-mission-deadline { margin:0 0 5px; color:#e2e2cb; font-variant-numeric:tabular-nums; }
+.cw-compact-mission-tools {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:4px 8px;
+}
+.cw-compact-mission-tools button, .cw-field-order-cue button {
+  min-height:44px;
+  padding:4px 8px;
+  color:#f5ecd6;
+  background:#25352f;
+  border:1px solid #849c91;
+  border-radius:4px;
+  font:inherit;
+  cursor:pointer;
+}
+.cw-field-order-cue {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:4px 8px;
+  margin:3px 0 6px;
+  color:#c5dbd0;
+}
+.cw-field-order-cue p { margin:0; }
+.cw-locator-zoom button { min-height:44px; }
+@media (orientation:landscape) and (max-height:550px) {
+  .cw-compact-order-cue { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .cw-field-mission-checks[data-compact] .cw-field-mission-scroll {
+    max-block-size:min(42dvh, max(72px, calc(100dvh - 198px)));
+  }
+}
+@media (min-width:650px) and (orientation:landscape) and (max-height:550px) {
+  .cw-field-mission-checks[data-compact] .cw-field-mission-scroll {
+    inset-inline-start:auto;
+    inline-size:min(20rem, calc(100vw - 13rem));
+  }
+}
+
 /* Keep the six primary camera tools in one labeled, thumb-sized row. */
 @media (max-width: 700px) {
   .cw-tactical .cw-battle-zoom { display:flex; flex-wrap:wrap; gap:3px; padding:4px; }
@@ -427,20 +552,75 @@
 
 .cw-reserve-progress { display: grid; gap: .3rem; padding: .45rem .6rem; font-size: .78rem; line-height: 1.4; color: #e5dbbe; }
 .cw-reserve-progress progress { width: 100%; height: .45rem; accent-color: #c6ae64; }
+.cw-shiloh-progress { padding-block: 3px; gap: 3px; }
+.cw-shiloh-progress-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 2px 12px; }
+.cw-shiloh-progress-top span { font-variant-numeric: tabular-nums; }
+.cw-shiloh-progress[data-interrupted="true"] strong { color: #ffc0a1; }
+.cw-shiloh-progress small { color: #bcd6cb; }
+.cw-shiloh-network form { max-height: min(480px, 65dvh); overflow: auto; overscroll-behavior: contain; }
+.cw-shiloh-network .cw-shiloh-network-detail { border-inline-start: 2px solid #a9e7d4; padding-inline-start: 8px; margin-top: 0; }
+.cw-shiloh-network-actions { display: flex; flex-wrap: wrap; gap: 5px; }
+.cw-shiloh-network-actions > button { flex: 1 1 112px; }
+.cw-shiloh-network form button { min-height: 44px; }
+.cw-shiloh-network .cw-shiloh-network-toggle { display: flex; align-items: center; min-height: 44px; }
+.cw-shiloh-network-key { list-style: none; padding: 0; margin: 0 0 10px; display: grid; gap: 5px; }
+.cw-shiloh-network-key li { display: flex; align-items: center; gap: 8px; }
+.cw-shiloh-network-key li::before { content: ''; width: 25px; border-block-start: 2px solid #a9e7d4; }
+.cw-shiloh-network-key [data-link="reserve"]::before { border-block-start: 2px dashed #f3cc78; }
+.cw-shiloh-network-key [data-link="gap"]::before { border-block-start: 2px dotted #f2a580; }
+@media (orientation: landscape) and (max-height:550px) {
+  .cw-shiloh-network form { right: 0; max-height: 55dvh; }
+  .cw-tactical .cw-battlefield-frame:is([data-reserve-support], [data-battlefield="chancellorsville"], [data-battlefield="wilderness"], [data-battlefield="chickamauga"], :has(> [data-compact-mission])) .cw-field-overlays .cw-begin-battle {
+    align-self: flex-start; min-width: 0; padding: 6px 12px;
+  }
+}
 
 .cw-sector-strip > button { min-height: 44px; cursor: pointer; text-align: left; border-top: 0; border-right: 0; border-bottom: 0; font-family: inherit; }
 .cw-sector-strip > button:hover { outline: 1px solid #ffe6a1; }
 .cw-sector-strip > button:focus-visible, .cw-field-locator summary:focus-visible { outline: 2px solid #ffe6a1; outline-offset: 2px; }
 .cw-field-locator { position: relative; font-size: 12px; color: #f5ecd6; }
+.cw-tactical .cw-battle-zoom:has(> .cw-field-locator[open]) { z-index: 4; }
 .cw-field-locator summary { display: flex; align-items: center; min-height: 44px; padding: 0 8px; cursor: pointer; border: 1px solid #849c91; border-radius: 4px; }
 .cw-field-locator form { position: absolute; top: 100%; right: 0; z-index: 30; width: 290px; max-width: calc(100vw - 40px); padding: 12px; border: 1px solid #849c91; background: #18231f; box-shadow: 0 6px 20px #0008; }
 .cw-field-locator label { display: grid; gap: 6px; }
 .cw-field-locator select { width: 100%; min-width: 0; min-height: 44px; background: #11171c; color: #f5ecd6; font: inherit; }
+.cw-field-locator .cw-locate-corridor { width: 100%; margin-bottom: 8px; }
+.cw-landmark-locator-shortcuts { display: grid; gap: 6px; margin-bottom: 8px; }
 .cw-field-locator p { line-height: 1.4; margin: 8px 0; }
+.cw-location-context { display:contents; }
 .cw-location-receipt { flex-basis: 100%; color: #ffe6a1; font-size: 12px; padding: 3px; }
-@media (max-width: 700px) {
-  .cw-field-locator { position: static; }
-  .cw-field-locator form { left: 6px; right: auto; }
+.cw-location-note { flex-basis: 100%; color: #dbd2ba; font-size: 12px; margin: 0; padding: 0 3px 4px; }
+.cw-location-note a { color: #ffe6a1; }
+@media (max-width:700px), (orientation:landscape) and (max-height:550px) {
+  .cw-field-locator { position:static; }
+  .cw-field-locator form {
+    inset-inline-start:6px;
+    inset-inline-end:auto;
+    box-sizing:border-box;
+    max-block-size:min(22rem, 50dvh);
+    max-inline-size:calc(100% - 12px);
+    overflow:auto;
+    overscroll-behavior:contain;
+    touch-action:pan-y;
+  }
+  .cw-field-locator form button { min-height:44px; }
+}
+@media (orientation:landscape) and (max-height:550px) {
+  .cw-field-locator form { max-block-size:min(50dvh, max(80px, calc(100dvh - 198px))); }
+}
+@media (min-width:650px) and (orientation:landscape) and (max-height:550px) {
+  .cw-tactical .cw-location-context {
+    display:block;
+    position:absolute;
+    inset:calc(100% + 4px) 5px auto;
+    z-index:3;
+    max-block-size:min(6rem, 28dvh);
+    padding:3px 6px;
+    background:#11171cee;
+    border:1px solid #455651;
+    overflow:auto;
+    overscroll-behavior:contain;
+  }
 }
 
 .cw-locator-zoom { display: flex; gap: 6px; }

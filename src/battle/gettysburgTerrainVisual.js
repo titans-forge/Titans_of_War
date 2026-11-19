@@ -1,6 +1,6 @@
 import { drawLandmarkSurroundings } from './landmarkSurroundings.js';
 import { landmarkField } from './historicalLandmarks.js';
-import { stampScenery } from './realisticScenery.js';
+import { drawNaturalRoad, stampScenery } from './realisticScenery.js';
 import { GETTYSBURG_TERRAIN } from './gettysburgMechanics.js';
 import { createTransparentCanvasTexture } from './transparentCanvasTexture.js';
 
@@ -10,13 +10,40 @@ export function drawGettysburgTerrain(scene) {
   const { ridge, wall, road } = GETTYSBURG_TERRAIN;
   const key='gettysburg-physical-scenery-v2';
   const texture=createTransparentCanvasTexture(scene,key,scene.world.width,scene.world.height),ctx=texture.context;
+  const fieldArt = scene.gettysburgFieldArt === true;
+  if (fieldArt) {
+    const center = (road.top + road.bottom) / 2;
+    ctx.save();
+    ctx.globalAlpha = .48;
+    drawNaturalRoad(ctx, { x: 0, y: center }, { x: scene.world.width, y: center }, 28, 1863);
+    ctx.restore();
+  }
   for(const y of [road.top+4,road.bottom-4]) {
     for(let x=8,i=0;x<scene.world.width;x+=238,i++) {
-      // Complete rail sections, with the existing fourth-section crossing open.
-      for(const offset of [0,136]) stampScenery(scene,ctx,'earthworks','fence',x+offset,y-11,99,18,Boolean(i%2));
+      for (const offset of [0, 136]) {
+        const start = x + offset;
+        if (fieldArt) {
+          ctx.fillStyle = 'rgba(39, 33, 23, .17)';
+          ctx.beginPath();
+          ctx.moveTo(start + 2, y + 1);
+          ctx.lineTo(start + 97, y + 1);
+          ctx.lineTo(start + 103, y + 5);
+          ctx.lineTo(start + 8, y + 5);
+          ctx.fill();
+        }
+        stampScenery(scene, ctx, 'earthworks', 'fence', start, y - 11, 99, 18, Boolean(i % 2));
+      }
     }
   }
   ctx.save();ctx.beginPath();ctx.rect(wall.left,wall.top,wall.right-wall.left,wall.bottom-wall.top);ctx.clip();
+  // A short return makes the angle visible within the authored cover area.
+  if (fieldArt) {
+    ctx.save();
+    ctx.translate(1103, wall.bottom - 10);
+    ctx.rotate(-Math.PI / 2);
+    stampScenery(scene, ctx, 'earthworks', 'wall', 0, -7, 46, 15);
+    ctx.restore();
+  }
   for(let x=wall.left,i=0;x<wall.right;x+=90,i++)stampScenery(scene,ctx,'earthworks','wall',x,wall.bottom-17,Math.min(100,wall.right-x),17,Boolean(i%2));
   ctx.restore();
   for (const site of landmarkField(scene.engine)?.landmarks || []) {

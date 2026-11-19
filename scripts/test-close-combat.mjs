@@ -84,6 +84,26 @@ test('all eleven fields have period flag patterns; Winchester has 35 stars',()=>
  assert.equal(periodStandardFor('union','third_winchester').stars,35);assert.equal(periodStandardFor('union','gettysburg').stars,34);assert.equal(periodStandardFor('confederate','first_manassas').pattern,'first-national');
  const g={stars:0,fillStyle(){return this},fillRect(){return this},lineStyle(){return this},lineBetween(){return this},fillPoints(){this.stars++;return this}};drawPeriodStandard(g,'union','third_winchester');assert.equal(g.stars,35);
 });
+test('Kennesaw uses the rectangular 1864 Army of Tennessee color and 35-star United States color', () => {
+  assert.equal(periodStandardFor('union', 'kennesaw_mountain').stars, 35);
+  const standard = periodStandardFor('confederate', 'kennesaw_mountain');
+  assert.equal(standard.pattern, 'army-of-tennessee');
+  assert.equal(standard.stars, 13);
+  const fields = [], pieces = [];
+  const graphics = {
+    fillStyle() { return this; }, lineStyle() { return this; }, lineBetween() { return this; },
+    fillRect(...rect) { fields.push(rect); return this; },
+    fillPoints(points) { pieces.push(points); return this; },
+  };
+  drawPeriodStandard(graphics, 'confederate', 'kennesaw_mountain');
+  assert.deepEqual(fields, [[3, -60, 48, 30]]);
+  assert.equal(pieces.filter(points => points.length === 6).length, 4);
+  assert.equal(pieces.filter(points => points.length === 10).length, standard.stars);
+});
+test('Vicksburg has a period Union national color and a representative Confederate color documented there', () => {
+  assert.equal(periodStandardFor('union', 'vicksburg').stars, 34);
+  assert.equal(periodStandardFor('confederate', 'vicksburg').pattern, 'first-national');
+});
 test('metallic impact synthesis is finite, bounded, non-silent, and deterministic',()=>{
  const a=synthesizeMelee(44100),b=synthesizeMelee(44100);assert.deepEqual(a,b);assert.ok(a.every(Number.isFinite));assert.ok(Math.max(...a)<.81);assert.ok(Math.min(...a)>-.81);assert.ok(a.reduce((n,v)=>n+v*v,0)>1);
 });

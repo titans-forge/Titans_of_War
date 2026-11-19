@@ -1,4 +1,9 @@
+export function hasFieldViewport({ width, height }) {
+  return Number.isFinite(width) && width > 0 && Number.isFinite(height) && height > 0;
+}
+
 export function overviewZoom(viewport, world) {
+  if (!hasFieldViewport(viewport)) return 1 / Math.max(world.width, world.height);
   return Math.min(viewport.width / world.width, viewport.height / world.height);
 }
 

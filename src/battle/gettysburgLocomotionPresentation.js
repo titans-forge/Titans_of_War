@@ -6,6 +6,10 @@ import { createFormationVisualCheckpoint } from './formationVisualCheckpoint.js'
 // Drawing direction only. Canonical figures remain the authority for combat,
 // positions, shots, effects and falls. No second slot or gait integrator.
 export const LOCOMOTION_HEADING_ID = 'gettysburg-locomotion-heading-v40';
+const HEADING_IDS = new Map([
+  ['gettysburg', LOCOMOTION_HEADING_ID],
+  ['first_manassas', 'manassas-infantry-heading-v1'],
+]);
 export const LOCOMOTION_MIN_TRAVEL = .015;
 const MAX_FORMATIONS = 32, MAX_CAPACITY = 32, MAX_FIGURES = 700;
 const finite = value => Number.isFinite(value) && Math.abs(value) <= 1e7;
@@ -91,25 +95,34 @@ function sameFormation(saved, formation) {
 export function sampleGettysburgLocomotion(state, previous, formation, time, scale, options = {}) {
   const oldTime = state.time, oldX = state.x, oldY = state.y, oldFacing = state.facing;
   const oldMode = state.mode, oldAssembling = state.assembling;
-  const anchors = new Map(state.figures.filter(figure => figure.alive).map(figure => [figure.id,
-    projectedFormationSlot({ x: oldX, y: oldY }, oldFacing, figure.slot, 1, 1)]));
+  const mayTurn = eligible(formation, time, options);
+  const stationaryStep = mayTurn && time > oldTime && Math.hypot(formation.x - oldX, formation.y - oldY) <= .001;
+  const pausedStep = mayTurn && time === oldTime && previous;
+  const anchors = stationaryStep ? new Map(state.figures.filter(figure => figure.alive).map(figure => [figure.id,
+    projectedFormationSlot({ x: oldX, y: oldY }, oldFacing, figure.slot, 1, 1)])) : null;
   const visual = updateFormationVisual(state, formation, time, scale, options);
+  if (options.skipEmptyHeading && !stationaryStep && !pausedStep) return { visual, heading: null };
+
+  const headings = Array(state.capacity).fill(null);
+  if (stationaryStep) {
+    const turn = Math.abs(Math.atan2(Math.sin(state.facing - oldFacing), Math.cos(state.facing - oldFacing))) > .001;
+    const assembling = oldAssembling || state.assembling || oldMode !== state.mode;
+    if (turn || assembling) for (const figure of visual.figures) {
+      const before = anchors.get(figure.id);
+      if (!before || !figure.visible || figure.fallen || figure.action !== 'walk') continue;
+      const dx = figure.x - before.x, dy = figure.y - before.y;
+      if (Math.hypot(dx, dy) > LOCOMOTION_MIN_TRAVEL) headings[figure.id] = directionIndex(Math.atan2(dy, dx));
+    }
+  }
+  // Ordinary movement already owns its pose. Avoid serializing each soldier's
+  // state at frame rate when there is no separate walking direction to retain.
+  if (options.skipEmptyHeading && !pausedStep && headings.every(direction => direction === null)) {
+    return { visual, heading: null };
+  }
   const base = baseRecord(formation, state, time), current = facts(formation, time, options);
   if (!base) return { visual, heading: null };
-  const headings = Array(state.capacity).fill(null);
-  if (eligible(formation, time, options)) {
-    if (time === oldTime && previous && sameData(previous.base, base) && sameData(previous.facts, current)) {
-      headings.splice(0, headings.length, ...previous.headings);
-    } else if (time > oldTime && Math.hypot(formation.x - oldX, formation.y - oldY) <= .001) {
-      const turn = Math.abs(Math.atan2(Math.sin(state.facing - oldFacing), Math.cos(state.facing - oldFacing))) > .001;
-      const assembling = oldAssembling || state.assembling || oldMode !== state.mode;
-      if (turn || assembling) for (const figure of visual.figures) {
-        const before = anchors.get(figure.id);
-        if (!before || !figure.visible || figure.fallen || figure.action !== 'walk') continue;
-        const dx = figure.x - before.x, dy = figure.y - before.y;
-        if (Math.hypot(dx, dy) > LOCOMOTION_MIN_TRAVEL) headings[figure.id] = directionIndex(Math.atan2(dy, dx));
-      }
-    }
+  if (pausedStep && sameData(previous.base, base) && sameData(previous.facts, current)) {
+    headings.splice(0, headings.length, ...previous.headings);
   }
   return { visual, heading: { id: formation.id, base, facts: current, headings } };
 }
@@ -117,19 +130,24 @@ export function sampleGettysburgLocomotion(state, previous, formation, time, sca
 /** Pose selectors receive a copy; raw direction still owns volley geometry. */
 export function gettysburgWalkingFigure(figure, heading, formation, time, options = {}) {
   const direction = heading?.headings[figure.id];
-  if (!figure.visible || figure.fallen || figure.action !== 'walk' || !eligible(formation, time, options)
-    || !heading || heading.id !== formation.id || !sameData(heading.facts, facts(formation, time, options))
+  if (!heading || !figure.visible || figure.fallen || figure.action !== 'walk' || !eligible(formation, time, options)
+    || heading.id !== formation.id || !sameData(heading.facts, facts(formation, time, options))
     || !sameFormation(heading.base?.formation, formation)
     || direction === null || !sector(direction)) return figure;
   const saved = heading.base.state.figures[figure.id];
   if (!saved?.alive) return figure;
   const point = projectedFormationSlot(heading.base.state, heading.base.state.facing, saved.slot, 1, 1);
   if (point.x !== figure.x || point.y !== figure.y) return figure;
+  if (options.annotateStationaryTurn && heading.base.state.lastMotion.turning) {
+    return { ...figure, direction, stationaryTurn: true };
+  }
   return direction === figure.direction ? figure : { ...figure, direction };
 }
 
 export function createGettysburgLocomotionCheckpoint(presentation, formations, views, time, options = {}) {
-  if (!presentation || presentation.version !== 1 || presentation.time !== time || !finite(time) || time < 0
+  const scenarioId = options.scenarioId ?? 'gettysburg';
+  const continuityId = HEADING_IDS.get(scenarioId);
+  if (!continuityId || !presentation || presentation.version !== 1 || presentation.time !== time || !finite(time) || time < 0
     || !Array.isArray(formations) || formations.length > MAX_FORMATIONS || !(views instanceof Map)) return null;
   const records = []; let total = 0;
   for (const formation of formations) {
@@ -141,7 +159,7 @@ export function createGettysburgLocomotionCheckpoint(presentation, formations, v
     if (!validRecord(record) || (total += record.headings.length) > MAX_FIGURES) return null;
     records.push(record);
   }
-  return { version: 1, continuityId: LOCOMOTION_HEADING_ID, scenarioId: 'gettysburg', time, formations: records };
+  return { version: 1, continuityId, scenarioId, time, formations: records };
 }
 
 function validRecord(record) {
@@ -155,11 +173,13 @@ function validRecord(record) {
 
 /** Require the accepted raw restore before any sampler consumes restoreFrame. */
 export function restoreGettysburgLocomotionCheckpoint(presentation, formation, state, time, options = {}) {
-  if (state.restoreFrame !== true || own(presentation, 'version') !== 1 || own(presentation, 'time') !== time
+  const scenarioId = options.scenarioId ?? 'gettysburg';
+  const continuityId = HEADING_IDS.get(scenarioId);
+  if (!continuityId || state.restoreFrame !== true || own(presentation, 'version') !== 1 || own(presentation, 'time') !== time
     || !eligible(formation, time, options)) return null;
   const checkpoint = savedData(own(presentation, 'locomotionHeading'));
   if (!keys(checkpoint, ['version', 'continuityId', 'scenarioId', 'time', 'formations']) || checkpoint.version !== 1
-    || checkpoint.continuityId !== LOCOMOTION_HEADING_ID || checkpoint.scenarioId !== 'gettysburg'
+    || checkpoint.continuityId !== continuityId || checkpoint.scenarioId !== scenarioId
     || checkpoint.time !== time || !finite(time) || time < 0 || !Array.isArray(checkpoint.formations)
     || checkpoint.formations.length > MAX_FORMATIONS) return null;
   const ids = new Set(); let total = 0, matching = null;

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFileSync } from 'node:fs';
-import { artilleryGeometry, createArtilleryVisual, updateArtilleryVisual } from '../src/battle/artilleryVisual.js';
+import { artilleryGeometry, createArtilleryVisual, gettysburgBatteryMotion, updateArtilleryVisual } from '../src/battle/artilleryVisual.js';
 
 const close = (actual, expected) => assert.ok(Math.abs(actual - expected) < 1e-8, `${actual} != ${expected}`);
 
@@ -85,6 +85,35 @@ test('limber reverses the barrel relative to travel and adds the forward ammunit
   }
 });
 
+test('clock-based gun setup follows a continuous path in both directions and is frozen on pause', () => {
+  const state = Object.freeze({ gunState: 'limbering', gunTimer: 2.5, lastVolleyAt: -100, reload: 0 });
+  const packing = gettysburgBatteryMotion(state, 10);
+  const deploying = gettysburgBatteryMotion({ ...state, gunState: 'unlimbering', gunTimer: 2 }, 13);
+  assert.deepEqual(packing, { limberBlend: 0.5, workingCrew: 1 });
+  assert.deepEqual(deploying, packing);
+  assert.deepEqual(gettysburgBatteryMotion(state, 10), packing);
+  assert.deepEqual(gettysburgBatteryMotion(state, 10, true), { limberBlend: 0, workingCrew: 1 });
+  assert.equal(gettysburgBatteryMotion({ ...state, gunState: 'unlimbering' }, 13, true).limberBlend, 1);
+
+  const gun = createArtilleryVisual(fakeScene(), 'confederate');
+  const deployed = updateArtilleryVisual(gun, { facing: 0 });
+  const mid = updateArtilleryVisual(gun, { facing: 0, ...packing });
+  const traveling = updateArtilleryVisual(gun, { facing: 0, limbered: true });
+  assert.ok(mid.muzzleGround.x < deployed.muzzleGround.x && mid.muzzleGround.x > traveling.muzzleGround.x);
+  assert.ok(mid.muzzleGround.y > deployed.muzzleGround.y);
+  assert.ok(mid.limber.ground.x > traveling.limber.ground.x);
+  assert.deepEqual(updateArtilleryVisual(gun, { facing: 0, ...deploying }), mid);
+  assert.equal(gun.parts.limber.visible, true);
+});
+
+test('crew work follows the recorded volley once and clears on the ready pose', () => {
+  const afterVolley = (age, reducedMotion) => gettysburgBatteryMotion({ gunState: 'deployed', lastVolleyAt: 100, reload: 5.1 - age }, 100 + age, reducedMotion).workingCrew;
+  assert.deepEqual([0.2, 0.9, 2.4, 4, 4.9, 5.1].map(age => afterVolley(age)), [-1, 2, 1, 0, -1, -1]);
+  assert.equal(afterVolley(0.9, true), 1);
+  assert.equal(afterVolley(4, true), 1);
+  assert.equal(gettysburgBatteryMotion({ gunState: 'abandoned', gunsAbandoned: true, lastVolleyAt: 100, reload: 4 }, 101).workingCrew, -1);
+});
+
 test('art stays within the declared apparatus footprint and never mutates input options', () => {
   const options = Object.freeze({ x: 600, y: 400, facing: 0, scale: 1 });
   const g = artilleryGeometry(options);
@@ -163,6 +192,31 @@ test('faction uniforms are distinct without changing gun geometry or equipment s
   assert.deepEqual(gu, gc);
   assert.notDeepEqual(union.parts.crew0.commands, confederate.parts.crew0.commands);
   assert.deepEqual(union.parts.barrel.commands, confederate.parts.barrel.commands);
+});
+
+test('equipment surface shading follows the projection and the near-facing bore stays at the smoke origin', () => {
+  const view = createArtilleryVisual(fakeScene(), 'confederate');
+  const options = { x: 745, y: 470, scale: .82, recoil: .6 };
+  const south = updateArtilleryVisual(view, { ...options, facing: Math.PI / 2 });
+  assert.deepEqual(south.muzzle, artilleryGeometry({ ...options, facing: Math.PI / 2 }).muzzle);
+  assert.equal(south.noseVisible, true);
+  assert.ok(new Set(south.barrelStrips.map(strip => strip.light)).size >= 3);
+  // The bore is only drawn when it faces the viewer; the world-space muzzle
+  // stays available for the existing smoke animation at every bearing.
+  const boreIsDrawn = () => view.parts.barrel.commands.some(([op, color]) => op === 'fillStyle' && color === 0x222520);
+  assert.equal(boreIsDrawn(), true);
+  const north = updateArtilleryVisual(view, { ...options, facing: -Math.PI / 2 });
+  assert.equal(north.noseVisible, false);
+  assert.equal(boreIsDrawn(), false);
+  assert.deepEqual(north.muzzle, artilleryGeometry({ ...options, facing: -Math.PI / 2 }).muzzle);
+
+  const limbered = updateArtilleryVisual(view, { ...options, facing: Math.PI / 4, limbered: true, time: 5 });
+  const captured = JSON.stringify(view.parts.limber.commands);
+  const filledFaces = view.parts.limber.commands.filter(([op]) => op === 'fillPoints');
+  assert.equal(filledFaces.length, 3, 'both visible chest sides and the lid are shaded');
+  assert.ok(view.parts.limberWheel0.commands.filter(([op]) => op === 'strokePoints').length >= 3, 'tyre and rim draw separately');
+  assert.deepEqual(updateArtilleryVisual(view, { ...options, facing: Math.PI / 4, limbered: true, time: 5 }), limbered);
+  assert.equal(JSON.stringify(view.parts.limber.commands), captured);
 });
 
 test('optional atlas crew share the infantry scale, ground anchors, upright bearing frames and parent lifetime', () => {
