@@ -1,0 +1,8 @@
+{
+  "version": "0.33.0",
+  "release": "v46",
+  "baseGame": "v45",
+  "edition": "Browser release and iPhone source",
+  "nativeVersion": "1.0",
+  "nativeBuild": "2"
+}
